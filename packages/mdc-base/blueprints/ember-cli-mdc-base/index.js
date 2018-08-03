@@ -2,6 +2,8 @@
 module.exports = {
   description: '',
 
+  normalizeEntityName() {}, // no-op since we're just adding dependencies
+
   // locals(options) {
   //   // Return custom template variables here.
   //   return {
@@ -11,13 +13,7 @@ module.exports = {
 
   afterInstall () {
     return this.addPackagesToProject ([
-      {name: '@material/base'},
-    ]).then (() => {
-      return this.addAddonsToProject({
-        packages: [
-          {name: 'ember-cli-sass'}
-        ]
-      });
-    });
+      {name: '@material/base', target: '^0.35.0'},
+    ]);
   }
 };
