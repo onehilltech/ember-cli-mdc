@@ -7,12 +7,6 @@ module.exports = {
   afterInstall () {
     return this.addPackagesToProject ([
       {name: '@material/theme'},
-    ]).then (() => {
-      return this.addAddonsToProject({
-        packages: [
-          {name: 'ember-cli-mdc-base'}
-        ]
-      });
-    });
+    ]);
   }
 };
