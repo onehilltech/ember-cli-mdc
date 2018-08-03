@@ -6,7 +6,7 @@ module.exports = {
 
   afterInstall () {
     return this.addPackagesToProject ([
-      {name: '@material/base', target: '^0.35.0'},
+      {name: '@material/base'},
     ]);
   }
 };
