@@ -5,7 +5,10 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository" : { 
+  "type" : "git", 
+  "url" : "https://github.com/onehilltech/ember-cli-mdc.git"
+},
   "license": "Apache-2.0",
   "author": "",
   "directories": {
