@@ -1,5 +1,5 @@
 {
-  "name": "mdc-rtl",
+  "name": "ember-cli-mdc-rtl",
   "version": "0.7.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
