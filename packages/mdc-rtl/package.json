@@ -1,13 +1,13 @@
 {
   "name": "ember-cli-mdc-rtl",
-  "version": "0.7.1",
+  "version": "0.9.1",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
   ],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/onehilltech/ember-cli-mdc.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
   },
   "license": "Apache-2.0",
   "author": "",

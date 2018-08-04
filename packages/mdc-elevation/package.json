@@ -1,13 +1,13 @@
 {
   "name": "ember-cli-mdc-elevation",
-  "version": "0.5.0",
+  "version": "0.9.1",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
   ],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/onehilltech/ember-cli-mdc.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
   },
   "license": "Apache-2.0",
   "author": "",
@@ -37,8 +37,8 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.4.0",
-    "ember-cli-mdc-theme": "^0.4.0",
+    "ember-cli-mdc-animation": "^0.9.1",
+    "ember-cli-mdc-theme": "^0.9.1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
