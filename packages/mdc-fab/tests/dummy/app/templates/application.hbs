@@ -1,0 +1,37 @@
+<h2 id="title">Floating Action Buttons</h2>
+
+<h3>Standard</h3>
+{{#mdc-fab}}
+  {{mdc-fab-icon "add"}}
+{{/mdc-fab}}
+
+<h3>Mini</h3>
+{{#mdc-fab mini=true}}
+  {{mdc-fab-icon "add"}}
+{{/mdc-fab}}
+
+<h3>Extended</h3>
+
+{{#mdc-fab}}
+  {{mdc-fab-icon "add"}}
+  {{#mdc-fab-label}}Create{{/mdc-fab-label}}
+{{/mdc-fab}}
+
+{{#mdc-fab}}
+  {{#mdc-fab-label}}Create{{/mdc-fab-label}}
+  {{mdc-fab-icon "add"}}
+{{/mdc-fab}}
+
+<h3>Simple</h3>
+{{mdc-fab-simple icon="add" label="Create"}}
+
+{{mdc-fab-simple icon="add" label="Create" extended="left"}}
+{{mdc-fab-simple icon="add" label="Create" extended="right"}}
+
+<h3>Exited</h3>
+
+<button {{action "toggleExited"}}>Toggle Exited</button>
+
+<br />
+
+{{mdc-fab-simple icon="add" exited=exited}}
