@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-elevation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-typography" vcs="Git" />
   </component>
 </project>
