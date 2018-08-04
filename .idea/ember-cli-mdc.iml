@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-button/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-base/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-animation/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-elevation/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-icon/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-ripple/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-rtl/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-theme/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-typography/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
