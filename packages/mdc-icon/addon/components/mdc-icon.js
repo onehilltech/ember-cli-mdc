@@ -1,14 +1,10 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-icon';
 
-const Icon = Component.extend({
+export default Component.extend({
   layout,
   tagName: 'i',
   classNames: ['material-icons']
-});
-
-Icon.reopenClass ({
+}).reopenClass ({
   positionalParams: ['icon']
 });
-
-export default Icon;
