@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <excludedPredefinedLibrary name="ember-cli-mdc/packages/mdc-button/tmp/sass_compiler-input_base_path-NaD4JVyX.tmp/1/babel-generator/node_modules" />
-    <excludedPredefinedLibrary name="ember-cli-mdc/packages/mdc-button/tmp/sass_compiler-input_base_path-NaD4JVyX.tmp/1/ember-cli-sass/node_modules" />
-    <excludedPredefinedLibrary name="ember-cli-mdc/packages/mdc-button/tmp/sass_compiler-input_base_path-NaD4JVyX.tmp/1/lodash.template/node_modules" />
-    <excludedPredefinedLibrary name="ember-cli-mdc/packages/mdc-button/tmp/sass_compiler-input_base_path-NaD4JVyX.tmp/1/read-pkg-up/node_modules" />
-  </component>
-</project>
