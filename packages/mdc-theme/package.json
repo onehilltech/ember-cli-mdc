@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-theme",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "ember-cli addon for @material/theme",
   "keywords": [
     "ember-addon",
