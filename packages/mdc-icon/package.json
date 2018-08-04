@@ -1,9 +1,13 @@
 {
   "name": "ember-cli-mdc-icon",
   "version": "0.9.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-cli addon for Material Icons",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "material icons"
   ],
   "repository": {
     "type": "git",

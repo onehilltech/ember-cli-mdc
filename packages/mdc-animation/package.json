@@ -1,9 +1,13 @@
 {
   "name": "ember-cli-mdc-animation",
   "version": "0.9.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-cli addon for @material/animation",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "animation"
   ],
   "repository": {
     "type": "git",
