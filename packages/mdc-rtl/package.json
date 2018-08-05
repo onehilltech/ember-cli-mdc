@@ -30,6 +30,7 @@
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
+    "@material/rtl": "^0.36.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
