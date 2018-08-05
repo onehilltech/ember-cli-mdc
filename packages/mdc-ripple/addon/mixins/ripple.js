@@ -26,5 +26,11 @@ export default Mixin.create ({
     this._super (...arguments);
 
     this._ripple = new MDCRipple (this.element);
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    this._ripple.destroy ();
   }
 });
