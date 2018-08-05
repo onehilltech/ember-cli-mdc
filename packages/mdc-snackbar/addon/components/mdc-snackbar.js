@@ -73,6 +73,14 @@ export default Component.extend({
     this.element.setAttribute ('aria-hidden', true);
   },
 
+  willDestroyElement () {
+    this._super (...arguments);
+
+    this._snackbar.unlisten ('MDCSnackbar:show', this.didShow.bind (this));
+    this._snackbar.unlisten ('MDCSnackbar:hide', this.didHide.bind (this));
+    this._snackbar.destroy ();
+  },
+
   /**
    * The snackbar is showing to the user.
    */
