@@ -3,9 +3,8 @@ import layout from '../templates/components/mdc-button';
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { Ripple } from 'ember-cli-mdc-ripple';
-import { Theme } from 'ember-cli-mdc-theme';
 
-export default Component.extend (Ripple, Theme, {
+export default Component.extend (Ripple, {
   layout,
 
   tagName: 'button',
