@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-fab",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "ember-cli addon for @material/fab",
   "keywords": [
     "ember-addon",
@@ -51,7 +51,7 @@
     "ember-cli-mdc-base": "^0.10.0",
     "ember-cli-mdc-elevation": "^0.10.0",
     "ember-cli-mdc-icon": "^0.10.0",
-    "ember-cli-mdc-ripple": "^0.10.0",
+    "ember-cli-mdc-ripple": "^0.11.0",
     "ember-cli-mdc-rtl": "^0.10.0",
     "ember-cli-mdc-theme": "^0.10.0",
     "ember-cli-mdc-typography": "^0.10.0",
