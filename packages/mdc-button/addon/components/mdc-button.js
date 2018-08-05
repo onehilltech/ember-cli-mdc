@@ -2,15 +2,15 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-button';
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
-
 import { Ripple } from 'ember-cli-mdc-ripple';
+import { Theme } from 'ember-cli-mdc-theme';
 
-export default Component.extend (Ripple, {
+export default Component.extend (Ripple, Theme, {
   layout,
 
   tagName: 'button',
 
-  classNames: ['mdc-button', 'mdc-button--outlined'],
+  classNames: ['mdc-button'],
 
   classNameBindings: ['mdcStyleClassName', 'dense:mdc-button--dense'],
 

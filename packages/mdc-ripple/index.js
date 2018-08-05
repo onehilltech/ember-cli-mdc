@@ -7,4 +7,5 @@ module.exports = {
     this._super.included.apply (this, arguments);
 
     app.import ('node_modules/@material/ripple/dist/mdc.ripple.js');
-  }};
+  }
+};

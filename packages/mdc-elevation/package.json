@@ -27,7 +27,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
     "@material/animation": "^0.34.0",
@@ -42,7 +43,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.10.0",
-    "ember-cli-mdc-theme": "^0.10.0",
+    "ember-cli-mdc-theme": "^0.10.1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
