@@ -1,12 +1,19 @@
 {
   "name": "ember-cli-mdc-snackbar",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-cli addon for @material/snackbar",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "snackbar"
   ],
-  "repository": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
+  },
+  "license": "Apache-2.0",
   "author": "",
   "directories": {
     "doc": "doc",

@@ -40,6 +40,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/dist" />
