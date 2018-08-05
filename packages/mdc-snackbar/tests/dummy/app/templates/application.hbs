@@ -1,0 +1,4 @@
+<h2 id="title">Welcome to Ember</h2>
+
+<button {{action (mut show) true}}>Snackbar</button>
+{{mdc-snackbar message="Hello, World!" show=show actionText="Dismiss" actionHandler=(action "dismiss")}}
