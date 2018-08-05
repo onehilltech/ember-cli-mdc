@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-theme",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "ember-cli addon for @material/theme",
   "keywords": [
     "ember-addon",
@@ -27,9 +27,11 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
+    "@material/theme": "^0.38.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
