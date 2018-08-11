@@ -1,0 +1,34 @@
+<h3>Icon Button</h3>
+
+{{mdc-icon-button "favorite"}}
+{{mdc-icon-button "favorite" disabled=true}}
+
+<h3>Icon Button Toggle</h3>
+
+{{mdc-icon-button-toggle label="Add to favorites"
+                         onContent="favorite"
+                         onLabel="Remove from favorites"
+                         offContent="favorite_border"
+                         offLabel="Add to favorites"}}
+
+{{mdc-icon-button-toggle label="Add to favorites"
+                         onContent="favorite"
+                         onLabel="Remove from favorites"
+                         offContent="favorite_border"
+                         offLabel="Add to favorites"
+                         disabled=true}}
+
+<hr />
+
+<div><button {{action "toggle"}}>Toggle Initial State</button></div>
+<div>
+{{mdc-icon-button-toggle on=on
+                         label="Add to favorites"
+                         onContent="favorite"
+                         onLabel="Remove from favorites"
+                         offContent="favorite_border"
+                         offLabel="Add to favorites"
+                         change=(action "change")}}
+</div>
+<div><b>State:</b> {{isOn}}</div>
+

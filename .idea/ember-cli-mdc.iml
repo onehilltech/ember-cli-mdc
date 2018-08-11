@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-typography/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-fab/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -29,6 +30,10 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/dist" />
