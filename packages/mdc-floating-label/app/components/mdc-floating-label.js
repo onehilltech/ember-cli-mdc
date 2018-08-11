@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-floating-label/components/mdc-floating-label';
