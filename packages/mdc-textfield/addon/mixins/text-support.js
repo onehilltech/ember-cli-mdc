@@ -48,7 +48,7 @@ export default Mixin.create ({
   helperText: null,
   helperTextPersistent: false,
 
-  _hasHelperText: or ('{helperText,required,min,max,pattern}'),
+  _hasHelperText: or ('{helperText,required,min,max,pattern,errorMessage}'),
 
   icon: null,
   iconPosition: null,
@@ -128,17 +128,20 @@ export default Mixin.create ({
     this._textField.valid = this.element.validity.valid;
 
     if (this.element.validity.valid) {
-      // Since the input is valid, let's make sure there is no validation message
-      // class on the helper text input.
-      if (this.$helperText.hasClass ('mdc-text-field-helper-text--validation-msg')) {
-        this.$helperText.removeClass ('mdc-text-field-helper-text--validation-msg');
-      }
+      if (isPresent (this.$helperText)) {
+        // Since the input is valid, let's make sure there is no validation message
+        // class on the helper text input.
 
-      // Restore the original helper text.
-      const helperText = this.get ('helperText');
+        if (this.$helperText.hasClass ('mdc-text-field-helper-text--validation-msg')) {
+          this.$helperText.removeClass ('mdc-text-field-helper-text--validation-msg');
+        }
 
-      if (isPresent (helperText)) {
-        this._textField.helperTextContent = helperText;
+        // Restore the original helper text.
+        const helperText = this.get ('helperText');
+
+        if (isPresent (helperText)) {
+          this._textField.helperTextContent = helperText;
+        }
       }
 
       // Let the parent know the input is valid.
