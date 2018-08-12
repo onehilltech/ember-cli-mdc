@@ -5,6 +5,12 @@ export default Controller.extend({
   visible: false,
   value: null,
 
+  validationMessages: {
+    valueMissing: 'You must provide a value here.',
+    rangeUnderflow: 'This number is too small!',
+    rangeOverflow: 'This number is too big!'
+  },
+
   init () {
     this._super (...arguments);
   },

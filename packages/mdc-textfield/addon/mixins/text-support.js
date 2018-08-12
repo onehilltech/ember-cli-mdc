@@ -5,8 +5,22 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 
 import { computed } from '@ember/object';
-import { equal, not } from '@ember/object/computed';
+import { equal, not, or } from '@ember/object/computed';
 import { isPresent, isNone, isEmpty } from '@ember/utils';
+
+function noOp () { }
+
+const VALIDATION_ERROR_TYPE = [
+  'badInput',
+  'patternMismatch',
+  'rangeOverflow',
+  'rangeUnderflow',
+  'stepMismatch',
+  'tooLong',
+  'tooShort',
+  'valueMissing',
+  'typeMismatch',
+];
 
 export default Mixin.create ({
   classNames: ['mdc-text-field__input'],
@@ -33,6 +47,8 @@ export default Mixin.create ({
 
   helperText: null,
   helperTextPersistent: false,
+
+  _hasHelperText: or ('{helperText,required,min,max,pattern}'),
 
   icon: null,
   iconPosition: null,
@@ -65,6 +81,10 @@ export default Mixin.create ({
   didInsertElement () {
     this._super (...arguments);
 
+    // Listen for when the input loses focus. This will allow us to display
+    // custom error messages when the input is invalid.
+    this.$ ().on ('blur', this.didBlur.bind (this));
+
     // The input must be wrapped in a text field container.
     this.$ ().wrap ('<div class="mdc-text-field"></div>');
     this.$wrapper = this.$().parent ();
@@ -93,11 +113,84 @@ export default Mixin.create ({
   },
 
   didClickIcon (ev) {
-    this.sendAction ('iconClick', ev);
+    const iconClick = this.get ('iconClick');
+
+    if (isPresent (iconClick)) {
+      iconClick (ev);
+    }
   },
 
+  /**
+   * The input has lost focus.
+   */
+  didBlur () {
+    // Update the valid state of the text field.
+    this._textField.valid = this.element.validity.valid;
+
+    if (this.element.validity.valid) {
+      // Since the input is valid, let's make sure there is no validation message
+      // class on the helper text input.
+      if (this.$helperText.hasClass ('mdc-text-field-helper-text--validation-msg')) {
+        this.$helperText.removeClass ('mdc-text-field-helper-text--validation-msg');
+      }
+
+      // Restore the original helper text.
+      const helperText = this.get ('helperText');
+
+      if (isPresent (helperText)) {
+        this._textField.helperTextContent = helperText;
+      }
+
+      // Let the parent know the input is valid.
+      this.getWithDefault ('valid', noOp) ();
+    }
+    else {
+      const validationMessages = this.get ('validationMessages');
+
+      if (isPresent (validationMessages)) {
+        // The user wants to display a custom validation error message instead
+        // of the default validation error message.
+
+        for (let i = 0, len = VALIDATION_ERROR_TYPE.length; i < len; ++i) {
+          const reason = VALIDATION_ERROR_TYPE[i];
+          const failed = this.element.validity[reason];
+
+          if (failed) {
+            const errorMessage = isPresent (validationMessages[reason]) ? validationMessages[reason] : this.element.validationMessage;
+            this._setErrorMessage (errorMessage);
+
+            break;
+          }
+        }
+      }
+      else {
+        // Show the default validation message.
+        this._setErrorMessage (this.element.validationMessage);
+      }
+
+      // Let the parent know the input is invalid.
+      this.getWithDefault ('invalid', noOp) ();
+    }
+  },
+  
+  _setErrorMessage (message) {
+    if (this._textField.valid) {
+      this._textField.valid = false;
+    }
+
+    this._textField.helperTextContent = message;
+
+    this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', true);
+    this.$helperText.toggleClass ('mdc-text-field-helper-text--validation-msg', true);
+  },
+
+  /**
+   * The component will be destroyed.
+   */
   willDestroyElement () {
     this._super (...arguments);
+
+    this.$ ().off ('blur', this.didBlur.bind (this));
 
     this._destroyTextField ();
     this._removeInsertedElements ();
@@ -112,10 +205,10 @@ export default Mixin.create ({
    * @private
    */
   _renderTextField () {
-    this._insertLabel ();
+    this._renderLabel ();
     this._applyStyling ();
-    this._insertIcon ();
-    this._insertHelperText ();
+    this._renderIcon ();
+    this._renderHelperText ();
 
     // Lastly, we can instantiate the text field component.
     this._makeTextField ();
@@ -185,7 +278,7 @@ export default Mixin.create ({
    *
    * @private
    */
-  _insertLabel () {
+  _renderLabel () {
     const {_hasLabel:hasLabel, label, placeholder, value} = this.getProperties (['_hasLabel', 'label', 'placeholder', 'value']);
 
     if (hasLabel) {
@@ -246,7 +339,7 @@ export default Mixin.create ({
    *
    * @private
    */
-  _insertIcon () {
+  _renderIcon () {
     const {
       icon,
       iconClickable,
@@ -311,10 +404,10 @@ export default Mixin.create ({
    *
    * @private
    */
-  _insertHelperText () {
-    const helperText = this.get ('helperText');
+  _renderHelperText () {
+    const hasHelperText = this.get ('_hasHelperText');
 
-    if (isPresent (helperText)) {
+    if (isPresent (hasHelperText)) {
       const helperTextPersistent = this.getWithDefault ('helperTextPersistent', false);
 
       if (!this.$helperText) {
@@ -332,13 +425,14 @@ export default Mixin.create ({
       }
 
       this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', helperTextPersistent);
-      this.$helperText.toggleClass ('mdc-text-field-helper-text--validation-msg', true);
+
+      const helperText = this.getWithDefault ('helperText', '');
 
       if (this.$helperText.text () !== helperText) {
         this.$helperText.text (helperText);
       }
     }
-    else if (!!this.$helperText) {
+    else if (isPresent (this.$helperText)) {
       // Let's remove the helper text.
       this.$helperText.remove ();
       this.$helperText = null;

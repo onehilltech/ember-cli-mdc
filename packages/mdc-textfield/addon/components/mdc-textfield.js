@@ -4,8 +4,6 @@ import TextSupport from '../mixins/text-support';
 
 import $ from 'jquery';
 
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
 import { isPresent, isNone } from '@ember/utils';
 
 export default TextField.extend (TextSupport, {
