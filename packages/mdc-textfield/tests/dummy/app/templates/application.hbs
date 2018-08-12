@@ -21,9 +21,6 @@
   </div>
 </div>
 
-
-
-
 <h3 class="mdc-typography--subtitle1">Box</h3>
 
 <div class="text-field-row">
@@ -278,5 +275,25 @@
 
   <div class="text-field-container">
     {{mdc-textarea label="Disabled" disabled=true style="fullwidth"}}
+  </div>
+</div>
+
+<h2 class="mdc-typography--headline5">Validation</h2>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    {{mdc-textfield label="Required" required=true}}
+  </div>
+  <div class="text-field-container">
+    {{mdc-textfield label="Min and Max" type="number" min=10 max=10000
+                    helperText="Must be between 10 and 10000."
+                    helperTextPersistent=true}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield label="Pattern"
+                    pattern="[A-Za-z]{3}"
+                    helperText="Three letter country code."
+                    helperTextPersistent=true}}
   </div>
 </div>
