@@ -306,3 +306,14 @@
                     validationMessages=validationMessages}}
   </div>
 </div>
+
+<h2 class="mdc-typography--headline5">Error Message</h2>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    <button {{action "setErrorMessage"}}>Set Error Message</button>
+    <button {{action "clearErrorMessage"}}>Clear Error Message</button>
+
+    {{mdc-textfield label="Error" errorMessage=errorMessage}}
+  </div>
+</div>

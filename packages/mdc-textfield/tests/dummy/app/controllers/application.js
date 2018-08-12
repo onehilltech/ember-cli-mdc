@@ -5,6 +5,8 @@ export default Controller.extend({
   visible: false,
   value: null,
 
+  errorMessage: null,
+
   validationMessages: {
     valueMissing: 'You must provide a value here.',
     rangeUnderflow: 'This number is too small!',
@@ -26,6 +28,14 @@ export default Controller.extend({
   actions: {
     toggleVisibility () {
       this.toggleProperty ('visible');
+    },
+
+    setErrorMessage () {
+      this.set ('errorMessage', 'This is a custom error message.')
+    },
+
+    clearErrorMessage () {
+      this.set ('errorMessage');
     }
   }
 });

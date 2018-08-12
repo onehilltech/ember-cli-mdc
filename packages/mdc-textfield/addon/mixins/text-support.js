@@ -110,6 +110,15 @@ export default Mixin.create ({
 
     this.$wrapper.toggleClass ('mdc-text-field--disabled', !!disabled);
     this.$wrapper.toggleClass ('mdc-text-field--dense', !!dense);
+
+    const errorMessage = this.get ('errorMessage');
+
+    if (isPresent (errorMessage)) {
+      this._setErrorMessage (errorMessage);
+    }
+    else {
+      this._unsetErrorMessage ();
+    }
   },
 
   didClickIcon (ev) {
@@ -131,6 +140,7 @@ export default Mixin.create ({
       if (isPresent (this.$helperText)) {
         // Since the input is valid, let's make sure there is no validation message
         // class on the helper text input.
+        this.$helperText.hasClass ('mdc-text-field-helper-text--persistent', this.get ('helperTextPersistent'));
 
         if (this.$helperText.hasClass ('mdc-text-field-helper-text--validation-msg')) {
           this.$helperText.removeClass ('mdc-text-field-helper-text--validation-msg');
@@ -185,6 +195,22 @@ export default Mixin.create ({
 
     this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', true);
     this.$helperText.toggleClass ('mdc-text-field-helper-text--validation-msg', true);
+  },
+
+  _unsetErrorMessage () {
+    if (this._textField.valid) {
+      this._textField.valid = true;
+    }
+
+    this._textField.helperTextContent = this.getWithDefault ('helperText', '');
+
+    if (isPresent (this.$helperText)) {
+      this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', this.get ('helperTextPersistent'));
+
+      if (this.$helperText.hasClass ('mdc-text-field-helper-text--validation-msg')) {
+        this.$helperText.removeClass ('mdc-text-field-helper-text--validation-msg');
+      }
+    }
   },
 
   /**
