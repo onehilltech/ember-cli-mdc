@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
-import { isPresent, isNone } from '@ember/utils';
+import { isPresent, isNone, isEmpty } from '@ember/utils';
 
 export default TextField.extend ({
   layout,
@@ -184,7 +184,7 @@ export default TextField.extend ({
    * @private
    */
   _insertLabel () {
-    const {isFullWidth, label} = this.getProperties (['isFullWidth', 'label']);
+    const {isFullWidth, label, placeholder, value} = this.getProperties (['isFullWidth', 'label', 'placeholder', 'value']);
 
     if (isFullWidth) {
       // The text field is full width, which means the component does not have
@@ -209,8 +209,14 @@ export default TextField.extend ({
           this.set ('_invalidated', true);
         }
 
-        if (this.$label.text () !== label)
+        if (isPresent (placeholder) && isEmpty (value)) {
+          this.$label.addClass ('mdc-floating-label--float-above');
+          this.$wrapper.addClass ('mdc-text-field--upgraded');
+        }
+
+        if (this.$label.text () !== label) {
           this.$label.text (label);
+        }
       }
       else {
         // The label does not exist anymore.
