@@ -15,6 +15,10 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-card/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -34,6 +38,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tmp" />
@@ -43,6 +49,11 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/vendor" />
@@ -52,6 +63,9 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/tmp" />

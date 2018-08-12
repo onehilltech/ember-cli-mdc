@@ -33,14 +33,16 @@ export default TextField.extend ({
 
   placeholder: null,
 
+  helperText: null,
+  helperTextPersistent: false,
+
   _textField: null,
 
   $wrapper: null,
-
   $lineRipple: null,
   $outline: null,
-
   $label: null,
+  $helperText: null,
 
   didInsertElement () {
     this._super (...arguments);
@@ -48,7 +50,11 @@ export default TextField.extend ({
     this.$ ().wrap ('<div class="mdc-text-field"></div>');
     this.$wrapper = this.$().parent ();
 
-    const {isOutlined, isFullWidth} = this.getProperties (['isFullWidth', 'isOutlined']);
+    const {
+      isOutlined,
+      isFullWidth,
+      helperText
+    } = this.getProperties (['isFullWidth', 'isOutlined', 'helperText']);
 
     if (!isFullWidth) {
       // Add the label component after the input html element.
@@ -64,6 +70,17 @@ export default TextField.extend ({
       // Add the line ripple as the last element.
       this.$lineRipple = $('<div class="mdc-line-ripple"></div>');
       this.$wrapper.append (this.$lineRipple);
+    }
+
+    if (isPresent (helperText)) {
+      const helperTextId = `${this.elementId}-helper-text`;
+      this.$helperText = $(`<p id="${helperTextId}" class="mdc-text-field-helper-text" aria-hidden="true"></p>`);
+      this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', this.getWithDefault ('helperTextPersistent', false));
+
+      this.$helperText.insertAfter (this.$wrapper);
+
+      this.element.setAttribute ('aria-controls', helperTextId);
+      this.element.setAttribute ('aria-describedby', helperTextId);
     }
 
     // Lastly, we can instantiate the text field component.
@@ -84,8 +101,17 @@ export default TextField.extend ({
     if (!!this.$label) {
       const label = this.getWithDefault ('label', '');
 
-      if (this.$label.text () !== label)
+      if (this.$label.text () !== label) {
         this.$label.text (label);
+      }
+    }
+
+    if (!!this.$helperText) {
+      const helperText = this.getWithDefault ('helperText', '');
+
+      if (this.$helperText.text () !== helperText) {
+        this.$helperText.text (helperText);
+      }
     }
   },
 
@@ -106,6 +132,10 @@ export default TextField.extend ({
     }
 
     this.$label.remove ();
+
+    if (this.$helperText) {
+      this.$helperText.remove ();
+    }
 
     // The final step is to remove the wrapper from the component.
     this.$().unwrap ();
