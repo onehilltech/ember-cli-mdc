@@ -190,6 +190,10 @@ export default TextField.extend ({
       // The text field is full width, which means the component does not have
       // a label. If one already exists, then we need to remove it.
 
+      if (isPresent (label)) {
+        this.element.setAttribute ('placeholder', label);
+      }
+
       if (isPresent (this.$label)) {
         this.$label.remove ();
         this.$label = null;
@@ -198,6 +202,12 @@ export default TextField.extend ({
       }
     }
     else {
+      // Text fields that are not full width do not support the placeholder attribute
+      // in the input element.
+      if (this.element.hasAttribute ('placeholder')) {
+        this.element.removeAttribute ('placeholder');
+      }
+
       // Add the label component after the input html element. Labels, however, are
       // not supported in full with text fields.
 
@@ -352,7 +362,7 @@ export default TextField.extend ({
 
         const helperTextId = this.get ('_helperTextId');
 
-        this.$helperText = $(`<p id="${helperTextId}" class="mdc-text-field-helper-text" aria-hidden="true"></p>`);
+        this.$helperText = $(`<p id="${helperTextId}" class="mdc-text-field-helper-text " aria-hidden="true"></p>`);
         this.$helperText.insertAfter (this.$wrapper);
         this.element.setAttribute ('aria-controls', helperTextId);
         this.element.setAttribute ('aria-describedby', helperTextId);
@@ -361,6 +371,7 @@ export default TextField.extend ({
       }
 
       this.$helperText.toggleClass ('mdc-text-field-helper-text--persistent', helperTextPersistent);
+      this.$helperText.toggleClass ('mdc-text-field-helper-text--validation-msg', true);
 
       if (this.$helperText.text () !== helperText) {
         this.$helperText.text (helperText);

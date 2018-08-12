@@ -1,0 +1,14 @@
+.text-field-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .text-field-container {
+    min-width: 200px;
+  }
+}
+
+.text-field-row-fullwidth {
+  display: block;
+}
