@@ -88,7 +88,10 @@ export default TextField.extend ({
     // the label if the value is not the same.
     const { styleClassName, dense, disabled } = this.getProperties (['styleClassName', 'dense', 'disabled']);
 
-    this.$wrapper.toggleClass (styleClassName);
+    this.$wrapper
+      .removeClass ('mdc-text-field--outlined mdc-text-field--fullwidth mdc-text-field--box')
+      .addClass (styleClassName);
+
     this.$wrapper.toggleClass ('mdc-text-field--disabled', !!disabled);
     this.$wrapper.toggleClass ('mdc-text-field--dense', !!dense);
   },
