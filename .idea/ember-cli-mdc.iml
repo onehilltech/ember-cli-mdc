@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -36,10 +37,13 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tmp" />
