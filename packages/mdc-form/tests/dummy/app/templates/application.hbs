@@ -1,6 +1,6 @@
 <h2 id="title" class="mdc-typography--headline4">Forms</h2>
 
-{{#mdc-form submit=(action "submit") validity=(action (mut valid))}}
+{{#mdc-form submit=(action "submit") valid=(action (mut valid))}}
   <div>
     {{mdc-textfield label="Email address"
                     type="email"

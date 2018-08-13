@@ -85,8 +85,8 @@ export default Component.extend({
   _checkValidity () {
     // Compute the validity state of the form, and notify the parent.
     const invalid = this.$inputs.filter ((i, input) => !input.validity.valid);
-    const validity = this.getWithDefault ('validity', noOp);
-    validity (invalid.length === 0);
+    const valid = this.getWithDefault ('valid', noOp);
+    valid (invalid.length === 0);
   },
 
   /**
