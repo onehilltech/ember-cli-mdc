@@ -12,7 +12,7 @@ export default Component.extend (Ripple, {
 
   classNameBindings: ['mini:mdc-fab--mini', 'exited:mdc-fab--exited'],
 
-  attributeBindings: ['label:aria-label'],
+  attributeBindings: ['label:aria-label', 'type'],
 
   /// Optional label for the component
   label: null,
