@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -81,6 +82,10 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/vendor" />

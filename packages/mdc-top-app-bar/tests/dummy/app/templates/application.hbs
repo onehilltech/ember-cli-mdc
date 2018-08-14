@@ -1,0 +1,16 @@
+{{#mdc-top-app-bar style=style navigation=(action "navigation") alwaysClosed=true}}
+  {{#mdc-top-app-bar-section position="alignStart"}}
+    {{mdc-top-app-bar-navigation-icon}}
+    {{#mdc-top-app-bar-title}}Top App Bar{{/mdc-top-app-bar-title}}
+  {{/mdc-top-app-bar-section}}
+{{/mdc-top-app-bar}}
+
+{{#mdc-content topAppBarStyle=style}}
+  <select onchange={{action (mut style) value="target.value"}}>
+    <option value="">Standard</option>
+    <option value="fixed">Fixed</option>
+    <option value="prominent">Prominent</option>
+    <option value="short">Short</option>
+    <option value="dense">Dense</option>
+  </select>
+{{/mdc-content}}
