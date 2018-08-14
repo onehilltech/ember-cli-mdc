@@ -21,6 +21,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -57,6 +58,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/dist" />

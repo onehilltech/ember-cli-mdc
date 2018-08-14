@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-layout-grid/components/mdc-layout-grid';

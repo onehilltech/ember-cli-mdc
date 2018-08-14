@@ -6,6 +6,7 @@
     <mapping directory="$PROJECT_DIR$/packages/mdc-elevation" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-form" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-icon-button" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-layout-grid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-theme" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-typography" vcs="Git" />
   </component>
