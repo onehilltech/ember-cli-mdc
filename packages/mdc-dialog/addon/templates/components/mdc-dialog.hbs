@@ -1,0 +1,32 @@
+<div class="mdc-dialog__surface">
+  {{#if title}}
+    {{#mdc-dialog-header}}
+      {{#mdc-dialog-header-title}}{{title}}{{/mdc-dialog-header-title}}
+    {{/mdc-dialog-header}}
+  {{/if}}
+
+  {{#mdc-dialog-body scrollable=scrollable}}
+    {{yield}}
+  {{/mdc-dialog-body}}
+
+  {{#if hasFooter}}
+    {{#mdc-dialog-footer}}
+      {{#if hasCancelButton}}
+        {{#mdc-dialog-button type="button"
+                             class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
+                             emphasize=cancelEmphasize}}
+          {{cancelButtonText}}
+        {{/mdc-dialog-button}}
+      {{/if}}
+
+      {{#if hasAcceptButton}}
+        {{#mdc-dialog-button type="button"
+                             class="mdc-dialog__footer__button mdc-dialog__footer__button--accept"
+                             emphasize=acceptEmphasize}}
+          {{acceptButtonText}}
+        {{/mdc-dialog-button}}
+      {{/if}}
+    {{/mdc-dialog-footer}}
+  {{/if}}
+</div>
+<div class="mdc-dialog__backdrop"></div>
