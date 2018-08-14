@@ -12,6 +12,7 @@ module.exports = {
         {name: 'ember-cli-mdc-dialog'},
         {name: 'ember-cli-mdc-fab'},
         {name: 'ember-cli-mdc-form'},
+        {name: 'ember-cli-mdc-layout-grid'},
         {name: 'ember-cli-mdc-snackbar'}
       ]
     });
