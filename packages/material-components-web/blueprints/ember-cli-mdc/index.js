@@ -9,6 +9,7 @@ module.exports = {
       packages: [
         {name: 'ember-cli-mdc-button'},
         {name: 'ember-cli-mdc-card'},
+        {name: 'ember-cli-mdc-dialog'},
         {name: 'ember-cli-mdc-fab'},
         {name: 'ember-cli-mdc-form'},
         {name: 'ember-cli-mdc-snackbar'}
