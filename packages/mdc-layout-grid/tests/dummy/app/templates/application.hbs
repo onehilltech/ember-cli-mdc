@@ -1,10 +1,9 @@
 <h2 id="title">Layout Grid</h2>
 
 {{#mdc-layout-grid}}
-  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}Cell 1{{/mdc-layout-grid-cell}}
-  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}Cell 2{{/mdc-layout-grid-cell}}
-  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}Cell 3{{/mdc-layout-grid-cell}}
-
+  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}isPhone: {{layout.isPhone}}{{/mdc-layout-grid-cell}}
+  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}isTablet: {{layout.isTablet}}{{/mdc-layout-grid-cell}}
+  {{#mdc-layout-grid-cell desktopColumns=4 tabletColumns=4 phoneColumns=4}}isDesktop: {{layout.isDesktop}}{{/mdc-layout-grid-cell}}
 {{/mdc-layout-grid}}
 
 {{#mdc-layout-grid}}
