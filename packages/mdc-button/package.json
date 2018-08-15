@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-button",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "ember-cli addon for @material/button",
   "keywords": [
     "ember-addon",
@@ -49,7 +49,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.19.0",
     "ember-cli-mdc-base": "^0.10.0",
-    "ember-cli-mdc-elevation": "^0.19.0",
+    "ember-cli-mdc-elevation": "^0.22.0",
     "ember-cli-mdc-icon": "^0.10.0",
     "ember-cli-mdc-ripple": "^0.21.0",
     "ember-cli-mdc-rtl": "^0.10.2",
