@@ -1,18 +1,21 @@
-import TextArea from '@ember/component/text-area';
+import Component from '@ember/component';
+import layout from '../templates/components/mdc-textarea';
+
+import { computed } from '@ember/object';
+import { not } from '@ember/object/computed';
+
 import TextSupport from '../mixins/text-support';
 
-export default TextArea.extend (TextSupport, {
-  fullWidth: null,
+export default Component.extend (TextSupport, {
+  layout,
 
-  didInsertElement () {
-    this._super (...arguments);
+  classNames: ['mdc-text-field--textarea'],
+  classNameBindings: ['fullWidth:mdc-text-field--fullwidth'],
 
-    this.$wrapper.addClass ('mdc-text-field--textarea');
-  },
+  fullWidth: false,
+  notFullWidth: not ('fullWidth'),
 
-  _applyStyling () {
-    this.$wrapper.toggleClass ('mdc-text-field--fullwidth', this.getWithDefault ('fullWidth', false));
-  },
-
-  _hasLabel: true
+  textAreaId: computed (function () {
+    return `${this.elementId}-textarea`;
+  })
 });
