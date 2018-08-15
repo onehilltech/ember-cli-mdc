@@ -1,0 +1,6 @@
+{
+  "name": "ember-cli-mdc-list",
+  "dependencies": {
+    "material-design-icons": "^3.0.1"
+  }
+}
