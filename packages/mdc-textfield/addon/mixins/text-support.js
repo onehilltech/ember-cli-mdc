@@ -54,12 +54,7 @@ export default Mixin.create ({
 
   didRender () {
     this._super (...arguments);
-
-    const valid = this.get ('valid');
-
-    if (valid !== this._textField.valid) {
-      this._textField.valid = valid;
-    }
+    this._textField.valid = this.get ('valid');
   },
 
   _createComponent () {
