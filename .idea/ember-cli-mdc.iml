@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-switch/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-select/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -72,6 +73,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tmp" />
