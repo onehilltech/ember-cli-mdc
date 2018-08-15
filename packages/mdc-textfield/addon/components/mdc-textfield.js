@@ -1,54 +1,128 @@
+/* global mdc */
 
-import TextField from '@ember/component/text-field';
-import TextSupport from '../mixins/text-support';
+import layout from '../templates/components/mdc-textfield';
+import Component from '@ember/component';
 
-import $ from 'jquery';
-
+import { computed } from '@ember/object';
 import { isPresent, isNone } from '@ember/utils';
+import { or, readOnly, equal, not } from '@ember/object/computed';
 
-export default TextField.extend (TextSupport, {
-  $lineRipple: null,
+export default Component.extend ({
+  layout,
 
-  $outline: null,
+  tagName: 'div',
 
-  /**
-   * Insert either a ripple or an outline depending on the selected style.
-   *
-   * @private
-   */
-  _applyStyling () {
-    const isOutlined = this.get ('isOutlined');
+  classNames: ['mdc-text-field'],
 
-    if (isOutlined) {
-      if (isPresent (this.$lineRipple)) {
-        // The outline cannot be present if we are using the ripple style.
-        this.$lineRipple.remove ();
-        this.$lineRipple = null;
+  classNameBindings: [
+    'styleClassName',
+    'iconClassName',
+    'dense:mdc-text-field--dense',
+    'disabled:mdc-text-field--disabled'
+  ],
 
-        this.set ('_invalidated', true);
-      }
+  label: null,
+  style: null,
+  helperText: null,
+  disabled: false,
+  dense: false,
 
-      if (isNone (this.$outline)) {
-        this.$outline = $('<div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div><div class="mdc-notched-outline__idle"></div>');
-        this.$outline.insertAfter (this.$label || this.$ ());
+  icon: null,
+  iconPosition: null,
+  iconClickable: false,
+  iconClick: null,
 
-        this.set ('_invalidated', true);
-      }
+  isOutlined: equal ('style', 'outlined'),
+  isFullWidth: equal ('style', 'fullwidth'),
+  notFullWidth: not ('isFullWidth'),
+
+  invalid: false,
+
+  styleClassName: computed ('style', function () {
+    const style = this.get ('style');
+
+    if (isNone (style)) {
+      return null;
     }
-    else {
-      if (isPresent (this.$outline)) {
-        this.$outline.remove ();
-        this.$outline = null;
 
-        this.set ('_invalidated', true);
+    this.set ('invalidate', true);
+    return `mdc-text-field--${style}`;
+  }),
+
+  _textField: null,
+  _invalidate: false,
+
+  // Helper methods for the position.
+  hasLeadingIcon: equal ('iconPosition', 'leading'),
+  hasTrailingIcon: equal ('iconPosition', 'trailing'),
+
+  iconClassName: computed ('iconPosition', function () {
+    const { hasLeadingIcon, hasTrailingIcon } = this.getProperties (['hasLeadingIcon', 'hasTrailingIcon']);
+
+    return hasLeadingIcon ? 'mdc-text-field--with-leading-icon' : (hasTrailingIcon ? 'mdc-text-field--with-trailing-icon' : null);
+  }),
+
+  valid: not ('invalid'),
+
+  inputId: computed (function () {
+    return `${this.elementId}-input`;
+  }),
+
+  didInsertElement () {
+    this._super (...arguments);
+
+    this._createComponent ();
+  },
+
+  didUpdate () {
+    this._super (...arguments);
+
+    if (this.get ('_invalidate')) {
+      if (isPresent (this._textField)) {
+        this._destroyComponent ();
       }
 
-      if (isNone (this.$lineRipple)) {
-        this.$lineRipple = $('<div class="mdc-line-ripple"></div>');
-        this.$wrapper.append (this.$label || this.$ ());
-
-        this.set ('_invalidated', true);
-      }
+      this._createComponent ();
+      this.set ('_invalidate', false);
     }
   },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    this._destroyComponent ();
+  },
+
+  doClickIcon () {
+    const iconClick = this.getWithDefault ('iconClick');
+
+    if (isPresent (iconClick)) {
+      iconClick ();
+    }
+  },
+
+  didReceiveAttrs () {
+    this._super (...arguments);
+  },
+
+  didRender () {
+    this._super (...arguments);
+
+    const valid = this.get ('valid');
+
+    if (valid !== this._textField.valid) {
+      this._textField.valid = valid;
+    }
+  },
+
+  _createComponent () {
+    this._textField = new mdc.textfield.MDCTextField (this.element);
+    this._textField.listen ('MDCTextField:icon', this.doClickIcon.bind (this));
+  },
+
+  _destroyComponent () {
+    this._textField.unlisten ('MDCTextField:icon', this.doClickIcon.bind (this));
+    this._textField.destroy ();
+    this._textField = null;
+  }
 });

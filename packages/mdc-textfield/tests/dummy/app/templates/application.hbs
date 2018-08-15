@@ -11,9 +11,9 @@
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Helper Text"
-                    helperText="Helper Text"
-                    helperTextPersistent=true}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
@@ -32,10 +32,10 @@
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Helper Text"
-                    style="box"
-                    helperText="Helper Text"
-                    helperTextPersistent=true}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="box"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
@@ -54,10 +54,10 @@
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Helper Text"
-                    style="outlined"
-                    helperText="Helper Text"
-                    helperTextPersistent=true}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="outlined"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
@@ -83,13 +83,12 @@
                     iconPosition="leading"}}
   </div>
   <div class="text-field-container">
-
-    {{mdc-textfield label="Helper Text"
-                    style="box"
-                    helperText="Helper Text"
-                    helperTextPersistent=true
-                    icon="event"
-                    iconPosition="leading"}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="box"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true
+                                     icon="event"
+                                     iconPosition="leading"}}
   </div>
 
   <div class="text-field-container">
@@ -121,12 +120,12 @@
   </div>
   <div class="text-field-container">
 
-    {{mdc-textfield label="Helper Text"
-                    style="box"
-                    helperText="Helper Text"
-                    helperTextPersistent=true
-                    icon="delete"
-                    iconPosition="trailing"}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="box"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true
+                                     icon="delete"
+                                     iconPosition="trailing"}}
   </div>
 
   <div class="text-field-container">
@@ -158,12 +157,12 @@
   </div>
   <div class="text-field-container">
 
-    {{mdc-textfield label="Helper Text"
-                    style="outlined"
-                    helperText="Helper Text"
-                    helperTextPersistent=true
-                    icon="event"
-                    iconPosition="leading"}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="outlined"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true
+                                     icon="event"
+                                     iconPosition="leading"}}
   </div>
 
   <div class="text-field-container">
@@ -196,12 +195,12 @@
   </div>
   <div class="text-field-container">
 
-    {{mdc-textfield label="Helper Text"
-                    style="outlined"
-                    helperText="Helper Text"
-                    helperTextPersistent=true
-                    icon="delete"
-                    iconPosition="trailing"}}
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="outlined"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true
+                                     icon="delete"
+                                     iconPosition="trailing"}}
   </div>
 
   <div class="text-field-container">
@@ -247,10 +246,10 @@
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Standard"
-                    style="fullwidth"
-                    helperText="Helper Text"
-                    helperTextPersistent=true}}
+    {{mdc-textfield-with-helper-text label="Standard"
+                                     style="fullwidth"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
@@ -282,28 +281,31 @@
 
 <div class="text-field-row">
   <div class="text-field-container">
-    {{mdc-textfield label="Required" required=true}}
+    {{mdc-textfield-with-helper-text label="Required" required=true}}
   </div>
   <div class="text-field-container">
-    {{mdc-textfield label="Min and Max" type="number" min=10 max=10000
-                    helperText="Must be between 10 and 10000."}}
-  </div>
-
-  <div class="text-field-container">
-    {{mdc-textfield label="Pattern"
-                    pattern="[A-Za-z]{3}"
-                    helperText="Three letter country code."}}
+    {{mdc-textfield-with-helper-text label="Min and Max"
+                                     type="number"
+                                     min=10
+                                     max=10000
+                                     helperText="Must be between 10 and 10000."}}
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Validation message"
-                    required=true
-                    type="number"
-                    helperText="10 <= n <= 10000"
-                    helperTextPersistent=true
-                    min=10
-                    max=10000
-                    validationMessages=validationMessages}}
+    {{mdc-textfield-with-helper-text label="Pattern"
+                                     pattern="[A-Za-z]{3}"
+                                     helperText="Three letter country code."}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield-with-helper-text label="Validation message"
+                                     required=true
+                                     type="number"
+                                     helperText="10 <= n <= 10000"
+                                     helperTextPersistent=true
+                                     min=10
+                                     max=10000
+                                     validationMessages=validationMessages}}
   </div>
 </div>
 
@@ -314,6 +316,9 @@
     <button {{action "setErrorMessage"}}>Set Error Message</button>
     <button {{action "clearErrorMessage"}}>Clear Error Message</button>
 
-    {{mdc-textfield label="Error" errorMessage=errorMessage}}
+    {{mdc-textfield-with-helper-text style="outlined"
+                                     label="Error"
+                                     required=true
+                                     errorMessage=errorMessage}}
   </div>
 </div>
