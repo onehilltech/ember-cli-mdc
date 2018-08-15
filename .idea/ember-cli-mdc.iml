@@ -23,6 +23,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-switch/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -75,6 +76,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/vendor" />
