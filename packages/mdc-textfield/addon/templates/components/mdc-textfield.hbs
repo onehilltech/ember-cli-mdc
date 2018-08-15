@@ -2,13 +2,34 @@
   {{mdc-textfield-icon icon clickable=iconClickable}}
 {{/if}}
 {{mdc-textfield-input id=inputId
+                      readonly=readonly
                       required=required
-                      type=type
+                      autofocus=autofocus
+                      value=value
+                      disabled=disabled
+                      size=size
+                      tabindex=tabindex
+                      maxlength=maxlength
+                      name=name
                       min=min
                       max=max
                       pattern=pattern
-                      size=size
-                      disabled=disabled
+                      accept=accept
+                      autocomplete=autocomplete
+                      autosave=autosave
+                      formaction=formaction
+                      formenctype=formenctype
+                      formmethod=formmethod
+                      formnovalidate=formnovalidate
+                      formtarget=formtarget
+                      height=height
+                      inputmode=inputmode
+                      multiple=multiple
+                      step=step
+                      width=width
+                      form=form
+                      selectionDirection=selectionDirection
+                      spellcheck=spellcheck
                       placeholder=(if isFullWidth label)
                       label=(if isFullWidth label)}}
 {{#if notFullWidth}}
