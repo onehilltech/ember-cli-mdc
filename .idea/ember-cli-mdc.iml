@@ -25,6 +25,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-switch/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-select/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-list/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-drawer/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -41,6 +43,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/bower_components" />
@@ -65,6 +68,10 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/vendor" />
