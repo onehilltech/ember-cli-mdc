@@ -76,6 +76,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tmp" />

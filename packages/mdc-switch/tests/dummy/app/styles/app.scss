@@ -1,0 +1,8 @@
+.mdc-switch-row {
+  display: flex;
+  justify-content: space-evenly;
+
+  .mdc-switch-container {
+    max-width: 200px;
+  }
+}
