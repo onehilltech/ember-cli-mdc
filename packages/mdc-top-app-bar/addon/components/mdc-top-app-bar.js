@@ -4,7 +4,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-top-app-bar';
 
 import { computed } from '@ember/object';
-import { isEmpty } from '@ember/utils';
+import { isEmpty, isPresent } from '@ember/utils';
 
 import { assert } from '@ember/debug';
 
@@ -47,21 +47,28 @@ export default Component.extend({
     return alwaysClosed && style === 'short' ? 'mdc-top-app-bar--short-collapsed' : null;
   }),
 
-  didInsertElement () {
+  willDestroyElement () {
     this._super (...arguments);
+    this._destroyComponent ();
+  },
+
+  doNavigation () {
+    this.getWithDefault ('navigation', noOp) ();
+  },
+
+  didRender () {
+    this._super (...arguments);
+
+    if (isPresent (this._topAppBar)) {
+      this._destroyComponent ();
+    }
 
     this._topAppBar = new MDCTopAppBar (this.element);
     this._topAppBar.listen ('MDCTopAppBar:nav', this.doNavigation.bind (this));
   },
 
-  willDestroyElement () {
-    this._super (...arguments);
-
+  _destroyComponent () {
     this._topAppBar.unlisten ('MDCTopAppBar:nav', this.doNavigation.bind (this));
     this._topAppBar.destroy ();
-  },
-
-  doNavigation () {
-    this.getWithDefault ('navigation', noOp) ();
   }
 });

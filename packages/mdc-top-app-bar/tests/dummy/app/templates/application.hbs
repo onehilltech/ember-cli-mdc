@@ -3,6 +3,15 @@
     {{mdc-top-app-bar-navigation-icon}}
     {{#mdc-top-app-bar-title}}Top App Bar{{/mdc-top-app-bar-title}}
   {{/mdc-top-app-bar-section}}
+
+  {{#mdc-top-app-bar-section position="alignEnd" role="toolbar"}}
+    {{mdc-top-app-bar-action-item label="Download" alt="Download" icon="file_download"}}
+
+    {{#if notShort}}
+      {{mdc-top-app-bar-action-item label="Print this page" alt="Print this page" icon="print"}}
+      {{mdc-top-app-bar-action-item label="Bookbark this page" alt="Bookmark this page" icon="bookmark"}}
+    {{/if}}
+  {{/mdc-top-app-bar-section}}
 {{/mdc-top-app-bar}}
 
 {{#mdc-content topAppBarStyle=style}}
