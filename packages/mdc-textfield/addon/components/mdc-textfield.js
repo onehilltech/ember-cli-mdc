@@ -37,6 +37,7 @@ export default Component.extend ({
   notFullWidth: not ('isFullWidth'),
 
   invalid: false,
+  valid: not ('invalid'),
 
   styleClassName: computed ('style', function () {
     const style = this.get ('style');
@@ -61,8 +62,6 @@ export default Component.extend ({
 
     return hasLeadingIcon ? 'mdc-text-field--with-leading-icon' : (hasTrailingIcon ? 'mdc-text-field--with-trailing-icon' : null);
   }),
-
-  valid: not ('invalid'),
 
   inputId: computed (function () {
     return `${this.elementId}-input`;
