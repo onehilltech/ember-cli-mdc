@@ -1,0 +1,28 @@
+{{#if hasLeadingIcon}}
+  {{mdc-textfield-icon icon clickable=iconClickable}}
+{{/if}}
+{{mdc-textfield-input id=inputId
+                      required=required
+                      type=type
+                      min=min
+                      max=max
+                      pattern=pattern
+                      size=size
+                      disabled=disabled
+                      placeholder=(if isFullWidth label)
+                      label=(if isFullWidth label)}}
+{{#if notFullWidth}}
+  {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
+{{/if}}
+{{#if hasTrailingIcon}}
+  {{mdc-textfield-icon icon clickable=iconClickable}}
+{{/if}}
+{{#if notFullWidth}}
+  {{#if isOutlined}}
+    {{mdc-notched-outline}}
+  {{else}}
+    {{mdc-line-ripple}}
+  {{/if}}
+{{/if}}
+
+
