@@ -6,15 +6,16 @@ export default Controller.extend({
   value: null,
 
   errorMessage: null,
-
-  validationMessages: {
-    valueMissing: 'You must provide a value here.',
-    rangeUnderflow: 'This number is too small!',
-    rangeOverflow: 'This number is too big!'
-  },
+  validationMessages: null,
 
   init () {
     this._super (...arguments);
+
+    this.set ('validationMessages', {
+      valueMissing: 'You must provide a value here.',
+      rangeUnderflow: 'This number is too small!',
+      rangeOverflow: 'This number is too big!'
+    })
   },
 
   type: computed ('visible', function () {

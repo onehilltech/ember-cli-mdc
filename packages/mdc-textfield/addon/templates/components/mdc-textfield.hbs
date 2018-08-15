@@ -2,6 +2,12 @@
   {{mdc-textfield-icon icon clickable=iconClickable}}
 {{/if}}
 {{mdc-textfield-input id=inputId
+
+                      dense=dense
+                      icon=icon
+                      iconPosition=iconPosition
+                      iconClickable=iconClickable
+                      iconClick=iconClick
                       readonly=readonly
                       required=required
                       autofocus=autofocus
@@ -30,6 +36,16 @@
                       form=form
                       selectionDirection=selectionDirection
                       spellcheck=spellcheck
+
+                      action=action
+                      enter=enter
+                      insert-newline=insert-newline
+                      escape-press=escape-press
+                      focus-in=focus-in
+                      focus-out=focus-out
+                      key-press=key-press
+                      key-up=key-up
+
                       placeholder=(if isFullWidth label)
                       label=(if isFullWidth label)}}
 {{#if notFullWidth}}
