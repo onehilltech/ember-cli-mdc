@@ -1,0 +1,40 @@
+{{#mdc-drawer style=style open=open}}
+  {{#mdc-drawer-header}}
+    {{#mdc-drawer-header-content class="mdc-theme--on-primary mdc-theme--primary-bg"}}
+      Header here
+    {{/mdc-drawer-header-content}}
+  {{/mdc-drawer-header}}
+
+  {{#mdc-drawer-content}}
+    {{#mdc-list-group}}
+      {{#mdc-list}}
+        {{#mdc-list-item-linkto "inbox"}}{{mdc-list-item-graphic-icon "inbox"}} Inbox{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "star"}}{{mdc-list-item-graphic-icon "star"}} Star{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "sent"}}{{mdc-list-item-graphic-icon "send"}} Sent Mail{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "drafts"}}{{mdc-list-item-graphic-icon "drafts"}} Drafts{{/mdc-list-item-linkto}}
+      {{/mdc-list}}
+
+      {{mdc-list-divider}}
+
+      {{#mdc-list}}
+        {{#mdc-list-item-linkto "all"}}{{mdc-list-item-graphic-icon "email"}} All Mail{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "trash"}}{{mdc-list-item-graphic-icon "delete"}} Trash{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "spam"}}{{mdc-list-item-graphic-icon "report"}} Spam{{/mdc-list-item-linkto}}
+      {{/mdc-list}}
+
+    {{/mdc-list-group}}
+  {{/mdc-drawer-content}}
+{{/mdc-drawer}}
+
+<div>
+  <button {{action (mut style) "permanent"}}>Permanent Drawer</button>
+  <button {{action (mut style) "persistent"}}>Persistent Drawer</button>
+  <button {{action (mut style) "temporary"}}>Temporary Drawer</button>
+</div>
+
+{{#unless permanent}}
+  <div>
+    <button {{action (mut open) true}}>Open Drawer</button>
+    <button {{action (mut open) false}}>Close Drawer</button>
+  </div>
+{{/unless}}

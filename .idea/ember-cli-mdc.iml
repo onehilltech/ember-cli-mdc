@@ -43,6 +43,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/vendor" />
