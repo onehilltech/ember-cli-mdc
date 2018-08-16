@@ -27,6 +27,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-select/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-list/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-drawer/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -57,6 +58,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon-button/tmp" />
