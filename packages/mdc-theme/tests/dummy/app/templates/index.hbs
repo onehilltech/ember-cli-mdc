@@ -1,0 +1,40 @@
+<h2>Themes</h2>
+
+<select onchange={{action (mut themeBackgroundColor) value="target.value"}}>
+  <option value="" selected>Theme Background Color</option>
+  <option value="background">Background</option>
+  <option value="primary">Primary</option>
+  <option value="secondary">Secondary</option>
+</select>
+
+<select onchange={{action (mut themeTextColor) value="target.value"}}>
+  <option value="" selected>Theme Text Color</option>
+  <option value="primary">Primary</option>
+  <option value="secondary">Secondary</option>
+  <option value="onPrimary">On Primary</option>
+  <option value="onSecondary">On Secondary</option>
+  <option value="onSurface">On Surface</option>
+</select>
+
+<select onchange={{action (mut themeTextStyle) value="target.value"}}>
+  <option value="" selected>Theme Text Style</option>
+  <option value="primary">Primary</option>
+  <option value="secondary">Secondary</option>
+  <option value="disabled">Disabled</option>
+  <option value="hint">Hint</option>
+  <option value="icon">Icon</option>
+</select>
+
+<select onchange={{action (mut theme) value="target.value"}}>
+  <option value="" selected>Theme</option>
+  <option value="dark">Dark</option>
+  <option value="light">Light</option>
+</select>
+
+{{#mdc-div class="demo"
+           themeBackgroundColor=themeBackgroundColor
+           themeTextColor=themeTextColor
+           themeTextStyle=themeTextStyle
+           theme=theme}}
+  THEME
+{{/mdc-div}}
