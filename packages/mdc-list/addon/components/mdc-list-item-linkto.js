@@ -6,5 +6,5 @@ export default LinkComponent.extend({
 
   classNames: ['mdc-list-item'],
 
-  activeClass: 'mdc-list-item--selected'
+  activeClass: 'mdc-list-item--activated'
 });
