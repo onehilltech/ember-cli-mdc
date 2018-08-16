@@ -1,0 +1,21 @@
+<select onchange={{action (mut typography) value="target.value"}}>
+  <option value="headline1">Headline 1</option>
+  <option value="headline2">Headline 2</option>
+  <option value="headline3">Headline 3</option>
+  <option value="headline4">Headline 4</option>
+  <option value="headline5">Headline 5</option>
+  <option value="headline6">Headline 6</option>
+
+  <option value="subtitle1">Subtitle 1</option>
+  <option value="subtitle2">Subtitle 2</option>
+
+  <option value="body1">Body 1</option>
+  <option value="body2">Body 2</option>
+
+  <option value="caption">Caption</option>
+  <option value="button">Button</option>
+
+  <option value="overline">Overline</option>
+</select>
+
+{{#mdc-h1 typography=typography}}Typography{{/mdc-h1}}
