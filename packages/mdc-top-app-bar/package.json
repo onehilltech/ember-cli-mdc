@@ -1,14 +1,15 @@
 {
   "name": "ember-cli-mdc-top-app-bar",
   "version": "0.22.0",
-  "description": "ember-cli addon for @material/top-app-bar",
+  "description": "ember-cli addon for @material/top-app-bar.",
   "keywords": [
     "ember-addon",
     "material",
     "material design",
     "material components",
     "top",
-    "app bar"
+    "app bar",
+    "navigation"
   ],
   "repository": {
     "type": "git",
