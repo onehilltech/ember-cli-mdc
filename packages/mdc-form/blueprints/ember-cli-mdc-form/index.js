@@ -8,7 +8,9 @@ module.exports = {
     return this.addAddonsToProject ({
       packages: [
         {name: 'ember-cli-mdc-textfield'},
-        {name: 'ember-cli-mdc-button'}
+        {name: 'ember-cli-mdc-button'},
+        {name: 'ember-cli-mdc-select'},
+        {name: 'ember-cli-mdc-switch'}
       ]
     });
   }
