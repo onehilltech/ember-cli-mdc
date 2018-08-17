@@ -3,6 +3,13 @@ ember-cli-mdc
 
 An Ember add-on for [Material Components for the web](https://github.com/material-components/material-components-web/)
 
+Features
+------------
+
+* Ember components for Material Components
+* Individual packages for selective integration and usage of Material Components
+* Seamless integration with [Corber](http://corber.io/)
+
 Installation
 ------------
 
