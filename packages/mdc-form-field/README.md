@@ -24,8 +24,8 @@ mdc-form-field
 
 ### Description
 
-Aligns the a Web form field with its label and makes it RTL-aware. It also activates 
-a ripple effect upon interacting with the label.
+Aligns a web form field with its label and makes it RTL-aware. It also activates a ripple effect
+upon interacting with the label.
 
 ### Usage
 
