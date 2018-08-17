@@ -4,25 +4,24 @@ module.exports = {
   name: 'ember-cli-mdc-icon',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    // material-design-icons
-    app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.eot', {destDir: 'assets/fonts/material-design-icons'});
-    app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.tff', {destDir: 'assets/fonts/material-design-icons'});
-    app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.woff', {destDir: 'assets/fonts/material-design-icons'});
-    app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.woff2', {destDir: 'assets/fonts/material-design-icons'});
+    if (process.env.CORBER) {
+      // We are using corber to build the application. This means that we need to
+      // embed the icons in the application bundle.
+      app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.eot', {destDir: 'assets/fonts/material-design-icons'});
+      app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.tff', {destDir: 'assets/fonts/material-design-icons'});
+      app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.woff', {destDir: 'assets/fonts/material-design-icons'});
+      app.import (app.bowerDirectory + '/material-design-icons/iconfont/MaterialIcons-Regular.woff2', {destDir: 'assets/fonts/material-design-icons'});
+    }
   },
 
   contentFor (type, config) {
-    if (type === 'head-footer') {
-      let mdc = config['ember-cli-mdc'];
-      let embedFonts = mdc && mdc.embedIconFonts;
+    this._super (...arguments);
 
-      if (!embedFonts) {
+    if (type === 'head-footer') {
+      if (!process.env.CORBER) {
         return '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />';
-      }
-      else {
-        this.ui.writeLine ('Embedding Material Icons font');
       }
     }
   }
