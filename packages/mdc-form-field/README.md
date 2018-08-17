@@ -17,7 +17,7 @@ This package contains the following top-level components.
 
 This package contains the following mixins:
 
-* [`FormFieldMixin`]
+* `FormFieldMixin`
 
 mdc-form-field
 ---------------------
