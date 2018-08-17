@@ -13,11 +13,12 @@ Installation
 ### Individual Packages
 
     ember install ember-cli-[package-name]
-    
-Examples:
+
+Ex.    
     
     ember install ember-cli-mdc-forms
     ember install ember-cli-mdc-button
     ember install ember-cli-mdc-forms
     
-See the packages directory for a list of packages that can be installed individually.
+See the [packages directory](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages) for a 
+list of packages that can be installed individually.
