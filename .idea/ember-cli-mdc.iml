@@ -84,6 +84,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/vendor" />

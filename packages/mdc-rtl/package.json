@@ -27,7 +27,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
     "@material/rtl": "^0.36.0",

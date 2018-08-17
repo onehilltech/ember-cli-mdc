@@ -1,0 +1,5 @@
+@import "@material/rtl/mixins";
+
+.mdc-foo {
+   @include mdc-rtl-reflexive-box(margin, left, 8px);
+}
