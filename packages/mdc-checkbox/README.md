@@ -50,3 +50,7 @@ A checkbox input element that contains a label.
 {{/mdc-checkbox-with-label}}
 ```
 
+### Attributes
+
+* **`checked`** - The checkbox is checked.
+* **`disabled`** - The checkbox is disabled.
