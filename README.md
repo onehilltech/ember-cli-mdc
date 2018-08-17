@@ -34,3 +34,9 @@ Next Steps
 ----------
 
 See the `README.md` in each package for detailed usage and examples.
+
+Additional Resources
+====================
+
+* [Material Design](https://www.material.io/)
+* [Material Components for the web](https://github.com/material-components/material-components-web/)
