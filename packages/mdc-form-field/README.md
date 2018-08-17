@@ -1,50 +1,40 @@
-ember-cli-form-field
-==============================================================================
+ember-cli-mdc-form-field
+======================
 
-[Short description of the addon.]
+ember-cli addon for [`@material/form-field`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-form-field).
 
 Installation
-------------------------------------------------------------------------------
+------------
 
+    ember install ember-cli-mdc-form-field
+
+Components & Mixins
+-------------------
+
+This package contains the following top-level components.
+
+* [`{{mdc-form-field}}`](#mdc-form-field)
+
+This package contains the following mixins:
+
+* [`FormFieldMixin`]
+
+mdc-form-field
+---------------------
+
+### Description
+
+Aligns the a Web form field with its label and makes it RTL-aware. It also activates 
+a ripple effect upon interacting with the label.
+
+### Usage
+
+```handlebars
+{{#mdc-form-field alignEnd=true}}
+  {{!-- add input here --}}
+{{/mdc-form-field}}
 ```
-ember install ember-cli-form-field
-```
 
+### Attributes
 
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-### Installation
-
-* `git clone <repository-url>`
-* `cd ember-cli-form-field`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
+* **`alignEnd`** - Position the input after the label. (optional)

@@ -44,7 +44,7 @@ A checkbox input element that contains a label.
 ### Usage
 
 ```handlebars
-{{#mdc-checkbox-with-label checked=checked disabled=disabled}}
+{{#mdc-checkbox-with-label checked=checked disabled=disabled alignEnd=true}}
   This is a checkbox that contains a label. You can add HTML styling 
   tags here to make a more complex label.
 {{/mdc-checkbox-with-label}}
@@ -54,3 +54,4 @@ A checkbox input element that contains a label.
 
 * **`checked`** - The checkbox is checked.
 * **`disabled`** - The checkbox is disabled.
+* **`alignEnd`** - Align the checkbox after the label.
