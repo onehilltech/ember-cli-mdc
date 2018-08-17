@@ -1,50 +1,47 @@
 ember-cli-mdc-checkbox
-==============================================================================
+======================
 
-[Short description of the addon.]
+ember-cli addon for [`@material/checkbox`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-checkbox).
 
 Installation
-------------------------------------------------------------------------------
+------------
 
+    ember install ember-cli-mdc-checkbox
+
+Components
+-----------
+
+This package contains the following top-level components.
+
+* [`{{mdc-checkbox}}`](#mdc-checkbox)
+* [`{{mdc-checkbox-with-label}}`](#mdc-checkbox-with-label)
+
+mdc-checkbox
+---------------------
+
+### Description
+
+A standalone checkbox input element that does not contain a label.
+
+### Usage
+
+```handlebars
+{{mdc-checkbox checked=checked disabled=disabled}}
 ```
-ember install ember-cli-mdc-checkbox
+
+mdc-checkbox-with-label
+------------------------------
+
+### Description
+
+A checkbox input element that contains a label.
+
+### Usage
+
+```handlebars
+{{#mdc-checkbox-with-label checked=checked disabled=disabled}}
+  This is a checkbox that contains a label. You can add HTML styling 
+  tags here to make a more complex label.
+{{/mdc-checkbox-with-label}}
 ```
 
-
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-### Installation
-
-* `git clone <repository-url>`
-* `cd ember-cli-mdc-checkbox`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
