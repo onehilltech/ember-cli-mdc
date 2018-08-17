@@ -32,7 +32,7 @@ search for the icon at [Material Icons](https://material.io/tools/icons/).
 {{mdc-icon name}}
 ```
 
-### Attributes
+### Positional Parameters
 
 * **`name`** - Name of the icon.
 
