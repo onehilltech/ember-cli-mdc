@@ -14,11 +14,11 @@ Installed Packages
 
 This package installs the following packages:
 
-* [`ember-cli-mdc-textfield`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-textfield)
 * [`ember-cli-mdc-button`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-button)
+* [`ember-cli-mdc-checkbox`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-checkbox)
 * [`ember-cli-mdc-select`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-select)
 * [`ember-cli-mdc-switch`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-switch)
-* [`ember-cli-mdc-checkbox`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-checkbox)
+* [`ember-cli-mdc-textfield`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-textfield)
 
 Components
 -------------
