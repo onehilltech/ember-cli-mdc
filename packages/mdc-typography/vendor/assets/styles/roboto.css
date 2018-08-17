@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Thin),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Thin.woff2") format("woff2"),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Light),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Light.woff2") format("woff2"),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Regular),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Regular.woff2") format("woff2"),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Medium),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Medium.woff2") format("woff2"),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(Roboto Bold),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Bold.woff2") format("woff2"),
+  url("ember-cli-mdc-typography/assets/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+}
