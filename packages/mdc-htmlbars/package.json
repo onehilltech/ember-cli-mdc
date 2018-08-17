@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-htmlbars",
-  "version": "0.23.1",
+  "version": "0.23.2",
   "description": "ember-cli addon for basic html elements for Material Design",
   "keywords": [
     "ember-addon",
