@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-form-field/components/mdc-form-field';
+export { default } from 'ember-cli-mdc-form-field/components/mdc-form-field';

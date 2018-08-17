@@ -1,12 +1,20 @@
 {
-  "name": "ember-cli-form-field",
+  "name": "ember-cli-mdc-form-field",
   "version": "0.24.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-cli addon for @material/form-field.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "form",
+    "field"
   ],
-  "repository": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
+  },
+  "license": "Apache-2.0",
   "author": "",
   "directories": {
     "doc": "doc",

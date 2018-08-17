@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-form-field',
+  name: 'ember-cli-mdc-form-field',
 
   included (app) {
     this._super (...arguments);
