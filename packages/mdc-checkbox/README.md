@@ -29,6 +29,11 @@ A standalone checkbox input element that does not contain a label.
 {{mdc-checkbox checked=checked disabled=disabled}}
 ```
 
+### Attributes
+
+* **`checked`** - The checkbox is checked.
+* **`disabled`** - The checkbox is disabled.
+
 mdc-checkbox-with-label
 ------------------------------
 
