@@ -40,8 +40,10 @@ input is invalid.
 The `mdc-form` element will gather all child input elements and listen to changes
 in its [validity state](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState).
 When the validity state of an input changes, the `mdc-form` component will call the 
-`invalid` action.
-
+`invalid` action. The `invalid` action can then mutate a variable that enables/disables
+the submit button. The form does not automatically enable/disable the submit button,
+if present, because the parent may have other criteria outside of the forms knowledge 
+that determines if the submit button should be enabled/disabled.
 
 ### Usage
 
