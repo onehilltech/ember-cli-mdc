@@ -29,3 +29,8 @@ Ex.
     
 See the [packages directory](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages) for a 
 list of packages that can be installed individually.
+
+Next Steps
+----------
+
+See the `README.md` in each package for detailed usage and examples.
