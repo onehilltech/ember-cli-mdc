@@ -3,9 +3,11 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-checkbox" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-drawer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-elevation" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-form" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-form-field" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-icon-button" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-layout-grid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-theme" vcs="Git" />

@@ -28,6 +28,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-list/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-drawer/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form-field/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -41,6 +43,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-card/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-card/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-card/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/vendor" />
@@ -56,6 +60,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form-field/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form-field/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tmp" />
