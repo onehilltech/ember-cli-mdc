@@ -1,4 +1,4 @@
-ember-cli-mdc-checkbox
+ember-cli-mdc-form
 ======================
 
 ember-cli addon that contains helper components and installs `ember-cli-mdc` 
