@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-form-field/components/mdc-form-field';
