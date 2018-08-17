@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-switch",
-  "version": "0.22.8",
+  "version": "0.23.1",
   "description": "ember-cli addon for @material/switch.",
   "keywords": [
     "ember-addon",
@@ -50,7 +50,7 @@
     "ember-cli-mdc-base": "^0.10.0",
     "ember-cli-mdc-elevation": "^0.22.7",
     "ember-cli-mdc-ripple": "^0.22.8",
-    "ember-cli-mdc-rtl": "^0.10.2",
+    "ember-cli-mdc-rtl": "^0.23.1",
     "ember-cli-mdc-selection-control": "^0.22.8",
     "ember-cli-mdc-theme": "^0.22.7",
     "ember-cli-qunit": "^4.3.2",
