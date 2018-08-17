@@ -31,6 +31,7 @@
     "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
+    "@material/rtl": "^0.36.0",
     "@material/theme": "^0.38.0",
     "@material/typography": "^0.38.0",
     "broccoli-asset-rev": "^2.7.0",
@@ -40,6 +41,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-mdc-rtl": "^0.23.1",
     "ember-cli-mdc-theme": "^0.22.7",
     "ember-cli-mdc-typography": "^0.22.6",
     "ember-cli-qunit": "^4.3.2",

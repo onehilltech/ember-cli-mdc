@@ -8,7 +8,8 @@ module.exports = {
     return this.addAddonsToProject ({
       packages: [
         {name: 'ember-cli-mdc-theme'},
-        {name: 'ember-cli-mdc-typography'}
+        {name: 'ember-cli-mdc-typography'},
+        {name: 'ember-cli-mdc-rtl'}
       ]
     });
   }
