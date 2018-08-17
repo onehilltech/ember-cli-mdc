@@ -39,7 +39,7 @@ input is invalid.
 
 The `mdc-form` element will gather all child input elements and listen to changes
 in its [validity state](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState).
-When the validity state of the inputs change, the `mdc-form` component will call the 
+When the validity state of an input changes, the `mdc-form` component will call the 
 `invalid` action.
 
 
