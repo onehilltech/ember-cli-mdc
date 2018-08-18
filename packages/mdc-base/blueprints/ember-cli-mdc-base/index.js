@@ -7,6 +7,12 @@ module.exports = {
   afterInstall () {
     return this.addPackagesToProject ([
       {name: '@material/base'},
-    ]);
+    ]).then (() => {
+      return this.addAddonsToProject ({
+        packages: [
+          {name: 'ember-cli-sass'},
+        ]
+      })
+    })
   }
 };

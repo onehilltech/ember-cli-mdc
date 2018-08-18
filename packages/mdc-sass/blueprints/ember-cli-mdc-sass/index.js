@@ -8,7 +8,11 @@ module.exports = {
     return this.addAddonsToProject ({
       packages: [
         {name: 'ember-cli-sass'}
-      ]
-    })
+      ],
+
+      blueprintOptions: {
+        save: true
+      }
+    });
   }
 };

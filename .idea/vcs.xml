@@ -10,6 +10,7 @@
     <mapping directory="$PROJECT_DIR$/packages/mdc-form-field" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-icon-button" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-layout-grid" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-sass" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-theme" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-top-app-bar" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-typography" vcs="Git" />

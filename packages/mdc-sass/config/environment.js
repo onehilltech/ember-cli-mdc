@@ -7,11 +7,25 @@ module.exports = function(environment, appConfig) {
   if (!appConfig.sassOptions.includePaths)
     appConfig.sassOptions.includePaths = [];
 
-  appConfig.sassOptions.includePaths.push ('node_modules');
-  appConfig.sassOptions.includePaths.push ('app/styles');
+  const includePaths = appConfig.sassOptions.includePaths;
 
-  if (environment === 'test' || appConfig.modulePrefix === 'dummy') {
-    appConfig.sassOptions.includePaths.push ('tests/dummy/app/styles');
+  if (!includePaths.includes ('node_modules'))
+    appConfig.sassOptions.includePaths.push ('node_modules');
+
+  if (environment === 'development') {
+    if (appConfig.modulePrefix !== 'dummy') {
+      if (!includePaths.includes ('app/styles'))
+        includePaths.push ('app/styles');
+    }
+    else {
+      if (!includePaths.includes ('tests/dummy/app/styles'))
+        includePaths.push ('tests/dummy/app/styles');
+    }
+  }
+
+  if (environment === 'test') {
+    if (!includePaths.includes ('tests/dummy/app/styles'))
+      includePaths.push ('tests/dummy/app/styles');
   }
 
   return appConfig;

@@ -30,6 +30,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form-field/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-sass/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -93,6 +94,9 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/config" />
