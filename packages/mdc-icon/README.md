@@ -44,7 +44,9 @@ search for the icon at [Material Icons](https://material.io/tools/icons/).
 {{mdc-icon "close"}}      {{!-- create a close icon --}}
 ```
 
-### Coloring Icons
+## Coloring Icons
+
+### Using CSS Styles
 
 You color an icon using the `color` CSS style. For example, if you want to color the 
 delete icon red, then we first create a CSS class that has the property `color:red`.
@@ -62,3 +64,15 @@ Then, assign the CSS class to the icon.
 ```
 
 Now, the delete icon will render in red.
+
+### Using Themes
+
+The `{{mdc-icon}}` component supports the 
+[TextTheme](https://github.com/onehilltech/ember-cli-mdc/blob/master/packages/mdc-theme/addon/mixins/text-theme.js) 
+mixin. This exposes the `themeTextColor`, `theme`, and `themeTextStyle` attributes on the `{{mdc-icon}}`
+component.
+
+```handlebars
+{{mdc-icon "favorite" themeTextColor="primary"}}
+{{mdc-icon "favorite" theme="light" themeTextStyle="disabled"}}
+```
