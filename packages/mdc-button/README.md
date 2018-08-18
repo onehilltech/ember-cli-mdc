@@ -54,3 +54,11 @@ icon to the button.
 ```handlebars
 {{#mdc-button style="raised"}}{{mdc-button-icon "event"}}Button{{/mdc-button}}
 ```
+
+## Button Clicks
+
+Use the `click` attribute and the `action` helper to listen for button clicks.
+
+```handlebars
+{{#mdc-button style="raised" click=(action "clicked")}}Button{{/mdc-button}}
+```
