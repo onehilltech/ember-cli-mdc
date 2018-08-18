@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-sass",
-  "version": "0.27.0",
+  "version": "0.27.3",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
