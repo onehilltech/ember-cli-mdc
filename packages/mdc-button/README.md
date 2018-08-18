@@ -46,7 +46,15 @@ Add a button element to the parent.
 {{#mdc-button style="outlined"}}Button{{/mdc-button}}
 ```
 
-## Adding Button Icons
+### Listening for Button Clicks
+
+Use the `click` attribute and the `action` helper to listen for button clicks.
+
+```handlebars
+{{#mdc-button style="raised" click=(action "clicked")}}Button{{/mdc-button}}
+```
+
+### Button Icons
 
 Use the `{{mdc-button-icon}}`, which extends the `{{mdc-icon}}` component, to add an 
 icon to the button.
@@ -55,10 +63,3 @@ icon to the button.
 {{#mdc-button style="raised"}}{{mdc-button-icon "event"}}Button{{/mdc-button}}
 ```
 
-## Button Clicks
-
-Use the `click` attribute and the `action` helper to listen for button clicks.
-
-```handlebars
-{{#mdc-button style="raised" click=(action "clicked")}}Button{{/mdc-button}}
-```
