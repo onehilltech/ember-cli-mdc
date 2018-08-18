@@ -10,7 +10,7 @@ module.exports = {
         {name: 'ember-cli-mdc-sass'},
       ]
     }).then (() => {
-      this.addPackagesToProject ([
+      return this.addPackagesToProject ([
         {name: '@material/rtl'},
       ]);
     });
