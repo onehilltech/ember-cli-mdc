@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-drawer",
-  "version": "0.27.0",
+  "version": "0.27.1",
   "description": "ember-cli addon for @material/drawer.",
   "keywords": [
     "ember-addon",
@@ -53,11 +53,11 @@
     "ember-cli-mdc-base": "^0.27.0",
     "ember-cli-mdc-elevation": "^0.19.0",
     "ember-cli-mdc-icon": "^0.27.0",
-    "ember-cli-mdc-list": "^0.27.0",
+    "ember-cli-mdc-list": "^0.27.1",
     "ember-cli-mdc-ripple": "^0.27.0",
-    "ember-cli-mdc-rtl": "^0.27.0",
+    "ember-cli-mdc-rtl": "^0.27.1",
     "ember-cli-mdc-theme": "^0.27.0",
-    "ember-cli-mdc-typography": "^0.27.0",
+    "ember-cli-mdc-typography": "^0.27.1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
