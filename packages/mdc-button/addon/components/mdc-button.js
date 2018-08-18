@@ -15,6 +15,8 @@ export default Component.extend (Ripple, {
 
   attributeBindings: ['disabled', 'value', 'type'],
 
+  dense: false,
+
   mdcStyleClassName: computed ('style', function () {
     const style = this.get ('style');
     return isPresent (style) ? `mdc-button--${style}` : null;
