@@ -1,5 +1,9 @@
 /* eslint-env node */
 
+const { satisfies } = require ('semver');
+
+const EMBER_CLI_SASS_VERSION = '^7.1.7';
+
 module.exports = {
   description: '',
 
@@ -31,11 +35,16 @@ module.exports = {
   },
 
   afterInstall () {
-    return this.addAddonsToProject ({
-      packages: [
-        {name: 'ember-cli-sass'}
-      ],
+    const packages = [];
 
+    if (!this.project.addonPackages['ember-cli-sass'] || !satisfies (this.project.addonPackages['ember-cli-sass'].pkg.version, EMBER_CLI_SASS_VERSION))
+      packages.push ({name: 'ember-cli-sass', target: EMBER_CLI_SASS_VERSION});
+
+    if (packages.length === 0)
+      return;
+
+    return this.addAddonsToProject ({
+      packages,
       blueprintOptions: {
         save: true
       }
