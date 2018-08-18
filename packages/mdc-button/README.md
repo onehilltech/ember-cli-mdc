@@ -56,8 +56,9 @@ Use the `click` attribute and the `action` helper to listen for button clicks.
 
 ### Button Icons
 
-Use the `{{mdc-button-icon}}`, which extends the `{{mdc-icon}}` component, to add an 
-icon to the button.
+Use the `{{mdc-button-icon}}`, which extends the 
+[`{{mdc-icon}}`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-icon) 
+component, to add an icon to the button.
 
 ```handlebars
 {{#mdc-button style="raised"}}{{mdc-button-icon "event"}}Button{{/mdc-button}}
