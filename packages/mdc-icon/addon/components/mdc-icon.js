@@ -1,10 +1,19 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-icon';
 
-export default Component.extend({
+import { computed } from '@ember/object';
+import { TextTheme } from 'ember-cli-mdc-theme';
+
+export default Component.extend (TextTheme, {
   layout,
+
   tagName: 'i',
-  classNames: ['material-icons']
+
+  classNames: ['material-icons'],
+
+  icon: computed ('params.[]', function () {
+    return this.get ('params')[0];
+  })
 }).reopenClass ({
-  positionalParams: ['icon']
+  positionalParams: 'params'
 });

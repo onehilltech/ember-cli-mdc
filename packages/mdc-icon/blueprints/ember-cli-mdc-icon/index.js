@@ -6,7 +6,13 @@ module.exports = {
 
   afterInstall () {
     return this.addBowerPackagesToProject ([
-      {name: 'material-design-icons'},
-    ]);
+      {name: 'material-design-icons'}
+    ]).then (() => {
+      return this.addAddonsToProject ({
+        packages: [
+          {name: 'ember-cli-mdc-theme' }
+        ]
+      });
+    })
   }
 };
