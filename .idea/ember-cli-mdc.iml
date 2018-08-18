@@ -118,6 +118,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-typography/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />

@@ -5,8 +5,16 @@ module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
   afterInstall () {
-    return this.addPackagesToProject ([
-      {name: '@material/typography'},
+    return Promise.all ([
+      this.addAddonsToProject ({
+        packages: [
+          {name: 'ember-cli-mdc-sass'}
+        ]
+      }),
+
+      this.addPackagesToProject ([
+        {name: '@material/typography'},
+      ])
     ]);
   }
 };
