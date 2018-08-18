@@ -5,15 +5,14 @@ module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
   afterInstall () {
-    return Promise.all ([
-      this.addAddonsToProject ({
-        packages: [
-          {name: 'ember-cli-mdc-sass'},
-        ]
-      }),
+    return this.addAddonsToProject ({
+      packages: [
+        {name: 'ember-cli-mdc-sass'},
+      ]
+    }).then (() => {
       this.addPackagesToProject ([
         {name: '@material/rtl'},
-      ])
-    ]);
+      ]);
+    });
   }
 };
