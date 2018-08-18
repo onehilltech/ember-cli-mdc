@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-sass",
-  "version": "0.26.3",
+  "version": "0.26.4",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -20,7 +20,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-sass": "^7.1.7"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
