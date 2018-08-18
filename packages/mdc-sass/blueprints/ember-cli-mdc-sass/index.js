@@ -7,7 +7,7 @@ module.exports = {
   afterInstall () {
     return this.addAddonsToProject ({
       packages: [
-        {name: 'ember-cli-mdc-sass'}
+        {name: 'ember-cli-sass'}
       ]
     })
   }
