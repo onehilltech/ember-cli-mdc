@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-animation",
-  "version": "0.27.5",
+  "version": "0.27.7",
   "description": "ember-cli addon for @material/animation",
   "keywords": [
     "ember-addon",
