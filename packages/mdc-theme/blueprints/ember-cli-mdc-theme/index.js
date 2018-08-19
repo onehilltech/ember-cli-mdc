@@ -1,16 +1,6 @@
 /* eslint-env node */
 
-const path = require ('path');
-const fs = require ('fs');
-
-Array.prototype.remove = function (e) {
-  const index = this.indexOf (e);
-
-  if (index >= 0)
-    this.splice (index, 1);
-
-  return this;
-};
+const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
 
 module.exports = {
   description: '',
@@ -20,43 +10,35 @@ module.exports = {
   },
 
   files () {
-    const files = this._super (...arguments);
+    let files = this._super (...arguments);
 
-    if (this.isAddonProject ()) {
+    if (this.project.isEmberCLIAddon ()) {
       // Remove the files that to not pertain to add-ons.
-      files.remove ('__root__/styles/_app-theme.scss');
+      files = files.filter (item => item !== '__root__/styles/_app-theme.scss');
 
-      if (this.fileExistsSync ('tests/dummy/app/styles/_app-theme.scss'))
-        files.remove ('tests/dummy/app/styles/_app-theme.scss');
+      if (this.project.has ('tests/dummy/app/styles/_app-theme.scss'))
+        files = files.filter (item => item !== 'tests/dummy/app/styles/_app-theme.scss');
     }
     else {
       // Remove files that do not pertain to applications projects.
-      files.remove ('tests/dummy/app/styles/_app-theme.scss');
+      files = files.filter (item => item !== 'tests/dummy/app/styles/_app-theme.scss');
 
-      if (this.fileExistsSync ('app/styles/_app-theme.scss'))
-        files.remove ('__root__/styles/_app-theme.scss');
+      if (this.project.has ('app/styles/_app-theme.scss'))
+        files = files.filter (item => item !== '__root__/styles/_app-theme.scss');
     }
 
     return files;
   },
 
   afterInstall () {
-    return this.addAddonsToProject ({
-      packages: [
-        {name: 'ember-cli-mdc-sass'}
-      ]
-    }).then (() => {
-      return this.addPackagesToProject ([
-        {name: '@material/theme'},
-      ]);
+    return installPackages (this, [
+      {name: '@material/theme'}
+    ]).then (() => {
+      return installAddons (this, {
+        packages: [
+          {name: 'ember-cli-mdc-sass'}
+        ]
+      })
     });
-  },
-
-  isAddonProject () {
-    return this.options.project.pkg.keywords && this.options.project.pkg.keywords.includes ('ember-addon');
-  },
-
-  fileExistsSync (file) {
-    return fs.existsSync (path.resolve (this.options.project.root, file));
   }
 };

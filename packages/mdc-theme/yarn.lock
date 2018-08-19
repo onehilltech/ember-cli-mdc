@@ -1991,9 +1991,9 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-blueprint-helpers@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.1.0.tgz#505b14c5d9ecbcc39c6c228d62372a8ae7911a9b"
+ember-cli-blueprint-helpers@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.2.0.tgz#6886b09b9a0d938556df8917dc9ab5714448c1f8"
   dependencies:
     core-object "^3.1.5"
 
@@ -2070,6 +2070,13 @@ ember-cli-lodash-subset@^2.0.1:
 ember-cli-mdc-sass@^0.27.5:
   version "0.27.5"
   resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.27.5.tgz#96447f08d56bfdd387f304b1129137213be8100c"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-sass "^7.1.7"
+
+ember-cli-mdc-theme@^0.27.5:
+  version "0.27.5"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.27.5.tgz#4dd2a0dcb1761ae16688b6fce9680399e3fd179d"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-sass "^7.1.7"
