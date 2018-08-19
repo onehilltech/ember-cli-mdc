@@ -2085,9 +2085,9 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-blueprint-helpers@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.2.1.tgz#59d98c61ef48c4a3f896848e099c0933242593d3"
+ember-cli-blueprint-helpers@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.2.2.tgz#710c3d1728de9478d849406cdf778f093438b6bf"
   dependencies:
     bluebird "^3.5.1"
     core-object "^3.1.5"
