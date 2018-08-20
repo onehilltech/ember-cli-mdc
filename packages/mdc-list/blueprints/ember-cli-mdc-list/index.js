@@ -10,17 +10,17 @@ module.exports = {
   },
 
   afterInstall () {
-    return this.addAddonsToProject ({
-      packages: [
-        {name: 'ember-cli-mdc-ripple'},
-        {name: 'ember-cli-mdc-rtl'},
-        {name: 'ember-cli-mdc-typography'},
-        {name: 'ember-cli-mdc-icon'}
-      ]
-    }).then (() => {
-      return this.addPackagesToProject ([
-        {name: '@material/list'},
-      ]);
+    return installPackages (this, [
+      {name: '@material/list'},
+    ]).then (() => {
+      return installAddons (this, {
+        packages: [
+          {name: 'ember-cli-mdc-ripple'},
+          {name: 'ember-cli-mdc-rtl'},
+          {name: 'ember-cli-mdc-typography'},
+          {name: 'ember-cli-mdc-icon'}
+        ]
+      })
     });
   }
 };
