@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-floating-label",
-  "version": "0.27.10",
+  "version": "0.27.11",
   "description": "ember-cli addon for @material/floating-label",
   "keywords": [
     "ember-addon",
@@ -49,8 +49,8 @@
     "ember-cli-mdc-animation": "^0.27.10",
     "ember-cli-mdc-base": "^0.27.10",
     "ember-cli-mdc-rtl": "^0.27.10",
-    "ember-cli-mdc-theme": "^0.27.10",
-    "ember-cli-mdc-typography": "^0.27.10",
+    "ember-cli-mdc-theme": "^0.27.11",
+    "ember-cli-mdc-typography": "^0.27.11",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
