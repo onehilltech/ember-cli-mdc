@@ -41,7 +41,6 @@ export default Component.extend (TextSupport, {
       return null;
     }
 
-    this.set ('_invalidate', true);
     return `mdc-text-field--${style}`;
   }),
 
