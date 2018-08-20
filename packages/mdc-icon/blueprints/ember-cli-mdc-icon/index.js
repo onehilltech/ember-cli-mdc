@@ -1,4 +1,7 @@
 /* eslint-env node */
+
+const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+
 module.exports = {
   description: '',
 
