@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-card",
-  "version": "0.27.12",
+  "version": "0.27.13",
   "description": "ember-cli addon for @material/card",
   "keywords": [
     "ember-addon",
@@ -51,7 +51,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.27.12",
     "ember-cli-mdc-base": "^0.27.12",
-    "ember-cli-mdc-button": "^0.27.12",
+    "ember-cli-mdc-button": "^0.27.13",
     "ember-cli-mdc-elevation": "^0.27.12",
     "ember-cli-mdc-icon": "^0.27.12",
     "ember-cli-mdc-icon-button": "^0.27.12",
