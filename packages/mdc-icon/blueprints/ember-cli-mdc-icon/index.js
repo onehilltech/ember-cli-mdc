@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+const { installer: { installAddons } } = require ('ember-cli-blueprint-helpers');
 
 module.exports = {
   description: '',
@@ -11,11 +11,11 @@ module.exports = {
     return this.addBowerPackagesToProject ([
       {name: 'material-design-icons'}
     ]).then (() => {
-      return this.addAddonsToProject ({
+      installAddons (this, {
         packages: [
           {name: 'ember-cli-mdc-theme' }
         ]
       });
-    })
+    });
   }
 };
