@@ -13,7 +13,7 @@ module.exports = {
     return installPackages (this, [
       {name: '@material/button'}
     ]).then (() => {
-      return installAddons ({
+      return installAddons (this, {
         packages: [
           {name: 'ember-cli-mdc-elevation'},
           {name: 'ember-cli-mdc-ripple'},
