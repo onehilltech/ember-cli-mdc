@@ -85,7 +85,7 @@ export default Component.extend({
    * The snackbar is showing to the user.
    */
   didShow () {
-    this.sendAction ('showing');
+
   },
 
   /**
@@ -93,6 +93,5 @@ export default Component.extend({
    */
   didHide () {
     this.set ('show', false);
-    this.sendAction ('hide');
   }
 });
