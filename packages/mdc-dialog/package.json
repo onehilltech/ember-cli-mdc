@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-dialog",
-  "version": "0.27.15",
+  "version": "0.28.0",
   "description": "ember-cli addon for @material/dialog",
   "keywords": [
     "ember-addon",
@@ -52,7 +52,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.27.15",
     "ember-cli-mdc-base": "^0.27.12",
-    "ember-cli-mdc-button": "^0.27.13",
+    "ember-cli-mdc-button": "^0.28.0",
     "ember-cli-mdc-elevation": "^0.27.15",
     "ember-cli-mdc-icon": "^0.27.15",
     "ember-cli-mdc-ripple": "^0.27.15",
