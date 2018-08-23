@@ -1,7 +1,7 @@
 /* global mdc */
 
 import Component from '@ember/component';
-import Object from '@ember/object';
+import EmberObject from '@ember/object';
 
 import layout from '../templates/components/mdc-select';
 
@@ -54,7 +54,7 @@ export default Component.extend({
     const {value, options} = this.getProperties (['value', 'options']);
 
     return options.map (option => {
-      const copy = Object.create (option);
+      const copy = EmberObject.create (option);
       copy.selected = option.value === value;
 
       return copy;
