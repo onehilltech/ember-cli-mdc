@@ -18,9 +18,12 @@ export default Component.extend({
 
   classNames: ['mdc-select'],
 
-  classNameBindings: ['disabled:mdc-select--disabled', 'styleClassName'],
+  classNameBindings: ['dense:mdc-select--dense', 'disabled:mdc-select--disabled', 'styleClassName'],
+
+  dense: false,
 
   style: null,
+
   styleClassName: computed ('style', function () {
     const style = this.get ('style');
 
