@@ -6,6 +6,9 @@ module.exports = {
   included (app) {
     this._super (...arguments);
 
-    app.import ('node_modules/@material/select/dist/mdc.select.js');
+    app.import ({
+      development: 'node_modules/@material/select/dist/mdc.select.js',
+      min: 'node_modules/@material/select/dist/mdc.select.min.js'
+    });
   }
 };

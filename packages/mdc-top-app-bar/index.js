@@ -6,6 +6,9 @@ module.exports = {
   included (app) {
     this._super (...arguments);
 
-    app.import ('node_modules/@material/top-app-bar/dist/mdc.topAppBar.js');
+    app.import ({
+      development: 'node_modules/@material/top-app-bar/dist/mdc.topAppBar.js',
+      production: 'node_modules/@material/top-app-bar/dist/mdc.topAppBar.min.js'
+    });
   }
 };

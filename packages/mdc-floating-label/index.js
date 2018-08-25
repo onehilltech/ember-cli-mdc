@@ -4,8 +4,11 @@ module.exports = {
   name: 'ember-cli-mdc-floating-label',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    app.import ('node_modules/@material/floating-label/dist/mdc.floatingLabel.js');
+    app.import ({
+      development: 'node_modules/@material/floating-label/dist/mdc.floatingLabel.js',
+      production: 'node_modules/@material/floating-label/dist/mdc.floatingLabel.min.js'
+    });
   }
 };

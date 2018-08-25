@@ -4,8 +4,11 @@ module.exports = {
   name: 'ember-cli-mdc-animation',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    app.import ('node_modules/@material/animation/dist/mdc.animation.js');
+    app.import ({
+      development: 'node_modules/@material/animation/dist/mdc.animation.js',
+      production: 'node_modules/@material/animation/dist/mdc.animation.min.js'
+    });
   }
 };

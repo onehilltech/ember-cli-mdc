@@ -4,8 +4,11 @@ module.exports = {
   name: 'ember-cli-mdc-snackbar',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    app.import ('node_modules/@material/snackbar/dist/mdc.snackbar.js');
+    app.import ({
+      development: 'node_modules/@material/snackbar/dist/mdc.snackbar.js',
+      production: 'node_modules/@material/snackbar/dist/mdc.snackbar.min.js'
+    });
   }
 };

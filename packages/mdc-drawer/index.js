@@ -6,6 +6,9 @@ module.exports = {
   included (app) {
     this._super (...arguments);
 
-    app.import ('node_modules/@material/drawer/dist/mdc.drawer.js');
+    app.import ({
+      development: 'node_modules/@material/drawer/dist/mdc.drawer.js',
+      production: 'node_modules/@material/drawer/dist/mdc.drawer.min.js'
+    });
   }
 };

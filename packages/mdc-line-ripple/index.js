@@ -4,8 +4,11 @@ module.exports = {
   name: 'ember-cli-mdc-line-ripple',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    app.import ('node_modules/@material/line-ripple/dist/mdc.lineRipple.js');
+    app.import ({
+      development: 'node_modules/@material/line-ripple/dist/mdc.lineRipple.js',
+      production: 'node_modules/@material/line-ripple/dist/mdc.lineRipple.min.js'
+    });
   }
 };

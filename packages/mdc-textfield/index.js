@@ -4,8 +4,11 @@ module.exports = {
   name: 'ember-cli-mdc-textfield',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
-    app.import ('node_modules/@material/textfield/dist/mdc.textfield.js');
+    app.import ({
+      development: 'node_modules/@material/textfield/dist/mdc.textfield.js',
+      production: 'node_modules/@material/textfield/dist/mdc.textfield.min.js'
+    });
   }
 };
