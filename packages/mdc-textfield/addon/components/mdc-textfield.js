@@ -7,7 +7,7 @@ import TextSupport from '../mixins/text-support';
 
 import { computed } from '@ember/object';
 import { isPresent, isNone } from '@ember/utils';
-import { or, readOnly, equal, not } from '@ember/object/computed';
+import { or, readOnly, equal, not, and } from '@ember/object/computed';
 
 export default Component.extend (TextSupport, {
   layout,
@@ -45,13 +45,17 @@ export default Component.extend (TextSupport, {
   }),
 
   // Helper methods for the position.
-  hasLeadingIcon: equal ('iconPosition', 'leading'),
-  hasTrailingIcon: equal ('iconPosition', 'trailing'),
+
+  leadingIcon: equal ('iconPosition', 'leading'),
+  hasLeadingIcon: and ('icon', 'leadingIcon'),
+
+  trailingIcon: equal ('iconPosition', 'trailing'),
+  hasTrailingIcon: and ('icon', 'trailingIcon'),
 
   iconClassName: computed ('iconPosition', function () {
-    const { hasLeadingIcon, hasTrailingIcon } = this.getProperties (['hasLeadingIcon', 'hasTrailingIcon']);
+    const { trailingIcon, leadingIcon } = this.getProperties (['trailingIcon', 'leadingIcon']);
 
-    return hasLeadingIcon ? 'mdc-text-field--with-leading-icon' : (hasTrailingIcon ? 'mdc-text-field--with-trailing-icon' : null);
+    return leadingIcon ? 'mdc-text-field--with-leading-icon' : (trailingIcon ? 'mdc-text-field--with-trailing-icon' : null);
   }),
 
   inputId: computed (function () {
