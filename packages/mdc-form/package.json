@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-form",
-  "version": "0.28.3",
+  "version": "0.28.4",
   "description": "ember-cli addon for material component forms",
   "keywords": [
     "ember-addon",
@@ -62,7 +62,7 @@
     "ember-cli-mdc-notched-outline": "^0.28.3",
     "ember-cli-mdc-ripple": "^0.28.3",
     "ember-cli-mdc-rtl": "^0.27.15",
-    "ember-cli-mdc-textfield": "^0.28.3",
+    "ember-cli-mdc-textfield": "^0.28.4",
     "ember-cli-mdc-theme": "^0.27.15",
     "ember-cli-mdc-typography": "^0.27.12",
     "ember-cli-qunit": "^4.3.2",
