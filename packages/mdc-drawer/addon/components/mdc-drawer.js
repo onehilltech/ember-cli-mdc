@@ -5,55 +5,49 @@ import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
-import PersistentDrawer from '../-private/persistent-drawer';
-import PermanentDrawer from '../-private/permanent-drawer';
-import TemporaryDrawer from '../-private/temporary-drawer';
-
 const STYLES = [
-  'permanent',
-  'persistent',
-  'temporary'
+  'dismissible',
+  'modal'
 ];
 
-const DrawerClasses = {
-  persistent: PersistentDrawer,
-  permanent: PermanentDrawer,
-  temporary: TemporaryDrawer
-};
-
-export default Component.extend({
+export default Component.extend ({
   layout,
 
   tagName: 'aside',
+
   classNames: ['mdc-drawer', 'mdc-typography'],
+
   classNameBindings: ['styleClassName'],
 
-  /// The drawer is open.
-  open: false,
-
-  style: null,
   styleClassName: computed ('style', function () {
     const style = this.get ('style');
 
-    assert ('The drawer must define the style attribute.', isPresent (style));
-    assert (`The style attribute must be one of the following values: ${STYLES}`, STYLES.includes (style));
+    assert (`The style must be one of the following: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-drawer--${style}`;
   }),
 
-  _drawer: null,
-
   didInsertElement () {
     this._super (...arguments);
 
-    // Initialize the open state of the drawer.
-    this.get ('drawer').set ('open', this.get ('open'));
+    this._drawer = new mdc.drawer.MDCDrawer (this.element);
+    this._drawer.listen ('MDCDrawer:opened', this.didOpen.bind (this));
+    this._drawer.listen ('MDCDrawer:closed', this.didClose.bind (this));
+
+    this._drawer.open = this.get ('open');
   },
 
   didUpdate () {
     this._super (...arguments);
 
-    this.get ('drawer').set ('open', this.get ('open'));
+    this._drawer.open = this.get ('open');
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    this._drawer.unlisten ('MDCDrawer:opened', this.didOpen.bind (this));
+    this._drawer.unlisten ('MDCDrawer:closed', this.didClose.bind (this));
   },
 
   didOpen () {
@@ -62,23 +56,5 @@ export default Component.extend({
 
   didClose () {
     this.set ('open', false);
-  },
-
-  DrawerClass: computed ('style', function () {
-    const style = this.get ('style');
-    return isPresent (style) ? DrawerClasses[style] : null;
-  }),
-
-  drawer: computed ('DrawerClass', function () {
-    if (isPresent (this._drawer)) {
-      this._drawer.willDestroyElement (this);
-      this._drawer = null;
-    }
-
-    const DrawerClass = this.get ('DrawerClass');
-    this._drawer = DrawerClass.create ();
-    this._drawer.didInsertElement (this);
-
-    return this._drawer;
-  }),
+  }
 });

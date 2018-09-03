@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-drawer/components/mdc-drawer-app-content';
