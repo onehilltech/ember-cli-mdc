@@ -11,10 +11,6 @@ import { assert } from '@ember/debug';
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 const STYLES = ['fixed','dense','prominent','short'];
 
-function noOp () {
-
-}
-
 export default Component.extend({
   layout,
 
@@ -53,7 +49,11 @@ export default Component.extend({
   },
 
   doNavigation () {
-    this.getWithDefault ('navigation', noOp) ();
+    let navigation = this.get ('navigation');
+
+    if (isPresent (navigation)) {
+      navigation ();
+    }
   },
 
   didRender () {
