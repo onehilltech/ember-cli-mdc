@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-drawer",
-  "version": "0.28.3",
+  "version": "0.29.0",
   "description": "ember-cli addon for @material/drawer.",
   "keywords": [
     "ember-addon",
