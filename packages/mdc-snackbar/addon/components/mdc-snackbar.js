@@ -3,6 +3,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-snackbar';
 import { assert } from '@ember/debug';
+import { isPresent } from '@ember/utils';
 
 const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 
@@ -10,9 +11,6 @@ export default Component.extend({
   layout,
 
   classNames: ['mdc-snackbar'],
-
-  /// Controls the visibility of the snackbar.
-  show: false,
 
   /// Message to show in the snackbar.
   message: null,
@@ -38,29 +36,6 @@ export default Component.extend({
   /// Reference to the MDC instance.
   _snackbar: null,
 
-  didReceiveAttrs () {
-    this._super (...arguments);
-
-    if (!this.get ('show')) {
-      return;
-    }
-
-    const {
-      message,
-      timeout,
-      actionText,
-      actionHandler,
-      multiline,
-      actionOnBottom
-    } = this.getProperties (['message','timeout','actionHandler','actionText','multiline','actionOnBottom']);
-
-    assert ('You must set the message attribute.', !!message);
-    assert ('You must set actionText if you set actionHandler.', !actionHandler || !!actionText);
-
-    this._snackbar.dismissesOnAction = this.getWithDefault ('dismissesOnAction', true);
-    this._snackbar.show ({ message, actionText, actionHandler, timeout, multiline, actionOnBottom });
-  },
-
   didInsertElement () {
     this._super (...arguments);
 
@@ -71,6 +46,22 @@ export default Component.extend({
     this.element.setAttribute ('aria-live', 'assertive');
     this.element.setAttribute ('aria-atomic', true);
     this.element.setAttribute ('aria-hidden', true);
+
+    const message = this.get ('message');
+
+    if (isPresent (message)) {
+      this.show (message);
+    }
+  },
+
+  didUpdate () {
+    this._super (...arguments);
+
+    const message = this.get ('message');
+
+    if (isPresent (message)) {
+      this.show (message);
+    }
   },
 
   willDestroyElement () {
@@ -79,6 +70,19 @@ export default Component.extend({
     this._snackbar.unlisten ('MDCSnackbar:show', this.didShow.bind (this));
     this._snackbar.unlisten ('MDCSnackbar:hide', this.didHide.bind (this));
     this._snackbar.destroy ();
+  },
+
+  show (message) {
+    const {
+      timeout,
+      actionText,
+      actionHandler,
+      multiline,
+      actionOnBottom
+    } = this.getProperties (['timeout','actionHandler','actionText','multiline','actionOnBottom']);
+
+    this._snackbar.dismissesOnAction = this.getWithDefault ('dismissesOnAction', true);
+    this._snackbar.show ({ message, actionText, actionHandler, timeout, multiline, actionOnBottom });
   },
 
   /**
@@ -92,6 +96,7 @@ export default Component.extend({
    * The snackbar is hidden from the user.
    */
   didHide () {
-    this.set ('show', false);
+    // Erase the message so we can show the snackbar again.
+    this.set ('message');
   }
 });
