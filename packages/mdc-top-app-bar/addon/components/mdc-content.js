@@ -4,5 +4,7 @@ import layout from '../templates/components/mdc-content';
 import FixedAdjust from '../mixins/fixed-adjust';
 
 export default Component.extend (FixedAdjust, {
-  layout
+  layout,
+
+  classNames: ['mdc-content']
 });
