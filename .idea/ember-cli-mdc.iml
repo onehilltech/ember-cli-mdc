@@ -109,10 +109,13 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab/bower_components" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tmp" />
