@@ -32,6 +32,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-form-field/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-sass/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-tab/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
@@ -109,6 +111,9 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/vendor" />
