@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-tab-indicator/components/mdc-tab-indicator';
