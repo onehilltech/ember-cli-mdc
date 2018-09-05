@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-scroller",
-  "version": "0.0.0",
+  "version": "0.38.0",
   "description": "ember-cli addon for @material/tab-scroller",
   "keywords": [
     "ember-addon",
