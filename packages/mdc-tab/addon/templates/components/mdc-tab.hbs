@@ -1,0 +1,22 @@
+{{#mdc-tab-content}}
+  {{#if icon}}
+    {{mdc-tab-icon icon}}
+  {{/if}}
+  {{#if label}}
+    {{#mdc-tab-text-label}}{{label}}{{/mdc-tab-text-label}}
+  {{/if}}
+
+  {{#if contentOnlyIndicator}}
+    {{#mdc-tab-indicator active=active}}
+      {{mdc-tab-indicator-content}}
+    {{/mdc-tab-indicator}}
+  {{/if}}
+{{/mdc-tab-content}}
+
+{{#unless contentOnlyIndicator}}
+  {{#mdc-tab-indicator active=active}}
+    {{mdc-tab-indicator-content}}
+  {{/mdc-tab-indicator}}
+{{/unless}}
+
+{{mdc-tab-ripple}}

@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-tab/components/mdc-tab-ripple';
