@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-indicator",
-  "version": "0.0.0",
+  "version": "0.33.0",
   "description": "ember-cli addons for @material/tab-indicator",
   "keywords": [
     "ember-addon",
@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-sass": "^7.2.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0"
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-sass": "^7.2.0"
   },
   "devDependencies": {
     "@material/animation": "^0.39.0",
