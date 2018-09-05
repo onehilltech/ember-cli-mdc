@@ -5,6 +5,7 @@ import layout from '../templates/components/mdc-tab-scroller';
 
 import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
+import { isEmpty } from '@ember/utils';
 
 const ALIGN_VALUES = [
   'start',
@@ -23,6 +24,10 @@ export default Component.extend({
   align: null,
   alignClassName: computed ('align', function () {
     const align = this.get ('align');
+
+    if (isEmpty (align)) {
+      return;
+    }
 
     assert (`The align attribute must be one of the following values: ${ALIGN_VALUES}`, ALIGN_VALUES.includes (align));
 
