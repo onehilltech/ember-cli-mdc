@@ -3,6 +3,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-tab-scroller';
 
+import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
 
 const ALIGN_VALUES = [
