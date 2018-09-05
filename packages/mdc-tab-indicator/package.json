@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-indicator",
-  "version": "0.34.3",
+  "version": "0.35.0",
   "description": "ember-cli addons for @material/tab-indicator",
   "keywords": [
     "ember-addon",
