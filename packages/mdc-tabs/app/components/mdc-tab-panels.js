@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-tabs/components/mdc-tab-panels';

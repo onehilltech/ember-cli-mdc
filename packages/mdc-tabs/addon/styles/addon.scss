@@ -1,0 +1,11 @@
+.mdc-tab-panels {
+  position: relative;
+
+  .mdc-tab-panel {
+    display: none;
+
+    &.mdc-tab-panel--active {
+      display: block;
+    }
+  }
+}
