@@ -2107,11 +2107,12 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-theme@^0.27.10:
-  version "0.27.10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.27.10.tgz#fd888165d7aa5caeba09f37a90a0f74bc0d00033"
+ember-cli-mdc-theme@^0.27.15:
+  version "0.27.15"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.27.15.tgz#93cb5821b278e97663e8c5677a89459d56813e00"
   dependencies:
     ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.2.3"
     ember-cli-sass "^7.1.7"
 
 ember-cli-normalize-entity-name@^1.0.0:
@@ -4453,6 +4454,10 @@ matcher-collection@^1.0.0, matcher-collection@^1.0.5:
   resolved "https://registry.yarnpkg.com/matcher-collection/-/matcher-collection-1.0.5.tgz#2ee095438372cb8884f058234138c05c644ec339"
   dependencies:
     minimatch "^3.0.2"
+
+material-design-icons@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/material-design-icons/-/material-design-icons-3.0.1.tgz#9a71c48747218ebca51e51a66da682038cdcb7bf"
 
 md5-hex@^2.0.0:
   version "2.0.0"
