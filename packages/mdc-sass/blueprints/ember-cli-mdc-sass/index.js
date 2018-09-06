@@ -1,6 +1,8 @@
 /* eslint-env node */
 
 const { satisfies } = require ('semver');
+const { installer: { installPackages } } = require ('ember-cli-blueprint-helpers');
+
 
 const EMBER_CLI_SASS_VERSION = '^7.1.7';
 
@@ -31,6 +33,9 @@ module.exports = {
         files = files.filter (item => item !== '__root__/styles/app.scss');
     }
 
+    if (this.project.has ('tests/dummy/app/styles/app.scss'))
+      files = files.filter (item => item !== 'tests/dummy/app/styles/app.scss');
+
     return files;
   },
 
@@ -43,11 +48,15 @@ module.exports = {
     if (packages.length === 0)
       return;
 
-    return this.addAddonsToProject ({
-      packages,
-      blueprintOptions: {
-        save: true
-      }
+    return installPackages (this, [
+      {name: 'node-sass'},
+    ]).then (() => {
+      return this.addAddonsToProject ({
+        packages,
+        blueprintOptions: {
+          save: true
+        }
+      });
     });
   }
 };

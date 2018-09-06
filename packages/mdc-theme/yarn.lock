@@ -20,9 +20,9 @@
   dependencies:
     "@glimmer/di" "^0.2.0"
 
-"@material/theme@^0.38.0":
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.38.0.tgz#c1a2247eba4af2ba47da4456921ab420869fda55"
+"@material/theme@0.39.1":
+  version "0.39.1"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.39.1.tgz#5fb160222e2b213628b285af26ca65c6f4327fe5"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
@@ -2155,16 +2155,9 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-sass@^0.27.5:
-  version "0.27.5"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.27.5.tgz#96447f08d56bfdd387f304b1129137213be8100c"
-  dependencies:
-    ember-cli-babel "^6.6.0"
-    ember-cli-sass "^7.1.7"
-
-ember-cli-mdc-theme@^0.27.9:
-  version "0.27.9"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.27.9.tgz#a041a97ffa46f56ce0e5d11b9b32f8c4a959a673"
+ember-cli-mdc-sass@0.41.0:
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.41.0.tgz#d4e5c5fe285e907e4a256911a81fc02ce2c765a7"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-sass "^7.1.7"
