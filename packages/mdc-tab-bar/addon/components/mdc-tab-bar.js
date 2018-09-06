@@ -19,9 +19,6 @@ export default Component.extend (Elevation, {
   /// Scroll to a specific tab.
   scrollTo: undefined,
 
-  /// The elevation for the tab bar.
-  elevation: 4,
-
   _tabBar: null,
 
   didInsertElement () {
