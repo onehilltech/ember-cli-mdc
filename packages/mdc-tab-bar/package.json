@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-bar",
-  "version": "0.40.1",
+  "version": "0.40.2",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
