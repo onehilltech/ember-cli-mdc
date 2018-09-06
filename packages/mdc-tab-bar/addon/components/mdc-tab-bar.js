@@ -4,10 +4,11 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-tab-bar';
 
 import { isPresent, isNone } from '@ember/utils';
+import { Elevation } from 'ember-cli-mdc-elevation/mixins/elevation';
 
 function noOp () {}
 
-export default Component.extend({
+export default Component.extend (Elevation, {
   layout,
 
   classNames: ['mdc-tab-bar'],
@@ -17,6 +18,9 @@ export default Component.extend({
 
   /// Scroll to a specific tab.
   scrollTo: undefined,
+
+  /// The elevation for the tab bar.
+  elevation: 4,
 
   _tabBar: null,
 
