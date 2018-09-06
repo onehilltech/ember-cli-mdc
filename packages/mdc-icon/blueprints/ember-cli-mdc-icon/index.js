@@ -8,10 +8,10 @@ module.exports = {
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
   afterInstall () {
-    return installPackages ([
+    return installPackages (this, [
       {name: 'material-design-icons'}
     ]).then (() => {
-      installAddons (this, {
+      return installAddons (this, {
         packages: [
           {name: 'ember-cli-mdc-theme' }
         ]
