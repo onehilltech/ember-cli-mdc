@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tabs",
-  "version": "0.0.0",
+  "version": "0.40.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon",
@@ -25,9 +25,9 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-sass": "^7.2.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0"
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-sass": "^7.2.0"
   },
   "devDependencies": {
     "@material/animation": "^0.39.0",
