@@ -37,7 +37,10 @@ module.exports = {
       return installAddons (this, {
         packages: [
           {name: 'ember-cli-mdc-sass'}
-        ]
+        ],
+        blueprintOptions: {
+          save: true
+        }
       })
     });
   }
