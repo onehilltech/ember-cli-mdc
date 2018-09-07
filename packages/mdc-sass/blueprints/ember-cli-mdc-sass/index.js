@@ -50,13 +50,6 @@ module.exports = {
 
     return installPackages (this, [
       {name: 'node-sass'},
-    ]).then (() => {
-      return this.addAddonsToProject ({
-        packages,
-        blueprintOptions: {
-          save: true
-        }
-      });
-    });
+    ]);
   }
 };

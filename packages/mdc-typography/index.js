@@ -31,5 +31,13 @@ module.exports = {
       if (!process.env.CORBER)
         return '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />';
     }
+  },
+
+  sassOptions (options) {
+    options.cacheInclude = options.cacheInclude || [];
+    options.cacheInclude.push (/addon.scss/);
+    options.cacheInclude.push (/@material\/typography/);
+
+    return options;
   }
 };

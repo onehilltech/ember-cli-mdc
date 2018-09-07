@@ -1,14 +1,8 @@
 'use strict';
 
-const sass = require ('node-sass');
-const debug = require ('debug')('ember-cli-mdc-sass');
-
 module.exports = function(environment, appConfig) {
   if (!appConfig.sassOptions)
     appConfig.sassOptions = {};
-
-  debug ('using node-sass');
-  appConfig.sassOptions.implementation = sass;
 
   if (!appConfig.sassOptions.includePaths)
     appConfig.sassOptions.includePaths = [];
