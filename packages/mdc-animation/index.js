@@ -14,7 +14,7 @@ module.exports = {
 
   sassOptions (options) {
     options.cacheInclude = options.cacheInclude || [];
-    options.cacheInclude.push (/addon.scss/);
+    options.cacheInclude.push (/addon\.scss/);
     options.cacheInclude.push (/@material\/animation/);
 
     return options;

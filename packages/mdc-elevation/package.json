@@ -29,12 +29,12 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.2.3",
-    "ember-cli-sass": "^7.1.7"
+    "ember-cli-mdc-sass": "0.42.2-2"
   },
   "devDependencies": {
-    "@material/animation": "^0.34.0",
-    "@material/elevation": "^0.38.0",
-    "@material/theme": "^0.38.0",
+    "@material/animation": "0.39.0",
+    "@material/elevation": "0.39.1",
+    "@material/theme": "0.39.1",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
@@ -43,8 +43,8 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.42.2-2",
-    "ember-cli-mdc-theme": "^0.42.2-2",
+    "ember-cli-mdc-animation": "0.42.2-2",
+    "ember-cli-mdc-theme": "0.42.2-2",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
@@ -60,6 +60,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
+    "node-sass": "4.9.3",
     "qunit-dom": "^0.6.2"
   },
   "engines": {
