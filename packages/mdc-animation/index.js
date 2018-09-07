@@ -10,5 +10,13 @@ module.exports = {
       development: 'node_modules/@material/animation/dist/mdc.animation.js',
       production: 'node_modules/@material/animation/dist/mdc.animation.min.js'
     });
+  },
+
+  sassOptions (options) {
+    options.cacheInclude = options.cacheInclude || [];
+    options.cacheInclude.push (/addon.scss/);
+    options.cacheInclude.push (/@material\/animation/);
+
+    return options;
   }
 };
