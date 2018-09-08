@@ -1,17 +1,11 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  on: true,
-
-  isOn: null,
+  on: false,
 
   actions: {
     toggle () {
       this.toggleProperty ('on');
-    },
-
-    change (isOn) {
-      this.set ('isOn', isOn);
     }
   }
 });

@@ -4,50 +4,52 @@ import layout from '../templates/components/mdc-icon-button-toggle';
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
+function noOp () {}
+
 export default Component.extend({
   layout,
 
   tagName: 'button',
 
-  classNames: ['mdc-icon-button', 'material-icons'],
+  classNames: ['mdc-icon-button'],
 
   attributeBindings: [
     'disabled',
-    'label:aria-label',
-    'onContent:data-toggle-on-content',
-    'onLabel:data-toggle-on-label',
-    'onClass:data-toggle-on-class',
-    'offContent:data-toggle-off-content',
-    'offLabel:data-toggle-off-label',
-    'offClass:data-toggle-off-class'
+    'label:aria-label'
   ],
 
   /// State for disabling the toggle button.
   disabled: false,
 
-  /// Toggle on content
-  onContent: null,
+  iconOn: computed ('params.[]', function () {
+    return this.get ('params')[0];
+  }),
 
-  /// Toggle on label
-  onLabel: null,
-
-  /// Toggle off content
-  offContent: null,
-
-  /// Toggle off label
-  offLabel: null,
+  iconOff: computed ('params.[]', function () {
+    return this.get ('params')[1];
+  }),
 
   /// Manually set the toggle state.
   on: null,
 
+  /// Parent action for the toggle event.
+  toggle: undefined,
+
   /// The material design component.
   _iconToggleButton: null,
+  _changeEventListener: null,
+
+  init () {
+    this._super (...arguments);
+
+    this._changeEventListener = this.didChange.bind (this);
+  },
 
   didInsertElement () {
     this._super (...arguments);
 
     this._iconToggleButton = new mdc.iconButton.MDCIconButtonToggle (this.element);
-    this._iconToggleButton.listen ('MDCIconButtonToggle:change', this.didChange.bind (this));
+    this._iconToggleButton.listen ('MDCIconButtonToggle:change', this._changeEventListener);
 
     this.element.setAttribute ('aria-hidden', true);
     this.element.setAttribute ('aria-pressed', false);
@@ -66,12 +68,13 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._iconToggleButton.unlisten ('MDCIconButtonToggle:change', this.didChange.bind (this));
+    this._iconToggleButton.unlisten ('MDCIconButtonToggle:change', this._changeEventListener);
   },
 
   didChange (ev) {
     const { detail: {isOn}} = ev;
-
-    this.sendAction ('change', isOn);
+    this.getWithDefault ('toggle', noOp) (isOn);
   }
+}).reopenClass ({
+  positionalParams: 'params'
 });

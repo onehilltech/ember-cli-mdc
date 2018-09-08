@@ -1,8 +1,9 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-icon-button';
+
 import { computed } from '@ember/object';
 
-import { Ripple } from 'ember-cli-mdc-ripple';
+import Ripple from 'ember-cli-mdc-ripple/mixins/ripple';
 
 export default Component.extend (Ripple, {
   layout,
