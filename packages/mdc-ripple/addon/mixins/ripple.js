@@ -1,14 +1,13 @@
 /* globals mdc */
 
 import Mixin from '@ember/object/mixin';
+
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
-import { Theme } from 'ember-cli-mdc-theme';
-
 const MDCRipple = mdc.ripple.MDCRipple;
 
-export default Mixin.create (Theme, {
+export default Mixin.create ({
   classNames: ['mdc-ripple-surface'],
 
   classNameBindings: ['mdcRippleColorClassName'],
