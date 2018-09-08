@@ -25,6 +25,7 @@ export default Component.extend({
   alwaysClosed: false,
 
   _topAppBar: null,
+  _navEventListener: null,
 
   style: null,
   styleClassName: computed ('style', function () {
@@ -43,6 +44,19 @@ export default Component.extend({
     return alwaysClosed && style === 'short' ? 'mdc-top-app-bar--short-collapsed' : null;
   }),
 
+  didInsertElement () {
+    this._super (...arguments);
+    this._createComponent ();
+  },
+
+  didUpdate () {
+    this._super (...arguments);
+
+    this._destroyComponent ();
+    this._createComponent ();
+  },
+
+
   willDestroyElement () {
     this._super (...arguments);
     this._destroyComponent ();
@@ -56,19 +70,15 @@ export default Component.extend({
     }
   },
 
-  didRender () {
-    this._super (...arguments);
-
-    if (isPresent (this._topAppBar)) {
-      this._destroyComponent ();
-    }
-
+  _createComponent () {
     this._topAppBar = new MDCTopAppBar (this.element);
-    this._topAppBar.listen ('MDCTopAppBar:nav', this.doNavigation.bind (this));
+
+    this._navEventListener = this.doNavigation.bind (this);
+    this._topAppBar.listen ('MDCTopAppBar:nav', this._navEventListener);
   },
 
   _destroyComponent () {
-    this._topAppBar.unlisten ('MDCTopAppBar:nav', this.doNavigation.bind (this));
+    this._topAppBar.unlisten ('MDCTopAppBar:nav', this._navEventListener);
     this._topAppBar.destroy ();
   }
 });

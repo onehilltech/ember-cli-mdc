@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-top-app-bar-section';
 
 import { computed } from '@ember/object';
-import { isNone, isPresent } from '@ember/utils';
+import { isNone } from '@ember/utils';
 import { assert } from '@ember/debug';
 import { dasherize } from '@ember/string';
 

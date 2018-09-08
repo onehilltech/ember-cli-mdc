@@ -1,5 +1,4 @@
 import LinkComponent from '@ember/routing/link-component';
-import { assert } from '@ember/debug';
 
 export default LinkComponent.extend ({
   classNames: ['mdc-top-app-bar__navigation-icon', 'material-icons'],
