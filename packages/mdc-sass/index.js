@@ -3,7 +3,6 @@
 
 const SassCompilerFactory = require ('broccoli-sass-source-maps');
 const path = require ('path');
-const VersionChecker = require ('ember-cli-version-checker');
 const Funnel = require ('broccoli-funnel');
 const mergeTrees = require ('broccoli-merge-trees');
 const CoreObject = require ('core-object');
@@ -18,6 +17,13 @@ const SassPlugin = CoreObject.extend ({
   context: null,
 
   toTree (tree, inputPath, outputPath, inputOptions) {
+    // When working with a Material Design Component (MDC) project, the top-level
+    // sass file will include the sass dependency files. We therefore only need to
+    // convert the sass file for the project to a css file.
+
+    if (this.isMDCProject () && !this.isSelf ())
+      return null;
+
     // Get the sassOptions for the application, and merge the input options with
     // the application options.
     let appSassOptions = this.context.project.config (process.env.EMBER_ENV).sassOptions;
@@ -45,6 +51,7 @@ const SassPlugin = CoreObject.extend ({
     let ext = options.extension || 'scss';
     let paths = options.outputPaths;
 
+
     let trees = Object.keys (paths).map (file => {
       let input = path.join(inputPath, file + '.' + ext);
       let output = paths[file];
@@ -53,7 +60,7 @@ const SassPlugin = CoreObject.extend ({
       // Let's get the add on a chance to update the sass options since it may have
       // some infomration we can use to improve performance.
 
-      if (this.context.app.name === basename && this.context.app.sassOptions) {
+      if (basename === this.context.app.name && this.context.app.sassOptions) {
         options = this.context.app.sassOptions (options);
       }
       else {
@@ -71,6 +78,14 @@ const SassPlugin = CoreObject.extend ({
     }
 
     return mergeTrees (trees);
+  },
+
+  isMDCProject () {
+    return /^ember-cli-mdc/.test (this.context.app.name);
+  },
+
+  isSelf () {
+    return this.context.project.name () === this.context.app.name;
   }
 });
 
