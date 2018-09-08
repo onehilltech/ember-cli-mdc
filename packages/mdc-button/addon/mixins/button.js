@@ -1,5 +1,5 @@
 import Mixin from '@ember/object/mixin';
-import { Ripple } from 'ember-cli-mdc-ripple';
+import Ripple from 'ember-cli-mdc-ripple/mixins/ripple';
 
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
