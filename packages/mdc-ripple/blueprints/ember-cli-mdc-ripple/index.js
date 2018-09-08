@@ -19,5 +19,9 @@ module.exports = {
         ]
       })
     });
+  },
+
+  sassOptions (options) {
+
   }
 };
