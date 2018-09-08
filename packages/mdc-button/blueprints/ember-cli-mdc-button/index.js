@@ -23,5 +23,9 @@ module.exports = {
         ]
       });
     });
+  },
+
+  sassOptions (options) {
+
   }
 };
