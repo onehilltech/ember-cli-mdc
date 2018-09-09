@@ -1,7 +1,7 @@
 import Service from '@ember/service';
-import $ from 'jquery';
 
 import { gte, lt, and } from '@ember/object/computed';
+import { isPresent } from '@ember/utils';
 
 const BREAKPOINT_PHONE = 0;
 const BREAKPOINT_TABLET = 480;
@@ -25,7 +25,10 @@ export default Service.extend ({
     this._super (...arguments);
 
     this._resizeEventListener = this.didResize.bind (this);
-    window.addEventListener ('resize', this._resizeEventListener);
+
+    if (isPresent (window)) {
+      window.addEventListener ('resize', this._resizeEventListener);
+    }
 
     this.set ('width', window.outerWidth);
   },
@@ -33,7 +36,9 @@ export default Service.extend ({
   destroy () {
     this._super (...arguments);
 
-    window.removeEventListener ('resize', this._resizeEventListener);
+    if (isPresent (window)) {
+      window.removeEventListener ('resize', this._resizeEventListener);
+    }
   },
 
   didResize () {
