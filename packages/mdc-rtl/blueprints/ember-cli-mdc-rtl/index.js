@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+const { installer: { installPackages } } = require ('ember-cli-blueprint-helpers');
 
 module.exports = {
   description: '',
@@ -12,12 +12,6 @@ module.exports = {
   afterInstall () {
     return installPackages (this, [
       {name: '@material/rtl'}
-    ]).then (() => {
-      return installAddons (this, {
-        packages: [
-          {name: 'ember-cli-mdc-sass'}
-        ]
-      });
-    });
+    ]);
   }
 };
