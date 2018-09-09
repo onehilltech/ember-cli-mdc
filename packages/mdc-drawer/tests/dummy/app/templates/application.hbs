@@ -1,14 +1,13 @@
 {{#mdc-drawer style=style open=open}}
   {{#mdc-drawer-header}}
-    {{#mdc-drawer-header-content class="mdc-theme--on-primary mdc-theme--primary-bg"}}
-      Header here
-    {{/mdc-drawer-header-content}}
+    {{#mdc-drawer-title}}Mail{{/mdc-drawer-title}}
+    {{#mdc-drawer-subtitle}}email@material.io{{/mdc-drawer-subtitle}}
   {{/mdc-drawer-header}}
 
   {{#mdc-drawer-content}}
     {{#mdc-list-group}}
       {{#mdc-list}}
-        {{#mdc-list-item-linkto "inbox"}}{{mdc-list-item-graphic-icon "inbox"}} Inbox{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-linkto "index"}}{{mdc-list-item-graphic-icon "inbox"}} Inbox{{/mdc-list-item-linkto}}
         {{#mdc-list-item-linkto "star"}}{{mdc-list-item-graphic-icon "star"}} Star{{/mdc-list-item-linkto}}
         {{#mdc-list-item-linkto "sent"}}{{mdc-list-item-graphic-icon "send"}} Sent Mail{{/mdc-list-item-linkto}}
         {{#mdc-list-item-linkto "drafts"}}{{mdc-list-item-graphic-icon "drafts"}} Drafts{{/mdc-list-item-linkto}}
@@ -26,15 +25,29 @@
   {{/mdc-drawer-content}}
 {{/mdc-drawer}}
 
-<div>
-  <button {{action (mut style) "permanent"}}>Permanent Drawer</button>
-  <button {{action (mut style) "persistent"}}>Persistent Drawer</button>
-  <button {{action (mut style) "temporary"}}>Temporary Drawer</button>
-</div>
-
-{{#unless permanent}}
+{{#if modal}}
+  {{mdc-drawer-scrim}}
   <div>
-    <button {{action (mut open) true}}>Open Drawer</button>
-    <button {{action (mut open) false}}>Close Drawer</button>
+    <div>
+      <button {{action (mut style) "modal"}}>Modal Drawer</button>
+      <button {{action (mut style) "dismissible"}}>Dismissible Drawer</button>
+    </div>
+
+    <div>
+      <button {{action (mut open) true}}>Open Drawer</button>
+      <button {{action (mut open) false}}>Close Drawer</button>
+    </div>
   </div>
-{{/unless}}
+{{else}}
+  {{#mdc-drawer-app-content}}
+    <div>
+      <button {{action (mut style) "modal"}}>Modal Drawer</button>
+      <button {{action (mut style) "dismissible"}}>Dismissible Drawer</button>
+    </div>
+
+    <div>
+      <button {{action (mut open) true}}>Open Drawer</button>
+      <button {{action (mut open) false}}>Close Drawer</button>
+    </div>
+  {{/mdc-drawer-app-content}}
+{{/if}}
