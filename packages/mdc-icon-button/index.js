@@ -6,19 +6,29 @@ module.exports = {
   included (app) {
     this._super.included.apply (this, arguments);
 
-    app.import ('node_modules/@material/icon-button/dist/mdc.iconButton.js');
+    app.import ({
+      development: 'node_modules/@material/icon-button/dist/mdc.iconButton.js',
+      production: 'node_modules/@material/icon-button/dist/mdc.iconButton.min.js'
+    });
+
+    app.import ({
+      development: 'node_modules/@material/icon-button/dist/mdc.iconToggle.js',
+      production: 'node_modules/@material/icon-button/dist/mdc.iconToggle.min.js'
+    });
   },
 
-  sassOptions (options) {
-    options.cacheInclude = options.cacheInclude || [];
-    options.cacheInclude.push (/addon\.scss/);
-    options.cacheInclude.push (/_app-theme\.scss/);
+  optionsFor (type, options) {
+    if (type === 'sass') {
+      options.cacheInclude = options.cacheInclude || [];
+      options.cacheInclude.push (/addon\.scss/);
+      options.cacheInclude.push (/_app-theme\.scss/);
 
-    options.cacheInclude.push (/@material\/animation/);
-    options.cacheInclude.push (/@material\/base/);
-    options.cacheInclude.push (/@material\/icon-button/);
-    options.cacheInclude.push (/@material\/ripple/);
-    options.cacheInclude.push (/@material\/theme/);
+      options.cacheInclude.push (/@material\/animation/);
+      options.cacheInclude.push (/@material\/base/);
+      options.cacheInclude.push (/@material\/icon-button/);
+      options.cacheInclude.push (/@material\/ripple/);
+      options.cacheInclude.push (/@material\/theme/);
+    }
 
     return options;
   }
