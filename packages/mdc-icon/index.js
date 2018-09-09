@@ -30,10 +30,12 @@ module.exports = {
     }
   },
 
-  sassOptions (options) {
-    options.cacheInclude = options.cacheInclude || [];
-    options.cacheInclude.push (/addon\.scss/);
-    options.cacheInclude.push (/_app-theme\.scss/);
+  optionsFor (type, options) {
+    if (type === 'sass') {
+      options.cacheInclude = options.cacheInclude || [];
+      options.cacheInclude.push (/addon\.scss/);
+      options.cacheInclude.push (/_app-theme\.scss/);
+    }
 
     return options;
   }
