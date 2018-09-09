@@ -70,6 +70,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-floating-label/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form-field/dist" />
