@@ -1,103 +1,17 @@
 'use strict';
 /* eslint-env node */
 
-const SassCompilerFactory = require ('broccoli-sass-source-maps');
-const path = require ('path');
-const Funnel = require ('broccoli-funnel');
-const mergeTrees = require ('broccoli-merge-trees');
+const SassPlugin = require ('./lib/sass-plugin');
 const CoreObject = require ('core-object');
-const nodeSass = require ('node-sass');
-const { merge } = require ('lodash');
 
-const SassPlugin = CoreObject.extend ({
-  name: 'ember-cli-mdc-sass',
-
-  ext: ['scss', 'sass'],
-
-  context: null,
-
-  toTree (tree, inputPath, outputPath, inputOptions) {
-    // When working with a Material Design Component (MDC) project, the top-level
-    // sass file will include the sass dependency files. We therefore only need to
-    // convert the sass file for the project to a css file.
-
-    if (this.isMDCProject () && !this.isSelf ())
-      return null;
-
-    // Get the sassOptions for the application, and merge the input options with
-    // the application options.
-    let appSassOptions = this.context.project.config (process.env.EMBER_ENV).sassOptions;
-    let options = merge ({}, appSassOptions, inputOptions);
-
-    let inputTrees;
-
-    if (options.onlyIncluded) {
-      inputTrees = [new Funnel(tree, {
-        include: ['app/styles/**/*'],
-        annotation: 'Funnel (styles)'
-      })];
-    }
-    else {
-      inputTrees = [tree];
-    }
-
-    if (options.includePaths) {
-      inputTrees = inputTrees.concat(options.includePaths);
-    }
-
-    options.implementation = nodeSass;
-
-    let SassCompiler = SassCompilerFactory (options.implementation);
-    let ext = options.extension || 'scss';
-    let paths = options.outputPaths;
-
-
-    let trees = Object.keys (paths).map (file => {
-      let input = path.join(inputPath, file + '.' + ext);
-      let output = paths[file];
-      let basename = path.basename (output, '.css');
-
-      // Let's get the add on a chance to update the sass options since it may have
-      // some infomration we can use to improve performance.
-
-      if (basename === this.context.app.name && this.context.app.sassOptions) {
-        options = this.context.app.sassOptions (options);
-      }
-      else {
-        let addon = this.context.addonPackages[basename];
-
-        if (addon && addon.sassOptions)
-          options = addon.sassOptions (options);
-      }
-
-      return new SassCompiler(inputTrees, input, output, options);
-    });
-
-    if (options.passthrough) {
-      trees.push (new Funnel(tree, options.passthrough));
-    }
-
-    return mergeTrees (trees);
-  },
-
-  isMDCProject () {
-    return /^ember-cli-mdc/.test (this.context.app.name);
-  },
-
-  isSelf () {
-    return this.context.project.name () === this.context.app.name;
-  }
-});
-
-module.exports = {
+module.exports = CoreObject.extend ({
   name:  'ember-cli-mdc-sass',
 
   setupPreprocessorRegistry (type, registry) {
     registry.add ('css', new SassPlugin ({context: this}));
 
-    // prevent conflict with broccoli-sass if it's installed
-    if (registry.remove)
-      registry.remove ('css', 'broccoli-sass');
+    registry.remove ('css', 'broccoli-sass');
+    registry.remove ('css', 'ember-cli-sass');
   },
 
   included (app) {
@@ -109,5 +23,33 @@ module.exports = {
     }
 
     this.app = app;
+  },
+
+  optionsFor (type, options) {
+    if (type === 'sass') {
+      if (!options.includePaths)
+        options.includePaths = [];
+
+      const includePaths = options.includePaths;
+
+      if (!includePaths.includes ('node_modules'))
+        options.includePaths.push ('node_modules');
+
+      if (this.app.modulePrefix !== 'dummy') {
+        if (!includePaths.includes ('app/styles'))
+          includePaths.push ('app/styles');
+      }
+      else {
+        if (!includePaths.includes ('tests/dummy/app/styles'))
+          includePaths.push ('tests/dummy/app/styles');
+      }
+
+      if (process.env.EMBER_ENV === 'test') {
+        if (!includePaths.includes ('tests/dummy/app/styles'))
+          includePaths.push ('tests/dummy/app/styles');
+      }
+    }
+
+    return options;
   }
-};
+});
