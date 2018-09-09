@@ -93,6 +93,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-rtl/config" />
