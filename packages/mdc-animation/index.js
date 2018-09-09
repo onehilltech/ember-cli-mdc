@@ -12,10 +12,12 @@ module.exports = {
     });
   },
 
-  sassOptions (options) {
-    options.cacheInclude = options.cacheInclude || [];
-    options.cacheInclude.push (/addon\.scss/);
-    options.cacheInclude.push (/@material\/animation/);
+  optionsFor (type, options) {
+    if (type === 'sass') {
+      options.cacheInclude = options.cacheInclude || [];
+      options.cacheInclude.push (/addon\.scss/);
+      options.cacheInclude.push (/@material\/animation/);
+    }
 
     return options;
   }

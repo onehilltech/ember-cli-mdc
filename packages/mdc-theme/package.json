@@ -29,7 +29,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.2.3",
-    "ember-cli-mdc-sass": "^0.42.2-10"
+    "ember-cli-mdc-sass": "0.42.2-11"
   },
   "devDependencies": {
     "@material/theme": "0.39.1",
@@ -57,6 +57,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
+    "node-sass": "4.9.3",
     "qunit-dom": "^0.6.2"
   },
   "engines": {
