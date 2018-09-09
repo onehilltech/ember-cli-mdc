@@ -2,22 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-base" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-checkbox" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-drawer" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-elevation" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-form" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-form-field" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-icon-button" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-layout-grid" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-sass" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-tab" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-tab-bar" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-tab-indicator" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-tab-indicator.orig" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-tab-scroller" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-theme" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-top-app-bar" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/packages/mdc-typography" vcs="Git" />
   </component>
 </project>

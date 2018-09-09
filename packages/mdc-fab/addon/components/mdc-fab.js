@@ -1,9 +1,10 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-fab';
-import { Ripple } from 'ember-cli-mdc-ripple';
-import { Theme } from 'ember-cli-mdc-theme';
 
-export default Component.extend (Ripple, {
+import Ripple from 'ember-cli-mdc-ripple/mixins/ripple';
+import Themed from 'ember-cli-mdc-theme/mixins/theme';
+
+export default Component.extend (Ripple, Themed, {
   layout,
 
   tagName: 'button',
