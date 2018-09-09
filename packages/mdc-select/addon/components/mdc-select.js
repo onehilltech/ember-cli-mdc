@@ -5,7 +5,7 @@ import EmberObject from '@ember/object';
 
 import layout from '../templates/components/mdc-select';
 
-import { isNone, isPresent, isEmpty } from '@ember/utils';
+import { isEmpty } from '@ember/utils';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 
