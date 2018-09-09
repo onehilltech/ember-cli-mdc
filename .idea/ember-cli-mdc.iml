@@ -38,6 +38,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-tabs/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/vendor" />
@@ -58,6 +60,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-drawer/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/config" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-elevation/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-fab/config" />
