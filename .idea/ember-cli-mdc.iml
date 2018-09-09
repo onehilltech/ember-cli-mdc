@@ -87,6 +87,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/bower_components" />
