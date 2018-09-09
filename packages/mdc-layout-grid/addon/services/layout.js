@@ -19,17 +19,21 @@ export default Service.extend ({
   /// The layout is for a desktop.
   isDesktop: gte ('width', BREAKPOINT_DESKTOP),
 
+  _resizeEventListener: null,
+
   init () {
     this._super (...arguments);
 
-    $ (window).on ('resize', this.didResize.bind (this));
+    this._resizeEventListener = this.didResize.bind (this);
+    window.addEventListener ('resize', this._resizeEventListener);
+
     this.set ('width', window.outerWidth);
   },
 
   destroy () {
     this._super (...arguments);
 
-    $ (window).off ('resize', this.didResize.bind (this));
+    window.removeEventListener ('resize', this._resizeEventListener);
   },
 
   didResize () {
