@@ -11,14 +11,8 @@ export default Component.extend({
 
   classNames: ['mdc-line-ripple'],
 
-  classNameBindings: ['styleClassName'],
-
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
-    return isPresent (style) ? `mdc-line-ripple--${style}` : null;
-  }),
-
-  style: null,
+  /// Activate the line ripple.
+  activate: false,
 
   _lineRipple: null,
 
@@ -26,11 +20,29 @@ export default Component.extend({
     this._super (...arguments);
 
     this._lineRipple =  new mdc.lineRipple.MDCLineRipple (this.element);
+    this._doActivate ();
+  },
+
+  didUpdateAttr () {
+    this._super (...arguments);
+
+    this._doActivate ();
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
     this._lineRipple.destroy ();
+  },
+
+  _doActivate () {
+    const activate = this.get ('activate');
+
+    if (activate) {
+      this._lineRipple.activate ();
+    }
+    else {
+      this._lineRipple.deactivate ();
+    }
   }
 });
