@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 
 import { assert } from '@ember/debug';
 
-const TYPOGRAPHIES = [
+const TYPOGRAPHY = [
   'headline1',
   'headline2',
   'headline3',
@@ -36,7 +36,7 @@ export default Mixin.create ({
       return null;
     }
 
-    assert (`The typography must be one of the following values: ${TYPOGRAPHIES}`, TYPOGRAPHIES.includes (typography));
+    assert (`The typography must be one of the following values: ${TYPOGRAPHY}`, TYPOGRAPHY.includes (typography));
     return `mdc-typography--${typography}`;
   })
 });
