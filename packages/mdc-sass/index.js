@@ -4,7 +4,7 @@
 const SassPlugin = require ('./lib/sass-plugin');
 const CoreObject = require ('core-object');
 
-module.exports = CoreObject.extend ({
+module.exports = {
   name:  'ember-cli-mdc-sass',
 
   setupPreprocessorRegistry (type, registry) {
@@ -52,4 +52,4 @@ module.exports = CoreObject.extend ({
 
     return options;
   }
-});
+};
