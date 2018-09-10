@@ -40,16 +40,8 @@ module.exports = {
   },
 
   afterInstall () {
-    const packages = [];
-
-    if (!this.project.addonPackages['ember-cli-sass'] || !satisfies (this.project.addonPackages['ember-cli-sass'].pkg.version, EMBER_CLI_SASS_VERSION))
-      packages.push ({name: 'ember-cli-sass', target: EMBER_CLI_SASS_VERSION});
-
-    if (packages.length === 0)
-      return;
-
     return installPackages (this, [
-      {name: 'node-sass'},
+      {name: 'sass'},
     ]);
   }
 };
