@@ -28,7 +28,7 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-sass": "^7.2.0"
+    "ember-cli-mdc-sass": "^0.42.3-2"
   },
   "devDependencies": {
     "@material/animation": "^0.39.0",
@@ -43,8 +43,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.42.3-2",
     "ember-cli-mdc-base": "^0.42.3-2",
-    "ember-cli-mdc-icon": "^0.27.15",
-    "ember-cli-mdc-sass": "^0.42.3-2",
+    "ember-cli-mdc-icon": "^0.42.3-2",
     "ember-cli-mdc-theme": "^0.42.3-2",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
@@ -61,6 +60,8 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
+    "material-design-icons": "^3.0.1",
+    "node-sass": "^4.9.3",
     "qunit-dom": "^0.6.2"
   },
   "engines": {
