@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-blueprint-helpers": "^0.2.3",
-    "ember-cli-sass": "^7.1.7"
+    "ember-cli-blueprint-helpers": "^0.2.3"
   },
   "devDependencies": {
     "@material/rtl": "^0.36.0",
@@ -41,7 +40,6 @@
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-sass": "^0.42.3-5",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
