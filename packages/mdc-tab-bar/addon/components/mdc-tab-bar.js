@@ -4,7 +4,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-tab-bar';
 
 import { isPresent, isNone } from '@ember/utils';
-import { Elevation } from 'ember-cli-mdc-elevation/mixins/elevation';
+import Elevation from 'ember-cli-mdc-elevation/mixins/elevation';
 
 function noOp () {}
 
