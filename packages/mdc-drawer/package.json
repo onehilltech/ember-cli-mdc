@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-drawer",
-  "version": "0.43.1-0",
+  "version": "0.43.1-1",
   "description": "ember-cli addon for @material/drawer.",
   "keywords": [
     "ember-addon",
@@ -31,7 +31,7 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.2.3",
     "ember-cli-htmlbars": "^3.0.0",
-    "ember-cli-mdc-sass": "^0.43.1-0"
+    "ember-cli-mdc-sass": "^0.43.1-1"
   },
   "devDependencies": {
     "@material/animation": "0.39.0",
@@ -50,15 +50,15 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.43.1-0",
+    "ember-cli-mdc-animation": "^0.43.1-1",
     "ember-cli-mdc-base": "^0.43.0",
-    "ember-cli-mdc-elevation": "^0.43.1-0",
-    "ember-cli-mdc-icon": "^0.43.1-0",
-    "ember-cli-mdc-list": "^0.43.1-0",
-    "ember-cli-mdc-ripple": "^0.43.1-0",
+    "ember-cli-mdc-elevation": "^0.43.1-1",
+    "ember-cli-mdc-icon": "^0.43.1-1",
+    "ember-cli-mdc-list": "^0.43.1-1",
+    "ember-cli-mdc-ripple": "^0.43.1-1",
     "ember-cli-mdc-rtl": "^0.43.0",
-    "ember-cli-mdc-theme": "^0.43.1-0",
-    "ember-cli-mdc-typography": "^0.43.1-0",
+    "ember-cli-mdc-theme": "^0.43.1-1",
+    "ember-cli-mdc-typography": "^0.43.1-1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
