@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from '@ember/component';
 import TabMixin from '../mixins/tab';
 
