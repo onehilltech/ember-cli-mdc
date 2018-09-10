@@ -3,7 +3,6 @@ const path = require ('path');
 const Funnel = require ('broccoli-funnel');
 const mergeTrees = require ('broccoli-merge-trees');
 const CoreObject = require ('core-object');
-const nodeSass = require ('node-sass');
 const { merge, find } = require ('lodash');
 
 const MDC_PROJECT_REGEXP = /^ember-cli-mdc/;
@@ -35,8 +34,6 @@ module.exports = CoreObject.extend ({
       inputTrees = [tree];
     }
 
-    options.implementation = nodeSass;
-
     let ext = options.extension || 'scss';
     let paths = options.outputPaths;
 
@@ -50,7 +47,7 @@ module.exports = CoreObject.extend ({
       if (this.context.app.optionsFor)
         options = this.context.app.optionsFor ('sass', options);
 
-      options.annotation = `SassCompiler [${this.context.app.name}]`;
+      options.annotation = `Sass [${this.context.app.name}]`;
       return new SassCompiler (inputTrees, input, output, options);
     });
 
