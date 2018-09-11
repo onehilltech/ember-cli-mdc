@@ -2,7 +2,6 @@
 /* eslint-env node */
 
 const SassPlugin = require ('./lib/sass-plugin');
-const CoreObject = require ('core-object');
 
 module.exports = {
   name:  'ember-cli-mdc-sass',
