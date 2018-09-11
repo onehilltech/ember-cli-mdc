@@ -2165,15 +2165,14 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-sass@^0.42.3-5:
-  version "0.42.3-5"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.42.3-5.tgz#10065e32365bbac1cc7d78e37c3dc59600cd92e7"
+ember-cli-mdc-sass@^0.43.1-4:
+  version "0.43.1-4"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-4.tgz#9253072ed44e3704e245080494a3720325ba1f12"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.1"
     broccoli-sass-source-maps "^4.0.0"
     ember-cli-babel "^6.6.0"
-    node-sass "^4.9.3"
 
 ember-cli-normalize-entity-name@^1.0.0:
   version "1.0.0"
@@ -4956,7 +4955,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-node-sass@4.9.3, node-sass@^4.9.3:
+node-sass@4.9.3:
   version "4.9.3"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.9.3.tgz#f407cf3d66f78308bb1e346b24fa428703196224"
   dependencies:
