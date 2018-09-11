@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-scroller",
-  "version": "0.43.1-2",
+  "version": "0.43.1-3",
   "description": "ember-cli addon for @material/tab-scroller",
   "keywords": [
     "ember-addon",
@@ -29,7 +29,7 @@
     "ember-cli-blueprint-helpers": "^0.2.5",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-mdc-sass": "^0.43.1-2"
+    "ember-cli-mdc-sass": "^0.43.1-3"
   },
   "devDependencies": {
     "@material/animation": "0.39.0",
@@ -47,15 +47,15 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.43.1-2",
+    "ember-cli-mdc-animation": "^0.43.1-3",
     "ember-cli-mdc-base": "^0.43.0",
-    "ember-cli-mdc-icon": "^0.43.1-2",
-    "ember-cli-mdc-ripple": "^0.43.1-2",
+    "ember-cli-mdc-icon": "^0.43.1-3",
+    "ember-cli-mdc-ripple": "^0.43.1-3",
     "ember-cli-mdc-rtl": "^0.43.0",
-    "ember-cli-mdc-tab": "^0.43.1-2",
-    "ember-cli-mdc-tab-indicator": "^0.43.1-2",
-    "ember-cli-mdc-theme": "^0.43.1-2",
-    "ember-cli-mdc-typography": "^0.43.1-2",
+    "ember-cli-mdc-tab": "^0.43.1-3",
+    "ember-cli-mdc-tab-indicator": "^0.43.1-3",
+    "ember-cli-mdc-theme": "^0.43.1-3",
+    "ember-cli-mdc-typography": "^0.43.1-3",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
