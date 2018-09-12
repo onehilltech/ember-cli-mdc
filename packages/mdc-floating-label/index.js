@@ -26,5 +26,6 @@ module.exports = {
       options.cacheInclude.push (/@material\/typography/);
     }
 
+    return options;
   }
 };
