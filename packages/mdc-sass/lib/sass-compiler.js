@@ -1,7 +1,6 @@
 const CachingWriter = require ('broccoli-caching-writer');
 const path = require ('path');
 const { ensureDirSync, writeFileSync } = require ('fs-extra');
-const sass = require ('sass');
 
 SassCompiler.prototype = Object.create (CachingWriter.prototype);
 SassCompiler.prototype.constructor = SassCompiler;
@@ -16,7 +15,9 @@ function SassCompiler (inputNodes, inputFile, outputFile, options = {}) {
 
   this.inputFile = inputFile;
   this.outputFile = outputFile;
-  this.options = options
+  this.options = options;
+
+  this.sass = require ('sass');
 }
 
 SassCompiler.prototype.build = function () {
@@ -35,7 +36,7 @@ SassCompiler.prototype.build = function () {
     sourceComments: this.options.sourceComments,
   };
 
-  let result = sass.renderSync (sassOptions);
+  let result = this.sass.renderSync (sassOptions);
   writeFileSync (dstFile, result.css);
 };
 
