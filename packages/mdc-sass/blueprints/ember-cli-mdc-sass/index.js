@@ -16,7 +16,7 @@ module.exports = {
   files () {
     let files = this._super (...arguments);
 
-    if (this.project.isEmberCLIAddon ()) {
+    if (this.project && this.project.isEmberCLIAddon ()) {
       // Remove the files that to not pertain to add-ons.
       files = files.filter (item => item !== '__root__/styles/app.scss');
 
