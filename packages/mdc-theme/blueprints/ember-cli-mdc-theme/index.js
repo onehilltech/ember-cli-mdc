@@ -10,6 +10,9 @@ module.exports = {
   },
 
   files () {
+    if (!this.project)
+      return this._super (...arguments);
+
     let files = this._super (...arguments);
 
     if (this.project.isEmberCLIAddon ()) {
