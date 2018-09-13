@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-blueprint-helpers": "^0.2.3",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-mdc-sass": "^0.43.1-19"
@@ -42,11 +41,12 @@
     "@material/ripple": "0.39.1",
     "@material/rtl": "0.39.1",
     "@material/theme": "0.39.1",
-    "@material/top-app-bar": "0.39.1",
+    "@material/top-app-bar": "0.39.3",
     "@material/typography": "0.39.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
+    "ember-cli-blueprint-helpers": "^0.4.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
