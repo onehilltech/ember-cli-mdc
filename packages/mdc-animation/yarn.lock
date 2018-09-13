@@ -2026,9 +2026,9 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-blueprint-helpers@^0.3.1-5:
-  version "0.3.1-5"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.3.1-5.tgz#e12939e9246469452848bbdbe8b3f5dbf3b7d85d"
+ember-cli-blueprint-helpers@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.4.0.tgz#b3ac12f1d40e86ed3ce22c48b491c898a3f2a308"
   dependencies:
     base-object "^1.2.1"
     bluebird "^3.5.1"
@@ -2106,9 +2106,9 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-sass@0.43.1-18:
-  version "0.43.1-18"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-18.tgz#f2a9ca04dcb58e569991819bdbf614a5536fb156"
+ember-cli-mdc-sass@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-19.tgz#41746c67e355c4470d7f7e51a875e6ce02964c4f"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.1"

@@ -782,6 +782,12 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
+base-object@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/base-object/-/base-object-1.2.1.tgz#47addce76f5361962934091b6f2590672f8e1963"
+  dependencies:
+    lodash "^4.17.10"
+
 base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
@@ -1975,13 +1981,15 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-blueprint-helpers@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.2.3.tgz#707105f6f15d69ab6c7098721a9d806eed635d68"
+ember-cli-blueprint-helpers@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.4.0.tgz#b3ac12f1d40e86ed3ce22c48b491c898a3f2a308"
   dependencies:
+    base-object "^1.2.1"
     bluebird "^3.5.1"
     core-object "^3.1.5"
     npm-check "^5.8.0"
+    semver "^5.5.1"
 
 ember-cli-broccoli-sane-watcher@^2.0.4:
   version "2.1.1"
@@ -5587,7 +5595,7 @@ semver-diff@^2.0.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
-semver@^5.0.1, semver@^5.0.3:
+semver@^5.0.1, semver@^5.0.3, semver@^5.5.1:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.1.tgz#7dfdd8814bdb7cabc7be0fb1d734cfb66c940477"
 
