@@ -1,19 +1,21 @@
 /* eslint-env node */
 
-const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
-module.exports = {
-  description: '',
+module.exports = Blueprint.extend ({
+  packages: [
+    {name: '@material/theme'}
+  ],
 
-  normalizeEntityName () {
-    // no-op since we're just adding dependencies
-  },
+  addons: [
+    {name: 'ember-cli-mdc-sass', blueprintOptions: {save: true}}
+  ],
 
   files () {
     if (!this.project)
-      return this._super (...arguments);
+      return this._super.call (this, ...arguments);
 
-    let files = this._super (...arguments);
+    let files = this._super.call (this, ...arguments);
 
     if (this.project.isEmberCLIAddon ()) {
       // Remove the files that to not pertain to add-ons.
@@ -32,19 +34,4 @@ module.exports = {
 
     return files;
   },
-
-  afterInstall () {
-    return installPackages (this, [
-      {name: '@material/theme'}
-    ]).then (() => {
-      return installAddons (this, {
-        packages: [
-          {name: 'ember-cli-mdc-sass'}
-        ],
-        blueprintOptions: {
-          save: true
-        }
-      })
-    });
-  }
-};
+});
