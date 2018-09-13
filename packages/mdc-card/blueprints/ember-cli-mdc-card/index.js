@@ -1,28 +1,17 @@
 /* eslint-env node */
 
-const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
-module.exports = {
-  description: '',
+module.exports = Blueprint.extend ({
+  packages: [
+    {name: '@material/card'}
+  ],
 
-  normalizeEntityName () {
-    // no-op since we're just adding dependencies
-  },
-
-  afterInstall () {
-    return installPackages (this, [
-      {name: '@material/card'},
-    ]).then (() => {
-      return installAddons (this, {
-        packages: [
-          {name: 'ember-cli-mdc-ripple'},
-          {name: 'ember-cli-mdc-elevation'},
-          {name: 'ember-cli-mdc-rtl'},
-          {name: 'ember-cli-mdc-button'},
-          {name: 'ember-cli-mdc-icon-button'}
-        ]
-      })
-    });
-  }
-
-};
+  addons: [
+    {name: 'ember-cli-mdc-elevation'},
+    {name: 'ember-cli-mdc-ripple'},
+    {name: 'ember-cli-mdc-rtl'},
+    {name: 'ember-cli-mdc-button'},
+    {name: 'ember-cli-mdc-icon-button'},
+  ]
+});
