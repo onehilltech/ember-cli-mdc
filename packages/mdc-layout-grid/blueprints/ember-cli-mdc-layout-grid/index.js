@@ -1,15 +1,9 @@
 /* eslint-env node */
 
-const { installer: { installPackages } } = require ('ember-cli-blueprint-helpers');
+const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
-module.exports = {
-  description: '',
-
-  normalizeEntityName() {}, // no-op since we're just adding dependencies
-
-  afterInstall () {
-    return installPackages (this, [
-      {name: '@material/layout-grid'},
-    ]);
-  }
-};
+module.exports = Blueprint.extend ({
+  packages: [
+    {name: '@material/layout-grid'}
+  ]
+});
