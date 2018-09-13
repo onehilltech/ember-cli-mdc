@@ -1,22 +1,14 @@
 /* eslint-env node */
 
-const { installer: { installAddons, installPackages } } = require ('ember-cli-blueprint-helpers');
+const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
-module.exports = {
-  description: '',
+module.exports = Blueprint.extend ({
+  packages: [
+    {name: '@material/tab-bar'}
+  ],
 
-  normalizeEntityName() {}, // no-op since we're just adding dependencies
-
-  afterInstall () {
-    return installPackages (this, [
-      {name: '@material/tab-bar'},
-    ]).then (() => {
-      return installAddons (this, {
-        packages: [
-          {name: 'ember-cli-mdc-elevation'},
-          {name: 'ember-cli-mdc-tab-scroller'}
-        ]
-      });
-    });
-  }
-};
+  addons: [
+    {name: 'ember-cli-mdc-elevation'},
+    {name: 'ember-cli-mdc-tab-scroller'}
+  ]
+});
