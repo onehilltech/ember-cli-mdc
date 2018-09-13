@@ -1,21 +1,11 @@
 /* eslint-env node */
 
-const { installer: { installAddons } } = require ('ember-cli-blueprint-helpers');
+const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
-module.exports = {
-  description: '',
-
-  normalizeEntityName () {
-    // no-op since we're just adding dependencies
-  },
-
-  afterInstall () {
-    return installAddons (this, {
-      packages: [
-        {name: 'ember-cli-mdc-theme'},
-        {name: 'ember-cli-mdc-typography'},
-        {name: 'ember-cli-mdc-rtl'}
-      ]
-    });
-  }
-};
+module.exports = Blueprint.extend ({
+  addons: [
+    {name: 'ember-cli-mdc-theme'},
+    {name: 'ember-cli-mdc-typography'},
+    {name: 'ember-cli-mdc-rtl'}
+  ]
+});
