@@ -35,9 +35,17 @@
     "@material/animation" "^0.39.0"
     "@material/theme" "^0.39.1"
 
-"@material/ripple@0.39.1", "@material/ripple@^0.39.1":
+"@material/ripple@0.39.1":
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.39.1.tgz#3f9ecac87f4552ab63dd543d01b882a7e04a8f75"
+  dependencies:
+    "@material/animation" "^0.39.0"
+    "@material/base" "^0.39.0"
+    "@material/theme" "^0.39.1"
+
+"@material/ripple@^0.39.3":
+  version "0.39.3"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.39.3.tgz#4ff7a8fec5d5206f0da72a78d026529b53b7d564"
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/base" "^0.39.0"
@@ -47,22 +55,22 @@
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.39.1.tgz#dcaf6f93fc6cd540137edb352139dc8139bca436"
 
-"@material/selection-control@^0.39.1":
-  version "0.39.1"
-  resolved "https://registry.yarnpkg.com/@material/selection-control/-/selection-control-0.39.1.tgz#0e3ad48667f6382d8c2c34162c19fc9a5d6cc8ea"
+"@material/selection-control@^0.39.3":
+  version "0.39.3"
+  resolved "https://registry.yarnpkg.com/@material/selection-control/-/selection-control-0.39.3.tgz#2ccdb4e07a7446e462ead824796a8ef18cc27720"
   dependencies:
-    "@material/ripple" "^0.39.1"
+    "@material/ripple" "^0.39.3"
 
-"@material/switch@0.39.1":
-  version "0.39.1"
-  resolved "https://registry.yarnpkg.com/@material/switch/-/switch-0.39.1.tgz#f15e634288ac166ef812b089d09992464249401b"
+"@material/switch@0.39.3":
+  version "0.39.3"
+  resolved "https://registry.yarnpkg.com/@material/switch/-/switch-0.39.3.tgz#c7afdd2f13747e97ee3a7f223cedce84fe940fc1"
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/base" "^0.39.0"
     "@material/elevation" "^0.39.1"
-    "@material/ripple" "^0.39.1"
+    "@material/ripple" "^0.39.3"
     "@material/rtl" "^0.39.1"
-    "@material/selection-control" "^0.39.1"
+    "@material/selection-control" "^0.39.3"
     "@material/theme" "^0.39.1"
 
 "@material/theme@0.39.1", "@material/theme@^0.39.1":
@@ -809,6 +817,12 @@ backo2@1.0.2:
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
+
+base-object@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/base-object/-/base-object-1.2.1.tgz#47addce76f5361962934091b6f2590672f8e1963"
+  dependencies:
+    lodash "^4.17.10"
 
 base64-arraybuffer@0.1.5:
   version "0.1.5"
@@ -2033,6 +2047,26 @@ ember-cli-blueprint-helpers@^0.2.3:
     core-object "^3.1.5"
     npm-check "^5.8.0"
 
+ember-cli-blueprint-helpers@^0.3.1-5:
+  version "0.3.1-6"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.3.1-6.tgz#6aec0f6770051e690f1c6bab78fff518d61c2f5d"
+  dependencies:
+    base-object "^1.2.1"
+    bluebird "^3.5.1"
+    core-object "^3.1.5"
+    npm-check "^5.8.0"
+    semver "^5.5.1"
+
+ember-cli-blueprint-helpers@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.4.0.tgz#b3ac12f1d40e86ed3ce22c48b491c898a3f2a308"
+  dependencies:
+    base-object "^1.2.1"
+    bluebird "^3.5.1"
+    core-object "^3.1.5"
+    npm-check "^5.8.0"
+    semver "^5.5.1"
+
 ember-cli-broccoli-sane-watcher@^2.0.4:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-broccoli-sane-watcher/-/ember-cli-broccoli-sane-watcher-2.1.1.tgz#1687adada9022de26053fba833dc7dd10f03dd08"
@@ -2112,38 +2146,38 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-animation@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.43.1-10.tgz#4107c3da21e61320f2263651308d259d3ebd21e1"
+ember-cli-mdc-animation@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.43.1-19.tgz#ce764b90f7f78178f77d986851048e558cebd4b8"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.3.1-5"
+    ember-cli-mdc-sass "^0.43.1-19"
+
+ember-cli-mdc-base@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.43.1-19.tgz#b14439f46a88bd583acc7292d0381908da3bf57c"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-10"
 
-ember-cli-mdc-base@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.43.1-10.tgz#6002ac2980a59a99160da2edf22da864dae9af2f"
+ember-cli-mdc-elevation@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.43.1-19.tgz#d16d9982e0c0171728ff1f0d69407a3adc0283b3"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
+    ember-cli-mdc-sass "^0.43.1-19"
 
-ember-cli-mdc-elevation@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.43.1-10.tgz#87954ecbd914ce3de26c3b4b41da748656162038"
-  dependencies:
-    ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-10"
-
-ember-cli-mdc-ripple@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.43.1-10.tgz#17cf097da01668a39ab4d71b0a51013bd9c64d10"
+ember-cli-mdc-ripple@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.43.1-19.tgz#bd5d7169591090fb3ca3ba32b6c62b38638826e9"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
-    ember-cli-mdc-sass "^0.43.1-10"
+    ember-cli-mdc-sass "^0.43.1-19"
 
 ember-cli-mdc-rtl@^0.43.0:
   version "0.43.0"
@@ -2152,29 +2186,29 @@ ember-cli-mdc-rtl@^0.43.0:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
 
-ember-cli-mdc-sass@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-10.tgz#3f1d18b1df47cc8aa6d3c8876bb49bf1dd3353bf"
+ember-cli-mdc-sass@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-19.tgz#41746c67e355c4470d7f7e51a875e6ce02964c4f"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.1"
     ember-cli-babel "^6.6.0"
 
-ember-cli-mdc-selection-control@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-selection-control/-/ember-cli-mdc-selection-control-0.43.1-10.tgz#fb041b0d9b738bbdebb8911eb2741c8f4e5c72d4"
+ember-cli-mdc-selection-control@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-selection-control/-/ember-cli-mdc-selection-control-0.43.1-19.tgz#b01192c0bd764bf263887b5435737e3fda9f72f1"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-10"
+    ember-cli-mdc-sass "^0.43.1-19"
 
-ember-cli-mdc-theme@^0.43.1-10:
-  version "0.43.1-10"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.43.1-10.tgz#19e2a1d906a5bae4d691e3301c42b39e2fa1985f"
+ember-cli-mdc-theme@^0.43.1-19:
+  version "0.43.1-19"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.43.1-19.tgz#bd5a52d0f335c1eaf898f39b3a77352956e837d7"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-10"
+    ember-cli-mdc-sass "^0.43.1-19"
 
 ember-cli-normalize-entity-name@^1.0.0:
   version "1.0.0"
@@ -5599,7 +5633,7 @@ semver-diff@^2.0.0:
   dependencies:
     semver "^5.0.3"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.1.1, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.1.1, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.1.tgz#7dfdd8814bdb7cabc7be0fb1d734cfb66c940477"
 
