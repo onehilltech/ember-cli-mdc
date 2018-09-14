@@ -6,6 +6,7 @@ import layout from '../templates/components/mdc-drawer';
 import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
 import { isEmpty, isNone } from '@ember/utils';
+import { equal } from '@ember/object/computed';
 
 const STYLES = [
   'dismissible',
@@ -39,11 +40,19 @@ export default Component.extend ({
 
   _currentStyle: null,
 
+  _clickEventListener: null,
+
+  isModal: equal ('style', 'modal'),
+  isDismissible: equal ('style', 'dismissible'),
+
+  _drawerContent: null,
+
   init () {
     this._super (...arguments);
 
     this._openEventListener = this.didOpen.bind (this);
     this._closeEventListener = this.didClose.bind (this);
+    this._clickEventListener = this.didClick.bind (this);
   },
 
   didInsertElement () {
@@ -54,6 +63,9 @@ export default Component.extend ({
     // Set the open state for the component.
     const { style, open } = this.getProperties (['style', 'open']);
     this._drawer.open = open;
+
+    this._drawerContent = this.element.querySelector ('.mdc-drawer__content');
+    this._drawerContent.addEventListener ('click', this._clickEventListener);
 
     // Save the style just in case it changes.
     this.set ('_currentStyle', style);
@@ -87,6 +99,18 @@ export default Component.extend ({
   willDestroyElement () {
     this._super (...arguments);
     this._destroyComponent ();
+
+    this._drawerContent.removeEventListener ('click', this._clickEventListener);
+  },
+
+  didClick (ev) {
+    if (!this.get ('isModal')) {
+      return;
+    }
+
+    if (ev.target.classList.contains ('mdc-list-item')) {
+      this.set ('open', false);
+    }
   },
 
   didOpen () {
@@ -110,6 +134,7 @@ export default Component.extend ({
   _destroyComponent () {
     this._drawer.unlisten ('MDCDrawer:opened', this._openEventListener);
     this._drawer.unlisten ('MDCDrawer:closed', this._closeEventListener);
+
     this._drawer.destroy ();
     this._drawer = null;
   }
