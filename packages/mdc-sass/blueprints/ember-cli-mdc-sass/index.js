@@ -9,9 +9,9 @@ module.exports = Blueprint.extend ({
 
   files () {
     if (!this.project)
-      return this._super (...arguments);
+      return this._super.call (this, ...arguments);
 
-    let files = this._super (...arguments);
+    let files = this._super.call (this, ...arguments);
 
     if (this.project.isEmberCLIAddon ()) {
       // Remove the files that to not pertain to add-ons.
