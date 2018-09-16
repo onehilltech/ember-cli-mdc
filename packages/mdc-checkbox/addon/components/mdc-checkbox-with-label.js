@@ -1,7 +1,7 @@
-import { FormField } from 'ember-cli-mdc-form-field';
+import FormFieldComponent from 'ember-cli-mdc-form-field/components/mdc-form-field';
 import layout from '../templates/components/mdc-checkbox-with-label';
 
-export default FormField.extend ({
+export default FormFieldComponent.extend ({
   layout,
 
   classNames: ['mdc-checkbox-with-label'],
