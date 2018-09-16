@@ -2,7 +2,6 @@
   "name": "ember-cli-mdc",
   "private": false,
   "devDependencies": {
-    "ember-cli-blueprint-helpers": "^0.4.1",
     "lerna": "^3.4.0"
   }
 }
