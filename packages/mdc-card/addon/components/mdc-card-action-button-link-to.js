@@ -1,6 +1,6 @@
-import LinkComponent from '@ember/routing/link-component';
+import ButtonLinkComponent from 'ember-cli-mdc-button/components/mdc-button-linkto';
 import CardAction from '../mixins/card-action';
 
-export default LinkComponent.extend (CardAction, {
+export default ButtonLinkComponent.extend (CardAction, {
   classNames: ['mdc-card__action--button']
 });
