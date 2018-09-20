@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-base",
-  "version": "0.45.0",
+  "version": "0.45.6",
   "description": "ember-cli addon for @material/base",
   "keywords": [
     "ember-addon",
@@ -24,8 +24,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-blueprint-helpers": "^0.4.1",
-    "ember-cli-babel": "^6.6.0"
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-blueprint-helpers": "^0.4.1"
   },
   "devDependencies": {
     "@material/base": "0.39.0",

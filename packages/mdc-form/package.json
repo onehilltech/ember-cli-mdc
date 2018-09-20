@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-form",
-  "version": "0.45.0",
+  "version": "0.45.6",
   "description": "ember-cli addon for material component forms",
   "keywords": [
     "ember-addon",
@@ -27,8 +27,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-blueprint-helpers": "^0.4.1",
     "ember-cli-babel": "^6.6.0",
+    "ember-cli-blueprint-helpers": "^0.4.1",
     "ember-cli-htmlbars": "^3.0.0"
   },
   "devDependencies": {
