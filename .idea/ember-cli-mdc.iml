@@ -90,6 +90,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-form/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-htmlbars/vendor" />
@@ -103,6 +104,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-icon/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-layout-grid/vendor" />
@@ -133,9 +135,11 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-sass/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-select/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/vendor" />
@@ -150,9 +154,11 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-switch/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-bar/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-bar/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-bar/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-bar/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-indicator/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab-scroller/dist" />
@@ -164,6 +170,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tab/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tabs/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tabs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tabs/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-tabs/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/node_modules" />
@@ -171,6 +178,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-textfield/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-theme/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-top-app-bar/bower_components" />
