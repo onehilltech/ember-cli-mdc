@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-textfield",
-  "version": "0.45.7",
+  "version": "0.45.8",
   "description": "ember-cli addon for @material/textfield",
   "keywords": [
     "ember-addon",
@@ -50,7 +50,7 @@
     "ember-cli-mdc-animation": "^0.45.6",
     "ember-cli-mdc-base": "^0.45.6",
     "ember-cli-mdc-floating-label": "^0.45.7",
-    "ember-cli-mdc-icon": "^0.45.6",
+    "ember-cli-mdc-icon": "^0.45.8",
     "ember-cli-mdc-line-ripple": "^0.45.6",
     "ember-cli-mdc-notched-outline": "^0.45.6",
     "ember-cli-mdc-ripple": "^0.45.6",
