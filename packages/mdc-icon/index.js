@@ -12,10 +12,10 @@ module.exports = {
       // We are using corber to build the application. This means that we need to
       // embed the icons in the application bundle.
       app.import ('node_modules/material-design-icons/iconfont/material-icons.css');
-      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot', {destDir: 'assets/fonts/material-design-icons'});
-      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.tff', {destDir: 'assets/fonts/material-design-icons'});
-      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff', {destDir: 'assets/fonts/material-design-icons'});
-      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2', {destDir: 'assets/fonts/material-design-icons'});
+      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot', {destDir: 'assets'});
+      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.tff', {destDir: 'assets'});
+      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff', {destDir: 'assets'});
+      app.import ('node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2', {destDir: 'assets'});
     }
   },
 
