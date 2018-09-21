@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-snackbar",
-  "version": "0.45.6",
+  "version": "0.45.7",
   "description": "ember-cli addon for @material/snackbar",
   "keywords": [
     "ember-addon",
@@ -49,7 +49,7 @@
     "ember-cli-mdc-base": "^0.45.6",
     "ember-cli-mdc-rtl": "^0.45.6",
     "ember-cli-mdc-theme": "^0.45.6",
-    "ember-cli-mdc-typography": "^0.45.6",
+    "ember-cli-mdc-typography": "^0.45.7",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
