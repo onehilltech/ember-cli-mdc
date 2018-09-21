@@ -7,6 +7,8 @@ module.exports = {
     this._super (...arguments);
 
     if (process.env.CORBER) {
+      this.ui.writeLine ('Bundling Roboto fonts with the application.');
+
       // Import the font stylesheet.
       app.import ('vendor/assets/styles/roboto.css');
 
@@ -28,8 +30,10 @@ module.exports = {
     this._super (...arguments);
 
     if (type === 'head-footer') {
-      if (!process.env.CORBER)
+      if (!process.env.CORBER) {
+        this.ui.writeLine ('Linking Roboto fonts with the application.');
         return '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />';
+      }
     }
   },
 
