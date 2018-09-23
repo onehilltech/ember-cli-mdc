@@ -26,6 +26,4 @@ export default Component.extend (Ripple, Themed, {
     const $labels = this.$('.mdc-fab__label');
     this.$().toggleClass ('mdc-fab--extended', $labels.length === 1);
   }
-}).reopenClass ({
-  positionalParams: ['icon']
 });
