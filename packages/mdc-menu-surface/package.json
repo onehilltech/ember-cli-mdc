@@ -1,17 +1,12 @@
 {
-  "name": "ember-cli-mdc",
+  "name": "ember-cli-mdc-menu-surface",
   "version": "0.46.0",
-  "description": "Collection of Material Design components.",
+  "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon",
-    "material design",
-    "material components"
+    "ember-addon"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
-  },
-  "license": "Apache-2.0",
+  "repository": "",
+  "license": "MIT",
   "author": "",
   "directories": {
     "doc": "doc",
@@ -19,43 +14,37 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint .",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "start": "ember serve",
-    "test": "ember test",
-    "test:all": "ember try:each"
+    "test": "ember try:each"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.7.0",
+    "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~3.3.0",
-    "ember-cli-blueprint-helpers": "^0.4.1",
+    "ember-cli": "~2.18.2",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-qunit": "^4.3.2",
+    "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-load-initializers": "^1.1.0",
-    "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.3.0",
-    "ember-source-channel-url": "^1.0.1",
-    "ember-try": "^0.2.23",
+    "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^6.0.1",
-    "loader.js": "^4.2.3",
-    "qunit-dom": "^0.6.2"
+    "eslint-plugin-node": "^5.2.1",
+    "loader.js": "^4.2.3"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "^4.5 || 6.* || >= 7.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
