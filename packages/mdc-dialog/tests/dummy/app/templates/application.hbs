@@ -2,13 +2,13 @@
 
 <p>{{#mdc-button style="unelevated" click=(action (mut showBasicDialog) "basic")}}Show Basic Dialog{{/mdc-button}}</p>
 <p>{{#mdc-button style="unelevated" click=(action (mut showScrollableDialog) "scrollable")}}Show Scrollable Dialog{{/mdc-button}}</p>
-<p>{{#mdc-button style="unelevated" click=(action (mut showEmphasizeDialog) "emphasize")}}Show Emphasize Dialog{{/mdc-button}}</p>
+<p>{{#mdc-button style="unelevated" click=(action (mut showDefaultDialog) "default")}}Show Default Dialog{{/mdc-button}}</p>
 
 {{#mdc-dialog title="Use Google's location service?"
               accept=(action "accept")
               acceptButtonText="Accept"
-              cancel=(action "cancel")
-              cancelButtonText="Decline"
+              close=(action "close")
+              closeButtonText="Decline"
               show=showBasicDialog}}
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
@@ -16,11 +16,11 @@
 
 {{#mdc-dialog title="Choose a Ringtone"
               scrollable=true
+              show=showScrollableDialog
               accept=(action "accept")
               acceptButtonText="Accept"
-              cancel=(action "cancel")
-              cancelButtonText="Decline"
-              show=showScrollableDialog}}
+              close=(action "close")
+              closeButtonText="Decline"}}
   <ul class="mdc-list">
     <li class="mdc-list-item">None</li>
     <li class="mdc-list-item">Callisto</li>
@@ -38,11 +38,11 @@
 
 {{#mdc-dialog title="Use Google's location service?"
               accept=(action "accept")
-              acceptEmphasize=true
               acceptButtonText="Accept"
-              cancel=(action "cancel")
-              cancelButtonText="Decline"
-              show=showEmphasizeDialog}}
+              default="accept"
+              close=(action "close")
+              closeButtonText="Decline"
+              show=showDefaultDialog}}
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
 {{/mdc-dialog}}

@@ -6,14 +6,14 @@ export default Controller.extend({
 
   showBasicDialog: equal ('show', 'basic'),
   showScrollableDialog: equal ('show', 'scrollable'),
-  showEmphasizeDialog: equal ('show', 'emphasize'),
+  showDefaultDialog: equal ('show', 'default'),
 
   actions: {
     accept () {
       alert ('Accept clicked!');
     },
 
-    cancel () {
+    close () {
       alert ('Cancel clicked!');
     }
   }

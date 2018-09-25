@@ -38,18 +38,24 @@
     "@material/theme" "^0.39.1"
     "@material/typography" "^0.39.0"
 
-"@material/dialog@0.39.3":
-  version "0.39.3"
-  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-0.39.3.tgz#88e3282d27af237f469514784bfdf0bba0aaab7c"
+"@material/dialog@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/dialog/-/dialog-0.40.0.tgz#681039f9b8885d75060a2dcf312130b2abdc26e8"
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/base" "^0.39.0"
-    "@material/elevation" "^0.39.1"
-    "@material/ripple" "^0.39.3"
+    "@material/dom" "^0.40.0"
+    "@material/elevation" "^0.40.0"
+    "@material/ripple" "^0.40.0"
     "@material/rtl" "^0.39.1"
-    "@material/theme" "^0.39.1"
+    "@material/shape" "^0.40.0"
+    "@material/theme" "^0.40.0"
     "@material/typography" "^0.39.0"
     focus-trap "^2.3.0"
+
+"@material/dom@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-0.40.0.tgz#c0bfdf13f76546d35db7492fd6d4167721aac376"
 
 "@material/elevation@0.39.1", "@material/elevation@^0.39.1":
   version "0.39.1"
@@ -57,6 +63,13 @@
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/theme" "^0.39.1"
+
+"@material/elevation@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.40.0.tgz#9740f3c147aecfbfdba38ff50dfea560360ecc5c"
+  dependencies:
+    "@material/animation" "^0.39.0"
+    "@material/theme" "^0.40.0"
 
 "@material/ripple@0.39.1", "@material/ripple@^0.39.1":
   version "0.39.1"
@@ -66,21 +79,29 @@
     "@material/base" "^0.39.0"
     "@material/theme" "^0.39.1"
 
-"@material/ripple@^0.39.3":
-  version "0.39.3"
-  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.39.3.tgz#4ff7a8fec5d5206f0da72a78d026529b53b7d564"
+"@material/ripple@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.40.0.tgz#a37874eef3fbc1cb55b268d6b9d373957c80659f"
   dependencies:
     "@material/animation" "^0.39.0"
     "@material/base" "^0.39.0"
-    "@material/theme" "^0.39.1"
+    "@material/theme" "^0.40.0"
 
 "@material/rtl@0.39.1", "@material/rtl@^0.39.1":
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.39.1.tgz#dcaf6f93fc6cd540137edb352139dc8139bca436"
 
+"@material/shape@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.40.0.tgz#40f87a12c0835ae1810e90acb4004c3b74b6e2e7"
+
 "@material/theme@0.39.1", "@material/theme@^0.39.1":
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.39.1.tgz#5fb160222e2b213628b285af26ca65c6f4327fe5"
+
+"@material/theme@^0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.40.0.tgz#0b91750bf6334fa7bebf2b1aabb8ec727f519e13"
 
 "@material/typography@0.39.0", "@material/typography@^0.39.0":
   version "0.39.0"
@@ -2088,27 +2109,9 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-blueprint-helpers@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.2.3.tgz#707105f6f15d69ab6c7098721a9d806eed635d68"
-  dependencies:
-    bluebird "^3.5.1"
-    core-object "^3.1.5"
-    npm-check "^5.8.0"
-
-ember-cli-blueprint-helpers@^0.3.1-5, ember-cli-blueprint-helpers@^0.3.1-6:
-  version "0.3.1-6"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.3.1-6.tgz#6aec0f6770051e690f1c6bab78fff518d61c2f5d"
-  dependencies:
-    base-object "^1.2.1"
-    bluebird "^3.5.1"
-    core-object "^3.1.5"
-    npm-check "^5.8.0"
-    semver "^5.5.1"
-
-ember-cli-blueprint-helpers@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.4.0.tgz#b3ac12f1d40e86ed3ce22c48b491c898a3f2a308"
+ember-cli-blueprint-helpers@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-blueprint-helpers/-/ember-cli-blueprint-helpers-0.4.1.tgz#e5fb23c9aca7fe98e61fd6d3358c7633f9fe7b89"
   dependencies:
     base-object "^1.2.1"
     bluebird "^3.5.1"
@@ -2195,89 +2198,83 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-animation@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.43.1-19.tgz#ce764b90f7f78178f77d986851048e558cebd4b8"
+ember-cli-mdc-animation@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.46.0.tgz#8faa3db2891873f527bb3f5c0dbdbb02e6855ba4"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.3.1-5"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-base@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.43.1-19.tgz#b14439f46a88bd583acc7292d0381908da3bf57c"
+ember-cli-mdc-base@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.46.0.tgz#c8a093df448d1398ecab60f1951849ade17ff1c1"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
+    ember-cli-blueprint-helpers "^0.4.1"
 
-ember-cli-mdc-button@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.43.1-19.tgz#733b65f0cd6b039bebf5d973dae948e40b077481"
+ember-cli-mdc-button@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.46.0.tgz#39c89486d739fcf40a8b9bbd57e6c03a3f4d4d00"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.3.1-6"
     ember-cli-htmlbars "^3.0.0"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-elevation@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.43.1-19.tgz#d16d9982e0c0171728ff1f0d69407a3adc0283b3"
+ember-cli-mdc-elevation@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.46.0.tgz#0def5a431bc580ad3a0965a5254b6b27cf770961"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-icon@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-icon/-/ember-cli-mdc-icon-0.43.1-19.tgz#da905e449331e14a0776dc35e75e625673e1fcb5"
+ember-cli-mdc-icon@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-icon/-/ember-cli-mdc-icon-0.46.0.tgz#85afac01ff7ea614ca8e7f9df12e8569af25cd63"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
     ember-cli-htmlbars "^3.0.0"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-ripple@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.43.1-19.tgz#bd5d7169591090fb3ca3ba32b6c62b38638826e9"
+ember-cli-mdc-ripple@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.46.0.tgz#77766114eb88b170e21ce14c0f197225501941f6"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-rtl@^0.43.0:
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-rtl/-/ember-cli-mdc-rtl-0.43.0.tgz#b73c7545526fd4ed072dbc9e0f15bcce43dc54fb"
+ember-cli-mdc-rtl@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-rtl/-/ember-cli-mdc-rtl-0.46.0.tgz#14ffb92dce86a59e4feb9e08602e1613e0329530"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
+    ember-cli-blueprint-helpers "^0.4.1"
 
-ember-cli-mdc-sass@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.43.1-19.tgz#41746c67e355c4470d7f7e51a875e6ce02964c4f"
+ember-cli-mdc-sass@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.46.0.tgz#2140c25a31667d41ea23c0cdcae00b6761ab7e13"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.1"
     ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.4.1"
 
-ember-cli-mdc-theme@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.43.1-19.tgz#bd5a52d0f335c1eaf898f39b3a77352956e837d7"
+ember-cli-mdc-theme@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.46.0.tgz#e7d3a90d94a1291f9334f456c966f003f654f035"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
-ember-cli-mdc-typography@^0.43.1-19:
-  version "0.43.1-19"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-typography/-/ember-cli-mdc-typography-0.43.1-19.tgz#95c1658aeff2d9b62d0a58aa051e3605fef519af"
+ember-cli-mdc-typography@^0.46.0:
+  version "0.46.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-typography/-/ember-cli-mdc-typography-0.46.0.tgz#690780c400991c86c737072abb1412dcc1364b0f"
   dependencies:
     ember-cli-babel "^6.6.0"
-    ember-cli-blueprint-helpers "^0.2.3"
-    ember-cli-mdc-sass "^0.43.1-19"
+    ember-cli-mdc-sass "^0.46.0"
 
 ember-cli-normalize-entity-name@^1.0.0:
   version "1.0.0"

@@ -2,9 +2,7 @@
 
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-dialog';
-import { or, readOnly } from '@ember/object/computed';
-
-import { Promise } from 'rsvp';
+import { or, equal } from '@ember/object/computed';
 
 const MDCDialog = mdc.dialog.MDCDialog;
 
@@ -15,7 +13,7 @@ function noOp () {
 export default Component.extend({
   layout,
 
-  tagName: 'aside',
+  tagName: 'div',
 
   classNames: ['mdc-dialog'],
 
@@ -25,24 +23,32 @@ export default Component.extend({
 
   scrollable: false,
 
-  _hasAcceptButton: or ('accept', 'acceptButtonText'),
-  _hasCancelButton: or ('cancel', 'cancelButtonText'),
-  _hasFooter: or ('_hasAcceptButton', '_hasCancelButton'),
+  /// Set the default button. It should be accept or close.
+  default: null,
 
-  hasAcceptButton: readOnly ('_hasAcceptButton'),
-  hasCancelButton: readOnly ('_hasCancelButton'),
-  hasFooter: readOnly ('_hasFooter'),
+  acceptIsDefault: equal ('default', 'accept'),
+  closeIsDefault: equal ('default', 'close'),
+
+  hasAcceptButton: or ('accept', 'acceptButtonText'),
+  hasCloseButton: or ('close', 'closeButtonText'),
+  hasActions: or ('hasAcceptButton', 'hasCloseButton'),
 
   _dialog: null,
 
-  _dialogAcceptListener: null,
-  _dialogCancelListener: null,
+  _openingEventListener: null,
+  _openedEventListener: null,
+
+  _closingEventListener: null,
+  _closedEventListener: null,
 
   init () {
     this._super (...arguments);
 
-    this._dialogAcceptListener = this._doAction.bind (this, 'accept');
-    this._dialogAcceptListener = this._doAction.bind (this, 'cancel');
+    this._openingEventListener = this.willOpen.bind (this);
+    this._openedEventListener = this.didOpen.bind (this);
+
+    this._closingEventListener = this.willClose.bind (this);
+    this._closedEventListener = this.didClose.bind (this);
   },
 
   didUpdateAttrs () {
@@ -71,8 +77,10 @@ export default Component.extend({
     this._setupAttributes ();
 
     this._dialog = new MDCDialog (this.element);
-    this._dialog.listen ('MDCDialog:accept', this._dialogAcceptListener);
-    this._dialog.listen ('MDCDialog:cancel', this._dialogCancelListener);
+    this._dialog.listen ('MDCDialog:opening', this._openingEventListener);
+    this._dialog.listen ('MDCDialog:opened', this._openedEventListener);
+    this._dialog.listen ('MDCDialog:closing', this._closingEventListener);
+    this._dialog.listen ('MDCDialog:closed', this._closedEventListener);
 
     if (this.get ('show')) {
       this._dialog.open ();
@@ -82,37 +90,50 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._dialog.unlisten ('MDCDialog:accept', this._dialogAcceptListener);
-    this._dialog.unlisten ('MDCDialog:cancel', this._dialogCancelListener);
+    this._dialog.unlisten ('MDCDialog:opening', this._openingEventListener);
+    this._dialog.unlisten ('MDCDialog:opened', this._openedEventListener);
+    this._dialog.unlisten ('MDCDialog:closing', this._closingEventListener);
+    this._dialog.unlisten ('MDCDialog:closed', this._closedEventListener);
+
     this._dialog.destroy ();
   },
 
-  _doAction (name) {
-    const action = this.getWithDefault (name, noOp);
+  willOpen () {
+    this.getWithDefault ('opening', noOp) ();
+  },
 
-    return Promise.resolve (action ())
-      .then (result => {
-        if (result === undefined || result === null || result)
-          this.set ('show', false);
-      })
-      .catch (() => {
-        // Force the dialog the show again if we failed.
-        this._dialog.open ();
-      });
+  didOpen () {
+    this.getWithDefault ('opened', noOp) ();
+  },
+
+  willClose ({detail: {action}}) {
+    if (action === 'accept') {
+      this.getWithDefault ('accepting', noOp) ();
+    }
+    else if (action === 'close') {
+      this.getWithDefault ('closing', noOp) ();
+    }
+  },
+
+  didClose ({detail: {action}}) {
+    this.set ('show', false);
+    this.getWithDefault (action, noOp) ();
   },
 
   _setupAttributes () {
     // Setup the aria properties on the element.
-    const $label = this.$('mdc-dialog__header__title');
+    this.element.setAttribute ('aria-modal', true);
 
-    if ($label.length > 0) {
-      this.element.setAttribute ('aria-labelledby', $label[0]);
+    const title = this.element.querySelector ('.mdc-dialog__title');
+
+    if (title) {
+      this.element.setAttribute ('aria-labelledby', title.id);
     }
 
-    const $description = this.$('mdc-dialog__body');
+    const content = this.element.querySelector ('.mdc-dialog__content');
 
-    if ($description.length > 0) {
-      this.element.setAttribute ('aria-describedby', $description[0]);
+    if (content) {
+      this.element.setAttribute ('aria-describedby', content.id);
     }
   }
 });

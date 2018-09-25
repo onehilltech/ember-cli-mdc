@@ -1,7 +1,11 @@
 import ButtonComponent from 'ember-cli-mdc-button/components/mdc-button';
 
 export default ButtonComponent.extend ({
-  classNameBindings: ['emphasize:mdc-dialog__action'],
+  classNames: ['mdc-dialog__button'],
 
-  emphasize: false
+  classNameBindings: ['default:mdc-dialog__button--default'],
+
+  attributeBindings: ['action:data-mdc-dialog-action'],
+
+  default: false
 });

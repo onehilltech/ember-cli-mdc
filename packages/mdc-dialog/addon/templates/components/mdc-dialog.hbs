@@ -1,32 +1,28 @@
-<div class="mdc-dialog__surface">
-  {{#if title}}
-    {{#mdc-dialog-header}}
-      {{#mdc-dialog-header-title}}{{title}}{{/mdc-dialog-header-title}}
-    {{/mdc-dialog-header}}
-  {{/if}}
+<div class="mdc-dialog__container">
+  <div class="mdc-dialog__surface">
+    {{#if title}}
+      <h2 class="mdc-dialog__title" id="{{elementId}}__title"></h2>
+    {{/if}}
 
-  {{#mdc-dialog-body scrollable=scrollable}}
-    {{yield}}
-  {{/mdc-dialog-body}}
+    <div class="mdc-dialog__content" id="{{elementId}}__content">
+      {{yield}}
+    </div>
 
-  {{#if hasFooter}}
-    {{#mdc-dialog-footer}}
-      {{#if hasCancelButton}}
-        {{#mdc-dialog-button type="button"
-                             class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
-                             emphasize=cancelEmphasize}}
-          {{cancelButtonText}}
-        {{/mdc-dialog-button}}
-      {{/if}}
+    {{#if hasActions}}
+      <footer class="mdc-dialog__actions">
+        {{#if hasCloseButton}}
+          {{#mdc-dialog-button type="button" action="close" default=closeIsDefault}}
+            {{closeButtonText}}
+          {{/mdc-dialog-button}}
+        {{/if}}
 
-      {{#if hasAcceptButton}}
-        {{#mdc-dialog-button type="button"
-                             class="mdc-dialog__footer__button mdc-dialog__footer__button--accept"
-                             emphasize=acceptEmphasize}}
-          {{acceptButtonText}}
-        {{/mdc-dialog-button}}
-      {{/if}}
-    {{/mdc-dialog-footer}}
-  {{/if}}
+        {{#if hasAcceptButton}}
+          {{#mdc-dialog-button type="button" action="accept" default=acceptIsDefault}}
+            {{acceptButtonText}}
+          {{/mdc-dialog-button}}
+        {{/if}}
+      </footer>
+    {{/if}}
+  </div>
 </div>
-<div class="mdc-dialog__backdrop"></div>
+<div class="mdc-dialog__scrim"></div>
