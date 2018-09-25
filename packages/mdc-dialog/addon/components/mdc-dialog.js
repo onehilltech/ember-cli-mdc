@@ -35,6 +35,16 @@ export default Component.extend({
 
   _dialog: null,
 
+  _dialogAcceptListener: null,
+  _dialogCancelListener: null,
+
+  init () {
+    this._super (...arguments);
+
+    this._dialogAcceptListener = this._doAction.bind (this, 'accept');
+    this._dialogAcceptListener = this._doAction.bind (this, 'cancel');
+  },
+
   didUpdateAttrs () {
     this._super (...arguments);
     this._showOrCloseDialog ();
@@ -61,8 +71,8 @@ export default Component.extend({
     this._setupAttributes ();
 
     this._dialog = new MDCDialog (this.element);
-    this._dialog.listen ('MDCDialog:accept', this._doAction.bind (this, 'accept'));
-    this._dialog.listen ('MDCDialog:cancel', this._doAction.bind (this, 'cancel'));
+    this._dialog.listen ('MDCDialog:accept', this._dialogAcceptListener);
+    this._dialog.listen ('MDCDialog:cancel', this._dialogCancelListener);
 
     if (this.get ('show')) {
       this._dialog.show ();
@@ -72,8 +82,8 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._dialog.unlisten ('MDCDialog:accept', this._doAction.bind (this, 'accept'));
-    this._dialog.unlisten ('MDCDialog:cancel', this._doAction.bind (this, 'cancel'));
+    this._dialog.unlisten ('MDCDialog:accept', this._dialogAcceptListener);
+    this._dialog.unlisten ('MDCDialog:cancel', this._dialogCancelListener);
     this._dialog.destroy ();
   },
 
