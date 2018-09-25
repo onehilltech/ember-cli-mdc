@@ -57,11 +57,11 @@ export default Component.extend({
    */
   _showOrCloseDialog () {
     if (this.get ('show')) {
-      if (!this._dialog.open)
-        this._dialog.show ();
+      if (!this._dialog.isOpen)
+        this._dialog.open ();
     }
     else {
-      if (this._dialog.open)
+      if (this._dialog.isOpen)
         this._dialog.close ();
     }
   },
@@ -75,7 +75,7 @@ export default Component.extend({
     this._dialog.listen ('MDCDialog:cancel', this._dialogCancelListener);
 
     if (this.get ('show')) {
-      this._dialog.show ();
+      this._dialog.open ();
     }
   },
 
@@ -97,7 +97,7 @@ export default Component.extend({
       })
       .catch (() => {
         // Force the dialog the show again if we failed.
-        this._dialog.show ();
+        this._dialog.open ();
       });
   },
 
