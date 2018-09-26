@@ -8,6 +8,18 @@ import { computed } from '@ember/object';
 
 const { MDCChipSet } = mdc.chips;
 
+MDCChipSet.prototype.select = function (chipId) {
+  return this.foundation_.select (chipId);
+};
+
+MDCChipSet.prototype.deselect = function (chipId) {
+  return this.foundation_.deselect (chipId);
+};
+
+MDCChipSet.prototype.isSelected = function (chipId) {
+  return this.foundation_.getSelectedChipIds ().includes (chipId);
+};
+
 export default Component.extend ({
   layout,
 

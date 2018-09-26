@@ -1,5 +1,5 @@
 import Mixin from '@ember/object/mixin';
-import { equal, and, not } from '@ember/object/computed';
+import { and, not } from '@ember/object/computed';
 
 export default Mixin.create ({
   classNames: ['mdc-chip'],

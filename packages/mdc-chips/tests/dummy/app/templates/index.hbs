@@ -11,6 +11,7 @@
 {{mdc-choice-chip-set options=options value=choice}}
 
 <button {{action (mut choice) "extra_small"}}>Make Extra Small</button>
+<button {{action (mut choice) null}}>Clear Choice</button>
 
 <div>Selected Value: {{choice}}</div>
 
