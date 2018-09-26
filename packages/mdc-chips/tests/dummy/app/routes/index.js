@@ -6,6 +6,12 @@ export default Route.extend ({
     this._super (...arguments);
 
     controller.setProperties ({
+      basicChips: A ([
+        {text: 'Chip content'},
+        {text: 'Leading icon', icon: 'event'},
+        {text: 'Trailing icon', icon: 'cancel', trailing: true}
+      ]),
+
       choiceChips: A ([
         {id: 'extra_small', text: 'Extra Small'},
         {id: 'small', text: 'Small'},
