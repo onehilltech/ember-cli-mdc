@@ -1,5 +1,4 @@
 import ChipSetComponent from './mdc-chip-set';
-import layout from '../templates/components/mdc-choice-chip-set';
 
 import { isPresent, isNone } from '@ember/utils';
 
@@ -8,8 +7,6 @@ const CLASS_NAME_MDC_CHIP_TEXT = 'mdc-chip__text';
 const CLASS_NAME_MDC_CHIP = 'mdc-chip';
 
 export default ChipSetComponent.extend ({
-  layout,
-
   classNames: ['mdc-chip-set--choice'],
 
   _clickEventListener: null,
