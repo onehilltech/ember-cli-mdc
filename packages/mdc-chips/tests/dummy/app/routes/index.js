@@ -6,7 +6,7 @@ export default Route.extend ({
     this._super (...arguments);
 
     controller.setProperties ({
-      options: A ([
+      choiceChips: A ([
         {id: 'extra_small', text: 'Extra Small'},
         {id: 'small', text: 'Small'},
         {id: 'medium', text: 'Medium'},
