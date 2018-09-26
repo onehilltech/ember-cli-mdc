@@ -1,0 +1,44 @@
+<h2>Continuous Slider</h2>
+
+{{mdc-slider min=0 max=100 value=continuous.value
+             label="Select value"
+             change=(action (mut continuous.selected))}}
+
+<div>Value: {{continuous.value}}</div>
+<div>Selected: {{continuous.selected}}</div>
+<div>{{input value=continuous.value type="number"}}</div>
+
+<h2>Discrete Slider</h2>
+
+{{mdc-slider min=0 max=100 value=discrete.value
+             discrete=true
+             label="Select value"
+             change=(action (mut discrete.selected))}}
+
+<div>Value: {{discrete.value}}</div>
+<div>Selected: {{discrete.selected}}</div>
+<div>{{input value=discrete.value type="number"}}</div>
+
+<h2>Discrete Slider w/ Step</h2>
+
+{{mdc-slider min=0 max=100 value=step.value step=2
+             discrete=true
+             label="Select value"
+             change=(action (mut step.selected))}}
+
+<div>Value: {{step.value}}</div>
+<div>Selected: {{step.selected}}</div>
+<div>{{input value=step.value type="number"}}</div>
+
+<h2>Discrete Slider w/ Track Markers</h2>
+
+{{mdc-slider min=0 max=100 value=markers.value step=2
+             discrete=true
+             displayMarkers=true
+             label="Select value"
+             change=(action (mut markers.selected))}}
+
+<div>Value: {{markers.value}}</div>
+<div>Selected: {{markers.selected}}</div>
+<div>{{input value=markers.value type="number"}}</div>
+
