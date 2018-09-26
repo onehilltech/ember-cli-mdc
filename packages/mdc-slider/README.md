@@ -1,26 +1,60 @@
-# ember-cli-mdc-slider
+ember-cli-mdc-form
+======================
 
-This README outlines the details of collaborating on this Ember addon.
+ember-cli addon for [@material/slider](https://github.com/material-components/material-components-web/tree/master/packages/mdc-slider).
 
-## Installation
+Installation
+------------
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-mdc-slider`
-* `npm install`
+    ember install ember-cli-mdc-slider
 
-## Running
+Components
+-------------
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+This package contains the following top-level components.
 
-## Running Tests
+* [`mdc-slider`](#mdc-slider)
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+mdc-slider
+-------------
 
-## Building
+### Description
 
-* `ember build`
+Add a [Material Slider](https://material.io/design/components/sliders.html) component to 
+the parent element.
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+### Usage
+
+```handlebars
+{{mdc-slider min=min
+             max=max
+             value=value
+             discrete=[true|false]
+             displayMarkers=[true|false]
+             change=(action "change")
+}}
+```
+
+### Attributes
+
+* `min` - The minimum value for the slider.
+* `max` - The maximum value for the slider.
+* `value` - The current value of the slider.
+* `label` - The accessibility label for the slider.
+* `discrete` - Make the slider a discrete slider; default is `false`.
+* `displayMarkers` - Show markers on the slider (only if `discrete=true`)
+* `change` - The action `f(value)` called after slider value is committed.
+
+### Examples
+
+```handlebars
+{{mdc-slider min=0 max=100 value=value
+             label="Select value"
+             change=(action (mut selected))}}
+```
+
+## Value vs. Change
+
+The `value` attribute of the `mdc-slider` will change instantaneously as the slider is
+moved from side to side. The `change` action is called only when the slider stops moving.
+This means the user has selected a terminal value, and the slider is committing the value.
