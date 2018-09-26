@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-chips/components/mdc-chip-with-checkmark';

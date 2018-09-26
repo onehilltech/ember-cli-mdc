@@ -39,6 +39,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-menu-surface/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-slider/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-chips/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
@@ -62,6 +63,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-checkbox/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-chips/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-chips/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-dialog/tmp" />

@@ -1,0 +1,81 @@
+{
+  "name": "ember-cli-mdc-chips",
+  "version": "0.0.0",
+  "description": "ember-cli addon for @material/chips.",
+  "keywords": [
+    "ember-addon",
+    "material",
+    "material components",
+    "material design",
+    "chips"
+  ],
+  "repository": "github@onehilltech/ember-cli-mdc",
+  "license": "Apache-2.0",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "start": "ember serve",
+    "test": "ember try:each"
+  },
+  "dependencies": {
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-mdc-sass": "^0.47.0"
+  },
+  "devDependencies": {
+    "@material/animation": "^0.39.0",
+    "@material/base": "^0.39.0",
+    "@material/checkbox": "^0.40.0",
+    "@material/chips": "^0.40.0",
+    "@material/elevation": "^0.40.0",
+    "@material/form-field": "^0.40.0",
+    "@material/ripple": "^0.40.0",
+    "@material/rtl": "^0.39.1",
+    "@material/theme": "^0.40.0",
+    "@material/typography": "^0.39.0",
+    "broccoli-asset-rev": "^2.4.5",
+    "ember-ajax": "^3.0.0",
+    "ember-cli": "~2.18.2",
+    "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-eslint": "^4.2.1",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-blueprint-helpers": "^0.4.1",
+    "ember-cli-mdc-animation": "^0.47.0",
+    "ember-cli-mdc-base": "^0.47.0",
+    "ember-cli-mdc-checkbox": "^0.47.0",
+    "ember-cli-mdc-elevation": "^0.47.0",
+    "ember-cli-mdc-form-field": "^0.47.0",
+    "ember-cli-mdc-icon": "^0.47.0",
+    "ember-cli-mdc-ripple": "^0.47.0",
+    "ember-cli-mdc-rtl": "^0.47.0",
+    "ember-cli-mdc-selection-control": "^0.47.0",
+    "ember-cli-mdc-theme": "^0.47.0",
+    "ember-cli-mdc-typography": "^0.47.0",
+    "ember-cli-qunit": "^4.1.1",
+    "ember-cli-shims": "^1.2.0",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-uglify": "^2.0.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^1.0.0",
+    "ember-resolver": "^4.0.0",
+    "ember-source": "~2.18.0",
+    "eslint-plugin-ember": "^5.0.0",
+    "eslint-plugin-node": "^5.2.1",
+    "loader.js": "^4.2.3",
+    "material-design-icons": "^3.0.1",
+    "sass": "^1.14.0"
+  },
+  "engines": {
+    "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  }
+}

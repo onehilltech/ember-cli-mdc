@@ -1,0 +1,9 @@
+{{#unless (has-block)}}
+  {{#if icon}}
+    {{mdc-chip-icon icon leading=true class=(if selected "mdc-chip__icon--leading-hidden")}}
+  {{/if}}
+  {{mdc-chip-checkmark}}
+  {{#mdc-chip-text}}{{text}}{{/mdc-chip-text}}
+{{else}}
+  {{yield}}
+{{/unless}}

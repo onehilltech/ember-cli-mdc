@@ -1,0 +1,57 @@
+<h3>Basic Chips</h3>
+
+{{#mdc-chip-set}}
+  {{mdc-chip text="Chip content"}}
+  {{mdc-chip text="Leading icon" icon="event"}}
+  {{mdc-chip text="Trailing icon" icon="cancel" iconPosition="trailing"}}
+{{/mdc-chip-set}}
+
+<h3>Choice Chips</h3>
+
+{{#mdc-chip-set mode="choice"}}
+  {{mdc-chip text="Extra Small"}}
+  {{mdc-chip text="Small"}}
+  {{mdc-chip text="Medium"}}
+  {{mdc-chip text="Large"}}
+  {{mdc-chip text="Extra Large"}}
+{{/mdc-chip-set}}
+
+<h3>Filter Chips</h3>
+
+{{#mdc-chip-set mode="filter"}}
+  {{mdc-chip-with-checkmark text="John"}}
+  {{mdc-chip-with-checkmark text="Bob"}}
+  {{mdc-chip-with-checkmark text="Alice"}}
+  {{mdc-chip-with-checkmark text="Susan"}}
+  {{mdc-chip-with-checkmark text="Jake"}}
+{{/mdc-chip-set}}
+
+<h3>Filter Chips w/ Icon</h3>
+
+{{#mdc-chip-set mode="filter"}}
+  {{mdc-chip-with-checkmark text="John" icon="face"}}
+  {{mdc-chip-with-checkmark text="Bob" icon="face"}}
+  {{mdc-chip-with-checkmark text="Alice" icon="face"}}
+  {{mdc-chip-with-checkmark text="Susan" icon="face"}}
+  {{mdc-chip-with-checkmark text="Jake" icon="face"}}
+{{/mdc-chip-set}}
+
+<h3>Pre-selected Chips</h3>
+
+{{#mdc-chip-set mode="choice"}}
+  {{mdc-chip text="Extra Small"}}
+  {{mdc-chip text="Small" selected=true}}
+  {{mdc-chip text="Medium"}}
+  {{mdc-chip text="Large"}}
+  {{mdc-chip text="Extra Large"}}
+{{/mdc-chip-set}}
+
+<h3>Pre-selected Filter Chips w/ Icon</h3>
+
+{{#mdc-chip-set mode="filter"}}
+  {{mdc-chip-with-checkmark text="John" icon="face"}}
+  {{mdc-chip-with-checkmark text="Bob" icon="face"}}
+  {{mdc-chip-with-checkmark text="Alice" icon="face" selected=true}}
+  {{mdc-chip-with-checkmark text="Susan" icon="face"}}
+  {{mdc-chip-with-checkmark text="Jake" icon="face"}}
+{{/mdc-chip-set}}
