@@ -8,13 +8,9 @@
 
 <h3>Choice Chips</h3>
 
-{{#mdc-chip-set mode="choice"}}
-  {{mdc-chip text="Extra Small"}}
-  {{mdc-chip text="Small"}}
-  {{mdc-chip text="Medium"}}
-  {{mdc-chip text="Large"}}
-  {{mdc-chip text="Extra Large"}}
-{{/mdc-chip-set}}
+{{mdc-choice-chip-set options=options value=choice}}
+
+<div>Selected Value: {{choice}}</div>
 
 <h3>Filter Chips</h3>
 
