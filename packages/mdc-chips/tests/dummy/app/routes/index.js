@@ -16,7 +16,5 @@ export default Route.extend ({
 
       choice: 'medium'
     });
-
-
   }
 });
