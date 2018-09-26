@@ -1,5 +1,5 @@
 import Mixin from '@ember/object/mixin';
-import { equal, and } from '@ember/object/computed';
+import { equal, and, not } from '@ember/object/computed';
 
 export default Mixin.create ({
   classNames: ['mdc-chip'],
@@ -9,15 +9,18 @@ export default Mixin.create ({
 
   tabindex: 0,
 
-  icon: null,
-
+  /// The chip is selected.
   selected: false,
 
-  iconPosition: 'leading',
+  /// The chip has an icon.
+  icon: null,
 
-  leadingIcon: equal ('iconPosition', 'leading'),
-  hasLeadingIcon: and ('icon', 'leadingIcon'),
+  /// By default, the icon is a leading icon.
+  trailing: false,
 
-  trailingIcon: equal ('iconPosition', 'trailing'),
-  hasTrailingIcon: and ('icon', 'trailingIcon')
+  /// Compute if the icon is leading.
+  leading: not ('trailing'),
+
+  hasLeadingIcon: and ('icon', 'leading'),
+  hasTrailingIcon: and ('icon', 'trailing')
 });
