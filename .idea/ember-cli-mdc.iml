@@ -38,6 +38,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-tabs/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-menu-surface/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-slider/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
@@ -144,6 +145,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-slider/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-slider/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/node_modules" />
