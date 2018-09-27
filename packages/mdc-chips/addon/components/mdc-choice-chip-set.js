@@ -12,7 +12,7 @@ export default ChipSetComponent.extend ({
   _clickEventListener: null,
 
   /// The selected value in the choice.
-  value: null,
+  value: undefined,
 
   init () {
     this._super (...arguments);
@@ -23,12 +23,14 @@ export default ChipSetComponent.extend ({
   didInsertElement () {
     this._super (...arguments);
 
+    // If there is an initial value, then we need to select an initial chip.
     let value = this.get ('value');
 
     if (isPresent (value)) {
       this._chipSet.select (value);
     }
 
+    // Listen for clicks so we can modify our value.
     this.element.addEventListener ('click', this._clickEventListener);
   },
 
