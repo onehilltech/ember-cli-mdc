@@ -25,41 +25,8 @@
 
 {{mdc-filter-chip-set chips=filterChips value=filtered}}
 
-<p>{{filtered}}</p>
-
 <ul>
-  {{#each names as |person|}}
-    <li>{{person.text}}</li>
+  {{#each names as |id|}}
+    <li>{{id}}</li>
   {{/each}}
 </ul>
-
-<h3>Filter Chips w/ Icon</h3>
-
-{{#mdc-chip-set mode="filter"}}
-  {{mdc-chip-with-checkmark text="John" icon="face"}}
-  {{mdc-chip-with-checkmark text="Bob" icon="face"}}
-  {{mdc-chip-with-checkmark text="Alice" icon="face"}}
-  {{mdc-chip-with-checkmark text="Susan" icon="face"}}
-  {{mdc-chip-with-checkmark text="Jake" icon="face"}}
-{{/mdc-chip-set}}
-
-
-<h3>Pre-selected Chips</h3>
-
-{{#mdc-chip-set mode="choice"}}
-  {{mdc-chip text="Extra Small"}}
-  {{mdc-chip text="Small" selected=true}}
-  {{mdc-chip text="Medium"}}
-  {{mdc-chip text="Large"}}
-  {{mdc-chip text="Extra Large"}}
-{{/mdc-chip-set}}
-
-<h3>Pre-selected Filter Chips w/ Icon</h3>
-
-{{#mdc-chip-set mode="filter"}}
-  {{mdc-chip-with-checkmark text="John" icon="face"}}
-  {{mdc-chip-with-checkmark text="Bob" icon="face"}}
-  {{mdc-chip-with-checkmark text="Alice" icon="face" selected=true}}
-  {{mdc-chip-with-checkmark text="Susan" icon="face"}}
-  {{mdc-chip-with-checkmark text="Jake" icon="face"}}
-{{/mdc-chip-set}}

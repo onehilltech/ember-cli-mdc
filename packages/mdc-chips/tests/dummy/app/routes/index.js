@@ -23,12 +23,14 @@ export default Route.extend ({
       choice: 'medium',
 
       filterChips: A ([
-        {id: 'fc-john', text: 'John'},
-        {id: 'fc-bob', text: 'Bob'},
+        {id: 'fc-john', text: 'John', icon: 'face'},
+        {id: 'fc-bob', text: 'Bob', icon: 'face'},
         {id: 'fc-alice', text: 'Alice'},
         {id: 'fc-susan', text: 'Susan'},
         {id: 'fc-jake', text: 'Jake'}
-      ])
+      ]),
+
+      filtered: A ()
     });
   }
 });

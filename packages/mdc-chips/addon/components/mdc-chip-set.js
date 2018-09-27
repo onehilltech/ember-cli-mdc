@@ -27,11 +27,12 @@ MDCChipSet.prototype.findChip = function (chipId) {
 
 const CLASS_NAME_MDC_CHIP_TEXT = 'mdc-chip__text';
 const CLASS_NAME_MDC_CHIP = 'mdc-chip';
+const CLASS_NAME_MDC_CHIP_SET = 'mdc-chip-set';
 
 export default Component.extend ({
   layout,
 
-  classNames: ['mdc-chip-set'],
+  classNames: [CLASS_NAME_MDC_CHIP_SET],
   classNameBindings: ['modeClassName'],
 
   mode: null,
@@ -62,19 +63,17 @@ export default Component.extend ({
     this._chipSet.destroy ();
   },
 
-  didClick ({target:chipElement}) {
+  didClick ({target}) {
     // There is a good chance the user clicked the text part of the chip. If this
     // is the case, then we need to get the parent element, which should be the
     // chip.
 
-    if (chipElement.classList.contains (CLASS_NAME_MDC_CHIP_TEXT))
-      chipElement = chipElement.parentElement;
+    let element = this._getChipOrChipSetFromElement (target);
 
-    // This should only work if the element clicked was a chip.
-    if (!chipElement.classList.contains (CLASS_NAME_MDC_CHIP))
+    if (!element.classList.contains (CLASS_NAME_MDC_CHIP))
       return;
 
-    let chip = this._chipSet.findChip (chipElement.id);
+    let chip = this._chipSet.findChip (element.id);
 
     if (isPresent (chip))
       this.didClickChip (chip);
@@ -82,5 +81,12 @@ export default Component.extend ({
 
   didClickChip (/*chip*/) {
 
+  },
+
+  _getChipOrChipSetFromElement (e) {
+    while (!e.classList.contains (CLASS_NAME_MDC_CHIP) && !e.classList.contains (CLASS_NAME_MDC_CHIP_SET))
+      e = e.parentElement;
+
+    return e;
   }
 });
