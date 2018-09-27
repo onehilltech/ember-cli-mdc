@@ -23,13 +23,15 @@
 
 <h3>Filter Chips</h3>
 
-{{#mdc-chip-set mode="filter"}}
-  {{mdc-chip-with-checkmark text="John"}}
-  {{mdc-chip-with-checkmark text="Bob"}}
-  {{mdc-chip-with-checkmark text="Alice"}}
-  {{mdc-chip-with-checkmark text="Susan"}}
-  {{mdc-chip-with-checkmark text="Jake"}}
-{{/mdc-chip-set}}
+{{mdc-filter-chip-set chips=filterChips value=filtered}}
+
+<p>{{filtered}}</p>
+
+<ul>
+  {{#each names as |person|}}
+    <li>{{person.text}}</li>
+  {{/each}}
+</ul>
 
 <h3>Filter Chips w/ Icon</h3>
 
@@ -40,6 +42,7 @@
   {{mdc-chip-with-checkmark text="Susan" icon="face"}}
   {{mdc-chip-with-checkmark text="Jake" icon="face"}}
 {{/mdc-chip-set}}
+
 
 <h3>Pre-selected Chips</h3>
 

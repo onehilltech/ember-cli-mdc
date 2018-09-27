@@ -20,7 +20,15 @@ export default Route.extend ({
         {id: 'extra_large', text: 'Extra Large'}
       ]),
 
-      choice: 'medium'
+      choice: 'medium',
+
+      filterChips: A ([
+        {id: 'fc-john', text: 'John'},
+        {id: 'fc-bob', text: 'Bob'},
+        {id: 'fc-alice', text: 'Alice'},
+        {id: 'fc-susan', text: 'Susan'},
+        {id: 'fc-jake', text: 'Jake'}
+      ])
     });
   }
 });

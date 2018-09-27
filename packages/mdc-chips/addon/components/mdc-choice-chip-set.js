@@ -2,23 +2,11 @@ import ChipSetComponent from './mdc-chip-set';
 
 import { isPresent, isNone } from '@ember/utils';
 
-const CLASS_NAME_MDC_CHIP_SELECTED = 'mdc-chip--selected';
-const CLASS_NAME_MDC_CHIP_TEXT = 'mdc-chip__text';
-const CLASS_NAME_MDC_CHIP = 'mdc-chip';
-
 export default ChipSetComponent.extend ({
   classNames: ['mdc-chip-set--choice'],
 
-  _clickEventListener: null,
-
   /// The selected value in the choice.
-  value: undefined,
-
-  init () {
-    this._super (...arguments);
-
-    this._clickEventListener = this.didClick.bind (this);
-  },
+  value: null,
 
   didInsertElement () {
     this._super (...arguments);
@@ -29,9 +17,6 @@ export default ChipSetComponent.extend ({
     if (isPresent (value)) {
       this._chipSet.select (value);
     }
-
-    // Listen for clicks so we can modify our value.
-    this.element.addEventListener ('click', this._clickEventListener);
   },
 
   didUpdateAttrs () {
@@ -53,24 +38,11 @@ export default ChipSetComponent.extend ({
     }
   },
 
-  didClick ({target:chip}) {
+  didClickChip (chip) {
     // There is a good chance the user clicked the text part of the chip. If this
     // is the case, then we need to get the parent element, which should be the
     // chip.
 
-    if (chip.classList.contains (CLASS_NAME_MDC_CHIP_TEXT))
-      chip = chip.parentElement;
-
-    // This should only work if the element clicked was a chip.
-    if (!chip.classList.contains (CLASS_NAME_MDC_CHIP))
-      return;
-
-    if (chip.classList.contains (CLASS_NAME_MDC_CHIP_SELECTED)) {
-      this.set ('value', chip.id);
-    }
-    else {
-      // Erase the currently selected value.
-      this.set ('value', null);
-    }
+    this.set ('value', chip.selected ? chip.id : null);
   }
 });
