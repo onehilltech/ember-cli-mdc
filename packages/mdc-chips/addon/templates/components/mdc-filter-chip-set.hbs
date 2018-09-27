@@ -1,0 +1,7 @@
+{{#unless (has-block)}}
+  {{#each chips as |chip|}}
+    {{mdc-chip-with-checkmark id=chip.id text=chip.text icon=chip.icon trailing=chip.trailing}}
+  {{/each}}
+{{else}}
+  {{yield}}
+{{/unless}}
