@@ -8,8 +8,8 @@ export default Route.extend ({
     controller.setProperties ({
       basicChips: A ([
         {text: 'Chip content'},
-        {text: 'Leading icon', icon: 'event'},
-        {text: 'Trailing icon', icon: 'cancel', trailing: true}
+        {text: 'Leading icon', iconLeading: 'event'},
+        {text: 'Trailing icon', iconTrailing: 'cancel'}
       ]),
 
       choiceChips: A ([
@@ -23,8 +23,8 @@ export default Route.extend ({
       choice: 'medium',
 
       filterChips: A ([
-        {id: 'fc-john', text: 'John', icon: 'face'},
-        {id: 'fc-bob', text: 'Bob', icon: 'face'},
+        {id: 'fc-john', text: 'John', iconLeading: 'face'},
+        {id: 'fc-bob', text: 'Bob', iconLeading: 'face', iconTrailing: 'cancel'},
         {id: 'fc-alice', text: 'Alice'},
         {id: 'fc-susan', text: 'Susan'},
         {id: 'fc-jake', text: 'Jake'}

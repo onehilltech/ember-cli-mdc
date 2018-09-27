@@ -1,9 +1,17 @@
 {{#unless (has-block)}}
-  {{#if icon}}
-    {{mdc-chip-icon icon leading=true class=(if selected "mdc-chip__icon--leading-hidden")}}
+  {{#if iconLeading}}
+    {{mdc-chip-icon iconLeading leading=true class=(if selected "mdc-chip__icon--leading-hidden")}}
   {{/if}}
+
   {{mdc-chip-checkmark}}
-  {{#mdc-chip-text}}{{text}}{{/mdc-chip-text}}
+
+  {{#mdc-chip-text}}
+    {{text}}
+  {{/mdc-chip-text}}
+
+  {{#if iconTrailing}}
+    {{mdc-chip-icon iconTrailing leading=false}}
+  {{/if}}
 {{else}}
   {{yield}}
 {{/unless}}
