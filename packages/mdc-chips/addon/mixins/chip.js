@@ -14,5 +14,5 @@ export default Mixin.create ({
 
   iconLeading: null,
 
-  iconTrailing: null,
+  iconTrailing: null
 });

@@ -29,6 +29,8 @@ const CLASS_NAME_MDC_CHIP_TEXT = 'mdc-chip__text';
 const CLASS_NAME_MDC_CHIP = 'mdc-chip';
 const CLASS_NAME_MDC_CHIP_SET = 'mdc-chip-set';
 
+function noOp () {}
+
 export default Component.extend ({
   layout,
 
@@ -41,52 +43,61 @@ export default Component.extend ({
     return isPresent (mode) ? `mdc-chip-set--${mode}` : null;
   }),
 
-  _clickEventListener: null,
-
+  _interactionEventListener: null,
+  _selectionEventListener: null,
+  _removalEventListener: null,
 
   init () {
     this._super (...arguments);
 
-    this._clickEventListener = this.didClick.bind (this);
+    this._interactionEventListener = this.interaction.bind (this);
+    this._selectionEventListener = this.selection.bind (this);
+    this._removalEventListener = this.removal.bind (this);
   },
 
   didInsertElement () {
     this._super (...arguments);
 
     this._chipSet = new MDCChipSet (this.element);
-    this.element.addEventListener ('click', this._clickEventListener);
+    this._chipSet.listen ('MDCChip:interaction', this._interactionEventListener);
+    this._chipSet.listen ('MDCChip:selection', this._selectionEventListener);
+    this._chipSet.listen ('MDCChip:removal', this._removalEventListener);
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
+    this._chipSet.unlisten ('MDCChip:interaction', this._interactionEventListener);
+    this._chipSet.unlisten ('MDCChip:selection', this._selectionEventListener);
+    this._chipSet.unlisten ('MDCChip:removal', this._removalEventListener);
+
     this._chipSet.destroy ();
   },
 
-  didClick ({target}) {
-    // There is a good chance the user clicked the text part of the chip. If this
-    // is the case, then we need to get the parent element, which should be the
-    // chip.
-
-    let element = this._getChipOrChipSetFromElement (target);
-
-    if (!element.classList.contains (CLASS_NAME_MDC_CHIP))
-      return;
-
-    let chip = this._chipSet.findChip (element.id);
-
-    if (isPresent (chip))
-      this.didClickChip (chip);
+  interaction ({ detail: { chipId } }) {
+    this.didInteractWithChip (chipId);
+    this.getWithDefault ('interact', noOp) (chipId);
   },
 
-  didClickChip (/*chip*/) {
+  didInteractWithChip (/* chipId */) {
 
   },
 
-  _getChipOrChipSetFromElement (e) {
-    while (!e.classList.contains (CLASS_NAME_MDC_CHIP) && !e.classList.contains (CLASS_NAME_MDC_CHIP_SET))
-      e = e.parentElement;
+  selection ({ detail: {chipId, selected}}) {
+    this.didSelectChip (chipId, selected);
+    this.getWithDefault ('select', noOp) (chipId, selected);
+  },
 
-    return e;
+  didSelectChip ( /* chipId, selected */) {
+
+  },
+
+  removal ({detail: { chipId }}) {
+    this.didRemoveChip (chipId);
+    this.getWithDefault ('remove', noOp) (chipId);
+  },
+
+  didRemoveChip (/* chipId */) {
+
   }
 });

@@ -38,11 +38,7 @@ export default ChipSetComponent.extend ({
     }
   },
 
-  didClickChip (chip) {
-    // There is a good chance the user clicked the text part of the chip. If this
-    // is the case, then we need to get the parent element, which should be the
-    // chip.
-
-    this.set ('value', chip.selected ? chip.id : null);
+  didSelectChip (chipId, selected) {
+    this.set ('value', selected ? chipId : null);
   }
 });
