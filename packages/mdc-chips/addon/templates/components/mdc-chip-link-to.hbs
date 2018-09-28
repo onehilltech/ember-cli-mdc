@@ -1,11 +1,14 @@
 {{#unless (has-block)}}
-  {{#if hasLeadingIcon}}
-    {{mdc-chip-icon icon leading=true}}
+  {{#if iconLeading}}
+    {{mdc-chip-icon iconLeading leading=true}}
   {{/if}}
-  {{#mdc-chip-text}}{{text}}{{/mdc-chip-text}}
 
-  {{#if hasTrailingIcon}}
-    {{mdc-chip-icon icon leading=false tabindex=0 role="button"}}
+  {{#mdc-chip-text}}
+    {{text}}
+  {{/mdc-chip-text}}
+
+  {{#if iconTrailing}}
+    {{mdc-chip-icon iconTrailing leading=false tabindex=0 role="button"}}
   {{/if}}
 {{else}}
   {{yield}}
