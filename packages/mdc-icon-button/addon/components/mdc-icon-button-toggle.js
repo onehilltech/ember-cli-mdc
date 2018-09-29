@@ -5,9 +5,11 @@ import layout from '../templates/components/mdc-icon-button-toggle';
 
 import { computed } from '@ember/object';
 
+import ButtonMixin from 'ember-cli-mdc-button/mixins/button';
+
 function noOp () {}
 
-export default Component.extend({
+export default Component.extend (ButtonMixin, {
   layout,
 
   tagName: 'button',
@@ -15,7 +17,6 @@ export default Component.extend({
   classNames: ['mdc-icon-button'],
 
   attributeBindings: [
-    'disabled',
     'label:aria-label'
   ],
 
