@@ -4,7 +4,7 @@ module.exports = {
   name: 'ember-cli-mdc-icon-button',
 
   included (app) {
-    this._super.included.apply (this, arguments);
+    this._super (...arguments);
 
     app.import ({
       development: 'node_modules/@material/icon-button/dist/mdc.iconButton.js',
