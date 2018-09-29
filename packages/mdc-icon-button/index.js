@@ -10,11 +10,6 @@ module.exports = {
       development: 'node_modules/@material/icon-button/dist/mdc.iconButton.js',
       production: 'node_modules/@material/icon-button/dist/mdc.iconButton.min.js'
     });
-
-    app.import ({
-      development: 'node_modules/@material/icon-button/dist/mdc.iconToggle.js',
-      production: 'node_modules/@material/icon-button/dist/mdc.iconToggle.min.js'
-    });
   },
 
   optionsFor (type, options) {
