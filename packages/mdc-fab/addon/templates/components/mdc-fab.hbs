@@ -1,1 +1,13 @@
-{{yield}}
+{{#if (has-block)}}
+  {{yield}}
+{{else}}
+  {{#if extendedLeft}}
+    {{#mdc-fab-label}}{{label}}{{/mdc-fab-label}}
+  {{/if}}
+  {{#if icon}}
+    {{mdc-fab-icon icon}}
+  {{/if}}
+  {{#if extendedRight}}
+    {{#mdc-fab-label}}{{label}}{{/mdc-fab-label}}
+  {{/if}}
+{{/if}}
