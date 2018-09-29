@@ -1,16 +1,15 @@
 import RippleComponent from 'ember-cli-mdc-ripple/components/mdc-ripple';
 import layout from '../templates/components/mdc-icon-button';
 
-import ButtonMixin from 'ember-cli-mdc-button/mixins/button';
-
 import { computed } from '@ember/object';
 
-export default RippleComponent.extend (ButtonMixin, {
+export default RippleComponent.extend ({
   layout,
 
   tagName: 'button',
 
   classNames: ['mdc-icon-button', 'material-icons'],
+  attributeBindings: ['disabled', 'value', 'type', 'form'],
 
   icon: computed ('params.[]', function () {
     return this.get ('params')[0];
