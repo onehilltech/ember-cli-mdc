@@ -5,7 +5,5 @@ import ButtonMixin from '../mixins/button';
 export default Component.extend (ButtonMixin, {
   layout,
 
-  tagName: 'button',
-
-  attributeBindings: ['value', 'type']
+  tagName: 'button'
 });

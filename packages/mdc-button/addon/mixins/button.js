@@ -9,7 +9,7 @@ export default Mixin.create (Ripple, {
 
   classNameBindings: ['mdcStyleClassName', 'dense:mdc-button--dense'],
 
-  attributeBindings: ['disabled'],
+  attributeBindings: ['disabled', 'value', 'type', 'form'],
 
   dense: false,
 
