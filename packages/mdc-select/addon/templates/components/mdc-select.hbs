@@ -1,4 +1,11 @@
-{{mdc-select-native-control options=displayOptions disabled=disabled}}
+{{mdc-select-native-control options=displayOptions
+                            disabled=disabled
+                            required=required
+                            name=name
+                            autofocus=autofocus
+                            multiple=multiple
+                            form=form
+}}
 {{#mdc-floating-label}}{{label}}{{/mdc-floating-label}}
 {{#if isOutlined}}
   {{mdc-notched-outline}}

@@ -8,5 +8,5 @@ export default Component.extend({
 
   classNames: ['mdc-select__native-control'],
 
-  attributeBindings: ['disabled']
+  attributeBindings: ['disabled', 'required', 'readonly', 'size', 'name', 'multiple', 'autofocus', 'form']
 });
