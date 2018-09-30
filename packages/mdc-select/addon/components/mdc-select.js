@@ -13,6 +13,10 @@ import { assert } from '@ember/debug';
 
 const STYLES = ['box', 'outlined'];
 
+function transform (value) {
+  return value;
+}
+
 export default Component.extend({
   layout,
 
@@ -39,26 +43,35 @@ export default Component.extend({
 
   _select: null,
 
+  _changeEventListener: null,
+
+  init () {
+    this._super (...arguments);
+
+    this._changeEventListener = this.didChange.bind (this);
+  },
+
   didInsertElement () {
     this._super (...arguments);
 
     this._select = new mdc.select.MDCSelect (this.element);
-    this._select.listen ('change', this.didChange.bind (this));
+    this._select.listen ('change', this._changeEventListener);
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
-    this._select.unlisten ('change', this.didChange.bind (this));
+    this._select.unlisten ('change', this._changeEventListener);
     this._select.destroy ();
   },
 
   displayOptions: computed ('{value,options}', function () {
     const {value, options} = this.getProperties (['value', 'options']);
+    let transform = this.getWithDefault ('transform', transform);
 
     return options.map (option => {
       const copy = EmberObject.create (option);
-      copy.selected = option.value === value;
+      copy.selected = transform (option.value) === value;
 
       return copy;
     });
