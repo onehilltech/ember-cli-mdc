@@ -13,7 +13,7 @@ import { assert } from '@ember/debug';
 
 const STYLES = ['box', 'outlined'];
 
-function transform (value) {
+function identity (value) {
   return value;
 }
 
@@ -67,11 +67,11 @@ export default Component.extend({
 
   displayOptions: computed ('{value,options}', function () {
     const {value, options} = this.getProperties (['value', 'options']);
-    let transform = this.getWithDefault ('transform', transform);
+    const transform = this.getWithDefault ('transform', identity);
 
     return options.map (option => {
       const copy = EmberObject.create (option);
-      copy.selected = transform (option.value) === value;
+      copy.selected = transform (option.value) === transform (value);
 
       return copy;
     });
