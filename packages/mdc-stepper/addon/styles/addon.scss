@@ -38,7 +38,6 @@
   font-family: $stepper-font-family;
   background-color: white;
   display: block;
-  @include shadow-2dp();
   padding: ($stepper-padding * 2) 0;
   max-width: $stepper-vertical-max-width;
   width: 100%;
@@ -353,7 +352,6 @@
       background-color: transparent;
       width: 100%;
       min-height: $stepper-label-layer-height;
-      @include shadow-1dp();
       position: absolute;
       top: 0;
       left: 0;
