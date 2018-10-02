@@ -5,6 +5,7 @@
 @import 'mixins';
 
 @import "@material/theme/mixins";
+@import "@material/typography/mixins";
 
 /* MDL Stepper */
 
@@ -240,14 +241,25 @@
   width: 100%;
 }
 
+.mdc-step__title-text {
+  @include mdc-typography(body1);
+  @include mdc-theme-prop(color, text-primary-on-background);
+  @include mdc-typography-overflow-ellipsis;
+
+  //@include mdc-typography-baseline-top(32px);
+  //@include mdc-typography-baseline-bottom(20px);
+}
+
 /* STEP TITLE MESSAGE */
 
 .mdc-step__title-message {
   position: absolute;
-  font-size: 12px;
-  opacity: .7;
-  font-weight: 400;
-  top: $stepper-circle-size;
+
+  @include mdc-typography(caption);
+  @include mdc-theme-prop(color, text-secondary-on-background);
+  @include mdc-typography-overflow-ellipsis;
+
+  top: $stepper-circle-size + 4;
 }
 
 /* STEP LABEL INDICATOR */
@@ -459,8 +471,10 @@
       }
 
       & > .mdc-step__title > .mdc-step__title-message {
+        // @include mdc-theme
         position: relative;
         top: 0;
+
         line-height: ($stepper-padding + 2);
       }
 
