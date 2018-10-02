@@ -90,6 +90,53 @@ export class MDCStepper extends MDCComponent {
   }
 
   /**
+   * Move "active" to the next if the current step is optional. This operation can returns false
+   * if it does not advances the step.
+   * @return {boolean}
+   */
+  skip () {
+    return this.foundation_.skip ();
+  }
+
+  /**
+   * Move "active" to specified step id.
+   * This operation is similar to the MaterialStepper.setActive_(<number>).
+   * @param {number} id Unique number for step.
+   * @return {boolean}
+   */
+  goto (id) {
+    return this.foundation_.goto (id);
+  }
+
+  /**
+   * Defines the current state of step to "error" and display
+   * an alert message instead of default title message.
+   * @param {string} message The text content to show with error state.
+   * @return {undefined}
+   */
+  error (message) {
+    return this.foundation_.error (message);
+  }
+
+  /**
+   * Defines current step state to "completed" and move active to the next.
+   * This operation can returns false if it does not advance the step.
+   * @return {boolean}
+   */
+  next () {
+    return this.foundation_.next ();
+  }
+
+  /**
+   * Move "active" to the previous step. This operation can returns false
+   * if it does not regress the step.
+   * @return {boolean}
+   */
+  back () {
+    return this.foundation_.back ();
+  }
+
+  /**
    * Instantiates step  components on all of the stepper's child step elements.
    *
    * @param stepFactory
@@ -164,8 +211,8 @@ export class MDCStepper extends MDCComponent {
    * @param stepId
    * @private
    */
-  findNextStepIdToComplete_ (currentStepId) {
-    let index = this.findStepIndex_ (currentStepId);
+  findNextStepIdToComplete_ (stepId = this.findActiveStep_ ().id) {
+    let index = this.findStepIndex_ (stepId);
 
     if (index === -1)
       return null;
@@ -230,53 +277,6 @@ export class MDCStepper extends MDCComponent {
     error.classList.add (this.CssClasses_.STEP_LABEL_INDICATOR_CONTENT);
     error.textContent = '!';
     return error;
-  }
-
-  /**
-   * Move "active" to the next if the current step is optional. This operation can returns false
-   * if it does not advances the step.
-   * @return {boolean}
-   */
-  skip () {
-    return this.foundation_.skip ();
-  }
-
-  /**
-   * Move "active" to specified step id.
-   * This operation is similar to the MaterialStepper.setActive_(<number>).
-   * @param {number} id Unique number for step.
-   * @return {boolean}
-   */
-  goto (id) {
-    return this.foundation_.goto (id);
-  }
-
-  /**
-   * Defines the current state of step to "error" and display
-   * an alert message instead of default title message.
-   * @param {string} message The text content to show with error state.
-   * @return {undefined}
-   */
-  error (message) {
-    return this.foundation_.error (message);
-  }
-
-  /**
-   * Defines current step state to "completed" and move active to the next.
-   * This operation can returns false if it does not advance the step.
-   * @return {boolean}
-   */
-  next () {
-    return this.foundation_.next ();
-  }
-
-  /**
-   * Move "active" to the previous step. This operation can returns false
-   * if it does not regress the step.
-   * @return {boolean}
-   */
-  back () {
-    return this.foundation_.back ();
   }
 
   findActiveStep_ () {

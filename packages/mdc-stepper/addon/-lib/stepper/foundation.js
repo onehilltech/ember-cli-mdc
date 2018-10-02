@@ -56,7 +56,7 @@ export default class MDCStepperFoundation extends MDCFoundation {
    *
    * @return {boolean}
    */
-  next (stepId) {
+  next (stepId = null) {
     let nextStepId = this.adapter_.findNextStepToComplete (stepId);
     let moved = false;
 
@@ -79,6 +79,36 @@ export default class MDCStepperFoundation extends MDCFoundation {
     // Notify the listeners that we have completed this step.
     this.adapter_.notifyStepComplete (stepId);
 
+    return moved;
+  }
+
+  skip () {
+    /** @type {boolean} */
+    var moved;
+    /** @type {string} */
+    var model;
+    /** @type {MaterialStepper.Steps_.collection<step>} */
+    var step;
+    moved = false;
+
+    for (model in this.Steps_.collection) {
+      // Rule eslint guard-for-in.
+      if (this.Steps_.collection.hasOwnProperty(model)) {
+        step = this.Steps_.collection[model];
+
+        if (step.isActive) {
+          if (step.isOptional) {
+            moved = this.setActive_((step.id + 1));
+
+            if (moved && this.Stepper_.hasFeedback) {
+              // Remove the (feedback) transient effect before move
+              this.removeTransientEffect_(step);
+            }
+          }
+          break;
+        }
+      }
+    }
     return moved;
   }
 }
