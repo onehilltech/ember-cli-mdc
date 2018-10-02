@@ -8,5 +8,5 @@ export default Component.extend({
 
   classNames: ['mdc-step'],
 
-  classNameBindings: ['optional:mdl-step--optional', 'editable:mdl-step--editable'],
+  classNameBindings: ['optional:mdc-step--optional', 'editable:mdc-step--editable'],
 });

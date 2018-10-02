@@ -8,6 +8,11 @@ import MDCStepperAdapter from './adapter';
 export { MDCStepperFoundation };
 import { MDCStep } from '../step/index';
 
+const STEP_EVENT_TYPES = [
+  'MDCStep:next',
+  'MDCStep:skip'
+];
+
 export class MDCStepper extends MDCComponent {
   /**
    * @param {...?} args
@@ -70,12 +75,12 @@ export class MDCStepper extends MDCComponent {
     this.activateStep_ (step);
 
     // Listen for step events.
-    this.listen ('MDCStep:next', this.handleInteraction_);
+    STEP_EVENT_TYPES.forEach (eventType => this.listen (eventType, this.handleInteraction_));
   }
 
   destroy () {
     // Stop listening for step events.
-    this.unlisten ('MDCStep:next', this.handleInteraction_);
+    STEP_EVENT_TYPES.forEach (eventType => this.unlisten (eventType, this.handleInteraction_));
 
     super.destroy ();
   }

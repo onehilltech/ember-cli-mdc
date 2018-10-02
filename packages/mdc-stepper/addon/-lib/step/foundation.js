@@ -78,6 +78,9 @@ class MDCStepFoundation extends MDCFoundation {
       else if (action === 'cancel') {
         this.cancel ();
       }
+      else if (action === 'skip') {
+        this.skip ();
+      }
     }
   }
 
@@ -122,6 +125,27 @@ class MDCStepFoundation extends MDCFoundation {
 
   cancel () {
     this.adapter_.notifyCancel ();
+  }
+
+  /**
+   * Move "active" to the next if the current step is optional. This operation can returns false
+   * if it does not advances the step.
+   *
+   * @return {boolean}
+   */
+  skip () {
+    if (!this.isActive ())
+      return false;
+
+    if (!this.isOptional ())
+      return false;
+
+    if (this.adapter_.hasFeedback ()) {
+      this.adapter_.removeTransientEffect ()
+    }
+
+    this.adapter_.notifySkip ()
+    return true;
   }
 
   setStepCompleted () {

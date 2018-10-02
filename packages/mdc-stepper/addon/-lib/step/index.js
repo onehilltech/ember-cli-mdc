@@ -139,7 +139,8 @@ export class MDCStep extends MDCComponent {
       setLabelIndicator: (state) => this.setLabelIndicator_ (state),
 
       notifyNext: () => this.emit ('MDCStep:next', { stepId: this.root_.id }, true),
-      notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true)
+      notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true),
+      notifySkip: () => this.emit ('MDCStep:skip', { stepId: this.root_.id }, true)
     }));
   }
 

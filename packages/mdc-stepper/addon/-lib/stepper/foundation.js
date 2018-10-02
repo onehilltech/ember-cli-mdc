@@ -42,7 +42,10 @@ export default class MDCStepperFoundation extends MDCFoundation {
 
   handleInteraction (evt) {
     if (evt.type === 'MDCStep:next') {
-      this.next (evt.detail.stepId)
+      this.next (evt.detail.stepId);
+    }
+    else if (evt.type === 'MDCStep:skip') {
+      this.skip (evt.detail.stepId);
     }
   }
 
@@ -82,33 +85,14 @@ export default class MDCStepperFoundation extends MDCFoundation {
     return moved;
   }
 
-  skip () {
-    /** @type {boolean} */
-    var moved;
-    /** @type {string} */
-    var model;
-    /** @type {MaterialStepper.Steps_.collection<step>} */
-    var step;
-    moved = false;
+  skip (stepId = null) {
+    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
+    let moved = false;
 
-    for (model in this.Steps_.collection) {
-      // Rule eslint guard-for-in.
-      if (this.Steps_.collection.hasOwnProperty(model)) {
-        step = this.Steps_.collection[model];
-
-        if (step.isActive) {
-          if (step.isOptional) {
-            moved = this.setActive_((step.id + 1));
-
-            if (moved && this.Stepper_.hasFeedback) {
-              // Remove the (feedback) transient effect before move
-              this.removeTransientEffect_(step);
-            }
-          }
-          break;
-        }
-      }
+    if (nextStepId) {
+      moved = this.adapter_.activate (nextStepId);
     }
+
     return moved;
   }
 }
