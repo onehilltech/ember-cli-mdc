@@ -72,18 +72,31 @@ class MDCStepFoundation extends MDCFoundation {
     if (isClick || isEnter) {
       const action = this.adapter_.getActionFromEvent (evt);
 
-      if (action === 'next') {
-        this.next ();
+      if (action) {
+        this.handleAction_ (action);
       }
-      else if (action === 'cancel') {
-        this.cancel ();
+      else {
+        const stepId = this.adapter_.getStepFromEvent (evt);
+
+        if (stepId) {
+          this.goto (stepId);
+        }
       }
-      else if (action === 'skip') {
-        this.skip ();
-      }
-      else if (action === 'back') {
-        this.back ();
-      }
+    }
+  }
+
+  handleAction_ (action) {
+    if (action === 'next') {
+      this.next ();
+    }
+    else if (action === 'cancel') {
+      this.cancel ();
+    }
+    else if (action === 'skip') {
+      this.skip ();
+    }
+    else if (action === 'back') {
+      this.back ();
     }
   }
 
@@ -166,6 +179,10 @@ class MDCStepFoundation extends MDCFoundation {
 
     this.adapter_.notifySkip ()
     return true;
+  }
+
+  goto (stepId) {
+    this.adapter_.notifyGoto (stepId);
   }
 
   updateTitleMessage (message) {

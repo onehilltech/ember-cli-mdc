@@ -50,10 +50,50 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     else if (evt.type === 'MDCStep:back') {
       this.back (evt.detail.stepId);
     }
+    else if (evt.type === 'MDCStep:goto') {
+      this.goto (evt.detail.stepId);
+    }
   }
 
   getActiveId () {
     return this.adapter_.getActiveId ()
+  }
+
+
+  /**
+   * Defines current step state to "completed" and move active to the next.
+   * This operation can returns false if it does not advance the step.
+   *
+   * For non-linear steppers, the next step is the next step in the stepper.
+   *
+   * @return {boolean}
+   */
+  next (stepId = null) {
+    let iterator = this.adapter_.iterator (stepId);
+    let nextStepId = iterator.next () ? iterator.id () : null;
+
+    if (nextStepId) {
+      this.adapter_.activate (nextStepId);
+    }
+
+    // Notify the listeners that we have completed this step.
+    this.adapter_.setStepCompleted (stepId);
+    this.adapter_.notifyStepComplete (stepId);
+
+    return !!nextStepId;
+  }
+
+  /**
+   * Move "active" to the previous step. This operation can returns false
+   * if it does not regress the step.
+   *
+   * @return {boolean}
+   */
+  back (stepId = null) {
+    let iter = this.adapter_.iterator (stepId);
+    let prevStepId = iter.previous () ? iter.id () : null;
+
+    return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
 
   /**
@@ -80,8 +120,8 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
   }
 
   /**
-   * Defines the current state of step to "error" and display
-   * an alert message instead of default title message.
+   * Defines the current state of step to "error" and display an alert message
+   * instead of default title message.
    *
    * @param {string} message The text content to show with error state.
    * @return {undefined}

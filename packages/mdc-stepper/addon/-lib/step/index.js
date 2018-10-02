@@ -107,6 +107,11 @@ export class MDCStep extends MDCComponent {
         return element && element.getAttribute (MDCStepFoundation.strings.ACTION_ATTRIBUTE);
       },
 
+      getStepFromEvent: (event) => {
+        const element = closest (event.target, MDCStepFoundation.strings.LABEL_SELECTOR);
+        return element && element.parentElement.id;
+      },
+
       removeTransientEffect: this.removeTransientEffect_.bind (this),
       getLabelTitleMessageText: () => this.labelTitleMessageText_,
       updateTitleMessage: this.updateTitleMessage_.bind (this),
@@ -116,7 +121,8 @@ export class MDCStep extends MDCComponent {
       notifyNext: () => this.emit ('MDCStep:next', { stepId: this.root_.id }, true),
       notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true),
       notifySkip: () => this.emit ('MDCStep:skip', { stepId: this.root_.id }, true),
-      notifyBack: () => this.emit ('MDCStep:back', { stepId: this.root_.id }, true)
+      notifyBack: () => this.emit ('MDCStep:back', { stepId: this.root_.id }, true),
+      notifyGoto: (stepId) => this.emit ('MDCStep:goto', { stepId }, true)
     }));
   }
 

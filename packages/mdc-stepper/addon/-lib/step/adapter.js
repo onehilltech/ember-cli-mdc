@@ -21,11 +21,13 @@ class MDCStepAdapter {
   setLabelIndicator (state) {}
 
   getActionFromEvent (evt) {}
+  getStepFromEvent (evt) {}
 
   notifyNext () {}
   notifyCancel () {}
   notifySkip () {}
   notifyBack () {}
+  notifyGoto (stepId) {}
 }
 
 export default MDCStepAdapter;

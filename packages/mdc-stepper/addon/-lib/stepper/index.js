@@ -16,68 +16,9 @@ import MDCStepIterator from './iterator';
 const STEP_EVENT_TYPES = [
   'MDCStep:next',
   'MDCStep:skip',
-  'MDCStep:back'
+  'MDCStep:back',
+  'MDCStep:goto'
 ];
-
-/**
- * MDCStepIterator
- */
-class StepIteratorImpl extends MDCStepIterator {
-  constructor (stepper, index = 0) {
-    super ();
-
-    this.index_ = index;
-    this.stepper_ = stepper;
-  }
-
-  next () {
-    if (this.index_ >= this.stepper_.steps.length - 1)
-      return false;
-
-    ++ this.index_;
-    return true;
-  }
-
-  previous () {
-    if (this.index_ === 0)
-      return false;
-
-    -- this.index_;
-    return true;
-  }
-
-  done () {
-    return this.index_ >= this.stepper_.steps.length;
-  }
-
-  id () {
-    return this.stepper_.steps[this.index_].id;
-  }
-
-  isEditable () {
-    return this.stepper_.steps[this.index_].isEditable;
-  }
-
-  isCompleted () {
-    return this.stepper_.steps[this.index_].isCompleted;
-  }
-
-  isOptional () {
-    return this.stepper_.steps[this.index_].isOptional;
-  }
-
-  isActive () {
-    return this.stepper_.steps[this.index_].isActive;
-  }
-
-  isError () {
-    return this.stepper_.steps[this.index_].isError;
-  }
-
-  isNormal () {
-    return this.stepper_.steps[this.index_].isNormal;
-  }
-}
 
 /**
  * @class MDCStepper
@@ -368,5 +309,67 @@ export class MDCStepper extends MDCComponent {
 
   get isLinear_ () {
     return this.root_.classList.contains (MDCStepperBaseFoundation.cssClasses.STEPPER_LINEAR);
+  }
+}
+
+/**
+ * @class StepIteratorImpl
+ *
+ * The implementation of the step iterator.
+ */
+class StepIteratorImpl extends MDCStepIterator {
+  constructor (stepper, index = 0) {
+    super ();
+
+    this.index_ = index;
+    this.stepper_ = stepper;
+  }
+
+  next () {
+    if (this.index_ >= this.stepper_.steps.length - 1)
+      return false;
+
+    ++ this.index_;
+    return true;
+  }
+
+  previous () {
+    if (this.index_ === 0)
+      return false;
+
+    -- this.index_;
+    return true;
+  }
+
+  done () {
+    return this.index_ >= this.stepper_.steps.length;
+  }
+
+  id () {
+    return this.stepper_.steps[this.index_].id;
+  }
+
+  isEditable () {
+    return this.stepper_.steps[this.index_].isEditable;
+  }
+
+  isCompleted () {
+    return this.stepper_.steps[this.index_].isCompleted;
+  }
+
+  isOptional () {
+    return this.stepper_.steps[this.index_].isOptional;
+  }
+
+  isActive () {
+    return this.stepper_.steps[this.index_].isActive;
+  }
+
+  isError () {
+    return this.stepper_.steps[this.index_].isError;
+  }
+
+  isNormal () {
+    return this.stepper_.steps[this.index_].isNormal;
   }
 }

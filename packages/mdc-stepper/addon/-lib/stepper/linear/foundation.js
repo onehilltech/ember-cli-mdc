@@ -66,32 +66,14 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
   /**
    * Move "active" to specified step id.
    *
+   * For non-linear steppers, you can only go directly to steps that are
+   * both completed and editable.
+   *
    * @param {number} stepId Unique number for step.
    * @return {boolean}
    */
   goto (stepId) {
-    return this.adapter_.activate (stepId);
-  }
-
-  /**
-   * Defines the current state of step to "error" and display
-   * an alert message instead of default title message.
-   *
-   * @param {string} message The text content to show with error state.
-   * @return {undefined}
-   */
-  error (message) {
-    let stepId = this.adapter_.getActiveId ();
-
-    if (this.adapter_.hasFeedback ()) {
-      // TODO remove transient feedback from current step.
-    }
-
-    this.adapter_.setStepError (stepId);
-
-    if (!!message)
-      this.adapter_.updateTitleMessage (stepId, message);
-
-    this.adapter_.notifyStepError (stepId, message);
+    let iter = this.adapter_.iterator (stepId);
+    return iter.isCompleted () && iter.isEditable () ? this.adapter_.activate (stepId) : false;
   }
 }
