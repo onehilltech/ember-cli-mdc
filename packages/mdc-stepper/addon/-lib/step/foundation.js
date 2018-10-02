@@ -123,6 +123,47 @@ class MDCStepFoundation extends MDCFoundation {
     return true;
   }
 
+  back () {
+
+    moved = false;
+    moveStep = function (step) {
+      /** @type {boolean} */
+      var stepActivated;
+      stepActivated = this.setActive_(step.id);
+
+      if (stepActivated) {
+        if (stepActivated && this.Stepper_.hasFeedback) {
+          // Remove the (feedback) transient effect before move.
+          this.removeTransientEffect_(step);
+        }
+      }
+      return stepActivated;
+    };
+
+    for (model in this.Steps_.collection) {
+      // Rule eslint guard-for-in.
+      if (this.Steps_.collection.hasOwnProperty(model)) {
+        step = this.Steps_.collection[model];
+
+        if (step.isActive) {
+          previous = this.Steps_.collection[(step.id - 2)];
+
+          if (!previous) return false;
+
+          if (this.Stepper_.isLinear) {
+            if (previous.isEditable) {
+              moved = moveStep.bind(this)(previous);
+            }
+          } else {
+            moved = moveStep.bind(this)(previous);
+          }
+          break;
+        }
+      }
+    }
+    return moved;
+  };
+
   cancel () {
     // The step is not active. There is no need to continue.
     if (!this.isActive ())
