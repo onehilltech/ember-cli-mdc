@@ -1,18 +1,549 @@
-/**
- * mdl-stepper - A Material Design Lite Stepper component polyfill.
- * @version v1.1.6
- * @author Alexandre Thebaldi <ahlechandre@gmail.com>.
- * @link https://github.com/ahlechandre/mdl-stepper
- *
- */
-
 @import "app-theme";
-
-/* MDL Stepper */
 
 // Variables
 @import 'variables';
 @import 'mixins';
 
-// Component
-@import 'stepper/stepper';
+@import "@material/theme/mixins";
+
+/* MDL Stepper */
+
+// FadeIn animation.
+@include Keyframes(FadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+// FadeInFromBottom animation.
+@include Keyframes(FadeInFromBottom) {
+  0% {
+    height: 0;
+    padding-top: $stepper-label-layer-height;
+    background-color: white;
+    color: white;
+  }
+  25% {
+    color: white;
+  }
+}
+
+/* STEPPER */
+
+.mdc-stepper {
+  position: relative;
+  font-family: $stepper-font-family;
+  background-color: white;
+  display: block;
+  @include shadow-2dp();
+  padding: ($stepper-padding * 2) 0;
+  max-width: $stepper-vertical-max-width;
+  width: 100%;
+  border-radius: 2px;
+
+  & > li {
+    list-style: none;
+  }
+}
+
+/* STEPPER ON SMALL SCREENS */
+
+@media only screen and (max-width: 375px) {
+  .mdc-stepper {
+    width: 100vw;
+  }
+
+  // Polyfill to small screens when using inside a grid/cell.
+  .mdc-grid .mdc-cell .mdc-stepper {
+    margin-left: -16px;
+  }
+}
+
+/* STEPPER VERTICAL ONLY */
+
+.mdc-stepper:not(.mdc-stepper--horizontal) {
+
+  & > .mdc-step {
+
+    // Connector line is not present in the last step.
+    &:not(:last-child) {
+      // Vertical connector line.
+      &:after {
+        content: '';
+        position: absolute;
+        top: #{(($stepper-padding * 4) + 2)};
+        left: #{(($stepper-padding * 3) + 1)};
+        width: 1px;
+        height: calc(100% - #{($stepper-padding * 2)});
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &.is-active {
+        // Vertical connector line on active steps.
+        &:after {
+          height: calc(100% - #{$stepper-padding});
+        }
+      }
+    }
+  }
+
+  & .mdc-step__label {
+
+    &:hover, &:active, &:focus {
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+/* STEP */
+
+.mdc-step {
+  position: relative;
+  height: 460px;
+
+  // Reset height on non-active steps.
+  &:not(.is-active) {
+    height: initial!important;
+  }
+
+
+  // All steps (except the last) must have margin at bottom.
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    // Greater margin to the active.
+    &.is-active {
+      margin-bottom: 36px;
+    }
+  }
+
+  & .mdc-step-error-message {
+    display: none;
+  }
+
+  // Applying fade-in effect to label, content and actions.
+  & > * {
+    @include Animation(FadeIn, 0.5s, ease-in-out);
+  }
+}
+
+/* STEP ACTIVE */
+
+.mdc-step.is-active {
+
+  & .mdc-step__title {
+    font-weight: bold;
+  }
+
+  & .mdc-step__content {
+    display: block;
+  }
+
+  // Active step circle.
+  & .mdc-step__label-indicator {
+    @include mdc-theme-prop (background-color, primary);
+    @include mdc-theme-prop (color, on-primary);
+  }
+
+  & .mdc-step__actions {
+    @include DisplayFlex();
+    justify-content: flex-start;
+
+    // "Continue" button.
+    & [data-stepper-next] {
+      order: 1;
+      margin-right: 8px;
+    }
+
+    // "Cancel" button.
+    & [data-stepper-cancel] {
+      order: 2;
+    }
+
+    // "Skip" button.
+    & [data-stepper-skip] {
+      order: 3;
+      margin-left: auto;
+    }
+
+    // "Back" button.
+    & [data-stepper-back] {
+      order: 4;
+      margin-left: auto;
+    }
+  }
+}
+
+/* STEP MOD COMPLETED */
+
+.mdc-step--completed {
+  & .mdc-step__label-indicator {
+    @include mdc-theme-prop (background-color, primary);
+  }
+}
+
+/* STEP MOD ERROR */
+
+.mdc-step--error {
+  & .mdc-step__title {
+    @include mdc-theme-prop (color, error);
+  }
+
+  & .mdc-step-error-message {
+    display: block;
+    font-weight: normal;
+
+    @include mdc-theme-prop (color, error);
+  }
+
+  & .mdc-step__label-indicator {
+    @include mdc-theme-prop (background-color, error, true);
+
+    font-weight: bold;
+  }
+}
+
+/* STEP MOD OPTIONAL */
+
+.mdc-step--optional {}
+
+/* STEP MOD TRANSIENT */
+
+.mdc-step--transient {
+
+  & .mdc-step__content {
+    overflow: hidden !important;
+  }
+}
+
+.mdc-step__label {
+  position: relative;
+  @include DisplayFlex();
+  cursor: pointer;
+  margin-bottom: ($stepper-padding / 1.5);
+  padding: $stepper-padding ($stepper-padding * 2) ($stepper-padding * 2) ($stepper-padding * 2);
+  align-items: center;
+}
+
+/* STEP LABEL MOD WITH SUBLABEL */
+
+.mdc-step__label--with-sublabel {
+  align-items: baseline;
+}
+
+/* STEP TITLE */
+
+.mdc-step__title {
+  @include DisplayFlex();
+  flex-flow: column nowrap;
+  order: 2;
+  width: 100%;
+}
+
+/* STEP TITLE MESSAGE */
+
+.mdc-step__title-message {
+  position: absolute;
+  font-size: 12px;
+  opacity: .7;
+  font-weight: 400;
+  top: $stepper-circle-size;
+}
+
+/* STEP LABEL INDICATOR */
+
+.mdc-step__label-indicator {
+  @include DisplayFlex();
+  order: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  color: white;
+  margin-right: $stepper-padding;
+  margin-bottom: auto;
+
+  // Step circle.
+  & >:first-child {
+    @include DisplayFlex();
+    font-size: 15px;
+    width: $stepper-circle-size;
+    height: $stepper-circle-size;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* STEP CONTENT */
+
+.mdc-step__content {
+  display: none;
+  height: $step-content-height;
+  width: inherit;
+  overflow: auto;
+  margin-left: $step-content-margin-left;
+  margin-right: ($stepper-padding * 2);
+}
+
+/* STEP ACTIONS */
+
+.mdc-step__actions {
+  display: none;
+  padding-top: ($stepper-padding + ($stepper-padding / 3));
+  height: ($stepper-padding * 4);
+  margin-left: $step-content-margin-left;
+  margin-right: ($stepper-padding * 2);
+
+  .mdc-step__button {
+    margin-right: 16px;
+  }
+}
+
+/* STEP TRANSIENT */
+
+.mdc-step__transient {
+  position: absolute;
+  top: #{($stepper-padding * 6)};
+  left: $step-content-margin-left;
+  z-index: 2;
+  @include DisplayFlex();
+  width: calc(100% - 88px);
+  height: $step-content-height;
+  transition: 0.3s all ease-in-out;
+}
+
+/* STEP TRANSIENT OVERLAY */
+
+.mdc-step__transient-overlay {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* STEP TRANSIENT LOADER */
+
+.mdc-step__transient-loader {
+  z-index: 4;
+  margin: auto;
+}
+
+/* STEPPER MOD HORIZONTAL */
+
+// Horizontal steppers only available for large screens.
+@media only screen and (min-width: ($grid-desktop-breakpoint + 1)) {
+
+  .mdc-stepper--horizontal {
+    @include DisplayFlex();
+    flex-direction: row;
+    // Not supported on Firefox because container has a child with
+    // position absolute (&:before).
+    // justify-content: space-between;
+    align-items: baseline;
+    max-width: $grid-desktop-breakpoint;
+    padding: 0;
+    min-height: $stepper-horizontal-min-height;
+
+    &:before {
+      content: '';
+      background-color: transparent;
+      width: 100%;
+      min-height: $stepper-label-layer-height;
+      @include shadow-1dp();
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* HORIZONTAL STEP */
+
+    & > .mdc-step {
+      position: static;
+      @include DisplayFlex();
+      justify-content: center;
+      align-items: initial;
+      margin-top: 0!important;
+      margin-bottom: 0!important;
+      height: initial;
+      max-height: $stepper-label-layer-height;
+      overflow: hidden;
+
+      &.is-active {
+
+        // Overlaying the label when transient effect is active.
+        &.mdc-step--transient:before {
+          content: attr(data-step-transient-message);
+          @include Animation(FadeInFromBottom, 0.3s, cubic-bezier(0,0,0,.99));
+          position: absolute;
+          padding-left: ($stepper-padding * 2);
+          display: flex;
+          font-size: 16px;
+          justify-content: flex-start;
+          align-items: center;
+          width: calc(100% - #{($stepper-padding * 2)});
+          height: $stepper-label-layer-height;
+          background-color: white;
+          top: 0;
+          left: 0;
+          z-index: 9;
+        }
+      }
+
+      & .mdc-step__transient {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      // Simulates justify-content: space-between.
+      &:not(:first-child):not(:last-child) {
+        margin: auto auto;
+      }
+
+      &:not(:last-child) {
+        flex: 1;
+      }
+
+      // Horizontal connector line.
+      &:not(:last-child):after {
+        content: '';
+        position: relative;
+        flex: 1;
+        // Not supported on Firefox.
+        // margin: auto;
+        top: #{($stepper-label-layer-height / 2)};
+        width: ($stepper-padding * 14);
+        margin-left: -#{$stepper-padding};
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      /* STEP MOD COMPLETED */
+
+      &.mdc-step--completed {
+
+        // The title text of steps completed must be highlighted.
+        & .mdc-step__title > .mdc-step__title-text {
+          font-weight: bold;
+        }
+      }
+    }
+
+    /* HORIZONTAL STEP LABEL */
+
+    & .mdc-step__label {
+      top: -#{($stepper-padding * 4)};
+      flex: initial;
+      margin: 0;
+      padding: ($stepper-padding * 2);
+      min-height: ($stepper-padding * 11);
+      transition: 0.025s border-radius linear;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+
+      &:active {
+        padding: $stepper-padding;
+        margin: $stepper-padding;
+        border-radius: 100%;
+      }
+
+      & > .mdc-step__title {
+        width: initial;
+      }
+
+      & > .mdc-step__title > * {
+        // Max size of a title text or message.
+        max-width: ($stepper-padding * 10);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      & > .mdc-step__title > .mdc-step__title-message {
+        position: relative;
+        top: 0;
+        line-height: ($stepper-padding + 2);
+      }
+
+      & > .mdc-step__label-indicator {
+        margin-top: auto;
+      }
+    }
+
+    /* HORIZONTAL STEP CONTENT */
+
+    & .mdc-step > .mdc-step__content {
+      position: absolute;
+      top: $stepper-label-layer-height;
+      left: 0;
+      width: calc(100% - #{($stepper-padding * 4)});
+      height: calc(100% - #{($stepper-padding * 16)});
+      margin: ($stepper-padding * 2);
+    }
+
+    /* HORIZONTAL STEP ACTIONS */
+
+    & .mdc-step > .mdc-step__actions {
+      position: absolute;
+      top: calc(100% - #{($stepper-padding * 7)});
+      left: 0;
+      margin: 0;
+      padding: ($stepper-padding * 2);
+      width: calc(100% - #{(($stepper-padding * 4))});
+
+      // "Continue" button on horizontal steppers.
+      & [data-stepper-next] {
+        order: 4;
+        margin-left: #{$stepper-padding / 1.5};
+        margin-right: 0;
+
+        @include mdc-theme-prop (color, primary);
+
+        background-color: transparent;
+      }
+
+      // "Cancel" button on horizontal steppers.
+      & [data-stepper-cancel] {
+        order: 3;
+        margin-left: auto;
+      }
+
+      // "Skip" button on horizontal steppers.
+      & [data-stepper-skip] {
+        order: 2;
+        margin-left: auto;
+      }
+
+      // "Back" button on horizontal steppers.
+      & [data-stepper-back] {
+        order: 1;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+    }
+
+    /* STEPPER MOD HORIZONTAL + MOD LINEAR */
+
+    &.mdc-stepper--linear {
+
+      // Horizontal and linear steps.
+      & > .mdc-step {
+
+        // Linear steppers require users to complete one step in order to move on to the next.
+        // Non-completed and non-actived title text must have disabled effect.
+        &:not(.mdc-step--completed):not(.is-active) .mdc-step__title > .mdc-step__title-text {
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+}

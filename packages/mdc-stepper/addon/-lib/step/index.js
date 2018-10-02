@@ -95,7 +95,6 @@ export class MDCStep extends MDCComponent {
   }
 
   getDefaultFoundation () {
-
     return new MDCStepFoundation (/** @type {!MDCStepAdapter} */ ({
       addClass: (className) => this.root_.classList.add (className),
       removeClass: (className) => this.root_.classList.remove (className),
