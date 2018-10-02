@@ -246,47 +246,33 @@ export class MDCStepper extends MDCComponent {
     return nextStepId;
   }
 
+  /**
+   * Find the step for the given id.
+   * @param stepId
+   * @return {*}
+   * @private
+   */
   findStep_ (stepId) {
     return this.steps.find (step => step.id === stepId);
   }
 
+  /**
+   * Find the index for a step.
+   *
+   * @param stepId
+   * @return {number | *}
+   * @private
+   */
   findStepIndex_ (stepId) {
     return this.steps.findIndex (step => step.id === stepId);
   }
 
   /**
-   * Create a new element that's represent "completed" label indicator.
-   * @param {boolean} isEditable Flag to check if step is of editable type.
-   * @return {HTMLElement}
+   * Find the index of the active step.
+   *
+   * @return {*}
    * @private
    */
-  getIndicatorContentCompleted_ (isEditable) {
-    // Creates a new material icon to represent the completed step.
-    /** @type {HTMLElement} */
-    let completed;
-    completed = document.createElement('i');
-    completed.classList.add('material-icons');
-    completed.classList.add(this.CssClasses_.STEP_LABEL_INDICATOR_CONTENT);
-    // If step is editable the icon used will be "edit",
-    // else the icon will be "check".
-    completed.textContent = isEditable ? 'edit' : 'check';
-    return completed;
-  }
-
-  /**
-   * Create a new element that's represent "error" label indicator.
-   * @return {HTMLElement}
-   * @private
-   */
-  getIndicatorContentError_ () {
-    /** @type {HTMLElement} */
-    let error;
-    error = document.createElement('span');
-    error.classList.add (this.CssClasses_.STEP_LABEL_INDICATOR_CONTENT);
-    error.textContent = '!';
-    return error;
-  }
-
   findActiveStep_ () {
     return this.steps.find (step => step.isActive);
   }
@@ -309,60 +295,6 @@ export class MDCStepper extends MDCComponent {
 
       step.setStepCompleted ();
     }
-  }
-
-  /**
-   * Remove (feedback) transient effect and applied to the step.
-   * @param {MaterialStepper.Steps_.collection<step>} step The step to remove effect.
-   * @return {boolean}
-   */
-  removeTransientEffect_ (step) {
-    /** @type {HTMLElement | null} */
-    let transient;
-    transient = step.content.querySelector('.' + this.CssClasses_.TRANSIENT);
-
-    if (!transient) return false;
-
-    step.container.classList.remove(this.CssClasses_.STEP_TRANSIENT);
-    step.content.removeChild(transient);
-    return true;
-  }
-
-  /**
-   * Create (feedback) transient effect and apply to the current step.
-   * @param {MaterialStepper.Steps_.collection<step>} step The step to add effect.
-   * @return {boolean}
-   */
-  addTransientEffect_ (step) {
-    /** @type {HTMLElement} */
-    let transient;
-    /** @type {HTMLElement} */
-    let overlay;
-    /** @type {HTMLElement} */
-    let loader;
-    /** @type {HTMLElement} */
-    let spinner;
-
-    if (step.content.querySelector('.' + this.CssClasses_.TRANSIENT)) return false;
-
-    transient = document.createElement('div');
-    overlay = document.createElement('div');
-    loader = document.createElement('div');
-    spinner = document.createElement('div');
-    transient.classList.add(this.CssClasses_.TRANSIENT);
-    overlay.classList.add(this.CssClasses_.TRANSIENT_OVERLAY);
-    loader.classList.add(this.CssClasses_.TRANSIENT_LOADER);
-    spinner.classList.add(this.CssClasses_.SPINNER);
-    spinner.classList.add(this.CssClasses_.SPINNER_JS);
-    spinner.classList.add(this.CssClasses_.SPINNER_IS_ACTIVE);
-    loader.appendChild(spinner);
-    transient.appendChild(overlay);
-    transient.appendChild(loader);
-    step.container.classList.add(this.CssClasses_.STEP_TRANSIENT);
-    step.content.appendChild(transient);
-    // Assume componentHandler is available in the global scope.
-    componentHandler.upgradeDom();
-    return true;
   }
 
   /**

@@ -273,6 +273,44 @@ class MDCStepFoundation extends MDCFoundation {
       this.dispatchEventOnStepperComplete_();
     }*/
   }
+
+
+  /**
+   * Create (feedback) transient effect and apply to the current step.
+   * @param {MaterialStepper.Steps_.collection<step>} step The step to add effect.
+   * @return {boolean}
+   */
+  addTransientEffect_ (step) {
+    /** @type {HTMLElement} */
+    let transient;
+    /** @type {HTMLElement} */
+    let overlay;
+    /** @type {HTMLElement} */
+    let loader;
+    /** @type {HTMLElement} */
+    let spinner;
+
+    if (step.content.querySelector('.' + this.CssClasses_.TRANSIENT)) return false;
+
+    transient = document.createElement('div');
+    overlay = document.createElement('div');
+    loader = document.createElement('div');
+    spinner = document.createElement('div');
+    transient.classList.add(this.CssClasses_.TRANSIENT);
+    overlay.classList.add(this.CssClasses_.TRANSIENT_OVERLAY);
+    loader.classList.add(this.CssClasses_.TRANSIENT_LOADER);
+    spinner.classList.add(this.CssClasses_.SPINNER);
+    spinner.classList.add(this.CssClasses_.SPINNER_JS);
+    spinner.classList.add(this.CssClasses_.SPINNER_IS_ACTIVE);
+    loader.appendChild(spinner);
+    transient.appendChild(overlay);
+    transient.appendChild(loader);
+    step.container.classList.add(this.CssClasses_.STEP_TRANSIENT);
+    step.content.appendChild(transient);
+    // Assume componentHandler is available in the global scope.
+    componentHandler.upgradeDom();
+    return true;
+  }
 }
 
 export { MDCStepFoundation };
