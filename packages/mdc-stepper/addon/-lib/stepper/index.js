@@ -10,7 +10,8 @@ import { MDCStep } from '../step/index';
 
 const STEP_EVENT_TYPES = [
   'MDCStep:next',
-  'MDCStep:skip'
+  'MDCStep:skip',
+  'MDCStep:back'
 ];
 
 export class MDCStepper extends MDCComponent {
@@ -25,12 +26,6 @@ export class MDCStepper extends MDCComponent {
 
     /** @private {(function(!Element): !MDCStep)} */
     this.stepFactory_;
-
-    this.completed_;
-
-    this.optional_;
-
-    this.active_;
 
     /** @private {!Function} */
     this.handleInteraction_;
@@ -48,17 +43,19 @@ export class MDCStepper extends MDCComponent {
     return new MDCStepperFoundation (/** @type {!MDCStepperAdapter} */ ({
       hasClass: (className) => this.root_.classList.contains (className),
 
-      isLinear: () => this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_LINEAR),
+      isLinear: () => this.isLinear_,
       hasFeedback: () => this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_FEEDBACK),
       hasTransient: () => this.hasTransient_ (),
 
-      activate: (stepId) => this.activate_ (stepId),
+      activate: this.activate_.bind (this),
       getActiveId: () => this.findActiveStep_ ().id,
 
       setStepCompleted: (stepId) => this.findStep_ (stepId).setStepCompleted (),
       setStepError: (stepId) => this.findStep_ (stepId).setStepError (),
 
-      findNextStepToComplete: (stepId) => this.findNextStepIdToComplete_ (stepId),
+      findNextStepToComplete: this.findNextStepIdToComplete_.bind (this),
+      findPrevStepToComplete: this.findPrevStepIdToComplete_.bind (this),
+
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
 
       notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
@@ -177,16 +174,21 @@ export class MDCStepper extends MDCComponent {
    * Activate the step by id.
    *
    * @param stepId
+   * @param force
    */
-  activate_ (stepId) {
+  activate_ (stepId, force = false) {
     const step = this.findStep_ (stepId);
 
     if (!step)
       return false;
 
-    // The transient effect blocks the stepper to move
-    if (this.hasTransient_ ())
-      return false;
+    if (this.hasTransient_ ()) {
+      // The transient effect blocks the stepper from moving.
+      if (!force)
+        return false;
+
+      step.removeTransientEffect ();
+    }
 
     // Deactivate each step in the stepper.
     return this.activateStep_ (step);
@@ -244,6 +246,26 @@ export class MDCStepper extends MDCComponent {
     }
 
     return nextStepId;
+  }
+
+  /**
+   * Find the previous step to complete depending on the stepper style.
+   *
+   * @param stepId
+   * @private
+   */
+  findPrevStepIdToComplete_ (stepId = this.findActiveStep_ ().id) {
+    let index = this.findStepIndex_ (stepId);
+
+    if (index <= 0)
+      return null;
+
+    let prevStep = this.steps[index - 1];
+
+    // If we are working with a non-linear stepper, then the user is allowed to
+    // freely go back to any step. Otherwise, we can only go to the previous step
+    // if the previous step is editable.
+    return this.isLinear_ ? (prevStep.isEditable ? prevStep.id : null) : prevStep.id;
   }
 
   /**
@@ -314,5 +336,9 @@ export class MDCStepper extends MDCComponent {
 
     let selectorTransient = `${STEP_SELECTOR} > ${STEP_CONTENT_SELECTOR} > ${TRANSIENT_SELECTOR}`;
     !!this.root_.querySelector (selectorTransient);
+  }
+
+  get isLinear_ () {
+    this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_LINEAR);
   }
 }

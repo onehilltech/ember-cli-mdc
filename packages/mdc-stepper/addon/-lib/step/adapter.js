@@ -25,6 +25,7 @@ class MDCStepAdapter {
   notifyNext () {}
   notifyCancel () {}
   notifySkip () {}
+  notifyBack () {}
 }
 
 export default MDCStepAdapter;

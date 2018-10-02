@@ -10,10 +10,11 @@ class MDCStepperAdapter {
   hasFeedback () {}
   hasTransient () {}
 
-  findNextStepToComplete () {}
+  findNextStepToComplete (stepId) {}
+  findPrevStepToComplete (stepId) {}
 
   getActiveId () {}
-  activate (stepId) {}
+  activate (stepId, force) {}
 
   setStepCompleted (stepId) {}
   setStepError (stepId) {}

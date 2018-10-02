@@ -81,6 +81,9 @@ class MDCStepFoundation extends MDCFoundation {
       else if (action === 'skip') {
         this.skip ();
       }
+      else if (action === 'back') {
+        this.back ();
+      }
     }
   }
 
@@ -99,9 +102,8 @@ class MDCStepFoundation extends MDCFoundation {
     // remove the (feedback) transient effect. Afterwards, we need to reset the
     // label message text based on the error state.
 
-    if (this.adapter_.hasFeedback ()) {
+    if (this.adapter_.hasFeedback ())
       this.adapter_.removeTransientEffect ()
-    }
 
     if (this.isError ()) {
       // Case the current state of step is "error", update the error message
@@ -124,45 +126,18 @@ class MDCStepFoundation extends MDCFoundation {
   }
 
   back () {
+    if (!this.isActive ())
+      return false;
 
-    moved = false;
-    moveStep = function (step) {
-      /** @type {boolean} */
-      var stepActivated;
-      stepActivated = this.setActive_(step.id);
+    // Let's prepare this step before moving to the next step. First, we need to
+    // remove the (feedback) transient effect. Afterwards, we need to reset the
+    // label message text based on the error state.
 
-      if (stepActivated) {
-        if (stepActivated && this.Stepper_.hasFeedback) {
-          // Remove the (feedback) transient effect before move.
-          this.removeTransientEffect_(step);
-        }
-      }
-      return stepActivated;
-    };
+    if (this.adapter_.hasFeedback ())
+      this.adapter_.removeTransientEffect ();
 
-    for (model in this.Steps_.collection) {
-      // Rule eslint guard-for-in.
-      if (this.Steps_.collection.hasOwnProperty(model)) {
-        step = this.Steps_.collection[model];
-
-        if (step.isActive) {
-          previous = this.Steps_.collection[(step.id - 2)];
-
-          if (!previous) return false;
-
-          if (this.Stepper_.isLinear) {
-            if (previous.isEditable) {
-              moved = moveStep.bind(this)(previous);
-            }
-          } else {
-            moved = moveStep.bind(this)(previous);
-          }
-          break;
-        }
-      }
-    }
-    return moved;
-  };
+    this.adapter_.notifyBack ();
+  }
 
   cancel () {
     // The step is not active. There is no need to continue.
@@ -245,33 +220,6 @@ class MDCStepFoundation extends MDCFoundation {
     this.adapter_.setLabelIndicator (state, isEditable);
 
     return true;
-
-    /*
-    // Case the total number of completed steps
-    // are equal the total number of steps less the optionals
-    // or total number of completed steps are equal the total number of steps,
-    // we can consider that the stepper are successfully complete and
-    // dispatch the custom event.
-    stepperCompleted = false;
-
-    if (this.Steps_.completed === this.Steps_.total) {
-      stepperCompleted = true;
-    } else if (this.Steps_.completed === (this.Steps_.total - this.Steps_.optional)) {
-      for (item in this.Steps_.collection) {
-        // eslint guard-for-in.
-        if (this.Steps_.collection.hasOwnProperty(item)) {
-          stepItem = this.Steps_.collection[item];
-          hasRequired = (!stepItem.isOptional && (stepItem.state !== this.StepState_.COMPLETED));
-
-          if (hasRequired) break;
-        }
-      }
-      stepperCompleted = !hasRequired;
-    }
-
-    if (stepperCompleted) {
-      this.dispatchEventOnStepperComplete_();
-    }*/
   }
 
 

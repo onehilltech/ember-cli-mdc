@@ -47,6 +47,9 @@ export default class MDCStepperFoundation extends MDCFoundation {
     else if (evt.type === 'MDCStep:skip') {
       this.skip (evt.detail.stepId);
     }
+    else if (evt.type === 'MDCStep:back') {
+      this.back (evt.detail.stepId);
+    }
   }
 
   getActiveId () {
@@ -85,72 +88,26 @@ export default class MDCStepperFoundation extends MDCFoundation {
     return moved;
   }
 
+  /**
+   * Move "active" to the previous step. This operation can returns false
+   * if it does not regress the step.
+   *
+   * @return {boolean}
+   */
   back (stepId = null) {
-    /** @type {boolean} */
-    var moved;
-    /** @type {function} */
-    var moveStep;
-    /** @type {string} */
-    var model;
-    /** @type {MaterialStepper.Steps_.collection<step>} */
-    var step;
-    /** @type {MaterialStepper.Steps_.collection<step>} */
-    var previous;
-    moved = false;
-    moveStep = function (step) {
-      /** @type {boolean} */
-      var stepActivated;
-      stepActivated = this.setActive_(step.id);
-
-      if (stepActivated) {
-        if (stepActivated && this.Stepper_.hasFeedback) {
-          // Remove the (feedback) transient effect before move.
-          this.removeTransientEffect_(step);
-        }
-      }
-      return stepActivated;
-    };
-
-    for (model in this.Steps_.collection) {
-      // Rule eslint guard-for-in.
-      if (this.Steps_.collection.hasOwnProperty(model)) {
-        step = this.Steps_.collection[model];
-
-        if (step.isActive) {
-          previous = this.Steps_.collection[(step.id - 2)];
-
-          if (!previous) return false;
-
-          if (this.Stepper_.isLinear) {
-            if (previous.isEditable) {
-              moved = moveStep.bind(this)(previous);
-            }
-          } else {
-            moved = moveStep.bind(this)(previous);
-          }
-          break;
-        }
-      }
-    }
-    return moved;
-
+    let prevStepId = this.adapter_.findPrevStepToComplete (stepId);
+    return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
 
   skip (stepId = null) {
     let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    let moved = false;
-
-    if (nextStepId) {
-      moved = this.adapter_.activate (nextStepId);
-    }
-
-    return moved;
+    return !!nextStepId ? this.adapter_.activate (nextStepId) : false;
   }
 
   /**
    * Move "active" to specified step id.
    *
-   * @param {number} id Unique number for step.
+   * @param {number} stepId Unique number for step.
    * @return {boolean}
    */
   goto (stepId) {
@@ -164,8 +121,8 @@ export default class MDCStepperFoundation extends MDCFoundation {
    * @param {string} message The text content to show with error state.
    * @return {undefined}
    */
-  error (message = null) {
-    let stepId = this.getActiveId ();
+  error (message) {
+    let stepId = this.adapter_.getActiveId ();
 
     if (this.adapter_.hasFeedback ()) {
       // TODO remove transient feedback from current step.
@@ -173,9 +130,8 @@ export default class MDCStepperFoundation extends MDCFoundation {
 
     this.adapter_.setStepError (stepId);
 
-    if (message) {
+    if (!!message)
       this.adapter_.updateTitleMessage (stepId, message);
-    }
 
     this.adapter_.notifyStepError (stepId, message);
   }
