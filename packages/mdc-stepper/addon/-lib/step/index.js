@@ -108,35 +108,11 @@ export class MDCStep extends MDCComponent {
         return element && element.getAttribute (MDCStepFoundation.strings.ACTION_ATTRIBUTE);
       },
 
-      removeTransientEffect: () => {
-        let transient = this.content_.querySelector (MDCStepFoundation.strings.TRANSIENT_SELECTOR);
-
-        if (!transient)
-          return false;
-
-        this.root_.classList.remove (MDCStepFoundation.strings.TRANSIENT);
-        this.content_.removeChild (transient);
-        return true;
-      },
-
-      getLabelTitleMessageText () {
-        return this.labelTitleMessageText_;
-      },
-
-      updateTitleMessage: (message) => {
-        let titleMessage = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
-
-        if (!titleMessage) {
-          titleMessage = document.createElement ('span');
-          titleMessage.classList.add (MDCStepFoundation.cssClasses.TITLE_MESSAGE);
-          this.labelTitle_.appendChild (titleMessage);
-        }
-
-        titleMessage.textContent = message;
-      },
-
-      removeTitleMessage: () => this.removeTitleMessage_ (),
-      setLabelIndicator: (state) => this.setLabelIndicator_ (state),
+      removeTransientEffect: this.removeTransientEffect_.bind (this),
+      getLabelTitleMessageText: () => this.labelTitleMessageText_,
+      updateTitleMessage: this.updateTitleMessage_.bind (this),
+      removeTitleMessage: this.removeTitleMessage_.bind (this),
+      setLabelIndicator: this.setLabelIndicator_.bind (this),
 
       notifyNext: () => this.emit ('MDCStep:next', { stepId: this.root_.id }, true),
       notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true),
@@ -185,7 +161,10 @@ export class MDCStep extends MDCComponent {
   }
 
   set titleMessage (message) {
-    return this.foundation_.updateTitleMessage (message);
+    if (!!message)
+      return this.foundation_.updateTitleMessage (message);
+    else
+      return this.foundation_.removeTitleMessage ();
   }
 
   setLabelIndicator_ (state, isEditable) {
@@ -278,6 +257,46 @@ export class MDCStep extends MDCComponent {
     return error;
   }
 
+  /**
+   * Remove the transient effect from the step if it exists.
+   *
+   * @return {boolean}
+   * @private
+   */
+  removeTransientEffect_ () {
+    let transient = this.content_.querySelector (MDCStepFoundation.strings.TRANSIENT_SELECTOR);
+
+    if (!transient)
+      return false;
+
+    this.root_.classList.remove (MDCStepFoundation.strings.TRANSIENT);
+    this.content_.removeChild (transient);
+    return true;
+  }
+
+  /**
+   * Update the title message, creating one if it does not exist.
+   *
+   * @param message
+   * @private
+   */
+  updateTitleMessage_ (message) {
+    let titleMessage = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
+
+    if (!titleMessage) {
+      titleMessage = document.createElement ('span');
+      titleMessage.classList.add (MDCStepFoundation.cssClasses.TITLE_MESSAGE);
+      this.labelTitle_.appendChild (titleMessage);
+    }
+
+    titleMessage.textContent = message;
+  }
+
+  /**
+   * Remove the title message if it exists.
+   *
+   * @return {undefined}
+   */
   removeTitleMessage_ () {
     let titleMessage = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
 

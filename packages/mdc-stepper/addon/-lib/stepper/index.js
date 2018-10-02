@@ -311,41 +311,6 @@ export class MDCStepper extends MDCComponent {
     }
   }
 
-
-  /**
-   * Update the title message or creates a new if it not exists.
-   * @param {MaterialStepper.Steps_.collection<step>} step The step of label to be updated.
-   * @param {string} text The text content to update.
-   * @return {undefined}
-   */
-  updateTitleMessage_ (step, text) {
-    /** @type {HTMLElement | null} */
-    let titleMessage;
-    titleMessage = step.container.querySelector('.' + this.CssClasses_.STEP_TITLE_MESSAGE);
-
-    if (!titleMessage) {
-      titleMessage = document.createElement('span');
-      titleMessage.classList.add(this.CssClasses_.STEP_TITLE_MESSAGE);
-      step.labelTitle.appendChild(titleMessage);
-    }
-    titleMessage.textContent = text;
-  }
-
-  /**
-   * Remove the title message if it exists.
-   * @param {MaterialStepper.Steps_.collection<step>} step The step to remove title message.
-   * @return {undefined}
-   */
-  removeTitleMessage_ (step) {
-    /** @type {HTMLElement | null} */
-    let titleMessage;
-    titleMessage = step.container.querySelector('.' + this.CssClasses_.STEP_TITLE_MESSAGE);
-
-    if (titleMessage) {
-      titleMessage.parentNode.removeChild(titleMessage);
-    }
-  }
-
   /**
    * Remove (feedback) transient effect and applied to the step.
    * @param {MaterialStepper.Steps_.collection<step>} step The step to remove effect.

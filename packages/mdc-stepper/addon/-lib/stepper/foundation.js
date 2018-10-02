@@ -179,23 +179,4 @@ export default class MDCStepperFoundation extends MDCFoundation {
 
     this.adapter_.notifyStepError (stepId, message);
   }
-
-  /**
-   * Update the title message or creates a new if it not exists.
-   * @param {MaterialStepper.Steps_.collection<step>} step The step of label to be updated.
-   * @param {string} text The text content to update.
-   * @return {undefined}
-   */
-  updateTitleMessage (text) {
-    /** @type {HTMLElement | null} */
-    var titleMessage;
-    titleMessage = step.container.querySelector('.' + this.CssClasses_.STEP_TITLE_MESSAGE);
-
-    if (!titleMessage) {
-      titleMessage = document.createElement('span');
-      titleMessage.classList.add(this.CssClasses_.STEP_TITLE_MESSAGE);
-      step.labelTitle.appendChild(titleMessage);
-    }
-    titleMessage.textContent = text;
-  }
 }
