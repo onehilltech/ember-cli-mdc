@@ -19,7 +19,7 @@
     {{/mdc-step-actions}}
   {{/mdc-step}}
 
-  {{#mdc-step}}
+  {{#mdc-step editable=true}}
     {{#mdc-step-label}}
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Step 2{{/mdc-step-title-text}}
@@ -52,7 +52,7 @@
 
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
-      {{#mdc-step-button action="skip"}}Skip{{/mdc-step-button}}
+      {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
       {{#mdc-step-button action="cancel"}}Cancel{{/mdc-step-button}}
     {{/mdc-step-actions}}
   {{/mdc-step}}
