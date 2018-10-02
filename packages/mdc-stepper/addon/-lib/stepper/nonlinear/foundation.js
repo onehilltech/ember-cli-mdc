@@ -45,11 +45,6 @@ export default class MDCNonLinearStepperFoundation extends MDCStepperBaseFoundat
     return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
 
-  skip (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    return !!nextStepId ? this.adapter_.activate (nextStepId) : false;
-  }
-
   /**
    * Move "active" to specified step id.
    *

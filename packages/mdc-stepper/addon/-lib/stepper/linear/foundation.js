@@ -18,25 +18,26 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
    *
    * @return {boolean}
    */
-
   next (stepId = null) {
     let iter = this.adapter_.iterator (stepId);
     const isEditable = iter.isEditable ();
+    const isCompleted = iter.isCompleted ();
 
     let nextStepId = iter.next () ? iter.id () : null;
 
-    if (isEditable) {
+    if (isCompleted && isEditable) {
       // The current step was editable. This means we came back to this step. We
       // need to find the first step that has not been completed. If we cannot
       // find a next step that is not completed, then we just use the current
       // next step.
 
-      while (iter.next ()) {
+      do {
         if (!iter.isCompleted ()) {
           nextStepId = iter.id ();
           break;
         }
       }
+      while (iter.next ());
     }
 
     if (nextStepId) {
@@ -60,11 +61,6 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
     let prevStepId = iter.previous () && iter.isEditable () ? iter.id () : null;
 
     return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
-  }
-
-  skip (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    return !!nextStepId ? this.adapter_.activate (nextStepId) : false;
   }
 
   /**

@@ -121,9 +121,6 @@ export class MDCStepper extends MDCComponent {
       setStepCompleted: (stepId) => this.findStep_ (stepId).setStepCompleted (),
       setStepError: (stepId) => this.findStep_ (stepId).setStepError (),
 
-      findNextStepToComplete: this.findNextStepIdToComplete_.bind (this),
-      findPrevStepToComplete: this.findPrevStepIdToComplete_.bind (this),
-
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
 
       notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
@@ -180,6 +177,24 @@ export class MDCStepper extends MDCComponent {
   }
 
   /**
+   * Defines current step state to "completed" and move active to the next.
+   * This operation can returns false if it does not advance the step.
+   * @return {boolean}
+   */
+  next () {
+    return this.foundation_.next ();
+  }
+
+  /**
+   * Move "active" to the previous step. This operation can returns false
+   * if it does not regress the step.
+   * @return {boolean}
+   */
+  back () {
+    return this.foundation_.back ();
+  }
+
+  /**
    * Move "active" to the next if the current step is optional. This operation can returns false
    * if it does not advances the step.
    * @return {boolean}
@@ -206,24 +221,6 @@ export class MDCStepper extends MDCComponent {
    */
   error (message) {
     return this.foundation_.error (message);
-  }
-
-  /**
-   * Defines current step state to "completed" and move active to the next.
-   * This operation can returns false if it does not advance the step.
-   * @return {boolean}
-   */
-  next () {
-    return this.foundation_.next ();
-  }
-
-  /**
-   * Move "active" to the previous step. This operation can returns false
-   * if it does not regress the step.
-   * @return {boolean}
-   */
-  back () {
-    return this.foundation_.back ();
   }
 
   /**
@@ -297,59 +294,6 @@ export class MDCStepper extends MDCComponent {
     }
 
     return true;
-  }
-
-  /**
-   * Find the next step to complete depending on the stepper style.
-   *
-   * @param stepId
-   * @private
-   */
-  findNextStepIdToComplete_ (stepId = this.findActiveStep_ ().id) {
-    let index = this.findStepIndex_ (stepId);
-
-    if (index === -1)
-      return null;
-
-    if (index >= this.steps.length - 1)
-      return null;
-
-    let step = this.steps[index];
-    let nextStepId = this.steps[index + 1].id;
-
-    if (step.isEditable && this.isLinear) {
-      // In linear steppers if the current step is editable the stepper needs to find
-      // the next step without "completed" state
-
-      for (let i = index + 1, length = this.steps.length; i < length; ++ i) {
-        let nextStep = this.steps[i];
-
-        if (nextStep.isCompleted)
-          return nextStep.id;
-      }
-    }
-
-    return nextStepId;
-  }
-
-  /**
-   * Find the previous step to complete depending on the stepper style.
-   *
-   * @param stepId
-   * @private
-   */
-  findPrevStepIdToComplete_ (stepId = this.findActiveStep_ ().id) {
-    let index = this.findStepIndex_ (stepId);
-
-    if (index <= 0)
-      return null;
-
-    let prevStep = this.steps[index - 1];
-
-    // If we are working with a non-linear stepper, then the user is allowed to
-    // freely go back to any step. Otherwise, we can only go to the previous step
-    // if the previous step is editable.
-    return this.isLinear_ ? (prevStep.isEditable ? prevStep.id : null) : prevStep.id;
   }
 
   /**

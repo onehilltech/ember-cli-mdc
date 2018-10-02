@@ -56,8 +56,16 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     return this.adapter_.getActiveId ()
   }
 
+  /**
+   * Skip the current step. A step can be skipped if it is marked as optional.
+   *
+   * @param stepId
+   * @return {boolean}
+   */
   skip (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
+    let iter = this.adapter_.iterator (stepId);
+    let nextStepId = iter.isOptional () && iter.next () ? iter.id () : null;
+
     return !!nextStepId ? this.adapter_.activate (nextStepId) : false;
   }
 

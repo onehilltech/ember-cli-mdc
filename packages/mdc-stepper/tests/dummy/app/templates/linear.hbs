@@ -34,7 +34,25 @@
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
       {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
-      {{#mdc-step-button action="cancel"}}Cancel{{/mdc-step-button}}
+    {{/mdc-step-actions}}
+  {{/mdc-step}}
+
+  {{#mdc-step optional=true editable=true}}
+    {{#mdc-step-label}}
+      {{#mdc-step-title}}
+        {{#mdc-step-title-text}}Step 3{{/mdc-step-title-text}}
+        {{#mdc-step-title-message}}Optional{{/mdc-step-title-message}}
+      {{/mdc-step-title}}
+    {{/mdc-step-label}}
+
+    {{#mdc-step-content}}
+
+    {{/mdc-step-content}}
+
+    {{#mdc-step-actions}}
+      {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
+      {{#mdc-step-button action="skip"}}Skip{{/mdc-step-button}}
+      {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
     {{/mdc-step-actions}}
   {{/mdc-step}}
 
@@ -53,7 +71,6 @@
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
       {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
-      {{#mdc-step-button action="cancel"}}Cancel{{/mdc-step-button}}
     {{/mdc-step-actions}}
   {{/mdc-step}}
 {{/mdc-stepper}}
