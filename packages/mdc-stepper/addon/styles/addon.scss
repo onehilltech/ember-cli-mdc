@@ -491,7 +491,7 @@
       width: calc(100% - #{(($stepper-padding * 4))});
 
       // "Continue" button on horizontal steppers.
-      & [data-stepper-next] {
+      & [data-mdc-step-action="next"] {
         order: 4;
         margin-left: #{$stepper-padding / 1.5};
         margin-right: 0;
@@ -502,19 +502,19 @@
       }
 
       // "Cancel" button on horizontal steppers.
-      & [data-stepper-cancel] {
+      & [data-mdc-step-action="cancel"] {
         order: 3;
         margin-left: auto;
       }
 
       // "Skip" button on horizontal steppers.
-      & [data-stepper-skip] {
+      & [data-mdc-step-action="skip"] {
         order: 2;
         margin-left: auto;
       }
 
       // "Back" button on horizontal steppers.
-      & [data-stepper-back] {
+      & [data-mdc-step-action="back"] {
         order: 1;
         margin-left: 0;
         margin-right: auto;
