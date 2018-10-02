@@ -70,19 +70,8 @@ export default class MDCStepperFoundation extends MDCFoundation {
       moved = this.adapter_.activate (nextStepId);
     }
 
-    // Update "manually" the state of current step to "completed" because
-    // MaterialStepper.setActive_(<number>) can't change the state of non-linears steppers
-    // and can't change the state of optional or last step in linears steppers.
-    if (this.adapter_.isLinear ()) {
-      if (step.isOptional || (step.id === this.Steps_.total)) {
-        this.updateStepState_(step, this.StepState_.COMPLETED);
-      }
-    }
-    else {
-      this.adapter_.setStepCompleted (stepId);
-    }
-
     // Notify the listeners that we have completed this step.
+    this.adapter_.setStepCompleted (stepId);
     this.adapter_.notifyStepComplete (stepId);
 
     return moved;
