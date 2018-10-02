@@ -339,6 +339,6 @@ export class MDCStepper extends MDCComponent {
   }
 
   get isLinear_ () {
-    this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_LINEAR);
+    return this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_LINEAR);
   }
 }
