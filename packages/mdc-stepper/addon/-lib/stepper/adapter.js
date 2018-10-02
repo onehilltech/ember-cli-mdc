@@ -16,8 +16,12 @@ class MDCStepperAdapter {
   activate (stepId) {}
 
   setStepCompleted (stepId) {}
+  setStepError (stepId) {}
+
+  updateTitleMessage (stepId, message) {}
 
   notifyStepComplete (stepId) {}
+  notifyStepError (stepId, message) {}
 }
 
 export default MDCStepperAdapter;

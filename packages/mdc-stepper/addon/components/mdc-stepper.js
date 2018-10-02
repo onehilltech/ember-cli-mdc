@@ -3,6 +3,8 @@ import layout from '../templates/components/mdc-stepper';
 
 import { MDCStepper } from '../-lib';
 
+import { isPresent } from '@ember/utils';
+
 export default Component.extend({
   layout,
 
@@ -28,6 +30,16 @@ export default Component.extend({
     this._super (...arguments);
 
     this._stepper = new MDCStepper (this.element);
+  },
+
+  didUpdateAttrs () {
+    this._super (...arguments);
+
+    let error = this.get ('error');
+
+    if (isPresent (error)) {
+      this._stepper.error (error);
+    }
   },
 
   willDestroyElement () {

@@ -56,9 +56,13 @@ export class MDCStepper extends MDCComponent {
       getActiveId: () => this.findActiveStep_ ().id,
 
       setStepCompleted: (stepId) => this.findStep_ (stepId).setStepCompleted (),
-      findNextStepToComplete: (stepId) => this.findNextStepIdToComplete_ (stepId),
+      setStepError: (stepId) => this.findStep_ (stepId).setStepError (),
 
-      notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true)
+      findNextStepToComplete: (stepId) => this.findNextStepIdToComplete_ (stepId),
+      updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
+
+      notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
+      notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true)
     }));
   }
 
@@ -105,7 +109,7 @@ export class MDCStepper extends MDCComponent {
 
   /**
    * Move "active" to specified step id.
-   * 
+   *
    * @param {number} id Unique number for step.
    * @return {boolean}
    */

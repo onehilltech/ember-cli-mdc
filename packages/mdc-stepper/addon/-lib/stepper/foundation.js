@@ -105,4 +105,46 @@ export default class MDCStepperFoundation extends MDCFoundation {
   goto (stepId) {
     return this.adapter_.activate (stepId);
   }
+
+  /**
+   * Defines the current state of step to "error" and display
+   * an alert message instead of default title message.
+   *
+   * @param {string} message The text content to show with error state.
+   * @return {undefined}
+   */
+  error (message = null) {
+    let stepId = this.getActiveId ();
+
+    if (this.adapter_.hasFeedback ()) {
+      // TODO remove transient feedback from current step.
+    }
+
+    this.adapter_.setStepError (stepId);
+
+    if (message) {
+      this.adapter_.updateTitleMessage (stepId, message);
+    }
+
+    this.adapter_.notifyStepError (stepId, message);
+  }
+
+  /**
+   * Update the title message or creates a new if it not exists.
+   * @param {MaterialStepper.Steps_.collection<step>} step The step of label to be updated.
+   * @param {string} text The text content to update.
+   * @return {undefined}
+   */
+  updateTitleMessage (text) {
+    /** @type {HTMLElement | null} */
+    var titleMessage;
+    titleMessage = step.container.querySelector('.' + this.CssClasses_.STEP_TITLE_MESSAGE);
+
+    if (!titleMessage) {
+      titleMessage = document.createElement('span');
+      titleMessage.classList.add(this.CssClasses_.STEP_TITLE_MESSAGE);
+      step.labelTitle.appendChild(titleMessage);
+    }
+    titleMessage.textContent = text;
+  }
 }

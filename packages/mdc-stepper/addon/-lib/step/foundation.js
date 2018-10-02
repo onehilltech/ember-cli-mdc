@@ -109,7 +109,7 @@ class MDCStepFoundation extends MDCFoundation {
       let labelTitleMessageText = this.adapter_.getLabelTitleMessageText ();
 
       if (!!labelTitleMessageText) {
-        this.adapter_.updateTitleMessage (labelTitleMessageText);
+        this.updateTitleMessage (labelTitleMessageText);
       }
       else {
         this.adapter_.removeTitleMessage ();
@@ -125,6 +125,10 @@ class MDCStepFoundation extends MDCFoundation {
 
   cancel () {
     this.adapter_.notifyCancel ();
+  }
+
+  updateTitleMessage (message) {
+    this.adapter_.updateTitleMessage (message);
   }
 
   /**
@@ -150,6 +154,10 @@ class MDCStepFoundation extends MDCFoundation {
 
   setStepCompleted () {
     return !this.adapter_.hasClass (MDCStepFoundation.states.COMPLETED) ? this.updateState_ (MDCStepFoundation.states.COMPLETED) : false;
+  }
+
+  setStepError () {
+    return !this.adapter_.hasClass (MDCStepFoundation.states.ERROR) ? this.updateState_ (MDCStepFoundation.states.ERROR) : false;
   }
 
   updateState_ (state) {

@@ -1,9 +1,14 @@
 <h2 id="title">Linear Stepper</h2>
 
-{{#mdc-stepper}}
+{{#mdc-button click=(action (mut error) "This is an error message")}}Error Message{{/mdc-button}}
+
+{{#mdc-stepper error=error}}
   {{#mdc-step}}
     {{#mdc-step-label}}
-      {{#mdc-step-title}}{{#mdc-step-title-text}}Step 1{{/mdc-step-title-text}}{{/mdc-step-title}}
+      {{#mdc-step-title}}
+        {{#mdc-step-title-text}}Step 1{{/mdc-step-title-text}}
+        {{#mdc-step-title-message}}Message for Step 1{{/mdc-step-title-message}}
+      {{/mdc-step-title}}
     {{/mdc-step-label}}
 
     {{#mdc-step-content}}
@@ -19,7 +24,10 @@
 
   {{#mdc-step optional=true}}
     {{#mdc-step-label}}
-      {{#mdc-step-title}}{{#mdc-step-title-text}}Step 2{{/mdc-step-title-text}}{{/mdc-step-title}}
+      {{#mdc-step-title}}
+        {{#mdc-step-title-text}}Step 2{{/mdc-step-title-text}}
+        {{#mdc-step-title-message}}Message for Step 1{{/mdc-step-title-message}}
+      {{/mdc-step-title}}
     {{/mdc-step-label}}
 
     {{#mdc-step-content}}
@@ -35,7 +43,10 @@
 
   {{#mdc-step}}
     {{#mdc-step-label}}
-      {{#mdc-step-title}}{{#mdc-step-title-text}}Step 3{{/mdc-step-title-text}}{{/mdc-step-title}}
+      {{#mdc-step-title}}
+        {{#mdc-step-title-text}}Step 3{{/mdc-step-title-text}}
+        {{#mdc-step-title-message}}Message for Step 1{{/mdc-step-title-message}}
+      {{/mdc-step-title}}
     {{/mdc-step-label}}
 
     {{#mdc-step-content}}

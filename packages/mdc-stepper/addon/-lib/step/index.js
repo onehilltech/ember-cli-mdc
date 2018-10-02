@@ -180,6 +180,14 @@ export class MDCStep extends MDCComponent {
     return this.foundation_.setStepCompleted ();
   }
 
+  setStepError () {
+    return this.foundation_.setStepError ();
+  }
+
+  set titleMessage (message) {
+    return this.foundation_.updateTitleMessage (message);
+  }
+
   setLabelIndicator_ (state, isEditable) {
     let currentIndicatorContent = this.root_.querySelector (MDCStepFoundation.strings.LABEL_INDICATOR_CONTENT_SELECTOR);
     let indicatorContent;
