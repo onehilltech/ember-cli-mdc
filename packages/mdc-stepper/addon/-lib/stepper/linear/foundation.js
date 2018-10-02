@@ -1,59 +1,12 @@
-const { MDCFoundation } = mdc.base;
-import MDCStepperAdapter from './adapter';
+import MDCStepperBaseFoundation from '../foundation';
+import MDCStepperAdapter from '../adapter';
 
-import { cssClasses, strings } from './constants';
-
-export default class MDCStepperBaseFoundation extends MDCFoundation {
-  static get cssClasses() {
-    return cssClasses;
-  }
-
-  static get strings () {
-    return strings;
-  }
-
-  static get defaultAdapter () {
-    return /** @type {!MDCStepperAdapter} */ ({
-      hasClass: () => {},
-      isLinear: () => {},
-      hasFeedback: () => {},
-      hasTransient: () => {}
-    });
-  }
-
+export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation {
   /**
    * @param {!MDCStepperAdapter} adapter
    */
   constructor (adapter) {
-    super (Object.assign (MDCStepperBaseFoundation.defaultAdapter, adapter));
-  }
-
-  hasFeedback () {
-    return this.adapter_.hasFeedback ();
-  }
-
-  hasTransient () {
-    return this.adapter_.hasTransient ();
-  }
-
-  isLinear () {
-    return this.adapter_.isLinear ();
-  }
-
-  handleInteraction (evt) {
-    if (evt.type === 'MDCStep:next') {
-      this.next (evt.detail.stepId);
-    }
-    else if (evt.type === 'MDCStep:skip') {
-      this.skip (evt.detail.stepId);
-    }
-    else if (evt.type === 'MDCStep:back') {
-      this.back (evt.detail.stepId);
-    }
-  }
-
-  getActiveId () {
-    return this.adapter_.getActiveId ()
+    super (adapter);
   }
 
   /**

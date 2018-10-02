@@ -2,10 +2,13 @@
 
 const { MDCComponent } = mdc.base;
 
-import MDCStepperFoundation from './foundation';
+import MDCStepperBaseFoundation from './foundation';
+import MDCLinearStepperFoundation from './linear/foundation';
+import MDCNonLinearStepperFoundation from './nonlinear/foundation';
+
 import MDCStepperAdapter from './adapter';
 
-export { MDCStepperFoundation };
+export { MDCStepperBaseFoundation, MDCLinearStepperFoundation, MDCNonLinearStepperFoundation };
 import { MDCStep } from '../step/index';
 
 const STEP_EVENT_TYPES = [
@@ -40,11 +43,11 @@ export class MDCStepper extends MDCComponent {
   }
 
   getDefaultFoundation () {
-    return new MDCStepperFoundation (/** @type {!MDCStepperAdapter} */ ({
+    const adapter = /** @type {!MDCStepperAdapter} */ (Object.assign ({
       hasClass: (className) => this.root_.classList.contains (className),
 
       isLinear: () => this.isLinear_,
-      hasFeedback: () => this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_FEEDBACK),
+      hasFeedback: () => this.root_.classList.contains (MDCStepperBaseFoundation.cssClasses.STEPPER_FEEDBACK),
       hasTransient: () => this.hasTransient_ (),
 
       activate: this.activate_.bind (this),
@@ -61,6 +64,17 @@ export class MDCStepper extends MDCComponent {
       notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
       notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true)
     }));
+
+    let foundation;
+
+    if (this.root_.classList.contains (MDCStepperBaseFoundation.strings.STEPPER_LINEAR)) {
+      foundation = new MDCLinearStepperFoundation (adapter);
+    }
+    else {
+      foundation = new MDCNonLinearStepperFoundation (adapter);
+    }
+
+    return foundation;
   }
 
   initialize (stepFactory = (el, stepper, ordinal) => new MDCStep (el, undefined, stepper, ordinal)) {
@@ -149,7 +163,7 @@ export class MDCStepper extends MDCComponent {
    * @private
    */
   instantiateSteps_ (stepFactory) {
-    const stepElements = [].slice.call (this.root_.querySelectorAll (MDCStepperFoundation.strings.STEP_SELECTOR));
+    const stepElements = [].slice.call (this.root_.querySelectorAll (MDCStepperBaseFoundation.strings.STEP_SELECTOR));
 
     return stepElements.map ((el, i) => {
       let step = stepFactory (el, this, i + 1);
@@ -332,13 +346,13 @@ export class MDCStepper extends MDCComponent {
       STEP_SELECTOR,
       STEP_CONTENT_SELECTOR,
       TRANSIENT_SELECTOR
-    } = MDCStepperFoundation.strings;
+    } = MDCStepperBaseFoundation.strings;
 
     let selectorTransient = `${STEP_SELECTOR} > ${STEP_CONTENT_SELECTOR} > ${TRANSIENT_SELECTOR}`;
     !!this.root_.querySelector (selectorTransient);
   }
 
   get isLinear_ () {
-    return this.root_.classList.contains (MDCStepperFoundation.cssClasses.STEPPER_LINEAR);
+    return this.root_.classList.contains (MDCStepperBaseFoundation.cssClasses.STEPPER_LINEAR);
   }
 }
