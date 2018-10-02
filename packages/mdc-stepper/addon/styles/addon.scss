@@ -64,7 +64,6 @@
 /* STEPPER VERTICAL ONLY */
 
 .mdc-stepper:not(.mdc-stepper--horizontal) {
-
   & > .mdc-step {
 
     // Connector line is not present in the last step.
@@ -90,7 +89,6 @@
   }
 
   & .mdc-step__label {
-
     &:hover, &:active, &:focus {
       background-color: rgba(0, 0, 0, 0.06);
     }
@@ -152,24 +150,24 @@
     justify-content: flex-start;
 
     // "Continue" button.
-    & [data-stepper-next] {
+    & [data-mdc-step-action="next"] {
       order: 1;
       margin-right: 8px;
     }
 
     // "Cancel" button.
-    & [data-stepper-cancel] {
+    & [data-mdc-step-action="cancel"] {
       order: 2;
     }
 
     // "Skip" button.
-    & [data-stepper-skip] {
+    & [data-mdc-step-action="skip"] {
       order: 3;
       margin-left: auto;
     }
 
     // "Back" button.
-    & [data-stepper-back] {
+    & [data-mdc-step-action="back"] {
       order: 4;
       margin-left: auto;
     }
@@ -293,10 +291,6 @@
   height: ($stepper-padding * 4);
   margin-left: $step-content-margin-left;
   margin-right: ($stepper-padding * 2);
-
-  .mdc-step__button {
-    margin-right: 16px;
-  }
 }
 
 /* STEP TRANSIENT */
