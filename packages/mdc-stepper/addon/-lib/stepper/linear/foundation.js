@@ -48,6 +48,9 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
     this.adapter_.setStepCompleted (stepId);
     this.adapter_.notifyStepComplete (stepId);
 
+    if (this.adapter_.getIsComplete ())
+      this.adapter_.notifyComplete ();
+
     return !!nextStepId;
   }
 

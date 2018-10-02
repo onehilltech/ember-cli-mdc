@@ -66,6 +66,9 @@ export class MDCStepper extends MDCComponent {
 
       notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
       notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true),
+      notifyComplete: () => this.emit ('MDCStepper:complete', {}, true),
+
+      getIsComplete: () => this.isComplete_,
 
       iterator: (stepId) => {
         let index = !!stepId ? this.findStepIndex_ (stepId) : 0;
@@ -309,6 +312,14 @@ export class MDCStepper extends MDCComponent {
 
   get isLinear_ () {
     return this.root_.classList.contains (MDCStepperBaseFoundation.cssClasses.STEPPER_LINEAR);
+  }
+
+  get isComplete () {
+    return this.foundation_.getIsComplete ();
+  }
+
+  get isComplete_ () {
+    return false;
   }
 }
 

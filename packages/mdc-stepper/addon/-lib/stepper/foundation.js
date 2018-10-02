@@ -17,7 +17,23 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
       hasClass: () => {},
       isLinear: () => {},
       hasFeedback: () => {},
-      hasTransient: () => {}
+      hasTransient: () => {},
+
+      getActiveId: () => {},
+      getIsComplete: () => {},
+
+      activate: (stepId, force) => {},
+
+      setStepCompleted: (stepId) => {},
+      setStepError: (stepId) => {},
+
+      updateTitleMessage: (stepId, message) => {},
+
+      notifyStepComplete: (stepId) => {},
+      notifyStepError: (stepId, message) => {},
+      notifyComplete: () => {},
+
+      iterator: (stepId) => {}
     });
   }
 
@@ -59,6 +75,9 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     return this.adapter_.getActiveId ()
   }
 
+  getIsComplete () {
+    return this.adapter_.getIsComplete ();
+  }
 
   /**
    * Defines current step state to "completed" and move active to the next.
@@ -79,6 +98,9 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     // Notify the listeners that we have completed this step.
     this.adapter_.setStepCompleted (stepId);
     this.adapter_.notifyStepComplete (stepId);
+
+    if (this.adapter_.getIsComplete ())
+      this.adapter_.notifyComplete ();
 
     return !!nextStepId;
   }
