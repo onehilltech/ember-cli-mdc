@@ -124,11 +124,11 @@ class MDCStepFoundation extends MDCFoundation {
   }
 
   cancel () {
-    this.adapter_.notifyCancel ();
-  }
+    // The step is not active. There is no need to continue.
+    if (!this.isActive ())
+      return false;
 
-  updateTitleMessage (message) {
-    this.adapter_.updateTitleMessage (message);
+    this.adapter_.notifyCancel ();
   }
 
   /**
@@ -150,6 +150,10 @@ class MDCStepFoundation extends MDCFoundation {
 
     this.adapter_.notifySkip ()
     return true;
+  }
+
+  updateTitleMessage (message) {
+    this.adapter_.updateTitleMessage (message);
   }
 
   setStepCompleted () {
