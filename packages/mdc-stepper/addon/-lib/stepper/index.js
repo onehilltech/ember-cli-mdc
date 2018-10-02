@@ -105,7 +105,7 @@ export class MDCStepper extends MDCComponent {
 
   /**
    * Move "active" to specified step id.
-   * This operation is similar to the MaterialStepper.setActive_(<number>).
+   * 
    * @param {number} id Unique number for step.
    * @return {boolean}
    */

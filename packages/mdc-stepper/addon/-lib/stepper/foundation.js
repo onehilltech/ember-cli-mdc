@@ -95,4 +95,14 @@ export default class MDCStepperFoundation extends MDCFoundation {
 
     return moved;
   }
+
+  /**
+   * Move "active" to specified step id.
+   *
+   * @param {number} id Unique number for step.
+   * @return {boolean}
+   */
+  goto (stepId) {
+    return this.adapter_.activate (stepId);
+  }
 }
