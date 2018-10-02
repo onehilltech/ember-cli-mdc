@@ -137,7 +137,7 @@ export class MDCStepper extends MDCComponent {
 
     let foundation;
 
-    if (this.root_.classList.contains (MDCStepperBaseFoundation.strings.STEPPER_LINEAR)) {
+    if (this.root_.classList.contains (MDCStepperBaseFoundation.cssClasses.STEPPER_LINEAR)) {
       foundation = new MDCLinearStepperFoundation (adapter);
     }
     else {

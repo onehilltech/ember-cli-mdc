@@ -21,21 +21,22 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
 
   next (stepId = null) {
     let iter = this.adapter_.iterator (stepId);
-    let nextStepId = null;
+    const isEditable = iter.isEditable ();
 
-    if (iter.isEditable ()) {
-      // The current step is editable. This means we came back to this step. We
-      // need to find the first step that has not been completed.
+    let nextStepId = iter.next () ? iter.id () : null;
 
-      while (iter.next () && !nextStepId) {
-        if (!iter.isCompleted ())
+    if (isEditable) {
+      // The current step was editable. This means we came back to this step. We
+      // need to find the first step that has not been completed. If we cannot
+      // find a next step that is not completed, then we just use the current
+      // next step.
+
+      while (iter.next ()) {
+        if (!iter.isCompleted ()) {
           nextStepId = iter.id ();
+          break;
+        }
       }
-    }
-    else {
-      // The step is not editable. This means we need to need to move
-      // to the next step in our collection.
-      nextStepId = iter.next () ? iter.id () : null;
     }
 
     if (nextStepId) {
@@ -50,13 +51,14 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
   }
 
   /**
-   * Move "active" to the previous step. This operation can returns false
-   * if it does not regress the step.
+   * Move "active" to the previous step if the previous step is editable.
    *
    * @return {boolean}
    */
   back (stepId = null) {
-    let prevStepId = this.adapter_.findPrevStepToComplete (stepId);
+    let iter = this.adapter_.iterator (stepId);
+    let prevStepId = iter.previous () && iter.isEditable () ? iter.id () : null;
+
     return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
 

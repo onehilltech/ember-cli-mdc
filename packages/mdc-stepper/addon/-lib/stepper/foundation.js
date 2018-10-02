@@ -56,38 +56,6 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     return this.adapter_.getActiveId ()
   }
 
-  /**
-   * Defines current step state to "completed" and move active to the next.
-   * This operation can returns false if it does not advance the step.
-   *
-   * @return {boolean}
-   */
-  next (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    let moved = false;
-
-    if (nextStepId) {
-      moved = this.adapter_.activate (nextStepId);
-    }
-
-    // Notify the listeners that we have completed this step.
-    this.adapter_.setStepCompleted (stepId);
-    this.adapter_.notifyStepComplete (stepId);
-
-    return moved;
-  }
-
-  /**
-   * Move "active" to the previous step. This operation can returns false
-   * if it does not regress the step.
-   *
-   * @return {boolean}
-   */
-  back (stepId = null) {
-    let prevStepId = this.adapter_.findPrevStepToComplete (stepId);
-    return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
-  }
-
   skip (stepId = null) {
     let nextStepId = this.adapter_.findNextStepToComplete (stepId);
     return !!nextStepId ? this.adapter_.activate (nextStepId) : false;
