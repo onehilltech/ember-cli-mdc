@@ -23,6 +23,8 @@ class MDCStepperAdapter {
 
   notifyStepComplete (stepId) {}
   notifyStepError (stepId, message) {}
+
+  iterator (stepId) {}
 }
 
 export default MDCStepperAdapter;

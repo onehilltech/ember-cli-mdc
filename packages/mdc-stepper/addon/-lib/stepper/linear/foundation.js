@@ -13,21 +13,40 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
    * Defines current step state to "completed" and move active to the next.
    * This operation can returns false if it does not advance the step.
    *
+   * In linear steppers, if the current step is editable the stepper needs to find
+   * the next step without "completed" state.
+   *
    * @return {boolean}
    */
+
   next (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    let moved = false;
+    let iter = this.adapter_.iterator (stepId);
+    let nextStepId = null;
+
+    if (iter.isEditable ()) {
+      // The current step is editable. This means we came back to this step. We
+      // need to find the first step that has not been completed.
+
+      while (iter.next () && !nextStepId) {
+        if (!iter.isCompleted ())
+          nextStepId = iter.id ();
+      }
+    }
+    else {
+      // The step is not editable. This means we need to need to move
+      // to the next step in our collection.
+      nextStepId = iter.next () ? iter.id () : null;
+    }
 
     if (nextStepId) {
-      moved = this.adapter_.activate (nextStepId);
+      this.adapter_.activate (nextStepId);
     }
 
     // Notify the listeners that we have completed this step.
     this.adapter_.setStepCompleted (stepId);
     this.adapter_.notifyStepComplete (stepId);
 
-    return moved;
+    return !!nextStepId;
   }
 
   /**

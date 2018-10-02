@@ -13,21 +13,23 @@ export default class MDCNonLinearStepperFoundation extends MDCStepperBaseFoundat
    * Defines current step state to "completed" and move active to the next.
    * This operation can returns false if it does not advance the step.
    *
+   * For non-linear steppers, the next step is the next step in the stepper.
+   *
    * @return {boolean}
    */
   next (stepId = null) {
-    let nextStepId = this.adapter_.findNextStepToComplete (stepId);
-    let moved = false;
+    let iterator = this.adapter_.iterator (stepId);
+    let nextStepId = iterator.next () ? iterator.id () : null;
 
     if (nextStepId) {
-      moved = this.adapter_.activate (nextStepId);
+      this.adapter_.activate (nextStepId);
     }
 
     // Notify the listeners that we have completed this step.
     this.adapter_.setStepCompleted (stepId);
     this.adapter_.notifyStepComplete (stepId);
 
-    return moved;
+    return !!nextStepId;
   }
 
   /**

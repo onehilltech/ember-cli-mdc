@@ -11,12 +11,77 @@ import MDCStepperAdapter from './adapter';
 export { MDCStepperBaseFoundation, MDCLinearStepperFoundation, MDCNonLinearStepperFoundation };
 import { MDCStep } from '../step/index';
 
+import MDCStepIterator from './iterator';
+
 const STEP_EVENT_TYPES = [
   'MDCStep:next',
   'MDCStep:skip',
   'MDCStep:back'
 ];
 
+/**
+ * MDCStepIterator
+ */
+class StepIteratorImpl extends MDCStepIterator {
+  constructor (stepper, index = 0) {
+    super ();
+
+    this.index_ = index;
+    this.stepper_ = stepper;
+  }
+
+  next () {
+    if (this.index_ >= this.stepper_.steps.length - 1)
+      return false;
+
+    ++ this.index_;
+    return true;
+  }
+
+  previous () {
+    if (this.index_ === 0)
+      return false;
+
+    -- this.index_;
+    return true;
+  }
+
+  done () {
+    return this.index_ >= this.stepper_.steps.length;
+  }
+
+  id () {
+    return this.stepper_.steps[this.index_].id;
+  }
+
+  isEditable () {
+    return this.stepper_.steps[this.index_].isEditable;
+  }
+
+  isCompleted () {
+    return this.stepper_.steps[this.index_].isCompleted;
+  }
+
+  isOptional () {
+    return this.stepper_.steps[this.index_].isOptional;
+  }
+
+  isActive () {
+    return this.stepper_.steps[this.index_].isActive;
+  }
+
+  isError () {
+    return this.stepper_.steps[this.index_].isError;
+  }
+
+  isNormal () {
+    return this.stepper_.steps[this.index_].isNormal;
+  }
+}
+
+/**
+ * @class MDCStepper
+ */
 export class MDCStepper extends MDCComponent {
   /**
    * @param {...?} args
@@ -62,7 +127,12 @@ export class MDCStepper extends MDCComponent {
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
 
       notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
-      notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true)
+      notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true),
+
+      iterator: (stepId) => {
+        let index = !!stepId ? this.findStepIndex_ (stepId) : 0;
+        return new StepIteratorImpl (this, index);
+      }
     }));
 
     let foundation;
