@@ -259,7 +259,7 @@
   @include mdc-theme-prop(color, text-secondary-on-background);
   @include mdc-typography-overflow-ellipsis;
 
-  top: $stepper-circle-size + 4;
+  top: $stepper-circle-size + 8;
 }
 
 /* STEP LABEL INDICATOR */

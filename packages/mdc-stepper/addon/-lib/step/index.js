@@ -52,6 +52,8 @@ export class MDCStep extends MDCComponent {
     this.stepper_ = stepper;
     this.labelIndicatorText = labelIndicatorText;
 
+    this.optional_ = 0;
+
     this.label_ = this.root_.querySelector (MDCStepFoundation.strings.LABEL_SELECTOR);
     this.labelTitle_ = this.root_.querySelector (MDCStepFoundation.strings.TITLE_SELECTOR);
     this.labelTitleText_ = this.root_.querySelector (MDCStepFoundation.strings.TITLE_TEXT_SELECTOR).textContent;

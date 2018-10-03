@@ -5,6 +5,8 @@ import { MDCStepper } from '../-lib';
 
 import { isPresent } from '@ember/utils';
 
+function noOp () {}
+
 export default Component.extend({
   layout,
 
@@ -26,10 +28,19 @@ export default Component.extend({
 
   feedback: false,
 
+  completeEventListener_: null,
+
+  init () {
+    this._super (...arguments);
+
+    this.completeEventListener_ = this.didComplete.bind (this);
+  },
+
   didInsertElement () {
     this._super (...arguments);
 
     this._stepper = new MDCStepper (this.element);
+    this._stepper.listen ('MDCStepper:complete', this.completeEventListener_);
   },
 
   didUpdateAttrs () {
@@ -45,6 +56,13 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
+    this._stepper.unlisten ('MDCStepper:complete', this.completeEventListener_);
     this._stepper.destroy ();
+  },
+
+  didComplete () {
+    this._super (...arguments);
+
+    this.getWithDefault ('complete', noOp) ();
   }
 });

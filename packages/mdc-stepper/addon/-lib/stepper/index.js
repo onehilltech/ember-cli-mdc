@@ -38,6 +38,8 @@ export class MDCStepper extends MDCComponent {
 
     /** @private {!Function} */
     this.handleInteraction_;
+
+    this.optional_;
   }
 
   static attachTo (root) {
@@ -90,6 +92,8 @@ export class MDCStepper extends MDCComponent {
 
   initialize (stepFactory = (el, stepper, ordinal) => new MDCStep (el, undefined, stepper, ordinal)) {
     this.stepFactory_ = stepFactory;
+    this.optional_ = 0;
+
     this.steps = this.instantiateSteps_ (this.stepFactory_);
   }
 
@@ -179,13 +183,8 @@ export class MDCStepper extends MDCComponent {
     return stepElements.map ((el, i) => {
       let step = stepFactory (el, this, i + 1);
 
-      if (step.isOptional) {
+      if (step.isOptional)
         this.optional_ += 1;
-      }
-
-      if (step.isActive) {
-        this.active_ = step.id;
-      }
 
       // Prevents the step label to scrolling out of user view on Google Chrome.
       // More details here: <https://github.com/ahlechandre/mdl-stepper/issues/11 />.
@@ -318,8 +317,14 @@ export class MDCStepper extends MDCComponent {
     return this.foundation_.getIsComplete ();
   }
 
+  /**
+   * Determine if the stepper is complete.
+   *
+   * @return {boolean}
+   * @private
+   */
   get isComplete_ () {
-    return false;
+    return this.steps.reduce ((remaining, step) => step.isCompleted || step.isOptional ? -- remaining : remaining, this.steps.length) === 0;
   }
 }
 
