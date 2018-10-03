@@ -38,8 +38,6 @@ export class MDCStepper extends MDCComponent {
 
     /** @private {!Function} */
     this.handleInteraction_;
-
-    this.optional_;
   }
 
   static attachTo (root) {
@@ -92,8 +90,6 @@ export class MDCStepper extends MDCComponent {
 
   initialize (stepFactory = (el, stepper, ordinal) => new MDCStep (el, undefined, stepper, ordinal)) {
     this.stepFactory_ = stepFactory;
-    this.optional_ = 0;
-
     this.steps = this.instantiateSteps_ (this.stepFactory_);
   }
 
@@ -180,18 +176,11 @@ export class MDCStepper extends MDCComponent {
   instantiateSteps_ (stepFactory) {
     const stepElements = [].slice.call (this.root_.querySelectorAll (MDCStepperBaseFoundation.strings.STEP_SELECTOR));
 
-    return stepElements.map ((el, i) => {
-      let step = stepFactory (el, this, i + 1);
+    // Prevents the step label to scrolling out of user view on Google Chrome.
+    // More details here: <https://github.com/ahlechandre/mdl-stepper/issues/11 />.
+    // stepElements[i].addEventListener ('scroll', (event) => event.target.scrollTop = 0);
 
-      if (step.isOptional)
-        this.optional_ += 1;
-
-      // Prevents the step label to scrolling out of user view on Google Chrome.
-      // More details here: <https://github.com/ahlechandre/mdl-stepper/issues/11 />.
-      stepElements[i].addEventListener ('scroll', (event) => event.target.scrollTop = 0);
-
-      return step;
-    });
+    return stepElements.map ((el, i) => stepFactory (el, this, i + 1));
   }
 
   /**
