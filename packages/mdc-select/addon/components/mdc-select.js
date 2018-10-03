@@ -10,6 +10,7 @@ import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 
 import { assert } from '@ember/debug';
+import { A } from '@ember/array';
 
 const STYLES = ['box', 'outlined'];
 
@@ -67,6 +68,11 @@ export default Component.extend({
 
   displayOptions: computed ('{value,options}', function () {
     const {value, options} = this.getProperties (['value', 'options']);
+
+    if (isEmpty (options)) {
+      return A ();
+    }
+
     const transform = this.getWithDefault ('transform', identity);
 
     return options.map (option => {
