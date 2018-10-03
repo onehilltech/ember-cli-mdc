@@ -1,10 +1,11 @@
 <h2 id="title">Linear Stepper</h2>
 
 {{#mdc-stepper linear=false complete=(action "complete")}}
-  {{#mdc-step}}
+  {{#mdc-step next=(action (mut step1complete) true)}}
     {{#mdc-step-label}}
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Title of Step 1{{/mdc-step-title-text}}
+        {{#mdc-step-title-message}}{{if step1complete "Step 1 is complete" "Step 1 is not complete"}}{{/mdc-step-title-message}}
       {{/mdc-step-title}}
     {{/mdc-step-label}}
 
