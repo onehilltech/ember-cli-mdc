@@ -41,6 +41,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-slider/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-chips/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-stepper/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-linear-progress/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
@@ -118,6 +119,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-line-ripple/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-linear-progress/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-linear-progress/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/node_modules" />
