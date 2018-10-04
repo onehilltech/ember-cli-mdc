@@ -186,21 +186,31 @@
 /* STEP MOD ERROR */
 
 .mdc-step--error {
-  & .mdc-step__title {
-    @include mdc-theme-prop (color, error);
+  .mdc-step__title {
+    @include mdc-theme-prop (color, error, true)
   }
 
-  & .mdc-step-error-message {
+  .mdc-step-error-message {
     display: block;
     font-weight: normal;
 
-    @include mdc-theme-prop (color, error);
+    @include mdc-theme-prop (color, error, true);
   }
 
-  & .mdc-step__label-indicator {
+  .mdc-step__label-indicator {
     @include mdc-theme-prop (background-color, error, true);
 
     font-weight: bold;
+  }
+}
+
+.mdc-step:not(.mdc-step--error) {
+  .mdc-step__title-text {
+    @include mdc-theme-prop(color, text-primary-on-background);
+  }
+
+  .mdc-step__title-message {
+    @include mdc-theme-prop(color, text-secondary-on-background);
   }
 }
 
@@ -241,13 +251,10 @@
   width: 100%;
 }
 
+
 .mdc-step__title-text {
   @include mdc-typography(body1);
-  @include mdc-theme-prop(color, text-primary-on-background);
   @include mdc-typography-overflow-ellipsis;
-
-  //@include mdc-typography-baseline-top(32px);
-  //@include mdc-typography-baseline-bottom(20px);
 }
 
 /* STEP TITLE MESSAGE */
@@ -256,7 +263,6 @@
   position: absolute;
 
   @include mdc-typography(caption);
-  @include mdc-theme-prop(color, text-secondary-on-background);
   @include mdc-typography-overflow-ellipsis;
 
   top: $stepper-circle-size + 8;

@@ -1,6 +1,8 @@
 <h2 id="title">Linear Stepper</h2>
 
-{{#mdc-stepper linear=false complete=(action "complete")}}
+{{#mdc-button style="unelevated" click=(action (mut error) "This is an error")}}Set Error{{/mdc-button}}
+
+{{#mdc-stepper linear=false complete=(action "complete") error=error}}
   {{#mdc-step next=(action (mut step1complete) true)}}
     {{#mdc-step-label}}
       {{mdc-step-label-indicator}}

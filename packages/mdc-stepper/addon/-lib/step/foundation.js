@@ -121,14 +121,7 @@ class MDCStepFoundation extends MDCFoundation {
     if (this.isError ()) {
       // Case the current state of step is "error", update the error message
       // to the original title message or just remove it.
-      let labelTitleMessageText = this.adapter_.getLabelTitleMessageText ();
-
-      if (!!labelTitleMessageText) {
-        this.updateTitleMessage (labelTitleMessageText);
-      }
-      else {
-        this.adapter_.removeTitleMessage ();
-      }
+      this.adapter_.setTitleMessage ('');
     }
 
     // We can now notify the listeners that the next button was pressed. The
@@ -185,12 +178,8 @@ class MDCStepFoundation extends MDCFoundation {
     this.adapter_.notifyGoto (stepId);
   }
 
-  updateTitleMessage (message) {
-    this.adapter_.updateTitleMessage (message);
-  }
-
-  removeTitleMessage () {
-    this.adapter_.removeTitleMessage ();
+  setTitleMessage (message) {
+    this.adapter_.setTitleMessage (message)
   }
 
   setStepCompleted () {

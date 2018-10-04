@@ -22,7 +22,6 @@ export class MDCStep extends MDCComponent {
     this.labelTitle_;
     this.labelTitleText_;
     this.labelTitleMessage_;
-    this.labelTitleMessageText_;
 
     /** @private {!Array<!Element>} */
     this.buttons_;
@@ -60,7 +59,6 @@ export class MDCStep extends MDCComponent {
     this.labelTitle_ = this.root_.querySelector (MDCStepFoundation.strings.TITLE_SELECTOR);
     this.labelTitleText_ = this.root_.querySelector (MDCStepFoundation.strings.TITLE_TEXT_SELECTOR).textContent;
     this.labelTitleMessage_ = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
-    this.labelTitleMessageText_ = this.labelTitleMessage_ ? this.labelTitleMessage_.textContent : '';
 
     this.labelIndicator_ = this.root_.querySelector (MDCStepFoundation.strings.LABEL_INDICATOR_SELECTOR);
 
@@ -123,9 +121,14 @@ export class MDCStep extends MDCComponent {
       },
 
       removeTransientEffect: this.removeTransientEffect_.bind (this),
-      getLabelTitleMessageText: () => this.labelTitleMessageText_,
-      updateTitleMessage: this.updateTitleMessage_.bind (this),
-      removeTitleMessage: this.removeTitleMessage_.bind (this),
+
+      getLabelTitleMessageText: () => this.labelTitleMessage_.textContent,
+
+      setTitleMessage: message => {
+        if (this.labelTitleMessage_)
+          this.labelTitleMessage_.textContent = message;
+      },
+
       setLabelIndicator: this.setLabelIndicator_.bind (this),
 
       notifyNext: () => this.emit ('MDCStep:next', { stepId: this.root_.id }, true),
@@ -177,10 +180,7 @@ export class MDCStep extends MDCComponent {
   }
 
   set titleMessage (message) {
-    if (!!message)
-      return this.foundation_.updateTitleMessage (message);
-    else
-      return this.foundation_.removeTitleMessage ();
+    this.foundation_.setTitleMessage (message);
   }
 
   /**
@@ -236,28 +236,8 @@ export class MDCStep extends MDCComponent {
    * @param message
    * @private
    */
-  updateTitleMessage_ (message) {
-    let titleMessage = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
-
-    if (!titleMessage) {
-      titleMessage = document.createElement ('span');
-      titleMessage.classList.add (MDCStepFoundation.cssClasses.TITLE_MESSAGE);
-      this.labelTitle_.appendChild (titleMessage);
-    }
-
-    titleMessage.textContent = message;
-  }
-
-  /**
-   * Remove the title message if it exists.
-   *
-   * @return {undefined}
-   */
-  removeTitleMessage_ () {
-    let titleMessage = this.root_.querySelector (MDCStepFoundation.strings.TITLE_MESSAGE_SELECTOR);
-
-    if (!!titleMessage) {
-      titleMessage.parentNode.removeChild (titleMessage);
-    }
+  setTitleMessage_ (message) {
+    if (this.labelTitleMessage_)
+      this.labelTitleMessage_.textContent = message;
   }
 }

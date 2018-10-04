@@ -15,8 +15,7 @@ class MDCStepAdapter {
 
   getLabelTitleMessageText () {}
 
-  updateTitleMessage (/*message*/) {}
-  removeTitleMessage () {}
+  setTitleMessage (/*message*/) {}
 
   setLabelIndicator (/*state*/) {}
 
