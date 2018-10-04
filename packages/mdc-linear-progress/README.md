@@ -45,5 +45,7 @@ the parent element.
 ### Examples
 
 ```handlebars
+{{mdc-linear-progress progess=0.66}}
 {{mdc-linear-progress progess=0.35 buffer=89.5}}
+{{mdc-linear-progress indeterminate=true reversed=true}}
 ```
