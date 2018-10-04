@@ -34,27 +34,34 @@ export default Component.extend({
   validationDelay: 150,
 
   submitEventListener_: null,
-  keypressEventListener_: null,
+  checkValidityEventListener_: null,
 
   init () {
     this._super (...arguments);
 
     this.submitEventListener_ = this.didSubmit.bind (this);
-    this.keypressEventListener_ = this.didPressKey.bind (this);
+    this.checkValidityEventListener_ = this.doCheckValidity.bind (this);
   },
 
   didInsertElement () {
     this._super (...arguments);
 
+    this.doCheckValidity ();
+
     this.element.addEventListener ('submit', this.submitEventListener_);
-    this.element.addEventListener ('keypress', this.keypressEventListener_);
+    this.element.addEventListener ('input', this.checkValidityEventListener_);
+  },
+
+  didUpdate () {
+    this._super (...arguments);
+    this.doCheckValidity ();
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
     this.element.removeEventListener ('submit', this.submitEventListener_);
-    this.element.removeEventListener ('keypress', this.keypressEventListener_);
+    this.element.removeEventListener ('input', this.checkValidityEventListener_);
   },
 
   /**
@@ -70,11 +77,11 @@ export default Component.extend({
   /**
    * Continuously report the validity.
    */
-  didPressKey () {
+  doCheckValidity () {
     let delay = this.get ('validationDelay');
 
-    debounce (null, () => {
-      let valid = this.element.reportValidity ();
+    debounce (this, function () {
+      let valid = this.element.checkValidity ();
       this.getWithDefault ('valid', noOp) (valid);
     }, delay);
   }
