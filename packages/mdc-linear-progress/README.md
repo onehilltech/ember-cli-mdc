@@ -1,26 +1,49 @@
-# ember-cli-mdc-linear-progress
+ember-cli-mdc-form
+======================
 
-This README outlines the details of collaborating on this Ember addon.
+ember-cli addon for [@material/linear-progress](https://github.com/material-components/material-components-web/tree/master/packages/mdc-linear-progress).
 
-## Installation
+Installation
+------------
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-mdc-linear-progress`
-* `npm install`
+    ember install ember-cli-mdc-linear-progress
 
-## Running
+Components
+-------------
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+This package contains the following top-level components.
 
-## Running Tests
+* [`mdc-linear-progress`](#mdc-linear-progress)
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+mdc-linear-progress
+--------------------
 
-## Building
+### Description
 
-* `ember build`
+Add a [Material Linear Progress](https://material.io/design/components/sliders.html) component to 
+the parent element.
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+### Usage
+
+```handlebars
+{{mdc-linear-progress indeterminate=[true|false]
+                      progress=value
+                      buffer=value
+                      reversed=[true|false]
+                      closed=[true|false]
+}}
+```
+
+### Attributes
+
+* `indeterminate` - Run the linear progress in indeterminate mode.
+* `progress` - The current progress value, must be between 0 and 1.
+* `buffer` - The current value of the buffer, must be between 0 and 1.
+* `reversed` - Reverse the display of the linear progress.
+* `closed` - Hide the linear progress on the page.
+
+### Examples
+
+```handlebars
+{{mdc-linear-progress progess=0.35 buffer=89.5}}
+```
