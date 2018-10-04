@@ -2,7 +2,7 @@
 
 {{#mdc-button style="unelevated" click=(action (mut error) "This is an error")}}Set Error{{/mdc-button}}
 
-{{#mdc-stepper linear=false complete=(action "complete")}}
+{{#mdc-stepper linear=true complete=(action "complete")}}
   {{#mdc-step next=(action (mut step1complete) true)}}
     {{#mdc-step-label}}
       {{mdc-step-label-indicator}}
@@ -22,7 +22,7 @@
     {{/mdc-step-actions}}
   {{/mdc-step}}
 
-  {{#mdc-step editable=true disabled=true}}
+  {{#mdc-step editable=true}}
     {{#mdc-step-label}}
       {{mdc-step-label-indicator}}
 

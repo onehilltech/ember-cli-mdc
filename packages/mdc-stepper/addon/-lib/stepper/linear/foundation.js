@@ -23,7 +23,7 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
     const isEditable = iter.isEditable ();
     const isCompleted = iter.isCompleted ();
 
-    let nextStepId = iter.next () ? iter.id () : null;
+    let nextStepId = iter.next () && !iter.isDisabled () ? iter.id () : null;
 
     if (isCompleted && isEditable) {
       // The current step was editable. This means we came back to this step. We
@@ -32,7 +32,7 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
       // next step.
 
       do {
-        if (!iter.isCompleted ()) {
+        if (!iter.isCompleted () && !iter.isDisabled ()) {
           nextStepId = iter.id ();
           break;
         }
@@ -61,7 +61,9 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
    */
   back (stepId = null) {
     let iter = this.adapter_.iterator (stepId);
-    let prevStepId = iter.previous () && iter.isEditable () ? iter.id () : null;
+    while (iter.previous () && iter.isDisabled ());
+
+    let prevStepId = iter.isEditable () ? iter.id () : null;
 
     return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
