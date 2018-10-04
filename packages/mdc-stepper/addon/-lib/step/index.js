@@ -171,6 +171,14 @@ export class MDCStep extends MDCComponent {
     return this.foundation_.isNormal ();
   }
 
+  set disabled (disabled) {
+    this.foundation_.setDisabled (disabled);
+  }
+
+  get disabled () {
+    return this.foundation_.isDisabled ();
+  }
+
   setStepCompleted () {
     return this.foundation_.setStepCompleted ();
   }

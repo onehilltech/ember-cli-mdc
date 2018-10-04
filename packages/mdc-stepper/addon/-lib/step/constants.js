@@ -18,7 +18,7 @@ export const strings = {
   BUTTON_SELECTOR: '.mdc-step__button',
 
   TRANSIENT_SELECTOR: '.mdc-step--transient',
-
+  DISABLED_SELECTOR: '.mdc-step--disabled',
   ACTION_ATTRIBUTE: 'data-mdc-step-action'
 };
 
@@ -34,6 +34,7 @@ export const cssClasses = {
 
   TITLE_MESSAGE: 'mdc-step__title-message',
 
+  DISABLED: 'mdc-step--disabled',
   COMPLETED: 'mdc-step--completed',
   ERROR: 'mdc-step--error',
   TRANSIENT: 'mdc-step--transient',

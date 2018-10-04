@@ -61,11 +61,26 @@ class MDCStepFoundation extends MDCFoundation {
     return !this.adapter_.isCompleted () && !this.isError ();
   }
 
+  isDisabled () {
+    return this.adapter_.hasClass (MDCStepFoundation.cssClasses.DISABLED);
+  }
+
+  setDisabled (disabled) {
+    if (disabled)
+      this.adapter_.addClass (MDCStepFoundation.cssClasses.DISABLED);
+    else
+      this.adapter_.removeClass (MDCStepFoundation.cssClasses.DISABLED);
+  }
+
   removeTransientEffect () {
     return this.adapter_.removeTransientEffect ();
   }
 
   handleInteraction (evt) {
+    // When the step is disabled, we ignore all interactions.
+    if (this.isDisabled ())
+      return;
+
     const isClick = evt.type === 'click';
     const isEnter = evt.key === 'Enter' || evt.keyCode === 13;
 

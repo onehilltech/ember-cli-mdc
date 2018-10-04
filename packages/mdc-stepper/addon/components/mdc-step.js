@@ -13,7 +13,7 @@ export default Component.extend({
 
   classNames: ['mdc-step'],
 
-  classNameBindings: ['optional:mdc-step--optional', 'editable:mdc-step--editable'],
+  classNameBindings: ['optional:mdc-step--optional', 'editable:mdc-step--editable', 'disabled:mdc-step--disabled'],
 
   nextEventListener_: null,
   backEventListener_: null,
