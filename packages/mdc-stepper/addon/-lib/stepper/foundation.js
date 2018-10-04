@@ -142,7 +142,8 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
    * @return {boolean}
    */
   goto (stepId) {
-    return this.adapter_.activate (stepId);
+    let iter = this.adapter_.iterator (stepId);
+    return iter.isDisabled () ? false : this.adapter_.activate (stepId);
   }
 
   /**
