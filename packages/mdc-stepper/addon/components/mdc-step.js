@@ -37,7 +37,7 @@ export default Component.extend({
     this._super (...arguments);
 
     let error = this.get ('error');
-    this.parentView.error (error, this.elementId);
+    this.parentView.stepError (error, this.elementId);
   },
 
   didInsertElement () {

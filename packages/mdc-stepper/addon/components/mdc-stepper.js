@@ -73,7 +73,7 @@ export default Component.extend({
    * @param message
    * @param stepId
    */
-  error (message, stepId) {
+  stepError (message, stepId) {
     this._stepper.error (message, stepId);
   }
 });
