@@ -86,7 +86,7 @@ export class MDCStep extends MDCComponent {
 
   initialSyncWithDOM () {
     this.handleInteraction_ = this.foundation_.handleInteraction.bind (this.foundation_);
-    this.setLabelIndicator_ (MDCStepFoundation.states.NORMAL);
+    this.setLabelIndicator_ (MDCStepFoundation.states.NORMAL, this.foundation_.isEditable ());
 
     // Listen for click events on the page.
     this.listen ('click', this.handleInteraction_);
@@ -183,6 +183,14 @@ export class MDCStep extends MDCComponent {
       return this.foundation_.removeTitleMessage ();
   }
 
+  /**
+   * Set the label indicator for the step.
+   *
+   * @param state
+   * @param isEditable
+   * @return {boolean}
+   * @private
+   */
   setLabelIndicator_ (state, isEditable) {
     switch (state) {
       case MDCStepFoundation.states.NORMAL:
