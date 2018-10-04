@@ -378,4 +378,8 @@ class StepIteratorImpl extends MDCStepIterator {
   isNormal () {
     return this.stepper_.steps[this.index_].isNormal;
   }
+
+  isDisabled () {
+    return this.stepper_.steps[this.index_].disabled;
+  }
 }

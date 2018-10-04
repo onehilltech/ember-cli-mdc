@@ -8,4 +8,5 @@ export default class MDCStepIterator {
   isCompleted () {}
   isOptional () {}
   isActive () {}
+  isDisabled () {}
 }

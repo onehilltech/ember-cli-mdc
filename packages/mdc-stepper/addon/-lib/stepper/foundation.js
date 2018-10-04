@@ -89,7 +89,9 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
    */
   next (stepId = null) {
     let iterator = this.adapter_.iterator (stepId);
-    let nextStepId = iterator.next () ? iterator.id () : null;
+
+    while (iterator.next () && iterator.isDisabled ());
+    let nextStepId = !iterator.done () ? iterator.id () : null;
 
     if (nextStepId) {
       this.adapter_.activate (nextStepId);
@@ -113,7 +115,9 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
    */
   back (stepId = null) {
     let iter = this.adapter_.iterator (stepId);
-    let prevStepId = iter.previous () ? iter.id () : null;
+
+    while (iter.previous () && iter.isDisabled ());
+    let prevStepId = !iter.done () ? iter.id () : null;
 
     return !!prevStepId ? this.adapter_.activate (prevStepId) : false;
   }
