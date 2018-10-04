@@ -146,15 +146,11 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
    * instead of default title message.
    *
    * @param {string} message The text content to show with error state.
+   * @param {string} stepId  The id of the step
+   *
    * @return {undefined}
    */
-  error (message) {
-    let stepId = this.adapter_.getActiveId ();
-
-    if (this.adapter_.hasFeedback ()) {
-      // TODO remove transient feedback from current step.
-    }
-
+  error (message, stepId) {
     this.adapter_.setStepError (stepId);
 
     if (!!message)

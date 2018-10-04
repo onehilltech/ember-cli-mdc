@@ -158,13 +158,14 @@ export class MDCStepper extends MDCComponent {
   }
 
   /**
-   * Defines the current state of step to "error" and display
-   * an alert message instead of default title message.
-   * @param {string} message The text content to show with error state.
-   * @return {undefined}
+   * Defines the error message for a step. If no step is specified, then the current
+   * state is used.
+   *
+   * @param message
+   * @param id
    */
-  error (message) {
-    return this.foundation_.error (message);
+  error (message, id = this.activeId) {
+    return this.foundation_.error (message, id);
   }
 
   /**
