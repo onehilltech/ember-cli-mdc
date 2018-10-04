@@ -77,6 +77,6 @@ export default class MDCLinearStepperFoundation extends MDCStepperBaseFoundation
    */
   goto (stepId) {
     let iter = this.adapter_.iterator (stepId);
-    return iter.isCompleted () && iter.isEditable () ? this.adapter_.activate (stepId) : false;
+    return iter.isCompleted () && iter.isEditable () && !iter.isDisabled () ? this.adapter_.activate (stepId) : false;
   }
 }
