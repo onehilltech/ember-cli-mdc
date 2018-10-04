@@ -53,7 +53,7 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this.event.removeEventListener ('submit', this.submitEventListener_);
+    this.element.removeEventListener ('submit', this.submitEventListener_);
     this.element.removeEventListener ('keypress', this.keypressEventListener_);
   },
 
