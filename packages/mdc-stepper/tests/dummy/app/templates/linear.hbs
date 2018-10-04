@@ -3,15 +3,15 @@
 {{#mdc-stepper linear=false complete=(action "complete")}}
   {{#mdc-step next=(action (mut step1complete) true)}}
     {{#mdc-step-label}}
+      {{mdc-step-label-indicator}}
+
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Title of Step 1{{/mdc-step-title-text}}
         {{#mdc-step-title-message}}{{if step1complete "Step 1 is complete" "Step 1 is not complete"}}{{/mdc-step-title-message}}
       {{/mdc-step-title}}
     {{/mdc-step-label}}
 
-    {{#mdc-step-content}}
-
-    {{/mdc-step-content}}
+    {{mdc-step-content}}
 
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
@@ -22,15 +22,15 @@
 
   {{#mdc-step editable=true}}
     {{#mdc-step-label}}
+      {{mdc-step-label-indicator}}
+
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Step 2{{/mdc-step-title-text}}
         {{#mdc-step-title-message}}Message for Step 1{{/mdc-step-title-message}}
       {{/mdc-step-title}}
     {{/mdc-step-label}}
 
-    {{#mdc-step-content}}
-
-    {{/mdc-step-content}}
+    {{mdc-step-content}}
 
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
@@ -40,15 +40,15 @@
 
   {{#mdc-step optional=true editable=true}}
     {{#mdc-step-label}}
+      {{mdc-step-label-indicator}}
+
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Step 3{{/mdc-step-title-text}}
         {{#mdc-step-title-message}}Optional{{/mdc-step-title-message}}
       {{/mdc-step-title}}
     {{/mdc-step-label}}
 
-    {{#mdc-step-content}}
-
-    {{/mdc-step-content}}
+    {{mdc-step-content}}
 
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
@@ -59,15 +59,15 @@
 
   {{#mdc-step}}
     {{#mdc-step-label}}
+      {{mdc-step-label-indicator}}
+
       {{#mdc-step-title}}
         {{#mdc-step-title-text}}Step 4{{/mdc-step-title-text}}
         {{#mdc-step-title-message}}Message for Step 4{{/mdc-step-title-message}}
       {{/mdc-step-title}}
     {{/mdc-step-label}}
 
-    {{#mdc-step-content}}
-
-    {{/mdc-step-content}}
+    {{mdc-step-content}}
 
     {{#mdc-step-actions}}
       {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}

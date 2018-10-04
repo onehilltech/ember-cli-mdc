@@ -4,9 +4,9 @@ class MDCStepAdapter {
    * @param {string} className
    * @return {boolean}
    */
-  hasClass (className) {}
-  addClass (className) {}
-  removeClass (className) {}
+  hasClass (/*className*/) {}
+  addClass (/*className*/) {}
+  removeClass (/*className*/) {}
 
   hasFeedback () {}
   isEditable () {}
@@ -15,19 +15,19 @@ class MDCStepAdapter {
 
   getLabelTitleMessageText () {}
 
-  updateTitleMessage (message) {}
+  updateTitleMessage (/*message*/) {}
   removeTitleMessage () {}
 
-  setLabelIndicator (state) {}
+  setLabelIndicator (/*state*/) {}
 
-  getActionFromEvent (evt) {}
-  getStepFromEvent (evt) {}
+  getActionFromEvent (/*evt*/) {}
+  getStepFromEvent (/*evt*/) {}
 
   notifyNext () {}
   notifyCancel () {}
   notifySkip () {}
   notifyBack () {}
-  notifyGoto (stepId) {}
+  notifyGoto (/*stepId*/) {}
 }
 
 export default MDCStepAdapter;

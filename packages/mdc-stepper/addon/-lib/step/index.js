@@ -18,7 +18,7 @@ export class MDCStep extends MDCComponent {
     super (...args);
 
     this.label_;
-    this.labelIndicatorText;
+    this.labelIndicatorText_;
     this.labelTitle_;
     this.labelTitleText_;
     this.labelTitleMessage_;
@@ -38,6 +38,8 @@ export class MDCStep extends MDCComponent {
 
     /** @private {!HTMLElement} */
     this.labelIndicator_;
+
+    this.labelIndicatorContent_;
   }
 
   /**
@@ -50,7 +52,7 @@ export class MDCStep extends MDCComponent {
 
   initialize (stepper, labelIndicatorText) {
     this.stepper_ = stepper;
-    this.labelIndicatorText = labelIndicatorText;
+    this.labelIndicatorText_ = labelIndicatorText;
 
     this.optional_ = 0;
 
@@ -62,10 +64,15 @@ export class MDCStep extends MDCComponent {
 
     this.labelIndicator_ = this.root_.querySelector (MDCStepFoundation.strings.LABEL_INDICATOR_SELECTOR);
 
-    if (!this.labelIndicator_) {
-      this.labelIndicator_ = this.getIndicatorElement_ ();
-      this.label_.appendChild (this.labelIndicator_);
-    }
+    if (!this.labelIndicator_)
+      throw new Error ('The step must have a <span> with the class mdc-step__label-indicator.');
+
+    this.labelIndicatorContent_ = this.labelIndicator_.querySelector (MDCStepFoundation.strings.LABEL_INDICATOR_CONTENT_SELECTOR);
+
+    if (!this.labelIndicatorContent_)
+      throw new Error ('The mdc-step__label-indicator element must have a <span> with the class mdc-step__label-indicator-content.');
+
+    this.labelIndicatorContent_.textContent = this.labelIndicatorText_;
 
     this.content_ = this.root_.querySelector (MDCStepFoundation.strings.CONTENT_SELECTOR);
 
@@ -79,6 +86,7 @@ export class MDCStep extends MDCComponent {
 
   initialSyncWithDOM () {
     this.handleInteraction_ = this.foundation_.handleInteraction.bind (this.foundation_);
+    this.setLabelIndicator_ (MDCStepFoundation.states.NORMAL);
 
     // Listen for click events on the page.
     this.listen ('click', this.handleInteraction_);
@@ -176,93 +184,25 @@ export class MDCStep extends MDCComponent {
   }
 
   setLabelIndicator_ (state, isEditable) {
-    let currentIndicatorContent = this.root_.querySelector (MDCStepFoundation.strings.LABEL_INDICATOR_CONTENT_SELECTOR);
-    let indicatorContent;
-
     switch (state) {
       case MDCStepFoundation.states.NORMAL:
-        indicatorContent = MDCStep.getIndicatorContentNormal_ (this.labelIndicatorText);
+        this.labelIndicatorContent_.classList.remove ('material-icons');
+        this.labelIndicatorContent_.textContent = this.labelIndicatorText_;
         break;
 
       case MDCStepFoundation.states.COMPLETED:
-        indicatorContent = MDCStep.getIndicatorContentCompleted_ (isEditable);
+        this.labelIndicatorContent_.classList.add ('material-icons');
+        this.labelIndicatorContent_.textContent = isEditable ? 'edit' : 'check';
         break;
 
       case MDCStepFoundation.states.ERROR:
-        indicatorContent = MDCStep.getIndicatorContentError_ ();
+        this.labelIndicatorContent_.classList.remove ('material-icons');
+        this.labelIndicatorContent_.textContent = '!';
         break;
 
       default:
         return false;
     }
-
-    this.labelIndicator_.replaceChild (indicatorContent, currentIndicatorContent);
-  }
-
-  /**
-   * Returns the label indicator for referred to the passed step.
-   *
-   * @return {HTMLElement}
-   * @private
-   */
-  getIndicatorElement_ () {
-    let indicatorElement = document.createElement ('span');
-    let indicatorContent = MDCStep.getIndicatorContentNormal_ (this.labelIndicatorText);
-    indicatorElement.classList.add (MDCStepFoundation.cssClasses.LABEL_INDICATOR);
-    indicatorElement.appendChild (indicatorContent);
-
-    return indicatorElement;
-  }
-
-  /**
-   * Create a new element that's represent "normal" label indicator.
-   *
-   * @param {string} text The text content of indicator (e.g. 1, 2..N).
-   * @return {HTMLElement}
-   *
-   * @private
-   */
-  static getIndicatorContentNormal_ (text) {
-    let normal = document.createElement ('span');
-    normal.classList.add (MDCStepFoundation.cssClasses.LABEL_INDICATOR_CONTENT);
-    normal.textContent = text;
-
-    return normal;
-  }
-
-  /**
-   * Create a new element that's represent "completed" label indicator.
-   *
-   * @param {boolean} isEditable Flag to check if step is of editable type.
-   * @return {HTMLElement}
-   *
-   * @private
-   */
-  static getIndicatorContentCompleted_ (isEditable) {
-    // Creates a new material icon to represent the completed step.
-    let completed = document.createElement ('i');
-    completed.classList.add ('material-icons');
-    completed.classList.add (MDCStepFoundation.cssClasses.LABEL_INDICATOR_CONTENT);
-
-    // If step is editable the icon used will be "edit",
-    // else the icon will be "check".
-    completed.textContent = isEditable ? 'edit' : 'check';
-
-    return completed;
-  }
-
-  /**
-   * Create a new element that's represent "error" label indicator.
-   *
-   * @return {HTMLElement}
-   * @private
-   */
-  static getIndicatorContentError_ () {
-    let error = document.createElement ('span');
-    error.classList.add (MDCStepFoundation.cssClasses.LABEL_INDICATOR_CONTENT);
-    error.textContent = '!';
-
-    return error;
   }
 
   /**
