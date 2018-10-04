@@ -168,6 +168,14 @@ export class MDCStepper extends MDCComponent {
     return this.foundation_.error (message, id);
   }
 
+  get disabled () {
+    return this.foundation_.isDisabled ();
+  }
+
+  set disabled (value) {
+    this.foundation_.setDisabled (disabled);
+  }
+
   /**
    * Instantiates step  components on all of the stepper's child step elements.
    *

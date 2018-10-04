@@ -62,7 +62,7 @@ class MDCStepFoundation extends MDCFoundation {
   }
 
   isDisabled () {
-    return this.adapter_.hasClass (MDCStepFoundation.cssClasses.DISABLED);
+    return this.adapter_.hasClass (MDCStepFoundation.cssClasses.DISABLED) || this.adapter_.getStepperDisabled ();
   }
 
   setDisabled (disabled) {

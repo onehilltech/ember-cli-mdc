@@ -120,6 +120,8 @@ export class MDCStep extends MDCComponent {
         return element && element.parentElement.id;
       },
 
+      getStepperDisabled: () => !!closest (this.root_, MDCStepFoundation.strings.STEPPER_DISABLED_SELECTOR),
+
       removeTransientEffect: this.removeTransientEffect_.bind (this),
 
       getLabelTitleMessageText: () => this.labelTitleMessage_.textContent,

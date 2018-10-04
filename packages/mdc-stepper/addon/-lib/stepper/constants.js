@@ -12,6 +12,7 @@ export const cssClasses = {
   SPINNER_JS: 'mdc-js-spinner',
   SPINNER_IS_ACTIVE: 'is-active',
   STEPPER: 'mdc-stepper',
+  DISABLED: 'mdc-stepper--disabled'
 };
 
 export const strings = {
@@ -19,5 +20,6 @@ export const strings = {
   STEP_CONTENT_SELECTOR: '.mdc-step__content',
   TRANSIENT_SELECTOR: '.mdc-step__transient',
 
-  IS_ACTIVE_SELECTOR: '.is-active'
+  IS_ACTIVE_SELECTOR: '.is-active',
+  DISABLED: '.mdc-stepper--disabled',
 };

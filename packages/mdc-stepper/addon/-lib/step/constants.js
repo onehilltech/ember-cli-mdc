@@ -19,6 +19,7 @@ export const strings = {
 
   TRANSIENT_SELECTOR: '.mdc-step--transient',
   DISABLED_SELECTOR: '.mdc-step--disabled',
+  STEPPER_DISABLED_SELECTOR: '.mdc-stepper--disabled',
   ACTION_ATTRIBUTE: 'data-mdc-step-action'
 };
 

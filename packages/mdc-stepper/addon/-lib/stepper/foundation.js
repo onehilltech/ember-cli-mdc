@@ -79,6 +79,17 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     return this.adapter_.getIsComplete ();
   }
 
+  isDisabled () {
+    return this.adapter_.hasClass (cssClasses.DISABLED);
+  }
+
+  setDisabled (disabled) {
+    if (disabled)
+      this.adapter_.addClass (cssClasses.DISABLED);
+    else
+      this.adapter_.removeClass (cssClasses.DISABLED);
+  }
+
   /**
    * Defines current step state to "completed" and move active to the next.
    * This operation can returns false if it does not advance the step.

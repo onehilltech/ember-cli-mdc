@@ -290,6 +290,14 @@
   }
 }
 
+.mdc-stepper {
+  &.mdc-stepper--disabled {
+    .mdc-step__label-indicator {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
 /* STEP CONTENT */
 
 .mdc-step__content {

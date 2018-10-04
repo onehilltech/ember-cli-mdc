@@ -17,7 +17,8 @@ export default Component.extend({
   classNameBindings: [
     'linear:mdc-stepper--linear',
     'horizontal:mdc-stepper--horizontal',
-    'feedback:mdc-stepper--feedback'
+    'feedback:mdc-stepper--feedback',
+    'disabled:mdc-stepper--disabled'
   ],
 
   _stepper: null,

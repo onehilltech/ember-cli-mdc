@@ -22,6 +22,8 @@ class MDCStepAdapter {
   getActionFromEvent (/*evt*/) {}
   getStepFromEvent (/*evt*/) {}
 
+  getStepperDisabled () { }
+
   notifyNext () {}
   notifyCancel () {}
   notifySkip () {}
