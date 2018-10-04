@@ -1,7 +1,9 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-form';
 
+import { alias } from '@ember/object/computed';
 import { isPresent } from '@ember/utils';
+import { debounce } from '@ember/runloop';
 
 function noOp () {
 
@@ -14,37 +16,66 @@ export default Component.extend({
 
   classNames: ['mdc-form'],
 
-  /// The inputs in the form.
-  $inputs: null,
+  attributeBindings: [
+    // attributes
+    'name',
+    'method',
+    'target',
+    'action',
+    'enctype',
+    'acceptCharset:accept-charset',
+    'autocomplete',
+    'noValidate',
+  ],
 
-  didRender () {
+  encoding: alias ('enctype'),
+  autoComplete: alias ('autocomplete'),
+
+  validationDelay: 150,
+
+  submitEventListener_: null,
+  keypressEventListener_: null,
+
+  init () {
     this._super (...arguments);
 
-    // Make sure we stop listening.
-    this._stopListening ();
+    this.submitEventListener_ = this.didSubmit.bind (this);
+    this.keypressEventListener_ = this.didPressKey.bind (this);
+  },
 
-    this.$inputs = this.$ (':input:not(:button)');
-    this.$inputs.on ('keypress', this._checkValidity.bind (this));
+  didInsertElement () {
+    this._super (...arguments);
 
-    // Let's check the validity of the form.
-    this._checkValidity ();
+    this.element.addEventListener ('submit', this.submitEventListener_);
+    this.element.addEventListener ('keypress', this.keypressEventListener_);
   },
 
   willDestroyElement () {
     this._super (...arguments);
-    this._stopListening ();
+
+    this.event.removeEventListener ('submit', this.submitEventListener_);
+    this.element.removeEventListener ('keypress', this.keypressEventListener_);
   },
 
-  _stopListening () {
-    if (isPresent (this.$inputs)) {
-      this.$inputs.off ('keypress', this._checkValidity.bind (this));
-    }
+  /**
+   * The submit button was pressed. By default, we prevent the default action from
+   * happening because form submission in EmberJS happens behind the scenes.
+   *
+   * @param ev
+   */
+  didSubmit (ev) {
+    ev.preventDefault ();
   },
 
-  _checkValidity () {
-    // Compute the validity state of the form, and notify the parent.
-    const invalid = this.$inputs.filter ((i, input) => !input.validity.valid);
-    const valid = this.getWithDefault ('valid', noOp);
-    valid (invalid.length === 0);
+  /**
+   * Continuously report the validity.
+   */
+  didPressKey () {
+    let delay = this.get ('validationDelay');
+
+    debounce (null, () => {
+      let valid = this.element.reportValidity ();
+      this.getWithDefault ('valid', noOp) (valid);
+    }, delay);
   }
 });

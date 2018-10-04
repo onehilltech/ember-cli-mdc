@@ -20,12 +20,12 @@ export default Controller.extend({
   }),
 
   actions: {
-    toggleVisibility () {
-      this.toggleProperty ('visibility');
-    },
-
     submit () {
       alert (`Email: ${this.get ('email')}\nPassword: ${this.get ('password')}`);
+    },
+
+    valid (valid) {
+      console.log (valid);
     }
   }
 });

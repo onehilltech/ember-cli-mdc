@@ -1,27 +1,15 @@
 <h2 id="title" class="mdc-typography--headline4">Forms</h2>
 
-{{#mdc-form submit=(action "submit") valid=(action (mut valid))}}
+{{#mdc-form submit=(action "submit") valid=(action "valid")}}
   <div>
-    {{mdc-textfield label="Email address"
-                    type="email"
-                    value=email
-                    style="box"
-                    required=true
-                    icon="person"
-                    iconPosition="trailing"
-                    iconClickable=false}}
+    Email: <input type="email" name="email" required="true" />
   </div>
 
   <div>
-    {{mdc-textfield label="Password"
-                    type=passwordType
-                    value=password
-                    style="box"
-                    required=true
-                    icon=visibilityIcon
-                    iconPosition="trailing"
-                    iconClick=(action "toggleVisibility")}}
+    Password: <input type="password" name="password" required="true"/>
   </div>
 
-  {{#mdc-button type="submit" style="raised" disabled=disabled}}Submit{{/mdc-button}}
+  <div>
+    <button type="submit">Submit</button>
+  </div>
 {{/mdc-form}}
