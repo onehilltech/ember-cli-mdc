@@ -64,5 +64,15 @@ export default Component.extend({
     this._super (...arguments);
 
     this.getWithDefault ('complete', noOp) ();
+  },
+
+  /**
+   * Set the error for the step.
+   *
+   * @param message
+   * @param stepId
+   */
+  error (message, stepId) {
+    this._stepper.error (message, stepId);
   }
 });

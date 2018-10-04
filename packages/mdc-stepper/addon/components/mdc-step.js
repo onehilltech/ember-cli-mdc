@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-step';
 
 import { computed } from '@ember/object';
+import { assert } from '@ember/debug';
 
 function noOp () {}
 
@@ -20,6 +21,8 @@ export default Component.extend({
   cancelEventListener_: null,
   gotoEventListener_: null,
 
+  error: null,
+
   init () {
     this._super (...arguments);
 
@@ -28,6 +31,13 @@ export default Component.extend({
     this.skipEventListener_ = this.didSkip.bind (this);
     this.cancelEventListener_ = this.didCancel.bind (this);
     this.gotoEventListener_ = this.didGoto.bind (this);
+  },
+
+  didUpdateAttrs () {
+    this._super (...arguments);
+
+    let error = this.get ('error');
+    this.parentView.error (error, this.elementId);
   },
 
   didInsertElement () {
