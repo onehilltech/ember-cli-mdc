@@ -1,14 +1,14 @@
 <h2>Themes</h2>
 
 <select onchange={{action (mut themeBackground) value="target.value"}}>
-  <option value="" selected>Theme Background Color</option>
+  <option value="" selected>Theme Background</option>
   <option value="background">Background</option>
   <option value="primary">Primary</option>
   <option value="secondary">Secondary</option>
 </select>
 
-<select onchange={{action (mut themeTextColor) value="target.value"}}>
-  <option value="" selected>Theme Text Color</option>
+<select onchange={{action (mut themeText) value="target.value"}}>
+  <option value="" selected>Theme Text</option>
   <option value="primary">Primary</option>
   <option value="secondary">Secondary</option>
   <option value="onPrimary">On Primary</option>
@@ -34,7 +34,7 @@
 {{#mdc-div class="demo"
            themeBackground=themeBackground
            themeBackgroundColor="green"
-           themeTextColor=themeTextColor
+           themeText=themeText
            themeTextStyle=themeTextStyle
            theme=theme}}
   THEME

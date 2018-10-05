@@ -13,12 +13,12 @@ const THEME_TEXT_STYLES = [
   'hint',
 ];
 
-const THEMES = [
+const THEME_VALUES = [
   'dark',
   'light'
 ];
 
-const THEME_COLORS = [
+const THEME_TEXT_VALUES = [
   'primary',
   'secondary',
   'onPrimary',
@@ -28,12 +28,12 @@ const THEME_COLORS = [
 
 export default Mixin.create ({
   classNameBindings: [
-    'mdcThemeTextColorClassName',
+    'mdcThemeTextClassName',
     'mdcThemeClassName',
   ],
 
   /**
-   * Sets the text color to the selected theme. The themeTextColor must be one
+   * Sets the text color to the selected theme. The themeText must be one
    * of the following values:
    *
    * = primary
@@ -42,17 +42,17 @@ export default Mixin.create ({
    * = onSecondary
    * = onSurface
    */
-  themeTextColor: null,
+  themeText: null,
 
-  mdcThemeTextColorClassName: computed ('themeTextColor', function () {
-    const themeTextColor = this.get ('themeTextColor');
+  mdcThemeTextClassName: computed ('themeText', function () {
+    const themeText = this.get ('themeText');
 
-    if (isEmpty (themeTextColor)) {
+    if (isEmpty (themeText)) {
       return null;
     }
 
-    assert (`The themeTextColor must be one of the following values: ${THEME_COLORS}`, THEME_COLORS.includes (themeTextColor));
-    return `mdc-theme--${ dasherize (themeTextColor)}`;
+    assert (`The themeText must be one of the following values: ${THEME_TEXT_VALUES}`, THEME_TEXT_VALUES.includes (themeText));
+    return `mdc-theme--${ dasherize (themeText)}`;
   }),
 
   /**
@@ -83,7 +83,7 @@ export default Mixin.create ({
       return null;
     }
 
-    assert (`The theme attribute must be one of the following values: ${THEMES}`, THEMES.includes (theme));
+    assert (`The theme attribute must be one of the following values: ${THEME_VALUES}`, THEME_VALUES.includes (theme));
     assert (`The themeTextStyle attribute must be one of the following values: ${THEME_TEXT_STYLES}`, THEME_TEXT_STYLES.includes (themeTextStyle));
 
     return `mdc-theme--text-${themeTextStyle}-on-${theme}`;
