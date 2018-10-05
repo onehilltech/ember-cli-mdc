@@ -81,7 +81,7 @@ export default Component.extend({
     let delay = this.get ('validationDelay');
 
     debounce (this, function () {
-      if (!this.isDestroyed)
+      if (this.isDestroyed)
         return;
 
       let valid = this.element.checkValidity ();
