@@ -13,7 +13,12 @@ export default Component.extend({
 
   classNames: ['mdc-step'],
 
-  classNameBindings: ['optional:mdc-step--optional', 'editable:mdc-step--editable', 'disabled:mdc-step--disabled'],
+  classNameBindings: [
+    'optional:mdc-step--optional',
+    'editable:mdc-step--editable',
+    'disabled:mdc-step--disabled',
+    'error:mdc-step--error'
+  ],
 
   nextEventListener_: null,
   backEventListener_: null,
@@ -26,6 +31,9 @@ export default Component.extend({
 
   /// The step is completed.
   completed: false,
+
+  // The mdc step, which is assigned by the parent.
+  step: null,
 
   init () {
     this._super (...arguments);
@@ -40,8 +48,8 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let error = this.get ('error');
-    this.parentView.stepError (error, this.elementId);
+    //let error = this.get ('error');
+    //this.parentView.stepError (error, this.elementId);
   },
 
   didInsertElement () {
@@ -66,7 +74,7 @@ export default Component.extend({
 
   didNext () {
     // Moving to the next step implies the step is completed.
-    this.set ('completed', true);
+    this.setProperties ({ completed: true, error: null });
 
     this.getWithDefault ('next', noOp) ();
   },

@@ -64,7 +64,6 @@ export class MDCStepper extends MDCComponent {
 
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
 
-      notifyStepComplete: (stepId) => this.emit ('MDCStep:complete', {stepId}, true),
       notifyStepError: (stepId, message) => this.emit ('MDCStep:error', {stepId, message}, true),
       notifyComplete: () => this.emit ('MDCStepper:complete', {}, true),
 

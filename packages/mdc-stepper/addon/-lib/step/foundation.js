@@ -131,13 +131,11 @@ class MDCStepFoundation extends MDCFoundation {
     // label message text based on the error state.
 
     if (this.adapter_.hasFeedback ())
-      this.adapter_.removeTransientEffect ()
+      this.adapter_.removeTransientEffect ();
 
-    if (this.isError ()) {
-      // Case the current state of step is "error", update the error message
-      // to the original title message or just remove it.
-      this.adapter_.setTitleMessage ('');
-    }
+    // Change the step to the completed state.
+    if (!this.changeToState_ (MDCStepFoundation.states.COMPLETED))
+      return false;
 
     // We can now notify the listeners that the next button was pressed. The
     // stepper will handle the reset of the transition for us.
@@ -157,6 +155,7 @@ class MDCStepFoundation extends MDCFoundation {
     if (this.adapter_.hasFeedback ())
       this.adapter_.removeTransientEffect ();
 
+    // We can now notify the listeners that the back button was pressed.
     this.adapter_.notifyBack ();
   }
 
@@ -198,47 +197,45 @@ class MDCStepFoundation extends MDCFoundation {
   }
 
   setStepCompleted () {
-    return !this.adapter_.hasClass (MDCStepFoundation.states.COMPLETED) ? this.updateState_ (MDCStepFoundation.states.COMPLETED) : false;
+    return !this.adapter_.hasClass (MDCStepFoundation.states.COMPLETED) ? this.changeToState_ (MDCStepFoundation.states.COMPLETED) : false;
   }
 
   setStepError () {
-    return !this.adapter_.hasClass (MDCStepFoundation.states.ERROR) ? this.updateState_ (MDCStepFoundation.states.ERROR) : false;
+    return !this.adapter_.hasClass (MDCStepFoundation.states.ERROR) ? this.changeToState_ (MDCStepFoundation.states.ERROR) : false;
   }
 
-  updateState_ (state) {
-    // Case the current step state to change is "completed",
-    // we can decrement the total number of completed.
-
-    //if (step.state === this.StepState_.COMPLETED) {
-    //  this.Steps_.completed -= 1;
-    //}
+  /**
+   * Change the step to a new state.
+   *
+   * @param state
+   * @return {boolean}
+   * @private
+   */
+  changeToState_ (state) {
+    const { states, cssClasses } = MDCStepFoundation;
 
     switch (state) {
-      case MDCStepFoundation.states.COMPLETED:
-        // Case changing the current step state to "completed",
-        // we can increment the total number of completed.
-        //this.Steps_.completed += 1;
-
-        this.adapter_.removeClass (MDCStepFoundation.cssClasses.ERROR);
-        this.adapter_.addClass (MDCStepFoundation.cssClasses.COMPLETED);
+      case states.COMPLETED:
+        this.adapter_.removeClass (cssClasses.ERROR);
+        this.adapter_.addClass (cssClasses.COMPLETED);
         break;
 
-      case MDCStepFoundation.states.ERROR:
-        this.adapter_.removeClass (MDCStepFoundation.cssClasses.COMPLETED);
-        this.adapter_.addClass (MDCStepFoundation.cssClasses.ERROR);
+      case states.ERROR:
+        this.adapter_.removeClass (cssClasses.COMPLETED);
+        this.adapter_.addClass (cssClasses.ERROR);
         break;
 
-      case MDCStepFoundation.states.NORMAL:
-        this.adapter_.removeClass (MDCStepFoundation.cssClasses.COMPLETED);
-        this.adapter_.removeClass (MDCStepFoundation.cssClasses.ERROR);
+      case states.NORMAL:
+        this.adapter_.removeClass (cssClasses.COMPLETED);
+        this.adapter_.removeClass (cssClasses.ERROR);
         break;
 
       default:
         return false;
     }
 
-    const isEditable = this.adapter_.hasClass (MDCStepFoundation.cssClasses.EDITABLE);
-    this.adapter_.setLabelIndicator (state, isEditable);
+    // Change the label indicator to the state.
+    this.adapter_.changeLabelIndicatorToState (state);
 
     return true;
   }

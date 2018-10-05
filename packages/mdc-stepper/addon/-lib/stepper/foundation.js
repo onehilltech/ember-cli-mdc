@@ -104,13 +104,8 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
     while (iterator.next () && iterator.isDisabled ());
     let nextStepId = !iterator.done () ? iterator.id () : null;
 
-    if (nextStepId) {
+    if (nextStepId)
       this.adapter_.activate (nextStepId);
-    }
-
-    // Notify the listeners that we have completed this step.
-    this.adapter_.setStepCompleted (stepId);
-    this.adapter_.notifyStepComplete (stepId);
 
     if (this.adapter_.getIsComplete ())
       this.adapter_.notifyComplete ();

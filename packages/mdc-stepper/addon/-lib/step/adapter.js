@@ -12,12 +12,9 @@ class MDCStepAdapter {
   isEditable () {}
 
   removeTransientEffect () {}
-
-  getLabelTitleMessageText () {}
-
+  changeLabelIndicatorToState (/*state*/) {}
+  
   setTitleMessage (/*message*/) {}
-
-  setLabelIndicator (/*state*/) {}
 
   getActionFromEvent (/*evt*/) {}
   getStepFromEvent (/*evt*/) {}

@@ -84,7 +84,7 @@ export class MDCStep extends MDCComponent {
 
   initialSyncWithDOM () {
     this.handleInteraction_ = this.foundation_.handleInteraction.bind (this.foundation_);
-    this.setLabelIndicator_ (MDCStepFoundation.states.NORMAL, this.foundation_.isEditable ());
+    this.changeLabelIndicatorToState_ (MDCStepFoundation.states.NORMAL);
 
     // Listen for click events on the page.
     this.listen ('click', this.handleInteraction_);
@@ -120,18 +120,16 @@ export class MDCStep extends MDCComponent {
         return element && element.parentElement.id;
       },
 
+      changeLabelIndicatorToState: this.changeLabelIndicatorToState_.bind (this),
+
       getStepperDisabled: () => !!closest (this.root_, MDCStepFoundation.strings.STEPPER_DISABLED_SELECTOR),
 
       removeTransientEffect: this.removeTransientEffect_.bind (this),
-
-      getLabelTitleMessageText: () => this.labelTitleMessage_.textContent,
 
       setTitleMessage: message => {
         if (this.labelTitleMessage_)
           this.labelTitleMessage_.textContent = message;
       },
-
-      setLabelIndicator: this.setLabelIndicator_.bind (this),
 
       notifyNext: () => this.emit ('MDCStep:next', { stepId: this.root_.id }, true),
       notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true),
@@ -194,36 +192,6 @@ export class MDCStep extends MDCComponent {
   }
 
   /**
-   * Set the label indicator for the step.
-   *
-   * @param state
-   * @param isEditable
-   * @return {boolean}
-   * @private
-   */
-  setLabelIndicator_ (state, isEditable) {
-    switch (state) {
-      case MDCStepFoundation.states.NORMAL:
-        this.labelIndicatorContent_.classList.remove ('material-icons');
-        this.labelIndicatorContent_.textContent = this.labelIndicatorText_;
-        break;
-
-      case MDCStepFoundation.states.COMPLETED:
-        this.labelIndicatorContent_.classList.add ('material-icons');
-        this.labelIndicatorContent_.textContent = isEditable ? 'edit' : 'check';
-        break;
-
-      case MDCStepFoundation.states.ERROR:
-        this.labelIndicatorContent_.classList.remove ('material-icons');
-        this.labelIndicatorContent_.textContent = '!';
-        break;
-
-      default:
-        return false;
-    }
-  }
-
-  /**
    * Remove the transient effect from the step if it exists.
    *
    * @return {boolean}
@@ -249,5 +217,31 @@ export class MDCStep extends MDCComponent {
   setTitleMessage_ (message) {
     if (this.labelTitleMessage_)
       this.labelTitleMessage_.textContent = message;
+  }
+
+  /**
+   * Change the label indicator to a new state.
+   *
+   * @param state
+   * @return {boolean}
+   * @private
+   */
+  changeLabelIndicatorToState_ (state) {
+    const { states, cssClasses } = MDCStepFoundation;
+
+    if (state === states.NORMAL || state === states.ERROR) {
+      this.labelIndicatorContent_.classList.remove ('material-icons');
+      this.labelIndicatorContent_.textContent = states.NORMAL ? this.labelIndicatorText_ : '!';
+    }
+    else if (state === states.COMPLETED) {
+      const isEditable = this.root_.classList.contains (cssClasses.EDITABLE);
+      this.labelIndicatorContent_.classList.add ('material-icons');
+      this.labelIndicatorContent_.textContent = isEditable ? 'edit' : 'check';
+    }
+    else {
+      return false;
+    }
+
+    return true;
   }
 }
