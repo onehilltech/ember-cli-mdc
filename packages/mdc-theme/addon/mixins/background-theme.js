@@ -4,7 +4,7 @@ import { isEmpty } from '@ember/utils';
 
 import { assert } from '@ember/debug';
 
-const THEME_BACKGROUND_COLORS = [
+const THEME_BACKGROUND_VALUES = [
   'background',
   'primary',
   'secondary'
@@ -12,27 +12,27 @@ const THEME_BACKGROUND_COLORS = [
 
 export default Mixin.create ({
   classNameBindings: [
-    'mdcThemeBackgroundColorClassName'
+    'mdcThemeBackgroundClassName'
   ],
 
   /**
-   * Sets the background color to the selected style. The `themeBackgroundColor` attribute must
+   * Sets the background color to the selected style. The `themeBackground` attribute must
    * be one of the following values:
    *
    *  = background
    *  = primary
    *  = secondary
    */
-  themeBackgroundColor: null,
+  themeBackground: null,
 
-  mdcThemeBackgroundColorClassName: computed ('themeBackgroundColor', function () {
-    const themeBackgroundColor = this.get ('themeBackgroundColor');
+  mdcThemeBackgroundClassName: computed ('themeBackground', function () {
+    const themeBackground = this.get ('themeBackground');
 
-    if (isEmpty (themeBackgroundColor)) {
+    if (isEmpty (themeBackground)) {
       return null;
     }
 
-    assert (`The themeBackgroundColor attribute must be one of the following values: ${THEME_BACKGROUND_COLORS}`, THEME_BACKGROUND_COLORS.includes (themeBackgroundColor));
-    return  themeBackgroundColor === 'background' ? 'mdc-theme--background' : `mdc-theme--${themeBackgroundColor}-bg`;
+    assert (`The themeBackground attribute must be one of the following values: ${THEME_BACKGROUND_VALUES}`, THEME_BACKGROUND_VALUES.includes (themeBackground));
+    return  themeBackground === 'background' ? 'mdc-theme--background' : `mdc-theme--${themeBackground}-bg`;
   })
 });
