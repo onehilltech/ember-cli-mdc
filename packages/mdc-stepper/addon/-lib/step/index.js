@@ -187,8 +187,8 @@ export class MDCStep extends MDCComponent {
     return this.foundation_.setCompleted ();
   }
 
-  setError (message) {
-    this.foundation_.setError (message);
+  setError () {
+    this.foundation_.setError ();
   }
 
   /**
@@ -218,7 +218,7 @@ export class MDCStep extends MDCComponent {
     if (!this.labelTitleMessage_)
       return false;
 
-    this.labelTitleMessage_.textContent = message ? message : this.labelTitleText_;
+    this.labelTitleMessage_.textContent = !!message ? message : this.labelTitleText_;
   }
 
   /**

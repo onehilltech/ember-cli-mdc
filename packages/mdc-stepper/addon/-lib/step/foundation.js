@@ -198,12 +198,10 @@ class MDCStepFoundation extends MDCFoundation {
 
   setCompleted () {
     this.changeToState_ (MDCStepFoundation.states.COMPLETED);
-    this.adapter_.setTitleMessage (null);
   }
 
-  setError (message) {
+  setError () {
     this.changeToState_ (MDCStepFoundation.states.ERROR);
-    this.adapter_.setTitleMessage (message);
   }
 
   /**
