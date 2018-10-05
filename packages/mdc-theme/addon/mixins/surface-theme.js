@@ -2,6 +2,39 @@ import Mixin from '@ember/object/mixin';
 
 export default Mixin.create ({
   classNameBindings: [
-    'themeSurfaceColor:mdc-theme--surface',
+    'themeSurface:mdc-theme--surface',
   ],
+
+  /// {@ CSS Custom Properties
+
+  /// Sets the --mdc-theme-surface CSS property.
+  themeSurfaceColor: null,
+
+  /// @}
+
+  didInsertElement () {
+    this._super (...arguments);
+
+    let themeSurfaceColor = this.get ('themeSurfaceColor');
+
+    if (isPresent (themeSurfaceColor)) {
+      this.element.style.setProperty ('--mdc-theme-surface', themeSurfaceColor);
+    }
+    else {
+      this.element.style.removeProperty ('--mdc-theme-surface');
+    }
+  },
+
+  didUpdateAttrs () {
+    this._super (...arguments);
+
+    let themeSurfaceColor = this.get ('themeSurfaceColor');
+
+    if (isPresent (themeSurfaceColor)) {
+      this.element.style.setProperty ('--mdc-theme-surface', themeSurfaceColor);
+    }
+    else {
+      this.element.style.removeProperty ('--mdc-theme-surface');
+    }
+  }
 });
