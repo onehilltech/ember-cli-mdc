@@ -59,7 +59,6 @@ export class MDCStepper extends MDCComponent {
       activate: this.activate_.bind (this),
       getActiveId: () => this.findActiveStep_ ().id,
 
-      setStepCompleted: (stepId) => this.findStep_ (stepId).setStepCompleted (),
       setStepError: (stepId) => this.findStep_ (stepId).setStepError (),
 
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,

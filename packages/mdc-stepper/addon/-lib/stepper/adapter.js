@@ -10,7 +10,6 @@ class MDCStepperAdapter {
 
   activate (stepId, force) {}
 
-  setStepCompleted (stepId) {}
   setStepError (stepId) {}
 
   updateTitleMessage (stepId, message) {}
