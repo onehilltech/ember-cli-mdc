@@ -21,7 +21,11 @@ export default Component.extend({
   cancelEventListener_: null,
   gotoEventListener_: null,
 
+  /// Error message for the state.
   error: null,
+
+  /// The step is completed.
+  completed: false,
 
   init () {
     this._super (...arguments);
@@ -61,6 +65,9 @@ export default Component.extend({
   },
 
   didNext () {
+    // Moving to the next step implies the step is completed.
+    this.set ('completed', true);
+
     this.getWithDefault ('next', noOp) ();
   },
 
