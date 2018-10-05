@@ -42,6 +42,14 @@ export default Component.extend({
 
     this._stepper = new MDCStepper (this.element);
     this._stepper.listen ('MDCStepper:complete', this.completeEventListener_);
+
+    // Associate the EmberJS step components with the MDC step components. This
+    // allows the EmberJS components to directly manipulate the MDC component.
+    let steps = this._stepper.steps;
+    let components = this.childViews;
+
+    for (let i = 0, length = steps.length; i < length; ++ i)
+      components[i].step = steps[i];
   },
 
   willDestroyElement () {

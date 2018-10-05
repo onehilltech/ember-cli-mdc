@@ -187,7 +187,7 @@ export class MDCStep extends MDCComponent {
     return this.foundation_.setCompleted ();
   }
 
-  set setError (message) {
+  setError (message) {
     this.foundation_.setError (message);
   }
 
@@ -215,8 +215,10 @@ export class MDCStep extends MDCComponent {
    * @private
    */
   setTitleMessage_ (message) {
-    if (this.labelTitleMessage_)
-      this.labelTitleMessage_.textContent = message;
+    if (!this.labelTitleMessage_)
+      return false;
+
+    this.labelTitleMessage_.textContent = message ? message : this.labelTitleText_;
   }
 
   /**
@@ -231,7 +233,7 @@ export class MDCStep extends MDCComponent {
 
     if (state === states.NORMAL || state === states.ERROR) {
       this.labelIndicatorContent_.classList.remove ('material-icons');
-      this.labelIndicatorContent_.textContent = states.NORMAL ? this.labelIndicatorText_ : '!';
+      this.labelIndicatorContent_.textContent = state === states.NORMAL ? this.labelIndicatorText_ : '!';
     }
     else if (state === states.COMPLETED) {
       const isEditable = this.root_.classList.contains (cssClasses.EDITABLE);

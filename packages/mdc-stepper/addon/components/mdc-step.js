@@ -3,6 +3,7 @@ import layout from '../templates/components/mdc-step';
 
 import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
+import { isPresent } from '@ember/utils';
 
 function noOp () {}
 
@@ -16,8 +17,7 @@ export default Component.extend({
   classNameBindings: [
     'optional:mdc-step--optional',
     'editable:mdc-step--editable',
-    'disabled:mdc-step--disabled',
-    'error:mdc-step--error'
+    'disabled:mdc-step--disabled'
   ],
 
   nextEventListener_: null,
@@ -48,8 +48,11 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    //let error = this.get ('error');
-    //this.parentView.stepError (error, this.elementId);
+    let error = this.get ('error');
+
+    if (isPresent (error)) {
+      this.step.setError (error);
+    }
   },
 
   didInsertElement () {

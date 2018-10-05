@@ -197,11 +197,13 @@ class MDCStepFoundation extends MDCFoundation {
   }
 
   setCompleted () {
-    return !this.adapter_.hasClass (MDCStepFoundation.states.COMPLETED) ? this.changeToState_ (MDCStepFoundation.states.COMPLETED) : false;
+    this.changeToState_ (MDCStepFoundation.states.COMPLETED);
+    this.adapter_.setTitleMessage (null);
   }
 
-  setError () {
-    return !this.adapter_.hasClass (MDCStepFoundation.states.ERROR) ? this.changeToState_ (MDCStepFoundation.states.ERROR) : false;
+  setError (message) {
+    this.changeToState_ (MDCStepFoundation.states.ERROR);
+    this.adapter_.setTitleMessage (message);
   }
 
   /**
