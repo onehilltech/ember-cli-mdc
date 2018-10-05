@@ -179,16 +179,16 @@ export class MDCStep extends MDCComponent {
     return this.foundation_.isDisabled ();
   }
 
-  setStepCompleted () {
-    return this.foundation_.setStepCompleted ();
-  }
-
-  setStepError () {
-    return this.foundation_.setStepError ();
-  }
-
   set titleMessage (message) {
     this.foundation_.setTitleMessage (message);
+  }
+
+  setCompleted () {
+    return this.foundation_.setCompleted ();
+  }
+
+  set setError (message) {
+    this.foundation_.setError (message);
   }
 
   /**

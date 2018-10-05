@@ -59,7 +59,7 @@ export class MDCStepper extends MDCComponent {
       activate: this.activate_.bind (this),
       getActiveId: () => this.findActiveStep_ ().id,
 
-      setStepError: (stepId) => this.findStep_ (stepId).setStepError (),
+      setStepError: (message, stepId) => this.findStep_ (stepId).setError (message),
 
       updateTitleMessage: (stepId, message) => this.findStep_ (stepId).titleMessage = message,
 
@@ -170,7 +170,7 @@ export class MDCStepper extends MDCComponent {
     return this.foundation_.isDisabled ();
   }
 
-  set disabled (value) {
+  set disabled (disabled) {
     this.foundation_.setDisabled (disabled);
   }
 
@@ -282,7 +282,7 @@ export class MDCStepper extends MDCComponent {
       if (step.isOptional)
         continue;
 
-      step.setStepCompleted ();
+      step.setCompleted ();
     }
   }
 

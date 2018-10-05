@@ -24,12 +24,8 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
 
       activate: (stepId, force) => {},
 
-      setStepError: (stepId) => {},
+      setStepError: (message, stepId) => {},
 
-      updateTitleMessage: (stepId, message) => {},
-
-      notifyStepComplete: (stepId) => {},
-      notifyStepError: (stepId, message) => {},
       notifyComplete: () => {},
 
       iterator: (stepId) => {}
@@ -162,11 +158,6 @@ export default class MDCStepperBaseFoundation extends MDCFoundation {
    * @return {undefined}
    */
   error (message, stepId) {
-    this.adapter_.setStepError (stepId);
-
-    if (!!message)
-      this.adapter_.updateTitleMessage (stepId, message);
-
-    this.adapter_.notifyStepError (stepId, message);
+    this.adapter_.setStepError (message, stepId);
   }
 }
