@@ -44,16 +44,6 @@ export default Component.extend({
     this._stepper.listen ('MDCStepper:complete', this.completeEventListener_);
   },
 
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    let error = this.get ('error');
-
-    if (isPresent (error)) {
-      this._stepper.error (error);
-    }
-  },
-
   willDestroyElement () {
     this._super (...arguments);
 
