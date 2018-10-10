@@ -66,7 +66,11 @@ to have this requirement removed in the near future.
 Fab
 -----------
 
+### Description
+
 The `Fab` mixin allows you to convert any component into a floating action button.
+
+### Usage
 
 ```javascript
 import Fab from 'ember-cli-mdc-fab';
