@@ -18,7 +18,7 @@ Components and Mixins
 
 ### Mixins
 
-* `Fab`
+* [`Fab`](#fab)
 
 {{mdc-fab}}
 ---------------
