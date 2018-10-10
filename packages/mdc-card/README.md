@@ -27,7 +27,9 @@ The `{{mdc-card}}` is a component that implements the
 
 ```handlebars
 {{#mdc-card outlined=[true|false]}}
-  <!-- card content goes here -->
+  
+  <!-- ... content ... -->
+  
 {{/mdc-card}}
 ```
 
