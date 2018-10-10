@@ -34,14 +34,18 @@ export default Mixin.create (TextTheme, BackgroundTheme, SurfaceTheme, {
 
     let { themePrimaryColor, themeSecondaryColor } = this.getProperties (['themePrimaryColor', 'themeSecondaryColor']);
 
-    if (isPresent (themePrimaryColor))
+    if (isPresent (themePrimaryColor)) {
       this.element.style.setProperty ('--mdc-theme-primary', themePrimaryColor);
-    else
+    }
+    else {
       this.element.style.removeProperty ('--mdc-theme-primary');
+    }
 
-    if (isPresent (themeSecondaryColor))
+    if (isPresent (themeSecondaryColor)) {
       this.element.style.setProperty ('--mdc-theme-secondary', themeSecondaryColor);
-    else
+    }
+    else {
       this.element.style.removeProperty ('--mdc-theme-secondary');
+    }
   }
 });
