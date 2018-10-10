@@ -68,9 +68,9 @@ Fab
 
 The `Fab` mixin allow you to convert any component into a floating action button.
 
-```handlebars
-import Fab from `ember-cli-mdc-fab`;
-import Component from `@ember/component`;
+```javascript
+import Fab from 'ember-cli-mdc-fab';
+import Component from '@ember/component';
 
 export default Component.extend (Fab, {
 
