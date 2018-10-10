@@ -1,5 +1,6 @@
 {
   "name": "ember-cli-mdc",
+  "repository": "github:onehilltech/ember-cli-mdc",
   "private": false,
   "devDependencies": {
     "lerna": "^3.4.0"
