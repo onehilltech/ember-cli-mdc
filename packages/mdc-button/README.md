@@ -74,7 +74,12 @@ does this by extending the [`LinkComponent`](https://emberjs.com/api/ember/3.3/c
 component, and applying the [`Button`](https://github.com/onehilltech/ember-cli-mdc/blob/master/packages/mdc-button/addon/mixins/button.js) mixin
 exported from this module.
 
+> Because `{{mdc-button-linkto}}` extends [`LinkComponent`](https://emberjs.com/api/ember/3.3/classes/LinkComponent),
+> all properties and methods available on [`LinkComponent`](https://emberjs.com/api/ember/3.3/classes/LinkComponent)
+> are available on `{{mdc-button-linkto}}`.
+
 ```handlebars
 {{#mdc-button-linkto "contact"}}Contact Us{{/mdc-button-linkto}}
 {{#mdc-button-linkto "user" user.id}}Contact Us{{/mdc-button-linkto}}
 ```    
+
