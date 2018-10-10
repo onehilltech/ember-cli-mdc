@@ -63,3 +63,16 @@ Add a link component displays as a floating action button.
 For the time being, the first parameter must be a string, which will be ignored. We hope 
 to have this requirement removed in the near future.
 
+Fab
+-----------
+
+The `Fab` mixin allow you to convert any component into a floating action button.
+
+```handlebars
+import Fab from `ember-cli-mdc-fab`;
+import Component from `@ember/component`;
+
+export default Component.extend (Fab, {
+
+});
+```
