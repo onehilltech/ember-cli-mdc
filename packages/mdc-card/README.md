@@ -15,30 +15,6 @@ This package contains the following top-level components.
 
 * [`{{mdc-card}}`](#mdc-card)
 
-### HTML Structure
-
-```handlebars
-{{#mdc-card}}
-  {{#mdc-card-media}}
-    {{#mdc-card-media-content}}{{/mdc-card-media-content}}
-  {{/mdc-card-media}}
-  
-  <!-- content goes here -->
-  
-  {{#mdc-card-actions}}
-      {{#mdc-card-action-buttons}}
-        {{#mdc-card-action-button}}Action 1{{/mdc-card-action-button}}
-        {{#mdc-card-action-button}}Action 2{{/mdc-card-action-button}}
-      {{/mdc-card-action-buttons}}
-  
-      {{#mdc-card-action-icons}}
-        {{mdc-card-action-icon "share" title="Share"}}
-        {{mdc-card-action-icon "more_vert" title="More options"}}
-      {{/mdc-card-action-icons}}
-    {{/mdc-card-actions}}
-{{/mdc-card}}
-```
-
 mdc-card
 ---------------------
 
