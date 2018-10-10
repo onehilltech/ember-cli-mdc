@@ -14,7 +14,6 @@ Components
 This package contains the following top-level components.
 
 * [`{{mdc-button}}`](#mdc-button)
-* [`{{mdc-button-icon}}`](#mdc-button-icon)
 * [`{{mdc-button-linkto}}`](#mdc-button-linkto)
 
 mdc-button
@@ -56,8 +55,8 @@ Use the `click` attribute and the `action` helper to listen for button clicks.
 {{#mdc-button style="raised" click=(action "clicked")}}Button{{/mdc-button}}
 ```
 
-mdc-button
----------------------
+### Adding Icons to Buttons
+--------------------------
 
 Use the `{{mdc-button-icon}}`, which extends the 
 [`{{mdc-icon}}`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-icon) 
