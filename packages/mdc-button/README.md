@@ -56,7 +56,6 @@ Use the `click` attribute and the `action` helper to listen for button clicks.
 ```
 
 ### Adding Icons to Buttons
---------------------------
 
 Use the `{{mdc-button-icon}}`, which extends the 
 [`{{mdc-icon}}`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-icon) 
