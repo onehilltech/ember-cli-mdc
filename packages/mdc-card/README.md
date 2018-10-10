@@ -57,5 +57,5 @@ The `{{mdc-card}}` is a component that implements the
 
 ### Attributes
 
-* **`outlined`** - The card is outlined, and not elevated.
+* `outlined` - The card is outlined, and not elevated.
 
