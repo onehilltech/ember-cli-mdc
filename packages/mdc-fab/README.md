@@ -52,7 +52,7 @@ Add a floating action button component to the page.
 
 ### Description
 
-Add a link component displays as a floating action button.
+Add a link component that displays as a floating action button.
 
 ### Usage
 
