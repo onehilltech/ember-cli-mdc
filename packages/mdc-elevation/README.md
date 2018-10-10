@@ -11,8 +11,11 @@ Installation
 Components and Mixins
 -----------------------
 
-This package does not contain any top level components. It contains the
-following mixins:
+### Components
+
+none
+
+### Mixins
 
 * [Elevation](#elevation)
 
