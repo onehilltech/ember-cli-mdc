@@ -33,7 +33,7 @@ component by adding the elevation class to the HTML element.
 import Elevation from 'ember-cli-mdc-elevation/mixins/elevation';
 
 export default Component.extend (Elevation, {
-  elevation: 4
+  elevation: 4              // add mdc-elevation--z4 to class
 });
 
 ```
