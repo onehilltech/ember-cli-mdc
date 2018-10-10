@@ -14,6 +14,8 @@ Components
 This package contains the following top-level components.
 
 * [`{{mdc-button}}`](#mdc-button)
+* [`{{mdc-button-icon}}`](#mdc-button-icon)
+* [`{{mdc-button-linkto}}`](#mdc-button-linkto)
 
 mdc-button
 ---------------------
@@ -54,7 +56,8 @@ Use the `click` attribute and the `action` helper to listen for button clicks.
 {{#mdc-button style="raised" click=(action "clicked")}}Button{{/mdc-button}}
 ```
 
-### Button Icons
+mdc-button
+---------------------
 
 Use the `{{mdc-button-icon}}`, which extends the 
 [`{{mdc-icon}}`](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages/mdc-icon) 
@@ -64,3 +67,16 @@ component, to add an icon to the button.
 {{#mdc-button style="raised"}}{{mdc-button-icon "event"}}Button{{/mdc-button}}
 ```
 
+mdc-button-linkto
+---------------------
+
+The `{{mdc-button-linkto}}` components will bind the button to a route, which means you
+do not have to create an action that routes to a new location when clicked. The 
+does this by extending the [`LinkComponent`](https://emberjs.com/api/ember/3.3/classes/LinkComponent) 
+component, and applying the [`Button`](https://github.com/onehilltech/ember-cli-mdc/blob/master/packages/mdc-button/addon/mixins/button.js) mixin
+exported from this module.
+
+```handlebars
+{{#mdc-button-linkto "contact"}}Contact Us{{/mdc-button-linkto}}
+{{#mdc-button-linkto "user" user.id}}Contact Us{{/mdc-button-linkto}}
+```    
