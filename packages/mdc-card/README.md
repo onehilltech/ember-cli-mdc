@@ -58,3 +58,9 @@ displayed over the media, like a title.
 ### Attributes
 
 * `scale` - Sets the scale of the media to either square (_i.e._, width equal height), or 16x9 aspect ratio.
+
+Adding Actions to the Card
+----------------------------
+
+Actions typically appear at the bottom of the card. The can either be a button or 
+an icon button.
