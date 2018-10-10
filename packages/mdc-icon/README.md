@@ -73,6 +73,6 @@ mixin. This exposes the `themeTextColor`, `theme`, and `themeTextStyle` attribut
 component.
 
 ```handlebars
-{{mdc-icon "favorite" themeTextColor="primary"}}
+{{mdc-icon "favorite" themeText="primary"}}
 {{mdc-icon "favorite" theme="light" themeTextStyle="disabled"}}
 ```
