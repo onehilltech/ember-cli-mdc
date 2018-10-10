@@ -62,5 +62,31 @@ displayed over the media, like a title.
 Adding Actions to the Card
 ----------------------------
 
-Actions typically appear at the bottom of the card. The can either be a button or 
-an icon button.
+Actions typically appear at the bottom of the card. The actions can either be a button or 
+an icon button. Use the `{{mdc-card-actions}}` component, and its child components, to add 
+actions to a `{{mdc-card}}` component.
+
+```handlebars
+{{#mdc-card}}
+  <!-- ... content ... -->
+  
+  {{#mdc-card-actions}}
+    {{#mdc-card-action-buttons}}
+      {{#mdc-card-action-button}}Action 1{{/mdc-card-action-button}}
+      {{#mdc-card-action-button}}Action 2{{/mdc-card-action-button}}
+    {{/mdc-card-action-buttons}}
+
+    {{#mdc-card-action-icons}}
+      {{mdc-card-action-icon "share" title="Share"}}
+      {{mdc-card-action-icon "more_vert" title="More options"}}
+    {{/mdc-card-action-icons}}
+  {{/mdc-card-actions}}
+{{/mdc-card}}
+```
+
+### Types of Actions
+
+* `{{mdc-card-action-button}}` - Standard button as a card action.
+* `{{mdc-card-action-button-link-to}}` - A link component as a card action.
+* `{{mdc-card-action-icon}}` - A ``{{mdc-icon}}`` component as a card action.
+* `{{mdc-card-action-icon-toggle}}` - A ``{{mdc-icon-button-toggle}}`` as a card action.
