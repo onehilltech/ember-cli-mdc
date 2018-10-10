@@ -79,7 +79,7 @@ exported from this module.
 > are available on `{{mdc-button-linkto}}`.
 
 ```handlebars
-{{#mdc-button-linkto "contact" type="unelevated"}}Contact Us{{/mdc-button-linkto}}
-{{#mdc-button-linkto "user" user.id type="raised"}}Contact Us{{/mdc-button-linkto}}
+{{#mdc-button-linkto "contact" style="unelevated"}}Contact Us{{/mdc-button-linkto}}
+{{#mdc-button-linkto "user" user.id style="raised"}}Contact Us{{/mdc-button-linkto}}
 ```    
 
