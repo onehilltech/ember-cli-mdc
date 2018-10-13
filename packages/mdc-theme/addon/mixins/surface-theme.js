@@ -1,4 +1,5 @@
 import Mixin from '@ember/object/mixin';
+import { isPresent } from '@ember/utils';
 
 export default Mixin.create ({
   classNameBindings: [
