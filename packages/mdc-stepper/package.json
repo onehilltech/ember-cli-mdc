@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-stepper",
-  "version": "0.52.1",
+  "version": "0.52.2",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -22,7 +22,7 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-mdc-sass": "^0.52.0"
+    "ember-cli-mdc-sass": "^0.52.2"
   },
   "devDependencies": {
     "@material/animation": "^0.39.0",
@@ -41,15 +41,15 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.52.0",
-    "ember-cli-mdc-base": "^0.52.0",
-    "ember-cli-mdc-button": "^0.52.1",
-    "ember-cli-mdc-elevation": "^0.52.1",
-    "ember-cli-mdc-icon": "^0.52.1",
-    "ember-cli-mdc-ripple": "^0.52.1",
-    "ember-cli-mdc-rtl": "^0.52.0",
-    "ember-cli-mdc-theme": "^0.52.1",
-    "ember-cli-mdc-typography": "^0.52.0",
+    "ember-cli-mdc-animation": "^0.52.2",
+    "ember-cli-mdc-base": "^0.52.2",
+    "ember-cli-mdc-button": "^0.52.2",
+    "ember-cli-mdc-elevation": "^0.52.2",
+    "ember-cli-mdc-icon": "^0.52.2",
+    "ember-cli-mdc-ripple": "^0.52.2",
+    "ember-cli-mdc-rtl": "^0.52.2",
+    "ember-cli-mdc-theme": "^0.52.2",
+    "ember-cli-mdc-typography": "^0.52.2",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
