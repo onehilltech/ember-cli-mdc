@@ -129,6 +129,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-list/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-menu-surface/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-menu-surface/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-menu/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-menu/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/node_modules" />
