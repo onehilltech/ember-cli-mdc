@@ -4,6 +4,7 @@ export default Mixin.create ({
   classNames: ['mdc-list-item'],
 
   classNameBindings: ['selected:mdc-list-item--selected', 'activated:mdc-list-item--activated'],
+  attributeBindings: ['role'],
 
   selected: false,
 
