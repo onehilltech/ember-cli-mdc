@@ -22,12 +22,15 @@ export default Component.extend({
   twoLine: false,
   avatarList: false,
 
+  attributeBindings: ['role', 'orientation:aria-orientation'],
+
+  orientation: 'vertical',
+
   _list: null,
 
   didInsertElement () {
     this._super (...arguments);
 
-    this.element.setAttribute ('aria-orientation', 'vertical');
     this._list = new mdc.list.MDCList (this.element);
   },
 
