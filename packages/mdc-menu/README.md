@@ -40,7 +40,7 @@ Add a menu component to the page.
 
 ### Attributes
 
-* `open` - Trigger the surface to open.
+* `open` - Trigger the surface to open; sets to `false` when closed.
 * `anchor` - Optional anchor point for the menu surface. Default is `"parent"`, but can also be `"body"`.
 * `quickOpen` - Enable quick open.
 * `position` - Optional position of the menu surface.
@@ -73,4 +73,29 @@ The `{{mdc-list-divider}}` component is used to a divider between menu items.
 
   {{mdc-menu-item "Add space after paragraph"}}
 {{/mdc-menu-list}}
+```
+
+### Group Selections
+
+The `{{mdc-menu-selection-group}}` block component is used to select between
+a group of menu items.
+
+```handlebars
+{{#mdc-menu open=open}}
+  {{#mdc-menu-list}}
+    <li>
+      {{#mdc-menu-selection-group}}
+        {{#mdc-menu-item}}
+          {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+          {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
+        {{/mdc-menu-item}}
+
+        {{#mdc-menu-item}}
+          {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+          {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
+        {{/mdc-menu-item}}
+      {{/mdc-menu-selection-group}}
+    </li>
+  {{/mdc-menu-list}}
+{{/mdc-menu}}
 ```
