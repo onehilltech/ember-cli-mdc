@@ -1,0 +1,26 @@
+<div class="toolbar">
+  <button onclick={{action (mut open) true}}>Open Menu</button>
+
+  {{#mdc-menu open=open}}
+    {{#mdc-menu-list}}
+      <li>
+        {{#mdc-menu-selection-group}}
+          {{#mdc-menu-item}}
+            {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+            {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
+          {{/mdc-menu-item}}
+
+          {{#mdc-menu-item}}
+            {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+            {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
+          {{/mdc-menu-item}}
+        {{/mdc-menu-selection-group}}
+      </li>
+
+      {{mdc-list-divider}}
+
+      {{mdc-menu-item "Add space before paragraph"}}
+      {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
+    {{/mdc-menu-list}}
+  {{/mdc-menu}}
+</div>
