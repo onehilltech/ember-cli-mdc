@@ -1,6 +1,12 @@
 @import "app-theme";
 @import "@material/card/mdc-card";
+@import "@material/theme/mixins";
 
 a.mdc-card {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:link, &:visited, &:hover, &:active {
+    @include mdc-theme-prop (color, on-surface);
+  }
 }
