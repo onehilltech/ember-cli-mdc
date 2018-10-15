@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-typography",
-  "version": "0.56.0",
+  "version": "0.57.0",
   "description": "ember-cli addon for @material/typography",
   "keywords": [
     "ember-addon",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-mdc-sass": "^0.56.0"
+    "ember-cli-mdc-sass": "^0.57.0"
   },
   "devDependencies": {
     "@material/typography": "0.39.0",
