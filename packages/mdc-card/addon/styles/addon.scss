@@ -1,2 +1,6 @@
 @import "app-theme";
 @import "@material/card/mdc-card";
+
+a.mdc-card {
+  text-decoration: none;
+}
