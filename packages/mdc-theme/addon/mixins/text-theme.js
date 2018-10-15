@@ -1,6 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import { computed } from '@ember/object';
-import { isEmpty } from '@ember/utils';
+import { isEmpty, isPresent } from '@ember/utils';
 import { dasherize } from '@ember/string';
 
 import { assert } from '@ember/debug';
@@ -30,6 +30,24 @@ export default Mixin.create ({
   classNameBindings: [
     'mdcThemeTextClassName',
     'mdcThemeClassName',
+  ],
+
+  customPropertyBindings: [
+    'themeOnPrimaryColor:--mdc-theme-on-primary',
+    'themeOnSecondaryColor:--mdc-theme-on-primary',
+    'themeOnSurfaceColor:--mdc-theme-on-surface',
+
+    'themeTextPrimaryOnLightColor:--mdc-theme-text-primary-on-light',
+    'themeTextSecondaryOnLightColor:--mdc-theme-text-secondary-on-light',
+    'themeTextHintOnLightColor:--mdc-theme-text-hint-on-light',
+    'themeTextIconOnLightColor:--mdc-theme-text-icon-on-light',
+    'themeTextDisabledOnLightColor:--mdc-theme-text-disabled-on-light',
+
+    'themeTextPrimaryOnDarkColor:--mdc-theme-text-primary-on-dark',
+    'themeTextSecondaryOnDarkColor:--mdc-theme-text-secondary-on-dark',
+    'themeTextHintOnDarkColor:--mdc-theme-text-hint-on-dark',
+    'themeTextIconOnDarkColor:--mdc-theme-text-icon-on-dark',
+    'themeTextDisabledOnDarkColor:--mdc-theme-text-disabled-on-dark',
   ],
 
   /**
@@ -87,5 +105,39 @@ export default Mixin.create ({
     assert (`The themeTextStyle attribute must be one of the following values: ${THEME_TEXT_STYLES}`, THEME_TEXT_STYLES.includes (themeTextStyle));
 
     return `mdc-theme--text-${themeTextStyle}-on-${theme}`;
-  })
+  }),
+
+  textColorOnPrimary: null,
+  textColorOnSecondary: null,
+  textColorOnSurface: null,
+
+  didInsertElement () {
+    this._super (...arguments);
+    this._applyTextTheme ();
+  },
+
+  didUpdateAttrs () {
+    this._super (...arguments);
+    this._applyTextTheme ();
+  },
+
+  _applyTextTheme () {
+    const {
+      textColorOnPrimary,
+      textColorOnSecondary,
+      textColorOnSurface
+    } = this.getProperties (['textColorOnPrimary', 'textColorOnSecondary', 'textColorOnSurface']);
+
+    if (isPresent (textColorOnPrimary)) {
+      this.element.style.setProperty ('--mdc-theme-on-primary', textColorOnPrimary);
+    }
+
+    if (isPresent (textColorOnSecondary)) {
+      this.element.style.setProperty ('--mdc-theme-on-secondary', textColorOnSecondary);
+    }
+
+    if (isPresent (textColorOnSurface)) {
+      this.element.style.setProperty ('--mdc-theme-on-surface', textColorOnSurface);
+    }
+  }
 });
