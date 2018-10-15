@@ -1,6 +1,8 @@
 /* global mdc */
 
 import Component from '@ember/component';
+import Theme from 'ember-cli-mdc-theme/mixins/theme';
+
 import layout from '../templates/components/mdc-top-app-bar';
 
 import { computed } from '@ember/object';
@@ -11,7 +13,7 @@ import { assert } from '@ember/debug';
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 const STYLES = ['fixed','dense','prominent','short'];
 
-export default Component.extend({
+export default Component.extend (Theme, {
   layout,
 
   tagName: 'header',
@@ -44,6 +46,12 @@ export default Component.extend({
     return alwaysClosed && style === 'short' ? 'mdc-top-app-bar--short-collapsed' : null;
   }),
 
+  init () {
+    this._super (...arguments);
+
+    this._navEventListener = this.doNavigation.bind (this);
+  },
+
   didInsertElement () {
     this._super (...arguments);
     this._createComponent ();
@@ -73,7 +81,6 @@ export default Component.extend({
   _createComponent () {
     this._topAppBar = new MDCTopAppBar (this.element);
 
-    this._navEventListener = this.doNavigation.bind (this);
     this._topAppBar.listen ('MDCTopAppBar:nav', this._navEventListener);
   },
 
