@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-blueprint-helpers": "^0.4.1"
+    "ember-cli-blueprint-helpers": "^0.4.2"
   },
   "devDependencies": {
     "@material/base": "0.39.0",
