@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-card",
-  "version": "0.58.1",
+  "version": "0.58.2",
   "description": "ember-cli addon for @material/card",
   "keywords": [
     "ember-addon",
