@@ -16,7 +16,7 @@ export default Mixin.create ({
     const topAppBarStyle = this.get ('topAppBarStyle');
 
     if (isEmpty (topAppBarStyle)) {
-      return 'mdc-top-app-bar--fixed-adjust';
+      return null;
     }
 
     assert (`The topAppBarStyle attribute must be one of the following values: ${STYLES}`, STYLES.includes (topAppBarStyle));
