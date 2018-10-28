@@ -1,12 +1,10 @@
-import Controller from '@ember/controller';
+import Route from '@ember/routing/route';
 
-export default Controller.extend({
-  foodGroups: null,
-
-  init () {
+export default Route.extend({
+  setupController (controller) {
     this._super (...arguments);
 
-    this.set ('foodGroups', [
+    controller.set ('foodGroups', [
       {value: '', disabled: true, selected: true},
       {value: 'grains', text: 'Bread, Cereal, Rice, and Pasta'},
       {value: 'vegetables', text: 'Vegetables'},

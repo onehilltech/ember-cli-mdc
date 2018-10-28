@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-select-native-option';
+import layout from '../templates/components/mdc-select-option';
 
 export default Component.extend({
   layout,

@@ -1,22 +1,16 @@
 /* global mdc */
 
 import Component from '@ember/component';
-import EmberObject from '@ember/object';
 
 import layout from '../templates/components/mdc-select';
 
-import { isEmpty } from '@ember/utils';
+import { isEmpty, isPresent } from '@ember/utils';
 import { computed } from '@ember/object';
 import { equal } from '@ember/object/computed';
 
 import { assert } from '@ember/debug';
-import { A } from '@ember/array';
 
 const STYLES = ['box', 'outlined'];
-
-function identity (value) {
-  return value;
-}
 
 export default Component.extend({
   layout,
@@ -46,6 +40,8 @@ export default Component.extend({
 
   _changeEventListener: null,
 
+  _lastState: null,
+
   init () {
     this._super (...arguments);
 
@@ -57,6 +53,34 @@ export default Component.extend({
 
     this._select = new mdc.select.MDCSelect (this.element);
     this._select.listen ('change', this._changeEventListener);
+
+    const { value, selectedIndex } = this.getProperties (['value', 'selectedIndex']);
+
+    if (isPresent (value)) {
+      this._select.value = value;
+    }
+    else if (isPresent (selectedIndex)) {
+      this._select.selectedIndex = selectedIndex;
+    }
+
+    // Save the value and selected index as our last state.
+    this._lastState = { value, selectedIndex };
+  },
+
+  didUpdateAttrs () {
+    this._super (...arguments);
+
+    let { value, selectedIndex } = this.getProperties (['value', 'selectedIndex']);
+
+    if (value !== this._lastState.value) {
+      this._select.value = value;
+      this._lastState.value = value;
+    }
+
+    if (selectedIndex !== this._lastState.selectedIndex) {
+      this._select.selectedIndex = selectedIndex;
+      this._lastState.selectedIndex = selectedIndex;
+    }
   },
 
   willDestroyElement () {
@@ -66,27 +90,13 @@ export default Component.extend({
     this._select.destroy ();
   },
 
-  displayOptions: computed ('{value,options}', function () {
-    const {value, options} = this.getProperties (['value', 'options']);
+  didChange ({ target: { value, selectedIndex }}) {
+    this.setProperties ({value, selectedIndex});
+  },
 
-    if (isEmpty (options)) {
-      return A ();
-    }
-
-    const transform = this.getWithDefault ('transform', identity);
-
-    return options.map (option => {
-      const copy = EmberObject.create (option);
-      copy.selected = transform (option.value) === transform (value);
-
-      return copy;
-    });
-  }),
-
-  didChange () {
-    this.setProperties ({
-      index: this._select.selectedIndex,
-      value: this._select.value
-    });
-  }
+  options: computed ('params.[]', function () {
+    return this.get ('params')[0];
+  })
+}).reopenClass ({
+  positionalParams: 'params'
 });

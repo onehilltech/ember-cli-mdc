@@ -1,12 +1,19 @@
-{{mdc-select-native-control options=displayOptions
-                            disabled=disabled
-                            required=required
-                            name=name
-                            autofocus=autofocus
-                            multiple=multiple
-                            form=form
-}}
+{{#mdc-select-native-control required=required
+                             name=name
+                             autofocus=autofocus
+                             multiple=multiple
+                             form=form}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#each options as |option|}}
+      {{#mdc-select-option value=option.value selected=option.selected disabled=option.disabled}}{{option.text}}{{/mdc-select-option}}
+    {{/each}}
+  {{/if}}
+{{/mdc-select-native-control}}
+
 {{#mdc-floating-label}}{{label}}{{/mdc-floating-label}}
+
 {{#if isOutlined}}
   {{mdc-notched-outline}}
 {{else}}
