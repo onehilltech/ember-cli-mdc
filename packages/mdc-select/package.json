@@ -25,8 +25,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-blueprint-helpers": "^0.4.3",
     "ember-cli-htmlbars": "^3.0.0",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-mdc-sass": "^0.58.1"
   },
   "devDependencies": {
@@ -34,10 +34,10 @@
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
+    "ember-cli-blueprint-helpers": "^0.4.3",
     "ember-cli-custom-properties": "1.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "0.58.1",
     "ember-cli-mdc-base": "0.58.1",
