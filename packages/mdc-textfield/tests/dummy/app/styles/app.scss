@@ -12,3 +12,18 @@
 .text-field-row-fullwidth {
   display: block;
 }
+
+.mdc-text-field__multipart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .mdc-text-field__input {
+    &.cc {
+      &-number, &-expiry, &-zipcode {
+        width: auto;
+      }
+    }
+
+  }
+}

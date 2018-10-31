@@ -1,22 +1,26 @@
-{{mdc-textfield-textarea id=textAreaId
+{{#unless (has-block)}}
+  {{mdc-textfield-textarea id=textAreaId
 
-                         value=value
-                         name=name
-                         rows=rows
-                         cols=cols
-                         placeholder=placeholder
-                         disabled=disabled
-                         maxlength=maxlength
-                         tabindex=tabindex
-                         selectionEnd=selectionEnd
-                         selectionStart=selectionStart
-                         autocomplete=autocomplete
-                         selectionDirection=selectionDirection
-                         wrap=wrap
-                         readonly=readonly
-                         autofocus=autofocus
-                         form=form
-                         spellcheck=spellcheck
-                         required=required
-}}
-{{#mdc-floating-label for=textAreaId}}{{label}}{{/mdc-floating-label}}
+                           value=value
+                           name=name
+                           rows=rows
+                           cols=cols
+                           placeholder=placeholder
+                           disabled=disabled
+                           maxlength=maxlength
+                           tabindex=tabindex
+                           selectionEnd=selectionEnd
+                           selectionStart=selectionStart
+                           autocomplete=autocomplete
+                           selectionDirection=selectionDirection
+                           wrap=wrap
+                           readonly=readonly
+                           autofocus=autofocus
+                           form=form
+                           spellcheck=spellcheck
+                           required=required}}
+  {{#mdc-floating-label for=textAreaId}}{{label}}{{/mdc-floating-label}}
+{{else}}
+  {{yield}}
+{{/unless}}
+

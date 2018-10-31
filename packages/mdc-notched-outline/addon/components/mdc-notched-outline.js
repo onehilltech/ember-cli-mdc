@@ -9,6 +9,7 @@ export default Component.extend({
   layout,
 
   classNames: ['mdc-notched-outline'],
+  classNameBindings: ['notched:mdc-notched-outline--notched'],
 
   _notchedOutline: null,
 

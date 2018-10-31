@@ -1,67 +1,69 @@
-{{#if hasLeadingIcon}}
-  {{mdc-textfield-icon icon clickable=iconClickable}}
-{{/if}}
-{{mdc-textfield-input id=inputId
-                      type=type
-
-                      dense=dense
-                      icon=icon
-                      iconPosition=iconPosition
-                      iconClickable=iconClickable
-                      iconClick=iconClick
-                      readonly=readonly
-                      required=required
-                      autofocus=autofocus
-                      value=value
-                      disabled=disabled
-                      size=size
-                      tabindex=tabindex
-                      minlength=minlength
-                      maxlength=maxlength
-                      name=name
-                      min=min
-                      max=max
-                      pattern=pattern
-                      accept=accept
-                      autocomplete=autocomplete
-                      autosave=autosave
-                      formaction=formaction
-                      formenctype=formenctype
-                      formmethod=formmethod
-                      formnovalidate=formnovalidate
-                      formtarget=formtarget
-                      height=height
-                      inputmode=inputmode
-                      multiple=multiple
-                      step=step
-                      width=width
-                      form=form
-                      selectionDirection=selectionDirection
-                      spellcheck=spellcheck
-
-                      action=action
-                      enter=enter
-                      insert-newline=insert-newline
-                      escape-press=escape-press
-                      focus-in=focus-in
-                      focus-out=focus-out
-                      key-press=key-press
-                      key-up=key-up
-
-                      placeholder=(if isFullWidth label)
-                      label=(if isFullWidth label)}}
-{{#if notFullWidth}}
-  {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
-{{/if}}
-{{#if hasTrailingIcon}}
-  {{mdc-textfield-icon icon clickable=iconClickable}}
-{{/if}}
-{{#if notFullWidth}}
-  {{#if isOutlined}}
-    {{mdc-notched-outline}}
-  {{else}}
-    {{mdc-line-ripple}}
+{{#unless (has-block)}}
+  {{#if hasLeadingIcon}}
+    {{mdc-textfield-icon icon clickable=iconClickable}}
   {{/if}}
-{{/if}}
+  {{mdc-textfield-input id=inputId
+                        type=type
 
+                        dense=dense
+                        icon=icon
+                        iconPosition=iconPosition
+                        iconClickable=iconClickable
+                        iconClick=iconClick
+                        readonly=readonly
+                        required=required
+                        autofocus=autofocus
+                        value=value
+                        disabled=disabled
+                        size=size
+                        tabindex=tabindex
+                        minlength=minlength
+                        maxlength=maxlength
+                        name=name
+                        min=min
+                        max=max
+                        pattern=pattern
+                        accept=accept
+                        autocomplete=autocomplete
+                        autosave=autosave
+                        formaction=formaction
+                        formenctype=formenctype
+                        formmethod=formmethod
+                        formnovalidate=formnovalidate
+                        formtarget=formtarget
+                        height=height
+                        inputmode=inputmode
+                        multiple=multiple
+                        step=step
+                        width=width
+                        form=form
+                        selectionDirection=selectionDirection
+                        spellcheck=spellcheck
 
+                        action=action
+                        enter=enter
+                        insert-newline=insert-newline
+                        escape-press=escape-press
+                        focus-in=focus-in
+                        focus-out=focus-out
+                        key-press=key-press
+                        key-up=key-up
+
+                        placeholder=(if isFullWidth label)
+                        label=(if isFullWidth label)}}
+  {{#if notFullWidth}}
+    {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
+  {{/if}}
+  {{#if hasTrailingIcon}}
+    {{mdc-textfield-icon icon clickable=iconClickable}}
+  {{/if}}
+  {{#if notFullWidth}}
+    {{#if isOutlined}}
+      {{mdc-notched-outline}}
+    {{else}}
+      {{mdc-line-ripple}}
+    {{/if}}
+  {{/if}}
+{{else}}
+  {{yield}}
+{{/unless}}
