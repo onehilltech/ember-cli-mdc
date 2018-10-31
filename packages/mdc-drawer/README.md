@@ -14,7 +14,10 @@ Components and Mixins
 ### Top-Level Components
 
 * [`{{mdc-drawer}}`](#mdc-drawer)
-* [`{{mdc-drawer-app-content}}`](#dismissible-drawer)
+
+### Drawer Types
+* [Modal](#modal-drawer)
+* [Dismissible](#dismissible-drawer)
 
 {{mdc-drawer}}
 ---------------
