@@ -11,10 +11,10 @@ Installation
 Components and Mixins
 -----------------------
 
-### Components
+### Top-Level Components
 
 * [`{{mdc-drawer}}`](#mdc-drawer)
-
+* [`{{#mdc-drawer-app-content}}`](#dismissible-drawer)
 
 {{mdc-drawer}}
 ---------------
