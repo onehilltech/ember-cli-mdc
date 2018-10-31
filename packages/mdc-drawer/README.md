@@ -103,7 +103,7 @@ an item in the drawer is clicked. When using a modal drawer, you must always add
 `{{mdc-drawer-scrim}}` component directly after the `{{mdc-drawer}}` component.
 
 ```handlebars
-{{#mdc-drawer}}
+{{#mdc-drawer style="modal"}}
   {{!-- drawer content --}}
 {{/mdc-drawer}}
 
@@ -120,7 +120,7 @@ inside a `{{mdc-drawer-app-content}}` component that is a sibling of the `{{mdc-
 component.
 
 ```handlebars
-{{#mdc-drawer}}
+{{#mdc-drawer style="dismissible"}}
   {{!-- drawer content --}}
 {{/mdc-drawer}}
 
