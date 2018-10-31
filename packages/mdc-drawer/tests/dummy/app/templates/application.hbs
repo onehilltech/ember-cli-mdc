@@ -7,47 +7,32 @@
   {{#mdc-drawer-content}}
     {{#mdc-list-group}}
       {{#mdc-list}}
-        {{#mdc-list-item-linkto "index"}}{{mdc-list-item-graphic-icon "inbox"}} Inbox{{/mdc-list-item-linkto}}
-        {{#mdc-list-item-linkto "star"}}{{mdc-list-item-graphic-icon "star"}} Star{{/mdc-list-item-linkto}}
-        {{#mdc-list-item-linkto "sent"}}{{mdc-list-item-graphic-icon "send"}} Sent Mail{{/mdc-list-item-linkto}}
-        {{#mdc-list-item-linkto "drafts"}}{{mdc-list-item-graphic-icon "drafts"}} Drafts{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-link-to "index"}}{{mdc-list-item-graphic-icon "inbox"}} Inbox{{/mdc-list-item-link-to}}
+        {{#mdc-list-item-link-to "star"}}{{mdc-list-item-graphic-icon "star"}} Star{{/mdc-list-item-link-to}}
+        {{#mdc-list-item-link-to "sent"}}{{mdc-list-item-graphic-icon "send"}} Sent Mail{{/mdc-list-item-link-to}}
+        {{#mdc-list-item-link-to "drafts"}}{{mdc-list-item-graphic-icon "drafts"}} Drafts{{/mdc-list-item-link-to}}
       {{/mdc-list}}
 
       {{mdc-list-divider}}
 
       {{#mdc-list}}
-        {{#mdc-list-item-linkto "all"}}{{mdc-list-item-graphic-icon "email"}} All Mail{{/mdc-list-item-linkto}}
-        {{#mdc-list-item-linkto "trash"}}{{mdc-list-item-graphic-icon "delete"}} Trash{{/mdc-list-item-linkto}}
-        {{#mdc-list-item-linkto "spam"}}{{mdc-list-item-graphic-icon "report"}} Spam{{/mdc-list-item-linkto}}
+        {{#mdc-list-item-link-to "all"}}{{mdc-list-item-graphic-icon "email"}} All Mail{{/mdc-list-item-link-to}}
+        {{#mdc-list-item-link-to "trash"}}{{mdc-list-item-graphic-icon "delete"}} Trash{{/mdc-list-item-link-to}}
+        {{#mdc-list-item-link-to "spam"}}{{mdc-list-item-graphic-icon "report"}} Spam{{/mdc-list-item-link-to}}
       {{/mdc-list}}
 
     {{/mdc-list-group}}
   {{/mdc-drawer-content}}
 {{/mdc-drawer}}
 
-{{#if modal}}
-  {{mdc-drawer-scrim}}
+{{#mdc-drawer-app-content modal=modal}}
   <div>
-    <div>
-      <button {{action (mut style) "modal"}}>Modal Drawer</button>
-      <button {{action (mut style) "dismissible"}}>Dismissible Drawer</button>
-    </div>
-
-    <div>
-      <button {{action (mut open) true}}>Open Drawer</button>
-      <button {{action (mut open) false}}>Close Drawer</button>
-    </div>
+    <button {{action (mut style) "modal"}}>Modal Drawer</button>
+    <button {{action (mut style) "dismissible"}}>Dismissible Drawer</button>
   </div>
-{{else}}
-  {{#mdc-drawer-app-content}}
-    <div>
-      <button {{action (mut style) "modal"}}>Modal Drawer</button>
-      <button {{action (mut style) "dismissible"}}>Dismissible Drawer</button>
-    </div>
 
-    <div>
-      <button {{action (mut open) true}}>Open Drawer</button>
-      <button {{action (mut open) false}}>Close Drawer</button>
-    </div>
-  {{/mdc-drawer-app-content}}
-{{/if}}
+  <div>
+    <button {{action (mut open) true}}>Open Drawer</button>
+    <button {{action (mut open) false}}>Close Drawer</button>
+  </div>
+{{/mdc-drawer-app-content}}

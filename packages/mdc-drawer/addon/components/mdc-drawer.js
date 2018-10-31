@@ -5,7 +5,7 @@ import layout from '../templates/components/mdc-drawer';
 
 import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
-import { isEmpty, isNone } from '@ember/utils';
+import { isEmpty, isNone, isPresent } from '@ember/utils';
 import { equal } from '@ember/object/computed';
 
 const STYLES = [
@@ -45,7 +45,11 @@ export default Component.extend ({
   isModal: equal ('style', 'modal'),
   isDismissible: equal ('style', 'dismissible'),
 
+  // The content of the drawer.
   _drawerContent: null,
+
+  // The scrim element automatically added after model drawer.
+  _drawerScrim: null,
 
   init () {
     this._super (...arguments);
@@ -98,8 +102,14 @@ export default Component.extend ({
 
   willDestroyElement () {
     this._super (...arguments);
+
+    // Destroy the component.
     this._destroyComponent ();
 
+    // Make sure the drawer scrim has been removed.
+    this._removeDrawerScrim ();
+
+    // Stop listening to events from the drawer content.
     this._drawerContent.removeEventListener ('click', this._clickEventListener);
   },
 
@@ -126,6 +136,17 @@ export default Component.extend ({
       this._destroyComponent ();
     }
 
+    // We need to create the scrim (in case of a modal dialog) before we create
+    // the component. This is because the MDC will search for the drawer scrim
+    // during its creation process.
+
+    if (this.get ('isModal')) {
+      this._insertDrawerScrim ();
+    }
+    else {
+      this._removeDrawerScrim ();
+    }
+
     this._drawer = new mdc.drawer.MDCDrawer (this.element);
     this._drawer.listen ('MDCDrawer:opened', this._openEventListener);
     this._drawer.listen ('MDCDrawer:closed', this._closeEventListener);
@@ -137,5 +158,35 @@ export default Component.extend ({
 
     this._drawer.destroy ();
     this._drawer = null;
+  },
+
+  /**
+   * Insert the drawer scrim into the tree.
+   *
+   * @private
+   */
+  _insertDrawerScrim () {
+    if (isPresent (this._drawerScrim)) {
+      return;
+    }
+
+    this._drawerScrim = document.createElement ('div');
+    this._drawerScrim.classList.add ('mdc-drawer-scrim');
+
+    // The scrim must be inserted directly after the drawer (i.e., this element).
+    let parent = this.element.parentElement;
+    parent.insertBefore (this._drawerScrim, this.element.nextSibling);
+  },
+
+  /**
+   * Remove the drawer scrim from the tree.
+   *
+   * @private
+   */
+  _removeDrawerScrim () {
+    if (isPresent (this._drawerScrim)) {
+      this._drawerScrim.remove ();
+      this._drawerScrim = null;
+    }
   }
 });

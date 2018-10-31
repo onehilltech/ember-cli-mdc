@@ -4,5 +4,5 @@ import layout from '../templates/components/mdc-drawer-app-content';
 export default Component.extend({
   layout,
 
-  classNames: ['mdc-drawer-app-content']
+  classNameBindings: ['modal::mdc-drawer-app-content']
 });
