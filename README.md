@@ -1,5 +1,5 @@
-ember-cli-mdc
-=============
+Ember Material Components
+=========================
 
 An Ember add-on for [Material Components for the web](https://github.com/material-components/material-components-web/)
 
@@ -9,6 +9,7 @@ Features
 * Ember components for Material Components
 * Individual packages for selective integration and usage of Material Components
 * Seamless integration with [Corber](http://corber.io/)
+* Plays nicely with [FastBoot](https://github.com/ember-fastboot/fastboot).
 
 Installation
 ------------
