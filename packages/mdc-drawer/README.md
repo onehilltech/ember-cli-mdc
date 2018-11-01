@@ -134,9 +134,8 @@ correctly when the drawer is opened.
 
 The dismissible drawer requires the app content placed in a `{{mdc-drawer-app-content}}`
 component. This is not a requirement for modal drawers. The app content just needs to 
-be placed inside a `<div>` element. To support dynamic drawers (*i.e.*, converting between
-dismissible and modal), we adapter the `{{mdc-drawer-app-content}}` to support modal 
-drawers. 
+be placed inside a `<div>` element. To support alternating between a dismissible and 
+modal drawer, we adapted the `{{mdc-drawer-app-content}}` to support modal drawers. 
 
 If you want to support alternating between dismissible and modal drawers, maybe depending 
 on the screen size, then place the app content inside a `{{mdc-drawer-app-content}}` 
