@@ -15,9 +15,8 @@ Components and Mixins
 
 * [`{{mdc-drawer}}`](#mdc-drawer)
 
-### Drawer Types
-* [Modal](#modal-drawer)
-* [Dismissible](#dismissible-drawer)
+### Other Topics
+* [Dismissible vs. Modal](#dismissible-vs-modal)
 
 {{mdc-drawer}}
 ---------------
@@ -96,28 +95,30 @@ a header to the drawer by adding the `{{mdc-drawer-header}}` block component.
 {{/mdc-drawer}}
 ```
 
-## Modal Drawer
+## Dismissible vs. Modal
 
-A model drawer is one that appears on demand (like a modal dialog), and disappears when
-an item in the drawer is clicked. When using a modal drawer, you must always add the 
-`{{mdc-drawer-scrim}}` component directly after the `{{mdc-drawer}}` component.
+A *dismissible drawer* is one that once opened remains open until the user explicitly
+closes the drawer. A *modal drawer* is one that appears on demand (like a modal dialog), 
+and disappears when an item in the drawer is clicked. If `style="modal"`, then the
+`{{mdc-drawer}}` component will automatically add a `{{mdc-drawer-scrim}}` component
+as the next sibling of the `{{mdc-drawer}}` component. Likewise, if you switch from
+a modal drawer to a dismissible drawer, the `{{mdc-drawer}}` component will automatically
+remove the `{{mdc-drawer-scrim}}` element from the page.
 
 ```handlebars
 {{#mdc-drawer style="modal"}}
   {{!-- drawer content --}}
 {{/mdc-drawer}}
 
-{{mdc-drawer-scrim}}
-  
-{{!-- app content --}}
+<div>
+  {{!-- app content --}}
+</div>
+
 ```
 
-## Dismissible Drawer
-
-A dismissible drawer is one that once opened remains open until the user explicitly
-closes the drawer. When working with dismissible drawers, you must include all content
-inside a `{{mdc-drawer-app-content}}` component that is a sibling of the `{{mdc-drawer}}`
-component.
+When working with a dismissible drawer, the page content must placed inside a
+`{{mdc-drawer-app-content}}` component. This ensures the drawer and the page function
+correctly when the drawer is opened.
 
 ```handlebars
 {{#mdc-drawer style="dismissible"}}
@@ -128,3 +129,35 @@ component.
   {{!-- app content --}}
 {{/mdc-drawer-app-content}}
 ```
+
+### Alternating between dismissible and modal
+
+The dismissible drawer requires the app content placed in a `{{mdc-drawer-app-content}}`
+component. This is not a requirement for modal drawers. The app content just needs to 
+be placed inside a `<div>` element. To support dynamic drawers (*i.e.*, converting between
+dismissible and modal), we adapter the `{{mdc-drawer-app-content}}` to support modal 
+drawers. 
+
+If you want to support alternating between dismissible and modal drawers, maybe depending 
+on the screen size, then place the app content inside a `{{mdc-drawer-app-content}}` 
+component. The `{{mdc-drawer-app-content}}` has a `modal` attribute that you set to `true`
+if the drawer is a modal drawer.
+
+```handlebars
+{{#mdc-drawer style=style}}
+  {{!-- drawer content --}}
+{{/mdc-drawer}}
+
+{{#mdc-drawer-app-content modal=isModal}}
+  {{!-- app content --}}
+{{/mdc-drawer-app-content}}
+```
+
+In the example above, the `style` variable will have either the value `dismissible` or
+`modal`. And, the `isModal` variable is a computed property that is true if `style == 'modal'`.
+
+```javascript
+isModal: equal ('style', 'modal')
+```
+
+Now, we can switch between dismissible and modal drawers
