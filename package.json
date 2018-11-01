@@ -1,6 +1,8 @@
 {
   "name": "ember-cli-mdc",
   "repository": "github:onehilltech/ember-cli-mdc",
+  "license": "Apache-2.0",
+  "author": "James H. Hill <james@onehilltech.com>",
   "private": false,
   "devDependencies": {
     "lerna": "^3.4.0"
