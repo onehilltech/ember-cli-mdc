@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc",
-  "version": "0.59.2",
+  "version": "0.59.3",
   "description": "Collection of Material Design components.",
   "keywords": [
     "ember-addon",
