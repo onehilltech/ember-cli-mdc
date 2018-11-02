@@ -1,8 +1,7 @@
 ember-cli-mdc-htmlbars
 ======================
 
-ember-cli addon that componentizes standard HTML elements and adds attributes
-for typography, theme, and rtl support
+componentizes standard HTML text elements and adds attributes for typography, theme, and rtl support
 
 Installation
 ------------
