@@ -9,7 +9,7 @@ Features
 * Ember components for Material Components
 * Individual packages for selective integration and usage of Material Components
 * Seamless integration with [Corber](http://corber.io/)
-* Plays nicely with [FastBoot](https://github.com/ember-fastboot/fastboot).
+* Plays nicely with [FastBoot](https://github.com/ember-fastboot/fastboot)
 
 Installation
 ------------
