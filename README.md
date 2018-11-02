@@ -34,7 +34,8 @@ list of packages that can be installed individually.
 Next Steps
 ----------
 
-See the `README.md` in each package for detailed usage and examples.
+See the `README.md` and `tests/dummy/app` in each package for detailed usage 
+and examples.
 
 Additional Resources
 ====================
