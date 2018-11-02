@@ -3,11 +3,16 @@
   "version": "0.59.2",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "materal",
+    "material design",
+    "material components",
+    "tab",
+    "tab bar"
   ],
   "repository": "",
   "license": "Apache-2.0",
-  "author": "",
+  "author": "James H. Hill <james@onehilltech.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
