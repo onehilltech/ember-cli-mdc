@@ -53,7 +53,7 @@ that determines if the submit button should be enabled/disabled.
 
 The `{{mdc-form}}` element will yield the `valid` and `invalid`, which is just `not(valid)`, state
 of the form. The yielded values can then be used to modify elements inside the form. For example,
-it can be use to enable or disable a button.
+it can be use to enable/disable a button.
 
 > The form yields both `valid` and `invalid` because you cannot negate either value
 > when setting an attribute value without the use of a helper, such as `not` in
