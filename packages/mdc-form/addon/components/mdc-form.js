@@ -85,6 +85,12 @@ export default Component.extend({
         return;
 
       let valid = this.element.checkValidity ();
+
+      // Update the invalid state of the form. This will also components inside
+      // the form to update its state based on the forms validity.
+      this.set ('invalid', !valid);
+
+      // Notify the parent of our state.
       this.getWithDefault ('valid', noOp) (valid);
     }, delay);
   }
