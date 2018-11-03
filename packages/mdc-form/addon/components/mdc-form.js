@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-form';
 
-import { alias } from '@ember/object/computed';
+import { alias, not } from '@ember/object/computed';
 import { isPresent } from '@ember/utils';
 import { debounce } from '@ember/runloop';
 
@@ -35,6 +35,9 @@ export default Component.extend({
 
   submitEventListener_: null,
   checkValidityEventListener_: null,
+
+  valid: false,
+  invalid: not ('valid'),
 
   init () {
     this._super (...arguments);
@@ -88,10 +91,10 @@ export default Component.extend({
 
       // Update the invalid state of the form. This will also components inside
       // the form to update its state based on the forms validity.
-      this.set ('invalid', !valid);
+      this.set ('valid', valid);
 
       // Notify the parent of our state.
-      this.getWithDefault ('valid', noOp) (valid);
+      this.getWithDefault ('change', noOp) (valid);
     }, delay);
   }
 });
