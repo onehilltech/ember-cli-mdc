@@ -116,8 +116,8 @@ export class MDCStep extends MDCComponent {
       },
 
       getStepFromEvent: (event) => {
-        const element = closest (event.target, MDCStepFoundation.strings.LABEL_SELECTOR);
-        return element && element.parentElement.id;
+        let element = closest (event.target, MDCStepFoundation.strings.STEP_SELECTOR);
+        return element ? element.id : null;
       },
 
       changeLabelIndicatorToState: this.changeLabelIndicatorToState_.bind (this),

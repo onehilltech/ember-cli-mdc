@@ -8,6 +8,7 @@ export const datasetAttributes = {
 export const strings = {
   IS_ACTIVE: 'is-active',
 
+  STEP_SELECTOR: '.mdc-step',
   LABEL_SELECTOR: '.mdc-step__label',
   LABEL_INDICATOR_SELECTOR: '.mdc-step__label-indicator',
   LABEL_INDICATOR_CONTENT_SELECTOR: '.mdc-step__label-indicator-content',
