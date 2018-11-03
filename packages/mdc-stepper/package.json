@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-stepper",
-  "version": "0.59.3",
+  "version": "0.59.4",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
