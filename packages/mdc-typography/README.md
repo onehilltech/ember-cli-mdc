@@ -13,7 +13,7 @@ Usage
 
 ### Mixins
 
-* [`{{Typograph}}`](#typography-mixin)
+* [`{{Typography}}`](#typography-mixin)
 
 ### Other Topics
 * [Configuring automatic integration](#configuring-automatic-integration)
