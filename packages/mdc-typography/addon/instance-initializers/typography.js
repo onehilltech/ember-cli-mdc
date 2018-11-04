@@ -1,5 +1,5 @@
 import { getWithDefault  } from '@ember/object';
-import { isNone } from '@ember/utils';
+import { isNone, isPresent } from '@ember/utils';
 
 export function initialize (app) {
   // Make sure the window and document element exists. If neither exists, then
@@ -7,18 +7,20 @@ export function initialize (app) {
   if (isNone (window) || isNone (window.document))
     return;
 
+  // Load the typography configuration, and use it to initialize the
+  // typography for the application.
+
   const ENV = app.application.resolveRegistration ('config:environment');
-  const disabled = getWithDefault (ENV, 'ember-cli-mdc.disabled', false);
+  const config = getWithDefault (ENV, 'ember-cli-mdc.typography', {});
+
+  const { disabled = false} = config;
 
   if (!disabled) {
-    // Find the root elements for applying typography. The default root
-    // element is the root element of the application.
+    const rootElement = document.querySelector (app.rootElement);
 
-    const rootSelector = getWithDefault (ENV, 'ember-cli-mdc.typography', app.rootElement);
-    const elements = document.querySelectorAll (rootSelector);
-
-    for (let i = 0, len = elements.length; i < len; ++ i)
-      elements[i].classList.add ('mdc-typography');
+    if (isPresent (rootElement)) {
+      rootElement.classList.add ('mdc-typography');
+    }
   }
 }
 
