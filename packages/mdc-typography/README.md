@@ -74,7 +74,7 @@ let ENV = {
   
   'ember-cli-mdc': {
     typography: {
-      disabled: false
+      disabled: true
     }
   }
 };
