@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-checkbox",
-  "version": "0.59.3",
+  "version": "0.59.9",
   "description": "ember-cli addons for @material/checkbox.",
   "keywords": [
     "ember-addon",
@@ -55,7 +55,7 @@
     "ember-cli-mdc-rtl": "^0.59.3",
     "ember-cli-mdc-selection-control": "^0.59.3",
     "ember-cli-mdc-theme": "^0.59.3",
-    "ember-cli-mdc-typography": "^0.59.3",
+    "ember-cli-mdc-typography": "^0.59.9",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",

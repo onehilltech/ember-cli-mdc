@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-stepper",
-  "version": "0.59.8",
+  "version": "0.59.9",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -43,13 +43,13 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.59.3",
     "ember-cli-mdc-base": "^0.59.3",
-    "ember-cli-mdc-button": "^0.59.3",
+    "ember-cli-mdc-button": "^0.59.9",
     "ember-cli-mdc-elevation": "^0.59.3",
     "ember-cli-mdc-icon": "^0.59.3",
     "ember-cli-mdc-ripple": "^0.59.3",
     "ember-cli-mdc-rtl": "^0.59.3",
     "ember-cli-mdc-theme": "^0.59.3",
-    "ember-cli-mdc-typography": "^0.59.3",
+    "ember-cli-mdc-typography": "^0.59.9",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",

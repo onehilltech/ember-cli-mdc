@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-typography",
-  "version": "0.59.3",
+  "version": "0.59.9",
   "description": "ember-cli addon for @material/typography",
   "keywords": [
     "ember-addon",

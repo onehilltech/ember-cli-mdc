@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-scroller",
-  "version": "0.59.3",
+  "version": "0.59.9",
   "description": "ember-cli addon for @material/tab-scroller",
   "keywords": [
     "ember-addon",
@@ -52,10 +52,10 @@
     "ember-cli-mdc-icon": "^0.59.3",
     "ember-cli-mdc-ripple": "^0.59.3",
     "ember-cli-mdc-rtl": "^0.59.3",
-    "ember-cli-mdc-tab": "^0.59.3",
+    "ember-cli-mdc-tab": "^0.59.9",
     "ember-cli-mdc-tab-indicator": "^0.59.3",
     "ember-cli-mdc-theme": "^0.59.3",
-    "ember-cli-mdc-typography": "^0.59.3",
+    "ember-cli-mdc-typography": "^0.59.9",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
