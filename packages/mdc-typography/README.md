@@ -60,8 +60,8 @@ Configuring Automatic Integration
 
 The typography package automatically adds the `mdc-typography` class to the 
 [root of the ember application](https://guides.emberjs.com/release/configuring-ember/embedding-applications/#toc_changing-the-root-element).
-By default, this is the `body` HTML element. You an change the root element
-by change the `rootElement` property in `config/environment.js`.
+By default, this is the `body` HTML element. You an change the root element 
+by changing the `rootElement` property in `config/environment.js`.
 
 ### Disable integration
 
