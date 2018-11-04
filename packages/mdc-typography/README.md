@@ -51,7 +51,7 @@ The `typography` attribute must be one of the following values:
 * button
 * overline
 
-```javascript
+```handlebars
 {{mdc-foo typography="headline4"}}
 ```
 
