@@ -29,11 +29,21 @@ class MDCStepFoundation extends MDCFoundation {
 
   setActive (isActive) {
     if (isActive) {
+      const notify = !this.isActive ();
+
       this.adapter_.removeClass (MDCStepFoundation.cssClasses.TRANSIENT);
       this.adapter_.addClass (MDCStepFoundation.cssClasses.IS_ACTIVE);
+
+      if (notify)
+        this.adapter_.notifyActivate ();
     }
     else {
+      const notify = this.isActive ();
+
       this.adapter_.removeClass (MDCStepFoundation.cssClasses.IS_ACTIVE);
+
+      if (notify)
+        this.adapter_.notifyDeactivate ();
     }
   }
 

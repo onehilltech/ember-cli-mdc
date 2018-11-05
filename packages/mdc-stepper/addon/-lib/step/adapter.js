@@ -26,6 +26,9 @@ class MDCStepAdapter {
   notifySkip () {}
   notifyBack () {}
   notifyGoto (/*stepId*/) {}
+  notifyActivate(/*stepId*/) {}
+  notifyDeactivate(/*stepId*/) {}
+
 }
 
 export default MDCStepAdapter;

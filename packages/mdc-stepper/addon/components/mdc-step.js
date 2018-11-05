@@ -25,6 +25,8 @@ export default Component.extend({
   skipEventListener_: null,
   cancelEventListener_: null,
   gotoEventListener_: null,
+  activateEventListener_: null,
+  deactivateEventListener_: null,
 
   /// Error message for the state.
   error: null,
@@ -32,7 +34,10 @@ export default Component.extend({
   /// The step is completed.
   completed: false,
 
-  // The mdc step, which is assigned by the parent.
+  /// The active state of the step.
+  active: false,
+
+  /// The mdc step, which is assigned by the parent.
   step: null,
 
   init () {
@@ -43,6 +48,8 @@ export default Component.extend({
     this.skipEventListener_ = this.didSkip.bind (this);
     this.cancelEventListener_ = this.didCancel.bind (this);
     this.gotoEventListener_ = this.didGoto.bind (this);
+    this.activateEventListener_ = this.didActivate.bind (this);
+    this.deactivateEventListener_ = this.didDeactivate.bind (this);
   },
 
   didUpdateAttrs () {
@@ -63,6 +70,8 @@ export default Component.extend({
     this.element.addEventListener ('MDCStep:skip', this.skipEventListener_);
     this.element.addEventListener ('MDCStep:cancel', this.cancelEventListener_);
     this.element.addEventListener ('MDCStep:goto', this.gotoEventListener_);
+    this.element.addEventListener ('MDCStep:activate', this.activateEventListener_);
+    this.element.addEventListener ('MDCStep:deactivate', this.deactivateEventListener_);
   },
 
   willDestroyElement () {
@@ -73,6 +82,8 @@ export default Component.extend({
     this.element.removeEventListener ('MDCStep:skip', this.skipEventListener_);
     this.element.removeEventListener ('MDCStep:cancel', this.cancelEventListener_);
     this.element.removeEventListener ('MDCStep:goto', this.gotoEventListener_);
+    this.element.removeEventListener ('MDCStep:activate', this.activateEventListener_);
+    this.element.removeEventListener ('MDCStep:deactivate', this.deactivateEventListener_);
   },
 
   didNext () {
@@ -96,5 +107,13 @@ export default Component.extend({
 
   didGoto () {
     this.getWithDefault ('goto', noOp) ();
+  },
+
+  didActivate () {
+    this.set ('active', true);
+  },
+
+  didDeactivate () {
+    this.set ('active', false);
   }
 });

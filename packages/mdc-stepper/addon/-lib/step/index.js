@@ -135,7 +135,9 @@ export class MDCStep extends MDCComponent {
       notifyCancel: () => this.emit ('MDCStep:cancel', { stepId: this.root_.id }, true),
       notifySkip: () => this.emit ('MDCStep:skip', { stepId: this.root_.id }, true),
       notifyBack: () => this.emit ('MDCStep:back', { stepId: this.root_.id }, true),
-      notifyGoto: (stepId) => this.emit ('MDCStep:goto', { stepId }, true)
+      notifyGoto: (stepId) => this.emit ('MDCStep:goto', { stepId }, true),
+      notifyActivate: (stepId) => this.emit ('MDCStep:activate', { stepId }, true),
+      notifyDeactivate: (stepId) => this.emit ('MDCStep:deactivate', { stepId }, true),
     }));
   }
 
