@@ -17,6 +17,7 @@ Usage
 
 ### Other Topics
 * [Configuring automatic integration](#configuring-automatic-integration)
+* [Roboto Font](#roboto-font)
 
 Typography Mixin
 ------------------
@@ -79,3 +80,15 @@ let ENV = {
   }
 };
 ```
+
+Roboto Font
+----------------
+
+The typography package automatically includes links to the Roboto fonts in your
+application.
+
+### Corber integration.
+
+When building a Corber application, the Roboto fonts are bundled with the application. This
+prevents the application from needing to download the fonts.
+
