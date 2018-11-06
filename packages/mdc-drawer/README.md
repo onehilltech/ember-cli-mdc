@@ -139,24 +139,15 @@ modal drawer, we adapted the `{{mdc-drawer-app-content}}` to support modal drawe
 
 If you want to support alternating between dismissible and modal drawers, maybe depending 
 on the screen size, then place the app content inside a `{{mdc-drawer-app-content}}` 
-component. The `{{mdc-drawer-app-content}}` has a `modal` attribute that you set to `true`
-if the drawer is a modal drawer.
+component. The `{{mdc-drawer-app-content}}` will automatically configure itself if the
+`{{mdc-drawer}}` style attribute changes.
 
 ```handlebars
 {{#mdc-drawer style=style}}
   {{!-- drawer content --}}
 {{/mdc-drawer}}
 
-{{#mdc-drawer-app-content modal=isModal}}
+{{#mdc-drawer-app-content}}
   {{!-- app content --}}
 {{/mdc-drawer-app-content}}
 ```
-
-In the example above, the `style` variable will have either the value `dismissible` or
-`modal`. And, the `isModal` variable is a computed property that is true if `style == 'modal'`.
-
-```javascript
-isModal: equal ('style', 'modal')
-```
-
-Now, we can switch between dismissible and modal drawers
