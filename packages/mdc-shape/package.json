@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-shape",
-  "version": "0.59.3",
+  "version": "0.60.0",
   "description": "ember-cli addons for @material/shape.",
   "keywords": [
     "ember-addon",
@@ -25,7 +25,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.4.5",
-    "ember-cli-mdc-sass": "^0.59.3"
+    "ember-cli-mdc-sass": "^0.60.0"
   },
   "devDependencies": {
     "@material/shape": "^0.40.1",
