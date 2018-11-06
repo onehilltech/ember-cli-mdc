@@ -22,18 +22,6 @@ export default Component.extend ({
 
   classNameBindings: ['styleClassName'],
 
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
-
-    if (isEmpty (style)) {
-      return null;
-    }
-
-    assert (`The style must be one of the following: ${STYLES}`, STYLES.includes (style));
-
-    return `mdc-drawer--${style}`;
-  }),
-
   _openEventListener: null,
 
   _closeEventListener: null,
@@ -45,11 +33,27 @@ export default Component.extend ({
   isModal: equal ('style', 'modal'),
   isDismissible: equal ('style', 'dismissible'),
 
+  // The material component.
+  _drawer: null,
+
   // The content of the drawer.
   _drawerContent: null,
 
   // The scrim element automatically added after model drawer.
   _drawerScrim: null,
+
+  styleClassName: computed ('style', function () {
+    const style = this.get ('style');
+
+    // Notify the listeners that our style has changed.
+    if (isEmpty (style)) {
+      return null;
+    }
+
+    assert (`The style must be one of the following: ${STYLES}`, STYLES.includes (style));
+
+    return `mdc-drawer--${style}`;
+  }),
 
   init () {
     this._super (...arguments);
@@ -86,6 +90,7 @@ export default Component.extend ({
 
     if (style !== currentStyle) {
       this._destroyComponent ();
+
     }
   },
 
@@ -94,7 +99,11 @@ export default Component.extend ({
 
     if (isNone (this._drawer)) {
       this._createComponent ();
-      this.set ('_currentStyle', this.get ('style'));
+      let style = this.get ('style');
+
+      // Cache the current style, and send notification the style has changed.
+      this.set ('_currentStyle', style);
+      this._drawer.emit ('MDCDrawer:change', { style });
     }
 
     this._drawer.open = this.get ('open');
