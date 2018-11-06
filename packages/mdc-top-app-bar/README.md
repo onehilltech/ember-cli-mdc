@@ -44,7 +44,7 @@ icons and the overflow menu for the page.
 * `alwaysClosed` - The top app bar is always closed. This only applies for short top app bars.
 * `navigation` - The action invoked when the navigation icon is clicked.
 
-### Adding sections
+### Adding sections to a row
 
 The `{{mdc-top-app-bar}}` component can contain sections. The sections can either be aligned
 to the start or end of the `{{mdc-top-app-bar-row}}`. The default position is `alignStart`.
@@ -65,7 +65,7 @@ to the start or end of the `{{mdc-top-app-bar-row}}`. The default position is `a
 {{/mdc-top-app-bar}}
 ```
 
-### Adding title
+### Adding a title to the app bar
 
 Use the `{{mdc-top-app-bar-title}}` component to add a title to the top app bar.
 
