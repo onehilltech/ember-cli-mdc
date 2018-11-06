@@ -36,8 +36,9 @@ export default Component.extend (Theme, {
     const style = this.get ('style');
 
     // Notify the listeners that our style has changed.
-    const event = new CustomEvent ('MDCTopAppBar:change', { detail: { style } });
-    this.element.dispatchEvent (event);
+    if (this._topAppBar) {
+      this._topAppBar.emit ('MDCTopAppBar:change', {style});
+    }
 
     if (isEmpty (style)) {
       return null;
