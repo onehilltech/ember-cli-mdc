@@ -85,7 +85,7 @@ Use the `{{mdc-top-app-bar-title}}` component to add a title to the top app bar.
 {{/mdc-top-app-bar}}
 ```
 
-### Navigation Icon
+### The navigation icon
 
 The `{{mdc-top-app-bar-navigation-icon}}` is used to add a navigation icon to 
 the top app bar.
