@@ -10,6 +10,7 @@ Features
 * Individual packages for selective integration and usage of Material Components
 * Seamless integration with [Corber](http://corber.io/)
 * Plays nicely with [FastBoot](https://github.com/ember-fastboot/fastboot)
+* Intuitive design to minimize accidental and inherit complexities of Material Components
 
 Installation
 ------------
