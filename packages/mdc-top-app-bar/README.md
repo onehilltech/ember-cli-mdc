@@ -189,7 +189,3 @@ has the correct padding so the page's content is not covered by the `{{mdc-top-a
 
 {{/mdc-content}}
 ```
-
-### Attributes
-
-* `topAppBarStyle` - The top app bar style.
