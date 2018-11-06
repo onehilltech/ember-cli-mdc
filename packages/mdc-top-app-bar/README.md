@@ -137,6 +137,32 @@ up to icon to the top app bar. It also allows you to link to a page in the appli
 {{/mdc-top-app-bar}}
 ```
 
+### Adding action items to the top app bar
+
+Action items usually appear at the end of the action bar. The `{{mdc-top-app-bar-action-item}}`
+components adds an action item to the top app bar.
+
+```handlebars
+{{#mdc-top-app-bar style="fixed"}}
+  {{#mdc-top-app-bar-row}}
+    {{#mdc-top-app-bar-section}}
+      {{mdc-top-app-bar-navigate-up-to "index"}}
+      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
+    {{/mdc-top-app-bar-section}}
+  
+    {{#mdc-top-app-bar-section position="alignEnd"}}
+      {{mdc-top-app-bar-action-item label="Download" alt="Download" icon="file_download"}}
+    {{/mdc-top-app-bar-section}}
+  {{/mdc-top-app-bar-row}}
+{{/mdc-top-app-bar}}
+```
+
+The `{{mdc-top-app-bar-action-item}}` supports the following attributes:
+
+* `icon` - The icon for the action item.
+* `label` - The accessibility label for the action item (optional).
+* `alt` - The alternate text for the item link (optional).
+
 {{mdc-content}}
 ---------------------
 
