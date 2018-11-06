@@ -175,7 +175,13 @@ has the correct padding so the page's content is not covered by the `{{mdc-top-a
 ### Usage
 
 ```handlebars
+{{#mdc-top-app-bar}}
+
+{{/mdc-top-app-bar}}
+
 {{#mdc-content topAppBarStyle=["fixed"|"dense"|"prominent"|"short"]}}
+
+  {{!-- page content goes here --}}
 
 {{/mdc-content}}
 ```
