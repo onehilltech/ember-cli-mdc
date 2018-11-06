@@ -13,6 +13,8 @@ import { assert } from '@ember/debug';
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 const STYLES = ['fixed','dense','prominent','short'];
 
+function noOp () { }
+
 export default Component.extend (Theme, {
   layout,
 
@@ -22,16 +24,20 @@ export default Component.extend (Theme, {
   classNameBindings: ['styleClassName', 'fixedAdjustClassName', 'alwaysClosedClassName:mdc-top-app-bar--short-collapsed'],
 
   /// Notification for navigation button clicked.
-  navigation: null,
+  navigation: undefined,
 
   alwaysClosed: false,
 
-  _topAppBar: null,
-  _navEventListener: null,
+  _topAppBar: undefined,
+  _navEventListener: undefined,
 
   style: null,
   styleClassName: computed ('style', function () {
     const style = this.get ('style');
+
+    // Notify the listeners that our style has changed.
+    const event = new CustomEvent ('MDCTopAppBar:change', { detail: { style } });
+    this.element.dispatchEvent (event);
 
     if (isEmpty (style)) {
       return null;
@@ -71,11 +77,7 @@ export default Component.extend (Theme, {
   },
 
   doNavigation () {
-    let navigation = this.get ('navigation');
-
-    if (isPresent (navigation)) {
-      navigation ();
-    }
+    this.getWithDefault ('navigation', noOp) ();
   },
 
   _createComponent () {
