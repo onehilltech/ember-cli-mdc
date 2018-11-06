@@ -16,7 +16,6 @@ Components and Mixins
 * [`{{mdc-top-app-bar}}`](#mdc-top-app-bar)
 * [`{{mdc-content}}`](#mdc-content)
 
-
 {{mdc-top-app-bar}}
 ---------------------
 
@@ -50,9 +49,7 @@ The `{{mdc-top-app-bar}}` component can contain sections. The sections can eithe
 to the start or end of the `{{mdc-top-app-bar-row}}`. The default position is `alignStart`.
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
+{{#mdc-top-app-bar style="fixed"}}
   {{#mdc-top-app-bar-row}}
     {{#mdc-top-app-bar-section}}
     
@@ -70,9 +67,7 @@ to the start or end of the `{{mdc-top-app-bar-row}}`. The default position is `a
 Use the `{{mdc-top-app-bar-title}}` component to add a title to the top app bar.
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
+{{#mdc-top-app-bar style="fixed"}}
   {{#mdc-top-app-bar-row}}
     {{#mdc-top-app-bar-section}}
       {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
@@ -87,13 +82,12 @@ Use the `{{mdc-top-app-bar-title}}` component to add a title to the top app bar.
 
 ### The navigation icon
 
-The `{{mdc-top-app-bar-navigation-icon}}` is used to add a navigation icon to 
-the top app bar.
+The `{{mdc-top-app-bar-navigation-icon}}` is used to add a navigation icon to the top app bar.
+Likewise, the `navigation` attribute on `{{mdc-top-app-bar}}` is invoked when the navigation
+icon is clicked.
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
+{{#mdc-top-app-bar style="fixed" navigation=(action (mut openDrawer) true)}}
   {{#mdc-top-app-bar-row}}
     {{#mdc-top-app-bar-section}}
       {{mdc-top-app-bar-navigation-icon}}
@@ -111,9 +105,7 @@ The default icon is the `menu` icon. You can use the `icon` attribute to change
 the navigation icon.
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
+{{#mdc-top-app-bar style="fixed"}}
   {{#mdc-top-app-bar-row}}
     {{#mdc-top-app-bar-section}}
       {{mdc-top-app-bar-navigation-icon icon="search"}}
@@ -131,9 +123,7 @@ The `{{mdc-top-app-bar-navigate-up-to}}` component is a design to add the naviga
 up to icon to the top app bar. It also allows you to link to a page in the application.
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
+{{#mdc-top-app-bar style="fixed"}}
   {{#mdc-top-app-bar-row}}
     {{#mdc-top-app-bar-section}}
       {{mdc-top-app-bar-navigate-up-to "index"}}
