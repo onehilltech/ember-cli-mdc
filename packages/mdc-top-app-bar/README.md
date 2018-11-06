@@ -47,7 +47,7 @@ icons and the overflow menu for the page.
 ### Adding sections
 
 The `{{mdc-top-app-bar}}` component can contain sections. The sections can either be aligned
-to the start or end of the `{{#mdc-top-app-bar-row}}`.
+to the start or end of the `{{mdc-top-app-bar-row}}`.
 
 ```handlebars
 {{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
