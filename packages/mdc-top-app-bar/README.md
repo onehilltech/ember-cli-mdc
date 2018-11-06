@@ -172,6 +172,10 @@ The `{{mdc-content}}` block component contains the content for a page that conta
 `{{mdc-top-app-bar}}` component. The `{{mdc-content}}` components ensure the content
 has the correct padding so the page's content is not covered by the `{{mdc-top-app-bar}}`.
 
+> The {{mdc-content}} automatically sets its style based on the style of the {{mdc-top-app-bar}}
+> component. This allows you to dynamically change the {{mdc-top-app-bar}} style at runtime and
+> have the {{mdc-content}} component update its style accordingly.
+
 ### Usage
 
 ```handlebars
@@ -179,7 +183,7 @@ has the correct padding so the page's content is not covered by the `{{mdc-top-a
 
 {{/mdc-top-app-bar}}
 
-{{#mdc-content topAppBarStyle=["fixed"|"dense"|"prominent"|"short"]}}
+{{#mdc-content}}
 
   {{!-- page content goes here --}}
 
