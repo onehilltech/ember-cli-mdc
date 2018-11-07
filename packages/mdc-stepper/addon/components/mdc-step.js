@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-step';
 
 import { computed } from '@ember/object';
+import { not } from '@ember/object/computed';
 import { assert } from '@ember/debug';
 import { isPresent } from '@ember/utils';
 
@@ -30,12 +31,15 @@ export default Component.extend({
 
   /// Error message for the state.
   error: null,
+  noError: not('error'),
 
   /// The step is completed.
-  completed: false,
+  isCompleted: false,
+  isNotCompleted: not ('isCompleted'),
 
   /// The active state of the step.
-  active: false,
+  isActive: false,
+  isInactive: not('isActive'),
 
   /// The mdc step, which is assigned by the parent.
   step: null,
@@ -88,7 +92,7 @@ export default Component.extend({
 
   didNext () {
     // Moving to the next step implies the step is completed.
-    this.setProperties ({ completed: true, error: null });
+    this.setProperties ({ isCompleted: true, error: null });
 
     this.getWithDefault ('next', noOp) ();
   },
@@ -110,10 +114,10 @@ export default Component.extend({
   },
 
   didActivate () {
-    this.set ('active', true);
+    this.set ('isActive', true);
   },
 
   didDeactivate () {
-    this.set ('active', false);
+    this.set ('isActive', false);
   }
 });
