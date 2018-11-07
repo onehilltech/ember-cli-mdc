@@ -51,20 +51,20 @@ that determines if the submit button should be enabled/disabled.
 
 ### Form Validity
 
-The `{{mdc-form}}` element will yield the `valid` and `invalid`, which is just `not(valid)`, state
-of the form. The yielded values can then be used to modify elements inside the form. For example,
+The `{{mdc-form}}` element will yield the form's state (`{isValid, isInvalid}`). The 
+yielded values can then be used to modify elements inside the form. For example,
 it can be use to enable/disable a button.
 
-> The form yields both `valid` and `invalid` because you cannot negate either value
+> The form yields the form state because you cannot negate either value
 > when setting an attribute value without the use of a helper, such as `not` in
 > `ember-truth-helpers`. We prefer not to require you to use an additional add-on if
 > it is not necessary.
 
 ```handlebars
 {{#mdc-form submit=(action "submit") 
-            change=(action (mut valid)) as |valid invalid|}}
+            change=(action (mut valid)) as |form|}}
   {{!-- add input components here --}}
   
-  {{#mdc-button type="submit" disabled=invalid}}Submit{{/mdc-button}}
+  {{#mdc-button type="submit" disabled=form.isInvalid}}Submit{{/mdc-button}}
 {{/mdc-form}}
 ```
