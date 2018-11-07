@@ -1,6 +1,6 @@
 <h2 id="title" class="mdc-typography--headline4">Forms</h2>
 
-{{#mdc-form submit=(action "submit") change=(action "valid")}}
+{{#mdc-form submit=(action "submit") change=(action "valid") as |form|}}
   <div>
     Email: <input type="email" name="email" required="true" />
   </div>
