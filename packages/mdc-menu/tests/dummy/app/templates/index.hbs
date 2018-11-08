@@ -1,7 +1,7 @@
 <div class="toolbar">
   <button onclick={{action (mut open) true}}>Open Menu</button>
 
-  {{#mdc-menu open=open}}
+  {{#mdc-menu open=open anchorCorner="bottomLeft"}}
     {{#mdc-menu-list}}
       <li>
         {{#mdc-menu-selection-group}}

@@ -59,6 +59,14 @@ export default Component.extend (MenuSurface, {
     this.menu_.setAbsolutePosition (x, y);
   },
 
+  setAnchorCorner (corner) {
+    this.menu_.setAnchorCorner (corner);
+  },
+
+  setAnchorMargin (margin) {
+    this.menu_.setAnchorMargin (margin);
+  },
+
   /**
    * Hoist the menu to the body.
    *
