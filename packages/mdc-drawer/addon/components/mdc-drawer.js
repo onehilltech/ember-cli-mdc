@@ -10,7 +10,8 @@ import { equal } from '@ember/object/computed';
 
 const STYLES = [
   'dismissible',
-  'modal'
+  'modal',
+  'permanent'
 ];
 
 export default Component.extend ({
@@ -32,6 +33,7 @@ export default Component.extend ({
 
   isModal: equal ('style', 'modal'),
   isDismissible: equal ('style', 'dismissible'),
+  isPermanent: equal('style', 'permanent'),
 
   // The material component.
   _drawer: null,
@@ -70,7 +72,10 @@ export default Component.extend ({
 
     // Set the open state for the component.
     const { style, open } = this.getProperties (['style', 'open']);
-    this._drawer.open = open;
+
+    if (isPresent (this._drawer)) {
+      this._drawer.open = open;
+    }
 
     this._drawerContent = this.element.querySelector ('.mdc-drawer__content');
     this._drawerContent.addEventListener ('click', this._clickEventListener);
@@ -90,7 +95,6 @@ export default Component.extend ({
 
     if (style !== currentStyle) {
       this._destroyComponent ();
-
     }
   },
 
@@ -103,10 +107,15 @@ export default Component.extend ({
 
       // Cache the current style, and send notification the style has changed.
       this.set ('_currentStyle', style);
-      this._drawer.emit ('MDCDrawer:change', { style });
+
+      if (isPresent (this._drawer)) {
+        this._drawer.emit ('MDCDrawer:change', { style });
+      }
     }
 
-    this._drawer.open = this.get ('open');
+    if (isPresent (this._drawer)) {
+      this._drawer.open = this.get ('open');
+    }
   },
 
   willDestroyElement () {
@@ -141,7 +150,7 @@ export default Component.extend ({
   },
   
   _createComponent () {
-    if (this._drawer) {
+    if (isPresent (this._drawer)) {
       this._destroyComponent ();
     }
 
@@ -156,17 +165,22 @@ export default Component.extend ({
       this._removeDrawerScrim ();
     }
 
-    this._drawer = new mdc.drawer.MDCDrawer (this.element);
-    this._drawer.listen ('MDCDrawer:opened', this._openEventListener);
-    this._drawer.listen ('MDCDrawer:closed', this._closeEventListener);
+    if (!this.get ('isPermanent')) {
+      // We instantiate a drawer component for modal and dismissible.
+      this._drawer = new mdc.drawer.MDCDrawer (this.element);
+      this._drawer.listen ('MDCDrawer:opened', this._openEventListener);
+      this._drawer.listen ('MDCDrawer:closed', this._closeEventListener);
+    }
   },
 
   _destroyComponent () {
-    this._drawer.unlisten ('MDCDrawer:opened', this._openEventListener);
-    this._drawer.unlisten ('MDCDrawer:closed', this._closeEventListener);
+    if (isPresent (this._drawer)) {
+      this._drawer.unlisten ('MDCDrawer:opened', this._openEventListener);
+      this._drawer.unlisten ('MDCDrawer:closed', this._closeEventListener);
 
-    this._drawer.destroy ();
-    this._drawer = null;
+      this._drawer.destroy ();
+      this._drawer = null;
+    }
   },
 
   /**

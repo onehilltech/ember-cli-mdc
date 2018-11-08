@@ -9,11 +9,11 @@ const MDC_DRAWER_STYLE_REGEXP = /mdc-drawer--(.*)/;
 export default Component.extend({
   layout,
 
-  classNameBindings: ['_isDismissible:mdc-drawer-app-content'],
+  classNameBindings: ['isDismissible:mdc-drawer-app-content'],
 
   _drawerStyle: null,
-  _isModal: equal ('_drawerStyle', 'modal'),
-  _isDismissible: equal ('_drawerStyle', 'dismissible'),
+  isModal: equal ('_drawerStyle', 'modal'),
+  isDismissible: equal ('_drawerStyle', 'dismissible'),
 
   _drawer: null,
   _drawerChangeListener: null,
