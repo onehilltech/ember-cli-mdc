@@ -1,16 +1,17 @@
-/* global mdc */
-
 import layout from '../templates/components/mdc-textfield';
 import Component from '@ember/component';
 
 import TextSupport from '../mixins/text-support';
 
 import { computed } from '@ember/object';
-import { isPresent, isNone } from '@ember/utils';
-import { or, readOnly, equal, not, and } from '@ember/object/computed';
+import { isEmpty } from '@ember/utils';
+import { alias, equal, not, and, oneWay } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
 
 export default Component.extend (TextSupport, {
   layout,
+
+  _defaultConfig: service ('mdc-textfield-configurator'),
 
   tagName: 'div',
 
@@ -19,11 +20,17 @@ export default Component.extend (TextSupport, {
     'iconClassName'
   ],
 
+  // Set the style for the text field. The default style comes from the configurator.
+  // To change the style, just set this value when adding the component to handlebars.
+  style: oneWay ('_defaultConfig.style'),
+
+  // Set the text field as dense. The default dense value comes from the configurator.
+  // To change the style, just set this value when adding the component to handlebars.
+  dense: oneWay ('_defaultConfig.dense'),
+
   label: null,
-  style: null,
   helperText: null,
   disabled: false,
-  dense: false,
 
   icon: null,
   iconPosition: null,
@@ -37,7 +44,7 @@ export default Component.extend (TextSupport, {
   styleClassName: computed ('style', function () {
     const style = this.get ('style');
 
-    if (isNone (style)) {
+    if (isEmpty (style) || style === 'standard') {
       return null;
     }
 
@@ -60,5 +67,9 @@ export default Component.extend (TextSupport, {
 
   inputId: computed (function () {
     return `${this.elementId}-input`;
-  })
+  }),
+
+  init () {
+    this._super (...arguments);
+  }
 });
