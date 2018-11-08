@@ -60,13 +60,16 @@ export default Component.extend (MenuSurface, {
     this.getWithDefault ('closed', noOp) ();
   },
 
-  /**
-   * Set the absolute position for the menu.
-   *
-   * This method must be overloaded by the component.
-   */
   setAbsolutePosition (x, y) {
     this.menuSurface_.setAbsolutePosition (x, y);
+  },
+
+  setAnchorCorner (corner) {
+    this.menuSurface_.setAnchorCorner (corner);
+  },
+
+  setAnchorMargin (margin) {
+    this.menuSurface_.setAnchorMargin (margin);
   },
 
   /**

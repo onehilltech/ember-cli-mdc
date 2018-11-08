@@ -1,8 +1,25 @@
-import Mixin from '@ember/object/mixin';
+/* globals mdc */
 
+import Mixin from '@ember/object/mixin';
 import { equal } from '@ember/object/computed';
+import { isPresent, isNone } from '@ember/utils';
+import { assert } from '@ember/debug';
 
 const MENU_SURFACE_ANCHOR_CLASS = 'mdc-menu-surface--anchor';
+const { Corner } = mdc.menuSurface;
+
+const ANCHOR_CORNERS = Object.freeze ({
+  topLeft: Corner.TOP_LEFT,
+  topRight: Corner.TOP_RIGHT,
+  bottomLeft: Corner.BOTTOM_LEFT,
+  bottomRight: Corner.BOTTOM_RIGHT,
+  topStart: Corner.TOP_START,
+  topEnd: Corner.TOP_END,
+  bottomStart: Corner.BOTTOM_START,
+  bottomEnd: Corner.BOTTOM_END
+});
+
+const ANCHOR_CORNER_ENUMS = Object.freeze (Object.keys (ANCHOR_CORNERS));
 
 export default Mixin.create ({
   classNames: ['mdc-menu-surface'],
@@ -18,10 +35,10 @@ export default Mixin.create ({
   position: null,
 
   /// Set the position left of the menu when position is absolute.
-  positionLeft: 0,
+  left: 0,
 
   /// Set the position top of the menu when position is absolute.
-  positionTop: 0,
+  top: 0,
 
   /// The menu has fixed positioning.
   isFixed: equal ('position', 'fixed'),
@@ -29,8 +46,16 @@ export default Mixin.create ({
   /// The menu has absolute positioning.
   isAbsolute: equal ('position', 'absolute'),
 
-  positionLeft_: null,
-  positionTop_: null,
+  /// The anchor corner for the menu surface.
+  anchorCorner: null,
+
+  /// The margin between the anchor and the menu surface.
+  anchorMargin: null,
+
+  _currLeft: null,
+  _currTop: null,
+  _currAnchorCorner: null,
+  _currAnchorMargin: null,
 
   quickOpen: false,
   open: false,
@@ -65,8 +90,12 @@ export default Mixin.create ({
       anchorToBody,
       isAbsolute,
       open,
-      quickOpen
-    } = this.getProperties (['anchorToBody', 'isAbsolute', 'open', 'quickOpen']);
+      quickOpen,
+      anchorCorner,
+      _currAnchorCorner: currAnchorCorner,
+      anchorMargin,
+      _currAnchorMargin: currAnchorMargin
+    } = this.getProperties (['anchorToBody', 'isAbsolute', 'open', 'quickOpen', 'anchorCorner', '_currAnchorCorner', 'anchorMargin', '_currAnchorMargin']);
 
     if (anchorToBody) {
       this.hoistMenuToBody ();
@@ -74,6 +103,33 @@ export default Mixin.create ({
 
     if (isAbsolute) {
       this._doAbsolutePosition ();
+    }
+
+    if (currAnchorCorner !== anchorCorner) {
+      let anchor = null;
+
+      if (isPresent (anchorCorner)) {
+        assert (`The anchorCorner must be one of the following values: ${ANCHOR_CORNER_ENUMS}`, ANCHOR_CORNER_ENUMS.includes (anchorCorner));
+        anchor = ANCHOR_CORNERS[anchorCorner];
+      }
+
+      this.setAnchorCorner (anchor);
+      this._currAnchorCorner = anchorCorner;
+    }
+
+    if (anchorMargin !== currAnchorMargin) {
+      // Set the anchor margins only if the margins have changed since the last time
+      // we rendered the menu surface.
+      if ((isNone (anchorMargin) && isPresent (currAnchorMargin)) ||
+          (isPresent (anchorMargin) && isNone (currAnchorMargin)) ||
+          (anchorMargin.top !== currAnchorMargin.top ||
+            anchorMargin.left !== currAnchorMargin.left ||
+            anchorMargin.right !== currAnchorMargin.right ||
+            anchorMargin.bottom !== currAnchorMargin.bottom))
+      {
+        this.setAnchorMargin (anchorMargin);
+        this._currAnchorMargin = anchorMargin;
+      }
     }
 
     this.doQuickOpen (quickOpen);
@@ -86,6 +142,24 @@ export default Mixin.create ({
    * This method must be overloaded by the component.
    */
   setAbsolutePosition (/*x, y*/) {
+
+  },
+
+  /**
+   * Set the anchor corner for the menu surface.
+   *
+   * @param corner
+   */
+  setAnchorCorner (corner) {
+
+  },
+
+  /**
+   * Set the anchor margin.
+   *
+   * @param margin
+   */
+  setAnchorMargin (margin) {
 
   },
 
@@ -112,13 +186,13 @@ export default Mixin.create ({
    * @private
    */
   _doAbsolutePosition () {
-    let { positionLeft, positionTop } = this.getProperties (['positionLeft', "positionTop"]);
+    let { left, top } = this.getProperties (['left', 'top']);
 
-    if (this.positionLeft_ !== positionLeft || this.positionTop_ !== positionTop) {
-      this.setAbsolutePosition (this.positionLeft, this.positionTop);
+    if (this._currLeft !== left || this._currTop !== top) {
+      this.setAbsolutePosition (this.left, this.top);
 
-      this.positionLeft_ = positionLeft;
-      this.positionTop_ = positionTop;
+      this._currLeft = left;
+      this._currTop = top;
     }
   }
 });
