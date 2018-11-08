@@ -12,8 +12,10 @@ export default Component.extend({
   classNameBindings: ['isDismissible:mdc-drawer-app-content'],
 
   _drawerStyle: null,
+  
   isModal: equal ('_drawerStyle', 'modal'),
   isDismissible: equal ('_drawerStyle', 'dismissible'),
+  isPermanent: equal ('_drawerStyle', 'permanent'),
 
   _drawer: null,
   _drawerChangeListener: null,

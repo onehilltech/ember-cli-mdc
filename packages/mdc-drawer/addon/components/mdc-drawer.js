@@ -33,7 +33,7 @@ export default Component.extend ({
 
   isModal: equal ('style', 'modal'),
   isDismissible: equal ('style', 'dismissible'),
-  isPermanent: equal('style', 'permanent'),
+  isPermanent: equal ('style', 'permanent'),
 
   // The material component.
   _drawer: null,
@@ -107,10 +107,7 @@ export default Component.extend ({
 
       // Cache the current style, and send notification the style has changed.
       this.set ('_currentStyle', style);
-
-      if (isPresent (this._drawer)) {
-        this._drawer.emit ('MDCDrawer:change', { style });
-      }
+      this.emit ('MDCDrawer:change', { style });
     }
 
     if (isPresent (this._drawer)) {
@@ -211,5 +208,21 @@ export default Component.extend ({
       this._drawerScrim.remove ();
       this._drawerScrim = null;
     }
+  },
+
+  emit (evtType, evtData, shouldBubble = false) {
+    let evt;
+
+    if (typeof CustomEvent === 'function') {
+      evt = new CustomEvent(evtType, {
+        detail: evtData,
+        bubbles: shouldBubble,
+      });
+    } else {
+      evt = document.createEvent('CustomEvent');
+      evt.initCustomEvent(evtType, shouldBubble, false, evtData);
+    }
+
+    this.element.dispatchEvent(evt);
   }
 });
