@@ -43,12 +43,6 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    this._list.wrapFocus = this.get ('wrapFocus');
-  },
-
-  didRender () {
-    this._super (...arguments);
-
     const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
     this._list.singleSelection = singleSelection;
     this._list.wrapFocus = wrapFocus;
