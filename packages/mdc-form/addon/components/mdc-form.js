@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-form';
 
 import { alias, not } from '@ember/object/computed';
-import { isPresent } from '@ember/utils';
+import { isPresent, isNone } from '@ember/utils';
 import { debounce } from '@ember/runloop';
 
 function noOp () {
@@ -84,8 +84,9 @@ export default Component.extend({
     let delay = this.get ('validationDelay');
 
     debounce (this, function () {
-      if (this.isDestroyed)
+      if (this.isDestroyed || isNone (this.element)) {
         return;
+      }
 
       let valid = this.element.checkValidity ();
 
