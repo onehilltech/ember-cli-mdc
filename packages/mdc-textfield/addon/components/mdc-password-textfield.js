@@ -5,6 +5,8 @@ import { computed } from '@ember/object';
 export default Component.extend({
   layout,
 
+  classNames: ['mdc-text-field--password'],
+
   showPassword: false,
 
   iconOn: 'visibility',

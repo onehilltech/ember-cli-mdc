@@ -19,6 +19,8 @@ const VALIDATION_ERROR_TYPE = [
 ];
 
 export default Mixin.create ({
+  classNames: ['mdc-text-field--with-helper-text'],
+
   // {{mdc-textfield-helper-text}}
   helperText: null,
   helperTextPersistent: false,
