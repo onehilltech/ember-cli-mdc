@@ -49,7 +49,7 @@
                         key-press=key-press
                         key-up=key-up
 
-                        placeholder=(if isFullWidth label)
+                        placeholder=(unless isFullWidth placeholder label)
                         label=(if isFullWidth label)}}
   {{#if notFullWidth}}
     {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
