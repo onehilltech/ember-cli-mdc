@@ -34,19 +34,17 @@ export default Mixin.create ({
 
   /// The input control.
   _input: null,
-
-  helperTextId: computed (function () {
-    return `${this.elementId}-helper-text`;
-  }),
+  _helperText: null,
 
   didInsertElement () {
     this._super (...arguments);
 
-    this._input = this.$(':input')[0];
+    this._input = this.element.querySelector ('.mdc-text-field__input');
+    this._helperText = this.element.querySelector ('.mdc-text-field-helper-text');
 
-    const helperTextId = this.get ('helperTextId');
-    this._input.setAttribute ('aria-controls', helperTextId);
-    this._input.setAttribute ('aria-describedby', helperTextId);
+    this._helperText.setAttribute ('id', this._helperText.id);
+    this._input.setAttribute ('aria-controls', this._helperText.id);
+    this._input.setAttribute ('aria-describedby', this._helperText.id);
     this._input.addEventListener ('blur', this.didBlur.bind (this));
   },
 
