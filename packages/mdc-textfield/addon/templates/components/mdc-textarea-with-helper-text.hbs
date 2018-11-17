@@ -1,32 +1,32 @@
-{{mdc-textarea label=label
-               style=style
-               fullWidth=fullWidth
-               dense=dense
+{{#unless (has-block)}}
+  {{mdc-textarea label=label
+                 style=style
+                 fullWidth=fullWidth
+                 dense=dense
 
-               invalid=validation
+                 invalid=validation
 
-               value=value
-               name=name
-               rows=rows
-               cols=cols
-               placeholder=placeholder
-               disabled=disabled
-               maxlength=maxlength
-               tabindex=tabindex
-               selectionEnd=selectionEnd
-               selectionStart=selectionStart
-               autocomplete=autocomplete
-               selectionDirection=selectionDirection
-               wrap=wrap
-               readonly=readonly
-               autofocus=autofocus
-               form=form
-               spellcheck=spellcheck
-               required=required
-}}
-{{#mdc-textfield-helper-text
-    id=helperTextId
-    persistent=persistMessage
-    validation=validation}}
-  {{message}}
-{{/mdc-textfield-helper-text}}
+                 value=value
+                 name=name
+                 rows=rows
+                 cols=cols
+                 placeholder=placeholder
+                 disabled=disabled
+                 maxlength=maxlength
+                 tabindex=tabindex
+                 selectionEnd=selectionEnd
+                 selectionStart=selectionStart
+                 autocomplete=autocomplete
+                 selectionDirection=selectionDirection
+                 wrap=wrap
+                 readonly=readonly
+                 autofocus=autofocus
+                 form=form
+                 spellcheck=spellcheck
+                 required=required}}
+  {{#mdc-textfield-helper-text persistent=persistMessage validation=validation}}
+    {{message}}
+  {{/mdc-textfield-helper-text}}
+{{else}}
+  {{yield}}
+{{/unless}}
