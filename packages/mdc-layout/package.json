@@ -1,13 +1,17 @@
 {
   "name": "ember-cli-mdc-layout",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Support package for responsible layout design.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "layout"
   ],
-  "repository": "",
-  "license": "MIT",
-  "author": "",
+  "repository": "github:onehilltech/ember-cli-mdc",
+  "license": "Apache-2.0",
+  "author": "James H. Hill <james@onehilltech.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
