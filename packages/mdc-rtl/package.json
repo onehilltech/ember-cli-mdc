@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-rtl",
-  "version": "0.64.0",
+  "version": "0.65.0",
   "description": "ember-cli addon for @material/rtl",
   "keywords": [
     "ember-addon",
