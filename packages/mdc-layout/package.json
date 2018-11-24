@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-layout",
-  "version": "0.66.0",
+  "version": "0.67.0",
   "description": "Support package for responsible layout design.",
   "keywords": [
     "ember-addon",
