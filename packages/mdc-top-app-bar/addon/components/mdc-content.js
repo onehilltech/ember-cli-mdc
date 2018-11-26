@@ -4,7 +4,7 @@ import layout from '../templates/components/mdc-content';
 import Theme from 'ember-cli-mdc-theme/mixins/theme';
 
 import { computed } from '@ember/object';
-import { isEmpty } from '@ember/utils';
+import { isEmpty, isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
 
@@ -28,7 +28,6 @@ export default Component.extend (Theme, {
     return topAppBarStyle === 'fixed' ? 'mdc-top-app-bar--fixed-adjust' : `mdc-top-app-bar--${topAppBarStyle}-fixed-adjust`;
   }),
 
-  _topAppBar: null,
   _topAppBarChangeListener: null,
 
   init () {
@@ -41,17 +40,26 @@ export default Component.extend (Theme, {
     this._super (...arguments);
 
     // Locate the top app bar component, and listen for changes.
-    this._topAppBar = document.querySelector ('.mdc-top-app-bar');
+    const topAppBar = document.querySelector ('.mdc-top-app-bar');
 
-    if (this._topAppBar) {
+    if (isPresent (topAppBar)) {
       let style = this._getFixedStyleFromTopAppBar ();
       this.set ('_topAppBarStyle', style);
+    }
 
-      this._topAppBar.addEventListener ('MDCTopAppBar:change', this._topAppBarChangeListener);
-    }
-    else {
-      console.warn ('This component needs a {{mdc-top-app-bar}} component to work.');
-    }
+    // Listen for changes to the top app bar from the body. The change event should
+    // bubble to the body element. We listen from the body and not the top app bar
+    // because Ember allows user to render templates into named outlets. There is a
+    // good chance the top app bar name not exist at the time this component is render.
+    // We want to make sure we observe the changes.
+
+    document.body.addEventListener ('MDCTopAppBar:change', this._topAppBarChangeListener);
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    document.body.removeEventListener ('MDCTopAppBar:change', this._topAppBarChangeListener);
   },
 
   didTopAppBarChange ( { detail: { style }}) {
