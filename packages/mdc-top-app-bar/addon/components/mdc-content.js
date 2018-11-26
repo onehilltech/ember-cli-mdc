@@ -43,7 +43,7 @@ export default Component.extend (Theme, {
     const topAppBar = document.querySelector ('.mdc-top-app-bar');
 
     if (isPresent (topAppBar)) {
-      let style = this._getFixedStyleFromTopAppBar ();
+      let style = this._getFixedStyleFromTopAppBar (topAppBar);
       this.set ('_topAppBarStyle', style);
     }
 
@@ -66,9 +66,9 @@ export default Component.extend (Theme, {
     this.set ('_topAppBarStyle', style);
   },
 
-  _getFixedStyleFromTopAppBar () {
-    for (let i = 0, len = this._topAppBar.classList.length; i < len; ++ i) {
-      const className = this._topAppBar.classList.item (i);
+  _getFixedStyleFromTopAppBar (topAppBar) {
+    for (let i = 0, len = topAppBar.classList.length; i < len; ++ i) {
+      const className = topAppBar.classList.item (i);
       const matches = className.match (MDC_TOP_APP_BAR_TYPE_REGEXP);
 
       if (matches) {
