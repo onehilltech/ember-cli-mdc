@@ -9,5 +9,7 @@ export default LinkComponent.extend (ChipMixin, {
 
   text: computed ('params.[]', function () {
     return this.get ('params')[0];
-  })
+  }),
+
+  activeClass: 'mdc-chip--active',
 });
