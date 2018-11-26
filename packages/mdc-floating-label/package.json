@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-floating-label",
-  "version": "0.67.0",
+  "version": "0.68.0",
   "description": "ember-cli addon for @material/floating-label",
   "keywords": [
     "ember-addon",
@@ -31,7 +31,7 @@
     "ember-cli-blueprint-helpers": "^0.4.5",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-mdc-sass": "^0.67.0"
+    "ember-cli-mdc-sass": "^0.68.0"
   },
   "devDependencies": {
     "@material/animation": "0.39.0",
@@ -46,11 +46,11 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.67.0",
-    "ember-cli-mdc-base": "^0.67.0",
-    "ember-cli-mdc-rtl": "^0.67.0",
-    "ember-cli-mdc-theme": "^0.67.0",
-    "ember-cli-mdc-typography": "^0.67.0",
+    "ember-cli-mdc-animation": "^0.68.0",
+    "ember-cli-mdc-base": "^0.68.0",
+    "ember-cli-mdc-rtl": "^0.68.0",
+    "ember-cli-mdc-theme": "^0.68.0",
+    "ember-cli-mdc-typography": "^0.68.0",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
