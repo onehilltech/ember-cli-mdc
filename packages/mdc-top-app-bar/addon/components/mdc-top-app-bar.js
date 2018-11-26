@@ -21,12 +21,22 @@ export default Component.extend (Theme, {
   tagName: 'header',
 
   classNames: 'mdc-top-app-bar',
-  classNameBindings: ['styleClassName', 'fixedAdjustClassName', 'alwaysClosedClassName:mdc-top-app-bar--short-collapsed'],
+
+  classNameBindings: [
+    'styleClassName',
+    'fixedAdjustClassName',
+    'alwaysClosedClassName:mdc-top-app-bar--short-collapsed',
+    'contextual:mdc-top-app-bar--contextual',
+  ],
 
   /// Notification for navigation button clicked.
   navigation: undefined,
 
+  /// The top app bar is always closed in short mode.
   alwaysClosed: false,
+
+  /// Mark the top app bar as contextual
+  contextual: false,
 
   _topAppBar: undefined,
   _navEventListener: undefined,
