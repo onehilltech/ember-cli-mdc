@@ -47,7 +47,7 @@ export default Component.extend (Theme, {
 
     // Notify the listeners that our style has changed.
     if (this._topAppBar) {
-      this._topAppBar.emit ('MDCTopAppBar:change', {style});
+      this._topAppBar.emit ('MDCTopAppBar:change', {style}, true);
     }
 
     if (isEmpty (style)) {
@@ -72,6 +72,10 @@ export default Component.extend (Theme, {
   didInsertElement () {
     this._super (...arguments);
     this._createComponent ();
+
+    // Notify the listeners of the original style.
+    let style = this.get ('style');
+    this._topAppBar.emit ('MDCTopAppBar:change', {style}, true);
   },
 
   didUpdate () {
