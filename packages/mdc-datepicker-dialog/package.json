@@ -1,20 +1,13 @@
 {
-  "name": "ember-cli-mdc-elevation",
+  "name": "ember-cli-mdc-datepicker-dialog",
   "version": "0.69.0",
-  "description": "ember-cli addon for @material/elevation",
+  "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon",
-    "material",
-    "material design",
-    "material components",
-    "elevation"
+    "ember-addon"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/onehilltech/ember-cli-mdc.git"
-  },
-  "license": "Apache-2.0",
-  "author": "James H. Hill <james@onehilltech.com>",
+  "repository": "",
+  "license": "MIT",
+  "author": "",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -29,30 +22,44 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.4.5",
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-mdc-sass": "^0.69.0"
   },
   "devDependencies": {
-    "@material/animation": "0.39.0",
-    "@material/elevation": "0.39.1",
-    "@material/theme": "0.39.1",
+    "@material/button": "0.41.0",
+    "@material/dialog": "0.41.0",
+    "@material/icon-button": "0.41.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
+    "ember-cli-custom-properties": "1.1.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
-    "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.69.0",
+    "ember-cli-mdc-base": "^0.69.0",
+    "ember-cli-mdc-button": "^0.69.0",
+    "ember-cli-mdc-dialog": "^0.69.0",
+    "ember-cli-mdc-elevation": "^0.69.0",
+    "ember-cli-mdc-icon": "^0.69.0",
+    "ember-cli-mdc-icon-button": "^0.69.0",
+    "ember-cli-mdc-ripple": "^0.69.0",
+    "ember-cli-mdc-rtl": "^0.69.0",
+    "ember-cli-mdc-shape": "^0.69.0",
     "ember-cli-mdc-theme": "^0.69.0",
+    "ember-cli-mdc-typography": "^0.69.0",
+    "ember-cli-moment-shim": "^3.7.1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
+    "ember-fullcalendar": "1.8.0",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-moment": "7.8.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.3.0",
     "ember-source-channel-url": "^1.0.1",
@@ -60,8 +67,9 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
+    "material-design-icons": "3.0.1",
     "qunit-dom": "^0.6.2",
-    "sass": "1.13.4"
+    "sass": "1.15.1"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
