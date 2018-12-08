@@ -85,6 +85,18 @@ export default Component.extend (Theme, {
     this._createComponent ();
   },
 
+  didRender () {
+    this._super (...arguments);
+
+    // Set the scroll target for the top app bar. We process it after the component
+    // has rendered because we need to make sure all elements, including those for
+    // its children, are part of the dom model.
+    let scrollTarget = this.get ('scrollTarget');
+
+    if (isPresent (scrollTarget)) {
+      this.setScrollTarget (scrollTarget);
+    }
+  },
 
   willDestroyElement () {
     this._super (...arguments);
@@ -93,6 +105,14 @@ export default Component.extend (Theme, {
 
   doNavigation () {
     this.getWithDefault ('navigation', noOp) ();
+  },
+
+  setScrollTarget (scrollTarget) {
+    let element = document.querySelector (scrollTarget);
+
+    if (isPresent (element)) {
+      this._topAppBar.setScrollTarget (element);
+    }
   },
 
   _createComponent () {
