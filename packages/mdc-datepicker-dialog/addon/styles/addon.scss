@@ -1,0 +1,134 @@
+@import "app-theme";
+
+@import "@material/theme/mixins";
+@import "@material/theme/color-palette";
+@import "@material/typography/mixins";
+
+.mdc-datepicker-dialog {
+  .mdc-dialog__content {
+    padding: 0;
+  }
+
+  &__calendar {
+    padding: 4px 8px;
+  }
+
+  &__selection {
+    padding: 16px 24px;
+
+    @include mdc-theme-prop(background-color, primary);
+    @include mdc-theme-prop(color, on-primary);
+
+    &-year {
+      @include mdc-typography(body1);
+    }
+
+    &-day {
+      @include mdc-typography(headline4);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-month {
+      flex-grow: 1;
+      text-align: center;
+
+      @include mdc-theme-prop(color, text-primary-on-light);
+    }
+  }
+
+  &__prev, &__next {
+    @include mdc-theme-prop(color, primary);
+  }
+
+  &--disabled {
+    .fc-day-number {
+      @include mdc-theme-prop (color, $material-color-grey-200, true);
+    }
+
+    &.fc-today {
+      .fc-day-number {
+        @include mdc-theme-prop (color, primary, true);
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .fc {
+    table {
+      width: auto;
+    }
+
+    td {
+      border: 0;
+
+      .fc-today {
+        background-color: unset;
+
+        .fc-day-number {
+          @include mdc-theme-prop(color, primary);
+        }
+      }
+    }
+
+    &-scroller {
+      //overflow: hidden !important;
+    }
+
+    &-day-header {
+      @include mdc-theme-prop(color, text-secondary-on-light);
+      @include mdc-typography(body2);
+
+      border: 0;
+      padding: 4px 0;
+    }
+
+    &-row {
+      min-height: 0 !important;
+      height: 48px;
+
+      &.fc-widget-header {
+        height: auto;
+      }
+    }
+
+    &-day, &-day-top, &-day-header {
+      width: 48px;
+      border: 0;
+    }
+
+    &-other-month {
+      .fc-day-number {
+        color: white !important;
+      }
+    }
+
+    &-day-top {
+      height: 48px;
+
+      display: inline-flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-day-number {
+      @include mdc-typography(body1);
+      @include mdc-theme-prop(color, text-primary-on-light);
+    }
+  }
+
+  &--selected:not(.fc-other-month) {
+    @include mdc-theme-prop (background-color, primary, true);
+    border-radius: 50%;
+
+    .fc-day-number {
+      @include mdc-theme-prop (color, on-primary, true);
+    }
+  }
+}

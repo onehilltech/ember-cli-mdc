@@ -1,0 +1,45 @@
+<div class="mdc-dialog__container">
+  <div class="mdc-dialog__surface">
+    <div class="mdc-datepicker-dialog__selection">
+      <div class="mdc-datepicker-dialog__selection-year">{{moment-format selected yearFormat}}</div>
+      <div class="mdc-datepicker-dialog__selection-day">{{moment-format selected dayFormat}}</div>
+    </div>
+
+    <div class="mdc-datepicker-dialog__calendar">
+      <div class="mdc-datepicker-dialog__header">
+        {{mdc-icon-button "keyboard_arrow_left"
+                          class="mdc-datepicker-dialog__prev"
+                          click=(action "prevMonth")}}
+
+        <span class="mdc-datepicker-dialog__header-month">{{headerTitle}}</span>
+        {{mdc-icon-button "keyboard_arrow_right"
+                          class="mdc-datepicker-dialog__next"
+                          click=(action "nextMonth")}}
+      </div>
+
+      {{full-calendar height="auto"
+                      header=false
+                      timezone=timezone
+                      date=value
+                      dayNamesShort=dayNamesShort
+                      viewRender=(action "viewRender")
+                      dayRender=(action "dayRender")
+                      dayClick=(action "dayClick")}}
+    </div>
+
+    <footer class="mdc-dialog__actions">
+      {{#mdc-dialog-button type="button" click=(action "today")}}Today{{/mdc-dialog-button}}
+
+      <span style="flex-grow: 1"></span>
+
+      {{#mdc-dialog-button type="button" action="close"}}
+        {{closeButtonText}}
+      {{/mdc-dialog-button}}
+
+      {{#mdc-dialog-button type="button" action="accept" default=true}}
+        {{acceptButtonText}}
+      {{/mdc-dialog-button}}
+    </footer>
+  </div>
+</div>
+<div class="mdc-dialog__scrim"></div>
