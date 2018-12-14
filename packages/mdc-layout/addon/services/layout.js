@@ -26,7 +26,7 @@ export default Service.extend ({
 
     this._resizeEventListener = this.didResize.bind (this);
 
-    if (isPresent (window)) {
+    if (window) {
       window.addEventListener ('resize', this._resizeEventListener);
     }
 
@@ -36,7 +36,7 @@ export default Service.extend ({
   destroy () {
     this._super (...arguments);
 
-    if (isPresent (window)) {
+    if (window) {
       window.removeEventListener ('resize', this._resizeEventListener);
     }
   },
