@@ -10,6 +10,8 @@ import { equal } from '@ember/object/computed';
 
 import { assert } from '@ember/debug';
 
+import { A } from '@ember/array';
+
 const STYLES = ['box', 'outlined'];
 
 export default Component.extend({
@@ -95,7 +97,8 @@ export default Component.extend({
   },
 
   options: computed ('params.[]', function () {
-    return this.get ('params')[0];
+    let params = this.get ('params');
+    return isPresent (params) ? params[0] : A ();
   })
 }).reopenClass ({
   positionalParams: 'params'
