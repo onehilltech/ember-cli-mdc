@@ -94,8 +94,10 @@ export default Component.extend({
       // the form to update its state based on the forms validity.
       this.set ('valid', valid);
 
-      // Notify the parent of our state.
-      this.getWithDefault ('change', noOp) (valid);
+      // Notify the parent of our state. The client could listen to the change event
+      // that bubbles up to the form, but that requires creating an action that can
+      // extract the forms validity. This is just a shortcut approach for the client.
+      this.getWithDefault ('validity', noOp) (valid);
     }, delay);
   }
 });
