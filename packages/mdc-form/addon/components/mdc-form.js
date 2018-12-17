@@ -34,6 +34,7 @@ export default Component.extend({
   validationDelay: 150,
 
   submitEventListener_: null,
+  resetEventListener_: null,
   checkValidityEventListener_: null,
 
   valid: false,
@@ -43,6 +44,7 @@ export default Component.extend({
     this._super (...arguments);
 
     this.submitEventListener_ = this.didSubmit.bind (this);
+    this.resetEventListener_ = this.didReset.bind (this);
     this.checkValidityEventListener_ = this.doCheckValidity.bind (this);
   },
 
@@ -52,6 +54,7 @@ export default Component.extend({
     this.doCheckValidity ();
 
     this.element.addEventListener ('submit', this.submitEventListener_);
+    this.element.addEventListener ('reset', this.resetEventListener_);
     this.element.addEventListener ('input', this.checkValidityEventListener_);
   },
 
@@ -64,6 +67,7 @@ export default Component.extend({
     this._super (...arguments);
 
     this.element.removeEventListener ('submit', this.submitEventListener_);
+    this.element.removeEventListener ('reset', this.resetEventListener_);
     this.element.removeEventListener ('input', this.checkValidityEventListener_);
   },
 
@@ -74,6 +78,16 @@ export default Component.extend({
    * @param ev
    */
   didSubmit (ev) {
+    ev.preventDefault ();
+  },
+
+  /**
+   * The reset button was pressed. By default, we prevent the default action from
+   * happening because form submission in EmberJS happens behind the scenes.
+   *
+   * @param ev
+   */
+  didReset (ev) {
     ev.preventDefault ();
   },
 
