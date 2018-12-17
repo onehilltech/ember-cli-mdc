@@ -88,6 +88,7 @@ export default Component.extend({
    * @param ev
    */
   didReset (ev) {
+    this.getWithDefault ('reset', noOp) (ev);
     ev.preventDefault ();
   },
 
