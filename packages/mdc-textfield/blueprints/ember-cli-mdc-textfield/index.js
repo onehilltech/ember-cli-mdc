@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/textfield'}
+    {name: '@material/textfield', target: '0.43.1'}
   ],
 
   addons: [

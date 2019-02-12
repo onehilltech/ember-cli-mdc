@@ -37,7 +37,7 @@
     "@material/animation": "0.39.0",
     "@material/base": "0.39.0",
     "@material/elevation": "0.39.1",
-    "@material/fab": "0.39.3",
+    "@material/fab": "0.42.0",
     "@material/ripple": "0.39.1",
     "@material/rtl": "0.39.1",
     "@material/theme": "0.39.1",
