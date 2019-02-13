@@ -6,8 +6,8 @@ export default Controller.extend({
       this.set ('message', 'Hello, World!');
     },
 
-    dismiss () {
-      alert ('Dismiss!');
+    undo () {
+      alert ('Undo!');
     }
   }
 });

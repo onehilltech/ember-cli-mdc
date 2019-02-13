@@ -37,6 +37,8 @@ export default Component.extend({
   _didOpenListener: null,
   _didCloseListener: null,
 
+  dismissIcon: 'close',
+
   init () {
     this._super (...arguments);
 
@@ -47,10 +49,7 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    this._snackbar = new MDCSnackbar (this.element);
-    this._snackbar.listen ('MDCSnackbar:opened', this._didOpenListener);
-    this._snackbar.listen ('MDCSnackbar:closed', this._didCloseListener);
-
+    this._createComponent ();
     const message = this.get ('message');
 
     if (isPresent (message)) {
@@ -61,6 +60,10 @@ export default Component.extend({
   didUpdate () {
     this._super (...arguments);
 
+    // We are always going to recreate the component just in case the structure of
+    // the component has changed.
+
+    this._createComponent ();
     const message = this.get ('message');
 
     if (isPresent (message)) {
@@ -68,12 +71,25 @@ export default Component.extend({
     }
   },
 
-  willDestroyElement () {
-    this._super (...arguments);
+  _createComponent () {
+    if (this._snackbar) {
+      this._destroyComponent ();
+    }
 
+    this._snackbar = new MDCSnackbar (this.element);
+    this._snackbar.listen ('MDCSnackbar:opened', this._didOpenListener);
+    this._snackbar.listen ('MDCSnackbar:closed', this._didCloseListener);
+  },
+
+  _destroyComponent () {
     this._snackbar.unlisten ('MDCSnackbar:opened', this._didOpenListener);
     this._snackbar.unlisten ('MDCSnackbar:closed', this._didCloseListener);
     this._snackbar.destroy ();
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+    this._destroyComponent ();
   },
 
   show () {

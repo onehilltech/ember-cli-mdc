@@ -1,4 +1,16 @@
 <div class="mdc-snackbar__surface">
   {{#mdc-snackbar-label}}{{label}}{{/mdc-snackbar-label}}
-  {{yield}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#mdc-snackbar-actions}}
+      {{#if actionText}}
+        {{#mdc-snackbar-button click=actionHandler}}{{actionText}}{{/mdc-snackbar-button}}
+      {{/if}}
+      {{#if dismissible}}
+        {{mdc-snackbar-dismiss dismissIcon}}
+      {{/if}}
+    {{/mdc-snackbar-actions}}
+  {{/if}}
+
 </div>

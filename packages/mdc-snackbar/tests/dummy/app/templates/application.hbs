@@ -2,8 +2,4 @@
 
 <button {{action (mut message) "Hello, World!"}}>Snackbar</button>
 
-{{#mdc-snackbar message=message}}
-  {{#mdc-snackbar-actions dismiss=true}}
-    {{#mdc-snackbar-button}}Undo{{/mdc-snackbar-button}}
-  {{/mdc-snackbar-actions}}
-{{/mdc-snackbar}}
+{{mdc-snackbar message=message dismissible=true actionText="Undo" actionHandler=(action "undo")}}
