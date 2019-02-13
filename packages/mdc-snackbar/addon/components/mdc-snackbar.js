@@ -2,8 +2,10 @@
 
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-snackbar';
+
 import { assert } from '@ember/debug';
 import { isPresent } from '@ember/utils';
+import { alias } from '@ember/object/computed';
 
 const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 
@@ -12,8 +14,16 @@ export default Component.extend({
 
   classNames: ['mdc-snackbar'],
 
+  classNameBindings: ['stacked:mdc-snackbar--stacked', 'leading:mdc-snackbar--leading'],
+
+  stacked: false,
+
   /// Message to show in the snackbar.
   message: null,
+
+  label: alias ('message'),
+
+  leading: false,
 
   /// Timeout value for the snackbar.
   timeout: null,
@@ -67,9 +77,11 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._snackbar.unlisten ('MDCSnackbar:show', this.didShow.bind (this));
-    this._snackbar.unlisten ('MDCSnackbar:hide', this.didHide.bind (this));
-    this._snackbar.destroy ();
+    if (this._snackbar) {
+      this._snackbar.unlisten ('MDCSnackbar:show', this.didShow.bind (this));
+      this._snackbar.unlisten ('MDCSnackbar:hide', this.didHide.bind (this));
+      this._snackbar.destroy ();
+    }
   },
 
   show (message) {
