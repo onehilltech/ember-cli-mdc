@@ -63,7 +63,13 @@ export default Dialog.extend ({
 
   didClose ({detail: {action}}) {
     if (action === 'accept') {
-      this.set ('value', this.get ('selected'));
+      let selected = this.get ('selected');
+
+      if (!!selected) {
+        selected = selected.toDate ();
+      }
+
+      this.set ('value', selected);
     }
 
     this._super (...arguments);
