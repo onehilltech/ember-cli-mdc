@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-icon",
-  "version": "0.73.0",
+  "version": "0.73.3",
   "description": "ember-cli addon for Material Icons",
   "keywords": [
     "ember-addon",
@@ -41,7 +41,7 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-theme": "^0.73.0",
+    "ember-cli-mdc-theme": "^0.73.3",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
