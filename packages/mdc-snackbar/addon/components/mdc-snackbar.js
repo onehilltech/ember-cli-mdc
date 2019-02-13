@@ -16,51 +16,46 @@ export default Component.extend({
 
   classNameBindings: ['stacked:mdc-snackbar--stacked', 'leading:mdc-snackbar--leading'],
 
-  stacked: false,
-
-  /// Message to show in the snackbar.
+  /// Message to show in the snackbar. Setting the message will show
+  /// the snackbar to the user.
   message: null,
 
   label: alias ('message'),
 
+  stacked: false,
+
   leading: false,
 
   /// Timeout value for the snackbar.
-  timeout: null,
+  timeout: 5000,
 
-  /// The handler for action.
-  actionHandler: null,
-
-  /// The action text. This is required if actionHandler exists.
-  actionText: null,
-
-  /// The message is multiple lines.
-  multiline: null,
-
-  /// Align the action to the bottom of a multi-line message.
-  actionOnBottom: null,
-
-  /// Dismisses the snackbar when the action is clicked.
-  dismissesOnAction: true,
+  /// Close the snackbar when ESC pressed.
+  closeOnEscape: true,
 
   /// Reference to the MDC instance.
   _snackbar: null,
+
+  _didOpenListener: null,
+  _didCloseListener: null,
+
+  init () {
+    this._super (...arguments);
+
+    this._didOpenListener = this.didOpen.bind (this);
+    this._didCloseListener = this.didClose.bind (this);
+  },
 
   didInsertElement () {
     this._super (...arguments);
 
     this._snackbar = new MDCSnackbar (this.element);
-    this._snackbar.listen ('MDCSnackbar:show', this.didShow.bind (this));
-    this._snackbar.listen ('MDCSnackbar:hide', this.didHide.bind (this));
-
-    this.element.setAttribute ('aria-live', 'assertive');
-    this.element.setAttribute ('aria-atomic', true);
-    this.element.setAttribute ('aria-hidden', true);
+    this._snackbar.listen ('MDCSnackbar:opened', this._didOpenListener);
+    this._snackbar.listen ('MDCSnackbar:closed', this._didCloseListener);
 
     const message = this.get ('message');
 
     if (isPresent (message)) {
-      this.show (message);
+      this.show ();
     }
   },
 
@@ -70,44 +65,37 @@ export default Component.extend({
     const message = this.get ('message');
 
     if (isPresent (message)) {
-      this.show (message);
+      this.show ();
     }
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
-    if (this._snackbar) {
-      this._snackbar.unlisten ('MDCSnackbar:show', this.didShow.bind (this));
-      this._snackbar.unlisten ('MDCSnackbar:hide', this.didHide.bind (this));
-      this._snackbar.destroy ();
-    }
+    this._snackbar.unlisten ('MDCSnackbar:opened', this._didOpenListener);
+    this._snackbar.unlisten ('MDCSnackbar:closed', this._didCloseListener);
+    this._snackbar.destroy ();
   },
 
-  show (message) {
-    const {
-      timeout,
-      actionText,
-      actionHandler,
-      multiline,
-      actionOnBottom
-    } = this.getProperties (['timeout','actionHandler','actionText','multiline','actionOnBottom']);
+  show () {
+    const { timeout, closeOnEscape } = this.getProperties (['timeout','closeOnEscape']);
 
-    this._snackbar.dismissesOnAction = this.getWithDefault ('dismissesOnAction', true);
-    this._snackbar.show ({ message, actionText, actionHandler, timeout, multiline, actionOnBottom });
+    this._snackbar.closeOnEscape = closeOnEscape;
+    this._snackbar.timeoutMs = timeout;
+    this._snackbar.show ();
   },
 
   /**
    * The snackbar is showing to the user.
    */
-  didShow () {
+  didOpen () {
 
   },
 
   /**
    * The snackbar is hidden from the user.
    */
-  didHide () {
+  didClose () {
     // Erase the message so we can show the snackbar again.
     this.set ('message');
   }
