@@ -3,7 +3,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-snackbar';
 
-import { assert } from '@ember/debug';
 import { isPresent } from '@ember/utils';
 import { alias } from '@ember/object/computed';
 
@@ -82,7 +81,7 @@ export default Component.extend({
 
     this._snackbar.closeOnEscape = closeOnEscape;
     this._snackbar.timeoutMs = timeout;
-    this._snackbar.show ();
+    this._snackbar.open ();
   },
 
   /**

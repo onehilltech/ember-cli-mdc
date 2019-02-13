@@ -38,7 +38,7 @@
     "@material/button": "0.43.0",
     "@material/icon-button": "0.43.0",
     "@material/rtl": "0.39.1",
-    "@material/snackbar": "0.39.1",
+    "@material/snackbar": "^0.43.0",
     "@material/theme": "0.39.1",
     "@material/typography": "0.39.0",
     "broccoli-asset-rev": "^2.7.0",

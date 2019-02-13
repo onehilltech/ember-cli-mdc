@@ -20,7 +20,7 @@
   dependencies:
     "@glimmer/di" "^0.2.0"
 
-"@material/animation@0.39.0", "@material/animation@^0.39.0":
+"@material/animation@0.39.0":
   version "0.39.0"
   resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.39.0.tgz#d3d503c9f87ac1193dc4a5b0cccfaedb39478439"
 
@@ -29,7 +29,7 @@
   resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.41.0.tgz#315b45b32e1aeebee8a4cf555b8ad52076d09ddd"
   integrity sha512-yYAwJbX3Q2AFd4dr6IYOsWLQy2HN8zWOFVl9AbUXunjzTfJCa/ecfXCriaT6qkmoNoHeTdJHRrsQJZC5GsPvzA==
 
-"@material/base@0.39.0", "@material/base@^0.39.0":
+"@material/base@0.39.0":
   version "0.39.0"
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.39.0.tgz#ca451531cf438f51bf999ad7b96b5e8f3929e19a"
 
@@ -38,7 +38,7 @@
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.41.0.tgz#badadce711b4c25b1eb889a5e7581e32cd07c421"
   integrity sha512-tEyzwBRu3d1H120SfKsDVYZHcqT5lKohh/7cWKR93aAaPDkSvjpKJIjyu2yuSkjpDduVZGzVocYbOvhUKhhzXQ==
 
-"@material/button@0.43.0":
+"@material/button@0.43.0", "@material/button@^0.43.0":
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/@material/button/-/button-0.43.0.tgz#ed612a5d47779a9eb9e15623ec2c2f2ae214d2bb"
   integrity sha512-BQbU1se1RH2TcLxhvxEKCJVR0jtQVCmk1gjOJ1SmrVsRshTT5gSQE4WRSFiV/3YmXYU994/KVYMCs2aovLFE/A==
@@ -50,6 +50,11 @@
     "@material/theme" "^0.43.0"
     "@material/typography" "^0.43.0"
 
+"@material/dom@^0.41.0":
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/@material/dom/-/dom-0.41.0.tgz#6756865f97bad4c91ee75e69d769d7cdc25398ae"
+  integrity sha512-wOJrMwjPddYXpQFZAIaCLWI3TO/6KU1lxESTBzunni8A4FHQVWhokml5Xt85GqZwmPFeIF2s+D0wfbWyrGBuKQ==
+
 "@material/elevation@^0.43.0":
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.43.0.tgz#2fe9b0cac8ccfe26acb739ff57d5deb4d4fdcecc"
@@ -58,7 +63,7 @@
     "@material/animation" "^0.41.0"
     "@material/theme" "^0.43.0"
 
-"@material/icon-button@0.43.0":
+"@material/icon-button@0.43.0", "@material/icon-button@^0.43.0":
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.43.0.tgz#e777e585d56b99306b91b197c0d486e9fac9f034"
   integrity sha512-muldr6pmX2peY9ECYxcZfnmDWLqinT+HRVuND2ltCKUqgLBGi4DETQQE0PEOzsChePJothbyqeQorXgcBP8EgQ==
@@ -76,7 +81,7 @@
     "@material/base" "^0.41.0"
     "@material/theme" "^0.43.0"
 
-"@material/rtl@0.39.1", "@material/rtl@^0.39.1":
+"@material/rtl@0.39.1":
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-0.39.1.tgz#dcaf6f93fc6cd540137edb352139dc8139bca436"
 
@@ -90,17 +95,23 @@
   resolved "https://registry.yarnpkg.com/@material/shape/-/shape-0.43.0.tgz#b877acfd8be8abc9ddcf6601eb60dd0588292415"
   integrity sha512-KGnoQV4G2OQbMe5Lr5Xbk8XNlO93Qi/juxXtd2wrAfiaPmktD8ug0CwdVDOPBOmj9a0gX3Ofi9XWcoU+tLEVjg==
 
-"@material/snackbar@0.39.1":
-  version "0.39.1"
-  resolved "https://registry.yarnpkg.com/@material/snackbar/-/snackbar-0.39.1.tgz#2e8c013a12495b5ab11cbd638c527b820581efcc"
+"@material/snackbar@^0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@material/snackbar/-/snackbar-0.43.0.tgz#ada324f959c259581206fbd01b1e0dd0738c9b41"
+  integrity sha512-jmyQSDRLHeZWitrQJM26gySxBeY47zuAyouVsdm0HioYiElQWsn2LJLvl74kLwYByHtK+sFNkcJkKUh+Xm36OQ==
   dependencies:
-    "@material/animation" "^0.39.0"
-    "@material/base" "^0.39.0"
-    "@material/rtl" "^0.39.1"
-    "@material/theme" "^0.39.1"
-    "@material/typography" "^0.39.0"
+    "@material/animation" "^0.41.0"
+    "@material/base" "^0.41.0"
+    "@material/button" "^0.43.0"
+    "@material/dom" "^0.41.0"
+    "@material/icon-button" "^0.43.0"
+    "@material/ripple" "^0.43.0"
+    "@material/rtl" "^0.42.0"
+    "@material/shape" "^0.43.0"
+    "@material/theme" "^0.43.0"
+    "@material/typography" "^0.43.0"
 
-"@material/theme@0.39.1", "@material/theme@^0.39.1":
+"@material/theme@0.39.1":
   version "0.39.1"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.39.1.tgz#5fb160222e2b213628b285af26ca65c6f4327fe5"
 
@@ -109,7 +120,7 @@
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.43.0.tgz#6d9fa113c82e841817882172c152d60d2d203ca6"
   integrity sha512-/zndZL6EihI18v2mYd4O8xvOBAAXmLeHyHVK28LozSAaJ9okQgD25wq5Ktk95oMTmPIC+rH66KcK6371ivNk8g==
 
-"@material/typography@0.39.0", "@material/typography@^0.39.0":
+"@material/typography@0.39.0":
   version "0.39.0"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.39.0.tgz#7d7468673e104609d926528ffe5571cfd44d8c3c"
 
@@ -2099,10 +2110,10 @@ ember-cli-mdc-base@^0.72.0:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
 
-ember-cli-mdc-button@^0.72.0:
-  version "0.72.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.72.0.tgz#6de1b029f26b905a7da845c54897d303cf606c41"
-  integrity sha512-eq14ZxfRsOAvBerQ/Aa2dHsoIrdKWa+J3iygZa2HpeHzqIa3MwVVDnFW6lqaKNUQ5PMBYuWpXYXivDqxrEHtUg==
+ember-cli-mdc-button@^0.72.4:
+  version "0.72.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.72.4.tgz#dcfe61ef37ebc4650b95682bc25c35910b27b98d"
+  integrity sha512-pDxl1KqaFobFHj79hRXiq4EtwVQO833CeqST9iI4+07P9QJhcFQxX89YkOlwlWLg39/P/wsWVuOHAnvdvz5KGw==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2110,10 +2121,10 @@ ember-cli-mdc-button@^0.72.0:
     ember-cli-htmlbars-inline-precompile "^1.0.0"
     ember-cli-mdc-sass "^0.72.0"
 
-ember-cli-mdc-elevation@0.72.0:
-  version "0.72.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.72.0.tgz#974a46c0de506e0a33b91f0d22219c8ba71051fd"
-  integrity sha512-+9SPpgq89/duF7nW2nhEhbQw+QdkpD8+hH0JyDzlm7TH1PbscsEtXsYOd9+itNfFzXP+tsRN+z0kSA/CKTf02w==
+ember-cli-mdc-elevation@^0.72.4:
+  version "0.72.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.72.4.tgz#13448dd5f9cf2e7550d7e16337c61e1411645d32"
+  integrity sha512-9zaMaRkW94sQFZePMbrYvMtMJIqgx3UPBaFXF4PfzF3aV3kWeqFMRnwU+PGUppRUJH/kLqboTEcOnh1VUxLqzQ==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
