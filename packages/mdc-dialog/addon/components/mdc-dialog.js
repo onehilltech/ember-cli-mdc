@@ -117,7 +117,10 @@ export default Component.extend({
 
   didClose ({detail: {action}}) {
     this.set ('show', false);
-    this.getWithDefault (action, noOp) ();
+
+    if (action) {
+      this.getWithDefault (action, noOp) ();
+    }
   },
 
   _setupAttributes () {
