@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-elevation",
-  "version": "0.72.0",
+  "version": "0.72.4",
   "description": "ember-cli addon for @material/elevation",
   "keywords": [
     "ember-addon",
