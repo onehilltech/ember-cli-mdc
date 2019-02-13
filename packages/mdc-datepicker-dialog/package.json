@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-datepicker-dialog",
-  "version": "0.73.3",
+  "version": "0.73.4",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -39,12 +39,12 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.73.1",
     "ember-cli-mdc-base": "^0.73.2",
-    "ember-cli-mdc-button": "^0.73.3",
-    "ember-cli-mdc-dialog": "^0.73.3",
+    "ember-cli-mdc-button": "^0.73.4",
+    "ember-cli-mdc-dialog": "^0.73.4",
     "ember-cli-mdc-elevation": "^0.73.3",
     "ember-cli-mdc-icon": "^0.73.3",
-    "ember-cli-mdc-icon-button": "^0.73.3",
-    "ember-cli-mdc-ripple": "^0.73.3",
+    "ember-cli-mdc-icon-button": "^0.73.4",
+    "ember-cli-mdc-ripple": "^0.73.4",
     "ember-cli-mdc-rtl": "^0.73.0",
     "ember-cli-mdc-shape": "^0.73.0",
     "ember-cli-mdc-theme": "^0.73.3",
