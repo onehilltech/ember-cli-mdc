@@ -2118,15 +2118,25 @@ ember-cli-mdc-icon@0.73.3:
     ember-cli-htmlbars-inline-precompile "^1.0.0"
     ember-cli-mdc-sass "^0.73.0"
 
-ember-cli-mdc-line-ripple@0.73.3:
-  version "0.73.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-line-ripple/-/ember-cli-mdc-line-ripple-0.73.3.tgz#8ea9635d23f57ee7e3dac8c9a5c4b50cad6ce763"
-  integrity sha512-gUB4TLTzTOkejHNs77zu2Ti8zoB+u0ATXwJ9Kp3vhA/0AUrgKroyCzadJb4PhmCwLNIB8Awy/jpNWn0J6wHbfg==
+ember-cli-mdc-line-ripple@^0.73.6:
+  version "0.73.6"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-line-ripple/-/ember-cli-mdc-line-ripple-0.73.6.tgz#13710ff6d7e4499d3d190808e640d5bc41946926"
+  integrity sha512-RdviVdaHzdkVf2qtn5oiU1CJu6NjN21r7ThFwG09LF1nGVuTYyJ2SrsC/eseIwW1uykiyPa6G4uvceyaCMd1cg==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
     ember-cli-htmlbars "^3.0.0"
     ember-cli-htmlbars-inline-precompile "^1.0.0"
+    ember-cli-mdc-sass "^0.73.0"
+
+ember-cli-mdc-notched-outline@0.73.3:
+  version "0.73.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-notched-outline/-/ember-cli-mdc-notched-outline-0.73.3.tgz#7ec9fe054127b2aac42a858203dc269796968237"
+  integrity sha512-T4mKqsHxoNrEEarv2SZLrOhIJnO8iRsNBOqnuvTL2DI9365B3CJsr+/QtKXI4AtjTR/MI69HZGcw3Ezjk7hVGA==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.4.5"
+    ember-cli-htmlbars "^3.0.0"
     ember-cli-mdc-sass "^0.73.0"
 
 ember-cli-mdc-ripple@0.73.4:
