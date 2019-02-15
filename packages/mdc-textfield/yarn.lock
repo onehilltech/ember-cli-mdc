@@ -2096,10 +2096,10 @@ ember-cli-mdc-base@0.73.2:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
 
-ember-cli-mdc-floating-label@0.73.3:
-  version "0.73.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-floating-label/-/ember-cli-mdc-floating-label-0.73.3.tgz#11e1c09c770601a85b6847c7f0842f0ef0bee1b8"
-  integrity sha512-3ws4mF9dECsGFRxGRpTHUd0ELSz//8skWByweDFZdn45zsAR439FU4qW4I6pww4QV8GbcSRjlt6xmUvapOe0DA==
+ember-cli-mdc-floating-label@^0.73.5:
+  version "0.73.5"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-floating-label/-/ember-cli-mdc-floating-label-0.73.5.tgz#9589ed8558ed4b19df3375b8c9a62e9200df636b"
+  integrity sha512-quG7zY7wbTd3TdfRA47S5T4NDdiUn5N0n6+BcB+EhHdo8/4QLBPDEpOZHHBFEjZjJDEeNCWYYVxfuaida1VWtw==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2111,6 +2111,17 @@ ember-cli-mdc-icon@0.73.3:
   version "0.73.3"
   resolved "https://registry.yarnpkg.com/ember-cli-mdc-icon/-/ember-cli-mdc-icon-0.73.3.tgz#d3ce637080f555518c6cb0ce930318becdb01568"
   integrity sha512-Xenr+X1YiWLFZvDZqfuwbR8YAmZ6tvQc5Lr5mxJ1zCgiFdkhalGBkgVdMUJeQkJn+yDWpsKkOEvm4w/zR0j/tA==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.4.5"
+    ember-cli-htmlbars "^3.0.0"
+    ember-cli-htmlbars-inline-precompile "^1.0.0"
+    ember-cli-mdc-sass "^0.73.0"
+
+ember-cli-mdc-line-ripple@0.73.3:
+  version "0.73.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-line-ripple/-/ember-cli-mdc-line-ripple-0.73.3.tgz#8ea9635d23f57ee7e3dac8c9a5c4b50cad6ce763"
+  integrity sha512-gUB4TLTzTOkejHNs77zu2Ti8zoB+u0ATXwJ9Kp3vhA/0AUrgKroyCzadJb4PhmCwLNIB8Awy/jpNWn0J6wHbfg==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
