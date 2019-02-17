@@ -1,3 +1,9 @@
-<svg>
-  <path class="mdc-notched-outline__path"/>
-</svg>
+{{#unless (has-block)}}
+  {{mdc-notched-outline-leading}}
+  {{#mdc-notched-outline-notch}}
+    {{#mdc-floating-label}}{{label}}{{/mdc-floating-label}}
+  {{/mdc-notched-outline-notch}}
+  {{mdc-notched-outline-trailing}}
+{{else}}
+  {{yield}}
+{{/unless}}

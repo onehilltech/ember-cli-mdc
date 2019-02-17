@@ -8,9 +8,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-animation'},
-    {name: 'ember-cli-mdc-base'},
-    {name: 'ember-cli-mdc-theme'}
+    {name: 'ember-cli-mdc-floating-label'}
   ]
 });
 
