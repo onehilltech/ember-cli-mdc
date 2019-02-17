@@ -1,6 +1,6 @@
 <h2 class="mdc-typography--headline4" id="title">Text Fields</h2>
 
-<h3 class="mdc-typography--subtitle1">Standard</h3>
+<h3 class="mdc-typography--subtitle1">Filled</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -16,7 +16,42 @@
   </div>
 </div>
 
+<h3 class="mdc-typography--subtitle1">Shaped Filled</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    {{mdc-textfield class="shape" label="Standard" style="standard"}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield-with-helper-text class="shape" label="Helper Text" helperText="Helper Text" style="standard" helperTextPersistent=true}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield class="shape" label="Disabled" style="standard" disabled=true}}
+  </div>
+</div>
+
 <h3 class="mdc-typography--subtitle1">Outlined</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    {{mdc-textfield label="Outlined"}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield-with-helper-text label="Helper Text"
+                                     style="outlined"
+                                     helperText="Helper Text"
+                                     helperTextPersistent=true}}
+  </div>
+
+  <div class="text-field-container">
+    {{mdc-textfield label="Disabled" style="outlined" disabled=true}}
+  </div>
+</div>
+
+<h3 class="mdc-typography--subtitle1">Shaped Outlined</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">

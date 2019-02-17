@@ -5,7 +5,7 @@ import TextSupport from '../mixins/text-support';
 
 import { computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { equal, not, and, oneWay } from '@ember/object/computed';
+import { equal, not, and, oneWay, or } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default Component.extend (TextSupport, {

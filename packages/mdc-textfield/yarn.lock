@@ -2129,10 +2129,10 @@ ember-cli-mdc-line-ripple@^0.74.0:
     ember-cli-htmlbars-inline-precompile "^1.0.0"
     ember-cli-mdc-sass "^0.74.0"
 
-ember-cli-mdc-notched-outline@^0.74.1:
-  version "0.74.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-notched-outline/-/ember-cli-mdc-notched-outline-0.74.1.tgz#eb43d72cd9335d6bae2c1c568a4f7881587b5c9a"
-  integrity sha512-iBcfCMrDJq7G/Szpwilw+Z6CdQgMpLNXt7M73x+7V0j0zeN4XCNPyypDzRbLANLU47lofJi4gBo31I8lq0l6SQ==
+ember-cli-mdc-notched-outline@^0.74.2:
+  version "0.74.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-notched-outline/-/ember-cli-mdc-notched-outline-0.74.2.tgz#091b39be0289aae69b409c8d52a6183672fedbc5"
+  integrity sha512-1x6sTjYNXODDat+qd7U2766V2d9UDEFrJxD5g5hGqJbZ8TpcunGFG6c0nYXaAEzpoS8rN0K2caa8FLbcqaf6EA==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2167,6 +2167,15 @@ ember-cli-mdc-sass@^0.74.0:
     broccoli-merge-trees "^3.0.1"
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
+
+ember-cli-mdc-shape@0.74.0:
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-shape/-/ember-cli-mdc-shape-0.74.0.tgz#4dcb908384d0659351bbd162302c810fafb67e56"
+  integrity sha512-cLqhssEK4rcMDbnCqiDmM+DCfKT9FMGbWeYynQTT3OYB1SBe66NZrhaLQd2nlNqWN/uGEdbftz2bHtxhjE2ntw==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.4.5"
+    ember-cli-mdc-sass "^0.74.0"
 
 ember-cli-mdc-theme@^0.74.0:
   version "0.74.0"

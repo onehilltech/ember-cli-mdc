@@ -19,7 +19,7 @@
                            form=form
                            spellcheck=spellcheck
                            required=required}}
-  {{#mdc-floating-label for=textAreaId}}{{label}}{{/mdc-floating-label}}
+    {{mdc-notched-outline label=label for=textAreaId}}
 {{else}}
   {{yield}}
 {{/unless}}

@@ -32,3 +32,19 @@ body {
 
   }
 }
+
+.mdc-text-field {
+  &--fullwidth {
+    margin-bottom: 16px;
+  }
+}
+
+.shape {
+  .mdc-text-field {
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+.shape {
+  border-radius: 16px 16px 0 0;
+}
