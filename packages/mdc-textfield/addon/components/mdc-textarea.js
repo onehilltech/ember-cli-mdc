@@ -12,12 +12,10 @@ export default Component.extend (TextSupport, {
   layout,
 
   classNames: ['mdc-text-field--textarea'],
-  classNameBindings: ['fullWidth:mdc-text-field--fullwidth', 'dense:mdc-text-field--dense'],
+  classNameBindings: ['fullWidth:mdc-text-field--fullwidth'],
 
   fullWidth: false,
   notFullWidth: not ('fullWidth'),
-
-  dense: oneWay ('_defaultConfig.dense'),
 
   _defaultConfig: service ('mdc-textarea-configurator'),
 

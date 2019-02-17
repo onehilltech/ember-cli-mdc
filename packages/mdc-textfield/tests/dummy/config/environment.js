@@ -25,7 +25,6 @@ module.exports = function(environment) {
     'ember-cli-mdc': {
       textfield: {
         style: 'outlined',
-        dense: true
       }
     }
   };

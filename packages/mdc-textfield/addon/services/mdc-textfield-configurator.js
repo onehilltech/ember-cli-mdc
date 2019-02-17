@@ -3,10 +3,8 @@ import { getOwner } from '@ember/application';
 import { getWithDefault } from '@ember/object';
 
 export default Service.extend({
+  /// The default style of all text fields.
   style: null,
-
-  /// The text field is send.
-  dense: false,
 
   init () {
     this._super (...arguments);
@@ -20,8 +18,7 @@ export default Service.extend({
     const textFieldConfig = getWithDefault (config, 'textfield', {});
 
     this.setProperties ({
-      style: textFieldConfig.style || inputConfig.style || null,
-      dense: textFieldConfig.dense || inputConfig.dense || false,
+      style: textFieldConfig.style || inputConfig.style || null
     });
   }
 });

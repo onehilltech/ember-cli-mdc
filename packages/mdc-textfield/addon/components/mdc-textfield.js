@@ -5,7 +5,7 @@ import TextSupport from '../mixins/text-support';
 
 import { computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { alias, equal, not, and, oneWay } from '@ember/object/computed';
+import { equal, not, and, oneWay } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default Component.extend (TextSupport, {
@@ -23,10 +23,6 @@ export default Component.extend (TextSupport, {
   // Set the style for the text field. The default style comes from the configurator.
   // To change the style, just set this value when adding the component to handlebars.
   style: oneWay ('_defaultConfig.style'),
-
-  // Set the text field as dense. The default dense value comes from the configurator.
-  // To change the style, just set this value when adding the component to handlebars.
-  dense: oneWay ('_defaultConfig.dense'),
 
   label: null,
   helperText: null,
@@ -67,9 +63,5 @@ export default Component.extend (TextSupport, {
 
   inputId: computed (function () {
     return `${this.elementId}-input`;
-  }),
-
-  init () {
-    this._super (...arguments);
-  }
+  })
 });

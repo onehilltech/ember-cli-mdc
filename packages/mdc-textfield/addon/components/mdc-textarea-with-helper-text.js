@@ -11,7 +11,5 @@ export default Component.extend (HelperTextSupport, {
 
   classNames: ['mdc-text-area-with-helper-text'],
 
-  dense: oneWay ('_defaultConfig.dense'),
-
   _defaultConfig: service ('mdc-textarea-configurator'),
 });

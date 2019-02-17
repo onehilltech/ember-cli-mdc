@@ -1,28 +1,20 @@
-<h2 class="mdc-typography--headline4" id="title">Text Fields</h2>
+{{mdc-textfield label="Standard"}}
+
+<!-- h2 class="mdc-typography--headline4" id="title">Text Fields</h2>
 
 <h3 class="mdc-typography--subtitle1">Standard</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
-    {{mdc-textfield label="Standard" style="standard" dense=false}}
-  </div>
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense" style="standard" dense=true}}
+    {{mdc-textfield label="Standard" style="standard"}}
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield-with-helper-text label="Helper Text"
-                                     helperText="Helper Text"
-                                     style="standard"
-                                     dense=false
-                                     helperTextPersistent=true}}
+    {{mdc-textfield-with-helper-text label="Helper Text" helperText="Helper Text" style="standard" helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Disabled"
-                    style="standard"
-                    dense=false
-                    disabled=true}}
+    {{mdc-textfield label="Disabled" style="standard" disabled=true}}
   </div>
 </div>
 
@@ -30,22 +22,18 @@
 
 <div class="text-field-row">
   <div class="text-field-container">
-    {{mdc-textfield label="Outlined" dense=false}}
-  </div>
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense" style="outlined" dense=true}}
+    {{mdc-textfield label="Outlined"}}
   </div>
 
   <div class="text-field-container">
     {{mdc-textfield-with-helper-text label="Helper Text"
                                      style="outlined"
-                                     dense=false
                                      helperText="Helper Text"
                                      helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
-    {{mdc-textfield label="Disabled" style="outlined" dense=false disabled=true}}
+    {{mdc-textfield label="Disabled" style="outlined" disabled=true}}
   </div>
 </div>
 
@@ -56,24 +44,16 @@
     {{mdc-textfield label="Standard"
                     style="outlined"
                     icon="event"
-                    dense=false
                     iconPosition="leading"}}
 
   </div>
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense"
-                    style="outlined"
-                    dense=true
-                    icon="event"
-                    iconPosition="leading"}}
-  </div>
+
   <div class="text-field-container">
 
     {{mdc-textfield-with-helper-text label="Helper Text"
                                      style="outlined"
                                      helperText="Helper Text"
                                      helperTextPersistent=true
-                                     dense=false
                                      icon="event"
                                      iconPosition="leading"}}
   </div>
@@ -83,7 +63,6 @@
     {{mdc-textfield label="Disabled"
                     style="outlined"
                     disabled=true
-                    dense=false
                     icon="event"
                     iconPosition="leading"}}
   </div>
@@ -97,22 +76,14 @@
     {{mdc-textfield label="Standard"
                     style="outlined"
                     icon="delete"
-                    dense=false
                     iconPosition="trailing"}}
 
   </div>
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense"
-                    style="outlined"
-                    dense=true
-                    icon="delete"
-                    iconPosition="trailing"}}
-  </div>
+
   <div class="text-field-container">
 
     {{mdc-textfield-with-helper-text label="Helper Text"
                                      style="outlined"
-                                     dense=false
                                      helperText="Helper Text"
                                      helperTextPersistent=true
                                      icon="delete"
@@ -124,7 +95,6 @@
     {{mdc-textfield label="Disabled"
                     style="outlined"
                     disabled=true
-                    dense=false
                     icon="delete"
                     iconPosition="trailing"}}
   </div>
@@ -135,9 +105,6 @@
 <div class="text-field-row">
   <div class="text-field-container">
     {{mdc-textfield label="Standard"}}
-  </div>
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense" dense=true}}
   </div>
 
   <div class="text-field-container">
@@ -156,20 +123,17 @@
 
 <div class="text-field-row">
   <div class="text-field-container">
-    {{mdc-textarea label="Standard" dense=false}}
+    {{mdc-textarea label="Standard"}}
   </div>
-  <div class="text-field-container">
-    {{mdc-textarea label="Dense" dense=true}}
-  </div>
+
   <div class="text-field-container">
     {{mdc-textarea-with-helper-text label="Helper Text"
-                                    dense=false
                                     helperText="Helper Text"
                                     helperTextPersistent=true}}
   </div>
 
   <div class="text-field-container">
-    {{mdc-textarea label="Disabled" dense=false disabled=true}}
+    {{mdc-textarea label="Disabled" disabled=true}}
   </div>
 </div>
 
@@ -179,12 +143,6 @@
   <div class="text-field-container">
     {{mdc-textfield label="Standard"
                     style="fullwidth"}}
-  </div>
-
-  <div class="text-field-container">
-    {{mdc-textfield label="Dense"
-                    style="fullwidth"
-                    dense=true}}
   </div>
 
   <div class="text-field-container">
@@ -205,11 +163,9 @@
 
 <div class="text-field-row text-field-row-fullwidth">
   <div class="text-field-container">
-    {{mdc-textarea label="Standard" fullWidth=true dense=false}}
+    {{mdc-textarea label="Standard" fullWidth=true}}
   </div>
-  <div class="text-field-container">
-    {{mdc-textarea label="Dense" dense=true fullWidth=true}}
-  </div>
+
   <div class="text-field-container">
     {{mdc-textarea-with-helper-text label="Helper Text"
                                     dense=false
@@ -219,7 +175,7 @@
   </div>
 
   <div class="text-field-container">
-    {{mdc-textarea label="Disabled" dense=false disabled=true fullWidth=true}}
+    {{mdc-textarea label="Disabled" disabled=true fullWidth=true}}
   </div>
 </div>
 
@@ -229,13 +185,11 @@
   <div class="text-field-container">
     {{mdc-textfield-with-helper-text style="outlined"
                                      label="Required"
-                                     dense=false
                                      required=true}}
   </div>
   <div class="text-field-container">
     {{mdc-textfield-with-helper-text style="outlined"
                                      label="Min and Max"
-                                     dense=false
                                      type="number"
                                      min=10
                                      max=10000
@@ -244,14 +198,12 @@
 
   <div class="text-field-container">
     {{mdc-textfield-with-helper-text label="Pattern"
-                                     dense=false
                                      pattern="[A-Za-z]{3}"
                                      helperText="Three letter country code."}}
   </div>
 
   <div class="text-field-container">
     {{mdc-textfield-with-helper-text label="Validation message"
-                                     dense=false
                                      required=true
                                      type="number"
                                      helperText="10 <= n <= 10000"
@@ -270,7 +222,6 @@
     <button {{action "clearErrorMessage"}}>Clear Error Message</button>
 
     {{mdc-textfield-with-helper-text style="outlined"
-                                     dense=false
                                      label="Error"
                                      required=true
                                      errorMessage=errorMessage}}
@@ -283,7 +234,6 @@
   <div class="text-field-container">
     {{mdc-password-textfield style="outlined"
                              label="Password"
-                             dense=false
                              required=true}}
 
 
@@ -292,9 +242,8 @@
   <div class="text-field-container">
     {{mdc-password-textfield-with-helper-text style="outlined"
                                               label="Password"
-                                              dense=false
                                               required=true}}
 
 
   </div>
-</div>
+</div -->

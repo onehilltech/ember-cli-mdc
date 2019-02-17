@@ -1,9 +1,6 @@
-/* global mdc */
-
 import Mixin from '@ember/object/mixin';
 
-import { computed } from '@ember/object';
-import { not, or, bool } from '@ember/object/computed';
+import { or } from '@ember/object/computed';
 import { isPresent, isEmpty } from '@ember/utils';
 
 const VALIDATION_ERROR_TYPE = [
