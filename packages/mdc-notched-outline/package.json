@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-notched-outline",
-  "version": "0.74.1",
+  "version": "0.74.2",
   "description": "ember-cli addon for @material/notched-outline",
   "keywords": [
     "ember-addon",
