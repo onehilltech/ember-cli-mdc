@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-chips",
-  "version": "0.74.0",
+  "version": "0.74.5",
   "description": "ember-cli addon for @material/chips.",
   "keywords": [
     "ember-addon",
@@ -48,7 +48,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^0.74.0",
     "ember-cli-mdc-base": "^0.74.0",
-    "ember-cli-mdc-checkbox": "^0.74.0",
+    "ember-cli-mdc-checkbox": "^0.74.5",
     "ember-cli-mdc-elevation": "^0.74.0",
     "ember-cli-mdc-form-field": "^0.74.0",
     "ember-cli-mdc-icon": "^0.74.0",
