@@ -19,9 +19,7 @@ export default Component.extend({
 
   classNames: ['mdc-select'],
 
-  classNameBindings: ['dense:mdc-select--dense', 'disabled:mdc-select--disabled', 'styleClassName'],
-
-  dense: false,
+  classNameBindings: ['disabled:mdc-select--disabled', 'styleClassName', 'isOutlined:mdc-select--outlined'],
 
   style: null,
 

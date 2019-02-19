@@ -1,3 +1,4 @@
+{{mdc-select-dropdown-icon}}
 {{#mdc-select-native-control required=required
                              readonly=readonly
                              disabled=disabled
@@ -15,10 +16,9 @@
   {{/if}}
 {{/mdc-select-native-control}}
 
-{{#mdc-floating-label}}{{label}}{{/mdc-floating-label}}
-
 {{#if isOutlined}}
-  {{mdc-notched-outline}}
+  {{mdc-notched-outline label=label}}
 {{else}}
+  {{#mdc-floating-label}}{{label}}{{/mdc-floating-label}}
   {{mdc-line-ripple}}
 {{/if}}

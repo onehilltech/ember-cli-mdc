@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-select/components/mdc-select-dropdown-icon';
