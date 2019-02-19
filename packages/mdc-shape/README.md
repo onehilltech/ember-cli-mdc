@@ -1,26 +1,15 @@
-# ember-cli-mdc-shape
+ember-cli-mdc-shape
+======================
 
-This README outlines the details of collaborating on this Ember addon.
+ember-cli addon for [`@material/shape`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-shape).
 
-## Installation
+Installation
+------------
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-mdc-shape`
-* `npm install`
+    ember install ember-cli-mdc-shape
+    
+Example Code
+---------------
 
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
+use the components in this add-on.

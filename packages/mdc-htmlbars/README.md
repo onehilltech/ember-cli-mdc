@@ -1,7 +1,7 @@
 ember-cli-mdc-htmlbars
 ======================
 
-componentizes standard HTML text elements and adds attributes for typography, theme, and rtl support
+Componentizes standard HTML text elements and adds attributes for typography, theme, and rtl support
 
 Installation
 ------------
