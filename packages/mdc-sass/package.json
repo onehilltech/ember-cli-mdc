@@ -23,7 +23,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "test:g": "ember g ember-cli-mdc-sass"
   },
   "dependencies": {
     "broccoli-funnel": "^2.0.1",

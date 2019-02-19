@@ -16,7 +16,8 @@
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "start": "ember serve",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "test:g": "ember g ember-cli-mdc-stepper"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
@@ -29,7 +30,7 @@
     "@material/animation": "^0.39.0",
     "@material/base": "^0.39.0",
     "@material/button": "^0.40.0",
-    "@material/dom": "^0.40.0",
+    "@material/dom": "0.41.0",
     "@material/elevation": "^0.40.0",
     "@material/ripple": "^0.40.0",
     "@material/rtl": "^0.39.1",
@@ -44,6 +45,7 @@
     "ember-cli-mdc-animation": "^0.74.8",
     "ember-cli-mdc-base": "^0.74.8",
     "ember-cli-mdc-button": "^0.74.8",
+    "ember-cli-mdc-dom": "0.74.8",
     "ember-cli-mdc-elevation": "^0.74.8",
     "ember-cli-mdc-icon": "^0.74.8",
     "ember-cli-mdc-ripple": "^0.74.8",

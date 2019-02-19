@@ -21,14 +21,15 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "test:g": "ember g ember-cli-mdc-base"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-blueprint-helpers": "^0.4.5"
   },
   "devDependencies": {
-    "@material/base": "0.39.0",
+    "@material/base": "0.41.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",

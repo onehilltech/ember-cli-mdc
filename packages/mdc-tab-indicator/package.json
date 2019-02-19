@@ -22,7 +22,8 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "test:all": "ember try:each"
+    "test:all": "ember try:each",
+    "test:g": "ember g ember-cli-mdc-tab-indicator"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
