@@ -1,7 +1,7 @@
 ember-cli-mdc-form
 ======================
 
-ember-cli addon that is a polyfill for <form> elements
+ember-cli addon that is a polyfill for &lt;form&gt; elements
 
 Installation
 ------------
