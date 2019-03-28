@@ -35,6 +35,10 @@ Ex.
 See the [packages directory](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages) for a 
 list of packages that can be installed individually.
 
+> `ember-cli-mdc` has its own integration for the sass compiler, and is not compatible with
+> `ember-cli-sass`. If you have `ember-cli-sass` installed, then you must first uninstall 
+> `ember-cli-sass` for your `ember-cli-mdc` application to build correctly.
+
 Next Steps
 ----------
 
