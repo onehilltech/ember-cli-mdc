@@ -1,7 +1,7 @@
 ember-cli-mdc-form
 ======================
 
-ember-cli addon that is a polyfill for <form> elements
+ember-cli addon that is a polyfill for &lt;form&gt; elements
 
 Installation
 ------------
@@ -37,7 +37,7 @@ that determines if the submit button should be enabled/disabled.
 
 ```handlebars
 {{#mdc-form submit=(action "submit") 
-            change=(action (mut valid))}}
+            validity=(action (mut valid))}}
   {{!-- add input components here --}}
   
   {{#mdc-button type="submit"}}Submit{{/mdc-button}}
@@ -47,7 +47,7 @@ that determines if the submit button should be enabled/disabled.
 ### Attributes
 
 * **`submit`** - The action `f()` called when a button with `type=submit` is clicked and all inputs are valid.
-* **`change`** - The action `f(state)` when the form's validity changes.
+* **`validity`** - The action `f(state)` when the form's validity changes.
 
 ### Form Validity
 
@@ -57,7 +57,7 @@ it can be use to enable/disable a button.
 
 ```handlebars
 {{#mdc-form submit=(action "submit") 
-            change=(action (mut valid)) as |form|}}
+            validity=(action (mut valid)) as |form|}}
   {{!-- add input components here --}}
   
   {{#mdc-button type="submit" disabled=form.isInvalid}}Submit{{/mdc-button}}
