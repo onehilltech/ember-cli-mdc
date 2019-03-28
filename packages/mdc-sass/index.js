@@ -16,6 +16,9 @@ module.exports = {
   included (app) {
     this._super (...arguments);
 
+    if (!!app.project.addonPackages['ember-cli-sass'])
+      throw new Error ('ember-cli-mdc is not compatible with ember-cli-sass. You must uninstall ember-cli-sass before continuing.');
+
     // see: https://github.com/ember-cli/ember-cli/issues/3718
     if (typeof app.import !== 'function' && app.app) {
       app = app.app;
