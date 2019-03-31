@@ -3,7 +3,8 @@ import Mixin from '@ember/object/mixin';
 export default Mixin.create ({
   classNames: ['mdc-list-item'],
 
-  classNameBindings: ['selected:mdc-list-item--selected', 'activated:mdc-list-item--activated'],
+  classNameBindings: ['selected:mdc-list-item--selected', 'activated:mdc-list-item--activated', 'disabled:mdc-list-item--disabled'],
+  
   attributeBindings: ['role'],
 
   selected: false,
