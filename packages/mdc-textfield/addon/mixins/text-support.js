@@ -60,11 +60,23 @@ export default Mixin.create ({
   _createComponent () {
     this._textField = new mdc.textfield.MDCTextField (this.element);
     this._textField.listen ('MDCTextField:icon', this.doClickIcon.bind (this));
+
+    this.didCreateComponent ();
+  },
+
+  didCreateComponent () {
+
   },
 
   _destroyComponent () {
+    this.willDestroyComponent ();
+
     this._textField.unlisten ('MDCTextField:icon', this.doClickIcon.bind (this));
     this._textField.destroy ();
     this._textField = null;
+  },
+
+  willDestroyComponent () {
+
   }
 });
