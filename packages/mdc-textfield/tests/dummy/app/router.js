@@ -8,6 +8,10 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('multipart');
+
+  this.route('issues', function() {
+    this.route('6');
+  });
 });
 
 export default Router;
