@@ -42,6 +42,12 @@ export default Component.extend({
 
   markers: and ('discrete', 'displayMarkers'),
 
+  /// Manually request the layout of the component. This attribute should be used when
+  /// you can no longer slide the slider due to changes in the slider's layout. For example,
+  /// the slider is initially rendered offscreen and then transitioned onscreen like in a
+  /// menu.
+  requestLayout: false,
+
   _slider: null,
 
   _changeListener: null,
