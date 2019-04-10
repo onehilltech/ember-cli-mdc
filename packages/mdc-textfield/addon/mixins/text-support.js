@@ -91,8 +91,9 @@ export default Mixin.create ({
 
   _checkValue () {
     const value = this.get ('value');
+    const input = this._getNativeInput ();
 
-    if (value !== undefined && value !== this._getNativeInput ().value) {
+    if (document.activeElement !== input && value !== undefined && value !== value.value) {
       // The value was changed by an external source, and not by the user actually typing
       // a new value. Let's manually update the text field value so the component can update
       // its state accordingly.
