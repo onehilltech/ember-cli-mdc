@@ -59,7 +59,7 @@ The `value` attribute of the `mdc-slider` will change instantaneously as the sli
 moved from side to side. The `change` action is called only when the slider stops moving.
 This means the user has selected a terminal value, and the slider is committing the value.
 
-## Requesting Layouts
+## Layout Requests
 
 There are cases when you will need to manually request the slider to update its layout in
 order for the component to function correctly. For example, if the slider is initially rendered
