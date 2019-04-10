@@ -36,7 +36,7 @@ export default Component.extend({
 
   discrete: false,
 
-  step: null,
+  step: undefined,
 
   displayMarkers: false,
 
@@ -58,18 +58,22 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let {min, max, value} = this.getProperties (['min', 'max', 'value']);
+    let {min, max, value, step} = this.getProperties (['min', 'max', 'value', 'step']);
 
-    if (isPresent (min) && min !== this._slider.min) {
+    if (min !== this._slider.min) {
       this._slider.min = min;
     }
 
-    if (isPresent (max) && max !== this._slider.max) {
+    if (max !== this._slider.max) {
       this._slider.max = max;
     }
 
-    if (isPresent (value) && value !== this._slider.value) {
+    if (value !== this._slider.value) {
       this._slider.value = value;
+    }
+
+    if (step !== this._slider.step) {
+      this._slider.step = step;
     }
 
     if (this.get ('requestLayout')) {
