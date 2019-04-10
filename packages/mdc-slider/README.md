@@ -63,7 +63,7 @@ This means the user has selected a terminal value, and the slider is committing 
 
 There are cases when you will need to manually request the slider to update its layout in
 order for the component to function correctly. For example, if the slider is initially rendered
-of screen, say in a menu, and the menu is transitioned onscreen, the slider will not slide.
+of screen, say in a menu, and the menu is transitioned onscreen, then the slider will not slide.
 This is because the layout of the slider is based on its initial location, and not its new
 location on the screen. This is a [known issue](https://github.com/material-components/material-components-web/issues/4365) 
 with the `material-components-web` slider component. 
