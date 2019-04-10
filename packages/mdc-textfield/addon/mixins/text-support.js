@@ -57,11 +57,20 @@ export default Mixin.create ({
     this._textField.valid = this.get ('valid');
   },
 
+  didUpdateAttrs () {
+    this._super (...arguments);
+
+    this._checkValue ();
+  },
+
   _createComponent () {
     this._textField = new mdc.textfield.MDCTextField (this.element);
     this._textField.listen ('MDCTextField:icon', this.doClickIcon.bind (this));
 
     this.didCreateComponent ();
+
+    // Check the value of the component against the native input.
+    this._checkValue ();
   },
 
   didCreateComponent () {
@@ -78,5 +87,21 @@ export default Mixin.create ({
 
   willDestroyComponent () {
 
+  },
+
+  _checkValue () {
+    const value = this.get ('value');
+
+    if (value !== undefined && value !== this._getNativeInput ().value) {
+      // The value was changed by an external source, and not by the user actually typing
+      // a new value. Let's manually update the text field value so the component can update
+      // its state accordingly.
+
+      this._textField.value = value;
+    }
+  },
+
+  _getNativeInput () {
+    return undefined;
   }
 });
