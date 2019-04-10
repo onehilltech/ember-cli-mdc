@@ -71,22 +71,22 @@ export default Component.extend({
     if (isPresent (value) && value !== this._slider.value) {
       this._slider.value = value;
     }
+
+    if (this.get ('requestLayout')) {
+      this._slider.layout ();
+    }
   },
 
   didInsertElement () {
     this._super (...arguments);
 
-    this._slider = new MDCSlider (this.element);
-    this._slider.listen ('MDCSlider:input', this._inputListener);
-    this._slider.listen ('MDCSlider:change', this._changeListener);
+    this._createComponent ();
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
-    this._slider.unlisten ('MDCSlider:input', this._inputListener);
-    this._slider.unlisten ('MDCSlider:change', this._changeListener);
-    this._slider.destroy ();
+    this._destroyComponent ();
   },
 
   didInput ({detail:slider}) {
@@ -95,5 +95,17 @@ export default Component.extend({
 
   didChange ({detail:slider}) {
     this.getWithDefault ('change', noOp) (slider.value);
+  },
+
+  _createComponent () {
+    this._slider = new MDCSlider (this.element);
+    this._slider.listen ('MDCSlider:input', this._inputListener);
+    this._slider.listen ('MDCSlider:change', this._changeListener);
+  },
+
+  _destroyComponent () {
+    this._slider.unlisten ('MDCSlider:input', this._inputListener);
+    this._slider.unlisten ('MDCSlider:change', this._changeListener);
+    this._slider.destroy ();
   }
 });

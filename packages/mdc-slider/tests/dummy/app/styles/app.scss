@@ -1,0 +1,11 @@
+.issue7 {
+  &-menu {
+    border: solid 1px;
+    transform: translateX(-100%);
+    transition: all .5s;
+  }
+
+  &-open {
+    transform: translateX(0);
+  }
+}
