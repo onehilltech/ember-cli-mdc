@@ -72,32 +72,17 @@ export default Component.extend (TextSupport, {
   // updated by some external source.
   _input: null,
 
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    this._checkValue ();
-  },
-
   didCreateComponent () {
     this._super (...arguments);
 
     this._input = this.element.querySelector ('input');
-    this._checkValue ();
   },
 
   willDestroyComponent () {
     this._input = undefined;
   },
 
-  _checkValue () {
-    const value = this.get ('value');
-
-    if (value !== undefined && value !== this._input.value) {
-      // The value was changed by an external source, and not by the user actually typing
-      // a new value. Let's manually update the text field value so the component can update
-      // its state accordingly.
-
-      this._textField.value = value;
-    }
+  _getNativeInput () {
+    return this._input;
   }
 });
