@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-textarea';
 
 import { computed } from '@ember/object';
-import { not, oneWay } from '@ember/object/computed';
+import { not } from '@ember/object/computed';
 
 import { inject as service } from '@ember/service';
 
