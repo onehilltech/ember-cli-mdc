@@ -17,6 +17,15 @@
     }
   }
 
+  &__actions {
+    transition: position;
+
+    &--hide {
+      position: absolute!important;
+      bottom: 0!important;
+    }
+  }
+
   &__selection {
     padding: 16px 24px;
 
@@ -138,6 +147,7 @@
 
   &__content {
     position: relative;
+    overflow: hidden;
   }
 
   &__monthpicker {
