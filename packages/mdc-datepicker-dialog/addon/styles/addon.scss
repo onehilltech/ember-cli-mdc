@@ -144,19 +144,21 @@
     height: 100%;
     width: 100%;
 
-    display: none;
+    display: flex;
     flex-direction: column;
 
     position: absolute;
     left: 0;
-    top: 0;
+    top: 100%;
+
+    z-index: 10;
 
     @include mdc-theme-prop(background-color, surface);
 
-    z-index: 1;
+    transition: top 500ms, display 1ms;
 
     &--show {
-      display: flex;
+      top: 0;
     }
 
     &__header {
@@ -165,9 +167,10 @@
     }
 
     &__content {
+      height: calc(100% - 48px - 16px);
       padding: 0 16px 16px;
 
-      height: calc(100% - 48px - 16px);
+      overflow: hidden;
     }
 
     &__row {
