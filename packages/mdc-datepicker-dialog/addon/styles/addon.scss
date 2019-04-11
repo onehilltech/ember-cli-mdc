@@ -165,9 +165,9 @@
     }
 
     &__content {
-      padding: 16px;
+      padding: 0 16px 16px;
 
-      height: calc(100% - 48px - 32px);
+      height: calc(100% - 48px - 16px);
     }
 
     &__row {
