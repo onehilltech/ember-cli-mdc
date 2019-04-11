@@ -11,6 +11,10 @@
 
   &__calendar {
     padding: 4px 8px;
+
+    &--hidden {
+      visibility: hidden;
+    }
   }
 
   &__selection {
@@ -129,6 +133,69 @@
 
     .fc-day-number {
       @include mdc-theme-prop (color, on-primary, true);
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__monthpicker {
+    height: 100%;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include mdc-theme-prop(background-color, surface);
+
+    z-index: 1;
+
+    &--show {
+      display: flex;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__content {
+      padding: 16px;
+
+      height: calc(100% - 48px - 32px);
+    }
+
+    &__row {
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+
+      height: calc(100% / 4);
+    }
+
+    &__month {
+      display: flex;
+      flex-grow: 1;
+
+      align-items: center;
+      justify-content: center;
+
+      &--selected {
+        .mdc-datepicker-dialog__monthpicker__month-label {
+          @include mdc-theme-prop(color, primary);
+        }
+      }
+
+      &-label {
+        text-transform: uppercase;
+        cursor: pointer;
+      }
     }
   }
 }

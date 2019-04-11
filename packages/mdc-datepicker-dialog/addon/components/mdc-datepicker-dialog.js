@@ -36,6 +36,8 @@ export default Dialog.extend ({
 
   _selectedElement: null,
 
+  showMonthPicker: false,
+
   didInsertElement () {
     this._super (...arguments);
 
@@ -82,7 +84,10 @@ export default Dialog.extend ({
 
   actions: {
     viewRender (view) {
-      this.set ('headerTitle', view.title);
+      const [monthDesc, yearDesc] = view.title.split (' ');
+      const { intervalEnd: currentMonth } = view;
+
+      this.setProperties ({ monthDesc, yearDesc, currentMonth });
     },
 
     dayRender (date, dayElement) {
@@ -154,6 +159,13 @@ export default Dialog.extend ({
 
     nextMonth () {
       this.$fc.fullCalendar ('next');
+    },
+
+    gotoMonth (month) {
+      let currentMonth = this.get ('currentMonth');
+      let date = moment (currentMonth).month (month);
+
+      this.$fc.fullCalendar ('gotoDate', date);
     }
   }
 });

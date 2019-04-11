@@ -1,0 +1,30 @@
+<div class="mdc-datepicker-dialog__monthpicker__header">
+  <div style="flex-grow: 1"></div>
+  {{mdc-icon-button "close" click=(action (mut show) false)}}
+</div>
+
+<div class="mdc-datepicker-dialog__monthpicker__content">
+  <div class="mdc-datepicker-dialog__monthpicker__row">
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 0}}>Jan</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 1}}>Feb</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 2}}>Mar</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__monthpicker__row">
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 3}}>Apr</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 4}}>May</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 5}}>Jun</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__monthpicker__row">
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 6}}>Jul</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 7}}>Aug</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 8}}>Sep</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__monthpicker__row">
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 9}}>Oct</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 10}}>Nov</span></div>
+    <div class="mdc-datepicker-dialog__monthpicker__month"><span class="mdc-datepicker-dialog__monthpicker__month-label" {{action "select" 11}}>Dec</span></div>
+  </div>
+</div>
