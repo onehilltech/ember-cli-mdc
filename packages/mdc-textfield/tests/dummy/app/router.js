@@ -11,6 +11,7 @@ Router.map(function() {
 
   this.route('issues', function() {
     this.route('6');
+    this.route('11');
   });
 });
 
