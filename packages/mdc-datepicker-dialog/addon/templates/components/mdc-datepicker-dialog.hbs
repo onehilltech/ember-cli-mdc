@@ -5,29 +5,36 @@
       <div class="mdc-datepicker-dialog__selection-day">{{moment-format selected dayFormat}}</div>
     </div>
 
-    <div class="mdc-datepicker-dialog__calendar">
-      <div class="mdc-datepicker-dialog__header">
-        {{mdc-icon-button "keyboard_arrow_left"
-                          class="mdc-datepicker-dialog__prev"
-                          click=(action "prevMonth")}}
+    <div class="mdc-datepicker-dialog__content">
+      <div class="mdc-datepicker-dialog__calendar">
+        <div class="mdc-datepicker-dialog__header">
+          {{mdc-icon-button "keyboard_arrow_left"
+                            class="mdc-datepicker-dialog__prev"
+                            click=(action "prevMonth")}}
 
-        <span class="mdc-datepicker-dialog__header-month">{{headerTitle}}</span>
-        {{mdc-icon-button "keyboard_arrow_right"
-                          class="mdc-datepicker-dialog__next"
-                          click=(action "nextMonth")}}
+          <span class="mdc-datepicker-dialog__header-month">
+            <span {{action (mut showMonthPicker) true}}>{{monthDesc}}</span> <span>{{yearDesc}}</span>
+          </span>
+          {{mdc-icon-button "keyboard_arrow_right"
+                            class="mdc-datepicker-dialog__next"
+                            click=(action "nextMonth")}}
+        </div>
+
+        {{full-calendar height="auto"
+                        header=false
+                        timezone=timezone
+                        date=value
+                        dayNamesShort=dayNamesShort
+                        viewRender=(action "viewRender")
+                        dayRender=(action "dayRender")
+                        dayClick=(action "dayClick")}}
+
       </div>
 
-      {{full-calendar height="auto"
-                      header=false
-                      timezone=timezone
-                      date=value
-                      dayNamesShort=dayNamesShort
-                      viewRender=(action "viewRender")
-                      dayRender=(action "dayRender")
-                      dayClick=(action "dayClick")}}
+      {{mdc-datepicker-monthpicker date=currentMonth show=showMonthPicker change=(action "gotoMonth")}}
     </div>
 
-    <footer class="mdc-dialog__actions">
+    <footer class="mdc-dialog__actions mdc-datepicker-dialog__actions {{if showMonthPicker "mdc-datepicker-dialog__actions--hide"}}">
       {{#mdc-dialog-button type="button" click=(action "today")}}Today{{/mdc-dialog-button}}
 
       <span style="flex-grow: 1"></span>
