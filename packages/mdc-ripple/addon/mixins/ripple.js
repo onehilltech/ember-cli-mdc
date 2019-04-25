@@ -1,7 +1,11 @@
+/* globals mdc */
+
 import Mixin from '@ember/object/mixin';
 
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
+
+const { MDCRipple } = mdc.ripple;
 
 export default Mixin.create ({
   classNames: ['mdc-ripple-surface'],
@@ -27,7 +31,7 @@ export default Mixin.create ({
     this._super (...arguments);
 
     if (this.createRippleComponent) {
-      this._ripple = new mdc.ripple.MDCRipple (this.element);
+      this._ripple = new MDCRipple (this.element);
     }
   },
 
