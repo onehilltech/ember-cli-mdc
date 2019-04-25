@@ -11,4 +11,6 @@ export default Mixin.create (RippleMixin, {
   label: null,
 
   horizontal: false,
+
+  createRippleComponent: true
 });

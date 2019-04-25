@@ -4,5 +4,7 @@ import layout from '../templates/components/mdc-foo';
 import { Ripple } from 'ember-cli-mdc-ripple';
 
 export default Component.extend (Ripple, {
-  layout
+  layout,
+
+  createRippleComponent: true
 });
