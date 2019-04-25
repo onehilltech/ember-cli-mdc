@@ -12,5 +12,11 @@ export default Mixin.create (RippleMixin, {
 
   horizontal: false,
 
-  createRippleComponent: true
+  createRippleComponent: true,
+
+  didRender () {
+    this._super (...arguments);
+
+    this._ripple.unbounded = true;
+  }
 });
