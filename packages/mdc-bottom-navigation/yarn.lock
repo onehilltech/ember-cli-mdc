@@ -29,6 +29,13 @@
   version "0.41.0"
   resolved "https://registry.yarnpkg.com/@material/base/-/base-0.41.0.tgz#badadce711b4c25b1eb889a5e7581e32cd07c421"
 
+"@material/elevation@0.43.0":
+  version "0.43.0"
+  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.43.0.tgz#2fe9b0cac8ccfe26acb739ff57d5deb4d4fdcecc"
+  dependencies:
+    "@material/animation" "^0.41.0"
+    "@material/theme" "^0.43.0"
+
 "@material/ripple@0.43.0":
   version "0.43.0"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.43.0.tgz#e2facd65f17f4c67a2923750e08c5daed43dc627"
@@ -1991,6 +1998,14 @@ ember-cli-mdc-base@0.75.0:
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
+
+ember-cli-mdc-elevation@0.75.0:
+  version "0.75.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.75.0.tgz#a27adfa453d59dfeaa7d68ac540c2c225b715fcf"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-blueprint-helpers "^0.4.5"
+    ember-cli-mdc-sass "^0.75.0"
 
 ember-cli-mdc-icon@0.75.0:
   version "0.75.0"
