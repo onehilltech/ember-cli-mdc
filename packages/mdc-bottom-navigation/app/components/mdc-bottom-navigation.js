@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-bottom-navigation/components/mdc-bottom-navigation';

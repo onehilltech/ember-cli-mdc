@@ -44,6 +44,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-linear-progress/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-menu/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-datepicker-dialog/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
@@ -53,6 +54,8 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-base/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/bower_components" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/dist" />

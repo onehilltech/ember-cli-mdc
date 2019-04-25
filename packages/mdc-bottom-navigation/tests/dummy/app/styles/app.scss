@@ -1,0 +1,9 @@
+.mdc-bottom-navigation {
+  &__button {
+    color: rgba(#fff, .3)
+  }
+
+  &--active {
+    color: white;
+  }
+}
