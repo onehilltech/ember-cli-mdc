@@ -3,6 +3,11 @@ ember-cli-mdc-bottom-navigation
 
 Polyfill ember-cli addon for [`@material/bottom-navigation`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-bottom-navigation).
 
+> `ember-cli-mdc-bottom-navigation` package is meant to be a placeholder until the 
+> [bottom navigation component from material components web](https://github.com/material-components/material-components-web/tree/master/packages/mdc-bottom-navigation) 
+> is complete. It is implemented to serve our needs on existing projects, and does 
+> not implement all features of the [bottom navigation component](https://material.io/design/components/bottom-navigation.html).
+
 Installation
 ------------
 
