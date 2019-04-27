@@ -19,6 +19,14 @@ export default Mixin.create ({
   invalid: false,
   valid: not ('invalid'),
 
+  _iconClickListener: null,
+
+  init () {
+    this._super (...arguments);
+
+    this._iconClickListener = this.doClickIcon.bind (this);
+  },
+
   didInsertElement () {
     this._super (...arguments);
 
@@ -65,7 +73,7 @@ export default Mixin.create ({
 
   _createComponent () {
     this._textField = new mdc.textfield.MDCTextField (this.element);
-    this._textField.listen ('MDCTextField:icon', this.doClickIcon.bind (this));
+    this._textField.listen ('MDCTextField:icon', this._iconClickListener);
 
     this.didCreateComponent ();
 
@@ -80,7 +88,7 @@ export default Mixin.create ({
   _destroyComponent () {
     this.willDestroyComponent ();
 
-    this._textField.unlisten ('MDCTextField:icon', this.doClickIcon.bind (this));
+    this._textField.unlisten ('MDCTextField:icon', this._iconClickListener);
     this._textField.destroy ();
     this._textField = null;
   },

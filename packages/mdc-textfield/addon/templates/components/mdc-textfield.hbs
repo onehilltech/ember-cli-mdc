@@ -1,6 +1,6 @@
 {{#unless (has-block)}}
-  {{#if hasLeadingIcon}}
-    {{mdc-textfield-icon icon clickable=iconClickable}}
+  {{#if leadingIcon}}
+    {{mdc-textfield-icon leadingIcon.icon clickable=leadingIcon.clickable click=(if leadingIcon.clickable leadingIcon.click)}}
   {{/if}}
   {{mdc-textfield-input id=inputId
                         type=type
@@ -58,8 +58,8 @@
     {{mdc-line-ripple}}
   {{/if}}
 
-  {{#if hasTrailingIcon}}
-    {{mdc-textfield-icon icon clickable=iconClickable}}
+  {{#if trailingIcon}}
+    {{mdc-textfield-icon trailingIcon.icon clickable=trailingIcon.clickable click=(if trailingIcon.clickable trailingIcon.click)}}
   {{/if}}
 {{else}}
   {{yield}}

@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('6');
     this.route('11');
   });
+  this.route('icons');
 });
 
 export default Router;
