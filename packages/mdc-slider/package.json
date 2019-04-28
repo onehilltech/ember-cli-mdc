@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-slider",
-  "version": "0.76.0",
+  "version": "0.76.1",
   "description": "ember-cli addon for @material/slider.",
   "keywords": [
     "ember-addon",
