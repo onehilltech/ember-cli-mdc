@@ -16,7 +16,6 @@ export default Component.extend({
   classNames: ['mdc-slider'],
 
   classNameBindings: [
-    'disabled:mdc-slider--disabled',
     'discrete:mdc-slider--discrete',
     'displayMarkers:mdc-slider--display-markers'
   ],
@@ -84,6 +83,10 @@ export default Component.extend({
 
     if (step !== this._slider.step) {
       this._slider.step = step;
+    }
+
+    if (disabled !== this._slider.disabled) {
+      this._slider.disabled = disabled;
     }
 
     if (this.get ('requestLayout')) {
