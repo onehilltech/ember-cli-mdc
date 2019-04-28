@@ -67,7 +67,7 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let {min, max, value, step} = this.getProperties (['min', 'max', 'value', 'step']);
+    let {min, max, value, step, disabled} = this.getProperties (['min', 'max', 'value', 'step', 'disabled']);
 
     if (min !== this._slider.min) {
       this._slider.min = min;
