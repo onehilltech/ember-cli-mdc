@@ -15,7 +15,11 @@ export default Component.extend({
 
   classNames: ['mdc-slider'],
 
-  classNameBindings: ['discrete:mdc-slider--discrete', 'displayMarkers:mdc-slider--display-markers'],
+  classNameBindings: [
+    'disabled:mdc-slider--disabled',
+    'discrete:mdc-slider--discrete',
+    'displayMarkers:mdc-slider--display-markers'
+  ],
 
   attributeBindings: [
     'tabindex',
