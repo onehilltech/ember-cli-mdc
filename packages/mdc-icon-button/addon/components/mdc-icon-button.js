@@ -14,16 +14,12 @@ export default Component.extend (RippleMixin, {
   attributeBindings: ['disabled', 'value', 'type', 'form'],
 
   createRippleComponent: true,
+  unbounded: true,
 
   icon: computed ('params.[]', function () {
     return this.get ('params')[0];
   }),
 
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._ripple.unbounded = true;
-  }
 }).reopenClass ({
   positionalParams: 'params'
 });

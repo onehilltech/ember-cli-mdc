@@ -12,6 +12,8 @@ export default LinkComponent.extend (RippleMixin, {
 
   createRippleComponent: true,
 
+  unbounded: true,
+
   icon: computed ('params.[]', function () {
     return this.get ('params')[0];
   })
