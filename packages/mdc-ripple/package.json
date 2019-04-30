@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-ripple",
-  "version": "0.76.0",
+  "version": "0.76.3",
   "description": "ember-cli addon for @material/ripple",
   "keywords": [
     "ember-addon",

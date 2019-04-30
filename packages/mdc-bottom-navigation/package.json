@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-bottom-navigation",
-  "version": "0.76.0",
+  "version": "0.76.3",
   "description": "Polyfill for the mdc-bottom-navigation component",
   "keywords": [
     "ember-addon",
@@ -46,7 +46,7 @@
     "ember-cli-mdc-base": "^0.76.0",
     "ember-cli-mdc-elevation": "^0.76.0",
     "ember-cli-mdc-icon": "^0.76.0",
-    "ember-cli-mdc-ripple": "^0.76.0",
+    "ember-cli-mdc-ripple": "^0.76.3",
     "ember-cli-mdc-theme": "^0.76.0",
     "ember-cli-mdc-typography": "^0.76.0",
     "ember-cli-qunit": "^4.3.2",
