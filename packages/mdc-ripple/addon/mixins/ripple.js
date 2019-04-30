@@ -32,6 +32,7 @@ export default Mixin.create ({
 
     if (this.createRippleComponent) {
       this._ripple = new MDCRipple (this.element);
+      this._ripple.unbounded = this.get ('unbounded');
     }
   },
 
