@@ -37,7 +37,7 @@
   "devDependencies": {
     "@material/animation": "0.39.0",
     "@material/base": "0.39.0",
-    "@material/ripple": "0.39.3",
+    "@material/ripple": "2.0.0",
     "@material/theme": "0.39.1",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
