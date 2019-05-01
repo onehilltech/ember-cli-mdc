@@ -32,7 +32,7 @@
     "ember-cli-blueprint-helpers": "^0.4.5"
   },
   "devDependencies": {
-    "@material/dom": "0.41.0",
+    "@material/dom": "1.1.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
