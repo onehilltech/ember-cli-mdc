@@ -20,10 +20,6 @@
   dependencies:
     "@glimmer/di" "^0.2.0"
 
-"@material/animation@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/animation/-/animation-0.41.0.tgz#315b45b32e1aeebee8a4cf555b8ad52076d09ddd"
-
 "@material/animation@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@material/animation/-/animation-1.0.0.tgz#dfd8575c8b031203917dc838ac0e3c0fe0f6709b"
@@ -53,13 +49,6 @@
   resolved "https://registry.yarnpkg.com/@material/dom/-/dom-1.1.0.tgz#3bd3d1a3415b4181118fecb182d93beda56a6f8c"
   dependencies:
     tslib "^1.9.3"
-
-"@material/elevation@0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-0.43.0.tgz#2fe9b0cac8ccfe26acb739ff57d5deb4d4fdcecc"
-  dependencies:
-    "@material/animation" "^0.41.0"
-    "@material/theme" "^0.43.0"
 
 "@material/elevation@^1.1.0":
   version "1.1.0"
@@ -103,10 +92,6 @@
   resolved "https://registry.yarnpkg.com/@material/shape/-/shape-1.1.1.tgz#7a5368694bc3555e69ea547950904b46fa1024bf"
   dependencies:
     "@material/feature-targeting" "^0.44.1"
-
-"@material/theme@^0.43.0":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@material/theme/-/theme-0.43.0.tgz#6d9fa113c82e841817882172c152d60d2d203ca6"
 
 "@material/theme@^1.1.0":
   version "1.1.0"
@@ -2088,24 +2073,24 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-animation@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.77.0-alpha.0.tgz#c39ff96526f814ee9fd010f6720bfbcaf85e3b46"
+ember-cli-mdc-animation@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-animation/-/ember-cli-mdc-animation-0.77.1-alpha.0.tgz#bcfc5f73362da89bc2f13145224984b208e114b2"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-base@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.77.0-alpha.0.tgz#28f4eb3b7885f8ae30135c8bbcf7cb4169aab988"
+ember-cli-mdc-base@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-base/-/ember-cli-mdc-base-0.77.1-alpha.0.tgz#d3bc8e8809b99d83efde79a2049e4c5907ca99f0"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
 
-ember-cli-mdc-button@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.77.0-alpha.0.tgz#3a0d6c2d838f7b4f9fbb64555848f37fbad9d94e"
+ember-cli-mdc-button@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-button/-/ember-cli-mdc-button-0.77.1-alpha.0.tgz#43479c4dfb008ed68ef0eae06c07c89f2bf5acfc"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2113,17 +2098,17 @@ ember-cli-mdc-button@0.77.0-alpha.0:
     ember-cli-htmlbars-inline-precompile "^1.0.0"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-elevation@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.77.0-alpha.0.tgz#3aa5dbab53179c4c12d9007cf19824aa5dcd8928"
+ember-cli-mdc-elevation@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-elevation/-/ember-cli-mdc-elevation-0.77.1-alpha.0.tgz#50a462a2b58fcc06fdd8d2256e2a28d962f03353"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-icon@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-icon/-/ember-cli-mdc-icon-0.77.0-alpha.0.tgz#178b1b54a60e2f84846324b18bd93c374bdfeef5"
+ember-cli-mdc-icon@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-icon/-/ember-cli-mdc-icon-0.77.1-alpha.0.tgz#a1100c665d73bae1266c701045c3dfafb4f531f2"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2131,9 +2116,9 @@ ember-cli-mdc-icon@0.77.0-alpha.0:
     ember-cli-htmlbars-inline-precompile "^1.0.0"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-ripple@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.77.0-alpha.0.tgz#df67d28e31e7851a4c9fb1b20417f0f252f1d622"
+ember-cli-mdc-ripple@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-ripple/-/ember-cli-mdc-ripple-0.77.1-alpha.0.tgz#e9a5a21eeb7c8db3e80aa079d1e463a17a198898"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
@@ -2157,25 +2142,25 @@ ember-cli-mdc-sass@0.76.0, ember-cli-mdc-sass@^0.76.0:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
 
-ember-cli-mdc-shape@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-shape/-/ember-cli-mdc-shape-0.77.0-alpha.0.tgz#6352fde2fc789c52e9e6bbcfed91e8e7c9ac71b5"
+ember-cli-mdc-shape@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-shape/-/ember-cli-mdc-shape-0.77.1-alpha.0.tgz#5a4df0a11e427cf4e3a8a61e8bdfa103093aebd6"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-theme@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.77.0-alpha.0.tgz#13e8ee62f07acd730ae627a57334fd938d1dde2e"
+ember-cli-mdc-theme@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-theme/-/ember-cli-mdc-theme-0.77.1-alpha.0.tgz#d5261e748a87b2c7bc42ebe1840160945b129275"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
     ember-cli-mdc-sass "^0.76.0"
 
-ember-cli-mdc-typography@0.77.0-alpha.0:
-  version "0.77.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-typography/-/ember-cli-mdc-typography-0.77.0-alpha.0.tgz#7d7fe58b897e85163a7ded45cede0152853d8be9"
+ember-cli-mdc-typography@0.77.1-alpha.0:
+  version "0.77.1-alpha.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-typography/-/ember-cli-mdc-typography-0.77.1-alpha.0.tgz#108d235b30ec29ca7a5e49412382ad7fea4b9248"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-blueprint-helpers "^0.4.5"
