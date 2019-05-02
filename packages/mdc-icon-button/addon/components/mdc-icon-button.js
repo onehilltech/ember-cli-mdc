@@ -11,15 +11,20 @@ export default Component.extend (RippleMixin, {
   tagName: 'button',
 
   classNames: ['mdc-icon-button', 'material-icons'],
-  attributeBindings: ['disabled', 'value', 'type', 'form'],
+
+  attributeBindings: [
+    'disabled',
+    'value',
+    'type',
+    'form'
+  ],
 
   createRippleComponent: true,
   unbounded: true,
 
   icon: computed ('params.[]', function () {
     return this.get ('params')[0];
-  }),
-
+  })
 }).reopenClass ({
   positionalParams: 'params'
 });
