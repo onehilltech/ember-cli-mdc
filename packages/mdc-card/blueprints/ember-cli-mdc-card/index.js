@@ -4,14 +4,14 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/card', target: '0.43.0'}
+    {name: '@material/card', target: '2.0.0'}
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-elevation'},
-    {name: 'ember-cli-mdc-ripple'},
-    {name: 'ember-cli-mdc-rtl'},
-    {name: 'ember-cli-mdc-button'},
-    {name: 'ember-cli-mdc-icon-button'},
+    {name: 'ember-cli-mdc-elevation', target: '0.77.1-alpha.1'},
+    {name: 'ember-cli-mdc-ripple', target: '0.77.1-alpha.1'},
+    {name: 'ember-cli-mdc-rtl', target: '0.76.0'},
+    {name: 'ember-cli-mdc-button', target: '0.77.1-alpha.1'},
+    {name: 'ember-cli-mdc-icon-button', target: '0.77.1-alpha.1'},
   ]
 });

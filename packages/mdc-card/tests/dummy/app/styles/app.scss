@@ -1,3 +1,48 @@
-.my-card__media {
+.mdc-card {
+  margin-bottom: 16px;
 
+  height: 350px;
+  width: 350px;
+
+  &.standard {
+    height: unset;
+
+    .content {
+      padding: 16px;
+    }
+  }
+
+  &.actionable {
+
+    .mdc-card__primary-action {
+      height: 50%;
+
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &.media {
+    height: unset;
+
+    background: url(images/seascape.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    color: #fff;
+    padding: 16px;
+  }
+
+  &.full-bleed {
+    height: unset;
+
+    padding: 16px;
+
+
+  }
 }
