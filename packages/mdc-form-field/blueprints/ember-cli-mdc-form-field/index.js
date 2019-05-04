@@ -8,7 +8,8 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-selection-control'},
-    {name: 'ember-cli-mdc-rtl'}
+    {name: 'ember-cli-mdc-rtl'},
+    {name: 'ember-cli-mdc-ripple'},
+    {name: 'ember-cli-mdc-typography'}
   ]
 });
