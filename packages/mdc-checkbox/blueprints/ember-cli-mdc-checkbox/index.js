@@ -8,7 +8,6 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-selection-control'},
     {name: 'ember-cli-mdc-rtl'},
     {name: 'ember-cli-mdc-form-field'},
     {name: 'ember-cli-mdc-typography'},
