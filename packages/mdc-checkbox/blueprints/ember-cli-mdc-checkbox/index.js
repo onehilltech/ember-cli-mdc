@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/checkbox', target: '0.43.0'}
+    {name: '@material/checkbox', target: '2.0.0'}
   ],
 
   addons: [
