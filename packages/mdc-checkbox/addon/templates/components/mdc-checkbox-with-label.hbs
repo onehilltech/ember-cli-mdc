@@ -1,6 +1,7 @@
-{{mdc-checkbox initialized=(action (mut input))
+{{mdc-checkbox id=id
+               initialized=(action (mut input))
                checked=checked
                disabled=disabled
                required=required
                form=form}}
-<label>{{yield}}</label>
+<label for={{id}}>{{yield}}</label>
