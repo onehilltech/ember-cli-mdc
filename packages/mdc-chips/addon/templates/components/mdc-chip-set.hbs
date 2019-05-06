@@ -1,6 +1,6 @@
 {{#unless (has-block)}}
-  {{#each chips as |chip|}}
-    {{mdc-chip id=chip.id text=chip.text iconLeading=chip.iconLeading iconTrailing=chip.iconTrailing}}
+  {{#each chips as |chip index|}}
+    {{mdc-chip id=chip.id text=chip.text iconLeading=chip.iconLeading iconTrailing=chip.iconTrailing tabindex=index}}
   {{/each}}
 {{else}}
   {{yield}}
