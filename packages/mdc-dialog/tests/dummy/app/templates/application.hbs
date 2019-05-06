@@ -5,10 +5,8 @@
 <p>{{#mdc-button style="unelevated" click=(action (mut showDefaultDialog) "default")}}Show Default Dialog{{/mdc-button}}</p>
 
 {{#mdc-dialog title="Use Google's location service?"
-              accept=(action "accept")
-              acceptButtonText="Accept"
-              close=(action "close")
-              closeButtonText="Decline"
+              positiveButton=(hash action="accept" label="Accept" close=(action "accept") default=true)
+              negativeButton=(hash action="close" label="Decline")
               show=showBasicDialog}}
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
@@ -17,10 +15,8 @@
 {{#mdc-dialog title="Choose a Ringtone"
               scrollable=true
               show=showScrollableDialog
-              accept=(action "accept")
-              acceptButtonText="Accept"
-              close=(action "close")
-              closeButtonText="Decline"}}
+              positiveButton=(hash action="accept" label="Accept" close=(action "accept"))
+              negativeButton=(hash action="close" label="Decline")}}
   <ul class="mdc-list">
     <li class="mdc-list-item">None</li>
     <li class="mdc-list-item">Callisto</li>
@@ -37,11 +33,8 @@
 {{/mdc-dialog}}
 
 {{#mdc-dialog title="Use Google's location service?"
-              accept=(action "accept")
-              acceptButtonText="Accept"
-              default="accept"
-              close=(action "close")
-              closeButtonText="Decline"
+              positiveButton=(hash action="accept" label="Accept" default=true close=(action "accept"))
+              negativeButton=(hash action="close" label="Decline")
               show=showDefaultDialog}}
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.

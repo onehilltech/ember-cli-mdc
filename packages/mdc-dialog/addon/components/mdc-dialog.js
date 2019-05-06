@@ -2,7 +2,9 @@
 
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-dialog';
-import { or, equal } from '@ember/object/computed';
+import { or } from '@ember/object/computed';
+import { isPresent } from '@ember/utils';
+import { getWithDefault } from '@ember/object';
 
 const MDCDialog = mdc.dialog.MDCDialog;
 
@@ -23,15 +25,7 @@ export default Component.extend({
 
   scrollable: false,
 
-  /// Set the default button. It should be accept or close.
-  default: null,
-
-  acceptIsDefault: equal ('default', 'accept'),
-  closeIsDefault: equal ('default', 'close'),
-
-  hasAcceptButton: or ('accept', 'acceptButtonText'),
-  hasCloseButton: or ('close', 'closeButtonText'),
-  hasActions: or ('hasAcceptButton', 'hasCloseButton'),
+  hasActions: or ('positiveButton', 'negativeButton'),
 
   _dialog: null,
 
@@ -107,19 +101,20 @@ export default Component.extend({
   },
 
   willClose ({detail: {action}}) {
-    if (action === 'accept') {
-      this.getWithDefault ('accepting', noOp) ();
-    }
-    else if (action === 'close') {
-      this.getWithDefault ('closing', noOp) ();
+    let button = this._getButtonFromAction (action);
+
+    if (isPresent ((button))) {
+      getWithDefault (button, 'closing', noOp) ();
     }
   },
 
   didClose ({detail: {action}}) {
     this.set ('show', false);
 
-    if (action) {
-      this.getWithDefault (action, noOp) ();
+    let button = this._getButtonFromAction (action);
+
+    if (isPresent ((button))) {
+      getWithDefault (button, 'close', noOp) ();
     }
   },
 
@@ -137,6 +132,17 @@ export default Component.extend({
 
     if (content) {
       this.element.setAttribute ('aria-describedby', content.id);
+    }
+  },
+
+  _getButtonFromAction (action) {
+    const { positiveButton, negativeButton } = this.getProperties (['positiveButton', 'negativeButton']);
+
+    if (!!positiveButton && positiveButton.action === action) {
+      return positiveButton;
+    }
+    else if (!!negativeButton && negativeButton.action === action) {
+      return negativeButton;
     }
   }
 });

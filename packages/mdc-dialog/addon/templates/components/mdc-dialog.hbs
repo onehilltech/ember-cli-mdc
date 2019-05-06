@@ -10,16 +10,12 @@
 
     {{#if hasActions}}
       <footer class="mdc-dialog__actions">
-        {{#if hasCloseButton}}
-          {{#mdc-dialog-button type="button" action="close" default=closeIsDefault}}
-            {{closeButtonText}}
-          {{/mdc-dialog-button}}
+        {{#if negativeButton}}
+          {{mdc-dialog-button type="button" action=negativeButton.action default=negativeButton.default label=negativeButton.label}}
         {{/if}}
 
-        {{#if hasAcceptButton}}
-          {{#mdc-dialog-button type="button" action="accept" default=acceptIsDefault}}
-            {{acceptButtonText}}
-          {{/mdc-dialog-button}}
+        {{#if positiveButton}}
+          {{mdc-dialog-button type="button" action=positiveButton.action default=positiveButton.default label=positiveButton.label}}
         {{/if}}
       </footer>
     {{/if}}
