@@ -1,12 +1,10 @@
-<div class="mdc-dialog__container">
-  <div class="mdc-dialog__surface">
+{{#mdc-dialog-container}}
+  {{#mdc-dialog-surface}}
     {{#if title}}
-      <h2 class="mdc-dialog__title" id="{{elementId}}__title">{{title}}</h2>
+      {{#mdc-dialog-title id=(concat elementId "__title")}}{{title}}{{/mdc-dialog-title}}
     {{/if}}
 
-    <div class="mdc-dialog__content" id="{{elementId}}__content">
-      {{yield}}
-    </div>
+    {{#mdc-dialog-content id=(concat elementId "__content")}}{{yield}}{{/mdc-dialog-content}}
 
     {{#if hasActions}}
       <footer class="mdc-dialog__actions">
@@ -19,6 +17,6 @@
         {{/if}}
       </footer>
     {{/if}}
-  </div>
-</div>
-<div class="mdc-dialog__scrim"></div>
+  {{/mdc-dialog-surface}}
+{{/mdc-dialog-container}}
+{{mdc-dialog-scrim}}
