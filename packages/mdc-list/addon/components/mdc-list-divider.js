@@ -5,9 +5,14 @@ export default Component.extend({
   layout,
 
   classNames: ['mdc-list-divider'],
-  classNameBindings: ['padded:mdc-list-divider--padded','inset:mdc-list-divider--inset'],
+
+  classNameBindings: [
+    'padded:mdc-list-divider--padded',
+    'inset:mdc-list-divider--inset'
+  ],
 
   padded: false,
+
   inset: false,
 
   didInsertElement () {
