@@ -33,20 +33,22 @@ export default Component.extend({
 
   _dialog: undefined,
 
-  _openingEventListener: undefined,
-  _openedEventListener: undefined,
+  _willOpenEventListener: undefined,
+  _didOpenEventListener: undefined,
 
-  _closingEventListener: undefined,
-  _closedEventListener: undefined,
+  _willCloseEventListener: undefined,
+  _didCloseEventListener: undefined,
+
+  _contentElement: undefined,
 
   init () {
     this._super (...arguments);
 
-    this._openingEventListener = this.willOpen.bind (this);
-    this._openedEventListener = this.didOpen.bind (this);
+    this._willOpenEventListener = this.willOpen.bind (this);
+    this._didOpenEventListener = this.didOpen.bind (this);
 
-    this._closingEventListener = this.willClose.bind (this);
-    this._closedEventListener = this.didClose.bind (this);
+    this._willCloseEventListener = this.willClose.bind (this);
+    this._didCloseEventListener = this.didClose.bind (this);
   },
 
   didUpdateAttrs () {
@@ -75,10 +77,12 @@ export default Component.extend({
     this._setupAttributes ();
 
     this._dialog = new MDCDialog (this.element);
-    this._dialog.listen ('MDCDialog:opening', this._openingEventListener);
-    this._dialog.listen ('MDCDialog:opened', this._openedEventListener);
-    this._dialog.listen ('MDCDialog:closing', this._closingEventListener);
-    this._dialog.listen ('MDCDialog:closed', this._closedEventListener);
+    this._dialog.listen ('MDCDialog:opening', this._willOpenEventListener);
+    this._dialog.listen ('MDCDialog:opened', this._didOpenEventListener);
+    this._dialog.listen ('MDCDialog:closing', this._willCloseEventListener);
+    this._dialog.listen ('MDCDialog:closed', this._didCloseEventListener);
+
+    this._contentElement = this.element.querySelector ('.mdc-dialog__content');
 
     if (this.get ('show')) {
       this._dialog.open ();
@@ -88,10 +92,10 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._dialog.unlisten ('MDCDialog:opening', this._openingEventListener);
-    this._dialog.unlisten ('MDCDialog:opened', this._openedEventListener);
-    this._dialog.unlisten ('MDCDialog:closing', this._closingEventListener);
-    this._dialog.unlisten ('MDCDialog:closed', this._closedEventListener);
+    this._dialog.unlisten ('MDCDialog:opening', this._willOpenEventListener);
+    this._dialog.unlisten ('MDCDialog:opened', this._didOpenEventListener);
+    this._dialog.unlisten ('MDCDialog:closing', this._willCloseEventListener);
+    this._dialog.unlisten ('MDCDialog:closed', this._didCloseEventListener);
 
     this._dialog.destroy ();
   },
@@ -101,10 +105,24 @@ export default Component.extend({
   },
 
   didOpen () {
+    // Implement the accessibility recommendations. For more details, see
+    // https://github.com/material-components/material-components-web/tree/v2.0.0/packages/mdc-dialog#accessibility
+
+    if (isPresent (this._contentElement)) {
+      this._contentElement.setAttribute('aria-hidden', 'true');
+    }
+
     this.getWithDefault ('opened', noOp) ();
   },
 
   willClose ({detail: {action}}) {
+    // Implement the accessibility recommendations. For more details, see
+    // https://github.com/material-components/material-components-web/tree/v2.0.0/packages/mdc-dialog#accessibility
+
+    if (isPresent (this._contentElement)) {
+      this._contentElement.removeAttribute ('aria-hidden');
+    }
+
     let button = this._getButtonFromAction (action);
 
     if (isPresent ((button))) {
