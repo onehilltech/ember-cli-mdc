@@ -19,21 +19,25 @@ export default Component.extend({
 
   classNames: ['mdc-dialog'],
 
+  classNameBindings: ['stackButtons:mdc-dialog--stacked'],
+
   attributeBindings: ['role'],
 
   role: 'alertdialog',
 
   scrollable: false,
 
+  stackButtons: false,
+
   hasActions: or ('positiveButton', 'negativeButton'),
 
-  _dialog: null,
+  _dialog: undefined,
 
-  _openingEventListener: null,
-  _openedEventListener: null,
+  _openingEventListener: undefined,
+  _openedEventListener: undefined,
 
-  _closingEventListener: null,
-  _closedEventListener: null,
+  _closingEventListener: undefined,
+  _closedEventListener: undefined,
 
   init () {
     this._super (...arguments);
