@@ -28,6 +28,7 @@ Adds a dialog to the document.
 {{#mdc-dialog title="Use Google's location service?"
               show=[true|false]
               scrollable=[true|false]
+              stackButtons=[true|false]
               positiveButton=(hash action="accept" label="Accept" default=[true|false] close=(action "accept") closing=(action "accepting"))
               negativeButton=(hash action="close" label="Decline" default=[true|false] close=(action "close") closing=(action "closing"))}}
   Let Google help apps determine location. This means sending anonymous
@@ -40,5 +41,6 @@ Adds a dialog to the document.
 * `title` - Optional title for the dialog.
 * `show` - Show the dialog.
 * `scrollable` - Optional mark the dialog content as scrollable.
+* `stackButtons` - Stack the dialog buttons; default=`false`
 * `positiveButton` - Positive button definition. No positive button if left off the table.
 * `negativeButton` - Negative button definition. No negative button if left off the table.
