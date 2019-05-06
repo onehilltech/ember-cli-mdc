@@ -6,7 +6,7 @@
 <p>{{#mdc-button style="unelevated" click=(action (mut showStackedButtonDialog) "default")}}Show Stacked Button Dialog{{/mdc-button}}</p>
 
 {{#mdc-dialog title="Use Google's location service?"
-              positiveButton=(hash action="accept" label="Accept" close=(action "accept") default=true)
+              positiveButton=(hash action="accept" label="Accept" closed=(action "accept") default=true)
               negativeButton=(hash action="close" label="Decline")
               show=showBasicDialog}}
   Let Google help apps determine location. This means sending anonymous
@@ -16,7 +16,7 @@
 {{#mdc-dialog title="Choose a Ringtone"
               scrollable=true
               show=showScrollableDialog
-              positiveButton=(hash action="accept" label="Accept" close=(action "accept"))
+              positiveButton=(hash action="accept" label="Accept" closed=(action "accept"))
               negativeButton=(hash action="close" label="Decline")}}
   <ul class="mdc-list">
     <li class="mdc-list-item">None</li>
@@ -34,7 +34,7 @@
 {{/mdc-dialog}}
 
 {{#mdc-dialog title="Use Google's location service?"
-              positiveButton=(hash action="accept" label="Accept" default=true close=(action "accept"))
+              positiveButton=(hash action="accept" label="Accept" default=true closed=(action "accept"))
               negativeButton=(hash action="close" label="Decline")
               show=showDefaultDialog}}
   Let Google help apps determine location. This means sending anonymous
@@ -42,7 +42,7 @@
 {{/mdc-dialog}}
 
 {{#mdc-dialog title="Use Google's location service?"
-              positiveButton=(hash action="accept" label="Accept" default=true close=(action "accept"))
+              positiveButton=(hash action="accept" label="Accept" default=true closed=(action "accept"))
               negativeButton=(hash action="close" label="Decline")
               stackButtons=true
               show=showStackedButtonDialog}}

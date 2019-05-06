@@ -136,7 +136,7 @@ export default Component.extend({
     let button = this._getButtonFromAction (action);
 
     if (isPresent ((button))) {
-      getWithDefault (button, 'close', noOp) ();
+      getWithDefault (button, 'closed', noOp) ();
     }
   },
 

@@ -29,8 +29,8 @@ Adds a dialog to the document.
               show=[true|false]
               scrollable=[true|false]
               stackButtons=[true|false]
-              positiveButton=(hash action="accept" label="Accept" default=[true|false] close=(action "accept") closing=(action "accepting"))
-              negativeButton=(hash action="close" label="Decline" default=[true|false] close=(action "close") closing=(action "closing"))}}
+              positiveButton=(hash action="accept" label="Accept" default=[true|false] closed=(action "accept") closing=(action "accepting"))
+              negativeButton=(hash action="close" label="Decline" default=[true|false] closed=(action "close") closing=(action "closing"))}}
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
 {{/mdc-dialog}}
@@ -44,3 +44,11 @@ Adds a dialog to the document.
 * `stackButtons` - Stack the dialog buttons; default=`false`
 * `positiveButton` - Positive button definition. No positive button if left off the table.
 * `negativeButton` - Negative button definition. No negative button if left off the table.
+
+### Button attributes
+
+* `action` - Name of action
+* `label` - Dialog button label
+* `default` - Make the default action
+* `closed` - Action triggered when dialog has closed
+* `closing` - Action triggered when dialog is closing, but has not started the close sequence
