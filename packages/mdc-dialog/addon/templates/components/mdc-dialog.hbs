@@ -7,7 +7,7 @@
     {{#mdc-dialog-content id=(concat elementId "__content")}}{{yield}}{{/mdc-dialog-content}}
 
     {{#if hasActions}}
-      <footer class="mdc-dialog__actions">
+      {{#mdc-dialog-actions}}
         {{#if negativeButton}}
           {{mdc-dialog-button type="button" action=negativeButton.action default=negativeButton.default label=negativeButton.label}}
         {{/if}}
@@ -15,7 +15,7 @@
         {{#if positiveButton}}
           {{mdc-dialog-button type="button" action=positiveButton.action default=positiveButton.default label=positiveButton.label}}
         {{/if}}
-      </footer>
+      {{/mdc-dialog-actions}}
     {{/if}}
   {{/mdc-dialog-surface}}
 {{/mdc-dialog-container}}
