@@ -14,11 +14,13 @@ export default Component.extend({
   tagName: 'section',
 
   classNames: ['mdc-top-app-bar__section'],
+
   classNameBindings: ['positionClassName'],
 
   attributeBindings: ['role'],
 
   position: null,
+
   positionClassName: computed ('position', function () {
     const position = this.get ('position');
 
