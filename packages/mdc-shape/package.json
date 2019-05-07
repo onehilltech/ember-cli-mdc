@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-shape",
-  "version": "0.77.1-alpha.2",
+  "version": "0.77.1-alpha.3",
   "description": "ember-cli addons for @material/shape.",
   "keywords": [
     "ember-addon",

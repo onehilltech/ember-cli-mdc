@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-ripple",
-  "version": "0.77.1-alpha.2",
+  "version": "0.77.1-alpha.3",
   "description": "ember-cli addon for @material/ripple",
   "keywords": [
     "ember-addon",
@@ -45,9 +45,9 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^0.77.1-alpha.2",
-    "ember-cli-mdc-base": "^0.77.1-alpha.2",
-    "ember-cli-mdc-theme": "^0.77.1-alpha.2",
+    "ember-cli-mdc-animation": "^0.77.1-alpha.3",
+    "ember-cli-mdc-base": "^0.77.1-alpha.3",
+    "ember-cli-mdc-theme": "^0.77.1-alpha.3",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
