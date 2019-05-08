@@ -3,7 +3,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-slider';
 
-import { isPresent, isNone } from '@ember/utils';
 import { and } from '@ember/object/computed';
 
 const { MDCSlider } = mdc.slider;
