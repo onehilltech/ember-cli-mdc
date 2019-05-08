@@ -45,6 +45,7 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-menu/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-datepicker-dialog/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mdc-radio/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-animation/dist" />
@@ -141,6 +142,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-notched-outline/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-radio/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-ripple/node_modules" />
