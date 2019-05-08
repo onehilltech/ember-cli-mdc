@@ -1,18 +1,16 @@
-{{#unless (has-block)}}
-  {{#mdc-slider-track-container}}
-    {{mdc-slider-track}}
-    {{#if markers}}
-      {{mdc-slider-track-marker-container}}
-    {{/if}}
-  {{/mdc-slider-track-container}}
+{{#mdc-slider-track-container}}
+  {{mdc-slider-track}}
+  {{#if markers}}
+    {{mdc-slider-track-marker-container}}
+  {{/if}}
+{{/mdc-slider-track-container}}
 
-  {{#mdc-slider-thumb-container}}
-    {{#if discrete}}
-      {{#mdc-slider-pin}}
-        {{mdc-slider-pin-value-marker}}
-      {{/mdc-slider-pin}}
-    {{/if}}
-    {{mdc-slider-thumb}}
-    {{mdc-slider-focus-ring}}
-  {{/mdc-slider-thumb-container}}
-{{/unless}}
+{{#mdc-slider-thumb-container}}
+  {{#if discrete}}
+    {{#mdc-slider-pin}}
+      {{mdc-slider-pin-value-marker}}
+    {{/mdc-slider-pin}}
+  {{/if}}
+  {{mdc-slider-thumb}}
+  {{mdc-slider-focus-ring}}
+{{/mdc-slider-thumb-container}}
