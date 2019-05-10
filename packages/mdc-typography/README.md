@@ -75,7 +75,8 @@ let ENV = {
   
   'ember-cli-mdc': {
     typography: {
-      disabled: true
+      disabled: true,          // disable adding .mdc-typography class to root element
+      autoLinkFont: false      // disable adding <link> tag for Roboto font
     }
   }
 };
