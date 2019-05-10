@@ -1,5 +1,7 @@
 'use strict';
 
+const { get } = require ('lodash');
+
 module.exports = {
   name: 'ember-cli-mdc-typography',
 
@@ -29,10 +31,17 @@ module.exports = {
   contentFor (type, config) {
     this._super (...arguments);
 
+
     if (type === 'head-footer') {
       if (!process.env.CORBER) {
-        this.ui.writeLine ('Linking Roboto fonts with the application.');
-        return '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />';
+        const typography = get (config, 'ember-cli-mdc.typography', {
+          autoLinkFont: true
+        });
+
+        if (typography.autoLinkFont) {
+          this.ui.writeLine ('Linking Roboto fonts with the application.');
+          return '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />';
+        }
       }
     }
   },
