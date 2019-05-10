@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-animation",
-  "version": "0.76.0",
+  "version": "0.78.0",
   "description": "ember-cli addon for @material/animation",
   "keywords": [
     "ember-addon",
@@ -33,7 +33,7 @@
     "ember-cli-mdc-sass": "^0.76.0"
   },
   "devDependencies": {
-    "@material/animation": "0.39.0",
+    "@material/animation": "1.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",

@@ -150,7 +150,7 @@ export default Mixin.create ({
    *
    * @param corner
    */
-  setAnchorCorner (corner) {
+  setAnchorCorner (/*corner*/) {
 
   },
 
@@ -159,7 +159,7 @@ export default Mixin.create ({
    *
    * @param margin
    */
-  setAnchorMargin (margin) {
+  setAnchorMargin (/*margin*/) {
 
   },
 

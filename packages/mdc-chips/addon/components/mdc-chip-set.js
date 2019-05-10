@@ -25,8 +25,6 @@ MDCChipSet.prototype.findChip = function (chipId) {
   return index >= 0 ? this.chips[index] : null;
 };
 
-const CLASS_NAME_MDC_CHIP_TEXT = 'mdc-chip__text';
-const CLASS_NAME_MDC_CHIP = 'mdc-chip';
 const CLASS_NAME_MDC_CHIP_SET = 'mdc-chip-set';
 
 function noOp () {}

@@ -3,6 +3,8 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-floating-label';
 
+const { MDCFloatingLabel } = mdc.floatingLabel;
+
 export default Component.extend({
   layout,
 
@@ -14,17 +16,26 @@ export default Component.extend({
 
   for: null,
 
+  /// The floating label is embedded in a component that already creates a floating label.
+  embedded: false,
+
   _floatingLabel: null,
 
   didInsertElement () {
     this._super (...arguments);
 
-    this._floatingLabel = new mdc.floatingLabel.MDCFloatingLabel (this.element);
+    let embedded = this.get ('embedded');
+
+    if (!embedded) {
+      this._floatingLabel = new MDCFloatingLabel (this.element);
+    }
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
-    this._floatingLabel.destroy ();
+    if (!!this._floatingLabel) {
+      this._floatingLabel.destroy ();
+    }
   }
 });

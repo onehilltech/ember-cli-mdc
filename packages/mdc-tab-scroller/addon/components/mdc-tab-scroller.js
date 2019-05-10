@@ -13,6 +13,8 @@ const ALIGN_VALUES = [
   'end'
 ];
 
+const { MDCTabScroller } = mdc.tabScroller;
+
 export default Component.extend({
   layout,
 
@@ -22,6 +24,7 @@ export default Component.extend({
   _tabScroller: null,
 
   align: null,
+
   alignClassName: computed ('align', function () {
     const align = this.get ('align');
 
@@ -37,7 +40,7 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    this._tabScroller = new mdc.tabScroller.MDCTabScroller (this.element);
+    this._tabScroller = new MDCTabScroller (this.element);
   },
 
   willDestroyElement () {

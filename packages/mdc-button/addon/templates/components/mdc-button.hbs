@@ -1,9 +1,13 @@
-{{#if iconLeft}}
-  <i class="material-icons mdc-button__icon" aria-hidden="true">{{iconLeft}}</i>
-{{/if}}
+{{#unless (has-block)}}
+  {{#if leadingIcon}}
+    {{mdc-button-icon leadingIcon}}
+  {{/if}}
 
-{{yield}}
+  {{#mdc-button-label}}{{label}}{{/mdc-button-label}}
 
-{{#if iconRight}}
-  <i class="material-icons mdc-button__icon" aria-hidden="true">{{iconRight}}</i>
-{{/if}}
+  {{#if trailingIcon}}
+    {{mdc-button-icon trailingIcon}}
+  {{/if}}
+{{else}}
+  {{yield}}
+{{/unless}}

@@ -3,7 +3,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-slider';
 
-import { isPresent, isNone } from '@ember/utils';
 import { and } from '@ember/object/computed';
 
 const { MDCSlider } = mdc.slider;
@@ -69,11 +68,24 @@ export default Component.extend({
 
     let {min, max, value, step, disabled} = this.getProperties (['min', 'max', 'value', 'step', 'disabled']);
 
-    if (min !== this._slider.min) {
+    if (min > this._slider.max) {
+      // The new min value is greater than the current max value. We need to adjust
+      // the max value before setting the new min value. This will prevent the underlying
+      // component from throwing an exception.
+
+      this._slider.max = max;
       this._slider.min = min;
     }
+    else if (max < this._slider.min) {
+      // The new max value is less than the current min value. We need to adjust
+      // the min value before setting the new max value. This will prevent the underlying
+      // component from throwing an exception.
 
-    if (max !== this._slider.max) {
+      this._slider.min = min;
+      this._slider.max = max;
+    }
+    else {
+      this._slider.min = min;
       this._slider.max = max;
     }
 

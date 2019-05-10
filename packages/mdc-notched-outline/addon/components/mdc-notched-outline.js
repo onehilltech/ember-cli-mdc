@@ -3,22 +3,27 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-notched-outline';
 
-import { isPresent } from '@ember/utils';
-
 const { MDCNotchedOutline } = mdc.notchedOutline;
 
 export default Component.extend({
   layout,
 
   classNames: ['mdc-notched-outline'],
+
   classNameBindings: ['notched:mdc-notched-outline--notched'],
 
   _notchedOutline: null,
 
+  embedded: false,
+
   didInsertElement () {
     this._super (...arguments);
 
-    this._notchedOutline = new MDCNotchedOutline (this.element);
+    let embedded = this.get ('embedded');
+
+    if (!embedded) {
+      this._notchedOutline = new MDCNotchedOutline (this.element);
+    }
   },
 
   willDestroyElement () {

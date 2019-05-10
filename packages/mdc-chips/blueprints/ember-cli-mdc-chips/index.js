@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/chips', target: '0.43.0'}
+    {name: '@material/chips', target: '2.0.0'}
   ],
 
   addons: [
@@ -14,6 +14,6 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-typography'},
     {name: 'ember-cli-mdc-elevation'},
     {name: 'ember-cli-mdc-base'},
-    //{name: 'ember-cli-mdc-shape'},
+    {name: 'ember-cli-mdc-shape'},
   ]
 });

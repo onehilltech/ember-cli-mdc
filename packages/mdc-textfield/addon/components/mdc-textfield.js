@@ -6,7 +6,7 @@ import TextSupport from '../mixins/text-support';
 
 import { computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { equal, and, oneWay, or } from '@ember/object/computed';
+import { equal, oneWay, or } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default Component.extend (TextSupport, {
@@ -19,7 +19,8 @@ export default Component.extend (TextSupport, {
   classNameBindings: [
     'styleClassName',
     'leadingIcon:mdc-text-field--with-leading-icon',
-    'trailingIcon:mdc-text-field--with-trailing-icon'
+    'trailingIcon:mdc-text-field--with-trailing-icon',
+    'noLabel:mdc-text-field--no-label'
   ],
 
   // Set the style for the text field. The default style comes from the configurator.

@@ -22,9 +22,13 @@ export default Mixin.create (Ripple, Themed, {
   labelPosition: 'right',
 
   labelLeft: equal ('labelPosition', 'left'),
+
   extendedLeft: and ('label', 'labelLeft'),
 
   labelRight: equal ('labelPosition', 'right'),
-  extendedRight: and ('label', 'labelRight')
+
+  extendedRight: and ('label', 'labelRight'),
+
+  createRippleComponent: true
 });
 

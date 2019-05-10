@@ -3,6 +3,8 @@
 import Component from '@ember/component';
 import layout from '../templates/components/mdc-list';
 
+const { MDCList } = mdc.list;
+
 export default Component.extend({
   layout,
 
@@ -18,8 +20,11 @@ export default Component.extend({
   ],
 
   singleSelection: false,
+
   interactive: true,
+
   twoLine: false,
+
   avatarList: false,
 
   wrapFocus: false,
@@ -33,11 +38,17 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    this._list = new mdc.list.MDCList (this.element);
+    this._list = new MDCList (this.element);
 
     const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
     this._list.singleSelection = singleSelection;
     this._list.wrapFocus = wrapFocus;
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    this._list.destroy ();
   },
 
   didUpdateAttrs () {

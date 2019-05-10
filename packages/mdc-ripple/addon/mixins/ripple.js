@@ -12,6 +12,8 @@ export default Mixin.create ({
 
   classNameBindings: ['mdcRippleColorClassName'],
 
+  attributeBindings: ['unbounded:data-mdc-ripple-is-unbounded'],
+
   mdcRippleColorClassName: computed ('rippleColor', function () {
     const rippleColor = this.get ('rippleColor');
     return isPresent (rippleColor) ? `mdc-ripple-surface--${rippleColor}` : null;
@@ -32,7 +34,6 @@ export default Mixin.create ({
 
     if (this.createRippleComponent) {
       this._ripple = new MDCRipple (this.element);
-      this._ripple.unbounded = this.get ('unbounded');
     }
   },
 

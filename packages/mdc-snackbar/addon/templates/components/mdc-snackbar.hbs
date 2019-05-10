@@ -1,4 +1,4 @@
-<div class="mdc-snackbar__surface">
+{{#mdc-snackbar-surface}}
   {{#mdc-snackbar-label}}{{label}}{{/mdc-snackbar-label}}
   {{#if (has-block)}}
     {{yield}}
@@ -12,5 +12,4 @@
       {{/if}}
     {{/mdc-snackbar-actions}}
   {{/if}}
-
-</div>
+{{/mdc-snackbar-surface}}

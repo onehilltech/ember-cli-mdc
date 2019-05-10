@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-shape",
-  "version": "0.76.0",
+  "version": "0.78.0",
   "description": "ember-cli addons for @material/shape.",
   "keywords": [
     "ember-addon",
@@ -29,7 +29,7 @@
     "ember-cli-mdc-sass": "^0.76.0"
   },
   "devDependencies": {
-    "@material/shape": "^0.40.1",
+    "@material/shape": "1.1.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.18.2",

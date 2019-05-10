@@ -1,9 +1,7 @@
-{{#unless (has-block)}}
-  {{mdc-notched-outline-leading}}
+{{mdc-notched-outline-leading}}
+{{#unless noLabel}}
   {{#mdc-notched-outline-notch}}
     {{#mdc-floating-label for=for}}{{label}}{{/mdc-floating-label}}
   {{/mdc-notched-outline-notch}}
-  {{mdc-notched-outline-trailing}}
-{{else}}
-  {{yield}}
 {{/unless}}
+{{mdc-notched-outline-trailing}}

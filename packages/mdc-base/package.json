@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-base",
-  "version": "0.76.0",
+  "version": "0.78.0",
   "description": "ember-cli addon for @material/base",
   "keywords": [
     "ember-addon",
@@ -29,7 +29,7 @@
     "ember-cli-blueprint-helpers": "^0.4.5"
   },
   "devDependencies": {
-    "@material/base": "0.41.0",
+    "@material/base": "1.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",

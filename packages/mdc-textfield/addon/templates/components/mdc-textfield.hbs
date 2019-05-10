@@ -52,9 +52,11 @@
                         placeholder=(unless isFullWidth placeholder label)
                         label=(if isFullWidth label)}}
   {{#if hasNotchedOutline}}
-    {{mdc-notched-outline label=label for=inputId}}
+    {{mdc-notched-outline label=label for=inputId noLabel=noLabel}}
   {{else}}
-    {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
+    {{#unless noLabel}}
+      {{#mdc-floating-label for=inputId}}{{label}}{{/mdc-floating-label}}
+    {{/unless}}
     {{mdc-line-ripple}}
   {{/if}}
 
