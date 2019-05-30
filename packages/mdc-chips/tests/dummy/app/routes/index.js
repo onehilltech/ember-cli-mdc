@@ -30,7 +30,9 @@ export default Route.extend ({
         {id: 'fc-jake', text: 'Jake'}
       ]),
 
-      filtered: A ()
+      filtered: A (),
+
+      dynamicChips: A ()
     });
   }
 });
