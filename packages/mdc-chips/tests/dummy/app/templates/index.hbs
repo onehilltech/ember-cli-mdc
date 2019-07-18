@@ -6,7 +6,17 @@
   {{mdc-chip text="Chip content"}}
   {{mdc-chip text="Leading icon" iconLeading="event"}}
   {{mdc-chip text="Trailing icon" iconTrailing="cancel"}}
+
+  {{#each dynamicChips as |chip|}}
+    {{mdc-chip text=chip.text iconTrailing="cancel"}}
+  {{/each}}
 {{/mdc-chip-set}}
+
+<form onsubmit={{action "submit"}}>
+  {{input value=chipLabel}}
+
+  <button type="submit">Add Chip</button>
+</form>
 
 <h5>Inline</h5>
 

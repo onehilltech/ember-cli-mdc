@@ -97,5 +97,22 @@ export default Component.extend ({
 
   didRemoveChip (/* chipId */) {
 
+  },
+
+  /**
+   * Add a chip to the chip set.
+   *
+   * This method is primarily called by the chip component when a new chip is added to the
+   * DOM. If the chip set is being inserted as well, it will ignore this request because the
+   * the chip set will initialize the underlying component with the child chips. If the chip
+   * set already exists (i.e., a chip is dynamically added to the DOM), then the chip set will
+   * respond to the request and add the chip to the chip set.
+   *
+   * @param chip
+   */
+  addChip (chip) {
+    if (!!this._chipSet) {
+      this._chipSet.addChip (chip.element);
+    }
   }
 });
