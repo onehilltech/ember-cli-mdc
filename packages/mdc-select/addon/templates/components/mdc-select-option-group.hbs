@@ -1,0 +1,7 @@
+{{#each options as |option|}}
+  {{#if option.group}}
+    {{mdc-select-option-group label=option.text options=option.options}}
+  {{else}}
+    {{#mdc-select-option value=option.value selected=option.selected disabled=option.disabled}}{{option.text}}{{/mdc-select-option}}
+  {{/if}}
+{{/each}}

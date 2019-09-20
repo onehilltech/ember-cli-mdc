@@ -4,11 +4,19 @@ export default Route.extend({
   setupController (controller) {
     this._super (...arguments);
 
-    controller.set ('foodGroups', [
-      {value: '', disabled: true},
-      {value: 'grains', text: 'Bread, Cereal, Rice, and Pasta', selected: true},
-      {value: 'vegetables', text: 'Vegetables'},
-      {value: 'fruit', text: 'Fruit'}
-    ]);
+    controller.setProperties ({
+      foodGroups: [
+        {value: '', disabled: true},
+        {value: 'grains', text: 'Bread, Cereal, Rice, and Pasta'},
+        {value: 'vegetables', text: 'Vegetables'},
+        {value: 'fruit', text: 'Fruit'},
+        {
+          group: true, text: 'Other', options: [
+            {value: 'meat', text: 'Beef, Pork, and Chicken', selected: true},
+            {value: 'dairy', text: 'Milk, and Cheese'},
+          ]
+        }
+      ]
+    });
   }
 });

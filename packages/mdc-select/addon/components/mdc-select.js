@@ -65,14 +65,16 @@ export default Component.extend({
     else {
       // Check if any of the options is initially selected. This method of selecting
       // has lower precedence than the other methods for selecting the initial value.
-      selectedIndex = options.findIndex (option => option.selected);
 
-      if (selectedIndex !== -1) {
-        this._select.selectedIndex = selectedIndex;
-        value = options[selectedIndex].value;
+      function findSelection (result, option) {
+        return !!result ? result : (option.selected ? option.value : (option.group ? option.options.reduce (findSelection, result) : null));
+      }
 
-        // Update the properties to reflect the selected value.
-        this.setProperties ({selectedIndex, value});
+      const selection = options.reduce (findSelection, undefined);
+
+      if (isPresent (selection)) {
+        this._select.value = selection;
+        this.set ('value', selection);
       }
     }
 
