@@ -54,13 +54,26 @@ export default Component.extend({
     this._select = new mdc.select.MDCSelect (this.element);
     this._select.listen ('change', this._changeEventListener);
 
-    const { value, selectedIndex } = this.getProperties (['value', 'selectedIndex']);
+    let { value, selectedIndex, options } = this.getProperties (['value', 'selectedIndex', 'options']);
 
     if (isPresent (value)) {
       this._select.value = value;
     }
     else if (isPresent (selectedIndex)) {
       this._select.selectedIndex = selectedIndex;
+    }
+    else {
+      // Check if any of the options is initially selected. This method of selecting
+      // has lower precedence than the other methods for selecting the initial value.
+      selectedIndex = options.findIndex (option => option.selected);
+
+      if (selectedIndex !== -1) {
+        this._select.selectedIndex = selectedIndex;
+        value = options[selectedIndex].value;
+
+        // Update the properties to reflect the selected value.
+        this.setProperties ({selectedIndex, value});
+      }
     }
 
     // Save the value and selected index as our last state.
