@@ -41,6 +41,11 @@ body {
     &:last-of-type {
       padding-left: 0;
     }
+
+    &.cc-cvc {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 

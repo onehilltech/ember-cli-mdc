@@ -1,11 +1,11 @@
 {{#mdc-textfield style="outlined" class="mdc-text-field__multipart" }}
   {{mdc-textfield-icon "credit_card" clickable=false}}
 
-  {{mdc-textfield-input type="text" class="cc-number" placeholder="4242 4242 4242 4242" minlength=14 maxlength=20 size=22 keyup=(action "keyup")}}
+  {{mdc-textfield-input value=number type="text" class="cc-number" minlength=metadata.length maxlength=metadata.length size=22 keyUp=(action "formatCardNumber") required=true}}
 
-  {{mdc-textfield-input type="text" class="cc-cvc"  placeholder="CVC" minlength=3 maxlength=4 size=4}}
+  {{mdc-textfield-input value=cvc type="text" class="cc-cvc"  placeholder="CVC" minlength=metadata.cvc maxlength=metadata.cvc size=4 required=true}}
 
-  {{mdc-textfield-input type="text" class="cc-expiry" placeholder="MM / YY" minlength=7 maxlength=7 size=7}}
+  {{mdc-textfield-input type="text" class="cc-expiry" placeholder="MM / YY" minlength=5 maxlength=5 size=7 required=true}}
 
-  {{mdc-notched-outline label="Card number"}}
+  {{mdc-notched-outline label="Card details"}}
 {{/mdc-textfield}}
