@@ -12,6 +12,8 @@ export default Component.extend({
 
   classNames: ['mdc-floating-label'],
 
+  classNameBindings: ['floatAbove:mdc-floating-label--float-above', 'shake:mdc-floating-label--shake'],
+
   attributeBindings: ['for'],
 
   for: null,
