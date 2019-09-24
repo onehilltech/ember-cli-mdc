@@ -48,7 +48,7 @@ export default TextField.extend({
   _moveToNextInput ({ target }) {
     const {value, maxLength} = target;
 
-    if (this.autoMoveToNext && isPresent (maxLength) && value.length >= maxLength) {
+    if (this.autoMoveToNext && maxLength > 0 && value.length >= maxLength) {
       let nextInput = getNextSibling (this.element, 'input');
 
       if (isPresent (nextInput)) {
