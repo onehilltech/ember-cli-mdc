@@ -52,7 +52,12 @@ export default TextField.extend({
       let nextInput = getNextSibling (this.element, 'input');
 
       if (isPresent (nextInput)) {
+        // Move the focus to the next element.
         nextInput.focus ();
+      }
+      else {
+        // Take the focus of the current element.
+        this.element.blur ();
       }
     }
   }
