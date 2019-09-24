@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-floating-label",
-  "version": "0.79.0",
+  "version": "0.79.1",
   "description": "ember-cli addon for @material/floating-label",
   "keywords": [
     "ember-addon",
