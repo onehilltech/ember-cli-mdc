@@ -23,6 +23,10 @@ body {
   flex-direction: row;
   align-items: center;
 
+  .material-icons {
+    margin-left: 16px;
+  }
+
   .mdc-text-field__input {
     &.cc {
       &-number, &-expiry, &-zipcode {
@@ -30,6 +34,13 @@ body {
       }
     }
 
+    &:first-of-type {
+      padding-right: 0;
+    }
+
+    &:last-of-type {
+      padding-left: 0;
+    }
   }
 }
 

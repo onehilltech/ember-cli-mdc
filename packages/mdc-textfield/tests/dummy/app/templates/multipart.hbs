@@ -1,9 +1,11 @@
-{{#mdc-textfield style="outlined" class="mdc-text-field__multipart"}}
-  {{mdc-textfield-input type="text" class="cc-number" minlength=14 maxlength=20 size=22}}
+{{#mdc-textfield style="outlined" class="mdc-text-field__multipart" }}
+  {{mdc-textfield-icon "credit_card" clickable=false}}
 
-  {{mdc-textfield-input type="text" class="cc-expiry" minlength=7 maxlength=7 size=7 placeholder="MM / YY"}}
+  {{mdc-textfield-input type="text" class="cc-number" placeholder="4242 4242 4242 4242" minlength=14 maxlength=20 size=22 keyup=(action "keyup")}}
 
-  {{mdc-textfield-input type="text" class="cc-zipcode"  placeholder="12345" minlength=5 maxlength=5 size=5}}
+  {{mdc-textfield-input type="text" class="cc-cvc"  placeholder="CVC" minlength=3 maxlength=4 size=4}}
 
-  {{mdc-notched-outline}}
+  {{mdc-textfield-input type="text" class="cc-expiry" placeholder="MM / YY" minlength=7 maxlength=7 size=7}}
+
+  {{mdc-notched-outline label="Card number"}}
 {{/mdc-textfield}}
