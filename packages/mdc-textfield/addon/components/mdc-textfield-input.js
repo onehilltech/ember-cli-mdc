@@ -28,25 +28,25 @@ export default TextField.extend({
   init () {
     this._super (...arguments);
 
-    this._moveToNextInputListener = this._moveToNextInput.bind (this);
+    this._onKeyUpListener = this._onKeyUp.bind (this);
   },
 
   didInsertElement () {
     this._super (...arguments);
 
-    this.element.addEventListener ('keyup', this._moveToNextInputListener);
+    this.element.addEventListener ('keyup', this._onKeyUpListener);
   },
 
   willDestroyElement () {
     this._super (...arguments);
 
-    this.element.removeEventListener ('keyup', this._moveToNextInputListener);
+    this.element.removeEventListener ('keyup', this._onKeyUpListener);
   },
 
-  _moveToNextInputListener: null,
+  _onKeyUpListener: null,
 
-  _moveToNextInput ({ target }) {
-    const {value, maxLength} = target;
+  _onKeyUp ({ target }) {
+    const {value, maxLength = this.maxlength} = target;
 
     if (this.autoMoveToNext && maxLength > 0 && value.length >= maxLength) {
       let nextInput = getNextSibling (this.element, 'input');
@@ -60,5 +60,7 @@ export default TextField.extend({
         this.element.blur ();
       }
     }
+
+    // The default HTML input ignores maxlength with type is number.
   }
 });

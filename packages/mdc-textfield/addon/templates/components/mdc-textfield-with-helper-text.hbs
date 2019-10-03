@@ -48,7 +48,14 @@
                   key-press=key-press
                   key-up=key-up}}
   {{#mdc-textfield-helper-text persistent=persistMessage validation=validation}}
-    {{message}}
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{else if validationMessage}}
+      {{validationMessage}}
+    {{else if helperText}}
+      {{helperText}}
+    {{else}}
+    {{/if}}
   {{/mdc-textfield-helper-text}}
 {{else}}
   {{yield}}
