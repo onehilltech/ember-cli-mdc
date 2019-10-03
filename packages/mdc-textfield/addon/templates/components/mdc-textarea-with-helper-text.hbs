@@ -26,14 +26,7 @@
                  spellcheck=spellcheck
                  required=required}}
   {{#mdc-textfield-helper-text persistent=persistMessage validation=validation}}
-    {{#if errorMessage}}
-      {{errorMessage}}
-    {{else if validationMessage}}
-      {{validationMessage}}
-    {{else if helperText}}
-      {{helperText}}
-    {{else}}
-    {{/if}}
+    {{message}}
   {{/mdc-textfield-helper-text}}
 {{else}}
   {{yield}}
