@@ -89,5 +89,5 @@ export default Mixin.create ({
 
   persistMessage: or ('{helperTextPersistent,errorMessage,validationMessage}'),
   validation: or ('{errorMessage,validationMessage}'),
-  message: or ('{errorMessage,validationMessage,helperText}')
+  message: or ('{validationMessage,errorMessage,helperText}')
 });
