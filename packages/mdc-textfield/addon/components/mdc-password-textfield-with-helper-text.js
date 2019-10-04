@@ -9,6 +9,8 @@ import { empty, not, readOnly, or } from '@ember/object/computed';
 
 import { A } from '@ember/array';
 
+function noOp () {}
+
 export default Component.extend (HelperTextSupport, {
   layout,
 
@@ -26,7 +28,12 @@ export default Component.extend (HelperTextSupport, {
   // Get the first requirement that fails the password.
   failedPasswordRequirements: computed ('value', 'passwordRequirements.[]', function () {
     const { value, passwordRequirements: requirements } = this.getProperties (['value','passwordRequirements']);
-    return isEmpty (value) || isEmpty (requirements) ? null : A (requirements.filter (req => value.match (req.pattern) === null));
+    const invalid = isEmpty (value) || isEmpty (requirements) ? false : A (requirements.filter (req => value.match (req.pattern) === null));
+
+    // Send a notification to the parent about the password's validity.
+    this.getWithDefault ('validity') (!invalid);
+
+    return invalid;
   }),
 
   meetsPasswordRequirements: empty ('failedPasswordRequirements'),
