@@ -7,6 +7,8 @@ import { computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
 import { empty, not, readOnly, or } from '@ember/object/computed';
 
+import { A } from '@ember/array';
+
 export default Component.extend (HelperTextSupport, {
   layout,
 
