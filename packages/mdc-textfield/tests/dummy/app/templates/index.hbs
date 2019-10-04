@@ -284,10 +284,13 @@
 <h2 class="mdc-typography--headline5">Password Components</h2>
 
 <div class="text-field-row">
-  <div class="text-field-container">
+  <div class="text-field-container" style="margin-bottom: 16px">
     {{mdc-password-textfield style="outlined"
                              label="Password"
-                             required=true}}
+                             required=true
+                             password=(hash requirements=requirements validity=(action (mut validity1)))}}
+
+    <div style="margin-top: 8px">Password validity: {{validity1.value}}</div>
 
 
   </div>
@@ -295,8 +298,10 @@
   <div class="text-field-container">
     {{mdc-password-textfield-with-helper-text style="outlined"
                                               label="Password"
-                                              required=true}}
+                                              required=true
+                                              password=(hash requirements=requirements validity=(action (mut validity2)))}}
 
 
+    <div style="margin-top: 8px">Password validity: {{validity2.value}}</div>
   </div>
 </div>
