@@ -84,7 +84,7 @@ export default Mixin.create ({
       }
     }
 
-    this.setProperties ({ validationMessage, errorMessage: null });
+    this.setProperties ({ validationMessage });
   },
 
   persistMessage: or ('{helperTextPersistent,errorMessage,validationMessage}'),
