@@ -288,10 +288,10 @@
     {{mdc-password-textfield style="outlined"
                              label="Password"
                              required=true
-                             password=(hash requirements=requirements validity=(action (mut validity1)))}}
+                             requirements=requirements
+                             valid=valid1}}
 
-    <div style="margin-top: 8px">Password validity: {{validity1.value}}</div>
-
+    <div style="margin-top: 8px">Password validity: {{valid1}}</div>
 
   </div>
 
@@ -299,9 +299,9 @@
     {{mdc-password-textfield-with-helper-text style="outlined"
                                               label="Password"
                                               required=true
-                                              password=(hash requirements=requirements validity=(action (mut validity2)))}}
+                                              requirements=requirements
+                                              valid=valid2}}
 
-
-    <div style="margin-top: 8px">Password validity: {{validity2.value}}</div>
+    <div style="margin-top: 8px">Password validity: {{valid2}}</div>
   </div>
 </div>

@@ -23,11 +23,12 @@ export default Component.extend (HelperTextSupport, {
   errorMessage: or ('passwordErrorMessage', 'firstFailedErrorMessage'),
 
   actions: {
-    validity (value) {
+    _checked (value) {
+      // Set the reasons the password failed.
       this.set ('failed', value.reasons);
 
       // Bubble the event to the parent.
-      this.getWithDefault ('password.validity', noOp) (value);
+      this.getWithDefault ('checked', noOp) (value);
     }
   }
 });
