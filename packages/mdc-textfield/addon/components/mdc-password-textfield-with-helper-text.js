@@ -31,7 +31,7 @@ export default Component.extend (HelperTextSupport, {
     const invalid = isEmpty (value) || isEmpty (requirements) ? false : A (requirements.filter (req => value.match (req.pattern) === null));
 
     // Send a notification to the parent about the password's validity.
-    this.getWithDefault ('validity') (!invalid);
+    this.getWithDefault ('validity') (invalid.length === 0);
 
     return invalid;
   }),
