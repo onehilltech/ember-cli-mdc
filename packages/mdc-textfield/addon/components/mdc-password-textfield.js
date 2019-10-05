@@ -45,6 +45,9 @@ export default Component.extend({
     if (isPresent (this._input.value)) {
       this._checkPasswordValidity ();
     }
+    else {
+      this._lastValue = this._input.value;
+    }
   },
 
   willDestroyElement () {
