@@ -3,6 +3,7 @@ import layout from '../templates/components/mdc-password-textfield';
 
 import { A } from '@ember/array';
 import { isEmpty, isPresent } from '@ember/utils';
+import { set } from '@ember/object';
 
 function noOp () {}
 
@@ -71,7 +72,15 @@ export default Component.extend({
 
       // Get the reasons the password is not valid.
       const {requirements = [], checked = noOp} = this.getProperties (['requirements', 'checked']);
-      const reasons = isEmpty (requirements) ? null : A (requirements.filter (req => value.match (req.pattern) === null));
+
+      const reasons = isEmpty (requirements) ? null : A (requirements.map (req => {
+        // Set the value on the object. We are using the 'set' method just in case the requirements is
+        // an EmberObject. This will allow the requirement to update it state.
+        set (req, 'passed', req.pattern.test (value));
+
+        // Return the requirement.
+        return req;
+      }).filter (req => !req.passed));
 
       // Send a notification about the passwords validity, and then update the valid state.
       const valid = isEmpty (reasons);
