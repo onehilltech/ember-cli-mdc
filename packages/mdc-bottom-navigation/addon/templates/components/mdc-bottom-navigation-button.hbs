@@ -1,4 +1,8 @@
-{{mdc-icon icon}}
-{{#if label}}
-  {{mdc-bottom-navigation-button-label label=label}}
+{{#if (has-block)}}
+  {{yield}}
+{{else}}
+  {{mdc-icon icon}}
+  {{#if label}}
+    {{mdc-bottom-navigation-button-label label=label}}
+  {{/if}}
 {{/if}}
