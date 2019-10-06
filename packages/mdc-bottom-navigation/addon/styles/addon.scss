@@ -12,7 +12,7 @@
 
   width: 100%;
 
-  height: $bottom-navigation-height-mobile;
+  height: $bottom-navigation-mobile-height;
 
   display: flex;
   flex-direction: row;
@@ -37,13 +37,21 @@
     min-width: 80px;
     max-width: 168px;
 
-    padding: 8px 4px;
+    // In landscape mode and on tablets/desktops, we set the width of the buttons to
+    // the max width of a button.
 
-    max-height: $bottom-navigation-height-mobile;
-    height: $bottom-navigation-height-mobile;
+    @media (orientation: landscape), (min-width: 480px)  {
+      width: $bottom-navigation-mobile-portrait-max-width;
+    }
+
+    padding: $bottom-navigation-mobile-padding-top $bottom-navigation-mobile-padding-right $bottom-navigation-mobile-padding-bottom $bottom-navigation-mobile-padding-left;
+
+    max-height: $bottom-navigation-mobile-height;
+    height: $bottom-navigation-mobile-height;
 
     &--with-label {
-      padding: 8px 4px;
+      padding-top: $bottom-navigation-mobile-with-label-padding-top;
+      padding-bottom: $bottom-navigation-mobile-with-label-padding-bottom;
     }
 
     &--horizontal {
