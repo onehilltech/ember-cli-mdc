@@ -34,8 +34,8 @@
 
     align-items: center;
 
-    min-width: 80px;
-    max-width: 168px;
+    min-width: calc(80px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
+    max-width: calc(168px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
 
     // In landscape mode and on tablets/desktops, we set the width of the buttons to
     // the max width of a button.
