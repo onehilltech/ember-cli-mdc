@@ -28,9 +28,9 @@ export default Service.extend ({
 
     if (window) {
       window.addEventListener ('resize', this._resizeEventListener);
-    }
 
-    this.set ('width', window.outerWidth);
+      this.set ('width', window.outerWidth);
+    }
   },
 
   destroy () {
