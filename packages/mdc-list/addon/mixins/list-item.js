@@ -10,7 +10,7 @@ export default Mixin.create (RippleMixin, {
     'disabled:mdc-list-item--disabled'
   ],
   
-  attributeBindings: ['role'],
+  attributeBindings: ['role', 'title'],
 
   selected: false,
 
