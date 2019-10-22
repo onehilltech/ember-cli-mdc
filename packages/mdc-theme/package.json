@@ -33,7 +33,7 @@
     "ember-cli-mdc-sass": "^0.80.0"
   },
   "devDependencies": {
-    "@material/theme": "1.1.0",
+    "@material/theme": "3.1.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
