@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/notched-outline', target: '1.1.1'}
+    {name: '@material/notched-outline', target: '3.2.0'}
   ],
 
   addons: [

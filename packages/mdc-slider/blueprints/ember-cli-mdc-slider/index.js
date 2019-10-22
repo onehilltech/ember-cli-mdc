@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/slider', target: '1.1.0'}
+    {name: '@material/slider', target: '3.2.0'}
   ],
 
   addons: [

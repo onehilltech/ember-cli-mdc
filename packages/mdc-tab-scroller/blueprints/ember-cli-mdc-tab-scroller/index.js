@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/tab-scroller', target: '2.0.0'}
+    {name: '@material/tab-scroller', target: '3.2.0'}
   ],
 
   addons: [

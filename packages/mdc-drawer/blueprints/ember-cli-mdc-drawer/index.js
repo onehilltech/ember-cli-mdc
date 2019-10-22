@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/drawer', target: '2.0.0'}
+    {name: '@material/drawer', target: '3.2.0'}
   ],
 
   addons: [
