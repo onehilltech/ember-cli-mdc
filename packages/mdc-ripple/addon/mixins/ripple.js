@@ -40,7 +40,7 @@ export default Mixin.create ({
   willDestroyElement () {
     this._super (...arguments);
 
-    if (!!this._ripple) {
+    if (isPresent (this._ripple)) {
       this._ripple.destroy ();
     }
   }
