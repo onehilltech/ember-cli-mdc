@@ -165,6 +165,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-selection-control/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-shape/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-slider/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-slider/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-snackbar/config" />
