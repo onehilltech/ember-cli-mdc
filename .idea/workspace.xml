@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/addon/mixins/ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/addon/mixins/ripple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +28,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-ripple]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-linear-progress]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-linear-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-linear-progress">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-ripple">
@@ -53,6 +59,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
     </list>
