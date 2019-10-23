@@ -4,6 +4,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-floating-label';
 
 const { MDCFloatingLabel } = mdc.floatingLabel;
+import { isPresent } from '@ember/utils';
 
 export default Component.extend({
   layout,
@@ -36,7 +37,7 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    if (!!this._floatingLabel) {
+    if (isPresent (this._floatingLabel)) {
       this._floatingLabel.destroy ();
     }
   }
