@@ -13,7 +13,7 @@ MDCChipSet.prototype.select = function (chipId) {
 };
 
 MDCChipSet.prototype.deselect = function (chipId) {
-  return this.foundation_.deselect (chipId);
+  return this.foundation_.deselect_ (chipId);
 };
 
 MDCChipSet.prototype.isSelected = function (chipId) {
