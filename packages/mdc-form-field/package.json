@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-form-field",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "ember-cli addon for @material/form-field.",
   "keywords": [
     "ember-addon",
@@ -46,7 +46,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "1.0.0-alpha.0",
     "ember-cli-mdc-base": "1.0.0-alpha.0",
-    "ember-cli-mdc-ripple": "1.0.0-alpha.0",
+    "ember-cli-mdc-ripple": "^1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "1.0.0-alpha.0",
     "ember-cli-mdc-theme": "1.0.0-alpha.0",
     "ember-cli-mdc-typography": "1.0.0-alpha.0",

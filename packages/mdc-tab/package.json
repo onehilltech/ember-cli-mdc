@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "ember-cli addon for @material/tab.",
   "keywords": [
     "ember-addon",
@@ -49,7 +49,7 @@
     "ember-cli-mdc-animation": "^1.0.0-alpha.0",
     "ember-cli-mdc-base": "^1.0.0-alpha.0",
     "ember-cli-mdc-icon": "^1.0.0-alpha.0",
-    "ember-cli-mdc-ripple": "^1.0.0-alpha.0",
+    "ember-cli-mdc-ripple": "^1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "^1.0.0-alpha.0",
     "ember-cli-mdc-tab-indicator": "^1.0.0-alpha.0",
     "ember-cli-mdc-theme": "^1.0.0-alpha.0",
