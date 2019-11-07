@@ -1,0 +1,62 @@
+<h2>Data Tables</h2>
+
+<h3>Basic usage</h3>
+
+{{#mdc-data-table label="Dessert calories"}}
+  {{#mdc-data-table-header-row}}
+    {{#mdc-data-table-header-cell}}Dessert{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell numeric=true}}Carbs (g){{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell numeric=true}}Protein (g){{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Comments{{/mdc-data-table-header-cell}}
+  {{/mdc-data-table-header-row}}
+
+  {{#mdc-data-table-content}}
+    {{#mdc-data-table-row}}
+      {{#mdc-data-table-cell}}Frozen yogurt{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}24{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}4.0{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Super tasty{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
+
+    {{#mdc-data-table-row}}
+      {{#mdc-data-table-cell}}Ice cream sandwich{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}37{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}4.33333333333{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}I like ice cream more{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
+
+    {{#mdc-data-table-row}}
+      {{#mdc-data-table-cell}}Eclair{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}24{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}6.0{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}New filing flavor{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
+  {{/mdc-data-table-content}}
+{{/mdc-data-table}}
+
+<h3>Data table with row selection</h3>
+
+{{#mdc-data-table label="Dessert calories"}}
+  {{#mdc-data-table-header-row}}
+    {{mdc-data-table-header-cell checkbox=true}}
+    {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
+  {{/mdc-data-table-header-row}}
+
+  {{#mdc-data-table-content}}
+    {{#mdc-data-table-row rowId="u0"}}
+      {{mdc-data-table-header-cell checkbox=true}}
+      {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
+      {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
+      {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
+      {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
+      {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
+      {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
+    {{/mdc-data-table-row}}
+
+  {{/mdc-data-table-content}}
+{{/mdc-data-table}}
