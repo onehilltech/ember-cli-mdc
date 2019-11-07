@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-bottom-navigation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-data-table" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-menu" vcs="Git" />
   </component>
 </project>

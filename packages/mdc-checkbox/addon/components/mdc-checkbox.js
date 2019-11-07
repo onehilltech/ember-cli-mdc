@@ -14,10 +14,22 @@ export default Component.extend({
 
   _checkbox: null,
 
+  embedded: false,
+
   didInsertElement () {
     this._super (...arguments);
 
-    this._checkbox = new mdc.checkbox.MDCCheckbox (this.element);
-    this.getWithDefault ('initialized', noOp) (this._checkbox);
+    if (!this.get ('embedded')) {
+      this._checkbox = new mdc.checkbox.MDCCheckbox (this.element);
+      this.getWithDefault ('initialized', noOp) (this._checkbox);
+    }
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    if (this._checkbox) {
+      this._checkbox.destroy ();
+    }
   }
 });
