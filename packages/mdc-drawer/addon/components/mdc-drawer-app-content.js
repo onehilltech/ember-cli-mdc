@@ -7,6 +7,8 @@ import { isPresent } from '@ember/utils';
 const MDC_DRAWER_STYLE_REGEXP = /mdc-drawer--(.*)/;
 
 export default Component.extend({
+  classNames: ['mdc-drawer__app-content'],
+
   layout,
 
   classNameBindings: ['isDismissible:mdc-drawer-app-content'],

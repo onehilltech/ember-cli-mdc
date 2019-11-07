@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/addon/components/mdc-drawer-app-content.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/addon/components/mdc-drawer-app-content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/yarn.lock" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +19,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1SamfNXR7954uB9nCo4laLZZEql" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -29,8 +37,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-floating-label]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-drawer]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-drawer]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-drawer">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
@@ -69,6 +80,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-list]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
     </list>
@@ -77,14 +89,28 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+      <created>1571810182447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571810182447</updated>
+      <workItem from="1571810185352" duration="585000" />
+      <workItem from="1573091973871" duration="1952000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
