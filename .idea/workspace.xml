@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-header-cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-header-cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-row.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table-row.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/components/mdc-data-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/templates/components/mdc-data-table-cell.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/templates/components/mdc-data-table-cell.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/addon/templates/components/mdc-data-table-header-cell.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/addon/templates/components/mdc-data-table-header-cell.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-data-table/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-data-table/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/packages/mdc-data-table" />
   </component>
   <component name="ProjectId" id="1SamfNXR7954uB9nCo4laLZZEql" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -112,7 +102,7 @@
       <updated>1571810182447</updated>
       <workItem from="1571810185352" duration="585000" />
       <workItem from="1573091973871" duration="1952000" />
-      <workItem from="1573150765096" duration="6191000" />
+      <workItem from="1573150765096" duration="8431000" />
     </task>
     <servers />
   </component>

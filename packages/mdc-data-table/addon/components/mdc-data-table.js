@@ -22,6 +22,5 @@ export default Component.extend({
     this._super (...arguments);
 
     this._dataTable.destroy ();
-  },
-
+  }
 });

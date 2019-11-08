@@ -48,15 +48,44 @@
   {{/mdc-data-table-header-row}}
 
   {{#mdc-data-table-content}}
-    {{#mdc-data-table-row rowId="u0"}}
-      {{mdc-data-table-header-cell checkbox=true}}
-      {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
-      {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
-      {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
-      {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
-      {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
-      {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-row rowId="u0" as |r|}}
+      {{mdc-data-table-cell checkbox=true}}
+      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell id=r.rowId}}Arcus watch slowdown{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Medium{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Triaged{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Allison Brie{{/mdc-data-table-cell}}
     {{/mdc-data-table-row}}
 
+    {{#mdc-data-table-row rowId="u1" as |r|}}
+      {{mdc-data-table-cell checkbox=true}}
+      {{#mdc-data-table-cell}}Offline{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell id=r.rowId}}monarch: prod shared ares-managed-features-provider-heavy{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Huge{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Triaged{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Brie Larson{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
+
+    {{#mdc-data-table-row rowId="u2" as |r|}}
+      {{mdc-data-table-cell checkbox=true}}
+      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell id=r.rowId}}monarch: prod shared ares-managed-features-provider-heavy{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Minor{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Not triaged{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Jeremy Lake{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
+
+    {{#mdc-data-table-row rowId="u3" as |r|}}
+      {{mdc-data-table-cell checkbox=true}}
+      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell id=r.rowId}}Arcus watch slowdown{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Negligible{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Not triaged{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
+      {{#mdc-data-table-cell}}Angelina Cheng{{/mdc-data-table-cell}}
+    {{/mdc-data-table-row}}
   {{/mdc-data-table-content}}
 {{/mdc-data-table}}
