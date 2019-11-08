@@ -21,6 +21,9 @@ export default Component.extend({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._dataTable.destroy ();
+    // Temp disable because there is a bug in the raw data table if the data table does
+    // not contain a checkbox.
+
+    //this._dataTable.destroy ();
   }
 });
