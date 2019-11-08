@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-snackbar",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.4",
   "description": "ember-cli addon for @material/snackbar",
   "keywords": [
     "ember-addon",
@@ -48,7 +48,7 @@
     "ember-cli-mdc-button": "0.77.1-alpha.0",
     "ember-cli-mdc-elevation": "^1.0.0-alpha.1",
     "ember-cli-mdc-icon": "^1.0.0-alpha.0",
-    "ember-cli-mdc-icon-button": "^1.0.0-alpha.1",
+    "ember-cli-mdc-icon-button": "^1.0.0-alpha.4",
     "ember-cli-mdc-ripple": "^1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "^1.0.0-alpha.0",
     "ember-cli-mdc-shape": "^1.0.0-alpha.0",
