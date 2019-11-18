@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-datepicker-dialog",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Polyfill component for a date picker dialog.",
   "keywords": [
     "ember-addon",
