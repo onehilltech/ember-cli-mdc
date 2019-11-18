@@ -1,0 +1,33 @@
+<div class="mdc-datepicker-dialog__yearpicker__header">
+  {{mdc-icon-button "keyboard_arrow_left" click=(action "prev")}}
+  {{mdc-icon-button "keyboard_arrow_right" click=(action "next")}}
+
+  <div style="flex-grow: 1"></div>
+  {{mdc-icon-button "close" click=(action (mut show) false)}}
+</div>
+
+<div class="mdc-datepicker-dialog__yearpicker__content">
+  <div class="mdc-datepicker-dialog__yearpicker__row">
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 0)}}>{{get years 0}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 1)}}>{{get years 1}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 2)}}>{{get years 2}}</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__yearpicker__row">
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 3)}}>{{get years 3}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 4)}}>{{get years 4}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 5)}}>{{get years 5}}</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__yearpicker__row">
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 6)}}>{{get years 6}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 7)}}>{{get years 7}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 8)}}>{{get years 8}}</span></div>
+  </div>
+
+  <div class="mdc-datepicker-dialog__yearpicker__row">
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 9)}}>{{get years 9}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 10)}}>{{get years 10}}</span></div>
+    <div class="mdc-datepicker-dialog__yearpicker__year"><span class="mdc-datepicker-dialog__yearpicker__year-label" {{action "select" (get years 11)}}>{{get years 11}}</span></div>
+  </div>
+</div>

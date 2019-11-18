@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/components/mdc-datepicker-yearpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/templates/components/mdc-datepicker-yearpicker.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/app/components/mdc-datepicker-yearpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/tests/integration/components/mdc-datepicker-yearpicker-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/components/mdc-datepicker-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/components/mdc-datepicker-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/templates/components/mdc-datepicker-dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/addon/templates/components/mdc-datepicker-dialog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +45,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-datepicker-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-datepicker-dialog">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-drawer]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-drawer">
@@ -87,6 +95,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-icon-button]: dummy application" />
@@ -112,7 +121,9 @@
       <updated>1571810182447</updated>
       <workItem from="1571810185352" duration="585000" />
       <workItem from="1573091973871" duration="1952000" />
-      <workItem from="1573150765096" duration="14406000" />
+      <workItem from="1573150765096" duration="18818000" />
+      <workItem from="1573395884747" duration="441000" />
+      <workItem from="1573483340294" duration="11103000" />
     </task>
     <servers />
   </component>

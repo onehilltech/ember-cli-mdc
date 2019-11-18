@@ -12,8 +12,9 @@
                             class="mdc-datepicker-dialog__prev"
                             click=(action "prevMonth")}}
 
-          <span class="mdc-datepicker-dialog__header-month">
-            <span {{action (mut showMonthPicker) true}}>{{monthDesc}}</span> <span>{{yearDesc}}</span>
+          <span class="mdc-datepicker-dialog__header-content">
+            <span class="mdc-datepicker-dialog__header-month" {{action (mut showMonthPicker) true}}>{{monthDesc}}</span>
+            <span class="mdc-datepicker-dialog__header-year" {{action (mut showYearPicker) true}}>{{yearDesc}}</span>
           </span>
           {{mdc-icon-button "keyboard_arrow_right"
                             class="mdc-datepicker-dialog__next"
@@ -31,10 +32,11 @@
 
       </div>
 
-      {{mdc-datepicker-monthpicker date=currentMonth show=showMonthPicker change=(action "gotoMonth")}}
+      {{mdc-datepicker-monthpicker date=intervalEnd show=showMonthPicker change=(action "gotoMonth")}}
+      {{mdc-datepicker-yearpicker date=intervalEnd show=showYearPicker change=(action "gotoYear")}}
     </div>
 
-    <footer class="mdc-dialog__actions mdc-datepicker-dialog__actions {{if showMonthPicker "mdc-datepicker-dialog__actions--hide"}}">
+    <footer class="mdc-dialog__actions mdc-datepicker-dialog__actions {{if hideButtons "mdc-datepicker-dialog__actions--hide"}}">
       {{#mdc-dialog-button type="button" click=(action "today")}}Today{{/mdc-dialog-button}}
 
       <span style="flex-grow: 1"></span>

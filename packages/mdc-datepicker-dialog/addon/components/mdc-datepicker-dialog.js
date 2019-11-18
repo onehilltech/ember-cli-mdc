@@ -5,6 +5,8 @@ import layout from '../templates/components/mdc-datepicker-dialog';
 import moment from 'moment';
 
 import { isPresent } from '@ember/utils';
+import { or } from '@ember/object/computed';
+
 import { A } from '@ember/array';
 
 const CLASS_NAME_SELECTED = 'mdc-datepicker-dialog--selected';
@@ -37,6 +39,8 @@ export default Dialog.extend ({
   _selectedElement: null,
 
   showMonthPicker: false,
+
+  hideButtons: or('showMonthPicker', 'showYearPicker'),
 
   didInsertElement () {
     this._super (...arguments);
@@ -85,9 +89,9 @@ export default Dialog.extend ({
   actions: {
     viewRender (view) {
       const [monthDesc, yearDesc] = view.title.split (' ');
-      const { intervalEnd: currentMonth } = view;
+      const { intervalEnd } = view;
 
-      this.setProperties ({ monthDesc, yearDesc, currentMonth });
+      this.setProperties ({ monthDesc, yearDesc, intervalEnd });
     },
 
     dayRender (date, dayElement) {
@@ -162,8 +166,15 @@ export default Dialog.extend ({
     },
 
     gotoMonth (month) {
-      let currentMonth = this.get ('currentMonth');
-      let date = moment (currentMonth).month (month);
+      let intervalEnd = this.get ('intervalEnd');
+      let date = moment (intervalEnd).month (month);
+
+      this.$fc.fullCalendar ('gotoDate', date);
+    },
+
+    gotoYear (year) {
+      let intervalEnd = this.get ('intervalEnd');
+      let date = moment (intervalEnd).year (year);
 
       this.$fc.fullCalendar ('gotoDate', date);
     }
