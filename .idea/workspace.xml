@@ -4,6 +4,7 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/templates/components/mdc-textarea.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/templates/components/mdc-textarea.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +118,7 @@
       <workItem from="1573150765096" duration="18818000" />
       <workItem from="1573395884747" duration="441000" />
       <workItem from="1573483340294" duration="13119000" />
-      <workItem from="1574171919265" duration="28000" />
+      <workItem from="1574171919265" duration="200000" />
     </task>
     <servers />
   </component>
