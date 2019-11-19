@@ -20,8 +20,7 @@ export default Component.extend (TextSupport, {
     'styleClassName',
     'leadingIcon:mdc-text-field--with-leading-icon',
     'trailingIcon:mdc-text-field--with-trailing-icon',
-    'noLabel:mdc-text-field--no-label',
-    'dense:mdc-text-field--dense'
+    'noLabel:mdc-text-field--no-label'
   ],
 
   // Set the style for the text field. The default style comes from the configurator.
