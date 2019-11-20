@@ -11,8 +11,12 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
+    const { titleId, contentId } = this.getProperties (['titleId', 'contentId']);
+
     this.element.setAttribute ('role', 'alertdialog');
     this.element.setAttribute ('aria-modal', true);
+    this.element.setAttribute ('aria-labelledby', titleId);
+    this.element.setAttribute ('aria-describedby', contentId);
   },
 
   titleId: computed (function () {

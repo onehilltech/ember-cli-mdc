@@ -70,7 +70,6 @@ export default Component.extend({
 
   didInsertElement () {
     this._super (...arguments);
-    this._setupAttributes ();
 
     this._dialog = new MDCDialog (this.element);
     this._dialog.listen ('MDCDialog:opening', this._willOpenEventListener);
@@ -133,23 +132,6 @@ export default Component.extend({
 
     if (isPresent ((button))) {
       getWithDefault (button, 'closed', noOp) ();
-    }
-  },
-
-  _setupAttributes () {
-    // Setup the aria properties on the element.
-    this.element.setAttribute ('aria-modal', true);
-
-    const title = this.element.querySelector ('.mdc-dialog__title');
-
-    if (title) {
-      this.element.setAttribute ('aria-labelledby', title.id);
-    }
-
-    const content = this.element.querySelector ('.mdc-dialog__content');
-
-    if (content) {
-      this.element.setAttribute ('aria-describedby', content.id);
     }
   },
 
