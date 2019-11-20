@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-surface.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-surface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-surface.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-surface.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-dialog]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -48,6 +54,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-datepicker-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-datepicker-dialog">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-dialog">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-drawer]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-drawer">
@@ -91,6 +100,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
@@ -120,7 +130,7 @@
       <workItem from="1573150765096" duration="18818000" />
       <workItem from="1573395884747" duration="441000" />
       <workItem from="1573483340294" duration="13119000" />
-      <workItem from="1574171919265" duration="9934000" />
+      <workItem from="1574171919265" duration="11790000" />
     </task>
     <servers />
   </component>

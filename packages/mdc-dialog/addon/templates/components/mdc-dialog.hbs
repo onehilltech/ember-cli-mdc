@@ -1,10 +1,10 @@
 {{#mdc-dialog-container}}
-  {{#mdc-dialog-surface}}
+  {{#mdc-dialog-surface as |surface|}}
     {{#if title}}
-      {{#mdc-dialog-title id=(concat elementId "__title")}}{{title}}{{/mdc-dialog-title}}
+      {{#mdc-dialog-title id=surface.titleId}}{{title}}{{/mdc-dialog-title}}
     {{/if}}
 
-    {{#mdc-dialog-content id=(concat elementId "__content")}}{{yield}}{{/mdc-dialog-content}}
+    {{#mdc-dialog-content id=surface.contentId}}{{yield}}{{/mdc-dialog-content}}
 
     {{#if hasActions}}
       {{#mdc-dialog-actions}}

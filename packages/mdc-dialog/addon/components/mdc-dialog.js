@@ -21,10 +21,6 @@ export default Component.extend({
 
   classNameBindings: ['stackButtons:mdc-dialog--stacked'],
 
-  attributeBindings: ['role'],
-
-  role: 'alertdialog',
-
   scrollable: false,
 
   stackButtons: false,
