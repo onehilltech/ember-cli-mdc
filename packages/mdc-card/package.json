@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-card",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.6",
   "description": "ember-cli addon for @material/card",
   "keywords": [
     "ember-addon",
@@ -49,7 +49,7 @@
     "ember-cli-mdc-button": "0.77.1-alpha.0",
     "ember-cli-mdc-elevation": "^1.0.0-alpha.1",
     "ember-cli-mdc-icon": "^1.0.0-alpha.0",
-    "ember-cli-mdc-icon-button": "^1.0.0-alpha.4",
+    "ember-cli-mdc-icon-button": "^1.0.0-alpha.6",
     "ember-cli-mdc-ripple": "^1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "^1.0.0-alpha.0",
     "ember-cli-mdc-shape": "^1.0.0-alpha.0",
