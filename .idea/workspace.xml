@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/templates/components/mdc-textarea.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/templates/components/mdc-textarea.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/mixins/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/mixins/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/templates/components/mdc-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/templates/components/mdc-button.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +43,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-button]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
@@ -87,9 +94,10 @@
     </configuration>
     <list>
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-icon-button]: dummy application" />
@@ -118,12 +126,18 @@
       <workItem from="1573150765096" duration="18818000" />
       <workItem from="1573395884747" duration="441000" />
       <workItem from="1573483340294" duration="13119000" />
-      <workItem from="1574171919265" duration="200000" />
+      <workItem from="1574171919265" duration="8530000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.js" />
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

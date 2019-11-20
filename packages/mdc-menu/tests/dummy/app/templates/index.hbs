@@ -1,3 +1,5 @@
+<h3>General Menu</h3>
+
 <div class="toolbar">
   <button onclick={{action (mut open) true}}>Open Menu</button>
 
@@ -27,4 +29,72 @@
       {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
     {{/mdc-menu-list}}
   {{/mdc-menu}}
+</div>
+
+<h3>Fixed Location Menu</h3>
+
+<div class="card__container">
+  <div class="card">
+    {{#mdc-list twoLine=true}}
+      {{#mdc-list-item}}
+        {{#mdc-list-item-text}}
+          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
+          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
+        {{/mdc-list-item-text}}
+
+        {{#mdc-list-item-meta}}
+          {{mdc-list-item-meta-icon "more_vert" click=(action (mut openMenu) true)}}
+
+          {{#mdc-menu position="fixed" open=openMenu anchorCorner="bottomRight"}}
+            {{#mdc-menu-list}}
+              {{mdc-menu-item-link-to "This is the link" "index"}}
+
+              {{mdc-list-divider}}
+
+              <li>
+                {{#mdc-menu-selection-group}}
+                  {{#mdc-menu-item}}
+                    {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+                    {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
+                  {{/mdc-menu-item}}
+
+                  {{#mdc-menu-item}}
+                    {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
+                    {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
+                  {{/mdc-menu-item}}
+                {{/mdc-menu-selection-group}}
+              </li>
+
+              {{mdc-list-divider}}
+
+              {{mdc-menu-item "Add space before paragraph"}}
+              {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
+            {{/mdc-menu-list}}
+          {{/mdc-menu}}
+
+        {{/mdc-list-item-meta}}
+      {{/mdc-list-item}}
+
+      {{#mdc-list-item}}
+        {{#mdc-list-item-text}}
+          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
+          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
+        {{/mdc-list-item-text}}
+      {{/mdc-list-item}}
+
+      {{#mdc-list-item}}
+        {{#mdc-list-item-text}}
+          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
+          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
+        {{/mdc-list-item-text}}
+      {{/mdc-list-item}}
+
+      {{#mdc-list-item}}
+        {{#mdc-list-item-text}}
+          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
+          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
+        {{/mdc-list-item-text}}
+      {{/mdc-list-item}}
+    {{/mdc-list}}
+  </div>
 </div>
