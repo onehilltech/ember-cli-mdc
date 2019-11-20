@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-dialog",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.8",
   "description": "ember-cli addon for @material/dialog",
   "keywords": [
     "ember-addon",
