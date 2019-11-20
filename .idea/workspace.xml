@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/mixins/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/mixins/button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/templates/components/mdc-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/templates/components/mdc-button.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +120,7 @@
       <workItem from="1573150765096" duration="18818000" />
       <workItem from="1573395884747" duration="441000" />
       <workItem from="1573483340294" duration="13119000" />
-      <workItem from="1574171919265" duration="8530000" />
+      <workItem from="1574171919265" duration="9934000" />
     </task>
     <servers />
   </component>
