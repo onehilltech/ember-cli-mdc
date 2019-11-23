@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-select",
-  "version": "1.0.0-alpha.11",
+  "version": "1.0.0-alpha.12",
   "description": "ember-cli addon for @material/select.",
   "keywords": [
     "ember-addon",
