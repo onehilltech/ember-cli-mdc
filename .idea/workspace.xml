@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -133,7 +132,7 @@
       <workItem from="1574171919265" duration="15706000" />
       <workItem from="1574368097420" duration="181000" />
       <workItem from="1574459875967" duration="3095000" />
-      <workItem from="1574527823894" duration="1224000" />
+      <workItem from="1574527823894" duration="1977000" />
     </task>
     <servers />
   </component>
