@@ -4,7 +4,7 @@ import layout from '../templates/components/mdc-filter-chip-set';
 export default ChipSetComponent.extend({
   layout,
 
-  classNames: ['mdc-chip-set--filter'],
+  mode: 'filter',
 
   _clickEventListener: null,
 

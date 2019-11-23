@@ -3,7 +3,7 @@ import ChipSetComponent from './mdc-chip-set';
 import { isPresent, isNone } from '@ember/utils';
 
 export default ChipSetComponent.extend ({
-  classNames: ['mdc-chip-set--choice'],
+  mode: 'choice',
 
   /// The selected value in the choice.
   value: null,

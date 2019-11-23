@@ -25,14 +25,12 @@ MDCChipSet.prototype.findChip = function (chipId) {
   return index >= 0 ? this.chips[index] : null;
 };
 
-const CLASS_NAME_MDC_CHIP_SET = 'mdc-chip-set';
-
 function noOp () {}
 
 export default Component.extend ({
   layout,
 
-  classNames: [CLASS_NAME_MDC_CHIP_SET],
+  classNames: ['mdc-chip-set'],
   classNameBindings: ['modeClassName'],
 
   mode: null,
@@ -56,10 +54,14 @@ export default Component.extend ({
   didInsertElement () {
     this._super (...arguments);
 
+    // Set thr role on the element.
+    this.element.setAttribute ('role', 'grid');
+
     this._chipSet = new MDCChipSet (this.element);
     this._chipSet.listen ('MDCChip:interaction', this._interactionEventListener);
     this._chipSet.listen ('MDCChip:selection', this._selectionEventListener);
     this._chipSet.listen ('MDCChip:removal', this._removalEventListener);
+
   },
 
   willDestroyElement () {
