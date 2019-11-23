@@ -10,6 +10,9 @@
   {{#if (has-block)}}
     {{yield}}
   {{else}}
+    {{#if firstOptionIsEmpty}}
+      {{mdc-select-option value=null}}
+    {{/if}}
     {{#each options as |option|}}
       {{#if option.group}}
         {{mdc-select-option-group label=option.text options=option.options}}

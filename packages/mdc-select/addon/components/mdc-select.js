@@ -34,6 +34,8 @@ export default Component.extend({
     return `mdc-select--${style}`;
   }),
 
+  firstOptionIsEmpty: false,
+
   isOutlined: equal ('style', 'outlined'),
 
   _select: null,
