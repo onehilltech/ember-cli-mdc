@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-chips",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.11",
   "description": "ember-cli addon for @material/chips.",
   "keywords": [
     "ember-addon",
