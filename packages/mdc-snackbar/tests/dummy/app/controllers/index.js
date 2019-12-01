@@ -8,6 +8,19 @@ export default Controller.extend({
 
     undo () {
       alert ('Undo!');
+    },
+
+    send () {
+      this.send ('snackbar', {
+        message: 'This is a snackbar message!',
+        dismissible: true,
+        action: {
+          text: 'Undo',
+          handler ( ) {
+            alert ('Undo!!');
+          }
+        }
+      });
     }
   }
 });

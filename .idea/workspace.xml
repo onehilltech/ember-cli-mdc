@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/snackbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/mixins/snackbar-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-input-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar-label.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar-label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/templates/components/mdc-snackbar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/templates/components/mdc-snackbar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,7 +142,7 @@
       <workItem from="1574171919265" duration="15706000" />
       <workItem from="1574368097420" duration="181000" />
       <workItem from="1574459875967" duration="3095000" />
-      <workItem from="1574527823894" duration="14458000" />
+      <workItem from="1574527823894" duration="15116000" />
     </task>
     <servers />
   </component>

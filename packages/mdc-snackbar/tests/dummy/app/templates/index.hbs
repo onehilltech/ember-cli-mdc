@@ -1,0 +1,9 @@
+<h2 id="title">Snackbar</h2>
+
+<button {{action (mut message) "Hello, World!"}}>Snackbar</button>
+
+<button {{action "send"}}>Send message</button>
+
+{{mdc-snackbar message=message
+               dismissible=true
+               action=(hash text="Undo" handler=(action "undo"))}}
