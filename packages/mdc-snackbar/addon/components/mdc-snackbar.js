@@ -4,7 +4,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/mdc-snackbar';
 
 import { isPresent } from '@ember/utils';
-import { alias } from '@ember/object/computed';
+import { alias, or } from '@ember/object/computed';
 
 const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 
@@ -38,6 +38,8 @@ export default Component.extend({
   _didCloseListener: null,
 
   dismissIcon: 'close',
+
+  actions: or ('action', 'dismissible'),
 
   init () {
     this._super (...arguments);

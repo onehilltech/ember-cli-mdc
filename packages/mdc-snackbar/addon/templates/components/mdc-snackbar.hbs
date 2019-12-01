@@ -1,15 +1,16 @@
 {{#mdc-snackbar-surface}}
-  {{#mdc-snackbar-label}}{{label}}{{/mdc-snackbar-label}}
   {{#if (has-block)}}
     {{yield}}
   {{else}}
-    {{#mdc-snackbar-actions}}
-      {{#if actionText}}
-        {{#mdc-snackbar-button click=actionHandler}}{{actionText}}{{/mdc-snackbar-button}}
-      {{/if}}
-      {{#if dismissible}}
-        {{mdc-snackbar-dismiss dismissIcon}}
-      {{/if}}
-    {{/mdc-snackbar-actions}}
+    {{#mdc-snackbar-label}}{{label}}{{/mdc-snackbar-label}}
+
+    {{#if actions}}
+      {{#mdc-snackbar-actions}}
+        {{#mdc-snackbar-button click=action.handler}}{{action.text}}{{/mdc-snackbar-button}}
+        {{#if dismissible}}
+          {{mdc-snackbar-dismiss dismissIcon}}
+        {{/if}}
+      {{/mdc-snackbar-actions}}
+    {{/if}}
   {{/if}}
 {{/mdc-snackbar-surface}}

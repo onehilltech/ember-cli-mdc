@@ -6,9 +6,10 @@ export default Component.extend({
 
   classNames: ['mdc-snackbar__label'],
 
-  attributeBindings: ['role', 'aria-live'],
+  didInsertElement () {
+    this._super (...arguments);
 
-  role: 'status',
-
-  'aria-live': 'polite'
+    this.element.setAttribute ('role', 'status');
+    this.element.setAttribute ('aria-live', 'polite');
+  }
 });

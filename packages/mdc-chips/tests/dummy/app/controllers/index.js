@@ -14,6 +14,10 @@ export default Controller.extend ({
       dynamicChips.pushObject ({text});
 
       return false;
+    },
+
+    makeInputChip (value) {
+      return {text: value, iconTrailing: 'cancel'};
     }
   }
 });

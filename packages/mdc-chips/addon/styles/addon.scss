@@ -1,2 +1,19 @@
 @import "app-theme";
 @import "@material/chips/mdc-chips";
+
+.mdc-chip-set {
+  &--input {
+    input {
+      border-bottom: unset;
+
+      width: 150px;
+      flex-grow: 1;
+
+      margin: 4px;
+      padding: 8px 4px;
+
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+}

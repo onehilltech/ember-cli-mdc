@@ -45,4 +45,7 @@
 
 <h3>Input Chips</h3>
 
-{{mdc-input-chip-set}}
+{{#mdc-textfield style="outlined"}}
+  {{mdc-input-chip-set chips=chips enter=(action "makeInputChip")}}
+  {{mdc-notched-outline label="Tags" notched=true}}
+{{/mdc-textfield}}
