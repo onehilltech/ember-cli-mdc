@@ -107,7 +107,7 @@ export default Route.extend (Snackbar, {
 
 The `Snackbar` mixin defines the `snackbar` action, and allows you to customize what property you 
 set on the controller to configure the application `mdc-snackbar` component. The default configuration
-is to set the `snackbar` property on the application controller.
+is to set the `snackbar` property on the associated controller.
 
 ### Displaying a snackbar message
 
