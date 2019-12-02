@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-snackbar",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.13",
   "description": "ember-cli addon for @material/snackbar",
   "keywords": [
     "ember-addon",
