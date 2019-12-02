@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/snackbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/mixins/snackbar-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +136,7 @@
       <workItem from="1574171919265" duration="15706000" />
       <workItem from="1574368097420" duration="181000" />
       <workItem from="1574459875967" duration="3095000" />
-      <workItem from="1574527823894" duration="15116000" />
+      <workItem from="1574527823894" duration="18989000" />
     </task>
     <servers />
   </component>
