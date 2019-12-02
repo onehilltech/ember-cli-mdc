@@ -75,7 +75,7 @@ callers with access to each attribute.
 
 We now need to connect to the application `mdc-snackbar`. We do this by defining an **action** in
 the application route. This action will be responsible for handling snackbar events that bubble
-up to the application router because the action is either not handled anywhere else downstream,
+up to the application route because the action is either not handled anywhere else downstream,
 or permitted to continue bubbling upstream.
 
 > The application snackbar only works if the snackbar event (or action) is allowed to bubble
