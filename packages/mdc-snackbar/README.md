@@ -79,7 +79,7 @@ up to the application route because the action is either not handled anywhere el
 or permitted to continue bubbling upstream.
 
 > The application snackbar only works if the snackbar event (or action) is allowed to bubble
-> up to the application router.
+> up to the application route. If not permitted, then the snackbar will not show.
 
 ```javascript
 import Route from '@ember/routing/route';
