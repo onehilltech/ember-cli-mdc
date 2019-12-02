@@ -51,8 +51,8 @@ one snackbar components will appear over the other snackbar component. The secon
 unused snackbar elements dispersed throughout the HTML code, which can degrade performance depending on the
 number of unused snackbar components.
 
-Because of these challenges, we recommend always using an application-wide snackbar component. This is
-not hard to do, and just requires a little configuration. Once you create an application-wide snackbar
+Because of these challenges, we recommend always using an application snackbar component. This is
+not hard to do, and just requires a little configuration. Once you create an application snackbar
 component, you can show the snackbar from anywhere in the application. Let's take a look at how to make
 this happen.
 
@@ -111,7 +111,7 @@ is to set the `snackbar` property on the associated controller.
 
 ### Displaying a snackbar message
 
-Now that we have configured our application to support an application-wide snackbar, we can 
+Now that we have configured our application to support an application snackbar, we can 
 display a message on this snackbar by using the `send()` method. The `send()` method is available 
 on a `Route`, `Controller`, and `Component`.
 
@@ -133,4 +133,4 @@ this.send ('snackbar', {
 
 This example will send the `snackbar` event/action, which will eventually bubble to the
 application route where it will be handled. In the end, the message `Hello, World!` will
-display in the application-wide snackbar.
+display in the application snackbar.
