@@ -100,7 +100,7 @@ export default Component.extend({
       message,
       action: {
         text: actionButtonText = undefined
-      }
+      } = {}
     } = this.getProperties (['message', 'timeout','closeOnEscape', 'action']);
 
     // Cache the current message so we do not show it again if the component updates

@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 
-export default Controller.extend({
+export default Controller.extend ({
   actions: {
     show () {
       this.set ('message', 'Hello, World!');
@@ -11,7 +11,7 @@ export default Controller.extend({
     },
 
     send () {
-      this.send ('snackbar', {
+      this.snackbar ({
         message: 'This is a snackbar message!',
         dismissible: true,
         action: {
@@ -20,11 +20,11 @@ export default Controller.extend({
             alert ('Undo!!');
           }
         }
-      })
+      });
     },
 
     snackbar (opts) {
-      this.send ('app:snackbar', opts);
+      this.snackbar (opts);
     }
   }
 });
