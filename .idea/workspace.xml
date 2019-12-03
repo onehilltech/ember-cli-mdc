@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/snackbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-inner-component.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-inner-component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/routes/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-inner-component.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-inner-component.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/mixins/snackbar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/mixins/snackbar-test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +138,7 @@
       <workItem from="1574171919265" duration="15706000" />
       <workItem from="1574368097420" duration="181000" />
       <workItem from="1574459875967" duration="3095000" />
-      <workItem from="1574527823894" duration="28887000" />
+      <workItem from="1574527823894" duration="32383000" />
     </task>
     <servers />
   </component>

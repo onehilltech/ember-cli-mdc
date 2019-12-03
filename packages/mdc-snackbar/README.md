@@ -41,13 +41,13 @@ Display a snackbar on the page.
 * `timeout` - Optional timeout for the snackbar.
 * `action` - Hash with the action text and optional callback invoked when the action is clicked.
 
-Application-wide Snackbar
-----------------------------
+Using an Application Snackbar
+------------------------------
 
 It is possible to use the snackbar component in-place where you expect it be used, such as within a child
 or component template. Doing so can give you greater control, but could present some challenges. The most 
 obvious challenge is having multiple snackbar components compete for the same layout space. In this scenario,
-one snackbar components will appear over the other snackbar component. The second challenge is having multiple
+one snackbar component will appear over the other snackbar component. The second challenge is having multiple
 unused snackbar elements dispersed throughout the HTML code, which can degrade performance depending on the
 number of unused snackbar components.
 
@@ -68,46 +68,41 @@ First, open the `application.hbs` template, and add a `mdc-snackbar` component.
                dismissible=snackbar.dismissible}}
 ```
 
-In this example, we are binding each attribute in the `mdc-snackbar` component. This will provide 
-callers with access to each attribute.
+In this example, we are binding each attribute in the `mdc-snackbar` component to a property from
+the `snackbar` variable. This will provides callers with access to each attribute in the `mdc-snackbar`
+component. 
 
-### Connect the application snackbar
+### Bootstrap the application snackbar
 
-We now need to connect to the application `mdc-snackbar`. We do this by defining an **action** in
-the application route. This action will be responsible for handling snackbar events that bubble
-up to the application route because the action is either not handled anywhere else downstream,
-or permitted to continue bubbling upstream.
+The `ember-cli-mdc-snackbar` add-on uses initializers and instance initializers to automatically
+bootstrap the application snackbar. If you need to bind the application snackbar to a variable
+with not named `snackbar`, then you can add a property named `snackbarPropertyName` to the 
+application route. 
 
-> The application snackbar only works if the snackbar event (or action) is allowed to bubble
-> up to the application route. If not permitted, then the snackbar will not show.
+For example, let's assume we wanted to use a variable named `foo` to bind with the attributes
+of the application snackbar. We just update the application route
 
 ```javascript
+// application.js
+
 import Route from '@ember/routing/route';
 
 export default Route.extend ({
-  actions: {
-    snackbar (opts) {
-      this.controller.set ('snackbar', opts);
-    }
-  }
+  snackbarPropertyName: 'foo'
 });
 ```
 
-Instead of having to manually define the action above, we provide a `Snackbar` mixin, which
-can be applied to the application route. 
+and use the `foo` property in the application template.
 
-```javascript
-import Route from '@ember/routing/route';
-import Snackbar from 'ember-cli-mdc-snackbar/mixins/snackbar';
+```handlebars
+{{!-- application.hbs --}}
 
-export default Route.extend (Snackbar, {
+{{outlet}}
 
-});
+{{mdc-snackbar message=foo.message
+               action=foo.action
+               dismissible=foo.dismissible}}
 ```
-
-The `Snackbar` mixin defines the `snackbar` action, and allows you to customize what property you 
-set on the controller to configure the application `mdc-snackbar` component. The default configuration
-is to set the `snackbar` property on the associated controller.
 
 ### Displaying a snackbar message
 
