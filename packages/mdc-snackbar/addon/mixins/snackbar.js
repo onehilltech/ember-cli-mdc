@@ -4,7 +4,7 @@ export default Mixin.create({
   snackbarProperty: 'snackbar',
 
   actions: {
-    snackbar (opts) {
+    'app:snackbar' (opts) {
       this.controller.set (this.get ('snackbarProperty'), opts);
     }
   }

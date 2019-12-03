@@ -20,7 +20,11 @@ export default Controller.extend({
             alert ('Undo!!');
           }
         }
-      });
+      })
+    },
+
+    snackbar (opts) {
+      this.send ('app:snackbar', opts);
     }
   }
 });

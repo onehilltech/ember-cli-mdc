@@ -41,6 +41,8 @@ export default Component.extend({
 
   actions: or ('action', 'dismissible'),
 
+  _currMessage: null,
+
   init () {
     this._super (...arguments);
 
@@ -50,34 +52,31 @@ export default Component.extend({
 
   didInsertElement () {
     this._super (...arguments);
-
     this._createComponent ();
-    const message = this.get ('message');
-
-    if (isPresent (message)) {
-      this.show ();
-    }
   },
 
   didUpdate () {
+    this._super (...arguments);
+    this._createComponent ();
+  },
+
+  didRender () {
     this._super (...arguments);
 
     // We are always going to recreate the component just in case the structure of
     // the component has changed.
 
-    this._createComponent ();
     const message = this.get ('message');
 
-    if (isPresent (message)) {
+    if (isPresent (message) && this._currMessage !== message) {
       this.show ();
+    }
+    else {
+      this._currMessage = null;
     }
   },
 
   _createComponent () {
-    if (this._snackbar) {
-      this._destroyComponent ();
-    }
-
     this._snackbar = new MDCSnackbar (this.element);
     this._snackbar.listen ('MDCSnackbar:opened', this._didOpenListener);
     this._snackbar.listen ('MDCSnackbar:closed', this._didCloseListener);
@@ -95,10 +94,23 @@ export default Component.extend({
   },
 
   show () {
-    const { timeout, closeOnEscape } = this.getProperties (['timeout','closeOnEscape']);
+    const {
+      timeout,
+      closeOnEscape,
+      message,
+      action: {
+        text: actionButtonText = undefined
+      }
+    } = this.getProperties (['message', 'timeout','closeOnEscape', 'action']);
+
+    // Cache the current message so we do not show it again if the component updates
+    // before the snackbar closes.
+    this._currMessage = message;
 
     this._snackbar.closeOnEscape = closeOnEscape;
     this._snackbar.timeoutMs = timeout;
+    this._snackbar.labelText = message;
+    this._snackbar.actionButtonText = actionButtonText;
     this._snackbar.open ();
   },
 
