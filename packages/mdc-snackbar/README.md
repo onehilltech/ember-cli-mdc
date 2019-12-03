@@ -134,7 +134,6 @@ is a top-level component, just bind the `snackbar` attribute to the `snackbar` a
 
 ```handlebars
 {{!-- index.hbs --}}
-
 {{some-component snackbar=(action "snackbar")}}
 ```
 
@@ -142,8 +141,7 @@ If the component is a nested component, then you should must use closure actions
 the snackbar message up to the controller.
 
 ```handlebars
-{{!-- index.hbs --}}
-
+{{!-- component-wrapper.hbs --}}
 {{another-component snackbar=(action (action snackbar))}}
 ```
 
@@ -152,6 +150,5 @@ action.
 
 ```handlebars
 {{!-- component-wrapper.hbs --}}
-
 {{another-component snackbar=(action (action snackbar (hash message="This is a message")))}}
 ```
