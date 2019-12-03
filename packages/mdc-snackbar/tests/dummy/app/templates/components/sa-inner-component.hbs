@@ -1,3 +1,3 @@
-<button {{action (action snackbar (hash message="This is a message from the inner component." action=(hash text="Undo" handler=(action "undo"))))}}>Send message</button>
+<button {{action (action snackbar (hash message="This is a message using action clousure." action=(hash text="Undo" handler=(action "undo"))))}}>Send message (action closure)</button>
 
-<button {{action "manual"}}>Manually send message</button>
+<button {{action "manual"}}>Send message (manually)</button>

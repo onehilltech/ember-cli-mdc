@@ -104,28 +104,54 @@ and use the `foo` property in the application template.
                dismissible=foo.dismissible}}
 ```
 
-### Displaying a snackbar message
+### Displaying snackbar from a controller
 
-Now that we have configured our application to support an application snackbar, we can 
-display a message on this snackbar by using the `send()` method. The `send()` method is available 
-on a `Route`, `Controller`, and `Component`.
+We can display snackbar message from a controller simply by invoking the `snackbar(opts)` 
+method. The `ember-cli-mdc-snackbar` add-on injects a `snackbar(opts)` method into controllers. 
+This makes it easy for you to use the snackbar from any controller in the application.
+Here is an example of showing a snackbar notification, and including an undo action.
 
 ```javascript
-this.send ('snackbar', {
+this.snackbar ({
   message: 'Hello, World!',
 
   // optional properties
-  dismissible: true,
 
+  dismissible: true,
   action: {
     label: 'Undo',
     handler () {
-    
+      alert ('We press the undo action!');
     }
   } 
 })
 ```
 
-This example will send the `snackbar` event/action, which will eventually bubble to the
-application route where it will be handled. In the end, the message `Hello, World!` will
-display in the application snackbar.
+### Showing snackbar from a component
+
+Displaying the snackbar from a component requires a different approach. If the component
+is a top-level component, just bind the `snackbar` attribute to the `snackbar` action.
+
+```handlebars
+{{!-- index.hbs --}}
+
+{{some-component snackbar=(action "snackbar")}}
+```
+
+If the component is a nested component, then you should must use closure actions to propagate
+the snackbar message up to the controller.
+
+```handlebars
+{{!-- index.hbs --}}
+
+{{another-component snackbar=(action (action snackbar))}}
+```
+
+By using closure actions, you have the option of passing in the options when binding the
+action.
+
+```handlebars
+{{!-- component-wrapper.hbs --}}
+
+{{another-component snackbar=(action (action snackbar (hash message="This is a message")))}}
+```

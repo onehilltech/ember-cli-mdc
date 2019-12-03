@@ -110,7 +110,11 @@ export default Component.extend({
     this._snackbar.closeOnEscape = closeOnEscape;
     this._snackbar.timeoutMs = timeout;
     this._snackbar.labelText = message;
-    this._snackbar.actionButtonText = actionButtonText;
+
+    if (isPresent (actionButtonText)) {
+      this._snackbar.actionButtonText = actionButtonText;
+    }
+
     this._snackbar.open ();
   },
 
