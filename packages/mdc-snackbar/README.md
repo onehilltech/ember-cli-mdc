@@ -41,8 +41,8 @@ Display a snackbar on the page.
 * `timeout` - Optional timeout for the snackbar.
 * `action` - Hash with the action text and optional callback invoked when the action is clicked.
 
-Using an Application Snackbar
-------------------------------
+Recommended: Using an Application Snackbar
+-------------------------------------------
 
 It is possible to use the snackbar component in-place where you expect it be used, such as within a child
 or component template. Doing so can give you greater control, but could present some challenges. The most 
