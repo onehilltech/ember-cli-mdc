@@ -145,7 +145,7 @@ the snackbar message up to the controller.
 {{another-component snackbar=(action (action snackbar))}}
 ```
 
-By using closure actions, you have the option of passing in the options when binding the
+By using closure actions, you have the option of passing in options when binding the
 action.
 
 ```handlebars
