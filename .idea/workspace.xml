@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +137,10 @@
       <workItem from="1574171919265" duration="15706000" />
       <workItem from="1574368097420" duration="181000" />
       <workItem from="1574459875967" duration="3095000" />
-      <workItem from="1574527823894" duration="36869000" />
+      <workItem from="1574527823894" duration="39630000" />
+      <workItem from="1575958988141" duration="579000" />
+      <workItem from="1576433785487" duration="2002000" />
+      <workItem from="1576763766990" duration="1331000" />
     </task>
     <servers />
   </component>
@@ -145,6 +150,12 @@
       <list>
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.d.ts" />
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.d.ts" />
       </list>
     </option>
   </component>

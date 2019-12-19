@@ -1,16 +1,57 @@
 ember-cli-mdc-layout
 ======================
 
-ember-cli addon for [`@material/layout`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout).
+ember-cli support addon for layout-based logic
 
 Installation
 ------------
 
     ember install ember-cli-mdc-layout
     
-Example Code
----------------
+Services
+-------------
 
-Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
-use the components in this add-on.
+This package contains the following services.
+
+* [`layout`](#layout-service)
+
+
+Layout Service
+------------------
+
+The `layout` service is used to query information about the current device layout. Its 
+primary purpose is to support device-specific layouts in template definitions. The `layout` 
+service has the following properties:
+
+* `isPhone` - Test if the current layout is for a phone
+* `isTablet` - Test if current layout is for a tablet
+* `isDesktop` - Test if the current layout is for a desktop
+
+### Usage
+
+You use the `layout` service by injecting it into either a controller or component.
+
+```javascript
+// controllers/index.js
+
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
+
+export default Controller.extend ({
+  layout: service ()
+});
+```
+
+```handlebars
+// templates/index.js
+<div>We are now viewing this applicaiton on a 
+  {{#if layout.isPhone}}
+  phone.
+  {{else if layout.isTablet}}
+  tablet.
+  {{else if layout.isDesktop}}
+  desktop.
+  {{/if}}
+</div>
+```
 

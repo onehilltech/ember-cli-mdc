@@ -6,5 +6,9 @@
   "private": false,
   "devDependencies": {
     "lerna": "^3.4.0"
+  },
+
+  "scripts": {
+    "version": "lerna clean --yes && lerna bootstrap --ignore-scripts -- --package-lock-only --no-audit && git add packages/*/package-lock.json"
   }
 }
