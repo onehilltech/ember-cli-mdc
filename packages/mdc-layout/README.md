@@ -29,7 +29,8 @@ service has the following properties:
 
 ### Usage
 
-You use the `layout` service by injecting it into either a controller or component.
+You use the `layout` service by injecting it into either a controller or component. Here
+is a controller were we inject the `layout` service.
 
 ```javascript
 // controllers/index.js
@@ -41,6 +42,9 @@ export default Controller.extend ({
   layout: service ()
 });
 ```
+
+We can then use the layout service to add conditional blocks based on different 
+device layouts.
 
 ```handlebars
 // templates/index.js
