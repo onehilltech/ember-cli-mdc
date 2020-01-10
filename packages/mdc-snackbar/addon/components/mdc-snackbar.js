@@ -98,10 +98,10 @@ export default Component.extend({
       timeout,
       closeOnEscape,
       message,
-      action: {
-        text: actionButtonText = undefined
-      } = {}
+      action
     } = this.getProperties (['message', 'timeout','closeOnEscape', 'action']);
+
+    const { text: actionButtonText } = (action || {});
 
     // Cache the current message so we do not show it again if the component updates
     // before the snackbar closes.
