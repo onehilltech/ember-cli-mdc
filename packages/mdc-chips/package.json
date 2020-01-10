@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-chips",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0-alpha.15",
   "description": "ember-cli addon for @material/chips.",
   "keywords": [
     "ember-addon",
@@ -52,7 +52,7 @@
     "ember-cli-mdc-ripple": "1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "1.0.0-alpha.0",
     "ember-cli-mdc-shape": "1.0.0-alpha.0",
-    "ember-cli-mdc-textfield": "1.0.0-alpha.6",
+    "ember-cli-mdc-textfield": "^1.0.0-alpha.15",
     "ember-cli-mdc-theme": "1.0.0-alpha.0",
     "ember-cli-mdc-typography": "1.0.0-alpha.0",
     "ember-cli-qunit": "^4.1.1",
