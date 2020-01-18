@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-input-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-action-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-action-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-chips]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -90,6 +90,9 @@
     <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
       <method v="2" />
     </configuration>
@@ -97,7 +100,6 @@
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
@@ -111,7 +113,9 @@
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-top-app-bar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
     </list>
   </component>
@@ -152,7 +156,8 @@
       <workItem from="1577136715546" duration="1601000" />
       <workItem from="1577218652298" duration="618000" />
       <workItem from="1578088828678" duration="680000" />
-      <workItem from="1578622517518" duration="292000" />
+      <workItem from="1578622517518" duration="1158000" />
+      <workItem from="1579329894085" duration="549000" />
     </task>
     <servers />
   </component>
@@ -160,32 +165,20 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/ember-cli-babel/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/broccoli-lint-eslint/node_modules/broccoli-persistent-filter/node_modules/fs-tree-diff/lib/entry.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/index-test.js" />
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.js" />
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.js" />
         <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/index-test.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.js" />
       </list>
     </option>
   </component>
@@ -203,21 +196,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1659" height="258" key="GridCell.Tab.0.bottom" timestamp="1577170364177">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state x="304" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579330179799">
+      <screen x="0" y="23" width="1680" height="970" />
+    </state>
+    <state x="304" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.970@0.23.1680.970" timestamp="1579330179799" />
+    <state width="1659" height="260" key="GridCell.Tab.0.bottom" timestamp="1579330367738">
+      <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="258" key="GridCell.Tab.0.center" timestamp="1577170364177">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1659" height="260" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1579330367738" />
+    <state width="1659" height="260" key="GridCell.Tab.0.center" timestamp="1579330367737">
+      <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="258" key="GridCell.Tab.0.left" timestamp="1577170364176">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1659" height="260" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1579330367737" />
+    <state width="1659" height="260" key="GridCell.Tab.0.left" timestamp="1579330367736">
+      <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1577170364176" />
-    <state width="1659" height="258" key="GridCell.Tab.0.right" timestamp="1577170364177">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1659" height="260" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1579330367736" />
+    <state width="1659" height="260" key="GridCell.Tab.0.right" timestamp="1579330367737">
+      <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
+    <state width="1659" height="260" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1579330367737" />
   </component>
 </project>
