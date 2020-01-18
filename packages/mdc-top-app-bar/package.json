@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-top-app-bar",
-  "version": "1.0.0-alpha.17",
+  "version": "1.0.0-alpha.18",
   "description": "ember-cli addon for @material/top-app-bar.",
   "keywords": [
     "ember-addon",
@@ -51,7 +51,7 @@
     "ember-cli-mdc-button": "1.0.0-alpha.6",
     "ember-cli-mdc-elevation": "^1.0.0-alpha.1",
     "ember-cli-mdc-icon": "^1.0.0-alpha.0",
-    "ember-cli-mdc-icon-button": "1.0.0-alpha.6",
+    "ember-cli-mdc-icon-button": "^1.0.0-alpha.18",
     "ember-cli-mdc-ripple": "^1.0.0-alpha.1",
     "ember-cli-mdc-rtl": "^1.0.0-alpha.0",
     "ember-cli-mdc-shape": "1.0.0-alpha.0",

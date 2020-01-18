@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-icon-button",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.18",
   "description": "ember-cli addon for @material/icon-button",
   "keywords": [
     "ember-addon",
