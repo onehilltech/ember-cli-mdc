@@ -1,18 +1,7 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-top-app-bar-navigation-icon';
+import IconButton from 'ember-cli-mdc-icon-button/components/mdc-icon-button';
 
-export default Component.extend({
-  layout,
+export default IconButton.extend({
+  classNames: ['mdc-top-app-bar__navigation-icon'],
 
-  tagName: 'a',
-
-  classNames: ['mdc-top-app-bar__navigation-icon', 'material-icons'],
-
-  icon: 'menu',
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this.element.setAttribute ('href', '#');
-  }
+  icon: 'menu'
 });
