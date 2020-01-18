@@ -1,6 +1,7 @@
 import LinkComponent from '@ember/routing/link-component';
+import IconButtonMixin from 'ember-cli-mdc-icon-button/mixins/icon-button';
 
-export default LinkComponent.extend ({
+export default LinkComponent.extend (IconButtonMixin, {
   init () {
     this._super (...arguments);
 
@@ -9,7 +10,7 @@ export default LinkComponent.extend ({
     this.get ('params').unshift (this.get ('icon'));
   },
 
-  classNames: ['mdc-top-app-bar__navigation-icon', 'icon-button', 'material-icons'],
+  classNames: ['mdc-top-app-bar__navigation-icon'],
 
   /// By default, we replace the history.
   replace: true,
