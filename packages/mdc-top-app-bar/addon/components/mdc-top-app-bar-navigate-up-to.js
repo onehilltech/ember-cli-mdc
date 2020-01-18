@@ -9,7 +9,7 @@ export default LinkComponent.extend ({
     this.get ('params').unshift (this.get ('icon'));
   },
 
-  classNames: ['mdc-top-app-bar__navigation-icon', 'material-icons'],
+  classNames: ['mdc-top-app-bar__navigation-icon', 'icon-button', 'material-icons'],
 
   /// By default, we replace the history.
   replace: true,
