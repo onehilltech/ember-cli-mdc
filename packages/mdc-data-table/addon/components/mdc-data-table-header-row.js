@@ -5,6 +5,4 @@ export default Component.extend({
   layout,
 
   tagName: 'thead',
-
-  classNames: 'mdc-data-table__header-row'
 });
