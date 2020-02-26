@@ -11,7 +11,7 @@
     {{yield}}
   {{else}}
     {{#if firstOption}}
-      {{#mdc-select-option value=firstOption.value disabled=firstOption.disabled}}{{if firstOption.text firstOption.text}}{{/mdc-select-option}}
+      {{#mdc-select-option value=firstOption.value disabled=firstOption.disabled selected=firstOption.selected}}{{if firstOption.text firstOption.text}}{{/mdc-select-option}}
     {{/if}}
     {{#each options as |option|}}
       {{#if option.group}}
