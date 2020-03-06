@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/instance-initializers/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/instance-initializers/mdc-snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +158,10 @@
       <workItem from="1582487330107" duration="634000" />
       <workItem from="1582735257741" duration="103000" />
       <workItem from="1582766616161" duration="81000" />
-      <workItem from="1583454126529" duration="529000" />
+      <workItem from="1583454126529" duration="1145000" />
+      <workItem from="1583506791279" duration="447000" />
+      <workItem from="1583513460530" duration="23000" />
+      <workItem from="1583514077431" duration="485000" />
     </task>
     <servers />
   </component>
@@ -165,20 +169,34 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/index-test.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/index-test.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/index.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/index-test.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/index.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/entry.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/index.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/util.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/index.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/util.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/fs-tree-diff/lib/entry.d.ts" />
         <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.d.ts" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.js" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
-        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.js" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/index-test.d.ts" />
         <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/tests/resolve-package-path-test.d.ts" />
-        <option value="$PROJECT_DIR$/../../donatians/malachi-dashboard/node_modules/resolve-package-path/index.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/util.js" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/entry.d.ts" />
+        <option value="$PROJECT_DIR$/../mentridge/mentridge-dashboard/node_modules/@onehilltech/ember-cli-chartjs/node_modules/fs-tree-diff/lib/index.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/cache.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/should-preserve-symlinks.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/should-preserve-symlinks.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/cache.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/cache-group.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/resolve-package-path.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/cache-group.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/lib/resolve-package-path.js" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/should-preserve-symlinks-test.d.ts" />
+        <option value="$PROJECT_DIR$/../../donatians/packages/malachi-core/node_modules/ember-cli-mdc-layout-grid/node_modules/resolve-package-path/tests/resolve-package-path-test.js" />
       </list>
     </option>
   </component>
@@ -200,25 +218,25 @@
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state x="304" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.970@0.23.1680.970" timestamp="1579330179799" />
-    <state width="1659" height="239" key="GridCell.Tab.0.bottom" timestamp="1583454598839">
+    <state width="1659" height="239" key="GridCell.Tab.0.bottom" timestamp="1583506402927">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="239" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1583454598839" />
-    <state width="1659" height="239" key="GridCell.Tab.0.center" timestamp="1583454598838">
+    <state width="1659" height="239" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
+    <state width="1659" height="239" key="GridCell.Tab.0.center" timestamp="1583506402927">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="239" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1583454598838" />
-    <state width="1659" height="239" key="GridCell.Tab.0.left" timestamp="1583454598837">
+    <state width="1659" height="239" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
+    <state width="1659" height="239" key="GridCell.Tab.0.left" timestamp="1583506402926">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1577170364176" />
-    <state width="1659" height="239" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1583454598837" />
-    <state width="1659" height="239" key="GridCell.Tab.0.right" timestamp="1583454598838">
+    <state width="1659" height="239" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1583506402926" />
+    <state width="1659" height="239" key="GridCell.Tab.0.right" timestamp="1583506402927">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="239" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1583454598838" />
+    <state width="1659" height="239" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
   </component>
 </project>

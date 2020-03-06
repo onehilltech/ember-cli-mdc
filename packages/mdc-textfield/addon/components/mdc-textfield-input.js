@@ -55,10 +55,6 @@ export default TextField.extend({
         // Move the focus to the next element.
         nextInput.focus ();
       }
-      else {
-        // Take the focus of the current element.
-        this.element.blur ();
-      }
     }
 
     // The default HTML input ignores maxlength with type is number.
