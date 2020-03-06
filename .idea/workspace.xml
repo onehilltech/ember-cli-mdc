@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/instance-initializers/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/instance-initializers/mdc-snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-snackbar]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -156,7 +157,9 @@
       <workItem from="1579916608137" duration="641000" />
       <workItem from="1581769048899" duration="1216000" />
       <workItem from="1582487330107" duration="634000" />
-      <workItem from="1582735257741" duration="14000" />
+      <workItem from="1582735257741" duration="103000" />
+      <workItem from="1582766616161" duration="81000" />
+      <workItem from="1583454126529" duration="451000" />
     </task>
     <servers />
   </component>
@@ -199,25 +202,25 @@
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state x="304" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.970@0.23.1680.970" timestamp="1579330179799" />
-    <state width="1659" height="260" key="GridCell.Tab.0.bottom" timestamp="1579457881918">
+    <state width="1659" height="239" key="GridCell.Tab.0.bottom" timestamp="1583454241452">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="260" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1579457881918" />
-    <state width="1659" height="260" key="GridCell.Tab.0.center" timestamp="1579457881917">
+    <state width="1659" height="239" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1583454241452" />
+    <state width="1659" height="239" key="GridCell.Tab.0.center" timestamp="1583454241452">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="260" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1579457881917" />
-    <state width="1659" height="260" key="GridCell.Tab.0.left" timestamp="1579457881917">
+    <state width="1659" height="239" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1583454241452" />
+    <state width="1659" height="239" key="GridCell.Tab.0.left" timestamp="1583454241451">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1577170364176" />
-    <state width="1659" height="260" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1579457881917" />
-    <state width="1659" height="260" key="GridCell.Tab.0.right" timestamp="1579457881917">
+    <state width="1659" height="239" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1583454241451" />
+    <state width="1659" height="239" key="GridCell.Tab.0.right" timestamp="1583454241452">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state width="1659" height="258" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1577170364177" />
-    <state width="1659" height="260" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1579457881917" />
+    <state width="1659" height="239" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1583454241452" />
   </component>
 </project>
