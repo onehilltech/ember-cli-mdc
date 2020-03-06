@@ -1,4 +1,5 @@
 import Snackbar from 'ember-cli-mdc-snackbar/mixins/route/snackbar';
+import { isPresent } from '@ember/utils';
 
 export function initialize (appInstance) {
   let appRoute = appInstance.lookup ('route:application');
