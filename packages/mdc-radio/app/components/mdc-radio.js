@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-mdc-radio/components/mdc-radio';
