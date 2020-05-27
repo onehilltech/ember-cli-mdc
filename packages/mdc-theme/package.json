@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-theme",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "ember-cli addon for @material/theme",
   "keywords": [
     "ember-addon",
@@ -30,7 +30,7 @@
   "dependencies": {
     "ember-cli-babel": "^7.7.3",
     "ember-cli-blueprint-helpers": "^0.4.5",
-    "ember-cli-mdc-sass": "^1.0.0-alpha.0"
+    "ember-cli-mdc-sass": "^1.0.0"
   },
   "devDependencies": {
     "@material/theme": "3.1.0",
