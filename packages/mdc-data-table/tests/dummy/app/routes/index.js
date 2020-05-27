@@ -14,6 +14,7 @@ export default Route.extend({
 
     controller.setProperties ({
       signals: A (signals),
+      selected: A ([signals[0], signals[1]])
     });
   }
 });
