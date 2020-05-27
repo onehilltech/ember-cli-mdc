@@ -26,12 +26,16 @@ export default Component.extend({
 
   _dataTable: null,
   _mdcDataTableChangedListener: null,
+  _mdcDataTableSelectedAllListener: null,
+  _mdcDataTableUnselectedAllListener: null,
 
   selected: null,
 
   init () {
     this._super (...arguments);
     this._mdcDataTableChangedListener = this._mdcDataTableRowSelectionChanged.bind (this);
+    this._mdcDataTableSelectedAllListener = this._mdcDataTableSelectedAll.bind (this);
+    this._mdcDataTableUnselectedAllListener = this._mdcDataTableUnselectedAll.bind (this);
   },
 
   didInsertElement () {
@@ -39,6 +43,8 @@ export default Component.extend({
 
     this._dataTable = new MDCDataTable (this.element);
     this._dataTable.listen ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
+    this._dataTable.listen ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
+    this._dataTable.listen ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
 
     if (isEmpty (this.selected)) {
       this.set ('selected', A ());
@@ -51,7 +57,18 @@ export default Component.extend({
     // Temp disable because there is a bug in the raw data table if the data table does
     // not contain a checkbox.
 
+    this._dataTable.unlisten ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
+    this._dataTable.unlisten ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
+
     //this._dataTable.destroy ();
+  },
+
+  _mdcDataTableSelectedAll () {
+    this.selected.addObjects (this._dataTable.getSelectedRowIds ());
+  },
+
+  _mdcDataTableUnselectedAll () {
+    this.selected.clear ();
   },
 
   _mdcDataTableRowSelectionChanged (ev) {
