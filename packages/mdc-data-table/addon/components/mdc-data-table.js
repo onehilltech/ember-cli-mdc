@@ -6,7 +6,12 @@ import layout from '../templates/components/mdc-data-table';
 const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
 import { computed } from '@ember/object';
-import { isPresent } from '@ember/utils';
+import { isPresent, isEmpty } from '@ember/utils';
+import { A } from '@ember/array';
+
+function noOp () {
+
+}
 
 export default Component.extend({
   layout,
@@ -20,11 +25,24 @@ export default Component.extend({
   }),
 
   _dataTable: null,
+  _mdcDataTableChangedListener: null,
+
+  selected: null,
+
+  init () {
+    this._super (...arguments);
+    this._mdcDataTableChangedListener = this._mdcDataTableRowSelectionChanged.bind (this);
+  },
 
   didInsertElement () {
     this._super (...arguments);
 
     this._dataTable = new MDCDataTable (this.element);
+    this._dataTable.listen ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
+
+    if (isEmpty (this.selected)) {
+      this.set ('selected', A ());
+    }
   },
 
   willDestroyElement () {
@@ -34,5 +52,25 @@ export default Component.extend({
     // not contain a checkbox.
 
     //this._dataTable.destroy ();
+  },
+
+  _mdcDataTableRowSelectionChanged (ev) {
+    // Update the collection of selected elements ids.
+    const { detail } = ev;
+
+    if (detail.selected) {
+      this.selected.addObject (detail.rowId);
+    }
+    else {
+      this.selected.removeObject (detail.rowId);
+    }
+
+    // Notify the parent component that the data table selection has changed.
+    this.didRowSelectionChange (ev);
+    this.getWithDefault ('rowSelectionChange', noOp) (ev);
+  },
+
+  didRowSelectionChange () {
+
   }
 });

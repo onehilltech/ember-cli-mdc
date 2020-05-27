@@ -36,7 +36,9 @@
 
 <h3>Data table with row selection</h3>
 
-{{#mdc-data-table label="Dessert calories"}}
+{{#mdc-data-table label="Dessert calories"
+                  selected=selected
+                  rowSelectionChange=(action "rowSelectionChange")}}
   {{#mdc-data-table-header-row}}
     {{mdc-data-table-header-cell checkbox=true}}
     {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
@@ -89,3 +91,11 @@
     {{/mdc-data-table-row}}
   {{/mdc-data-table-content}}
 {{/mdc-data-table}}
+
+<h4>Selected Rows:</h4>
+
+<ul>
+  {{#each selected as |selection|}}
+    <li>{{selection}}</li>
+  {{/each}}
+</ul>
