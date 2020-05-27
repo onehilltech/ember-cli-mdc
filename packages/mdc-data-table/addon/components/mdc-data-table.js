@@ -59,6 +59,7 @@ export default Component.extend({
 
     this._dataTable.unlisten ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
     this._dataTable.unlisten ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
+    this._dataTable.unlisten ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
 
     //this._dataTable.destroy ();
   },
