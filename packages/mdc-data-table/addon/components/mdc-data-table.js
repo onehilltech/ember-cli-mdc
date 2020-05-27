@@ -49,6 +49,9 @@ export default Component.extend({
     if (isEmpty (this.selected)) {
       this.set ('selected', A ());
     }
+    else {
+      this._dataTable.setSelectedRowIds (this.selected);
+    }
   },
 
   willDestroyElement () {
