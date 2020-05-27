@@ -34,6 +34,44 @@
   {{/mdc-data-table-content}}
 {{/mdc-data-table}}
 
+<h3>Data table with row selection</h3>
+
+{{#mdc-data-table label="Network"
+                  selected=ids
+                  rowSelectionChange=(action "rowSelectionChange") as |dataTable|}}
+  {{#mdc-data-table-header-row}}
+    {{mdc-data-table-header-cell checkbox=true}}
+    {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
+    {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
+  {{/mdc-data-table-header-row}}
+
+  {{#mdc-data-table-content}}
+    {{#each signals as |signal|}}
+      {{#mdc-data-table-row rowId=signal.id}}
+        {{mdc-data-table-cell checkbox=true}}
+        {{#mdc-data-table-cell}}{{signal.status}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.name}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.severity}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.stage}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell numeric=true}}{{signal.time}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.roles}}{{/mdc-data-table-cell}}
+      {{/mdc-data-table-row}}
+    {{/each}}
+  {{/mdc-data-table-content}}
+{{/mdc-data-table}}
+
+<h4>Selected Rows:</h4>
+
+<ul>
+  {{#each ids as |id|}}
+    <li>{{id}}</li>
+  {{/each}}
+</ul>
+
 <h3>Data table with row selection (using models)</h3>
 
 {{#mdc-data-table label="Network"
