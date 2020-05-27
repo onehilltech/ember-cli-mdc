@@ -63,12 +63,30 @@ export default Component.extend({
     //this._dataTable.destroy ();
   },
 
+  didRowSelectionChange () {
+
+  },
+
+  didSelectAll () {
+
+  },
+
+  didUnselectAll () {
+
+  },
+
   _mdcDataTableSelectedAll () {
     this.selected.addObjects (this._dataTable.getSelectedRowIds ());
+
+    // Send notification to the subclass.
+    this.didSelectAll ();
   },
 
   _mdcDataTableUnselectedAll () {
     this.selected.clear ();
+
+    // Send notification to the subclass.
+    this.didUnselectAll ();
   },
 
   _mdcDataTableRowSelectionChanged (ev) {
@@ -85,9 +103,5 @@ export default Component.extend({
     // Notify the parent component that the data table selection has changed.
     this.didRowSelectionChange (ev);
     this.getWithDefault ('rowSelectionChange', noOp) (ev);
-  },
-
-  didRowSelectionChange () {
-
   }
 });
