@@ -34,11 +34,12 @@
   {{/mdc-data-table-content}}
 {{/mdc-data-table}}
 
-<h3>Data table with row selection</h3>
+<h3>Data table with row selection (using models)</h3>
 
-{{#mdc-data-table label="Dessert calories"
+{{#mdc-data-table label="Network"
+                  data=signals
                   selected=selected
-                  rowSelectionChange=(action "rowSelectionChange")}}
+                  rowSelectionChange=(action "rowSelectionChange") as |dataTable|}}
   {{#mdc-data-table-header-row}}
     {{mdc-data-table-header-cell checkbox=true}}
     {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
@@ -50,45 +51,17 @@
   {{/mdc-data-table-header-row}}
 
   {{#mdc-data-table-content}}
-    {{#mdc-data-table-row rowId="u0" as |r|}}
-      {{mdc-data-table-cell checkbox=true}}
-      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell id=r.rowId}}Arcus watch slowdown{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Medium{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Triaged{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Allison Brie{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
-
-    {{#mdc-data-table-row rowId="u1" as |r|}}
-      {{mdc-data-table-cell checkbox=true}}
-      {{#mdc-data-table-cell}}Offline{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell id=r.rowId}}monarch: prod shared ares-managed-features-provider-heavy{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Huge{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Triaged{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Brie Larson{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
-
-    {{#mdc-data-table-row rowId="u2" as |r|}}
-      {{mdc-data-table-cell checkbox=true}}
-      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell id=r.rowId}}monarch: prod shared ares-managed-features-provider-heavy{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Minor{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Not triaged{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Jeremy Lake{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
-
-    {{#mdc-data-table-row rowId="u3" as |r|}}
-      {{mdc-data-table-cell checkbox=true}}
-      {{#mdc-data-table-cell}}Online{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell id=r.rowId}}Arcus watch slowdown{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Negligible{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Not triaged{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell numeric=true}}0:33{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Angelina Cheng{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
+    {{#each dataTable.data as |signal|}}
+      {{#mdc-data-table-row data=signal}}
+        {{mdc-data-table-cell checkbox=true}}
+        {{#mdc-data-table-cell}}{{signal.status}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.name}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.severity}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.stage}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell numeric=true}}{{signal.time}}{{/mdc-data-table-cell}}
+        {{#mdc-data-table-cell}}{{signal.roles}}{{/mdc-data-table-cell}}
+      {{/mdc-data-table-row}}
+    {{/each}}
   {{/mdc-data-table-content}}
 {{/mdc-data-table}}
 
@@ -96,6 +69,6 @@
 
 <ul>
   {{#each selected as |selection|}}
-    <li>{{selection}}</li>
+    <li>{{selection.id}}</li>
   {{/each}}
 </ul>

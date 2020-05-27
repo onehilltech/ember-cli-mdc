@@ -5,12 +5,21 @@ import layout from '../templates/components/mdc-data-table';
 
 const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
+import { map, bool } from '@ember/object/computed';
 import { isPresent, isEmpty } from '@ember/utils';
 import { A } from '@ember/array';
 
-function noOp () {
+function noOp () { }
 
+// This function is taken from lodash. Instead of importing the entire lodash library into the ember
+// application. We just need this one function.
+function isString (value) {
+  return typeof value === 'string' || value instanceof String;
+}
+
+function getRowId (item) {
+  return isString (item) ? item : get (item, 'id');
 }
 
 export default Component.extend({
@@ -29,7 +38,14 @@ export default Component.extend({
   _mdcDataTableSelectedAllListener: null,
   _mdcDataTableUnselectedAllListener: null,
 
+  /// Check if the data table has data objects.
+  hasData: bool ('data'),
+
+  /// The collection of selected items.
   selected: null,
+
+  /// The row ids for the selected items.
+  selectedRowIds: map ('selected', getRowId),
 
   init () {
     this._super (...arguments);
@@ -50,7 +66,7 @@ export default Component.extend({
       this.set ('selected', A ());
     }
     else {
-      this._dataTable.setSelectedRowIds (this.selected);
+      this._dataTable.setSelectedRowIds (this.selectedRowIds);
     }
   },
 
@@ -80,7 +96,8 @@ export default Component.extend({
   },
 
   _mdcDataTableSelectedAll () {
-    this.selected.addObjects (this._dataTable.getSelectedRowIds ());
+    let values = this.hasData ? this.data : this._dataTable.getSelectedRowIds ();
+    this.selected.addObjects (values);
 
     // Send notification to the subclass.
     this.didSelectAll ();
@@ -97,11 +114,17 @@ export default Component.extend({
     // Update the collection of selected elements ids.
     const { detail } = ev;
 
+    // If we are working with data models, then use the index of the selected row to
+    // locate the correct value. If we are not working with data models, then we can
+    // just use the row id.
+
+    let value = this.hasData ? this.data[detail.rowIndex] : detail.rowId;
+
     if (detail.selected) {
-      this.selected.addObject (detail.rowId);
+      this.selected.addObject (value);
     }
     else {
-      this.selected.removeObject (detail.rowId);
+      this.selected.removeObject (value);
     }
 
     // Notify the parent component that the data table selection has changed.
