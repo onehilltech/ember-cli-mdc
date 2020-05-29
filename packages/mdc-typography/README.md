@@ -8,16 +8,10 @@ Installation
 
     ember install ember-cli-mdc-typography
 
-Usage
+Components & Modifiers
 -----------------------
 
-### Modifiers
-
-* [`{{mdc-typography}}`](#typography-mixin)
-
-### Other Topics
-* [Configuring automatic integration](#configuring-automatic-integration)
-* [Roboto Font](#roboto-font)
+* [`{{mdc-typography}}`](#`{{mdc-typography}}`)
 
 `{{mdc-typography}}`
 ----------------------
@@ -45,6 +39,12 @@ The `typography` value must be one of the following values:
 * `caption`
 * `button`
 * `overline`
+
+Other Topics
+-------------------
+ 
+* [Configuring automatic integration](#configuring-automatic-integration)
+* [Roboto Font](#roboto-font)
 
 Configuring Automatic Integration
 ------------------------------------
