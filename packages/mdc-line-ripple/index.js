@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+<<<<<<< HEAD
   name: 'ember-cli-mdc-line-ripple',
 
   included (app) {
@@ -27,4 +28,7 @@ module.exports = {
     return options;
 
   }
+=======
+  name: require('./package').name
+>>>>>>> e54cfebe... v3.3.0...v3.18.0
 };
