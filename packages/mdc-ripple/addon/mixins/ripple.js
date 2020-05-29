@@ -15,7 +15,7 @@ export default Mixin.create ({
   attributeBindings: ['unbounded:data-mdc-ripple-is-unbounded'],
 
   mdcRippleColorClassName: computed ('rippleColor', function () {
-    const rippleColor = this.get ('rippleColor');
+    const rippleColor = this.rippleColor;
     return isPresent (rippleColor) ? `mdc-ripple-surface--${rippleColor}` : null;
   }),
 

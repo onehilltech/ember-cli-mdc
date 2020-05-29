@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-ripple/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/addon/mixins/ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/addon/mixins/ripple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/integration/components/mdc-ripple-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/integration/components/mdc-ripple-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/tests/unit/mixins/ripple-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/tests/unit/mixins/ripple-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +194,7 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="22604000" />
+      <workItem from="1590682484790" duration="23393000" />
     </task>
     <servers />
   </component>

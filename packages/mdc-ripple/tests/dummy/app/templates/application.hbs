@@ -1,9 +1,9 @@
 <h2 id="title">Welcome to Ember</h2>
 
 <div class="container">
-  {{#mdc-foo unbounded=false}}Bounded{{/mdc-foo}}
+  <MdcFoo @unbounded={{false}}>Bounded</MdcFoo>
 </div>
 
 <div class="container">
-  {{#mdc-foo unbounded=true}}Unbounded{{/mdc-foo}}
+  <MdcFoo @unbounded={{true}}>Unbounded</MdcFoo>
 </div>

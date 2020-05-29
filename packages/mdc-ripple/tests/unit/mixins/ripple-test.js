@@ -4,7 +4,7 @@ import { setupTest } from 'ember-qunit';
 import { Ripple } from 'ember-cli-mdc-ripple';
 import Object from '@ember/object';
 
-module ('-internal | Mixins | Ripple', function (hooks) {
+module('-internal | Mixins | Ripple', function (hooks) {
   setupTest (hooks);
 
   test ('should update the mdcRippleColorClassName', function (assert) {
