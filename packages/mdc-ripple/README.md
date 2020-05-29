@@ -3,22 +3,28 @@ ember-cli-mdc-ripple
 
 ember-cli addon for [`@material/ripple`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
-
 Installation
 ------------
 
     ember install ember-cli-mdc-ripple
     
+Components & Modifiers
+------------------------
+
+This add-on contains the following components and modifiers:
+
+* [{{mdc-ripple}}](#mdc-ripple)
+
+### mdc-ripple
+
+The `{{mdc-ripple}}` modifier adds a ripple effect to any html element.
+
+```handlebars
+<div {{mdc-ripple unbounded=[true|false]
+                  surfaceColor=[primary|accent]}} />
+```
+    
 Example Code
 ---------------
 
-Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
-use the components in this add-on.
+Please see `tests/dummy/app/templates` for example code.
