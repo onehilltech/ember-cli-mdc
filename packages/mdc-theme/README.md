@@ -55,4 +55,3 @@ The following a list of support text styles for dark and light properties:
 * `hint`
 * `disabled`
 * `icon`
-
