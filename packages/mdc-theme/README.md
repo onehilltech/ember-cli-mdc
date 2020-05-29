@@ -31,6 +31,11 @@ As shown in the example above, you use the `{{mdc-theme}}` modifier for a single
 want to change dynamically. You can also have more than one `{{mdc-theme}}` modifier attached
 to an element. 
 
+The `{{mdc-theme}}` modifier alone will not change the theme of the element. You still need
+to apply the appropriate class name to the element, or child elements. For example, you 
+still need to add the `mdc-theme--primary` class name to an element if you want to apply 
+the theme modifier in the example above.
+
 The following is a list of supported theme property names:
 
 * `primary`
