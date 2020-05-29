@@ -18,4 +18,10 @@
   <option value="overline">Overline</option>
 </select>
 
-{{#mdc-h1 class="mdc" typography=typography}}Typography{{/mdc-h1}}
+<h2>Using Mixins</h2>
+
+<MdcH1 @class="mdc" @typography={{typography}}>Typography</MdcH1>
+
+<h2>Using Modifiers</h2>
+
+<div class="mdc" {{mdc-typography typography}}>Typography</div>

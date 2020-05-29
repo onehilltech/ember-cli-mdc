@@ -30,7 +30,7 @@ export default Mixin.create ({
   typography: null,
 
   mdcTypographyClassName: computed ('typography', function () {
-    const typography = this.get ('typography');
+    const typography = this.typography;
 
     if (isEmpty (typography)) {
       return null;

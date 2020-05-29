@@ -1,4 +1,4 @@
-import { getWithDefault  } from '@ember/object';
+import { getWithDefault } from '@ember/object';
 import { isNone, isPresent } from '@ember/utils';
 
 export function initialize (app) {

@@ -3,7 +3,7 @@
 const { get } = require ('lodash');
 
 module.exports = {
-  name: 'ember-cli-mdc-typography',
+  name: require('./package').name,
 
   included (app) {
     this._super (...arguments);
