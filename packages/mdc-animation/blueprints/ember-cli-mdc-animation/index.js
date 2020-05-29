@@ -4,7 +4,7 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/animation', target: '3.1.0'}
+    {name: '@material/animation', target: '6.0.0'}
   ],
 
   addons: [

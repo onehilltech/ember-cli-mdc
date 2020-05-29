@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-base/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-base/addon/listener.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/config/optional-features.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/-internal/listener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +171,7 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="8428000" />
+      <workItem from="1590682484790" duration="8615000" />
     </task>
     <servers />
   </component>
