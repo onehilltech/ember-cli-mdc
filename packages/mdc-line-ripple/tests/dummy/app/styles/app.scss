@@ -1,0 +1,15 @@
+@use "@material/line-ripple/mixins" as line-ripple;
+
+.line-ripple-container {
+  margin-bottom: 16px;
+
+  height: 50px;
+  background-color: lightgrey;
+
+  position: relative;
+
+  .mdc-line-ripple {
+    @include line-ripple.active-color (red);
+    @include line-ripple.inactive-color (blue);
+  }
+}
