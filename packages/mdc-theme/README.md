@@ -8,8 +8,46 @@ Installation
 
     ember install ember-cli-mdc-theme
     
-Example Code
+Usage
 ---------------
 
-Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
-use the components in this add-on.
+Prior to the release of Ember Octane, themes had to be integrated at the component-level
+using an Ember Mixin. Although this worked, it meant you always had to create a component
+to make your themes dynamic. With the release of Ember Octane, we have migrated to using
+Ember modifiers to set themes dynamically.
+
+We use the `{{mdc-theme}}` modifier to change the theme of an element, and all its child
+elements.
+
+```handlebars
+<div 
+  {{mdc-theme "primary" "red"}}
+  {{mdc-theme "textPrimaryOnLight" textPrimaryOnLight}}>
+This is a div illustrates how to use the theme modifier.
+</div>
+```
+
+As shown in the example above, you use the `{{mdc-theme}}` modifier for a single theme you
+want to change dynamically. You can also have more than one `{{mdc-theme}}` modifier attached
+to an element. 
+
+The following is a list of supported theme property names:
+
+* `primary`
+* `secondary`
+* `background`
+* `surface`
+* `onPrimary`
+* `onSecondary`
+* `onSurface`
+* `text[STYLE]OnLight`, e.g., `textPrimaryOnLight`
+* `text[STYLE]OnDark`, e.g., `textPrimaryOnDark`
+
+The following a list of support text styles for dark and light properties:
+
+* `primary`
+* `secondary`
+* `hint`
+* `disabled`
+* `icon`
+
