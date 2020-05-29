@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +192,7 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="11799000" />
+      <workItem from="1590682484790" duration="12597000" />
     </task>
     <servers />
   </component>

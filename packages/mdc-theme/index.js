@@ -3,7 +3,7 @@
 const { get } = require ('lodash');
 
 module.exports = {
-  name: 'ember-cli-mdc-theme',
+  name: require('./package').name,
 
   contentFor (type, config) {
     if (type === 'head') {
