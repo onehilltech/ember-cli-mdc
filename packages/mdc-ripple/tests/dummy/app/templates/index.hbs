@@ -1,0 +1,18 @@
+<h2>Using Mixins</h2>
+<div class="container">
+  <MdcFoo @unbounded={{false}}>Bounded</MdcFoo>
+</div>
+
+<div class="container">
+  <MdcFoo @unbounded={{true}}>Unbounded</MdcFoo>
+</div>
+
+<h2>Using Modifiers</h2>
+<div class="container">
+  <span {{mdc-ripple unbounded=false}}>Bounded</span>
+</div>
+
+<div class="container">
+  <span {{mdc-ripple unbounded=true surfaceColor="primary"}}>Unbounded</span>
+  <span {{mdc-ripple unbounded=true surfaceColor="accent"}}>Unbounded</span>
+</div>
