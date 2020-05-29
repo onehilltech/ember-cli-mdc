@@ -7,9 +7,13 @@ Installation
 ------------
 
     ember install ember-cli-mdc-rtl
-    
-Example Code
----------------
+        
+Pre-Octane Support
+-------------------
 
-Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
-use the components in this add-on.
+Please see example code in `tests/dummy/app/templates` for examples of using rtl support
+in your application pre-octane. 
+
+If your application support Ember Octane, then this add-on
+is primarily needed for dependency inclusions. We now set the `dir` attribute directly on
+the corresponding element. 
