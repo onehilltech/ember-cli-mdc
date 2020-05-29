@@ -31,6 +31,20 @@
   <option value="light">Light</option>
 </select>
 
-<MdcDiv @class="demo" @themeBackground={{themeBackground}} @themeBackgroundColor="green" @themeText={{themeText}} @themeTextStyle={{themeTextStyle}} @theme={{theme}}>
+<h3>Using Mixins</h3>
+
+<MdcDiv @class="demo"
+        @themeBackground={{themeBackground}}
+        @themeText={{themeText}}
+        @themeTextStyle={{themeTextStyle}} @theme={{theme}}>
   THEME
 </MdcDiv>
+
+<h3>Using Modifiers</h3>
+
+<div class="demo mdc-theme--background"
+  {{mdc-theme "background" themeBackground}}>
+
+  THEME
+
+</div>
