@@ -11,10 +11,9 @@ Installation
 Components & Modifiers
 -----------------------
 
-* [`{{mdc-typography}}`](#`{{mdc-typography}}`)
+* [`{{mdc-typography}}`](#mdc-typography)
 
-`{{mdc-typography}}`
-----------------------
+### mdc-typography
 
 The `{{mdc-typography}}` modifier, when applied to an element, adds a `typography` attribute
 to the component. The typography attribute allows you to programmatically customize
