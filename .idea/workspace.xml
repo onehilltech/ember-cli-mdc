@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components/mdc-line-ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components/mdc-line-ripple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +176,7 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="36608000" />
+      <workItem from="1590682484790" duration="36987000" />
     </task>
     <servers />
   </component>
