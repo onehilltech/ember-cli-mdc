@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-shape/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-shape/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/helpers/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/tests/dummy/config/targets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/helpers/destroy-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/helpers/module-for-acceptance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/tests/helpers/start-app.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +194,7 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="20127000" />
+      <workItem from="1590682484790" duration="20601000" />
     </task>
     <servers />
   </component>
