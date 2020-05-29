@@ -63,7 +63,7 @@ export default Mixin.create ({
   themeText: null,
 
   mdcThemeTextClassName: computed ('themeText', function () {
-    const themeText = this.get ('themeText');
+    const themeText = this.themeText;
 
     if (isEmpty (themeText)) {
       return null;
@@ -95,7 +95,7 @@ export default Mixin.create ({
   themeTextStyle: null,
 
   mdcThemeClassName: computed ('{theme,themeTextStyle}', function () {
-    const {theme, themeTextStyle} = this.getProperties (['theme','themeTextStyle']);
+    const {theme, themeTextStyle} = this;
 
     if (isEmpty (theme) || isEmpty (themeTextStyle)) {
       return null;
@@ -126,7 +126,7 @@ export default Mixin.create ({
       textColorOnPrimary,
       textColorOnSecondary,
       textColorOnSurface
-    } = this.getProperties (['textColorOnPrimary', 'textColorOnSecondary', 'textColorOnSurface']);
+    } = this;
 
     if (isPresent (textColorOnPrimary)) {
       this.element.style.setProperty ('--mdc-theme-on-primary', textColorOnPrimary);

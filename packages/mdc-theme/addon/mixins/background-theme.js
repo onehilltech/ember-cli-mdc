@@ -30,7 +30,7 @@ export default Mixin.create ({
   themeBackground: null,
 
   mdcThemeBackgroundClassName: computed ('themeBackground', function () {
-    const themeBackground = this.get ('themeBackground');
+    const themeBackground = this.themeBackground;
 
     if (isEmpty (themeBackground)) {
       return null;

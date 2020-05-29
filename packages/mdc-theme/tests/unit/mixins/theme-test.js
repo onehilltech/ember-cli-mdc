@@ -4,7 +4,7 @@ import { setupTest } from 'ember-qunit';
 import { Theme } from 'ember-cli-mdc-theme';
 import Object from '@ember/object';
 
-module ('-internal | Mixins | Theme', function (hooks) {
+module('-internal | Mixins | Theme', function (hooks) {
   setupTest (hooks);
 
   test ('should update the themeClassName', function (assert) {
