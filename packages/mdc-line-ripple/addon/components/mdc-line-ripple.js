@@ -36,7 +36,7 @@ export default Component.extend({
   },
 
   _doActivate () {
-    const activate = this.get ('activate');
+    const activate = this.activate;
 
     if (activate) {
       this._lineRipple.activate ();
