@@ -8,7 +8,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-elevation'},
-    {name: 'ember-cli-mdc-tab-scroller'}
+    {name: 'ember-cli-mdc-elevation', target: '^1.0.0'},
+    {name: 'ember-cli-mdc-tab-scroller', target: '^1.0.0'}
   ]
 });

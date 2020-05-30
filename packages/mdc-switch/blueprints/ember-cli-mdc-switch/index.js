@@ -8,7 +8,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-elevation'},
-    {name: 'ember-cli-mdc-rtl'}
+    {name: 'ember-cli-mdc-elevation', target: '^1.0.0'},
+    {name: 'ember-cli-mdc-rtl', target: '^1.0.0'}
   ]
 });
