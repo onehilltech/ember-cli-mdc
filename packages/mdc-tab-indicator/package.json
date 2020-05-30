@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-indicator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ember-cli addons for @material/tab-indicator",
   "keywords": [
     "ember-addon",
@@ -43,10 +43,10 @@
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mdc-animation": "^1.0.0",
+    "ember-cli-mdc-animation": "^1.0.1",
     "ember-cli-mdc-base": "^1.0.0",
-    "ember-cli-mdc-icon": "^1.0.0",
-    "ember-cli-mdc-theme": "^1.0.0",
+    "ember-cli-mdc-icon": "^1.0.1",
+    "ember-cli-mdc-theme": "^1.0.1",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
