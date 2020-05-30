@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-data-table",
-  "version": "2.0.0-octane.1",
+  "version": "2.0.0-octane.2",
   "description": "ember-cli addon for @material/data-table",
   "keywords": [
     "ember-addon",
@@ -42,10 +42,10 @@
     "ember-cli-eslint": "^5.1.0",
     "ember-cli-inject-live-reload": "^1.8.2",
     "ember-cli-mdc-animation": "^2.0.0-octane.1",
-    "ember-cli-mdc-base": "^2.0.0-octane.0",
-    "ember-cli-mdc-checkbox": "^2.0.0-octane.1",
-    "ember-cli-mdc-form-field": "^2.0.0-octane.1",
-    "ember-cli-mdc-ripple": "^2.0.0-octane.1",
+    "ember-cli-mdc-base": "^2.0.0-octane.2",
+    "ember-cli-mdc-checkbox": "^2.0.0-octane.2",
+    "ember-cli-mdc-form-field": "^2.0.0-octane.2",
+    "ember-cli-mdc-ripple": "^2.0.0-octane.2",
     "ember-cli-mdc-rtl": "^2.0.0-octane.0",
     "ember-cli-mdc-theme": "^2.0.0-octane.1",
     "ember-cli-mdc-typography": "^2.0.0-octane.1",

@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-linear-progress",
-  "version": "2.0.0-octane.1",
+  "version": "2.0.0-octane.2",
   "description": "ember-cli addon for @material/linear-progress.",
   "keywords": [
     "ember-addon",
@@ -40,7 +40,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^2.0.0-octane.1",
-    "ember-cli-mdc-base": "^2.0.0-octane.0",
+    "ember-cli-mdc-base": "^2.0.0-octane.2",
     "ember-cli-mdc-theme": "^2.0.0-octane.1",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
