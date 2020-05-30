@@ -8,6 +8,6 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-floating-label'}
+    {name: 'ember-cli-mdc-floating-label', target: '^1.0.0'}
   ]
 });

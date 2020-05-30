@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-radio",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ember-cli addon for @material/radio.",
   "keywords": [
     "ember-addon",
@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.7.3",
-    "ember-cli-blueprint-helpers": "^0.4.5",
+    "ember-cli-blueprint-helpers": "^0.4.6",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-mdc-sass": "^1.0.0"
+    "ember-cli-mdc-sass": "^1.0.2"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
@@ -43,13 +43,13 @@
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-inject-live-reload": "^1.8.2",
-    "ember-cli-mdc-animation": "^1.0.0",
-    "ember-cli-mdc-base": "^1.0.0",
-    "ember-cli-mdc-form-field": "^1.0.0",
-    "ember-cli-mdc-ripple": "^1.0.0",
-    "ember-cli-mdc-rtl": "^1.0.0",
-    "ember-cli-mdc-theme": "^1.0.0",
-    "ember-cli-mdc-typography": "^1.0.0",
+    "ember-cli-mdc-animation": "^1.0.2",
+    "ember-cli-mdc-base": "^1.0.2",
+    "ember-cli-mdc-form-field": "^1.0.2",
+    "ember-cli-mdc-ripple": "^1.0.2",
+    "ember-cli-mdc-rtl": "^1.0.2",
+    "ember-cli-mdc-theme": "^1.0.2",
+    "ember-cli-mdc-typography": "^1.0.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",

@@ -8,7 +8,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-sass', blueprintOptions: {save: true}},
+    {name: 'ember-cli-mdc-sass', target: '^1.0.0', blueprintOptions: {save: true}},
     {name: 'ember-cli-custom-properties'}
   ],
 

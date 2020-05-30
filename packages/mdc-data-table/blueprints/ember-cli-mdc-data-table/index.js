@@ -8,6 +8,6 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-checkbox'},
+    {name: 'ember-cli-mdc-checkbox', target: '^1.0.0'},
   ]
 });
