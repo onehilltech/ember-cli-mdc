@@ -4,6 +4,25 @@ import Modifier from 'ember-modifier';
 const { MDCLineRipple } = mdc.lineRipple;
 
 /**
+ * The base class for all modifier states. The ModifierState class uses the State
+ * software design pattern. This helps us remove the unnecessary if-else, switch-case
+ * statements that can result from the modifier being in different states.
+ */
+class ModifierState {
+  didInstall () {
+
+  }
+
+  didReceiveArguments () {
+
+  }
+
+  willRemove () {
+
+  }
+}
+
+/**
  * The not installed state of the modifier.
  */
 class NotInstalled extends ModifierState { }
