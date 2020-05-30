@@ -8,7 +8,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-form-field'},
-    {name: 'ember-cli-mdc-ripple'}
+    {name: 'ember-cli-mdc-form-field', target: '^1.0.0'},
+    {name: 'ember-cli-mdc-ripple', target: '^1.0.0'}
   ]
 });

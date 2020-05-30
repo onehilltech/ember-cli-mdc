@@ -8,6 +8,6 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-button'}
+    {name: 'ember-cli-mdc-button', target: '^1.0.0'}
   ]
 });
