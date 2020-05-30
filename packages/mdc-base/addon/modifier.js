@@ -13,10 +13,10 @@ import { assert } from '@ember/debug';
  */
 export default class MaterialModifier extends Modifier {
   /// The current state of the modifier.
-  _state;
+  _currentState;
 
   constructor () {
-    super ();
+    super (...arguments);
 
     // Create the initial state for the modifier, and change to it.
     let initialState = this.createInitialState ();
@@ -28,7 +28,7 @@ export default class MaterialModifier extends Modifier {
    * does not provide one.
    */
   createInitialState () {
-    return new NotInstalled (this);
+    return new NotInstalled ();
   }
 
   /**
@@ -40,16 +40,19 @@ export default class MaterialModifier extends Modifier {
   changeState (state) {
     assert ('The state must be an instance of ModifierState', state instanceof ModifierState);
 
-    if (!!this._state) {
+    if (!!this._currentState) {
       // Notify the current state we are exiting.
-      this._state.willExitState ();
+      this._currentState.willExitState ();
+      this._currentState.modifier = null;
     }
 
-    this._state = state;
+    // Update the current state.
+    this._currentState = state;
 
-    if (!!this._state) {
+    if (!!this._currentState) {
       // Notify the new state we have entered.
-      this._state.didEnterState ();
+      this._currentState.modifier = this;
+      this._currentState.didEnterState ();
     }
   }
 
@@ -57,21 +60,32 @@ export default class MaterialModifier extends Modifier {
    * The modifier has been installed in an element.
    */
   didInstall () {
-    this._state.didInstall ();
+    this._currentState.didInstall ();
   }
 
   /**
    * The modifier has received new arguments.
    */
   didReceiveArguments () {
-    this._state.didReceiveArguments ();
+    this._currentState.didReceiveArguments ();
+  }
+
+  didUpdateArguments () {
+    this._currentState.didUpdateArguments ();
   }
 
   /**
    * The modifier will be removed from the element.
    */
   willRemove () {
-    this._state.willRemove ();
+    this._currentState.willRemove ();
+  }
+
+  /**
+   * The modifier will be destroyed.
+   */
+  willDestroy () {
+    this._currentState.willDestroy ();
   }
 }
 
@@ -83,10 +97,6 @@ export default class MaterialModifier extends Modifier {
 class ModifierState {
   /// The modifier that owns the state.
   modifier;
-
-  constructor (modifier) {
-    this.modifier = modifier;
-  }
 
   /**
    * Get the element attached to the modifier.
@@ -104,6 +114,15 @@ class ModifierState {
    */
   get args () {
     return this.modifier.args;
+  }
+
+  /**
+   * Change to a new state.
+   *
+   * @param state
+   */
+  changeState (state) {
+    this.modifier.changeState (state);
   }
 
   /**
@@ -135,9 +154,23 @@ class ModifierState {
   }
 
   /**
+   * The modifier updated its arguments.
+   */
+  didUpdateArguments () {
+
+  }
+
+  /**
    * The modifier is being removed from the element.
    */
   willRemove () {
+
+  }
+
+  /**
+   * The modifier will be destroyed.
+   */
+  willDestroy () {
 
   }
 }
