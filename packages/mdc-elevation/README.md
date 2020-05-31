@@ -3,6 +3,15 @@ ember-cli-mdc-elevation
 
 ember-cli addon for [`@material/elevation`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation).
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------
 
@@ -19,6 +28,7 @@ none
 
 * [Elevation](#elevation)
 
+<<<<<<< HEAD
 Elevation
 -----------
 
@@ -42,6 +52,9 @@ export default Component.extend (Elevation, {
 ### Attributes
 
 * `elevation` - Sets the elevation for the component. Acceptable values are 1 - 12.
+=======
+See the [Contributing](CONTRIBUTING.md) guide for details.
+>>>>>>> f6323ede... v3.3.0...v3.18.0
 
 
 

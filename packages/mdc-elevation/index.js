@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+<<<<<<< HEAD
   name: 'ember-cli-mdc-elevation',
 
   optionsFor (type, options) {
@@ -16,4 +17,7 @@ module.exports = {
 
     return options;
   }
+=======
+  name: require('./package').name
+>>>>>>> f6323ede... v3.3.0...v3.18.0
 };

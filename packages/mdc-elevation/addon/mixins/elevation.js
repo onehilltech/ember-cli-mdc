@@ -6,7 +6,7 @@ export default Mixin.create ({
   classNameBindings: ['mdcElevationClassName', 'elevationTransition:mdc-elevation-transition'],
 
   mdcElevationClassName: computed ('elevation', function () {
-    const elevation = this.get ('elevation');
+    const elevation = this.elevation;
     return isPresent (elevation) ? `mdc-elevation--z${elevation}` : null;
   }),
 
