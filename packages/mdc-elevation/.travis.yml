@@ -56,17 +56,6 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-classic
 
 before_install:
-<<<<<<< HEAD
-  - npm config set spin false
-  - npm install -g npm@4
-  - npm --version
-
-script:
-  - npm run lint:js
-  # Usually, it's ok to finish the test scenario without reverting
-  #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
-=======
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 
@@ -75,4 +64,3 @@ install:
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
->>>>>>> f6323ede... v3.3.0...v3.18.0

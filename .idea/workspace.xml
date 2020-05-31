@@ -2,20 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-elevation/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-elevation/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/material-components-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/material-components-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/material-components-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/material-components-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/addon/mixins/elevation.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/addon/mixins/elevation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/unit/mixins/elevation-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/unit/mixins/elevation-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
