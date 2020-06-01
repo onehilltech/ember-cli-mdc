@@ -1,6 +1,8 @@
 /* eslint-env node */
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
+const { version } = require ('../../package.json');
+const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
@@ -8,8 +10,8 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-list'},
-    {name: 'ember-cli-mdc-base'},
-    {name: 'ember-cli-mdc-elevation'}
+    {name: 'ember-cli-mdc-list', target},
+    {name: 'ember-cli-mdc-base', target},
+    {name: 'ember-cli-mdc-elevation', target}
   ]
 });
