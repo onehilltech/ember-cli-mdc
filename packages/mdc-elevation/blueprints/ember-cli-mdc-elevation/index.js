@@ -2,6 +2,9 @@
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
 const { version } = require ('../../package.json');
+const semver = require ('semver');
+
+
 
 module.exports = Blueprint.extend ({
   packages: [
