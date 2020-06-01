@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-utils/lib/target.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-utils/lib/target.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
