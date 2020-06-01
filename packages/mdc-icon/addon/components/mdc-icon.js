@@ -1,20 +1,5 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-icon';
+import Component from '@glimmer/component';
 
-import { computed } from '@ember/object';
+export default class MdcIcon extends Component {
 
-import TextTheme from 'ember-cli-mdc-theme/mixins/text-theme';
-
-export default Component.extend (TextTheme, {
-  layout,
-
-  tagName: 'i',
-
-  classNames: ['material-icons'],
-
-  icon: computed ('params.[]', function () {
-    return this.params[0];
-  })
-}).reopenClass ({
-  positionalParams: 'params'
-});
+}
