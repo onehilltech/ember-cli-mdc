@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import Component from 'ember-cli-mdc-base/component';
 
 export default class MdcIcon extends Component {
 
