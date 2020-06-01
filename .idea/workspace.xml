@@ -20,26 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-icon/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/config/optional-features.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/tests/integration/components/mdc-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/tests/integration/components/mdc-icon-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +199,7 @@
       <workItem from="1590607523417" duration="268000" />
       <workItem from="1590682484790" duration="46368000" />
       <workItem from="1590966208530" duration="4356000" />
-      <workItem from="1591048011598" duration="325000" />
+      <workItem from="1591048011598" duration="747000" />
     </task>
     <servers />
   </component>
