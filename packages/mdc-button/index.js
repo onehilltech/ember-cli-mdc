@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-<<<<<<< HEAD
-  name: 'ember-cli-mdc-button',
+  name: require('./package').name,
 
   optionsFor (type, options) {
     if (type === 'sass') {
@@ -22,7 +21,4 @@ module.exports = {
 
     return options;
   }
-=======
-  name: require('./package').name
->>>>>>> 00c2151e... v3.3.0...v3.18.0
 };

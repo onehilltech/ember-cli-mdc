@@ -1,16 +1,7 @@
 ember-cli-mdc-button
 ======================
 
-ember-cli addon for [`@material/button`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-button).
-
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
+ember-cli addon for [`@material/button`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-button)
 
 Installation
 ------------
@@ -65,7 +56,6 @@ or the block version:
 
 ### Attributes
 
-<<<<<<< HEAD
 * `style` - The button style. Must either be one of the following string values: `raised`, `unelevated`, or `outlined`
 * `dense` - The button is dense
 * `disabled` - The button is in a disabled state
@@ -105,10 +95,6 @@ exported from this module.
 ```handlebars
 {{!-- The button label is the first parameter for inline links. --}}
 {{mdc-button-linkto "Contact Us" "contact" style="unelevated"}}
-=======
-See the [Contributing](CONTRIBUTING.md) guide for details.
->>>>>>> 00c2151e... v3.3.0...v3.18.0
-
 
 {{#mdc-button-linkto "user" user.id style="raised"}}
   {{#mdc-button-label}}Contact Us{{/mdc-button-label}}
