@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+<<<<<<< HEAD
   name: 'ember-cli-mdc-button',
 
   optionsFor (type, options) {
@@ -21,4 +22,7 @@ module.exports = {
 
     return options;
   }
+=======
+  name: require('./package').name
+>>>>>>> 00c2151e... v3.3.0...v3.18.0
 };

@@ -1,11 +1,11 @@
 {{#unless (has-block)}}
-  {{mdc-button-ripple}}
+  <MdcButtonRipple />
 
   {{#if leadingIcon}}
     {{mdc-button-icon leadingIcon}}
   {{/if}}
 
-  {{#mdc-button-label}}{{label}}{{/mdc-button-label}}
+  <MdcButtonLabel>{{label}}</MdcButtonLabel>
 
   {{#if trailingIcon}}
     {{mdc-button-icon trailingIcon}}

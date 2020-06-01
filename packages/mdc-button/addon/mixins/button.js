@@ -17,7 +17,7 @@ export default Mixin.create (Theme, Ripple, {
   createRippleComponent: true,
 
   mdcStyleClassName: computed ('style', function () {
-    const style = this.get ('style');
+    const style = this.style;
     return isPresent (style) ? `mdc-button--${style}` : null;
   }),
 });

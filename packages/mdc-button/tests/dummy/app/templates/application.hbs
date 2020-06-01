@@ -1,39 +1,39 @@
 <h2 id="title">Material Design Buttons</h2>
 
 <h3>Default Button</h3>
-{{mdc-button label="Default (inline)"}}
+<MdcButton @label="Default (inline)" />
 
-{{#mdc-button}}
-  {{#mdc-button-label}}Default (block){{/mdc-button-label}}
-{{/mdc-button}}
+<MdcButton>
+  <MdcButtonLabel>Default (block)</MdcButtonLabel>
+</MdcButton>
 
 <h3>Button Styles</h3>
-{{mdc-button style="raised" label="Raised"}}
+<MdcButton @style="raised" @label="Raised" />
 
-{{mdc-button style="outlined" label="Outlined"}}
-{{mdc-button style="unelevated" label="Unelevated"}}
+<MdcButton @style="outlined" @label="Outlined" />
+<MdcButton @style="unelevated" @label="Unelevated" />
 
 <h3>Dense Button</h3>
-{{mdc-button dense=true label="Dense"}}
+<MdcButton @dense={{true}} @label="Dense" />
 
 <h3>Disabled Button</h3>
-{{mdc-button disabled=true style="outlined" label="Disabled"}}
+<MdcButton @disabled={{true}} @style="outlined" @label="Disabled" />
 
 <h3>Button Icon</h3>
 
-{{mdc-button style="raised" leadingIcon="event" label="Add to Calendar"}}
+<MdcButton @style="raised" @leadingIcon="event" @label="Add to Calendar" />
 
-{{mdc-button style="raised" trailingIcon="check" label="Submit"}}
+<MdcButton @style="raised" @trailingIcon="check" @label="Submit" />
 
 <h3>Link Button</h3>
 
 {{mdc-button-linkto "Go Forward (Inline)" "dummy" style="raised" trailingIcon="arrow_forward"}}
 
 {{#mdc-button-linkto "dummy" style="raised"}}
-  {{#mdc-button-label}}Go Forward (Block){{/mdc-button-label}}
+  <MdcButtonLabel>Go Forward (Block)</MdcButtonLabel>
   {{mdc-button-icon "arrow_forward"}}
 {{/mdc-button-linkto}}
 
 <h3>Themed Button</h3>
 
-{{#mdc-button style="raised" themePrimaryColor="white"}}Theme Button{{/mdc-button}}
+<MdcButton @style="raised" @themePrimaryColor="white">Theme Button</MdcButton>
