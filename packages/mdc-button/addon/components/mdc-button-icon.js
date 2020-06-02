@@ -1,11 +1,5 @@
-import IconComponent from 'ember-cli-mdc-icon/components/mdc-icon';
+import MdcIconComponent from 'ember-cli-mdc-icon/components/mdc-icon';
 
-export default IconComponent.extend ({
-  classNames: ['mdc-button__icon'],
+export default class MdcButtonIconComponent extends MdcIconComponent {
 
-  didInsertElement () {
-    this._super (...arguments);
-
-    this.element.setAttribute ('aria-hidden', true);
-  }
-});
+}
