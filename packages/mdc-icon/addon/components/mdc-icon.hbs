@@ -1,1 +1,7 @@
-<i class="material-icons {{if @type @type}}" ...attributes>{{@icon}}</i>
+{{#unless (has-block)}}
+  <i class="material-icons {{if @type @type}}" ...attributes>{{@icon}}</i>
+{{else}}
+  <svg class="{{if @type @type}}" ...attributes>
+    {{yield}}
+  </svg>
+{{/unless}}
