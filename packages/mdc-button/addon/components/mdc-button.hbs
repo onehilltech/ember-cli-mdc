@@ -1,10 +1,15 @@
-<button class="mdc-button {{if @style (concat "mdc-button--" @style)}}"
-        {{did-insert this.didInsert}}>
-  <div class="mdc-button__ripple"></div>
+<button class="mdc-button {{if @style (concat "mdc-button--" @style)}}" {{did-insert this.didInsert}} disabled={{@disabled}}>
+  <MdcButtonRipple />
 
   {{#if @icon}}
     <MdcButtonIcon @icon={{@icon}} />
   {{/if}}
 
-  <span class="mdc-button__label">{{@label}}</span>
+  {{#if @label}}
+    <MdcButtonLabel @label={{@label}} />
+  {{/if}}
+
+  {{#if @trailingIcon}}
+    <MdcButtonIcon @icon={{@trailingIcon}} />
+  {{/if}}
 </button>

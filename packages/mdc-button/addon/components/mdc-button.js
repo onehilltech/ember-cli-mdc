@@ -1,6 +1,5 @@
 import Component from 'ember-cli-mdc-base/component';
 import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
 
 const { MDCRipple } = mdc.ripple;
 

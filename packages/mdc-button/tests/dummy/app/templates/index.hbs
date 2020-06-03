@@ -1,0 +1,26 @@
+<h2 id="title">Material Design Buttons</h2>
+
+<h3>Default Button</h3>
+<MdcButton @label="Default (inline)" />
+
+<MdcButton>
+  <MdcButtonLabel>Default (block)</MdcButtonLabel>
+</MdcButton>
+
+<h3>Button Styles</h3>
+
+<MdcButton @style="raised" @label="Raised" />
+<MdcButton @style="outlined" @label="Outlined" />
+<MdcButton @style="unelevated" @label="Unelevated" />
+
+<h3>Disabled Button</h3>
+<MdcButton @disabled={{true}} @style="outlined" @label="Disabled" />
+
+<h3>Button Icon</h3>
+
+<MdcButton @style="raised" @icon="event" @label="Add to Calendar" />
+<MdcButton @style="raised" @trailingIcon="check" @label="Submit" />
+
+<h3>Link Button</h3>
+
+<MdcButtonLinkTo @route="dummy" @label="Go Forward (Inline)" @style="raised" @icon="exit_to_app" />
