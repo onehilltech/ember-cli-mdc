@@ -1,15 +1,19 @@
 <button class="mdc-button {{if @style (concat "mdc-button--" @style)}}" {{did-insert this.didInsert}} disabled={{@disabled}}>
   <MdcButtonRipple />
 
-  {{#if @icon}}
-    <MdcButtonIcon @icon={{@icon}} />
-  {{/if}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#if @icon}}
+      <MdcButtonIcon @icon={{@icon}} />
+    {{/if}}
 
-  {{#if @label}}
-    <MdcButtonLabel @label={{@label}} />
-  {{/if}}
+    {{#if @label}}
+      <MdcButtonLabel @label={{@label}} />
+    {{/if}}
 
-  {{#if @trailingIcon}}
-    <MdcButtonIcon @icon={{@trailingIcon}} />
+    {{#if @trailingIcon}}
+      <MdcButtonIcon @icon={{@trailingIcon}} />
+    {{/if}}
   {{/if}}
 </button>
