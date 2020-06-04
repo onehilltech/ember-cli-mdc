@@ -6,7 +6,7 @@ const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/icon-button', target: '3.2.0'}
+    {name: '@material/icon-button', target: '6.0.0'}
   ],
 
   addons: [
