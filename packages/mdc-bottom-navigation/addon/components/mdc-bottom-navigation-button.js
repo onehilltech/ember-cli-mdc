@@ -1,8 +1,5 @@
-import Component from '@ember/component';
-import BottomNavigationButtonMixin from '../mixins/bottom-navigation-button';
+import Component from 'ember-cli-mdc-base/component';
 
-import layout from '../templates/components/mdc-bottom-navigation-button';
+export default class MdcBottomNavigationButton extends Component {
 
-export default Component.extend (BottomNavigationButtonMixin, {
-  layout
-});
+}

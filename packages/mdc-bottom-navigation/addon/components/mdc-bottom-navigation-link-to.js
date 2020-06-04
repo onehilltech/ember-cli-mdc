@@ -1,12 +1,21 @@
 import LinkComponent from '@ember/routing/link-component';
-import BottomNavigationButtonMixin from '../mixins/bottom-navigation-button';
+const { MDCRipple } = mdc.ripple;
 
-import layout from '../templates/components/mdc-bottom-navigation-link-to';
+export default class MdcBottomNavigationLinkComponent extends LinkComponent {
+  classNames = ['mdc-bottom-navigation__button', 'mdc-bottom-navigation__link'];
+  classNameBindings = ['active:mdc-bottom-navigation--active', 'label:mdc-bottom-navigation__button--with-label', 'horizontal:mdc-bottom-navigation__button--horizontal'];
 
-export default LinkComponent.extend (BottomNavigationButtonMixin, {
-  layout,
+  didInsertElement () {
+    super.didInsertElement ();
 
-  classNames: ['mdc-bottom-navigation__link'],
+    this._ripple = new MDCRipple (this.element);
+    this._ripple.unbounded = true;
+    this.element.setAttribute ('data-mdc-ripple-is-unbounded', '');
+  }
 
-  activeClass: 'mdc-bottom-navigation--active'
-});
+  willDestroyElement () {
+    super.willDestroyElement ();
+
+    this._ripple.destroy ();
+  }
+}

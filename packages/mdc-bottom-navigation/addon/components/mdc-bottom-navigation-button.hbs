@@ -1,0 +1,12 @@
+<div class="mdc-bottom-navigation__button {{if @label 'mdc-bottom-navigation__button--with-label'}} {{if @horizontal 'mdc-bottom-navigation__button--horizontal'}}"
+    {{mdc-ripple unbounded=true}}>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    <MdcIcon @icon={{@icon}} />
+
+    {{#if @label}}
+      <MdcBottomNavigationButtonLabel @label={{@label}} />
+    {{/if}}
+  {{/if}}
+</div>

@@ -1,7 +1,9 @@
-<MdcBottomNavigation>
-  {{mdc-bottom-navigation-link-to "Favorites" "favorites" icon="favorite" label="Favorites"}}
+<MdcBottomNavigation @spaceEvenly={{true}}>
+  <MdcBottomNavigationLinkTo @label="Home" @route="index" @icon="home" />
 
-  {{mdc-bottom-navigation-link-to "Favorites" "music" icon="music_note"}}
+  <MdcBottomNavigationLinkTo @label="Favorites" @route="favorites" @icon="favorite" />
 
-  {{mdc-bottom-navigation-link-to "Favorites" "library" icon="library_books"}}
+  <MdcBottomNavigationLinkTo @label="Music" @route="music" @icon="music_note" />
+
+  <MdcBottomNavigationLinkTo @label="Library" @route="library" @icon="library_books" />
 </MdcBottomNavigation>

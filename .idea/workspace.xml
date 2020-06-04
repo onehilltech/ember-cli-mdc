@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-utils" />
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
@@ -58,11 +59,14 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-base]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-base">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-bottom-navigation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-bottom-navigation">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
@@ -135,6 +139,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-base]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
@@ -205,7 +210,7 @@
       <workItem from="1590966208530" duration="4356000" />
       <workItem from="1591048011598" duration="5717000" />
       <workItem from="1591116962298" duration="9162000" />
-      <workItem from="1591152543142" duration="15070000" />
+      <workItem from="1591152543142" duration="19187000" />
     </task>
     <servers />
   </component>
@@ -255,36 +260,36 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591106290444">
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591282836368">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591106290444" />
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591282836368" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="250" key="GridCell.Tab.0.bottom" timestamp="1591226164816">
+    <state width="1659" height="250" key="GridCell.Tab.0.bottom" timestamp="1591286633115">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1591226164816" />
+    <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1591286633115" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="239" key="GridCell.Tab.0.bottom/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="250" key="GridCell.Tab.0.center" timestamp="1591226164815">
+    <state width="1659" height="250" key="GridCell.Tab.0.center" timestamp="1591286633114">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1591226164815" />
+    <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1591286633114" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="239" key="GridCell.Tab.0.center/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.left" timestamp="1591226164814">
+    <state width="1659" height="250" key="GridCell.Tab.0.left" timestamp="1591286633114">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1591226164814" />
+    <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1591286633114" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="239" key="GridCell.Tab.0.left/0.23.1680.970@0.23.1680.970" timestamp="1583506402926" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.right" timestamp="1591226164816">
+    <state width="1659" height="250" key="GridCell.Tab.0.right" timestamp="1591286633115">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1591226164816" />
+    <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1591286633115" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="239" key="GridCell.Tab.0.right/0.23.1680.970@0.23.1680.970" timestamp="1583506402927" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />

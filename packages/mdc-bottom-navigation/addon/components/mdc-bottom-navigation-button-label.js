@@ -1,8 +1,5 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-bottom-navigation-button-label';
+import Component from 'ember-cli-mdc-base/component';
 
-export default Component.extend({
-  layout,
+export default class MdcBottomNavigationButtonLabel extends Component {
 
-  classNames: ['mdc-bottom-navigation__label']
-});
+}
