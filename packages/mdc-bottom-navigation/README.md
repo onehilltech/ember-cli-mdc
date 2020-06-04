@@ -18,9 +18,10 @@ Components
 
 This package contains the following top-level components.
 
-* [`{{mdc-bottom-navigation}}`](#mdc-bottom-navigation)
+* [`MdcBottomNavigation`](#MdcBottomNavigation)
+* [`MdcBottomNavigationLinkTo`](#MdcBottomNavigationLinkTo)
 
-mdc-bottom-navigation
+MdcBottomNavigation
 ---------------------
 
 ### Description
@@ -30,26 +31,22 @@ Adds a bottom navigation component to a page
 ### Usage
 
 ```handlebars
-{{#mdc-bottom-navigation spaceEvenly=[false|true]}}
+<MdcBottomNavigation @spaceEvenly=[false|true]}}>
   <!-- links go here -->
-{{/mdc-bottom-navigation}}
+</MdcBottomNavigation>
 ```
 
-### Attributes
+#### Attributes
 
-* `spaceEvenly` - Space the buttons evenly as opposed to centered. Default is `false`.
+* `@spaceEvenly` - Space the buttons evenly as opposed to centered. Default is `false`.
 
-### Adding links to the bottom navigation
+### MdcBottomNavigationLinkTo
 
-Use the `{{mdc-bottom-navigation-link-to}}` component to add links to the bottom 
-navigation component.
+Use the `MdcBottomNavigationLinkTo`, which extends the `LinkComponent`, component to add 
+links to the bottom navigation component.
 
 ```handlebars
-{{#mdc-bottom-navigation spaceEvenly=[false|true]}}
-  {{mdc-bottom-navigation-link-to "Favorites" routeName icon="favorites" label="Favorites"}}
-{{/mdc-bottom-navigation}}
+<MdcBottomNavigation @spaceEvenly=[false|true]>
+  <MdcBottomNavigationLinkTo @label="Favorites" @icon="favorites" @route={{this.routeName}}  />
+</MdcBottomNavigation>
 ```
-
-The `mdc-bottom-navigation-link-to` extends the `LinkComponent`. When using the `mdc-bottom-navigation-link-to`
-in inline form, the first parameter is the link title and the second parameter is the target route. The
-`label` attribute is optional.
