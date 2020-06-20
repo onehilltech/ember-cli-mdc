@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-layout",
-  "version": "2.0.0-octane.8",
+  "version": "2.0.0-octane.9",
   "description": "Support package for responsible layout design.",
   "keywords": [
     "ember-addon",
@@ -26,7 +26,7 @@
   "dependencies": {
     "ember-cli-babel": "^7.7.3",
     "ember-cli-blueprint-helpers": "^0.4.7",
-    "ember-cli-mdc-utils": "^2.0.0-octane.8"
+    "ember-cli-mdc-utils": "^2.0.0-octane.9"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
