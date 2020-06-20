@@ -14,8 +14,10 @@ export default class MaterialComponent extends Component {
    */
   willDestroy () {
     if (!!this._mdcComponent) {
-      // Instruct all registered listeners to stop listening for events.
-      this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
+      if (!!this._listeners) {
+        // Instruct all registered listeners to stop listening for events.
+        this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
+      }
     }
   }
 
@@ -36,7 +38,9 @@ export default class MaterialComponent extends Component {
     this._mdcComponent = mdcComponent;
 
     // Start listening for events.
-    this._listeners.forEach (listener => listener.listen (this._mdcComponent));
+    if (!!this._listeners) {
+      this._listeners.forEach (listener => listener.listen (this._mdcComponent));
+    }
   }
 
   // The collection of registered listeners.

@@ -10,6 +10,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-button', target}
+    {name: 'ember-cli-mdc-button', target},
+    {name: '@ember/render-modifiers'}
   ]
 });

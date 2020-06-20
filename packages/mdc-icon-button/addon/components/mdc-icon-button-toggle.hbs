@@ -1,0 +1,12 @@
+<button class="mdc-icon-button"
+        aria-label={{@label}}
+        data-aria-label-on={{@on.label}}
+        data-aria-label-off={{@off.label}}
+        {{did-insert this.didInsert}}
+        {{did-update this.didUpdateElement}}
+        disabled={{@disabled}}>
+
+  <MdcIconButtonIcon @icon={{@iconOn.icon}} @on={{true}} />
+  <MdcIconButtonIcon @icon={{@iconOff.icon}} />
+
+</button>
