@@ -15,18 +15,19 @@ export default class MaterialComponent extends Component {
   willDestroy () {
     if (!!this._mdcComponent) {
       if (!!this._listeners) {
-        // Instruct all registered listeners to stop listening for events.
         this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
       }
     }
   }
 
   /**
-   * @private
+   * Get the underlying material design component.
    *
-   * Instance of the vanilla material design component.
+   * @returns {*}
    */
-  _mdcComponent;
+  get component () {
+    return this._mdcComponent;
+  }
 
   /**
    * A material design component has been created.
@@ -43,21 +44,15 @@ export default class MaterialComponent extends Component {
     }
   }
 
-  // The collection of registered listeners.
-  _listeners;
-
   /**
    * Register an event for the material design component.
    *
    * @param eventName
-   * @param methodName
+   * @param handler
    * @private
    */
-  _registerMdcEventListener (eventName, methodName) {
-    let method = get (this, methodName);
-    let handler = method.bind (this);
-    let listener = new Listener (this, eventName, handler);
-
+  _registerMdcEventListener (eventName, handler) {
+    let listener = new Listener (eventName, handler);
     (this._listeners = this._listeners || []).push (listener);
   }
 }

@@ -1,6 +1,7 @@
 /* global mdc */
 
 import Component from 'ember-cli-mdc-base/component';
+import listener  from 'ember-cli-mdc-base/listener';
 import { action } from '@ember/object';
 
 const { MDCIconButtonToggle } = mdc.iconButton;
@@ -8,21 +9,14 @@ const { MDCIconButtonToggle } = mdc.iconButton;
 function noOp () {}
 
 export default class MdcIconButtonToggle extends Component {
-  /// Parent action for the toggle event.
-  //toggle: undefined,
-
-  /// The material design component.
-  //_iconToggleButton: null,
-  //_changeEventListener: null,
-
-  init () {
-    this._super (...arguments);
-
-    this._changeEventListener = this.didChange.bind (this);
+  get isOn () {
+    return this.args.on || false;
   }
 
   @action
   didInsert (element) {
+    console.log (this._listeners);
+
     // Set the attributes on the element.
     element.setAttribute ('aria-hidden', true);
     element.setAttribute ('aria-pressed', false);
@@ -30,23 +24,18 @@ export default class MdcIconButtonToggle extends Component {
     let iconToggleButton = new MDCIconButtonToggle (element);
     this._mdcComponentCreated (iconToggleButton);
 
-    // Initialize the on button, then set the listener. We do not want the listener
-    // being called just for initializing the button.
-    const { on = false } = this.args;
-
-    iconToggleButton.on = on;
+    iconToggleButton.on = this.isOn;
   }
 
   @action
-  didUpdateElement (element) {
-    const { on = false } = this.args;
-
-    if (on !== this._iconToggleButton.on) {
-      this._iconToggleButton.on = on;
-    }
+  toggle (element, [on]) {
+    this._mdcComponent.on = on;
   }
 
-  didChange ({detail: {isOn}}) {
+  @listener ('MDCIconButtonToggle:change')
+  changed (ev) {
+    console.log (ev);
+
     // Update the on state to reflect the changes, then notify the action that
     // there was a change in state.
 
