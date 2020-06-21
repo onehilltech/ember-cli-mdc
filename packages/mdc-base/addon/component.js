@@ -48,11 +48,13 @@ export default class MaterialComponent extends Component {
    * Register an event for the material design component.
    *
    * @param eventName
-   * @param handler
+   * @param method
    * @private
    */
-  _registerMdcEventListener (eventName, handler) {
+  _registerMdcEventListener (eventName, method) {
+    let handler = method.bind (this);
     let listener = new Listener (eventName, handler);
+
     (this._listeners = this._listeners || []).push (listener);
   }
 }

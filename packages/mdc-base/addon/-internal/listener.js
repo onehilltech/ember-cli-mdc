@@ -5,12 +5,12 @@ export default class Listener {
   /// Name of the event being listened for.
   eventName;
 
-  /// The method handling the event.
-  method;
+  /// The handler handling the event.
+  handler;
 
-  constructor (eventName, method) {
+  constructor (eventName, handler) {
     this.eventName = eventName;
-    this.method = method;
+    this.handler = handler;
   }
 
   /**
@@ -19,7 +19,7 @@ export default class Listener {
    * @param mdcComponent
    */
   listen (mdcComponent) {
-    mdcComponent.listen (this.eventName, this.method);
+    mdcComponent.listen (this.eventName, this.handler);
   }
 
   /**
@@ -28,6 +28,6 @@ export default class Listener {
    * @param mdcComponent
    */
   unlisten (mdcComponent) {
-    mdcComponent.unlisten (this.eventName, this.method);
+    mdcComponent.unlisten (this.eventName, this.handler);
   }
 }
