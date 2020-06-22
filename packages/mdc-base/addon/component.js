@@ -13,11 +13,7 @@ export default class MaterialComponent extends Component {
    * any resources being leaked.
    */
   willDestroy () {
-    if (!!this._mdcComponent) {
-      if (!!this._listeners) {
-        this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
-      }
-    }
+    this.cleanup ();
   }
 
   /**
@@ -30,17 +26,32 @@ export default class MaterialComponent extends Component {
   }
 
   /**
+   * Cleanup any resources used by the component.
+   */
+  cleanup () {
+    if (!!this._mdcComponent) {
+      if (!!this._listeners) {
+        this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
+      }
+    }
+  }
+
+  /**
    * A material design component has been created.
    *
    * @param mdcComponent
    * @private
    */
   _mdcComponentCreated (mdcComponent) {
+    // Cleanup any resources in use.
+    this.cleanup ();
+
+    // Save the component.
     this._mdcComponent = mdcComponent;
 
     // Start listening for events.
     if (!!this._listeners) {
-      this._listeners.forEach (listener => listener.listen (this._mdcComponent));
+      this._listeners.forEach (listener => listener.listen (this));
     }
   }
 
@@ -52,9 +63,27 @@ export default class MaterialComponent extends Component {
    * @private
    */
   _registerMdcEventListener (eventName, method) {
-    let handler = method.bind (this);
-    let listener = new Listener (eventName, handler);
-
+    let listener = new Listener (eventName, method);
     (this._listeners = this._listeners || []).push (listener);
+  }
+
+  /**
+   * Listen for an event.
+   *
+   * @param eventName
+   * @param method
+   */
+  listen (eventName, method) {
+    return this._mdcComponent.listen (eventName, method);
+  }
+
+  /**
+   * Stop listening for an event.
+   *
+   * @param eventName
+   * @param method
+   */
+  unlisten (eventName, method) {
+    return this._mdcComponent.unlisten (eventName, method);
   }
 }

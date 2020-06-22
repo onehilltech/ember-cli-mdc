@@ -8,12 +8,9 @@ import MaterialComponent from './component';
  */
 export default function registerListener (eventName) {
   return function (target, key, desc) {
-    if (target.constructor !== undefined && typeof target.constructor.proto === 'function') {
-      target.constructor.proto ();
-    }
-
     assert ('The target must be an instance of MaterialComponent', (target instanceof MaterialComponent));
     target._registerMdcEventListener (eventName, desc.value);
+
+    return desc;
   }
 }
-

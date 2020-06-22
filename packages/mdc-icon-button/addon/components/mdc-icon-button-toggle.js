@@ -15,13 +15,13 @@ export default class MdcIconButtonToggle extends Component {
 
   @action
   didInsert (element) {
-    console.log (this._listeners);
-
     // Set the attributes on the element.
     element.setAttribute ('aria-hidden', true);
     element.setAttribute ('aria-pressed', false);
 
     let iconToggleButton = new MDCIconButtonToggle (element);
+    //iconToggleButton.listen ('MDCIconButtonToggle:change', this.didChange.bind (this));
+
     this._mdcComponentCreated (iconToggleButton);
 
     iconToggleButton.on = this.isOn;
@@ -32,14 +32,15 @@ export default class MdcIconButtonToggle extends Component {
     this._mdcComponent.on = on;
   }
 
-  @listener ('MDCIconButtonToggle:change')
-  changed (ev) {
-    console.log (ev);
-
+  @listener('MDCIconButtonToggle:change')
+  didChange ({detail: isOn}) {
     // Update the on state to reflect the changes, then notify the action that
     // there was a change in state.
 
-    this.set ('on', isOn);
-    this.getWithDefault ('toggle', noOp) (isOn);
+    this.changed (isOn);
+  }
+
+  get changed () {
+    return this.args.changed || function () { return true };
   }
 }

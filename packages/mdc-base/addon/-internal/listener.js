@@ -6,28 +6,29 @@ export default class Listener {
   eventName;
 
   /// The handler handling the event.
-  handler;
+  method;
 
-  constructor (eventName, handler) {
+  constructor (eventName, method) {
     this.eventName = eventName;
-    this.handler = handler;
+    this.method = method;
   }
 
   /**
    * Listen for events on a material design component.
    *
-   * @param mdcComponent
+   * @param component
    */
-  listen (mdcComponent) {
-    mdcComponent.listen (this.eventName, this.handler);
+  listen (component) {
+    this.handler = this.method.bind (component);
+    component.listen (this.eventName, this.handler);
   }
 
   /**
    * Stop listening for events on the material design component.
    *
-   * @param mdcComponent
+   * @param component
    */
-  unlisten (mdcComponent) {
-    mdcComponent.unlisten (this.eventName, this.handler);
+  unlisten (component) {
+    component.unlisten (this.eventName, this.handler);
   }
 }
