@@ -81,6 +81,6 @@ An icon button with toggle states.
   <MdcIconButtonToggle @on={{this.on}}
                        @iconOn={{hash icon="favorite"}}
                        @iconOff={{hash icon="favorite_border"}}
-                       @label="Add to favorites"
+                       @label={{"Add to favorites"}}
                        @onChange={{this.onChange}} />
 ```
