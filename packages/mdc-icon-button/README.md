@@ -26,12 +26,12 @@ An icon that behaves like a button.
 ### Usage
 
 ```handlebars
-{{mdc-icon-button name disabled=[true|false]}}
+<MdcIconButton @icon={{name}} />
 ```
 
 ### Attributes
 
-* `@inon` - Name of an icon.
+* `@icon` - Name of an icon.
 
 The component also support the standard HTML attributes allowed on the `<button>` element.
 
@@ -61,8 +61,8 @@ An icon button with toggle states.
 
 ```handlebars
   <MdcIconButtonToggle @on={{this.on}}
-                       @iconOn={{hash icon=icon}}
-                       @iconOff={{hash icon=icon}}
+                       @iconOn={{hash icon=name}}
+                       @iconOff={{hash icon=name}}
                        @label={{label}}
                        @onChange={{action}} />
 ```
@@ -72,7 +72,7 @@ An icon button with toggle states.
 * `@iconOn` - Hash of properties for the icon when the button is on.
 * `@iconOff` - Hash of properties for the icon when the button is off.
 * `@on` - The initial state of the toggle button.
-* `label` - ARIA label for accessibility.
+* `@label` - ARIA label for accessibility.
 * `@onChange` - Action called when the button is toggled.
 
 ### Examples
