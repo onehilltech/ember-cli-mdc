@@ -4,7 +4,7 @@
         data-aria-label-off={{@off.label}}
         {{did-insert this.didInsert}}
         {{did-update this.toggle @on}}
-        disabled={{@disabled}}>
+        ...attributes>
 
   <MdcIconButtonIcon @icon={{@iconOn.icon}} @on={{true}} />
   <MdcIconButtonIcon @icon={{@iconOff.icon}} />

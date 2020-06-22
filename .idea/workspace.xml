@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
@@ -216,7 +219,7 @@
       <workItem from="1591116962298" duration="9162000" />
       <workItem from="1591152543142" duration="26558000" />
       <workItem from="1592539085454" duration="22126000" />
-      <workItem from="1592840030240" duration="2534000" />
+      <workItem from="1592840030240" duration="5038000" />
     </task>
     <servers />
   </component>
@@ -271,28 +274,28 @@
     </state>
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="250" key="GridCell.Tab.0.bottom" timestamp="1592842761494">
+    <state width="1659" height="250" key="GridCell.Tab.0.bottom" timestamp="1592843443146">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592842761494" />
+    <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592843443146" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="250" key="GridCell.Tab.0.center" timestamp="1592842761493">
+    <state width="1659" height="250" key="GridCell.Tab.0.center" timestamp="1592843443145">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592842761493" />
+    <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592843443145" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.left" timestamp="1592842761492">
+    <state width="1659" height="250" key="GridCell.Tab.0.left" timestamp="1592843443145">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592842761492" />
+    <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592843443145" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.right" timestamp="1592842761493">
+    <state width="1659" height="250" key="GridCell.Tab.0.right" timestamp="1592843443145">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592842761493" />
+    <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592843443145" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
     <state width="584" height="445" key="SwitcherDM" timestamp="1591033040065">

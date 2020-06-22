@@ -6,7 +6,7 @@ import { action } from '@ember/object';
 
 const { MDCIconButtonToggle } = mdc.iconButton;
 
-function noOp () {}
+function noOp () { return true }
 
 export default class MdcIconButtonToggle extends Component {
   get isOn () {
@@ -20,8 +20,6 @@ export default class MdcIconButtonToggle extends Component {
     element.setAttribute ('aria-pressed', false);
 
     let iconToggleButton = new MDCIconButtonToggle (element);
-    //iconToggleButton.listen ('MDCIconButtonToggle:change', this.didChange.bind (this));
-
     this._mdcComponentCreated (iconToggleButton);
 
     iconToggleButton.on = this.isOn;
@@ -32,15 +30,18 @@ export default class MdcIconButtonToggle extends Component {
     this._mdcComponent.on = on;
   }
 
+  @action
+  clicked () {
+    this.onClick (...arguments);
+  }
+
   @listener('MDCIconButtonToggle:change')
   didChange (ev) {
     // Update the on state to reflect the changes, then notify the action that
     // there was a change in state.
 
-    this.onChanged (ev);
+    this.onChange (ev);
   }
 
-  get onChanged () {
-    return this.args.onChanged || function () { return true };
-  }
+  get onChange () { return this.args.onChange || noOp; }
 }

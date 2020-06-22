@@ -13,10 +13,10 @@ Components
 
 This package contains the following top-level components.
 
-* [`{{mdc-icon-button}}`](#mdc-icon-button)
-* [`{{mdc-icon-button-toggle}}`](#mdc-icon-button-toggle)
+* [`MdcIconButton`](#MdcIconButton)
+* [`MdcIconButtonToggle`](#MdcIconButtonToggle)
 
-mdc-icon-button
+MdcIconButton
 ---------------------
 
 ### Description
@@ -31,25 +31,26 @@ An icon that behaves like a button.
 
 ### Attributes
 
-* `name` - Name of an icon.
-* `disabled` - The button is in a disabled state.
+* `@inon` - Name of an icon.
+
+The component also support the standard HTML attributes allowed on the `<button>` element.
 
 ### Examples
 
 ```handlebars
-{{mdc-icon-button "favorite"}}
-{{mdc-icon-button "favorite" disabled=true}}
+<MdcIconButton @icon="favorite" />
+<MdcIconButton @icon="favorite" disabled={{this.disabled}} />
 ```
 
 ### Listening for Button Clicks
 
-Use the `click` attribute and the `action` helper to listen for button clicks.
+Use the `@onClick` argument to listen for button clicks.
 
 ```handlebars
-{{mdc-icon-button "favorite" click=(action "favorited")}}
+<MdcIconButton @icon="favorite" @onClick={{this.onClick}} />
 ```
 
-mdc-icon-button-toggle
+MdcIconButtonToggle
 --------------------------
 
 ### Description
@@ -59,25 +60,27 @@ An icon button with toggle states.
 ### Usage
 
 ```handlebars
-{{mdc-icon-button-toggle iconOn iconOff
-                         on=on
-                         label=label
-                         toggle=toggle}}
+  <MdcIconButtonToggle @on={{this.on}}
+                       @iconOn={{hash icon=icon}}
+                       @iconOff={{hash icon=icon}}
+                       @label={{label}}
+                       @onChange={{action}} />
 ```
 
 ### Attributes
 
-* `iconOn` - Name of the icon shown when toggle is on.
-* `iconOff` - Name of the icon shown when the toggle is off.
-* `on` - Attribute the gets/sets the toggle state.
+* `@iconOn` - Hash of properties for the icon when the button is on.
+* `@iconOff` - Hash of properties for the icon when the button is off.
+* `@on` - The initial state of the toggle button.
 * `label` - ARIA label for accessibility.
-* `toggle` - Action called when the button is toggled.
+* `@onChange` - Action called when the button is toggled.
 
 ### Examples
 
 ```handlebars
-{{mdc-icon-button-toggle "favorite" "favorite_border"
-                         on=on
-                         label="Add to favorites"
-                         toggle=(action (mut state))}}
+  <MdcIconButtonToggle @on={{this.on}}
+                       @iconOn={{hash icon="favorite"}}
+                       @iconOff={{hash icon="favorite_border"}}
+                       @label="Add to favorites"
+                       @onChange={{this.onChange}} />
 ```

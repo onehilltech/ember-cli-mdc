@@ -12,7 +12,12 @@ export default class IndexController extends Controller {
   }
 
   @action
-  onChanged ({ detail: { isOn }}) {
+  onChange ({ detail: { isOn }}) {
     this.on = isOn;
+  }
+
+  @action
+  onClick () {
+    alert ('The icon was clicked...');
   }
 }
