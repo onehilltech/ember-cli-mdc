@@ -1,0 +1,23 @@
+<h3>Icon Button</h3>
+
+<MdcIconButton @icon="favorite" />
+<MdcIconButton @icon="favorite" disabled=true />
+
+<h3>Icon Button Toggle</h3>
+
+<MdcIconButtonToggle @iconOn={{hash icon="favorite"}}
+                     @iconOff={{hash icon="favorite_border"}}
+                     @label="Add to favorites" />
+
+<hr />
+
+<div><button {{on "click" this.toggle}}>Toggle Initial State</button></div>
+<div>
+  <MdcIconButtonToggle @on={{this.on}}
+                       @iconOn={{hash icon="favorite"}}
+                       @iconOff={{hash icon="favorite_border"}}
+                       @label="Add to favorites" />
+</div>
+<div><b>State:</b> {{this.on}}</div>
+<div><b>Observed State:</b> {{this.state}}</div>
+
