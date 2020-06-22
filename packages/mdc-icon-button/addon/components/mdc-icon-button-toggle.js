@@ -33,14 +33,14 @@ export default class MdcIconButtonToggle extends Component {
   }
 
   @listener('MDCIconButtonToggle:change')
-  didChange ({detail: isOn}) {
+  didChange (ev) {
     // Update the on state to reflect the changes, then notify the action that
     // there was a change in state.
 
-    this.changed (isOn);
+    this.onChanged (ev);
   }
 
-  get changed () {
-    return this.args.changed || function () { return true };
+  get onChanged () {
+    return this.args.onChanged || function () { return true };
   }
 }

@@ -16,8 +16,9 @@
   <MdcIconButtonToggle @on={{this.on}}
                        @iconOn={{hash icon="favorite"}}
                        @iconOff={{hash icon="favorite_border"}}
-                       @label="Add to favorites" />
+                       @label="Add to favorites"
+                       @onChanged={{this.onChanged}}
+  />
 </div>
 <div><b>State:</b> {{this.on}}</div>
-<div><b>Observed State:</b> {{this.state}}</div>
 
