@@ -1,4 +1,4 @@
-<button class="mdc-button {{if @style (concat "mdc-button--" @style)}}" {{did-insert this.didInsert}} ...attributes>
+<button class="mdc-button {{if @type @type}} {{if @style (concat "mdc-button--" @style)}}" {{did-insert this.didInsert}} ...attributes>
   <MdcButtonRipple />
 
   {{#if (has-block)}}

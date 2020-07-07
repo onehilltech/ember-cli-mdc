@@ -1,9 +1,5 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  classNames: ['mdc-card__actions'],
+export default class MdcCardActions extends Component {
 
-  classNameBindings: ['fullBleed:mdc-card__actions--full-bleed'],
-
-  fullBleed: false,
-});
+}
