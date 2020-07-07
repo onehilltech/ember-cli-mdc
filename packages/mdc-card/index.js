@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-<<<<<<< HEAD
-  name: 'ember-cli-mdc-card',
+  name: require('./package').name,
 
   optionsFor (type, options) {
     if (type === 'sass') {
@@ -24,8 +23,5 @@ module.exports = {
 
     return options;
   }
-=======
-  name: require('./package').name
->>>>>>> c5293e44... v3.3.0...v3.18.0
 };
 

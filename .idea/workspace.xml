@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-link-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-link-to-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-buttons-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-buttons-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-toggle-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-toggle-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icons-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icons-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-actions-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-link-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-link-to-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-content-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-primary-action-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-primary-action-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +63,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-card]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -83,6 +74,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-card]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-card">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-chips]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-chips">
@@ -154,6 +148,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-card]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
@@ -276,36 +271,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591289150669">
-      <screen x="0" y="23" width="1680" height="961" />
-    </state>
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594144720320">
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594147968484">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594144720320" />
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1594147968484" />
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594148083713">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594148083713" />
     <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594144720319">
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594148083712">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594144720319" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594148083712" />
     <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594144720319">
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594148083711">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594144720319" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594148083711" />
     <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592849348248" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594144720320">
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594148083712">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594144720320" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594148083712" />
     <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
