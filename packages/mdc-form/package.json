@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-form",
-  "version": "2.0.0-octane.14",
+  "version": "2.0.0-octane.15",
   "description": "ember-cli addon for material component forms",
   "keywords": [
     "ember-addon",
@@ -30,7 +30,7 @@
     "ember-cli-babel": "^7.7.3",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^3.0.0",
-    "ember-cli-mdc-utils": "^2.0.0-octane.14"
+    "ember-cli-mdc-utils": "^2.0.0-octane.15"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
