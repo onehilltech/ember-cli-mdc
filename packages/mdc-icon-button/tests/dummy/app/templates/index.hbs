@@ -1,6 +1,6 @@
 <h3>Icon Button</h3>
 
-<MdcIconButton @icon="favorite" @onClick={{this.onClick}} />
+<MdcIconButton @icon="favorite" {{on "click" this.onClick}} />
 <MdcIconButton @icon="favorite" disabled={{true}} />
 
 <h3>Icon Button Toggle</h3>
