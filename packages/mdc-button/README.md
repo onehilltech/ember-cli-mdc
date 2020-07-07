@@ -13,53 +13,44 @@ Components
 
 This package contains the following top-level components.
 
-* [`{{mdc-button}}`](#mdc-button)
-* [`{{mdc-button-linkto}}`](#mdc-button-linkto)
+* [`<MdcButton>`](#MdcButton)
+* [`<MdcButtonLinkTo>`](#MdcButtonLinkTo)
 
-mdc-button
+MdcButton
 ---------------------
 
 ### Description
 
-Add a button element to the parent.
+Add a button element to the page.
 
 ### Usage
 
 The inline version:
 
 ```handlebars
-{{mdc-button style=[raised|unelevated|outlined]
-             dense=[true|false]
-             disabled=[true|false]
-             type=type
-             label=label
-             leadingIcon=icon
-             trailingIcon=icon}}
+<MdcButton @style=[raised|unelevated|outlined]
+           @label=label
+           @leadingIcon=icon
+           @trailingIcon=icon />
 ```
 
 or the block version:
 
 ```handlebars
-{{#mdc-button style=[raised|unelevated|outlined]
-              dense=[true|false]
-              disabled=[true|false]
-              type=type}}
-  {{!-- leading icon (optional) --}}
-  {{mdc-button-icon icon}}
-  
-  {{#mdc-button-label}}Label{{/mdc-button-label}}
-  
-  {{!-- trailing icon (optional) --}}
-  {{mdc-button-icon icon}}
-{{/mdc-button}}
+<MdcButton @style=[raised|unelevated|outlined]>
+  <!-- optional leading icon -->
+  <MdcButtonIcon @icon=icon />
+
+  <MdcButtonLabel>Button Label</MdcButtonLabel>
+
+  <!-- optional trailing icon -->
+  <MdcButtonIcon @icon=icon />
+</MdcButton>
 ```
 
 ### Attributes
 
 * `style` - The button style. Must either be one of the following string values: `raised`, `unelevated`, or `outlined`
-* `dense` - The button is dense
-* `disabled` - The button is in a disabled state
-* `type` - The type of button (*e.g.*, submit or reset)
 * `label` - The button label
 * `leadingIcon` - Icon displayed before the label
 * `trailingIcon` - Icon displayed after the label
@@ -67,8 +58,8 @@ or the block version:
 ### Examples
 
 ```handlebars
-{{mdc-button style="raised" label="Button"}}
-{{mdc-button style="outlined" label="Button"}}
+<MdcButton @style="raised" @label="Button" />
+<MdcButton @style="outlined" @label="Button" />
 ```
 
 ### Listening for Button Clicks
@@ -76,10 +67,18 @@ or the block version:
 Use the `click` attribute and the `action` helper to listen for button clicks.
 
 ```handlebars
-{{mdc-button style="raised" label="Button" click=(action "clicked")}}
+<MdcButtton @style="raised" @label="Button" {{on "click" this.clicked}} />
 ```
 
-mdc-button-linkto
+### HTML attributes
+
+The button also supports the standard HTML attributes of a button:
+
+```handlebars
+<MdcButtton @style="raised" @label="Button" {{on "click" this.clicked}} disabled={{this.disabled}} />
+```
+
+MdcButtonLinkTo
 ---------------------
 
 The `{{mdc-button-linkto}}` components will bind the button to a route, which means you
