@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-link-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-link-to-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-buttons-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-buttons-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-toggle-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icon-toggle-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icons-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-icons-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-actions-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-link-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-link-to-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-media-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-primary-action-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-primary-action-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -14,7 +14,7 @@ export default Component.extend({
   scale: null,
 
   scaleClassName: computed ('scale', function () {
-    const scale = this.get ('scale');
+    const scale = this.scale;
     return isPresent ('scale') ? `mdc-card__media--${scale}` : null;
   })
 });
