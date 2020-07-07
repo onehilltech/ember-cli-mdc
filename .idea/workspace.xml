@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/addon/components/mdc-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -61,7 +64,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -270,27 +273,31 @@
     </state>
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="250" key="GridCell.Tab.0.bottom" timestamp="1592849348249">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594134834578">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594134834578" />
     <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="250" key="GridCell.Tab.0.center" timestamp="1592849348249">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594134834577">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594134834577" />
     <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.left" timestamp="1592849348248">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594134834577">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594134834577" />
     <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592849348248" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="250" key="GridCell.Tab.0.right" timestamp="1592849348249">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594134834578">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594134834578" />
     <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
@@ -306,9 +313,10 @@
       <screen x="0" y="23" width="1680" height="962" />
     </state>
     <state x="505" y="231" key="run.anything.popup/0.23.1680.962@0.23.1680.962" timestamp="1590717478330" />
-    <state x="502" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1591209948021">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state x="502" y="232" width="670" height="674" key="search.everywhere.popup" timestamp="1594131647079">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state x="502" y="232" width="670" height="674" key="search.everywhere.popup/0.23.1680.958@0.23.1680.958" timestamp="1594131647079" />
     <state x="502" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.961@0.23.1680.961" timestamp="1591209948021" />
   </component>
 </project>
