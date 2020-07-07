@@ -1,12 +1,9 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-card-media';
 
 import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 export default Component.extend({
-  layout,
-
   classNames: ['mdc-card__media'],
   classNameBindings: ['scaleClassName'],
 

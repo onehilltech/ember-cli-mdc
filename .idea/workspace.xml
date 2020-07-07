@@ -21,9 +21,30 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icon-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icon-toggle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media-content.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media-content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-primary-action.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-primary-action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/mixins/card-action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/mixins/card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-action-buttons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-buttons.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-action-icon-toggle.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icon-toggle.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-action-icons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-icons.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-actions.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-actions.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-media-content.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media-content.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-media.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-media.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card-primary-action.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-primary-action.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/templates/components/mdc-card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +69,19 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-icon/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio" />
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-icon/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-card]: dummy application">
@@ -277,31 +298,31 @@
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1594147968484" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594148083713">
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594149923265">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594148083713" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594149923265" />
     <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594148083712">
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594149923265">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594148083712" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594149923265" />
     <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594148083711">
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594149923265">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594148083711" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594149923265" />
     <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592849348248" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594148083712">
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594149923265">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594148083712" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594149923265" />
     <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />

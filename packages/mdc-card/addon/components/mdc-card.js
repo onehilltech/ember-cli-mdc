@@ -1,9 +1,7 @@
-import Component from '@ember/component';
+import Component from 'ember-cli-mdc-base/component';
 
-import CardMixin from '../mixins/card';
-
-import layout from '../templates/components/mdc-card';
-
-export default Component.extend (CardMixin, {
-  layout
-});
+export default class MdcCardComponent extends Component {
+  get outlined () {
+    return this.args.outlined || false;
+  }
+}
