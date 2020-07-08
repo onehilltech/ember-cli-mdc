@@ -20,7 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/blueprints/ember-cli-mdc-layout-grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/blueprints/ember-cli-mdc-layout-grid/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid-cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid-cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid-inner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/templates/components/mdc-layout-grid-cell.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid-cell.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/templates/components/mdc-layout-grid-inner.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components/mdc-layout-grid-inner.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/addon/templates/components/mdc-layout-grid.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-cell-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-cell-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-inner-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-inner-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/tests/integration/components/mdc-layout-grid-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,14 +84,14 @@
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-layout]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-layout-grid]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -104,6 +135,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-layout-grid]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout-grid">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-layout]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout">
@@ -163,6 +197,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-icon]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-line-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-layout]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-layout-grid]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-list]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-menu]: dummy application" />
@@ -276,37 +311,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594168942989">
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594179106746">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1594168942989" />
+    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1594179106746" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594169997237">
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594225864741">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594169997237" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594225864741" />
     <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594169997236">
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594225864741">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594169997236" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594225864741" />
     <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594169997235">
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594225864740">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594169997235" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594225864740" />
     <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592849348248" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594169997236">
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594225864741">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594169997236" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594225864741" />
     <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
@@ -314,9 +349,10 @@
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state width="584" height="445" key="SwitcherDM/0.23.1680.961@0.23.1680.961" timestamp="1591033040065" />
-    <state x="539" y="241" width="596" height="522" key="find.popup" timestamp="1590959555714">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state x="539" y="240" width="596" height="522" key="find.popup" timestamp="1594224225635">
+      <screen x="0" y="23" width="1680" height="958" />
     </state>
+    <state x="539" y="240" width="596" height="522" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1594224225635" />
     <state x="539" y="241" width="596" height="522" key="find.popup/0.23.1680.961@0.23.1680.961" timestamp="1590959555714" />
     <state x="505" y="231" key="run.anything.popup" timestamp="1590717478330">
       <screen x="0" y="23" width="1680" height="962" />

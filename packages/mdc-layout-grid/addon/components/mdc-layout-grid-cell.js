@@ -1,82 +1,43 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-layout-grid-cell';
+import Component from '@glimmer/component';
 
 import { computed } from '@ember/object';
-import { isPresent, isNone } from '@ember/utils';
-
 import { assert } from '@ember/debug';
 
 const ALIGNMENTS = ['top','middle','bottom'];
 
-function computedColumns (dependent, device) {
-  return computed (dependent, function () {
-    const columns = this.get (dependent);
+function span (argument, device) {
+  return computed (`args.${argument}`, function () {
+    let columns = this.args[argument];
+    assert (`The ${columns} must be between 1 and 12.`, columns >= 1 && columns <= 12);
 
-    if (isNone (columns)) {
-      return null;
-    }
-
-    assert (`The ${dependent} must be between 1 and 12.`, columns >= 1 && columns <= 12);
-    return isPresent (device) ? `mdc-layout-grid__cell--span-${columns}-${device}` : `mdc-layout-grid__cell--span-${columns}`;
+    return `mdc-layout-grid__cell--span-${columns}${!!device ? `-${device}` : ''}`;
   });
 }
 
-export default Component.extend({
-  layout,
+export default class MdcLayoutGridCellComponent extends Component {
+  @span('columns')
+  columnsClassName;
 
-  classNames: ['mdc-layout-grid__cell'],
+  @span('phoneColumns', 'phone')
+  phoneColumnsClassName;
 
-  classNameBindings: [
-    'alignmentClassName',
-    'orderClassName',
-    'columnsClassName',
-    'phoneColumnsClassName',
-    'tabletColumnsClassName',
-    'desktopColumnsClassName'
-  ],
+  @span('tabletColumns', 'tablet')
+  tabletColumnsClassName;
 
-  /// The alignment of the entire grid.
-  alignment: null,
+  @span('desktopColumns', 'desktop')
+  desktopColumnsClassName;
 
-  /// The order of the cell.
-  order: null,
+  get alignmentClassName () {
+    let { alignment } = this.args;
 
-  /// The number of columns the cell spans.
-  columns: null,
-
-  /// The number of columns the cell spans on a phone.
-  phoneColumns: null,
-
-  /// The number of columns the cell spans on a tablet.
-  tabletColumns: null,
-
-  /// The number of columns the cell spans on a desktop.
-  desktopColumns: null,
-
-  alignmentClassName: computed ('alignment', function () {
-    const alignment = this.get ('alignment');
-
-    if (isNone (alignment)) {
-      return null;
-    }
-
-    assert ('The alignment must be one of the following: top, middle, bottom.', ALIGNMENTS.includes (alignment));
+    assert (`The alignment must be one of the following values.`, ALIGNMENTS.includes (alignment));
     return `mdc-layout-grid__cell--align-${alignment}`;
-  }),
+  }
 
-  orderClassName: computed ('order', function () {
-    const order = this.get ('order');
-
-    if (isNone (order)) {
-      return;
-    }
+  get orderClassName () {
+    let { order } = this.args;
 
     assert ('The order must be between 1 and 12.', order >= 1 && order <= 12);
     return `mdc-layout-grid__cell--order-${order}`;
-  }),
-
-  columnsClassName: computedColumns ('columns'),
-  phoneColumnsClassName: computedColumns ('phoneColumns', 'phone'),
-  tabletColumnsClassName: computedColumns ('tabletColumns', 'tablet'),
-  desktopColumnsClassName: computedColumns ('desktopColumns', 'desktop')
-});
+  }
+}
