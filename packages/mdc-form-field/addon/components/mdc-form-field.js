@@ -1,8 +1,11 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-form-field';
+import Component from '@glimmer/component';
 
-import FormFieldMixin from '../mixins/form-field';
+export default class MdcFormFieldComponent extends Component {
+  get alignEnd () {
+    return this.args.alignEnd || false;
+  }
 
-export default Component.extend (FormFieldMixin, {
-  layout
-});
+  get noWrap () {
+    return this.args.noWrap || false;
+  }
+}
