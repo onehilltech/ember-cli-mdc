@@ -1,53 +1,62 @@
 import Service from '@ember/service';
+import { tracked } from "@glimmer/tracking";
 
 import { gte, lt, and } from '@ember/object/computed';
-import { isPresent } from '@ember/utils';
 
 const BREAKPOINT_PHONE = 0;
 const BREAKPOINT_TABLET = 480;
 const BREAKPOINT_DESKTOP = 840;
 
-export default Service.extend ({
-  width: null,
+export default class LayoutService extends Service {
+  @tracked
+  width = null;
 
   /// The layout is for a phone.
-  isPhone: and ('_minWidthPhone', '_maxWidthPhone'),
+  @and ('_minWidthPhone', '_maxWidthPhone')
+  isPhone;
 
   /// The layout is for a tablet.
-  isTablet: and ('_minWidthTablet', '_maxWidthTablet'),
+  @and ('_minWidthTablet', '_maxWidthTablet')
+  isTablet;
 
   /// The layout is for a desktop.
-  isDesktop: gte ('width', BREAKPOINT_DESKTOP),
+  @gte ('width', BREAKPOINT_DESKTOP)
+  isDesktop;
 
-  _resizeEventListener: null,
+  _resizeEventListener = null;
 
-  init () {
-    this._super (...arguments);
+  constructor () {
+    super (...arguments);
 
     this._resizeEventListener = this.didResize.bind (this);
 
     if (window) {
       window.addEventListener ('resize', this._resizeEventListener);
-
-      this.set ('width', window.outerWidth);
+      this.width = window.outerWidth;
     }
-  },
+  }
 
-  destroy () {
-    this._super (...arguments);
+  willDestroy () {
+    super.willDestroy ();
 
     if (window) {
       window.removeEventListener ('resize', this._resizeEventListener);
     }
-  },
+  }
 
   didResize () {
-    this.set ('width', window.outerWidth);
-  },
+    this.width = window.innerWidth;
+  }
 
-  _minWidthPhone: gte ('width', BREAKPOINT_PHONE),
-  _maxWidthPhone: lt ('width', BREAKPOINT_TABLET),
+  @gte ('width', BREAKPOINT_PHONE)
+  _minWidthPhone;
 
-  _minWidthTablet: gte ('width', BREAKPOINT_TABLET),
-  _maxWidthTablet: lt ('width', BREAKPOINT_DESKTOP)
-});
+  @lt ('width', BREAKPOINT_TABLET)
+  _maxWidthPhone;
+
+  @gte ('width', BREAKPOINT_TABLET)
+  _minWidthTablet;
+
+  @lt ('width', BREAKPOINT_DESKTOP)
+  _maxWidthTablet;
+}

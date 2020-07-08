@@ -20,28 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-layout/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/dummy/config/ember-cli-update.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,31 +285,31 @@
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.958@0.23.1680.958" timestamp="1594168942989" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1591289150669" />
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590771051554" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594169012254">
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594169997237">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594169012254" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594169997237" />
     <state width="1659" height="250" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590807755204" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594169012254">
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594169997236">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594169012254" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594169997236" />
     <state width="1659" height="250" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594169012253">
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594169997235">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594169012253" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594169997235" />
     <state width="1659" height="250" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1592849348248" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590807755202" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594169012254">
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594169997236">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594169012254" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594169997236" />
     <state width="1659" height="250" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1592849348249" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590807755203" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
