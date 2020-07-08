@@ -3,6 +3,15 @@ ember-cli-mdc-layout
 
 ember-cli support addon for layout-based logic
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------
 
@@ -14,7 +23,6 @@ Services
 This package contains the following services.
 
 * [`layout`](#layout-service)
-
 
 Layout Service
 ------------------
