@@ -37,7 +37,7 @@
     "ember-cli-mdc-utils": "^2.0.0-octane.15"
   },
   "devDependencies": {
-    "@material/layout-grid": "0.39.0",
+    "@material/layout-grid": "^6.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.3.0",
