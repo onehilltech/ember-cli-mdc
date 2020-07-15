@@ -6,11 +6,23 @@ import { assert } from '@ember/debug';
 
 const { MDCSnackbar } = mdc.snackbar;
 
+function noOp () { }
+
 export default Service.extend ({
   _snackbar: null,
 
+  _openingListener: null,
+  _openedListener: null,
+  _closingListener: null,
+  _closedListener: null,
+
   init () {
     this._super (...arguments);
+
+    this._openingListener = this.willOpen.bind (this);
+    this._openedListener = this.didOpen.bind (this);
+    this._closingListener = this.willClose.bind (this);
+    this._closedListener = this.didClose.bind (this);
   },
 
   /**
@@ -32,6 +44,12 @@ export default Service.extend ({
     this._cleanup ();
   },
 
+  actions: {
+    show (options) {
+      this.show (options);
+    }
+  },
+
   /**
    * Build a new snackbar component for the options.
    *
@@ -41,13 +59,15 @@ export default Service.extend ({
   _build (options) {
     const {
       timeout = 4000,
-      closeOnEscape,
+      closeOnEscape = true,
       message,
       action,
-      dismissible = false
+      dismiss,
+      opening = noOp,
+      opened = noOp,
+      closing = noOp,
+      closed = noOp,
     } = options;
-
-    const { text: actionButtonText } = (action || {});
 
     assert ('The timeout must be between the value of 4000 and 10000', timeout >= 4000 && timeout <= 10000);
 
@@ -55,13 +75,7 @@ export default Service.extend ({
       <div class="mdc-snackbar">
         <div class="mdc-snackbar__surface">
           <div class="mdc-snackbar__label" role="status" aria-live="polite">${message}</div>
-          ${isPresent (actionButtonText) ? `<div class="mdc-snackbar__actions">
-            <button type="button" class="mdc-button mdc-snackbar__action">
-              <div class="mdc-button__ripple"></div>
-              <span class="mdc-button__label">${actionButtonText}</span>
-            </button>
-            ${dismissible ? `<button type="button" class="mdc-snackbar__dismiss mdc-icon-button material-icons">close</button>` : ''}
-          </div>` : ''}
+          ${isPresent (action) || isPresent (dismiss) ? this._actionButtons (action, dismiss) : ''}
         </div>
       </div>`;
 
@@ -76,7 +90,46 @@ export default Service.extend ({
     snackbar.timeoutMs = timeout;
     snackbar.closeOnEscape = closeOnEscape;
 
+    snackbar.listen ('MDCSnackbar:opening', () => opening ());
+    snackbar.listen ('MDCSnackbar:opened', () => opened ());
+
+    snackbar.listen ('MDCSnackbar:closing', (ev) => closing (ev.detail));
+    snackbar.listen ('MDCSnackbar:closed', (ev) => {
+      const { reason } = ev.detail;
+
+      switch (reason) {
+        case 'action':
+          (action.click || noOp) ();
+          break;
+
+        case 'dismiss':
+          (dismiss && dismiss.click || noOp) ();
+          break;
+      }
+
+      // Notify the general listener of the event.
+      closed (ev.detail);
+    });
+
     return snackbar;
+  },
+
+  _actionButtons (action, dismiss) {
+    return `<div class="mdc-snackbar__actions">
+              ${isPresent (action) ? this._actionButton (action.label) : ''}
+              ${isPresent (dismiss) ? this._dismissButton (dismiss.icon) : ''}
+            </div>`;
+  },
+
+  _actionButton (label) {
+    return `<button type="button" class="mdc-button mdc-snackbar__action">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">${label}</span>
+            </button>`;
+  },
+
+  _dismissButton (icon = "close") {
+    return `<button type="button" class="mdc-snackbar__dismiss mdc-icon-button material-icons">${icon}</button>`;
   },
 
   /**
@@ -93,5 +146,21 @@ export default Service.extend ({
       this._snackbar.destroy ();
       this._snackbar = null;
     }
+  },
+
+  willOpen () {
+
+  },
+
+  didOpen () {
+
+  },
+
+  willClose () {
+
+  },
+
+  didClose () {
+
   }
 });
