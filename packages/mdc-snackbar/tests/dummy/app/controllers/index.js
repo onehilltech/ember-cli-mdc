@@ -1,9 +1,12 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend ({
+  snackbar: service (),
+
   actions: {
-    show () {
-      this.set ('message', 'Hello, World!');
+    snackbar () {
+      this.snackbar.show ({  message: 'Hello, World!' });
     },
 
     undo () {
@@ -21,10 +24,6 @@ export default Controller.extend ({
           }
         }
       });
-    },
-
-    snackbar (opts) {
-      this.snackbar (opts);
     }
   }
 });
