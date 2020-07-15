@@ -27,7 +27,7 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    let embedded = this.get ('embedded');
+    let embedded = this.embedded;
 
     if (!embedded) {
       this._floatingLabel = new MDCFloatingLabel (this.element);
