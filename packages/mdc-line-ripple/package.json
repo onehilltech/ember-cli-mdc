@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-line-ripple",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ember-cli addons for @material/line-ripple",
   "keywords": [
     "ember-addon",
@@ -43,7 +43,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-animation": "^1.1.0",
-    "ember-cli-mdc-base": "^1.1.0",
+    "ember-cli-mdc-base": "^1.1.1",
     "ember-cli-mdc-theme": "^1.1.0",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
