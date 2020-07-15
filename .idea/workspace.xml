@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +247,10 @@
     <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594831875506" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590727589504" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
+    <state x="510" y="297" width="596" height="522" key="find.popup" timestamp="1594836782206">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="510" y="297" width="596" height="522" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1594836782206" />
     <state x="505" y="231" key="run.anything.popup" timestamp="1590717478330">
       <screen x="0" y="23" width="1680" height="962" />
     </state>
