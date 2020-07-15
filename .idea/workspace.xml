@@ -20,17 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-component.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/initializers/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/initializers/mdc-snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-inner-component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-outer-component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-inner-component.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-outer-component.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,28 +220,28 @@
       <screen x="0" y="23" width="1680" height="962" />
     </state>
     <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590706146890" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594828756896">
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594831875507">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594828756896" />
+    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594831875507" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590727589505" />
     <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594828756895">
+    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594831875506">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594828756895" />
+    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594831875506" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590727589504" />
     <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594828756894">
+    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594831875505">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594828756894" />
+    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594831875505" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590727589503" />
     <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594828756895">
+    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594831875506">
       <screen x="0" y="23" width="1680" height="958" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594828756895" />
+    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594831875506" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590727589504" />
     <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
     <state x="505" y="231" key="run.anything.popup" timestamp="1590717478330">
