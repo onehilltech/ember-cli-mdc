@@ -23,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
