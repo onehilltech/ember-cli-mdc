@@ -47,6 +47,9 @@ export default Component.extend({
   /// The row ids for the selected items.
   selectedRowIds: map ('selected', getRowId),
 
+  /// Make the data table interactive.
+  interactive: false,
+
   init () {
     this._super (...arguments);
     this._mdcDataTableChangedListener = this._mdcDataTableRowSelectionChanged.bind (this);
@@ -57,16 +60,18 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    this._dataTable = new MDCDataTable (this.element);
-    this._dataTable.listen ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
-    this._dataTable.listen ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
-    this._dataTable.listen ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
+    if (this.interactive) {
+      this._dataTable = new MDCDataTable (this.element);
+      this._dataTable.listen ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
+      this._dataTable.listen ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
+      this._dataTable.listen ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
 
-    if (isEmpty (this.selected)) {
-      this.set ('selected', A ());
-    }
-    else {
-      this._dataTable.setSelectedRowIds (this.selectedRowIds);
+      if (isEmpty (this.selected)) {
+        this.set ('selected', A ());
+      }
+      else {
+        this._dataTable.setSelectedRowIds (this.selectedRowIds);
+      }
     }
   },
 
@@ -76,11 +81,13 @@ export default Component.extend({
     // Temp disable because there is a bug in the raw data table if the data table does
     // not contain a checkbox.
 
-    this._dataTable.unlisten ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
-    this._dataTable.unlisten ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
-    this._dataTable.unlisten ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
+    if (this.interactive) {
+      this._dataTable.unlisten ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
+      this._dataTable.unlisten ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
+      this._dataTable.unlisten ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
 
-    //this._dataTable.destroy ();
+      //this._dataTable.destroy ();
+    }
   },
 
   didRowSelectionChange () {
