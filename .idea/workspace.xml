@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +210,7 @@
       <workItem from="1600607361380" duration="22000" />
       <workItem from="1602352230408" duration="1365000" />
       <workItem from="1602507868294" duration="1655000" />
-      <workItem from="1604890642483" duration="73000" />
+      <workItem from="1604890642483" duration="1184000" />
     </task>
     <servers />
   </component>
