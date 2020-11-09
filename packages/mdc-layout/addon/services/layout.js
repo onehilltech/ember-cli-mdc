@@ -1,7 +1,6 @@
 import Service from '@ember/service';
 
 import { gte, lt, and } from '@ember/object/computed';
-import { isPresent } from '@ember/utils';
 
 const BREAKPOINT_PHONE = 0;
 const BREAKPOINT_TABLET = 480;
