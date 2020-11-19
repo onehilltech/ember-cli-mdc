@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-snackbar]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-layout]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -90,6 +91,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-icon-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon-button">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-layout]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-linear-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-linear-progress">
@@ -139,6 +143,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-icon-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-list]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-layout]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-menu]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-radio]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
@@ -210,7 +215,12 @@
       <workItem from="1600607361380" duration="22000" />
       <workItem from="1602352230408" duration="1365000" />
       <workItem from="1602507868294" duration="1655000" />
-      <workItem from="1604890642483" duration="1184000" />
+      <workItem from="1604890642483" duration="1345000" />
+      <workItem from="1604952694828" duration="69000" />
+      <workItem from="1605381237168" duration="1313000" />
+      <workItem from="1605412153905" duration="1031000" />
+      <workItem from="1605737593244" duration="795000" />
+      <workItem from="1605764545539" duration="1788000" />
     </task>
     <servers />
   </component>
@@ -235,41 +245,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590706146890">
-      <screen x="0" y="23" width="1680" height="962" />
+    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605765472102">
+      <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="304" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.962@0.23.1680.962" timestamp="1590706146890" />
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom" timestamp="1594870273862">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1605765472102" />
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1605765950452">
+      <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.bottom/0.23.1680.958@0.23.1680.958" timestamp="1594870273862" />
-    <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590727589505" />
-    <state width="1659" height="251" key="GridCell.Tab.0.bottom/0.23.1680.971@0.23.1680.971" timestamp="1590607475437" />
-    <state width="1659" height="249" key="GridCell.Tab.0.center" timestamp="1594870273860">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1605765950452" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1605765950452">
+      <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.center/0.23.1680.958@0.23.1680.958" timestamp="1594870273860" />
-    <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590727589504" />
-    <state width="1659" height="251" key="GridCell.Tab.0.center/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.left" timestamp="1594870273859">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1605765950452" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1605765950451">
+      <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.left/0.23.1680.958@0.23.1680.958" timestamp="1594870273859" />
-    <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590727589503" />
-    <state width="1659" height="251" key="GridCell.Tab.0.left/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state width="1659" height="249" key="GridCell.Tab.0.right" timestamp="1594870273861">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1605765950451" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1605765950452">
+      <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="249" key="GridCell.Tab.0.right/0.23.1680.958@0.23.1680.958" timestamp="1594870273861" />
-    <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590727589504" />
-    <state width="1659" height="251" key="GridCell.Tab.0.right/0.23.1680.971@0.23.1680.971" timestamp="1590607475436" />
-    <state x="510" y="297" width="596" height="522" key="find.popup" timestamp="1594836782206">
-      <screen x="0" y="23" width="1680" height="958" />
-    </state>
-    <state x="510" y="297" width="596" height="522" key="find.popup/0.23.1680.958@0.23.1680.958" timestamp="1594836782206" />
-    <state x="505" y="231" key="run.anything.popup" timestamp="1590717478330">
-      <screen x="0" y="23" width="1680" height="962" />
-    </state>
-    <state x="505" y="231" key="run.anything.popup/0.23.1680.962@0.23.1680.962" timestamp="1590717478330" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1605765950452" />
   </component>
 </project>
