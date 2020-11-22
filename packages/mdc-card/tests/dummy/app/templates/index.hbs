@@ -14,8 +14,8 @@
     </MdcCardActionButtons>
 
     <MdcCardActionIcons>
-      {{mdc-card-action-icon "share" title="Share"}}
-      {{mdc-card-action-icon "more_vert" title="More options"}}
+      <MdcCardActionIcon @icon="share" @title="Share" />
+      <MdcCardActionIcon @icon="more_vert" @title="More options" />
     </MdcCardActionIcons>
   </MdcCardActions>
 </MdcCard>
@@ -27,12 +27,13 @@
 
   <MdcCardActions>
     <MdcCardActionButtons>
-      <MdcCardActionButtonLinkTo @route="index">Go Home</MdcCardActionButtonLinkTo>
+      <MdcCardActionButtonLinkTo @route="index" @label="Go Home (inline)" />
+      <MdcCardActionButtonLinkTo @route="index">Go Home (block)</MdcCardActionButtonLinkTo>
     </MdcCardActionButtons>
 
     <MdcCardActionIcons>
-      {{mdc-card-action-icon "share" title="Share"}}
-      {{mdc-card-action-icon "more_vert" title="More options"}}
+      <MdcCardActionIcon @icon="share" @title="Share" />
+      <MdcCardActionIcon @icon="more_vert" @title="More options" />
     </MdcCardActionIcons>
   </MdcCardActions>
 </MdcCard>
