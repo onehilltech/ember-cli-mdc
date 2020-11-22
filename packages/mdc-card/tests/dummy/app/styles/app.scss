@@ -1,15 +1,16 @@
 .mdc-card {
   margin-bottom: 16px;
 
-  height: 350px;
-  width: 350px;
-
   &.standard {
     height: unset;
 
     .content {
       padding: 16px;
     }
+  }
+
+  &--outlined {
+    height: 250px;
   }
 
   &.actionable {

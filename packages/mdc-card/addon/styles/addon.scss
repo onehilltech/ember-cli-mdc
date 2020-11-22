@@ -1,14 +1,8 @@
 @import "app-theme";
 @import "@material/card/mdc-card";
 
-
-/*
-a.mdc-card {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-
-  &:link, &:visited, &:hover, &:active {
-    @include mdc-theme-prop (color, on-surface);
+.mdc-card {
+  &__content {
+    padding: 16px;
   }
 }
-*/

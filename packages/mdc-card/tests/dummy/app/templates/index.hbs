@@ -3,9 +3,9 @@
 <h3>Standard</h3>
 
 <MdcCard @class="standard">
-  <div class="content">
+  <MdcCardContent>
     The card content goes here.
-  </div>
+  </MdcCardContent>
 
   <MdcCardActions>
     <MdcCardActionButtons>
@@ -22,7 +22,9 @@
 
 <h3>Outlined</h3>
 
-<MdcCard @outlined=true></MdcCard>
+<MdcCard @outlined={{true}}>
+  <MdcCardContent>This is an outlined card.</MdcCardContent>
+</MdcCard>
 
 <h3>Actionable</h3>
 

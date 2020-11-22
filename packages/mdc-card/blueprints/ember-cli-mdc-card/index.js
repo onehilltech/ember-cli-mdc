@@ -14,6 +14,6 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-ripple', target},
     {name: 'ember-cli-mdc-rtl', target},
     {name: 'ember-cli-mdc-button', target},
-    {name: 'ember-cli-mdc-icon-button', target},
+    {name: 'ember-cli-mdc-icon-button', target}
   ]
 });
