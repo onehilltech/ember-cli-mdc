@@ -1,0 +1,17 @@
+<h2 id="title" class="mdc-typography--headline4">Forms</h2>
+
+<MdcForm @submit={{this.submit}} @validity={{this.validity}} as |form| >
+  <div>
+    Email: <Input @value={{this.email}} type="email" name="email" required="true" />
+  </div>
+
+  <div>
+    Password: <Input @value={{this.password}} type="password" name="password" required="true"/>
+  </div>
+
+  <div>
+    <button type="submit" disabled={{this.disabled}}>Submit</button>
+  </div>
+</MdcForm>
+
+<p>Validity: {{this.valid}}</p>
