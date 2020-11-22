@@ -2,7 +2,15 @@
   <MdcButtonRipple />
 
   {{#if (has-block)}}
+    {{#if @leadingIcon}}
+      <MdcButtonIcon @icon={{@leadingIcon}} />
+    {{/if}}
+
     {{yield}}
+
+    {{#if @trailingIcon}}
+      <MdcButtonIcon @icon={{@trailingIcon}} />
+    {{/if}}
   {{else}}
     {{#if @leadingIcon}}
       <MdcButtonIcon @icon={{@leadingIcon}} />

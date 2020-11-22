@@ -13,6 +13,7 @@
 <MdcButton @style="outlined" @label="Outlined" {{on "click" (fn this.displayMessage "Outlined")}} />
 <MdcButton @style="unelevated" @label="Unelevated" {{on "click" (fn this.displayMessage "Unelevated")}} />
 
+
 <h3>Disabled Button</h3>
 <MdcButton @style="outlined" @label="Disabled" disabled={{true}} />
 
@@ -20,6 +21,7 @@
 
 <MdcButton @style="raised" @leadingIcon="event" @label="Add to Calendar" {{on "click" (fn this.displayMessage "Add to Calendar")}} />
 <MdcButton @style="raised" @trailingIcon="check" @label="Submit" {{on "click" (fn this.displayMessage "Submit")}}/>
+<MdcButton @style="unelevated" @leadingIcon="check">Proceed</MdcButton>
 
 <h3>Link Button</h3>
 
