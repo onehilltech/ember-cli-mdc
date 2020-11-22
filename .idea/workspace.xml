@@ -20,31 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-form/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-form/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-form/addon/components/mdc-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/addon/components/mdc-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/addon/templates/components/mdc-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/addon/components/mdc-form.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/controllers/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/controllers/application.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/tests/integration/components/mdc-form-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/tests/integration/components/mdc-form-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +53,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-form/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-icon/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
@@ -317,21 +299,21 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606028432178">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606083203137">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606028432178" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606028432178">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606083203137" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606083203136">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606028432178" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606028432177">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606083203136" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606083203135">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606028432177" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606028432178">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606083203135" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606083203136">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606028432178" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606083203136" />
   </component>
 </project>
