@@ -96,7 +96,7 @@ export default Component.extend({
    * Continuously report the validity.
    */
   doCheckValidity () {
-    let delay = this.get ('validationDelay');
+    let delay = this.validationDelay;
 
     debounce (this, function () {
       if (this.isDestroyed || isNone (this.element)) {

@@ -12,16 +12,16 @@ export default Controller.extend({
 
   password: null,
   passwordType: computed ('visibility', function () {
-    return this.get ('visibility') ? 'text' : 'password';
+    return this.visibility ? 'text' : 'password';
   }),
 
   visibilityIcon: computed ('visibility', function () {
-    return this.get ('visibility') ? 'visibility' : 'visibility_off';
+    return this.visibility ? 'visibility' : 'visibility_off';
   }),
 
   actions: {
     submit () {
-      alert (`Email: ${this.get ('email')}\nPassword: ${this.get ('password')}`);
+      alert (`Email: ${this.email}\nPassword: ${this.password}`);
     },
 
     valid (valid) {
