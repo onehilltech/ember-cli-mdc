@@ -19,7 +19,7 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    if (!this.get ('embedded')) {
+    if (!this.embedded) {
       this._checkbox = new mdc.checkbox.MDCCheckbox (this.element);
       this.getWithDefault ('initialized', noOp) (this._checkbox);
     }

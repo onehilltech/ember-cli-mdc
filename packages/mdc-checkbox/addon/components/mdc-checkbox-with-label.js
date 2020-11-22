@@ -17,6 +17,6 @@ export default FormFieldComponent.extend ({
     label.setAttribute ('for', input.id);
 
     // Associate the checkbox input with the form field.
-    this._formField.input = this.get ('input');
+    this._formField.input = this.input;
   }
 });
