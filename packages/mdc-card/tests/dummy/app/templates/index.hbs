@@ -28,12 +28,21 @@
 
 <h3>Actionable</h3>
 
-<MdcCard @class="actionable">
+<MdcCard class="actionable">
   <MdcCardPrimaryAction>
-    Actionable Section
+    Actionable Section <br /> (using HTML component)
   </MdcCardPrimaryAction>
 
-  Content outside the actionable area...
+  <MdcCardContent>Content outside the actionable area</MdcCardContent>
+</MdcCard>
+
+<MdcCard class="actionable">
+  <div {{mdc-card-primary-action}}>
+    Actionable Section <br /> (using modifier)
+  </div>
+
+  <MdcCardContent>Content outside the actionable area</MdcCardContent>
+
 </MdcCard>
 
 <h3>Media</h3>

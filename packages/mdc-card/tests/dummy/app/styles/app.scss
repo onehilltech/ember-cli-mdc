@@ -14,6 +14,7 @@
   }
 
   &.actionable {
+    height: 250px;
 
     .mdc-card__primary-action {
       height: 50%;
@@ -23,6 +24,8 @@
 
       align-items: center;
       justify-content: center;
+
+      text-align: center;
     }
   }
 
