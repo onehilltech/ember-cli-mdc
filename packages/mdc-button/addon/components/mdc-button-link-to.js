@@ -6,7 +6,7 @@ const { MDCRipple } = mdc.ripple;
 export default class MdcButtonLinkComponent extends LinkComponent {
   _button = null;
 
-  classNames = Object.freeze (['mdc-button']);
+  classNames = ['mdc-button'];
   classNameBindings = Object.freeze (['styleClassName']);
 
   get styleClassName () {

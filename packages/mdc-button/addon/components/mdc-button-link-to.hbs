@@ -4,7 +4,9 @@
   <MdcButtonIcon @icon={{@icon}} />
 {{/if}}
 
-{{#if @label}}
+{{#if (has-block)}}
+  <MdcButtonLabel>{{yield}}</MdcButtonLabel>
+{{else}}
   <MdcButtonLabel @label={{@label}} />
 {{/if}}
 

@@ -2,7 +2,7 @@
 
 <h3>Standard</h3>
 
-<MdcCard @class="standard">
+<MdcCard class="standard">
   <MdcCardContent>
     The card content goes here.
   </MdcCardContent>
@@ -24,6 +24,17 @@
 
 <MdcCard @outlined={{true}}>
   <MdcCardContent>This is an outlined card.</MdcCardContent>
+
+  <MdcCardActions>
+    <MdcCardActionButtons>
+      <MdcCardActionButtonLinkTo @route="index">Go Home</MdcCardActionButtonLinkTo>
+    </MdcCardActionButtons>
+
+    <MdcCardActionIcons>
+      {{mdc-card-action-icon "share" title="Share"}}
+      {{mdc-card-action-icon "more_vert" title="More options"}}
+    </MdcCardActionIcons>
+  </MdcCardActions>
 </MdcCard>
 
 <h3>Actionable</h3>
@@ -47,14 +58,14 @@
 
 <h3>Media</h3>
 
-<MdcCard @class="media">
+<MdcCard class="media">
   <MdcCardMedia @scale="16-9">
     <MdcCardMediaContent>16x9 Media</MdcCardMediaContent>
   </MdcCardMedia>
 
 </MdcCard>
 
-<MdcCard @class="media">
+<MdcCard class="media">
   <MdcCardMedia @scale="square">
     <MdcCardMediaContent>Square Media</MdcCardMediaContent>
   </MdcCardMedia>

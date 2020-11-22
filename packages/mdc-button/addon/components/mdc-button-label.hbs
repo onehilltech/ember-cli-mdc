@@ -1,1 +1,7 @@
-<span class="mdc-button__label">{{@label}}</span>
+<span class="mdc-button__label">
+{{#if (has-block)}}
+  {{yield}}
+{{else}}
+  {{@label}}
+{{/if}}
+</span>

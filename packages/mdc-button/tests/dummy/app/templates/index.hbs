@@ -2,10 +2,7 @@
 
 <h3>Default Button</h3>
 <MdcButton @label="Default (inline)" {{on "click" (fn this.displayMessage "Default (inline)")}} />
-
-<MdcButton {{on "click" (fn this.displayMessage "Default (block)")}}>
-  <MdcButtonLabel @label="Default (block)" />
-</MdcButton>
+<MdcButton {{on "click" (fn this.displayMessage "Default (block)")}}>Default (block)</MdcButton>
 
 <h3>Button Styles</h3>
 

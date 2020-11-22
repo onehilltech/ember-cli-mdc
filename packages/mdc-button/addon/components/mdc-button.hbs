@@ -1,27 +1,18 @@
 <button class="mdc-button {{if this.type this.type}} {{if @style (concat "mdc-button--" @style)}}" {{did-insert this.didInsert}} ...attributes>
   <MdcButtonRipple />
 
-  {{#if (has-block)}}
-    {{#if @leadingIcon}}
-      <MdcButtonIcon @icon={{@leadingIcon}} />
-    {{/if}}
-
-    {{yield}}
-
-    {{#if @trailingIcon}}
-      <MdcButtonIcon @icon={{@trailingIcon}} />
-    {{/if}}
-  {{else}}
-    {{#if @leadingIcon}}
-      <MdcButtonIcon @icon={{@leadingIcon}} />
-    {{/if}}
-
-    {{#if @label}}
-      <MdcButtonLabel @label={{@label}} />
-    {{/if}}
-
-    {{#if @trailingIcon}}
-      <MdcButtonIcon @icon={{@trailingIcon}} />
-    {{/if}}
+  {{#if @leadingIcon}}
+    <MdcButtonIcon @icon={{@leadingIcon}} />
   {{/if}}
+
+  {{#if (has-block)}}
+    <MdcButtonLabel>{{yield}}</MdcButtonLabel>
+  {{else}}
+    <MdcButtonLabel @label={{@label}} />
+  {{/if}}
+
+  {{#if @trailingIcon}}
+    <MdcButtonIcon @icon={{@trailingIcon}} />
+  {{/if}}
+
 </button>
