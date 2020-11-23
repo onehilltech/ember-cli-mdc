@@ -6,13 +6,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-link-to.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/blueprints/ember-cli-mdc-fab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/blueprints/ember-cli-mdc-fab/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-icon-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-label-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-label-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-link-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-link-to-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-simple-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-simple-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-fab-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-label.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-link-to.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/mixins/fab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/templates/components/mdc-fab-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-label.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/templates/components/mdc-fab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/controllers/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab-icon.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +64,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-checkbox/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-form/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
@@ -53,8 +71,15 @@
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-fab/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-checkbox/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-form/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-checkbox]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-fab]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -89,6 +114,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-fab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-fab">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-floating-label]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-floating-label">
@@ -161,6 +189,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-fab]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-form-field]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-form]: dummy application" />
@@ -234,7 +263,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="5724000" />
+      <workItem from="1606103510329" duration="10400000" />
     </task>
     <servers />
   </component>
@@ -284,33 +313,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606104166134">
+    <state x="304" y="160" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606110326325">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606104166134" />
+    <state x="304" y="160" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606110326325" />
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606002518303">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606107977814">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606112361531">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606107977814" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606107977813">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606112361531" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606112361530">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606107977813" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606107977813">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606112361530" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606112361530">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606107977813" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606107977814">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606112361530" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606112361531">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606107977814" />
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606102114030">
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606112361531" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606111027744">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606102114030" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606111027744" />
   </component>
 </project>

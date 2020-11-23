@@ -1,8 +1,12 @@
 import LinkComponent from '@ember/routing/link-component';
-import layout from '../templates/components/mdc-fab';
+import { isPresent } from '@ember/utils';
+import { HAS_BLOCK } from '@glimmer/component';
 
-import FabMixin from '../mixins/fab';
+export default class MdcFabLinkComponent extends LinkComponent {
+  classNames = ['mdc-fab'];
+  classNameBindings = ['extended:mdc-fab--extended', 'exited:mdc-fab--exited', 'mini:mdc-fab--mini'];
 
-export default LinkComponent.extend (FabMixin, {
-  layout
-});
+  get extended () {
+    return isPresent (this.label) || this.hasBlock;
+  }
+}

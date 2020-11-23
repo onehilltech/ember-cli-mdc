@@ -1,0 +1,10 @@
+<div class="mdc-fab__ripple"></div>
+<MdcFabIcon @icon={{@icon}} />
+
+{{#if (has-block)}}
+  <MdcFabLabel>{{yield}}</MdcFabLabel>
+{{else}}
+  {{#if @label}}
+    <MdcFabLabel>{{@label}}</MdcFabLabel>
+  {{/if}}
+{{/if}}
