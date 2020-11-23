@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ember-cli-mdc-form
 ======================
 
@@ -49,3 +50,43 @@ the parent element.
 {{mdc-linear-progress progess=0.35 buffer=89.5}}
 {{mdc-linear-progress indeterminate=true reversed=true}}
 ```
+=======
+ember-cli-mdc-linear-progress
+==============================================================================
+
+[Short description of the addon.]
+
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install ember-cli-mdc-linear-progress
+```
+
+
+Usage
+------------------------------------------------------------------------------
+
+[Longer description of how to use the addon in apps.]
+
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
+>>>>>>> a8eae090... v2.18.2...v3.18.0

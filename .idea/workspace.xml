@@ -5,15 +5,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/templates/components/mdc-floating-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,7 +230,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="12207000" />
+      <workItem from="1606103510329" duration="12511000" />
     </task>
     <servers />
   </component>
@@ -296,22 +288,22 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606149756787">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606150060863">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606149756787" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606149756786">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606150060863" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606150060862">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606149756786" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606149756786">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606150060862" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606150060861">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606149756786" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606149756787">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606150060861" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606150060863">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606149756787" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606150060863" />
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606111027744">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
