@@ -1,45 +1,40 @@
 /* globals mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-line-ripple';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
-export default Component.extend({
-  layout,
+const { MDCLineRipple } = mdc.lineRipple;
 
-  classNames: ['mdc-line-ripple'],
+export default class MdcLineRippleComponent extends Component {
+  _lineRipple = null;
 
-  /// Activate the line ripple.
-  activate: false,
+  @action
+  didInsert (element) {
+    this._lineRipple = new MDCLineRipple (element);
+    this._mdcComponentCreated (this._lineRipple);
 
-  _lineRipple: null,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._lineRipple =  new mdc.lineRipple.MDCLineRipple (this.element);
-    this._doActivate ();
-  },
-
-  didUpdateAttr () {
-    this._super (...arguments);
-
-    this._doActivate ();
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._lineRipple.destroy ();
-  },
-
-  _doActivate () {
-    const activate = this.activate;
-
-    if (activate) {
+    if (this.args.activate) {
       this._lineRipple.activate ();
     }
-    else {
+
+    let { rippleCenter } = this.args;
+    if (isPresent (rippleCenter)) {
+      this._lineRipple.setRippleCenter (rippleCenter);
+    }
+  }
+
+  @action
+  activation (element, [activate]) {
+    if (activate) {
+      this._lineRipple.activate ();
+    } else {
       this._lineRipple.deactivate ();
     }
   }
-});
+
+  setRippleCenter (element, [rippleCenter]) {
+    this._lineRipple.setRippleCenter (rippleCenter);
+  }
+}
+

@@ -1,19 +1,17 @@
 <h2>Line Ripple</h2>
 
-<h3>Using Mixins</h3>
-
 <div class="line-ripple-container">
-  <MdcLineRipple @activate={{true}} />
+  <MdcLineRipple @activate={{this.active}} @rippleCenter={{5}} />
 </div>
 
 <h3>Using Modifiers</h3>
 
 <div class="line-ripple-container">
-  <div {{mdc-line-ripple active=active}} />
+  <div {{mdc-line-ripple activate=active}} />
 </div>
 
 <div class="line-ripple-container">
-  <div {{mdc-line-ripple active=active rippleCenter=40}} />
+  <div {{mdc-line-ripple activate=active rippleCenter=40}} />
 </div>
 
 <button {{on "click" this.activate}}>Activate</button>

@@ -47,13 +47,13 @@ class Installed extends ModifierState {
   }
 
   didReceiveArguments () {
-    const { rippleCenter, active } = this.modifier.args.named;
+    const { rippleCenter, activate } = this.modifier.args.named;
 
     if (rippleCenter) {
       this.lineRipple.setRippleCenter (rippleCenter);
     }
 
-    if (active) {
+    if (activate) {
       this.lineRipple.activate ();
       this.active = true;
     }
