@@ -5,7 +5,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-inner-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-inner-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffer-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffer-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffering-dots-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffering-dots-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-test.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,7 +243,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="12511000" />
+      <workItem from="1606103510329" duration="14437000" />
     </task>
     <servers />
   </component>

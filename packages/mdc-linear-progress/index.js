@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-<<<<<<< HEAD
-  name: 'ember-cli-mdc-linear-progress',
+  name: require('./package').name,
 
   included (app) {
     this._super (...arguments);
@@ -12,7 +11,4 @@ module.exports = {
       production: 'node_modules/@material/linear-progress/dist/mdc.linearProgress.min.js'
     });
   }
-=======
-  name: require('./package').name
->>>>>>> a8eae090... v2.18.2...v3.18.0
 };

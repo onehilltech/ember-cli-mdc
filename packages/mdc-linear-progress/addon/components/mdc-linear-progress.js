@@ -31,7 +31,7 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let { progress, buffer } = this.getProperties (['progress', 'buffer']);
+    let { progress, buffer } = this;
 
     this._linearProgress.buffer = buffer;
     this._linearProgress.progress = progress;
@@ -44,7 +44,7 @@ export default Component.extend({
 
     this._linearProgress = new MDCLinearProgress (this.element);
 
-    let { progress, buffer } = this.getProperties (['progress', 'buffer']);
+    let { progress, buffer } = this;
 
     this._linearProgress.buffer = buffer;
     this._linearProgress.progress = progress;
