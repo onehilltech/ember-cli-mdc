@@ -2,16 +2,16 @@
 
 <div class="mdc-switch-row">
   <div class="mdc-switch-container">
-    <div>{{mdc-switch checked=checked1}}</div>
+    <div><MdcSwitch @checked={{checked1}} /></div>
     <div>Checked: {{checked1}}</div>
 
   </div>
   <div class="mdc-switch-container">
-    <div>{{mdc-switch checked=true disabled=true}}</div>
+    <div><MdcSwitch @checked={{true}} @disabled={{true}} /></div>
   </div>
 
   <div class="mdc-switch-container">
-    <div>{{mdc-switch-with-label label="on/off" checked=on}}</div>
+    <div><MdcSwitchWithLabel @label="on/off" @checked={{on}} /></div>
     <div>On: {{on}}</div>
   </div>
 </div>

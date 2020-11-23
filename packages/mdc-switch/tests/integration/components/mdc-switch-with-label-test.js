@@ -12,7 +12,7 @@ module('Integration | Component | mdc-switch-with-label', function(hooks) {
 
     await render(hbs`{{mdc-switch-with-label}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | mdc-switch-with-label', function(hooks) {
       {{/mdc-switch-with-label}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });

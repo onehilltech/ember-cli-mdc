@@ -6,14 +6,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-switch/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-switch/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components/mdc-line-ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components/mdc-line-ripple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/modifiers/mdc-line-ripple.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/modifiers/mdc-line-ripple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/templates/components/mdc-line-ripple.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components/mdc-line-ripple.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch-with-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch-with-label.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-native-control-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-native-control-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-with-label-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/integration/components/mdc-switch-with-label-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +258,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="17489000" />
+      <workItem from="1606103510329" duration="18448000" />
     </task>
     <servers />
   </component>
