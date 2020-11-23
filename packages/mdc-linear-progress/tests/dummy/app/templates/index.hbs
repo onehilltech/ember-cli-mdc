@@ -1,3 +1,4 @@
+<h2>Linear Progress</h2>
 
 <h3>Buffered</h3>
 
@@ -15,4 +16,8 @@
 
 <MdcLinearProgress @reversed={{true}} @progress={{0.37}} @buffer={{0.81}} />
 
+<h2>Real-time Update Demo</h2>
+
+<div class="actions"><button {{on "click" toggleProgress}}>{{if this.started "Stop" "Start"}}</button></div>
+<MdcLinearProgress @progress={{this.progress}} />
 

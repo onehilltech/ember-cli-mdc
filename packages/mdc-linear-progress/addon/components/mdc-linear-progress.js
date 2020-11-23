@@ -1,58 +1,39 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-linear-progress';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
 
 const { MDCLinearProgress } = mdc.linearProgress;
 
-export default Component.extend({
-  layout,
+export default class MDCLinearProgressComponent extends Component {
+  _linearProgress = null;
 
-  classNames: ['mdc-linear-progress'],
+  @action
+  didInsert (element) {
+    element.setAttribute ('role', 'progressbar');
 
-  classNameBindings: [
-    'indeterminate:mdc-linear-progress--indeterminate',
-    'closed:mdc-linear-progress--closed',
-    'reversed:mdc-linear-progress--reversed'
-  ],
+    this._linearProgress = new MDCLinearProgress (element);
+    this._mdcComponentCreated (this._linearProgress);
 
-  indeterminate: false,
-
-  closed: false,
-
-  reversed: false,
-
-  progress: 0,
-
-  buffer: 1.0,
-
-  _linearProgress: null,
-
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    let { progress, buffer } = this;
-
-    this._linearProgress.buffer = buffer;
-    this._linearProgress.progress = progress;
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this.element.setAttribute ('role', 'progressbar');
-
-    this._linearProgress = new MDCLinearProgress (this.element);
-
-    let { progress, buffer } = this;
-
-    this._linearProgress.buffer = buffer;
-    this._linearProgress.progress = progress;
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._linearProgress.destroy ();
+    this._linearProgress.buffer = this.buffer;
+    this._linearProgress.progress = this.progress;
   }
-});
+
+  @action
+  updateProgress (element, [progress]) {
+    this._linearProgress.progress = progress;
+  }
+
+  @action
+  updateBuffer (element, [buffer]) {
+    this._linearProgress.buffer = buffer;
+  }
+
+  get buffer () {
+    return this.args.buffer || 1.0;
+  }
+
+  get progress () {
+    return this.args.progress || 0;
+  }
+}

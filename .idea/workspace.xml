@@ -7,17 +7,22 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress-bar-inner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress-buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress-buffering-dots.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar-inner.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-bar.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-buffer.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress-buffering-dots.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/templates/components/mdc-linear-progress.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/styles/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/dummy/app/templates/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-inner-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-inner-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-bar-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffer-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffer-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffering-dots-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-buffering-dots-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/tests/integration/components/mdc-linear-progress-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,14 +57,14 @@
       <recent name="$PROJECT_DIR$/packages/mdc-radio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-floating-label/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-fab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-checkbox/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-form/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-layout-grid/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-floating-label]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-linear-progress]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -243,7 +248,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="14437000" />
+      <workItem from="1606103510329" duration="16368000" />
     </task>
     <servers />
   </component>
@@ -301,25 +306,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606150060863">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606164877254">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606150060863" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606150060862">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606164877254" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606164877253">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606150060862" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606150060861">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606164877253" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606164877253">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606150060861" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606150060863">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606164877253" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606164877254">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606150060863" />
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606111027744">
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606164877254" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606163993513">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606111027744" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606163993513" />
   </component>
 </project>
