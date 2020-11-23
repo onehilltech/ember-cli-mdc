@@ -1,7 +1,5 @@
 import Checkbox from '@ember/component/checkbox';
 
-export default Checkbox.extend({
-  classNames: ['mdc-checkbox__native-control'],
-
-  attributeBindings: ['form']
-});
+export default class MdcCheckboxNativeControl extends Checkbox {
+  classNames = ['mdc-checkbox__native-control']
+}
