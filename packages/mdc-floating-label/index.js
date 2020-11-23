@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-<<<<<<< HEAD
-  name: 'ember-cli-mdc-floating-label',
+  name: require('./package').name,
 
   included (app) {
     this._super (...arguments);
@@ -29,7 +28,4 @@ module.exports = {
 
     return options;
   }
-=======
-  name: require('./package').name
->>>>>>> a902b3fe... v3.3.0...v3.18.0
 };
