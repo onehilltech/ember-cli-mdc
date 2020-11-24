@@ -8,16 +8,7 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch-native-control.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch-native-control.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch-with-label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch-with-label.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/templates/components/mdc-switch.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/app/components/mdc-switch-with-label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +238,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="23595000" />
+      <workItem from="1606103510329" duration="25033000" />
     </task>
     <servers />
   </component>
@@ -305,25 +296,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606178466960">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606187196930">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606178466960" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606178466959">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606187196930" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606187196930">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606178466959" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606178466958">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606187196930" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606187196929">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606178466958" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606178466959">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606187196929" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606187196930">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606178466959" />
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606163993513">
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606187196930" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606186510794">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606163993513" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606186510794" />
   </component>
 </project>
