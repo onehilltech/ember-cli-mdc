@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-utils",
-  "version": "2.0.0-octane.23",
+  "version": "2.0.0-octane.24",
   "description": "Command-line utility library for ember-cli-mdc framework",
   "main": "./lib/index.js",
   "public": true,
