@@ -13,6 +13,7 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-elevation', target},
     {name: 'ember-cli-mdc-rtl', target},
     {name: 'ember-cli-mdc-shape', target},
-    {name: 'ember-cli-mdc-base', target}
+    {name: 'ember-cli-mdc-base', target},
+    {name: '@ember/render-modifiers'}
   ]
 });

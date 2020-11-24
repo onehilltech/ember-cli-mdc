@@ -1,0 +1,8 @@
+<div class="mdc-menu-surface"
+  {{did-insert this.didInsert}}
+  {{did-update this.toggleOpen @open}}
+  {{did-update this.quickOpen @quickOpen}}
+  {{did-update this.setPosition @position @left @top}}
+  {{did-update this.anchorCorner @anchorCorner}}
+  {{did-update this.anchorMargin @anchorMargin}}
+  {{did-update this.anchorElement @anchorElement}}>{{yield}}</div>

@@ -1,83 +1,111 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import MenuSurface from '../mixins/menu-surface';
-
-import layout from '../templates/components/mdc-menu-surface';
+import Component from 'ember-cli-mdc-base/component';
+import listener  from 'ember-cli-mdc-base/listener';
+import { action } from '@ember/object';
+import { isString } from 'lodash-es';
 
 const { MDCMenuSurface } = mdc.menuSurface;
 
-function noOp () {
+function noOp () { }
 
-}
+export default class MdcMenuSurfaceComponent extends Component {
+  _menuSurface = null;
 
-export default Component.extend (MenuSurface, {
-  layout,
+  @action
+  didInsert (element) {
+    this._menuSurface = new MDCMenuSurface (element);
+    this._mdcComponentCreated (this._menuSurface);
 
-  menuSurface_: null,
+    this._menuSurface.quickOpen = this.args.quickOpen;
 
-  openedEventListener_: null,
-  closedEventListener_: null,
+    let { position, left, top, anchorCorner, anchorMargin, anchorElement, open, quickOpen, hoisted } = this.args;
 
-  init () {
-    this._super (...arguments);
+    // Configure the menu surface.
+    if (position === 'fixed') {
+      this._menuSurface.setFixedPosition (true);
+    }
+    else {
+      this._menuSurface.setFixedPosition (false);
+      this._menuSurface.setAbsolutePosition (left, top);
+    }
 
-    this.openedEventListener_ = this.didOpen.bind (this);
-    this.closedEventListener_ = this.didClose.bind (this);
-  },
+    this._menuSurface.quickOpen = quickOpen;
+    this._menuSurface.anchorElement = this._lookupElement (anchorElement);
 
-  didInsertElement () {
-    this._super (...arguments);
+    this._menuSurface.setAnchorCorner (anchorCorner);
+    this._menuSurface.setAnchorMargin (anchorMargin);
 
-    this.menuSurface_ = new MDCMenuSurface (this.element);
+    if (hoisted) {
+      this._menuSurface.setIsHoisted ()
+    }
 
-    this.menuSurface_.listen ('MDCMenuSurface:opened', this.openedEventListener_);
-    this.menuSurface_.listen ('MDCMenuSurface:closed', this.closedEventListener_);
-  },
+    // Now that it has been configure, let's see if we should open it.
+    if (open) {
+      this._menuSurface.open ();
+    }
+  }
 
-  willDestroyElement () {
-    this._super (...arguments);
+  @action
+  toggleOpen (element) {
+    if (this._menuSurface.isOpen ()) {
+      this._menuSurface.close (true);
+    }
+    else {
+      this._menuSurface.open ();
+    }
+  }
 
-    this.menuSurface_.unlisten ('MDCMenuSurface:opened', this.openedEventListener_);
-    this.menuSurface_.unlisten ('MDCMenuSurface:closed', this.closedEventListener_);
-    this.menuSurface_.destroy ();
-  },
+  @action
+  quickOpen (element, [quickOpen]) {
+    this._menuSurface.quickOpen = quickOpen;
+  }
 
-  doOpen (open) {
-    this.menuSurface_.open = open;
-  },
+  @action
+  setPosition (element, [position, left, top]) {
+    if (position === 'fixed') {
+      this._menuSurface.setFixedPosition (true);
+    }
+    else {
+      this._menuSurface.setFixedPosition (false);
+      this._menuSurface.setAbsolutePosition (left, top);
+    }
+  }
 
-  doQuickOpen (quickOpen) {
-    this.menuSurface_.quickOpen = quickOpen;
-  },
+  @action
+  anchorCorner (element, [anchorCorner]) {
+    this._menuSurface.setAnchorCorner (anchorCorner);
+  }
 
+  @action
+  anchorMargin (element, [anchorMargin]) {
+    this._menuSurface.setAnchorMargin (anchorMargin);
+  }
+
+  @action
+  anchorElement (element, [anchorElement]) {
+    this._menuSurface.anchorElement = this._lookupElement (anchorElement);
+  }
+
+  @listener('MDCMenuSurface:opened')
   didOpen () {
-    this.getWithDefault ('opened', noOp) ();
-  },
+    this.opened ();
+  }
 
+  @listener('MDCMenuSurface:closed')
   didClose () {
-    this.set ('open', false);
-    this.getWithDefault ('closed', noOp) ();
-  },
+    this.closed ();
+  }
 
-  setAbsolutePosition (x, y) {
-    this.menuSurface_.setAbsolutePosition (x, y);
-  },
+  get opened () {
+    return this.args.opened || noOp;
+  }
 
-  setAnchorCorner (corner) {
-    this.menuSurface_.setAnchorCorner (corner);
-  },
+  get closed () {
+    return this.args.closed || noOp;
+  }
 
-  setAnchorMargin (margin) {
-    this.menuSurface_.setAnchorMargin (margin);
-  },
-
-  /**
-   * Hoist the menu to the body.
-   *
-   * This method must be overloaded by the component.
-   */
-  hoistMenuToBody () {
-    this.menuSurface_.hoistMenuToBody ();
-  },
-});
+  _lookupElement (element) {
+    return isString (element) ? window.document.querySelector (element) : element;
+  }
+}
