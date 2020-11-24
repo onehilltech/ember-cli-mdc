@@ -7,7 +7,52 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" afterPath="$PROJECT_DIR$/lerna.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-datepicker-dialog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/mixins/menu-surface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-utils/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +286,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="34324000" />
+      <workItem from="1606103510329" duration="34862000" />
     </task>
     <servers />
   </component>

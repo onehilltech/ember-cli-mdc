@@ -47,12 +47,23 @@ export default class MdcMenuSurfaceComponent extends Component {
   }
 
   @action
-  toggleOpen (element) {
-    if (this._menuSurface.isOpen ()) {
-      this._menuSurface.close (true);
+  toggleOpen (element, [open]) {
+    if (open) {
+      // They are toggle the menu surface open state. This is because we cannot modify
+      // the 'open' argument internally. We therefore have to assume in update to the
+      // argument that bears the value `true` means toggle the menu surface.
+
+      if (this._menuSurface.isOpen ()) {
+        this._menuSurface.close (true);
+      }
+      else {
+        this._menuSurface.open ();
+      }
     }
-    else {
-      this._menuSurface.open ();
+    else if (this._menuSurface.isOpen) {
+      // The open argument was changed to false. This means some external behavior changed
+      // the argument to false, meaning the really want to close the menu surface.
+      this._menuSurface.close (true);
     }
   }
 
