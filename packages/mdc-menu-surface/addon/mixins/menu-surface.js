@@ -63,7 +63,7 @@ export default Mixin.create ({
   didInsertElement () {
     this._super (...arguments);
 
-    let anchorToParent = this.get ('anchorToParent');
+    let anchorToParent = this.anchorToParent;
 
     if (anchorToParent) {
       this.element.parentElement.classList.add (MENU_SURFACE_ANCHOR_CLASS);
@@ -73,7 +73,7 @@ export default Mixin.create ({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let anchorToParent = this.get ('anchorToParent');
+    let anchorToParent = this.anchorToParent;
 
     if (anchorToParent) {
       this.element.parentElement.classList.add (MENU_SURFACE_ANCHOR_CLASS);
@@ -95,7 +95,7 @@ export default Mixin.create ({
       _currAnchorCorner: currAnchorCorner,
       anchorMargin,
       _currAnchorMargin: currAnchorMargin
-    } = this.getProperties (['anchorToBody', 'isAbsolute', 'open', 'quickOpen', 'anchorCorner', '_currAnchorCorner', 'anchorMargin', '_currAnchorMargin']);
+    } = this;
 
     if (anchorToBody) {
       this.hoistMenuToBody ();
@@ -186,7 +186,7 @@ export default Mixin.create ({
    * @private
    */
   _doAbsolutePosition () {
-    let { left, top } = this.getProperties (['left', 'top']);
+    let { left, top } = this;
 
     if (this._currLeft !== left || this._currTop !== top) {
       this.setAbsolutePosition (this.left, this.top);
