@@ -1,0 +1,17 @@
+<h2 id="title">Switch</h2>
+
+<div class="mdc-switch-row">
+  <div class="mdc-switch-container">
+    <div><MdcSwitch @checked={{this.checked1}} /></div>
+    <div>Checked: {{this.checked1}}</div>
+
+  </div>
+  <div class="mdc-switch-container">
+    <div><MdcSwitch @checked={{true}} @disabled={{true}} /></div>
+  </div>
+
+  <div class="mdc-switch-container">
+    <div><MdcSwitch @label="on/off" @checked={{this.on}} /></div>
+    <div>On: {{this.on}}</div>
+  </div>
+</div>

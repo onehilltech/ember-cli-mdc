@@ -1,43 +1,29 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-switch';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { tracked } from '@glimmer/tracking';
 
-const CLASSNAME_CHECKED = 'mdc-switch--checked';
+const { MDCSwitch } = mdc.switch;
 
-export default Component.extend({
-  layout,
+export default class MdcSwitchComponent extends Component {
+  @tracked
+  _switchElement = null;
 
-  classNames: ['mdc-switch'],
-  classNameBindings: ['disabled:mdc-switch--disabled'],
+  @action
+  didInsert (element) {
+    let mdcSwitch = new MDCSwitch (element);
+    this._switchElement = element;
 
-  disabled: false,
-
-  _switch: null,
-
-  didUpdate () {
-    this._super (...arguments);
-
-    // Make sure the state of the element matches the state of this component.
-    const checked = this.checked;
-
-    if (checked !== this.element.classList.contains (CLASSNAME_CHECKED)) {
-      if (checked)
-        this.element.classList.add (CLASSNAME_CHECKED);
-      else
-        this.element.classList.remove (CLASSNAME_CHECKED);
-    }
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._switch = new mdc.switch.MDCSwitch (this.element);
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._switch.destroy ();
+    this._mdcComponentCreated (mdcSwitch);
   }
-});
+
+  get for () {
+    return isPresent (this._switchElement) ? this._switchElement.querySelector ('.mdc-switch__native-control').id : null;
+  }
+
+  get change () {
+    return this.args.change || function () {};
+  }
+}
