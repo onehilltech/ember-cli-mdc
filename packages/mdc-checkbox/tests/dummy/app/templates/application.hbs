@@ -3,9 +3,9 @@
 <h3>Checkbox with no Label</h3>
 
 <div>
-  <div><MdcCheckbox /></div>
-  <div><MdcCheckbox checked={{true}} /></div>
-  <div><MdcCheckbox checked={{true}} @disabled={{this.disabled}} /> <button {{on "click" this.toggleDisabled}}>Toggle Disabled</button></div>
+  <div><MdcCheckbox @checked={{this.checked}} />{{this.checked}}</div>
+  <div><MdcCheckbox @checked={{true}} /></div>
+  <div><MdcCheckbox @checked={{true}} @disabled={{this.disabled}} /> <button {{on "click" this.toggleDisabled}}>Toggle Disabled</button></div>
 </div>
 
 <h3>Checkbox with Label</h3>
