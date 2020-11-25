@@ -12,7 +12,7 @@ module('Integration | Component | mdc-tab-scroller-scroll-content', function(hoo
 
     await render(hbs`{{mdc-tab-scroller-scroll-content}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | mdc-tab-scroller-scroll-content', function(hoo
       {{/mdc-tab-scroller-scroll-content}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });
