@@ -13,13 +13,13 @@ Components and Mixins
 
 ### Components
 
-* [`{{mdc-menu-surface}}`](#mdc-menu-surface)
+* [`MdcMenuSurface`](#MdcMenuSurface)
 
-### Mixins
+### Modifiers
 
-* [`MenuSurface`](#menusurface)
+* [`mdc-menu-surface-anchor`](#mdc-menu-surface-anchor)
 
-{{mdc-menu-surface}}
+MdcMenuSurface
 ---------------
 
 ### Description
@@ -49,3 +49,18 @@ Add a menu surface component to the page.
 * `position` - Either "fixed" or "absolute"
 * `left` - Left position of the menu (works only in absolute mode)
 * `top` - Top position of the menu (works only in absolute mode)
+
+mdc-menu-surface-anchor
+-------------------------
+
+The `{{mdc-menu-surface-anchor}}` modifier defines the anchor element for a menu.
+
+```javascript
+<div class="toolbar" {{mdc-menu-surface-anchor}}>
+  <button {{on "click" this.toggleMenu}}>Open Menu</button>
+ 
+  <MdcMenuSurface @open={{this.openMenu}}>
+    <!-- -->
+  </MdcMenuSurface>
+</div>
+```

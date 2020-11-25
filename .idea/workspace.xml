@@ -7,9 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="38623000" />
+      <workItem from="1606103510329" duration="38981000" />
     </task>
     <servers />
   </component>
@@ -301,22 +300,22 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606233851627">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606267415699">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606233851627" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606233851626">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606267415699" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606267415698">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606233851626" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606233851625">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606267415698" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606267415698">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606233851625" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606233851626">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606267415698" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606267415699">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606233851626" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606267415699" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
