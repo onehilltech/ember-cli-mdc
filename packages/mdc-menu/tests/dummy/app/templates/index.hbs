@@ -3,98 +3,98 @@
 <div class="toolbar">
   <button onclick={{action (mut open) true}}>Open Menu</button>
 
-  {{#mdc-menu open=open anchorCorner="bottomLeft"}}
-    {{#mdc-menu-list}}
+  <MdcMenu @open={{open}} @anchorCorner="bottomLeft">
+    <MdcMenuList>
       {{mdc-menu-item-link-to "This is the link" "index"}}
 
-      {{mdc-list-divider}}
+      <MdcListDivider />
 
       <li>
-        {{#mdc-menu-selection-group}}
-          {{#mdc-menu-item}}
-            {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-            {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
-          {{/mdc-menu-item}}
+        <MdcMenuSelectionGroup>
+          <MdcMenuItem>
+            <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
+            <MdcMenuItemText>Single</MdcMenuItemText>
+          </MdcMenuItem>
 
-          {{#mdc-menu-item}}
-            {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-            {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
-          {{/mdc-menu-item}}
-        {{/mdc-menu-selection-group}}
+          <MdcMenuItem>
+            <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
+            <MdcMenuItemText>1.15</MdcMenuItemText>
+          </MdcMenuItem>
+        </MdcMenuSelectionGroup>
       </li>
 
-      {{mdc-list-divider}}
+      <MdcListDivider />
 
       {{mdc-menu-item "Add space before paragraph"}}
-      {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
-    {{/mdc-menu-list}}
-  {{/mdc-menu}}
+      <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
+    </MdcMenuList>
+  </MdcMenu>
 </div>
 
 <h3>Fixed Location Menu</h3>
 
 <div class="card__container">
   <div class="card">
-    {{#mdc-list twoLine=true}}
-      {{#mdc-list-item}}
-        {{#mdc-list-item-text}}
-          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
-          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
-        {{/mdc-list-item-text}}
+    <MdcList @twoLine={{true}}>
+      <MdcListItem>
+        <MdcListItemText>
+          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
+          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
+        </MdcListItemText>
 
-        {{#mdc-list-item-meta}}
+        <MdcListItemMeta>
           {{mdc-list-item-meta-icon "more_vert" click=(action (mut openMenu) true)}}
 
-          {{#mdc-menu position="fixed" open=openMenu anchorCorner="bottomRight"}}
-            {{#mdc-menu-list}}
+          <MdcMenu @position="fixed" @open={{openMenu}} @anchorCorner="bottomRight">
+            <MdcMenuList>
               {{mdc-menu-item-link-to "This is the link" "index"}}
 
-              {{mdc-list-divider}}
+              <MdcListDivider />
 
               <li>
-                {{#mdc-menu-selection-group}}
-                  {{#mdc-menu-item}}
-                    {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-                    {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
-                  {{/mdc-menu-item}}
+                <MdcMenuSelectionGroup>
+                  <MdcMenuItem>
+                    <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
+                    <MdcMenuItemText>Single</MdcMenuItemText>
+                  </MdcMenuItem>
 
-                  {{#mdc-menu-item}}
-                    {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-                    {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
-                  {{/mdc-menu-item}}
-                {{/mdc-menu-selection-group}}
+                  <MdcMenuItem>
+                    <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
+                    <MdcMenuItemText>1.15</MdcMenuItemText>
+                  </MdcMenuItem>
+                </MdcMenuSelectionGroup>
               </li>
 
-              {{mdc-list-divider}}
+              <MdcListDivider />
 
               {{mdc-menu-item "Add space before paragraph"}}
-              {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
-            {{/mdc-menu-list}}
-          {{/mdc-menu}}
+              <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
+            </MdcMenuList>
+          </MdcMenu>
 
-        {{/mdc-list-item-meta}}
-      {{/mdc-list-item}}
+        </MdcListItemMeta>
+      </MdcListItem>
 
-      {{#mdc-list-item}}
-        {{#mdc-list-item-text}}
-          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
-          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
-        {{/mdc-list-item-text}}
-      {{/mdc-list-item}}
+      <MdcListItem>
+        <MdcListItemText>
+          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
+          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
+        </MdcListItemText>
+      </MdcListItem>
 
-      {{#mdc-list-item}}
-        {{#mdc-list-item-text}}
-          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
-          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
-        {{/mdc-list-item-text}}
-      {{/mdc-list-item}}
+      <MdcListItem>
+        <MdcListItemText>
+          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
+          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
+        </MdcListItemText>
+      </MdcListItem>
 
-      {{#mdc-list-item}}
-        {{#mdc-list-item-text}}
-          {{#mdc-list-item-primary-text}}Primary Text{{/mdc-list-item-primary-text}}
-          {{#mdc-list-item-secondary-text}}Secondary Text{{/mdc-list-item-secondary-text}}
-        {{/mdc-list-item-text}}
-      {{/mdc-list-item}}
-    {{/mdc-list}}
+      <MdcListItem>
+        <MdcListItemText>
+          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
+          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
+        </MdcListItemText>
+      </MdcListItem>
+    </MdcList>
   </div>
 </div>
