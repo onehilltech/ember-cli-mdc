@@ -12,6 +12,7 @@ module.exports = Blueprint.extend ({
   addons: [
     {name: 'ember-cli-mdc-animation', target},
     {name: 'ember-cli-mdc-base', target},
-    {name: 'ember-cli-mdc-tab', target}
+    {name: 'ember-cli-mdc-tab', target},
+    {name: '@ember/render-modifiers'}
   ]
 });

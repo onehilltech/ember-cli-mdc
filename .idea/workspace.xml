@@ -6,37 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller-scroll-area.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller-scroll-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/templates/components/mdc-tab-scroller-scroll-area.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/templates/components/mdc-tab-scroller-scroll-content.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/templates/components/mdc-tab-scroller.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/app/components/mdc-tab-scroller-scroll-area.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/app/components/mdc-tab-scroller-scroll-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-scroll-area-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-scroll-area-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-scroll-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-scroll-content-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/tests/integration/components/mdc-tab-scroller-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +29,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -78,7 +55,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-switch/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-radio]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab-scroller]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -172,6 +149,9 @@
     <configuration name="[ember-cli-mdc-switch]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-switch">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-tab-scroller]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-scroller">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
       <method v="2" />
     </configuration>
@@ -187,14 +167,12 @@
       <item itemvalue="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-card]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-checkbox]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-fab]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-form-field]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-form]: dummy application" />
@@ -206,16 +184,19 @@
       <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-list]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-menu]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-menu-surface]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-radio]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-top-app-bar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-checkbox]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-fab]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-menu-surface]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab-scroller]: dummy application" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
@@ -270,7 +251,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="57408000" />
+      <workItem from="1606103510329" duration="57905000" />
     </task>
     <servers />
   </component>
@@ -320,30 +301,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="160" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606195019337">
+    <state x="304" y="160" width="1071" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606317322209">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="304" y="160" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606195019337" />
+    <state x="304" y="160" width="1071" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606317322209" />
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606002518303">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606315290460">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606317568909">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606315290460" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606315290459">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606317568909" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606317568908">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606315290459" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606315290459">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606317568908" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606317568907">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606315290459" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606315290460">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606317568907" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606317568909">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606315290460" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606317568909" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
