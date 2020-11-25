@@ -3,24 +3,9 @@
 {{else}}
   {{#each buttons as |button|}}
     {{#if button.label}}
-      {{#mdc-radio-with-label id=button.id
-                              name=name
-                              value=button.value
-                              form=button.form
-                              disabled=button.disabled
-                              checked=button.checked
-                              required=required
-                              form=form
-                              change=(action "change")}}{{button.label}}{{/mdc-radio-with-label}}
+      <MdcRadioWithLabel @id={{button.id}} @name={{name}} @value={{button.value}} @form={{button.form}} @disabled={{button.disabled}} @checked={{button.checked}} @required={{required}} @form={{form}} @change={{action "change"}}>{{button.label}}</MdcRadioWithLabel>
     {{else}}
-      {{mdc-radio id=button.id
-                  name=button.name
-                  value=button.value
-                  form=button.form
-                  disabled=button.disabled
-                  required=required
-                  form=form
-                  change=(action "change")}}
+      <MdcRadio @id={{button.id}} @name={{button.name}} @value={{button.value}} @form={{button.form}} @disabled={{button.disabled}} @required={{required}} @form={{form}} @change={{action "change"}} />
     {{/if}}
   {{/each}}
 {{/if}}
