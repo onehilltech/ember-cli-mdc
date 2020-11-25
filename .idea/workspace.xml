@@ -5,40 +5,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button-icon.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-divider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-group-subheader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-group.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic-icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-link-to.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-primary-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-secondary-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/mixins/list-item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-divider.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-divider.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-group-subheader.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-group-subheader.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-group.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-group.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-graphic-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic-icon.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-graphic.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-meta-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-meta.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-primary-text.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-primary-text.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-secondary-text.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-secondary-text.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item-text.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-text.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/templates/components/mdc-list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" afterDir="false" />
-    </list>
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,7 +238,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="46854000" />
+      <workItem from="1606103510329" duration="47286000" />
     </task>
     <servers />
   </component>
