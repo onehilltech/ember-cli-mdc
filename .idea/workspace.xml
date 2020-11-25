@@ -5,7 +5,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-native-control.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/templates/components/mdc-radio-buttons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/templates/components/mdc-radio-native-control.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-native-control.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/templates/components/mdc-radio-with-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-with-label.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/templates/components/mdc-radio.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/tests/dummy/app/templates/index.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,14 +53,14 @@
       <recent name="$PROJECT_DIR$/packages/mdc-radio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-radio/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-switch/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-line-ripple/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-list]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-radio]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -238,7 +252,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="48440000" />
+      <workItem from="1606103510329" duration="54683000" />
     </task>
     <servers />
   </component>
@@ -296,22 +310,22 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606275676426">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606284315073">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606275676426" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606275676425">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606284315073" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606284315072">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606275676425" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606275676425">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606284315072" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606284315071">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606275676425" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606275676426">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606284315071" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606284315072">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606275676426" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606284315072" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>

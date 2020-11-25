@@ -11,6 +11,7 @@ module.exports = Blueprint.extend ({
 
   addons: [
     {name: 'ember-cli-mdc-form-field', target},
-    {name: 'ember-cli-mdc-ripple', target}
+    {name: 'ember-cli-mdc-ripple', target},
+    {name: '@ember/render-modifiers'}
   ]
 });

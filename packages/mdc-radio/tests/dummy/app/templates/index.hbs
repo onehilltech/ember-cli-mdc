@@ -1,13 +1,16 @@
 <h3>Radio Buttons</h3>
 
+<h4>Single Radio Button</h4>
+
 <div><MdcRadio @id="radio-1" @name="solo" @required={{true}} /></div>
 
+<h4>Radio Buttons</h4>
 
 <form>
-  <MdcRadioButtons @name="radios" @buttons={{buttons}} @value={{value}} @required={{true}} />
+  <MdcRadioButtons @name="radios" @buttons={{this.buttons}} @change={{this.change}} @required={{true}} />
 </form>
 
-{{value}}
+<div>Value: {{this.value}}</div>
 
 
 

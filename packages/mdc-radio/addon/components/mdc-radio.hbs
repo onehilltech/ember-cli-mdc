@@ -1,0 +1,15 @@
+<MdcFormField>
+  <div class="mdc-radio" {{did-insert this.didInsert}}>
+    <MdcRadioNativeControl ...attributes />
+
+    <div class="mdc-radio__background">
+      <div class="mdc-radio__outer-circle"></div>
+      <div class="mdc-radio__inner-circle"></div>
+    </div>
+
+    <div class="mdc-radio__ripple"></div>
+  </div>
+  {{#if @label}}
+    <label for={{this.for}}>{{@label}}</label>
+  {{/if}}
+</MdcFormField>
