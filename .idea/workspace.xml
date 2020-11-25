@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +242,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="39025000" />
+      <workItem from="1606103510329" duration="39315000" />
     </task>
     <servers />
   </component>
