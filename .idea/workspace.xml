@@ -6,27 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/integration/components/mdc-tab-indicator-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/integration/components/mdc-tab-indicator-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/integration/components/mdc-tab-indicator-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/tests/integration/components/mdc-tab-indicator-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +247,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="58584000" />
+      <workItem from="1606103510329" duration="59573000" />
     </task>
     <servers />
   </component>
