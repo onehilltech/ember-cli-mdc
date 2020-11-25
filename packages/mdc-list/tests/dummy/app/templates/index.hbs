@@ -14,9 +14,9 @@
 
 <div class="mdc-list-container">
   <MdcList>
-    <MdcListItem>{{mdc-list-item-graphic-icon "wifi"}} Single-line item</MdcListItem>
-    <MdcListItem>{{mdc-list-item-graphic-icon "bluetooth"}} Single-line item</MdcListItem>
-    <MdcListItem>{{mdc-list-item-graphic-icon "data_usage"}} Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemGraphicIcon @icon="wifi" /> Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemGraphicIcon @icon="bluetooth" /> Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemGraphicIcon @icon="data_usage" /> Single-line item</MdcListItem>
   </MdcList>
 </div>
 
@@ -24,9 +24,9 @@
 
 <div class="mdc-list-container">
   <MdcList>
-    <MdcListItem>Single-line item {{mdc-list-item-meta-icon "info"}}</MdcListItem>
-    <MdcListItem>Single-line item {{mdc-list-item-meta-icon "info"}}</MdcListItem>
-    <MdcListItem>Single-line item {{mdc-list-item-meta-icon "info"}}</MdcListItem>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
   </MdcList>
 </div>
 
@@ -35,42 +35,41 @@
 <div class="mdc-list-container">
   <MdcList @twoLine={{true}} @avatarList={{true}}>
     <MdcListItem>
-      {{mdc-list-item-graphic-icon "folder"}}
-
+      <MdcListItemGraphicIcon @icon="folder" />
       <MdcListItemText>
         <MdcListItemPrimaryText>Dog Photos</MdcListItemPrimaryText>
         <MdcListItemSecondaryText>9 Jan 2018</MdcListItemSecondaryText>
       </MdcListItemText>
-      {{mdc-list-item-meta-icon "info"}}
+      <MdcListItemMetaIcon @icon="info" />
     </MdcListItem>
 
     <MdcListItem>
-      {{mdc-list-item-graphic-icon "folder"}}
+      <MdcListItemGraphicIcon @icon="folder" />
       <MdcListItemText>
         <MdcListItemPrimaryText>Cat Photos</MdcListItemPrimaryText>
         <MdcListItemSecondaryText>22 Dec 2017</MdcListItemSecondaryText>
       </MdcListItemText>
-      {{mdc-list-item-meta-icon "info"}}
+      <MdcListItemMetaIcon @icon="info" />
     </MdcListItem>
 
     <MdcListDivider />
 
     <MdcListItem>
-      {{mdc-list-item-graphic-icon "folder"}}
+      <MdcListItemGraphicIcon @icon="folder" />
       <MdcListItemText>
         <MdcListItemPrimaryText>Potatoes</MdcListItemPrimaryText>
         <MdcListItemSecondaryText>30 Nov 2017</MdcListItemSecondaryText>
       </MdcListItemText>
-      {{mdc-list-item-meta-icon "info"}}
+      <MdcListItemMetaIcon @icon="info" />
     </MdcListItem>
 
     <MdcListItem>
-      {{mdc-list-item-graphic-icon "folder"}}
+      <MdcListItemGraphicIcon @icon="folder" />
       <MdcListItemText>
         <MdcListItemPrimaryText>Carrots</MdcListItemPrimaryText>
         <MdcListItemSecondaryText>17 Oct 2017</MdcListItemSecondaryText>
       </MdcListItemText>
-      {{mdc-list-item-meta-icon "info"}}
+      <MdcListItemMetaIcon @icon="info" />
     </MdcListItem>
   </MdcList>
 </div>
@@ -207,7 +206,7 @@
 <h3 class="mdc-typography--headline5">Non-interactive</h3>
 
 <div class="mdc-list-container">
-  <MdcList @interactive={{false}}>
+  <MdcList @nonInteractive={{true}}>
     <MdcListItem>Single-line item</MdcListItem>
     <MdcListItem>Single-line item</MdcListItem>
     <MdcListItem>Single-line item</MdcListItem>
@@ -225,8 +224,11 @@
   </MdcList>
 </div>
 
+<!--
 <h3 class="mdc-typography--headline5">Radio List</h3>
 
 <MdcRadioList>
 
 </MdcRadioList>
+
+-->

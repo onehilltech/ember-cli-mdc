@@ -1,61 +1,35 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-list';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
 
 const { MDCList } = mdc.list;
 
-export default Component.extend({
-  layout,
+export default class MdcListComponent extends Component {
+  @action
+  didInsert (element) {
+    this._list = new MDCList (element);
+    this._mdcComponentCreated (this._list);
 
-  tagName: 'ul',
+    const { wrapFocus, singleSelection, vertical = true } = this.args;
 
-  classNames: ['mdc-list'],
-
-  classNameBindings: [
-    'dense:mdc-list--dense',
-    'interactive::mdc-list--non-interactive',
-    'twoLine:mdc-list--two-line',
-    'avatarList:mdc-list--avatar-list'
-  ],
-
-  singleSelection: false,
-
-  interactive: true,
-
-  twoLine: false,
-
-  avatarList: false,
-
-  wrapFocus: false,
-
-  attributeBindings: ['role', 'orientation:aria-orientation'],
-
-  orientation: 'vertical',
-
-  _list: null,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._list = new MDCList (this.element);
-
-    const { wrapFocus, singleSelection } = this;
-    this._list.singleSelection = singleSelection;
-    this._list.wrapFocus = wrapFocus;
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._list.destroy ();
-  },
-
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    const { wrapFocus, singleSelection } = this;
+    this._list.vertical = vertical
     this._list.singleSelection = singleSelection;
     this._list.wrapFocus = wrapFocus;
   }
-});
+
+  @action
+  vertical (element, [vertical]) {
+    this._list.vertical = vertical;
+  }
+
+  @action
+  singleSelection (element, [singleSelection]) {
+    this._list.singleSelection = singleSelection;
+  }
+
+  @action
+  wrapFocus (element, [wrapFocus]) {
+    this._list.wrapFocus = wrapFocus;
+  }
+}
