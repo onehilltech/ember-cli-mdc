@@ -13,6 +13,7 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-icon', target},
     {name: 'ember-cli-mdc-animation', target},
     {name: 'ember-cli-mdc-base', target},
-    {name: 'ember-cli-mdc-theme', target}
+    {name: 'ember-cli-mdc-theme', target},
+    {name: '@ember/render-modifiers'}
   ]
 });
