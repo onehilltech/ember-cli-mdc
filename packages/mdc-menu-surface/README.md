@@ -53,7 +53,11 @@ Add a menu surface component to the page.
 mdc-menu-surface-anchor
 -------------------------
 
+### Description
+
 The `{{mdc-menu-surface-anchor}}` modifier defines the anchor element for a menu.
+
+### Usage
 
 ```javascript
 <div class="toolbar" {{mdc-menu-surface-anchor}}>
