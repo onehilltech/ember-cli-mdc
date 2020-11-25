@@ -40,7 +40,7 @@ export default Component.extend({
 
     this._list = new MDCList (this.element);
 
-    const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
+    const { wrapFocus, singleSelection } = this;
     this._list.singleSelection = singleSelection;
     this._list.wrapFocus = wrapFocus;
   },
@@ -54,7 +54,7 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
+    const { wrapFocus, singleSelection } = this;
     this._list.singleSelection = singleSelection;
     this._list.wrapFocus = wrapFocus;
   }

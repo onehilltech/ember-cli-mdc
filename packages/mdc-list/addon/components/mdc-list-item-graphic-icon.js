@@ -11,7 +11,7 @@ export default ListItemGraphic.extend({
   params: null,
 
   icon: computed ('params.[]', function () {
-    return this.get ('params')[0];
+    return this.params[0];
   })
 }).reopenClass ({
   positionalParams: 'params'

@@ -21,7 +21,7 @@ export default Mixin.create (RippleMixin, {
   didInsertElement () {
     this._super (...arguments);
 
-    if (this.get ('selected')) {
+    if (this.selected) {
       this.element.setAttribute ('aria-selected', true);
       this.element.setAttribute ('tabindex', 0);
     }

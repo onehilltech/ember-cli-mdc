@@ -6,27 +6,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-list/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-list/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-graphic-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-radio-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-radio-list-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/mixins/list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/mixins/list-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/linkto.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/linkto.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-divider-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-divider-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-group-subheader-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-group-subheader-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-group-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-group-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-graphic-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-graphic-icon-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-graphic-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-graphic-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-linkto-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-linkto-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-meta-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-meta-icon-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-meta-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-meta-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-primary-text-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-primary-text-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-secondary-text-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-secondary-text-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-text-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-item-text-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-list-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-radio-list-item-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-radio-list-item-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-radio-list-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/integration/components/mdc-radio-list-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +262,7 @@
       <workItem from="1592539085454" duration="22126000" />
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
-      <workItem from="1606103510329" duration="39540000" />
+      <workItem from="1606103510329" duration="40669000" />
     </task>
     <servers />
   </component>
