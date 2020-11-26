@@ -15,6 +15,7 @@ export default Mixin.create ({
 
   _tab: null,
 
+  @action
   didInsertElement () {
     this._super (...arguments);
 

@@ -1,0 +1,23 @@
+<button class="mdc-tab {{if @active "mdc-tab--active"}} {{if @stacked "mdc-tab--stacked"}} {{if @minWidth "mdc-tab--min-width"}}"
+        role="tab"
+        aria-selected={{@active}}
+        tabindex="-1"
+        {{did-insert this.didInsert}}>
+  <span class="mdc-tab__content">
+    {{#if @icon}}
+      <span class="mdc-tab__icon material-icons" aria-hidden="true">{{@icon}}</span>
+    {{/if}}
+
+    {{#if @label}}
+      <span class="mdc-tab__text-label">{{@label}}</span>
+    {{/if}}
+
+    {{#if @contentOnlyIndicator}}
+      <MdcTabIndicator @active={{@active}} @icon={{@iconIndicator}} />
+    {{/if}}
+  </span>
+  {{#unless @contentOnlyIndicator}}
+    <MdcTabIndicator @active={{@active}} @icon={{@iconIndicator}} />
+  {{/unless}}
+  <span class="mdc-tab__ripple"></span>
+</button>

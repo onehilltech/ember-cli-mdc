@@ -1,12 +1,26 @@
-import Component from '@ember/component';
-import TabMixin from '../mixins/tab';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
-import layout from '../templates/components/mdc-tab';
+import { action } from '@ember/object';
+const { MDCTab } = mdc.tab;
 
-export default Component.extend (TabMixin, {
-  layout,
+function noOp () {}
 
-  classNameBindings: ['active:mdc-tab--active'],
+export default class MdcTabComponent extends Component {
+  @action
+  didInsert (element) {
+    let tab = new MDCTab (element);
+    this._mdcComponentCreated (tab);
+  }
 
-  active: false
-});
+  @listener ('MDCTab:interacted')
+  didInteract (ev) {
+    const { detail } = ev;
+
+    this.interacted (detail);
+  }
+
+  get interacted () {
+    return this.args.interacted || noOp;
+  }
+}

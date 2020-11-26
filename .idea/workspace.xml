@@ -5,7 +5,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-icon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-ripple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-text-label.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/mixins/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/mixins/tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-content.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-icon.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-ripple.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-text-label.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-icon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-ripple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-text-label.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +52,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-radio/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
@@ -39,15 +66,8 @@
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-radio/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab-indicator]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -147,6 +167,9 @@
     <configuration name="[ember-cli-mdc-tab-scroller]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-scroller">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-tab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
       <method v="2" />
     </configuration>
@@ -190,6 +213,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-indicator]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-scroller]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-top-app-bar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
@@ -248,7 +272,8 @@
       <workItem from="1592840030240" duration="6183000" />
       <workItem from="1593634037328" duration="365000" />
       <workItem from="1606103510329" duration="60737000" />
-      <workItem from="1606331882396" duration="2235000" />
+      <workItem from="1606331882396" duration="2521000" />
+      <workItem from="1606370631232" duration="1987000" />
     </task>
     <servers />
   </component>
@@ -298,30 +323,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606331895853">
+    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606370915694">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606331895853" />
+    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606002518303">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606332230076">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606373195070">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606332230076" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606332230075">
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606373195070">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606332230075" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606332230074">
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606373195069">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606332230074" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606332230075">
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606373195070">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606332230075" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
