@@ -1,22 +1,22 @@
-{{#mdc-tab-content}}
+<MdcTabContent>
   {{#if icon}}
     {{mdc-tab-icon icon}}
   {{/if}}
   {{#if label}}
-    {{#mdc-tab-text-label}}{{label}}{{/mdc-tab-text-label}}
+    <MdcTabTextLabel>{{label}}</MdcTabTextLabel>
   {{/if}}
 
   {{#if contentOnlyIndicator}}
-    {{#mdc-tab-indicator active=active}}
-      {{mdc-tab-indicator-content}}
-    {{/mdc-tab-indicator}}
+    <MdcTabIndicator @active={{active}}>
+      <MdcTabIndicatorContent />
+    </MdcTabIndicator>
   {{/if}}
-{{/mdc-tab-content}}
+</MdcTabContent>
 
 {{#unless contentOnlyIndicator}}
-  {{#mdc-tab-indicator active=active}}
-    {{mdc-tab-indicator-content}}
-  {{/mdc-tab-indicator}}
+  <MdcTabIndicator @active={{active}}>
+    <MdcTabIndicatorContent />
+  </MdcTabIndicator>
 {{/unless}}
 
-{{mdc-tab-ripple}}
+<MdcTabRipple />

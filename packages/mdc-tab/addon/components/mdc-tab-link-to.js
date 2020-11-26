@@ -10,6 +10,6 @@ export default LinkComponent.extend (TabMixin, {
   init () {
     this._super (...arguments);
 
-    this.get ('params').unshift (this.get ('label'));
+    this.params.unshift (this.label);
   }
 });
