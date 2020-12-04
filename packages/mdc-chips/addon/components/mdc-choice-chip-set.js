@@ -28,7 +28,7 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
         this.notifyChange (chip);
       }
       else {
-        this.notifyChange (undefined);
+        this.notifyChange (null);
       }
     }
     else {
@@ -40,7 +40,7 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
   }
 
   notifyChange (choice) {
-    this._currentChoiceId = isPresent (choice) ? this.getChipId (choice) : undefined;
+    this._currentChoiceId = isPresent (choice) ? this.getChipId (choice) : null;
     this.change (choice);
   }
 
@@ -65,11 +65,13 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
 
       if (this._currentChoiceId !== chipId) {
         this.select (chipId);
+        this._currentChoiceId = chipId;
       }
     }
     else if (isPresent (this._currentChoiceId)) {
       // There is no selection. This means we need to clear the selection.
       this.select (null);
+      this._currentChoiceId = null;
     }
   }
 }
