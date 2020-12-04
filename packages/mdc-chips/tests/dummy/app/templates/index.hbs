@@ -2,29 +2,29 @@
 
 <h5>Block</h5>
 
-{{#mdc-chip-set}}
-  {{mdc-chip text="Chip content"}}
-  {{mdc-chip text="Leading icon" iconLeading="event"}}
-  {{mdc-chip text="Trailing icon" iconTrailing="cancel"}}
+<MdcChipSet>
+  <MdcChip @text="Chip content" />
+  <MdcChip @text="Leading icon" @iconLeading="event" />
+  <MdcChip @text="Trailing icon" @iconTrailing="cancel" />
 
   {{#each dynamicChips as |chip|}}
-    {{mdc-chip text=chip.text iconTrailing="cancel"}}
+    <MdcChip @text={{chip.text}} @iconTrailing="cancel" />
   {{/each}}
-{{/mdc-chip-set}}
+</MdcChipSet>
 
 <form onsubmit={{action "submit"}}>
-  {{input value=chipLabel}}
+  <Input @value={{chipLabel}} />
 
   <button type="submit">Add Chip</button>
 </form>
 
 <h5>Inline</h5>
 
-{{mdc-chip-set chips=basicChips}}
+<MdcChipSet @chips={{basicChips}} />
 
 <h3>Choice Chips</h3>
 
-{{mdc-choice-chip-set chips=choiceChips value=choice}}
+<MdcChoiceChipSet @chips={{choiceChips}} @value={{choice}} />
 
 <button {{action (mut choice) "extra_small"}}>Make Extra Small</button>
 <button {{action (mut choice) null}}>Clear Choice</button>
@@ -33,7 +33,7 @@
 
 <h3>Filter Chips</h3>
 
-{{mdc-filter-chip-set chips=filterChips value=filtered}}
+<MdcFilterChipSet @chips={{filterChips}} @value={{filtered}} />
 
 <ul>
   {{#each names as |id|}}
@@ -45,7 +45,7 @@
 
 <h3>Input Chips</h3>
 
-{{#mdc-textfield style="outlined"}}
-  {{mdc-input-chip-set chips=chips enter=(action "makeInputChip")}}
-  {{mdc-notched-outline label="Tags" notched=true}}
-{{/mdc-textfield}}
+<MdcTextfield @style="outlined">
+  <MdcInputChipSet @chips={{chips}} @enter={{action "makeInputChip"}} />
+  <MdcNotchedOutline @label="Tags" @notched={{true}} />
+</MdcTextfield>

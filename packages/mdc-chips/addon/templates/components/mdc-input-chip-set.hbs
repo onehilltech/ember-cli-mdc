@@ -1,8 +1,8 @@
 {{#unless (has-block)}}
   {{#each chips as |chip index|}}
-    {{mdc-chip id=chip.id text=chip.text iconLeading=chip.iconLeading iconTrailing=chip.iconTrailing tabindex=index}}
+    <MdcChip @id={{chip.id}} @text={{chip.text}} @iconLeading={{chip.iconLeading}} @iconTrailing={{chip.iconTrailing}} @tabindex={{index}} />
   {{/each}}
-  {{mdc-textfield-input enter=(action "enter") value=value}}
+  <MdcTextfieldInput @enter={{action "enter"}} @value={{value}} />
 {{else}}
   {{yield}}
 {{/unless}}

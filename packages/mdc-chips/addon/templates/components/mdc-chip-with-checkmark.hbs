@@ -3,11 +3,11 @@
     {{mdc-chip-icon iconLeading leading=true class=(if selected "mdc-chip__icon--leading-hidden")}}
   {{/if}}
 
-  {{mdc-chip-checkmark}}
+  <MdcChipCheckmark />
 
-  {{#mdc-chip-text}}
+  <MdcChipText>
     {{text}}
-  {{/mdc-chip-text}}
+  </MdcChipText>
 
   {{#if iconTrailing}}
     {{mdc-chip-icon iconTrailing leading=false}}

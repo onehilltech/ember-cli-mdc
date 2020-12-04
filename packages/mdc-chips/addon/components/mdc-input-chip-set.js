@@ -21,7 +21,7 @@ export default ChipSet.extend({
   actions: {
     enter () {
       let chip = this.getWithDefault ('create', simpleChipFactory) (this.value);
-      this.get ('chips').pushObject (chip);
+      this.chips.pushObject (chip);
 
       this.set ('value', null);
     }

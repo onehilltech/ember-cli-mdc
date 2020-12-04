@@ -12,7 +12,7 @@ export default ChipSetComponent.extend ({
     this._super (...arguments);
 
     // If there is an initial value, then we need to select an initial chip.
-    let value = this.get ('value');
+    let value = this.value;
 
     if (isPresent (value)) {
       this._chipSet.select (value);
@@ -22,7 +22,7 @@ export default ChipSetComponent.extend ({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let value = this.get ('value');
+    let value = this.value;
 
     if (isNone (value)) {
       // We need to deselect the currently selected value. Get the ids, and

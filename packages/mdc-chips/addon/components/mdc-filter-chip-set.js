@@ -11,7 +11,7 @@ export default ChipSetComponent.extend({
   value: null,
 
   didClickChip (chip) {
-    let value = this.get ('value');
+    let value = this.value;
 
     if (chip.selected) {
       value.addObject (chip.id);

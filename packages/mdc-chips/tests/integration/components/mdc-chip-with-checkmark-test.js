@@ -1,24 +1,26 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('mdc-chip-with-checkmark', 'Integration | Component | mdc chip with checkmark', {
-  integration: true
-});
+module('Integration | Component | mdc chip with checkmark', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  test('it renders', async function(assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{mdc-chip-with-checkmark}}`);
+    await render(hbs`{{mdc-chip-with-checkmark}}`);
 
-  assert.equal(this.$().text().trim(), '');
+    assert.dom('*').hasText('');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#mdc-chip-with-checkmark}}
-      template block text
-    {{/mdc-chip-with-checkmark}}
-  `);
+    // Template block usage:
+    await render(hbs`
+      {{#mdc-chip-with-checkmark}}
+        template block text
+      {{/mdc-chip-with-checkmark}}
+    `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.dom('*').hasText('template block text');
+  });
 });

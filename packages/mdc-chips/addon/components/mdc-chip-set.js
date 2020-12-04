@@ -35,7 +35,7 @@ export default Component.extend ({
 
   mode: null,
   modeClassName: computed ('mode', function () {
-    let mode = this.get ('mode');
+    let mode = this.mode;
     return isPresent (mode) ? `mdc-chip-set--${mode}` : null;
   }),
 

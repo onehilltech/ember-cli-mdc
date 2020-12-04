@@ -10,7 +10,7 @@ export default Component.extend (ChipMixin, {
   didInsertElement () {
     this._super (...arguments);
 
-    this.get ('parentChipSet').addChip (this);
+    this.parentChipSet.addChip (this);
   },
 
   parentChipSet: computed (function () {
