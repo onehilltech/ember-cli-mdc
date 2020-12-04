@@ -6,25 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/mdc-tab-link-to.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-ripple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-text-label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/mixins/tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/mixins/tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-content.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-icon.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-ripple.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab-text-label.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/templates/components/mdc-tab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-ripple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/app/components/mdc-tab-text-label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/tests/dummy/app/templates/links.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/tests/dummy/app/templates/links.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,24 +35,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/templates" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-radio" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab]: dummy application">
@@ -273,7 +261,9 @@
       <workItem from="1593634037328" duration="365000" />
       <workItem from="1606103510329" duration="60737000" />
       <workItem from="1606331882396" duration="2521000" />
-      <workItem from="1606370631232" duration="1987000" />
+      <workItem from="1606370631232" duration="3423000" />
+      <workItem from="1606438649479" duration="1406000" />
+      <workItem from="1606959832196" duration="5868000" />
     </task>
     <servers />
   </component>
@@ -331,21 +321,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1606373195070">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607046057510">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607046057510" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1606373195070">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607046057509">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607046057509" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1606373195069">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607046057509">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607046057509" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1606373195070">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607046057510">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607046057510" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />

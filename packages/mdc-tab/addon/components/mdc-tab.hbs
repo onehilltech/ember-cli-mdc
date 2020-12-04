@@ -1,7 +1,7 @@
 <button class="mdc-tab {{if @active "mdc-tab--active"}} {{if @stacked "mdc-tab--stacked"}} {{if @minWidth "mdc-tab--min-width"}}"
         role="tab"
         aria-selected={{@active}}
-        tabindex="-1"
+        tabindex ="-1"
         {{did-insert this.didInsert}}>
   <span class="mdc-tab__content">
     {{#if @icon}}

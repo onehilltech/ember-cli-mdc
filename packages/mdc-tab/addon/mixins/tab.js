@@ -15,25 +15,4 @@ export default Mixin.create ({
 
   _tab: null,
 
-  @action
-  didInsertElement () {
-    this._super (...arguments);
-
-    this.element.setAttribute ('role', 'tab');
-    this.element.setAttribute ('tabindex', -1);
-
-    this._tab = new mdc.tab.MDCTab (this.element);
-    this._tab.listen ('MDCTab:interacted', this.didInteract.bind (this));
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._tab.unlisten ('MDCTab:interacted', this.didInteract.bind (this));
-    this._tab.destroy ();
-  },
-
-  didInteract () {
-    this.getWithDefault ('interacted', noOp) ();
-  }
 });
