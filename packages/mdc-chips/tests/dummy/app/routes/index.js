@@ -15,7 +15,7 @@ export default Route.extend ({
       customKeyChips: A ([
         {name: 'John Doe', leadingIcon: 'account_circle', trailingIcon: 'cancel'},
         {name: 'Jane Doe', leadingIcon: 'account_circle', trailingIcon: 'cancel'},
-        {name: 'Tim Thumb', leadingIcon: 'account_circle', trailingIcon: 'cancel'}
+        {name: 'Tom Thumb', leadingIcon: 'account_circle', trailingIcon: 'cancel'}
       ]),
 
       choiceChips: A ([
