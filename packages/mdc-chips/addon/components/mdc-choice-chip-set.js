@@ -14,8 +14,7 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
 
   didSelection (chipId, selected) {
     if (isPresent (this.chips)) {
-      // The user has provide a list of chips. We are going to either return the chip
-      // that was selected, or return null.
+      // The user wants us to automate the handling of selecting a chip.
 
       if (selected) {
         // Locate the index of the selected chip, and return that one to the user.
