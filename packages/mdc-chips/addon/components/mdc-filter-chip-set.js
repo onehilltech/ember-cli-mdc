@@ -1,23 +1,30 @@
 import ChipSetComponent from './mdc-chip-set';
-import layout from '../templates/components/mdc-filter-chip-set';
+import { A } from '@ember/array';
+import { isPresent } from '@ember/utils';
+import { assert } from '@ember/debug';
 
-export default ChipSetComponent.extend({
-  layout,
+export default class MdcFilterChipSetComponent extends ChipSetComponent {
+  sync () {
 
-  mode: 'filter',
+  }
 
-  _clickEventListener: null,
+  get checkedKey () {
+    return this.args.checkedKey || 'checked';
+  }
 
-  value: null,
+  didSelection (chipId, selected) {
+    let chip = this.findChipById (chipId);
+    assert (`The filter chip set does not have a chip with the id ${chipId}`, isPresent (chip));
 
-  didClickChip (chip) {
-    let value = this.value;
-
-    if (chip.selected) {
-      value.addObject (chip.id);
+    if (selected) {
+      this.filtered.addObject (chip);
     }
     else {
-      value.removeObject (chip.id);
+      this.filtered.removeObject (chip);
     }
   }
-});
+
+  get filtered () {
+    return this.args.filtered || A ();
+  }
+}

@@ -1,7 +1,15 @@
-{{#unless (has-block)}}
-  {{#each chips as |chip|}}
-    <MdcChipWithCheckmark @id={{chip.id}} @text={{chip.text}} @iconLeading={{chip.iconLeading}} @iconTrailing={{chip.iconTrailing}} />
-  {{/each}}
-{{else}}
-  {{yield}}
-{{/unless}}
+<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid" {{did-insert this.didInsert}} {{did-update this.sync @selected}}>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#each @chips as |chip index|}}
+      <MdcFilterChip @id={{get chip this.idKey}}
+                     @text={{get chip this.textKey}}
+                     @checked={{get chip this.checkedKey}}
+                     @leadingIcon={{chip.leadingIcon}}
+                     @trailingIcon={{chip.trailingIcon}}
+                     @tabindex={{index}}
+                     @removal={{this.removeChip}} />
+    {{/each}}
+  {{/if}}
+</div>

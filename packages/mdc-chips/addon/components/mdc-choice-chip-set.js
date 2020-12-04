@@ -12,17 +12,14 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
 
   _currentChoiceId = null;
 
-  @listener ('MDCChip:selection')
-  selection (ev) {
-    const { detail: { chipId, selected } }  = ev;
-
+  didSelection (chipId, selected) {
     if (isPresent (this.args.chips)) {
       // The user has provide a list of chips. We are going to either return the chip
       // that was selected, or return null.
 
       if (selected) {
         // Locate the index of the selected chip, and return that one to the user.
-        let chip = this.args.chips.find (chip => get (chip, this.idKey) === chipId);
+        let chip = this.findChipById (chipId);
         assert (`The choice chip set does not have a chip with the id ${chipId}`, isPresent (chip));
 
         this.notifyChange (chip);
@@ -35,7 +32,7 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
       // The user did block creation of the choice chip set. We therefore are just going
       // to return the selection information to the user.
 
-      (this.args.selection || noOp) (chipId, selected);
+      super.selection (ev);
     }
   }
 

@@ -19,7 +19,7 @@ export default class IndexController extends Controller {
     this.chips.pushObject ({text: this.chipLabel, trailingIcon: "cancel"});
   }
 
-  /// properties and methods for choice chip examples
+  // properties and methods for choice chip example
 
   @tracked
   choice;
@@ -38,4 +38,9 @@ export default class IndexController extends Controller {
   selectExtraSmall () {
     this.choice = this.choiceChips.objectAt (0);
   }
+
+  // properties and methods for filter chip example
+
+  @tracked
+  filtered;
 }

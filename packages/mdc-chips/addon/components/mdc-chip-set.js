@@ -49,13 +49,39 @@ export default class MdcChipSetComponent extends Component {
   }
 
   @listener ('MDCChip:interaction')
-  interaction ({ detail: { chipId } }) {
+  interaction (ev) {
+    const { detail: { chipId } } = ev;
+
+    this.didInteraction (chipId);
     (this.args.interaction || noOp)(chipId);
   }
 
+  didInteraction (chipId) {
+
+  }
+
+  @listener ('MDCChip:selection')
+  selection (ev) {
+    const { detail: { chipId, selected } }  = ev;
+
+    this.didSelection (chipId, selected);
+    (this.args.selection || noOp)(chipId, selected);
+  }
+
+  didSelection (chipId, selected) {
+
+  }
+
   @listener ('MDCChip:removal')
-  removal ({detail: { chipId }}) {
+  removal (ev) {
+    const { detail: { chipId } } = ev;
+
+    this.didRemoval (chipId);
     (this.args.removal || noOp)(chipId);
+  }
+
+  didRemoval (chipId) {
+
   }
 
   @action
@@ -83,12 +109,20 @@ export default class MdcChipSetComponent extends Component {
     return isPresent (this.args.label) ? `mdc-chip-set--${dasherize (this.args.label)}` : null;
   }
 
+  get chips () {
+    return this.args.chips || [];
+  }
+
   getChipId (chip) {
     return get (chip, this.idKey);
   }
 
   select (chipId) {
     return this._chipSet.foundation_.select (chipId);
+  }
+
+  findChipById (chipId) {
+    return this.chips.find (chip => get (chip, this.idKey) === chipId);
   }
 
   /// Adapter Properties

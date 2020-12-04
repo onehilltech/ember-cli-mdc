@@ -1,5 +1,7 @@
 <h2>Basic Chips</h2>
 
+<!--
+
 <h3>Block</h3>
 
 <MdcChipSet>
@@ -36,21 +38,21 @@
 </p>
 
 <p>Selected Value: {{this.choice.id}}</p>
-
-<!--
+-->
 
 <h3>Filter Chips</h3>
 
-<MdcFilterChipSet @chips={{filterChips}} @value={{filtered}} />
+<MdcFilterChipSet @chips={{this.filterChips}} @filtered={{this.filtered}} />
 
 <ul>
-  {{#each names as |id|}}
-    <li>{{id}}</li>
+  {{#each this.filtered as |chip|}}
+    <li>{{chip.text}}</li>
   {{/each}}
 </ul>
 
-<p>Filter Count: {{filterChips.length}}</p>
+<p>Filter Count: {{this.filtered.length}}</p>
 
+<!--
 <h3>Input Chips</h3>
 
 <MdcTextfield @style="outlined">
