@@ -1,4 +1,4 @@
-<div class="mdc-chip-set mdc-chip-set--{{this.type}}" role="grid" {{did-insert this.didInsert}} {{did-update this.sync this.syncKey}}>
+<div class="mdc-chip-set {{this._type}} {{this.label}}" role="grid" {{did-insert this.didInsert}} {{did-update this.sync this.syncKey}}>
   {{#if (has-block)}}
     {{yield}}
   {{else}}

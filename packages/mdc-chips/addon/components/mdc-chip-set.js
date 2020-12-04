@@ -4,6 +4,7 @@ import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 import { action, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
+import { dasherize } from '@ember/string';
 
 const { MDCChipSet } = mdc.chips;
 
@@ -74,14 +75,12 @@ export default class MdcChipSetComponent extends Component {
 
   }
 
-  /// Adapter Properties
-
-  get idKey () {
-    return this.args.idKey || 'id';
+  get _type () {
+    return isPresent (this.type) ? `mdc-chip-set--${this.type}` : null;
   }
 
-  get textKey () {
-    return this.args.textKey || 'text';
+  get label () {
+    return isPresent (this.args.label) ? `mdc-chip-set--${dasherize (this.args.label)}` : null;
   }
 
   getChipId (chip) {
@@ -90,5 +89,15 @@ export default class MdcChipSetComponent extends Component {
 
   select (chipId) {
     return this._chipSet.foundation_.select (chipId);
+  }
+
+  /// Adapter Properties
+
+  get idKey () {
+    return this.args.idKey || 'id';
+  }
+
+  get textKey () {
+    return this.args.textKey || 'text';
   }
 }
