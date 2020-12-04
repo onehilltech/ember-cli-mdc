@@ -46,6 +46,11 @@ export default class MdcChipSetComponent extends Component {
     }
 
     this._mdcComponentCreated (this._chipSet);
+    this.doInitialize (this._chipSet);
+  }
+
+  doInitialize (chipSet) {
+
   }
 
   @listener ('MDCChip:interaction')

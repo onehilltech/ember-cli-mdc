@@ -4,10 +4,6 @@ import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
 export default class MdcFilterChipSetComponent extends ChipSetComponent {
-  sync () {
-
-  }
-
   get checkedKey () {
     return this.args.checkedKey || 'checked';
   }

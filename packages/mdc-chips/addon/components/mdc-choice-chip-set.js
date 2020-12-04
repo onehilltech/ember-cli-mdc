@@ -12,6 +12,15 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
 
   _currentChoiceId = null;
 
+  doInitialize (chipSet) {
+    let { choice } = this.args;
+
+    if (isPresent (choice)) {
+      this._currentChoiceId = this.getChipId (choice);
+      this.select (this._currentChoiceId);
+    }
+  }
+
   didSelection (chipId, selected) {
     if (isPresent (this.chips)) {
       // The user wants us to automate the handling of selecting a chip.
