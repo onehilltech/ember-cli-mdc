@@ -2,7 +2,7 @@
 
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
-import { action } from '@ember/object';
+import { action, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 const { MDCChipSet } = mdc.chips;
@@ -28,21 +28,23 @@ MDCChipSet.prototype.findChip = function (chipId) {
 function noOp () {}
 
 export default class MdcChipSetComponent extends Component {
+  _chipSet = null;
+
   @action
   didInsert (element) {
-    let chipSet = new MDCChipSet (element);
+    this._chipSet = new MDCChipSet (element);
 
     if (isPresent (this.args.chips)) {
       // The user has provided a list of chips. This means that we are managing the
       // chip collection. We are going to prevent the chipset from removing the chip
       // with the trailing icon is clicked.
 
-      chipSet.chips.forEach ((chip) => {
+      this._chipSet.chips.forEach ((chip) => {
         chip.shouldRemoveOnTrailingIconClick = false;
       });
     }
 
-    this._mdcComponentCreated (chipSet);
+    this._mdcComponentCreated (this._chipSet);
   }
 
   @listener ('MDCChip:interaction')
@@ -67,6 +69,11 @@ export default class MdcChipSetComponent extends Component {
     }
   }
 
+  @action
+  sync () {
+
+  }
+
   /// Adapter Properties
 
   get idKey () {
@@ -75,5 +82,13 @@ export default class MdcChipSetComponent extends Component {
 
   get textKey () {
     return this.args.textKey || 'text';
+  }
+
+  getChipId (chip) {
+    return get (chip, this.idKey);
+  }
+
+  select (chipId) {
+    return this._chipSet.foundation_.select (chipId);
   }
 }

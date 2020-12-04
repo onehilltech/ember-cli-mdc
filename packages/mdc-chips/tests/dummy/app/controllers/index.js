@@ -10,6 +10,9 @@ export default class IndexController extends Controller {
   @tracked
   chips;
 
+  @tracked
+  choiceChips;
+
   @action
   submit (ev) {
     ev.preventDefault ();
@@ -22,7 +25,17 @@ export default class IndexController extends Controller {
   choice;
 
   @action
-  change (chip) {
-    this.choice = chip;
+  change (choice) {
+    this.choice = choice;
+  }
+
+  @action
+  clear () {
+    this.choice = null;
+  }
+
+  @action
+  selectExtraSmall () {
+    this.choice = this.choiceChips.objectAt (0);
   }
 }

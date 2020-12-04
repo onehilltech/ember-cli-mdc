@@ -28,11 +28,11 @@
 
 <h3>Choice Chips</h3>
 
-<MdcChoiceChipSet @chips={{this.choiceChips}} @value={{this.choice.id}} @change={{this.change}} />
+<MdcChoiceChipSet @chips={{this.choiceChips}} @choice={{this.choice}} @change={{this.change}} />
 
 <p>
-  <button {{on "click" (fn this.change "extra_small")}}>Make Extra Small</button>
-  <button {{on "click" (fn this.change null)}}>Clear Choice</button>
+  <button {{on "click" this.selectExtraSmall}}>Make Extra Small</button>
+  <button {{on "click" this.clear}}>Clear Choice</button>
 </p>
 
 <p>Selected Value: {{this.choice.id}}</p>
