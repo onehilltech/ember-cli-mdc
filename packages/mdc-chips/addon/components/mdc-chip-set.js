@@ -71,4 +71,14 @@ export default class MdcChipSetComponent extends Component {
       this.args.chips.removeAt (index);
     }
   }
+
+  /// Adapter Properties
+
+  get idKey () {
+    return this.args.idKey || 'id';
+  }
+
+  get textKey () {
+    return this.args.textKey || 'text';
+  }
 }

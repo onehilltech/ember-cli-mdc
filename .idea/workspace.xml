@@ -7,24 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-checkmark.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-icon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-text.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-with-checkmark.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip-checkmark.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip-link-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-link-to.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip-text.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip-with-checkmark.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-filter-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/templates/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
@@ -277,7 +261,7 @@
       <workItem from="1606331882396" duration="2521000" />
       <workItem from="1606370631232" duration="3423000" />
       <workItem from="1606438649479" duration="1406000" />
-      <workItem from="1606959832196" duration="17316000" />
+      <workItem from="1606959832196" duration="17850000" />
     </task>
     <servers />
   </component>

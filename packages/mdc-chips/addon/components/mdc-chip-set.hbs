@@ -3,8 +3,8 @@
     {{yield}}
   {{else}}
     {{#each @chips as |chip index|}}
-      <MdcChip @id={{chip.id}}
-               @text={{chip.text}}
+      <MdcChip @id={{get chip this.idKey}}
+               @text={{get chip this.textKey}}
                @leadingIcon={{chip.leadingIcon}}
                @trailingIcon={{chip.trailingIcon}}
                @tabindex={{index}}

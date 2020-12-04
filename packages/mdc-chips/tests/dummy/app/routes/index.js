@@ -12,6 +12,12 @@ export default Route.extend ({
         {text: 'Trailing icon', trailingIcon: 'cancel'}
       ]),
 
+      customKeyChips: A ([
+        {name: 'John Doe', leadingIcon: 'account_circle', trailingIcon: 'cancel'},
+        {name: 'Jane Doe', leadingIcon: 'account_circle', trailingIcon: 'cancel'},
+        {name: 'Tim Thumb', leadingIcon: 'account_circle', trailingIcon: 'cancel'}
+      ]),
+
       choiceChips: A ([
         {id: 'extra_small', text: 'Extra Small'},
         {id: 'small', text: 'Small'},
