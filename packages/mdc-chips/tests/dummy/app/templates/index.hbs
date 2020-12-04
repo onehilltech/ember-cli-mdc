@@ -13,18 +13,18 @@
 
 <MdcChipSet @chips={{this.chips}} />
 
-<p>
-<form onsubmit={{this.submit}}>
+<p>Length: {{this.chips.length}}</p>
+
+<p><form onsubmit={{this.submit}}>
   <Input @value={{this.chipLabel}} />
 
   <button type="submit">Add Chip</button>
-</form>
-</p>
+</form></p>
 
 <h4>Custom Keys</h4>
 
 <MdcChipSet @chips={{this.customKeyChips}} @textKey="name" />
-
+<p>Length: {{this.customKeyChips.length}}</p>
 
 <!--
 <h3>Choice Chips</h3>
