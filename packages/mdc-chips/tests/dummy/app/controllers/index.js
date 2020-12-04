@@ -1,23 +1,33 @@
 import Controller from '@ember/controller';
-import { map } from '@ember/object/computed';
+import { action } from '@ember/object';
+import { tracked } from "@glimmer/tracking";
 
-export default Controller.extend ({
+export default class IndexController extends Controller {
+  @tracked
+  chipLabel;
+
+  @tracked
+  chips;
+
+  /*
   names: map ('filtered', function (id) {
     return this.filterChips.findBy ('id', id).text;
-  }),
+  }),*/
 
-  dynamicChips: null,
-
-  actions: {
-    submit () {
-      const { dynamicChips, chipLabel: text } = this;
-      dynamicChips.pushObject ({text});
-
-      return false;
-    },
-
-    makeInputChip (value) {
-      return {text: value, iconTrailing: 'cancel'};
-    }
+  @action
+  submit (ev) {
+    ev.preventDefault ();
+    this.chips.pushObject ({text: this.chipLabel, trailingIcon: "cancel"});
   }
-});
+
+  @action
+  remove (chip) {
+
+  }
+
+  /*
+  makeInputChip (value) {
+    return {text: value, iconTrailing: 'cancel'};
+  }
+  */
+}

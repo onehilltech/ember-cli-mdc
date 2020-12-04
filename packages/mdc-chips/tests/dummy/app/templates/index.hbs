@@ -1,27 +1,25 @@
-<h3>Basic Chips</h3>
+<h2>Basic Chips</h2>
 
-<h5>Block</h5>
+<h3>Block</h3>
 
 <MdcChipSet>
   <MdcChip @text="Chip content" />
-  <MdcChip @text="Leading icon" @iconLeading="event" />
-  <MdcChip @text="Trailing icon" @iconTrailing="cancel" />
-
-  {{#each dynamicChips as |chip|}}
-    <MdcChip @text={{chip.text}} @iconTrailing="cancel" />
-  {{/each}}
+  <MdcChip @text="Leading icon" @leadingIcon="event" />
+  <MdcChip @text="Trailing icon" @trailingIcon="cancel" />
 </MdcChipSet>
 
-<form onsubmit={{action "submit"}}>
-  <Input @value={{chipLabel}} />
+
+<h3>Inline / Dynamic</h3>
+
+<MdcChipSet @chips={{this.chips}} />
+
+<form onsubmit={{this.submit}}>
+  <Input @value={{this.chipLabel}} />
 
   <button type="submit">Add Chip</button>
 </form>
 
-<h5>Inline</h5>
-
-<MdcChipSet @chips={{basicChips}} />
-
+<!--
 <h3>Choice Chips</h3>
 
 <MdcChoiceChipSet @chips={{choiceChips}} @value={{choice}} />
@@ -49,3 +47,4 @@
   <MdcInputChipSet @chips={{chips}} @enter={{action "makeInputChip"}} />
   <MdcNotchedOutline @label="Tags" @notched={{true}} />
 </MdcTextfield>
+ -->

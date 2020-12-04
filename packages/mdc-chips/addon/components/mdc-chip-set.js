@@ -1,13 +1,13 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-chip-set';
-
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
+import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
-import { computed } from '@ember/object';
 
 const { MDCChipSet } = mdc.chips;
 
+/*
 MDCChipSet.prototype.select = function (chipId) {
   return this.foundation_.select (chipId);
 };
@@ -23,98 +23,52 @@ MDCChipSet.prototype.isSelected = function (chipId) {
 MDCChipSet.prototype.findChip = function (chipId) {
   let index = this.findChipIndex_ (chipId);
   return index >= 0 ? this.chips[index] : null;
-};
+};*/
 
 function noOp () {}
 
-export default Component.extend ({
-  layout,
+export default class MdcChipSetComponent extends Component {
+  @action
+  didInsert (element) {
+    let chipSet = new MDCChipSet (element);
 
-  classNames: ['mdc-chip-set'],
-  classNameBindings: ['modeClassName'],
+    if (isPresent (this.args.chips)) {
+      // The user has provided a list of chips. This means that we are managing the
+      // chip collection. We are going to prevent the chipset from removing the chip
+      // with the trailing icon is clicked.
 
-  mode: null,
-  modeClassName: computed ('mode', function () {
-    let mode = this.mode;
-    return isPresent (mode) ? `mdc-chip-set--${mode}` : null;
-  }),
+      chipSet.chips.forEach ((chip) => {
+        chip.shouldRemoveOnTrailingIconClick = false;
+      });
+    }
 
-  _interactionEventListener: null,
-  _selectionEventListener: null,
-  _removalEventListener: null,
+    this._mdcComponentCreated (chipSet);
+  }
 
-  init () {
-    this._super (...arguments);
-
-    this._interactionEventListener = this.interaction.bind (this);
-    this._selectionEventListener = this.selection.bind (this);
-    this._removalEventListener = this.removal.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    // Set thr role on the element.
-    this.element.setAttribute ('role', 'grid');
-
-    this._chipSet = new MDCChipSet (this.element);
-    this._chipSet.listen ('MDCChip:interaction', this._interactionEventListener);
-    this._chipSet.listen ('MDCChip:selection', this._selectionEventListener);
-    this._chipSet.listen ('MDCChip:removal', this._removalEventListener);
-
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._chipSet.unlisten ('MDCChip:interaction', this._interactionEventListener);
-    this._chipSet.unlisten ('MDCChip:selection', this._selectionEventListener);
-    this._chipSet.unlisten ('MDCChip:removal', this._removalEventListener);
-
-    this._chipSet.destroy ();
-  },
-
+  @listener ('MDCChip:interaction')
   interaction ({ detail: { chipId } }) {
-    this.didInteractWithChip (chipId);
-    this.getWithDefault ('interact', noOp) (chipId);
-  },
+    (this.args.interaction || noOp)(chipId);
+  }
 
-  didInteractWithChip (/* chipId */) {
-
-  },
-
+  @listener ('MDCChip:selection')
   selection ({ detail: {chipId, selected}}) {
-    this.didSelectChip (chipId, selected);
-    this.getWithDefault ('select', noOp) (chipId, selected);
-  },
+    (this.args.selection || noOp)(chipId, selected);
+  }
 
-  didSelectChip ( /* chipId, selected */) {
-
-  },
-
+  @listener ('MDCChip:removal')
   removal ({detail: { chipId }}) {
-    this.didRemoveChip (chipId);
-    this.getWithDefault ('remove', noOp) (chipId);
-  },
+    (this.args.removal || noOp)(chipId);
+  }
 
-  didRemoveChip (/* chipId */) {
+  @action
+  removeChip (chip) {
+    // Get the index of the chip, and remove it from the list of chips.
+    let chipElement = chip.element;
+    let chipSetElement = chip.element.parentElement;
+    let index = Array.from (chipSetElement.children).indexOf (chipElement);
 
-  },
-
-  /**
-   * Add a chip to the chip set.
-   *
-   * This method is primarily called by the chip component when a new chip is added to the
-   * DOM. If the chip set is being inserted as well, it will ignore this request because the
-   * the chip set will initialize the underlying component with the child chips. If the chip
-   * set already exists (i.e., a chip is dynamically added to the DOM), then the chip set will
-   * respond to the request and add the chip to the chip set.
-   *
-   * @param chip
-   */
-  addChip (chip) {
-    if (!!this._chipSet) {
-      this._chipSet.addChip (chip.element);
+    if (index > -1) {
+      this.args.chips.removeAt (index);
     }
   }
-});
+}

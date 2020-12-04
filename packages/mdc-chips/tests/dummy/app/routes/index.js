@@ -6,10 +6,10 @@ export default Route.extend ({
     this._super (...arguments);
 
     controller.setProperties ({
-      basicChips: A ([
-        {text: 'Chip content'},
-        {text: 'Leading icon', iconLeading: 'event'},
-        {text: 'Trailing icon', iconTrailing: 'cancel'}
+      chips: A ([
+        {text: 'Chip content', trailingIcon: 'cancel'},
+        {text: 'Leading icon', leadingIcon: 'event', trailingIcon: 'cancel'},
+        {text: 'Trailing icon', trailingIcon: 'cancel'}
       ]),
 
       choiceChips: A ([
@@ -23,16 +23,14 @@ export default Route.extend ({
       choice: 'medium',
 
       filterChips: A ([
-        {id: 'fc-john', text: 'John', iconLeading: 'face'},
-        {id: 'fc-bob', text: 'Bob', iconLeading: 'face', iconTrailing: 'cancel'},
+        {id: 'fc-john', text: 'John', leadingIcon: 'face'},
+        {id: 'fc-bob', text: 'Bob', leadingIcon: 'face', trailingIcon: 'cancel'},
         {id: 'fc-alice', text: 'Alice'},
         {id: 'fc-susan', text: 'Susan'},
         {id: 'fc-jake', text: 'Jake'}
       ]),
 
-      filtered: A (),
-
-      dynamicChips: A ()
+      filtered: A ()
     });
   }
 });

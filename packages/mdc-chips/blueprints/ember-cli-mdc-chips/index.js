@@ -12,6 +12,6 @@ module.exports = Blueprint.extend ({
   addons: [
     {name: 'ember-cli-mdc-checkbox', target},
     {name: 'ember-cli-mdc-base', target},
-    {name: 'ember-cli-mdc-textfield', target}
+    {name: 'ember-cli-mdc-icon', target}
   ]
 });

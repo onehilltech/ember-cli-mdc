@@ -1,0 +1,14 @@
+<div class="mdc-chip-set {{this.type}}" role="grid" {{did-insert this.didInsert}}>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#each @chips as |chip index|}}
+      <MdcChip @id={{chip.id}}
+               @text={{chip.text}}
+               @leadingIcon={{chip.leadingIcon}}
+               @trailingIcon={{chip.trailingIcon}}
+               @tabindex={{index}}
+               @removal={{this.removeChip}} />
+    {{/each}}
+  {{/if}}
+</div>

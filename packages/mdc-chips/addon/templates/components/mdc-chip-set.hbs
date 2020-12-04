@@ -1,7 +1,0 @@
-{{#unless (has-block)}}
-  {{#each chips as |chip index|}}
-    <MdcChip @id={{chip.id}} @text={{chip.text}} @iconLeading={{chip.iconLeading}} @iconTrailing={{chip.iconTrailing}} @tabindex={{index}} />
-  {{/each}}
-{{else}}
-  {{yield}}
-{{/unless}}
