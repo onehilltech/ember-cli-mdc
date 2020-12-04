@@ -13,14 +13,16 @@ export default class MdcFilterChipSetComponent extends ChipSetComponent {
   }
 
   didSelection (chipId, selected) {
-    let chip = this.findChipById (chipId);
-    assert (`The filter chip set does not have a chip with the id ${chipId}`, isPresent (chip));
+    if (isPresent (this.chips)) {
+      let chip = this.findChipById (chipId);
+      assert (`The filter chip set does not have a chip with the id ${chipId}`, isPresent (chip));
 
-    if (selected) {
-      this.filtered.addObject (chip);
-    }
-    else {
-      this.filtered.removeObject (chip);
+      if (selected) {
+        this.filtered.addObject (chip);
+      }
+      else {
+        this.filtered.removeObject (chip);
+      }
     }
   }
 
