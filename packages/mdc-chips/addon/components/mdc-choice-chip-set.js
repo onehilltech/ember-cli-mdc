@@ -1,7 +1,6 @@
 import ChipSetComponent from './mdc-chip-set';
-import listener from 'ember-cli-mdc-base/listener';
 
-import { get, action } from '@ember/object';
+import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
