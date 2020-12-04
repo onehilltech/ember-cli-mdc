@@ -28,12 +28,6 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
         this.notifyChange (null);
       }
     }
-    else {
-      // The user did block creation of the choice chip set. We therefore are just going
-      // to return the selection information to the user.
-
-      super.selection (ev);
-    }
   }
 
   notifyChange (choice) {
