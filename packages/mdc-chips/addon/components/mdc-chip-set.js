@@ -50,11 +50,6 @@ export default class MdcChipSetComponent extends Component {
     (this.args.interaction || noOp)(chipId);
   }
 
-  @listener ('MDCChip:selection')
-  selection ({ detail: {chipId, selected}}) {
-    (this.args.selection || noOp)(chipId, selected);
-  }
-
   @listener ('MDCChip:removal')
   removal ({detail: { chipId }}) {
     (this.args.removal || noOp)(chipId);

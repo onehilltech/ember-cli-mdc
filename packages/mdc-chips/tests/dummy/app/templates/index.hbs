@@ -26,15 +26,18 @@
 <MdcChipSet @chips={{this.customKeyChips}} @textKey="name" />
 <p>Length: {{this.customKeyChips.length}}</p>
 
-<!--
 <h3>Choice Chips</h3>
 
-<MdcChoiceChipSet @chips={{choiceChips}} @value={{choice}} />
+<MdcChoiceChipSet @chips={{this.choiceChips}} @value={{this.choice.id}} @change={{this.change}} />
 
-<button {{action (mut choice) "extra_small"}}>Make Extra Small</button>
-<button {{action (mut choice) null}}>Clear Choice</button>
+<p>
+  <button {{on "click" (fn this.change "extra_small")}}>Make Extra Small</button>
+  <button {{on "click" (fn this.change null)}}>Clear Choice</button>
+</p>
 
-<div>Selected Value: {{choice}}</div>
+<p>Selected Value: {{this.choice.id}}</p>
+
+<!--
 
 <h3>Filter Chips</h3>
 

@@ -1,13 +1,48 @@
 import ChipSetComponent from './mdc-chip-set';
+import listener from 'ember-cli-mdc-base/listener';
 
-import { isPresent, isNone } from '@ember/utils';
+import { get } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { assert } from '@ember/debug';
 
-export default ChipSetComponent.extend ({
-  mode: 'choice',
+function noOp () {}
 
-  /// The selected value in the choice.
-  value: null,
+export default class MdcChoiceChipSetComponent extends ChipSetComponent {
+  type = 'choice';
 
+  @listener ('MDCChip:selection')
+  selection (ev) {
+    const { detail: {chipId, selected } }  = ev;
+
+    if (isPresent (this.args.chips)) {
+      // The user has provide a list of chips. We are going to either return the chip
+      // that was selected, or return null.
+
+      if (selected) {
+        // Locate the index of the selected chip, and return that one to the user.
+        let chip = this.args.chips.find (chip => get (chip, this.idKey) === chipId);
+        assert (`The choice chip set does not have a chip with the id ${chipId}`, isPresent (chip));
+
+        this.change (chip);
+      }
+      else {
+        this.change (undefined);
+      }
+    }
+    else {
+      // The user did block creation of the choice chip set. We therefore are just going
+      // to return the selection information to the user.
+
+      (this.args.selection || noOp) (chipId, selected);
+    }
+  }
+
+  get change () {
+    return this.args.change || noOp;
+  }
+}
+
+/*
   didInsertElement () {
     this._super (...arguments);
 
@@ -42,3 +77,4 @@ export default ChipSetComponent.extend ({
     this.set ('value', selected ? chipId : null);
   }
 });
+*/

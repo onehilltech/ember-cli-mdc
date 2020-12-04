@@ -3,16 +3,12 @@ import { action } from '@ember/object';
 import { tracked } from "@glimmer/tracking";
 
 export default class IndexController extends Controller {
+  /// properties for the basic chips
   @tracked
   chipLabel;
 
   @tracked
   chips;
-
-  /*
-  names: map ('filtered', function (id) {
-    return this.filterChips.findBy ('id', id).text;
-  }),*/
 
   @action
   submit (ev) {
@@ -20,14 +16,13 @@ export default class IndexController extends Controller {
     this.chips.pushObject ({text: this.chipLabel, trailingIcon: "cancel"});
   }
 
+  /// properties and methods for choice chip examples
+
+  @tracked
+  choice;
+
   @action
-  remove (chip) {
-
+  change (chip) {
+    this.choice = chip;
   }
-
-  /*
-  makeInputChip (value) {
-    return {text: value, iconTrailing: 'cancel'};
-  }
-  */
 }
