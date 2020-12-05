@@ -6,27 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar-dismiss.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar-dismiss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/components/mdc-snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/blueprints/ember-cli-mdc-snackbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/blueprints/ember-cli-mdc-snackbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-action-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-action-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-actions-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-dismiss-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-dismiss-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-label-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-label-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-surface-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-surface-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/integration/components/mdc-snackbar-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +268,7 @@
       <workItem from="1606331882396" duration="2521000" />
       <workItem from="1606370631232" duration="3423000" />
       <workItem from="1606438649479" duration="1406000" />
-      <workItem from="1606959832196" duration="44117000" />
+      <workItem from="1606959832196" duration="44837000" />
     </task>
     <servers />
   </component>

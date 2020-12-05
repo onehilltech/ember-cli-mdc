@@ -1,16 +1,16 @@
-{{#mdc-snackbar-surface}}
+<MdcSnackbarSurface>
   {{#if (has-block)}}
     {{yield}}
   {{else}}
-    {{#mdc-snackbar-label}}{{label}}{{/mdc-snackbar-label}}
+    <MdcSnackbarLabel>{{label}}</MdcSnackbarLabel>
 
     {{#if actions}}
-      {{#mdc-snackbar-actions}}
-        {{#mdc-snackbar-button click=action.handler}}{{action.text}}{{/mdc-snackbar-button}}
+      <MdcSnackbarActions>
+        <MdcSnackbarButton @click={{action.handler}}>{{action.text}}</MdcSnackbarButton>
         {{#if dismissible}}
           {{mdc-snackbar-dismiss dismissIcon}}
         {{/if}}
-      {{/mdc-snackbar-actions}}
+      </MdcSnackbarActions>
     {{/if}}
   {{/if}}
-{{/mdc-snackbar-surface}}
+</MdcSnackbarSurface>

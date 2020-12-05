@@ -66,7 +66,7 @@ export default Component.extend({
     // We are always going to recreate the component just in case the structure of
     // the component has changed.
 
-    const message = this.get ('message');
+    const message = this.message;
 
     if (isPresent (message) && this._currMessage !== message) {
       this.show ();
@@ -99,7 +99,7 @@ export default Component.extend({
       closeOnEscape,
       message,
       action
-    } = this.getProperties (['message', 'timeout','closeOnEscape', 'action']);
+    } = this;
 
     const { text: actionButtonText } = (action || {});
 

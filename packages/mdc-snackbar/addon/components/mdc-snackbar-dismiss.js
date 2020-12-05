@@ -8,7 +8,7 @@ export default IconButton.extend({
   init () {
     this._super (...arguments);
 
-    let params = this.get ('params');
+    let params = this.params;
 
     if (isEmpty (params)) {
       this.set ('params', ['close']);
