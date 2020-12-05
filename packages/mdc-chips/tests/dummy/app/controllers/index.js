@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from "@glimmer/tracking";
+import { A } from '@ember/array';
 
 export default class IndexController extends Controller {
   /// properties for the basic chips
@@ -43,4 +44,14 @@ export default class IndexController extends Controller {
 
   @tracked
   filtered;
+
+  @action
+  replaceFiltered () {
+    this.filtered = A ([this.filterChips.objectAt (1), this.filterChips.objectAt (2)]);
+  }
+
+  @action
+  addToFiltered () {
+    this.filtered.addObject (this.filterChips.objectAt (4));
+  }
 }

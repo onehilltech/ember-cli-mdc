@@ -1,9 +1,11 @@
 import ChipSetComponent from './mdc-chip-set';
+import listener from 'ember-cli-mdc-base/listener';
+
 import { A } from '@ember/array';
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
-import { action } from '@ember/object';
-import listener from 'ember-cli-mdc-base/listener';
+import { action, computed } from '@ember/object';
+import { tracked } from "@glimmer/tracking";
 
 class ChipData {
   constructor (chip, chipSet) {
@@ -26,6 +28,13 @@ class ChipData {
 export default class MdcFilterChipSetComponent extends ChipSetComponent {
   get checkedKey () {
     return this.args.checkedKey || 'checked';
+  }
+
+  @tracked
+  _data;
+
+  doBeforeInitialize () {
+    super.doBeforeInitialize ();
   }
 
   didSelection (chipId, selected) {
@@ -63,8 +72,8 @@ export default class MdcFilterChipSetComponent extends ChipSetComponent {
   }
 
   @action
-  sync () {
-    console.log ('syncing...');
+  sync (element, [filtered]) {
+    filtered.forEach (chip => this.select (this.getChipId (chip)));
   }
 
   get filtered () {
@@ -72,6 +81,6 @@ export default class MdcFilterChipSetComponent extends ChipSetComponent {
   }
 
   get data () {
-    return this.args.chips.map (chip => new ChipData (chip, this));
+    return this.chips.map (chip => new ChipData (chip, this));
   }
 }

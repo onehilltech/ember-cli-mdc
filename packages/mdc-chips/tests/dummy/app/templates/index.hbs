@@ -50,6 +50,11 @@
 
 <p>Filter Count: {{this.filtered.length}}</p>
 
+<p>
+  <button {{on "click" this.replaceFiltered}}>Set Chips</button>
+  <button {{on "click" this.addToFiltered}}>Add last chip</button>
+</p>
+
 <!--
 <h3>Input Chips</h3>
 

@@ -1,4 +1,7 @@
-<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid" {{did-insert this.didInsert}}>
+<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid"
+  {{did-insert this.didInsert}}
+  {{did-update this.sync @filtered}}>
+
   {{#if (has-block)}}
     {{yield}}
   {{else}}
