@@ -1,4 +1,4 @@
-ember-cli-mdc-form
+ember-cli-mdc-slider
 ======================
 
 ember-cli addon for [@material/slider](https://github.com/material-components/material-components-web/tree/master/packages/mdc-slider).
