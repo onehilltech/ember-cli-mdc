@@ -28,13 +28,13 @@ export default Route.extend ({
     controller.choice = controller.choiceChips.objectAt (3);
 
     controller.filterChips = A ([
-      {id: 'fc-john', text: 'John', leadingIcon: 'face', checked: true},
-      {id: 'fc-bob', text: 'Bob', leadingIcon: 'face', checked: true},
-      {id: 'fc-alice', text: 'Alice', checked: true},
-      {id: 'fc-susan', text: 'Susan', checked: true},
-      {id: 'fc-jake', text: 'Jake', checked: true}
+      {id: 'fc-john', text: 'John', leadingIcon: 'face'},
+      {id: 'fc-bob', text: 'Bob', leadingIcon: 'face'},
+      {id: 'fc-alice', text: 'Alice'},
+      {id: 'fc-susan', text: 'Susan'},
+      {id: 'fc-jake', text: 'Jake'}
     ]);
 
-    controller.filtered = A ();
+    controller.filtered = A ([controller.filterChips.objectAt (0), controller.filterChips.objectAt (3)]);
   }
 });

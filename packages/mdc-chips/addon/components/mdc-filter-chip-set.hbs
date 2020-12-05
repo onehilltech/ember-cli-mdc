@@ -1,15 +1,17 @@
-<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid" {{did-insert this.didInsert}} {{did-update this.sync @selected}}>
+<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid" {{did-insert this.didInsert}}>
   {{#if (has-block)}}
     {{yield}}
   {{else}}
-    {{#each @chips as |chip index|}}
-      <MdcFilterChip @id={{get chip this.idKey}}
-                     @text={{get chip this.textKey}}
-                     @checked={{get chip this.checkedKey}}
-                     @leadingIcon={{chip.leadingIcon}}
-                     @trailingIcon={{chip.trailingIcon}}
-                     @tabindex={{index}}
-                     @removal={{this.removeChip}} />
+    {{#each this.data as |data index|}}
+      {{#with data.chip as |chip|}}
+        <MdcFilterChip @id={{get chip this.idKey}}
+                       @text={{get chip this.textKey}}
+                       @checked={{data.checked}}
+                       @leadingIcon={{chip.leadingIcon}}
+                       @trailingIcon={{chip.trailingIcon}}
+                       @tabindex={{index}}
+                       @removal={{this.removeChip}} />
+      {{/with}}
     {{/each}}
   {{/if}}
 </div>

@@ -33,6 +33,7 @@ export default class MdcChipSetComponent extends Component {
 
   @action
   didInsert (element) {
+    this.doBeforeInitialize ();
     this._chipSet = new MDCChipSet (element);
 
     if (isPresent (this.args.chips)) {
@@ -47,6 +48,10 @@ export default class MdcChipSetComponent extends Component {
 
     this._mdcComponentCreated (this._chipSet);
     this.doInitialize (this._chipSet);
+  }
+
+  doBeforeInitialize () {
+
   }
 
   doInitialize (chipSet) {
