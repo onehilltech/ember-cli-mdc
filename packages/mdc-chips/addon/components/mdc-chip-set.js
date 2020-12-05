@@ -156,4 +156,12 @@ export default class MdcChipSetComponent extends Component {
   get textKey () {
     return this.args.textKey || 'text';
   }
+
+  get leadingIconKey () {
+    return this.args.leadingIconKey || 'leadingIcon';
+  }
+
+  get trailingIconKey () {
+    return this.args.trailingIconKey || 'trailingIcon';
+  }
 }
