@@ -39,7 +39,7 @@ this.snackbar.show ({
 * `action` - Optional hash with the action text and optional callback invoked when the action is clicked.
 * `dismiss` - Show the dismiss button on the snackbar (default is `true`).
 
-#### Auto-injection
+### Auto-injection
 
 The `snackbar` service is automatically injected into route and controller components. If you 
 want to use the `snackbar` service from a component, then you need to manually inject the 
