@@ -6,31 +6,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-focus-ring.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-pin-value-marker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-pin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-thumb-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-thumb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-track-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-track-marker-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-track.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-focus-ring.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-pin-value-marker.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-pin.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-thumb-container.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-thumb.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-track-container.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-track-marker-container.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider-track.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/templates/components/mdc-slider.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-focus-ring.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-pin-value-marker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-pin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-thumb-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-thumb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-track-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-track-marker-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-track.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/helpers/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/config/targets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/helpers/destroy-app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/helpers/module-for-acceptance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/helpers/start-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/issues/7.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/issues/7.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-focus-ring-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-focus-ring-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-pin-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-pin-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-pin-value-marker-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-pin-value-marker-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-container-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-container-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-container-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-container-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-marker-container-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-marker-container-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +75,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-slider/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/templates" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
@@ -65,15 +89,8 @@
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/templates" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-chips]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-slider]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -161,6 +178,9 @@
     <configuration name="[ember-cli-mdc-shape]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-shape">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-slider]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-slider">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-snackbar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-snackbar">
       <method v="2" />
     </configuration>
@@ -215,6 +235,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-indicator]: dummy application" />
@@ -281,7 +302,8 @@
       <workItem from="1606331882396" duration="2521000" />
       <workItem from="1606370631232" duration="3423000" />
       <workItem from="1606438649479" duration="1406000" />
-      <workItem from="1606959832196" duration="46469000" />
+      <workItem from="1606959832196" duration="47551000" />
+      <workItem from="1607191406928" duration="3219000" />
     </task>
     <servers />
   </component>
@@ -331,33 +353,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606370915694">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state x="304" y="153" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607201960646">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
+    <state x="304" y="153" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1607201960646" />
     <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606002518303">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607137364691">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607203119784">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607137364691" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607203119784" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607137364690">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607203119783">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607137364690" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607203119783" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607137364690">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607203119783">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607137364690" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607203119783" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607137364690">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607203119783">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607137364690" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607203119783" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />

@@ -1,140 +1,84 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-slider';
-
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
+import { action } from '@ember/object';
 import { and } from '@ember/object/computed';
 
 const { MDCSlider } = mdc.slider;
 
 function noOp () {}
 
-export default Component.extend({
-  layout,
+export default class MdcSliderComponent extends Component {
+  get min () {
+    return this.args.min || 0;
+  }
 
-  classNames: ['mdc-slider'],
+  get max () {
+    return this.args.max || 100;
+  }
 
-  classNameBindings: [
-    'discrete:mdc-slider--discrete',
-    'displayMarkers:mdc-slider--display-markers'
-  ],
+  @action
+  didInsert (element) {
+    this._slider = new MDCSlider (element);
+    this._mdcComponentCreated (this._slider);
+  }
 
-  attributeBindings: [
-    'tabindex',
-    'role',
-    'min:aria-valuemin',
-    'max:aria-valuemax',
-    'value:aria-valuenow',
-    'label:aria-label',
-    'disabled:aria-disabled',
-    'step:data-step',
-  ],
+  @listener ('MDCSlider:change')
+  change (ev) {
+    this.didChange (ev);
 
-  role: 'slider',
+    let { detail: slider } = ev;
+    (this.args.change || noOp)(slider.value);
+  }
 
-  tabindex: 0,
+  didChange () {
 
-  disabled: false,
+  }
 
-  discrete: false,
+  @listener ('MDCSlider:input')
+  input (ev) {
+    this.didInput (ev);
 
-  step: undefined,
+    let { detail: slider } = ev;
+    (this.args.input || noOp)(slider.value);
+  }
 
-  displayMarkers: false,
+  didInput () {
 
-  markers: and ('discrete', 'displayMarkers'),
+  }
 
-  /// Manually request the layout of the component. This attribute should be used when
-  /// you can no longer slide the slider due to changes in the slider's layout. For example,
-  /// the slider is initially rendered offscreen and then transitioned onscreen like in a
-  /// menu.
-  requestLayout: false,
+  get width () {
+    return this.args.width || 21;
+  }
 
-  _slider: null,
+  get height () {
+    return this.args.height || 21;
+  }
 
-  _changeListener: null,
+  get cx () {
+    return this.width / 2;
+  }
 
-  _inputListener: null,
+  get cy () {
+    return this.height / 2;
+  }
 
-  init () {
-    this._super (...arguments);
+  get r () {
+    return this.args.r || 7.875;
+  }
 
-    this._inputListener = this.didInput.bind (this);
-    this._changeListener = this.didChange.bind (this);
-  },
+  @action
+  setLimits (element, [min, max, step]) {
+    this._slider.min = min;
+    this._slider.max = max;
+    this._slider.step = step;
+  }
 
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    let {min, max, value, step, disabled} = this.getProperties (['min', 'max', 'value', 'step', 'disabled']);
-
-    if (min > this._slider.max) {
-      // The new min value is greater than the current max value. We need to adjust
-      // the max value before setting the new min value. This will prevent the underlying
-      // component from throwing an exception.
-
-      this._slider.max = max;
-      this._slider.min = min;
-    }
-    else if (max < this._slider.min) {
-      // The new max value is less than the current min value. We need to adjust
-      // the min value before setting the new max value. This will prevent the underlying
-      // component from throwing an exception.
-
-      this._slider.min = min;
-      this._slider.max = max;
-    }
-    else {
-      this._slider.min = min;
-      this._slider.max = max;
-    }
-
-    if (value !== this._slider.value) {
+  @action
+  setValue (element, [value]) {
+    if (this._slider.value !== value) {
       this._slider.value = value;
     }
-
-    if (step !== this._slider.step) {
-      this._slider.step = step;
-    }
-
-    if (disabled !== this._slider.disabled) {
-      this._slider.disabled = disabled;
-    }
-
-    if (this.get ('requestLayout')) {
-      this._slider.layout ();
-    }
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._createComponent ();
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._destroyComponent ();
-  },
-
-  didInput ({detail:slider}) {
-    this.set ('value', slider.value);
-  },
-
-  didChange ({detail:slider}) {
-    this.getWithDefault ('change', noOp) (slider.value);
-  },
-
-  _createComponent () {
-    this._slider = new MDCSlider (this.element);
-    this._slider.listen ('MDCSlider:input', this._inputListener);
-    this._slider.listen ('MDCSlider:change', this._changeListener);
-  },
-
-  _destroyComponent () {
-    this._slider.unlisten ('MDCSlider:input', this._inputListener);
-    this._slider.unlisten ('MDCSlider:change', this._changeListener);
-    this._slider.destroy ();
   }
-});
+}
