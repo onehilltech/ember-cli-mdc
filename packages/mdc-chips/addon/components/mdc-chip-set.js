@@ -94,6 +94,18 @@ export default class MdcChipSetComponent extends Component {
 
   }
 
+  @listener ('MDCChip:navigation')
+  navigation (ev) {
+    const { details: {chipId, key, source}	} = ev;
+
+    this.didNavigation (chipId, key, source);
+    (this.args.navigation || noOp)(chipId, key, source);
+  }
+
+  didNavigation (chipId, key, source) {
+
+  }
+
   @action
   removeChip (chip) {
     // Get the index of the chip, and remove it from the list of chips.
