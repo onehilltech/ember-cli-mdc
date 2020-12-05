@@ -13,16 +13,6 @@ Services
 
 * [`snackbar`](#snackbar)
 
-Components and Mixins
------------------------
-
-### Components
-
-* [`{{mdc-snackbar}}`](#mdc-snackbar)
-
-### Mixins
-
-* `Snackbar`
 
 snackbar
 ---------------------
@@ -51,7 +41,16 @@ this.snackbar.show ({
 
 #### Auto-injection
 
-The `snackbar` service is automatically injected into route and controller components. There is
-no need to just the `service` definition to use the snackbar. If you want to use the `snackbar`
-service from a component, then you need to manually inject the `snackbar` service into the
-desired component.
+The `snackbar` service is automatically injected into route and controller components. If you 
+want to use the `snackbar` service from a component, then you need to manually inject the 
+`snackbar` service into the desired component.
+
+```javascript
+import Component from '@glimmer/component';
+import { inject as service } from '@ember/service';
+
+export default class MyComponent extends Component {
+  @service
+  snackbar;
+}
+```
