@@ -62,9 +62,10 @@ or the block version:
 
 #### Using adapter keys to display data as chips
 
-A feature of the inline `MdcChipSet` is the ability to use adapter keys to display
-any array as a chip set without having to convert the items in the array to the expected 
-attributes of a chip. The following are the adapter key attributes on `MdcChipSet`:
+A feature of the inline `MdcChipSet` (and the other chip sets) is the ability to use adapter 
+keys to display any array as a chip set without having to convert the items in the array 
+to the expected attributes of a chip. The following are the adapter key attributes on 
+`MdcChipSet`:
 
 * `@idKey` - The id property name (default is `'id'`)
 * `@textKey` - The text property name (default is `'text'`)
