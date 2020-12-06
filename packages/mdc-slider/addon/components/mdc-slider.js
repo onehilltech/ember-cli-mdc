@@ -65,7 +65,7 @@ export default class MdcSliderComponent extends Component {
   }
 
   get r () {
-    return this.args.r || (0.75 * Math.min (this.cx, this.cy));
+    return this.args.r || (0.38 * Math.min (this.width, this.height));
   }
 
   @action
