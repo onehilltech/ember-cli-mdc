@@ -40,8 +40,6 @@ export default class MdcTabBarComponent extends Component {
 
   @listener ('MDCTabBar:activated')
   activated (ev) {
-    console.log (ev);
-
     const { detail: { index } } = ev;
     (this.args.activated || noOp) (index);
   }

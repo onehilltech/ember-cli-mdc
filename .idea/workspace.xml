@@ -6,13 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/templates/components/mdc-tab-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/blueprints/ember-cli-mdc-tab-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/blueprints/ember-cli-mdc-tab-bar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
