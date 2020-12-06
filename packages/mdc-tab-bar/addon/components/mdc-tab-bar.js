@@ -48,7 +48,7 @@ export default Component.extend (Elevation, {
   didUpdate () {
     this._super (...arguments);
 
-    const activeTab = this.get ('activeTab');
+    const activeTab = this.activeTab;
 
     if (isPresent (activeTab)) {
       this._tabBar.activateTab (activeTab)
