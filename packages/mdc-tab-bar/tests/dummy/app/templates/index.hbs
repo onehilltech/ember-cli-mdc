@@ -1,7 +1,9 @@
-<MdcTabBar>
+<MdcTabBar @activateTab={{this.activeTab}}>
   <MdcTabScroller>
     <MdcTab @label="Tab 1" />
     <MdcTab @label="Tab 2" />
     <MdcTab @label="Tab 3" />
   </MdcTabScroller>
 </MdcTabBar>
+
+<button {{on "click" this.activateTab}}>Activate Tab 2</button>
