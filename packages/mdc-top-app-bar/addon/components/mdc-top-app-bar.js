@@ -1,111 +1,48 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import Theme from 'ember-cli-mdc-theme/mixins/theme';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
-import layout from '../templates/components/mdc-top-app-bar';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
-import { computed } from '@ember/object';
-import { isEmpty, isPresent } from '@ember/utils';
-
-import { assert } from '@ember/debug';
-
-const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
-const STYLES = ['fixed','dense','prominent','short'];
+const { MDCTopAppBar } = mdc.topAppBar;
 
 function noOp () { }
 
-export default Component.extend (Theme, {
-  layout,
+export default class MdcTopAppBarComponent extends Component {
+  _topAppBar = null;
 
-  tagName: 'header',
+  @action
+  didInsert (element) {
+    this._topAppBar = new MDCTopAppBar (element);
+    this.setup (this._topAppBar);
+  }
 
-  classNames: 'mdc-top-app-bar',
+  @action
+  reinitialize (element) {
+    this._topAppBar = new MDCTopAppBar (element);
+    this.setup (this._topAppBar);
+  }
 
-  classNameBindings: [
-    'styleClassName',
-    'fixedAdjustClassName',
-    'alwaysClosedClassName:mdc-top-app-bar--short-collapsed',
-    'contextual:mdc-top-app-bar--contextual',
-  ],
+  setup (component) {
+    this._mdcComponentCreated (component);
 
-  /// Notification for navigation button clicked.
-  navigation: undefined,
-
-  /// The top app bar is always closed in short mode.
-  alwaysClosed: false,
-
-  /// Mark the top app bar as contextual
-  contextual: false,
-
-  _topAppBar: undefined,
-  _navEventListener: undefined,
-
-  style: null,
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
-
-    // Notify the listeners that our style has changed.
-    if (this._topAppBar) {
-      this._topAppBar.emit ('MDCTopAppBar:change', {style}, true);
-    }
-
-    if (isEmpty (style)) {
-      return null;
-    }
-
-    assert (`The style attribute must be one of the following values: ${STYLES}`, STYLES.includes (style));
-    return `mdc-top-app-bar--${style}`;
-  }),
-
-  alwaysClosedClassName: computed ('{alwaysClosed,style}', function () {
-    const {alwaysClosed,style} = this.getProperties (['style','alwaysClosed']);
-    return alwaysClosed && style === 'short' ? 'mdc-top-app-bar--short-collapsed' : null;
-  }),
-
-  init () {
-    this._super (...arguments);
-
-    this._navEventListener = this.doNavigation.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-    this._createComponent ();
-
-    // Notify the listeners of the original style.
-    let style = this.get ('style');
-    this._topAppBar.emit ('MDCTopAppBar:change', {style}, true);
-  },
-
-  didUpdate () {
-    this._super (...arguments);
-
-    this._destroyComponent ();
-    this._createComponent ();
-  },
-
-  didRender () {
-    this._super (...arguments);
-
-    // Set the scroll target for the top app bar. We process it after the component
-    // has rendered because we need to make sure all elements, including those for
-    // its children, are part of the dom model.
-    let scrollTarget = this.get ('scrollTarget');
+    let { scrollTarget } = this.args;
 
     if (isPresent (scrollTarget)) {
       this.setScrollTarget (scrollTarget);
     }
-  },
+  }
 
-  willDestroyElement () {
-    this._super (...arguments);
-    this._destroyComponent ();
-  },
+  @listener ('MDCTopAppBar:nav')
+  navigation () {
+    (this.args.navigation || noOp)();
+  }
 
-  doNavigation () {
-    this.getWithDefault ('navigation', noOp) ();
-  },
+  changeScrollTarget (element, [scrollTarget]) {
+    this.setScrollTarget (scrollTarget);
+  }
 
   setScrollTarget (scrollTarget) {
     let element = document.querySelector (scrollTarget);
@@ -113,16 +50,5 @@ export default Component.extend (Theme, {
     if (isPresent (element)) {
       this._topAppBar.setScrollTarget (element);
     }
-  },
-
-  _createComponent () {
-    this._topAppBar = new MDCTopAppBar (this.element);
-
-    this._topAppBar.listen ('MDCTopAppBar:nav', this._navEventListener);
-  },
-
-  _destroyComponent () {
-    this._topAppBar.unlisten ('MDCTopAppBar:nav', this._navEventListener);
-    this._topAppBar.destroy ();
   }
-});
+}

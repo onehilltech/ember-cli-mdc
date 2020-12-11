@@ -6,27 +6,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-action-item.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-action-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-action-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigation-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigation-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/templates/components/mdc-content.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/templates/components/mdc-top-app-bar-row.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/templates/components/mdc-top-app-bar-section.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/templates/components/mdc-top-app-bar-title.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/templates/components/mdc-top-app-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/app/components/mdc-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-action-item-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-action-item-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-navigate-up-to-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-navigate-up-to-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-navigation-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-navigation-icon-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-row-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-row-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-section-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-section-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-title-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/integration/components/mdc-top-app-bar-title-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,27 +59,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-slider/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/templates" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-slider/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab-bar]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -287,7 +297,8 @@
       <workItem from="1606438649479" duration="1406000" />
       <workItem from="1606959832196" duration="47551000" />
       <workItem from="1607191406928" duration="3578000" />
-      <workItem from="1607286736838" duration="881000" />
+      <workItem from="1607286736838" duration="1510000" />
+      <workItem from="1607496038541" duration="12089000" />
     </task>
     <servers />
   </component>
@@ -346,25 +357,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607286719040">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607625792165">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607286719040" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607625792165" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607286719040">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607625792164">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607286719040" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607625792164" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607286719039">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607625792164">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607286719039" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607625792164" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607286719040">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607625792165">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607286719040" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607625792165" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />

@@ -9,8 +9,6 @@ export default Controller.extend({
   notShort: not ('isShort'),
 
   actions: {
-    navigation () {
-      alert ('Navigation button clicked!');
-    }
+
   }
 });
