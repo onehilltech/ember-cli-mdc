@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-typography",
-  "version": "2.0.0-octane.28",
+  "version": "2.0.0-octane.29",
   "description": "ember-cli addon for @material/typography",
   "keywords": [
     "ember-addon",
@@ -34,8 +34,8 @@
     "ember-cli-babel": "^7.19.0",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
-    "ember-cli-mdc-sass": "^2.0.0-octane.28",
-    "ember-cli-mdc-utils": "^2.0.0-octane.28"
+    "ember-cli-mdc-sass": "^2.0.0-octane.29",
+    "ember-cli-mdc-utils": "^2.0.0-octane.29"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
