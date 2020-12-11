@@ -17,15 +17,18 @@ Installation
 
     ember install ember-cli-mdc-top-app-bar
 
-Components and Mixins
------------------------
+Components and Modifiers
+--------------------------
 
 ### Components
 
-* [`{{mdc-top-app-bar}}`](#mdc-top-app-bar)
-* [`{{mdc-content}}`](#mdc-content)
+* [`<MdcTopAppBar>`](#MdcTopAppBar)
 
-{{mdc-top-app-bar}}
+### Modifiers 
+
+* [`{{mdc-top-app-bar-fixed-adjustment}}`](#mdc-top-app-bar-fixed-adjustment)
+
+MdcTopAppBar
 ---------------------
 
 ### Description
@@ -37,164 +40,166 @@ icons and the overflow menu for the page.
 ### Usage
 
 ```handlebars
-{{#mdc-top-app-bar style=["fixed"|"dense"|"prominent"|"short"]
-                   alwaysClosed=[true|false]
-                   navigation=navigation}}
-  {{#mdc-top-app-bar-row}}
+<MdcTopAppBar @fixed=[true|false] 
+              @dense=[true|false]
+              @prominent=[true|false]
+              @short=[true|false]
+              @alwaysCollapsed=[true|false]
+              @navigation={{this.navigation}}>
+  <MdcTopAppBarRow>
   
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
 ### Attributes
 
-* `style` - The top app bar style.
-* `alwaysClosed` - The top app bar is always closed. This only applies for short top app bars.
-* `navigation` - The action invoked when the navigation icon is clicked.
+* `fixed` - The top app bar is fixed to the top of the page.
+* `dense` - The top app bar is shorter.
+* `prominent` - The top app bar is taller.
+* `short` - The top app bar can collapse to the navigation icon side when scrolled.
+* `alwaysCollapsed` - The top app bar always appears collapsed (when short).
 
 ### Adding sections to a row
 
-The `{{mdc-top-app-bar}}` component can contain sections. The sections can either be aligned
-to the start or end of the `{{mdc-top-app-bar-row}}`. The default position is `alignStart`.
+The `<MdcTopAppBar>` component can contain sections. The sections can either be aligned
+to the start or end of the `<MdcTopAppBarRow>`. There is no default alignment.
 
 ```handlebars
-{{#mdc-top-app-bar style="fixed"}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
+<MdcTopAppBar @fixed={{true}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
     
-    {{/mdc-top-app-bar-section}}
+    </MdcTopAppBarSection>
   
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-    
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+    <MdcTopAppBarSection @position="alignEnd">
+      
+    </MdcTopAppBarSection>
+
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
 ### Adding a title to the app bar
 
-Use the `{{mdc-top-app-bar-title}}` component to add a title to the top app bar.
+Use the `<MdcTopAppBarTitle>` component to add a title to the top app bar.
 
 ```handlebars
-{{#mdc-top-app-bar style="fixed"}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
-      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
-    {{/mdc-top-app-bar-section}}
+<MdcTopAppBar @fixed={{true}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
+      <MdcTopAppBarTitle>Ember Material</MdcTopAppBarTitle>
+    </MdcTopAppBarSection>
   
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-    
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+    <MdcTopAppBarSection @position="alignEnd">
+      
+    </MdcTopAppBarSection>
+
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
 ### The navigation icon
 
-The `{{mdc-top-app-bar-navigation-icon}}` is used to add a navigation icon to the top app bar.
-Likewise, the `navigation` attribute on `{{mdc-top-app-bar}}` is invoked when the navigation
+The `<MdcTopAppBarNavigationIcon>` is used to add a navigation icon to the top app bar.
+Likewise, the `@navigation` attribute on `<MdcTopAppBar>` is invoked when the navigation
 icon is clicked.
 
 ```handlebars
-{{#mdc-top-app-bar style="fixed" navigation=(action (mut openDrawer) true)}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
-      {{mdc-top-app-bar-navigation-icon}}
-      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
-    {{/mdc-top-app-bar-section}}
+<MdcTopAppBar @fixed={{true}} @navigation={{this.openDrawer}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
+      <MdcTopAppBarNavigationIcon @icon="menu" />
+      <MdcTopAppBarTitle>Ember Material</MdcTopAppBarTitle>
+    </MdcTopAppBarSection>
   
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-    
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+    <MdcTopAppBarSection @position="alignEnd">
+      
+    </MdcTopAppBarSection>
+
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
-The default icon is the `menu` icon. You can use the `icon` attribute to change
-the navigation icon.
+The `<MdcTopAppBarNavigateUpTo>` component adds the navigate up icon to the top 
+app bar. It also allows you to link to a page in the application.
 
 ```handlebars
-{{#mdc-top-app-bar style="fixed"}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
-      {{mdc-top-app-bar-navigation-icon icon="search"}}
-      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
-    {{/mdc-top-app-bar-section}}
+<MdcTopAppBar @fixed={{true}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
+      <MdcTopAppBarNavigateUpTo @route="index" />
+      <MdcTopAppBarTitle>Ember Material</MdcTopAppBarTitle>
+    </MdcTopAppBarSection>
   
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-    
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
-```
+    <MdcTopAppBarSection @position="alignEnd">
+      
+    </MdcTopAppBarSection>
 
-The `{{mdc-top-app-bar-navigate-up-to}}` component is a design to add the navigate
-up to icon to the top app bar. It also allows you to link to a page in the application.
-
-```handlebars
-{{#mdc-top-app-bar style="fixed"}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
-      {{mdc-top-app-bar-navigate-up-to "index"}}
-      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
-    {{/mdc-top-app-bar-section}}
-  
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-    
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
 ### Adding action items to the top app bar
 
-Action items usually appear at the end of the action bar. The `{{mdc-top-app-bar-action-item}}`
+Action items usually appear at the end of the action bar. The `<MdcTopAppBarActionItem>`
 components adds an action item to the top app bar.
 
 ```handlebars
-{{#mdc-top-app-bar style="fixed"}}
-  {{#mdc-top-app-bar-row}}
-    {{#mdc-top-app-bar-section}}
-      {{mdc-top-app-bar-navigate-up-to "index"}}
-      {{#mdc-top-app-bar-title}}Ember Material{{/mdc-top-app-bar-title}}
-    {{/mdc-top-app-bar-section}}
+<MdcTopAppBar @fixed={{true}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
+      <MdcTopAppBarNavigateUpTo @route="index" />
+      <MdcTopAppBarTitle>Ember Material</MdcTopAppBarTitle>
+    </MdcTopAppBarSection>
   
-    {{#mdc-top-app-bar-section position="alignEnd"}}
-      {{mdc-top-app-bar-action-item label="Download" alt="Download" icon="file_download"}}
-    {{/mdc-top-app-bar-section}}
-  {{/mdc-top-app-bar-row}}
-{{/mdc-top-app-bar}}
+    <MdcTopAppBarSection @position="alignEnd">
+      <MdcTopAppBarActionItem @label="Download" @icon="file_download" alt="Download" />
+    </MdcTopAppBarSection>
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 ```
 
-The `{{mdc-top-app-bar-action-item}}` supports the following attributes:
+The `<MdcTopAppBarActionItem>` supports the following attributes:
 
 * `icon` - The icon for the action item.
 * `label` - The accessibility label for the action item (optional).
-* `alt` - The alternate text for the item link (optional).
 
-{{mdc-content}}
----------------------
+mdc-top-app-bar-fixed-adjustment
+---------------------------------
 
 ### Description
 
-The `{{mdc-content}}` block component contains the content for a page that contains a
-`{{mdc-top-app-bar}}` component. The `{{mdc-content}}` components ensure the content
-has the correct padding so the page's content is not covered by the `{{mdc-top-app-bar}}`.
-
-> The {{mdc-content}} automatically sets its style based on the style of the {{mdc-top-app-bar}}
-> component. This allows you to dynamically change the {{mdc-top-app-bar}} style at runtime and
-> have the {{mdc-content}} component update its style accordingly.
+The `{{mdc-top-app-bar-fixed-adjustment}}` modifier is designed to adjust a container's
+top padding to account for the size of the top app bar.
 
 ### Usage
 
 ```handlebars
-{{#mdc-top-app-bar}}
+<MdcTopAppBar @fixed={{true}} 
+              @dense={{this.dense}}
+              @short={{this.short}}
+              @prominent={{this.prominent}} 
+              @alwaysCollapsed={{this.alwaysCollapsed}}>
+  <MdcTopAppBarRow>
+    <MdcTopAppBarSection @position="alignStart">
+      <MdcTopAppBarNavigateUpTo @route="index" />
+      <MdcTopAppBarTitle>Ember Material</MdcTopAppBarTitle>
+    </MdcTopAppBarSection>
+  
+    <MdcTopAppBarSection @position="alignEnd">
+      <MdcTopAppBarActionItem @label="Download" @icon="file_download" alt="Download" />
+    </MdcTopAppBarSection>
+  </MdcTopAppBarRow>
+</MdcTopAppBar>
 
-{{/mdc-top-app-bar}}
-
-{{#mdc-content}}
-
-  {{!-- page content goes here --}}
-
-{{/mdc-content}}
+<div {{mdc-top-app-bar-fixed-adjustment dense=this.dense 
+                                        short=this.short
+                                        prominent=this.prominent
+                                        alwaysCollapsed=this.alwaysCollapsed}}>
+  <!-- content goes here -->
+</div>
 ```
+
+As shown in the example above, the named arguments for `{{mdc-top-app-bar-fixed-adjustment}}`
+should be bound to their corresponding argument from the <MdcTopAppBar> component.
