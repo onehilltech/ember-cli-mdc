@@ -6,8 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/tests/dummy/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +288,7 @@
       <workItem from="1606959832196" duration="47551000" />
       <workItem from="1607191406928" duration="3578000" />
       <workItem from="1607286736838" duration="1510000" />
-      <workItem from="1607496038541" duration="14858000" />
+      <workItem from="1607496038541" duration="15549000" />
     </task>
     <servers />
   </component>
@@ -348,6 +367,10 @@
     </state>
     <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607656118492" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state x="637" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607662605174">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="637" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.948@0.23.1680.948" timestamp="1607662605174" />
     <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
