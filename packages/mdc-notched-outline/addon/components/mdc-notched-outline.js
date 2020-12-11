@@ -19,7 +19,7 @@ export default Component.extend({
   didInsertElement () {
     this._super (...arguments);
 
-    let embedded = this.get ('embedded');
+    let embedded = this.embedded;
 
     if (!embedded) {
       this._notchedOutline = new MDCNotchedOutline (this.element);

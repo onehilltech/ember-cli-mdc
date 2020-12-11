@@ -1,7 +1,7 @@
-{{mdc-notched-outline-leading}}
+<MdcNotchedOutlineLeading />
 {{#unless noLabel}}
-  {{#mdc-notched-outline-notch}}
-    {{#mdc-floating-label for=for floatAbove=notched shake=shakeFloatingLabel}}{{label}}{{/mdc-floating-label}}
-  {{/mdc-notched-outline-notch}}
+  <MdcNotchedOutlineNotch>
+    <MdcFloatingLabel @for={{for}} @floatAbove={{notched}} @shake={{shakeFloatingLabel}}>{{label}}</MdcFloatingLabel>
+  </MdcNotchedOutlineNotch>
 {{/unless}}
-{{mdc-notched-outline-trailing}}
+<MdcNotchedOutlineTrailing />
