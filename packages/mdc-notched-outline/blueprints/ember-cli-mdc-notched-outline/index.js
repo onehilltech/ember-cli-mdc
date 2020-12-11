@@ -6,10 +6,11 @@ const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/notched-outline', target: '3.2.0'}
+    {name: '@material/notched-outline', target: '^6.0.0'}
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-floating-label', target}
+    { name: 'ember-cli-mdc-floating-label', target },
+    { name: '@ember/render-modifiers' }
   ]
 });
