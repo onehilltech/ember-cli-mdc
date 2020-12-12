@@ -10,12 +10,7 @@ export default class MdcButtonComponent extends Component {
     return this.args.type;
   }
 
-  @action
-  didInsert (element) {
-    this._button = new MDCRipple (element);
-  }
-
-  willDestroy () {
-    this._button.destroy ();
+  createMaterialComponent (element) {
+    return new MDCRipple (element);
   }
 }

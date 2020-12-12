@@ -19,13 +19,11 @@ export default class MdcButtonLinkComponent extends LinkComponent {
     this._button = new MDCRipple (this.element);
   }
 
-  didReceiveAttrs () {
-    super.didReceiveAttrs ();
-  }
-
   willDestroyElement () {
     super.willDestroyElement ();
 
-    this._button.destroy ();
+    if (isPresent (this._button)) {
+      this._button.destroy ();
+    }
   }
 }
