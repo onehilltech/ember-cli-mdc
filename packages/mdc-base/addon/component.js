@@ -1,57 +1,120 @@
 import Component from '@glimmer/component';
-import { get } from '@ember/object';
+
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
 import Listener from './-internal/listener';
+
+const { MDCComponent } = mdc.base;
 
 /**
  * The MaterialComponent class is the base class for all material design components
  * in the material-components-web framework.
  */
 export default class MaterialComponent extends Component {
-  /**
-   * The component will be destroy. Perform any cleanup operations so we do not have
-   * any resources being leaked.
-   */
-  willDestroy () {
-    this.cleanup ();
+  _component = null;
+
+  get component () {
+    return this._component;
+  }
+  
+  @action
+  didInsert (element) {
+    // Prepare the element for creation.
+    this.prepareElement (element);
+
+    // Create the material component.
+    let component = this.createMaterialComponent (element);
+
+    this._checkComponent (component);
+    this._installComponent (component);
   }
 
   /**
-   * Get the underlying material design component.
+   * Allow a subclass to replace the current component with a new instance.
    *
-   * @returns {*}
+   * @param component
    */
-  get component () {
-    return this._mdcComponent;
+  replaceComponent (component) {
+    // Check the component is a valid material component.
+    this._checkComponent (component);
+
+    // Cleanup the current component's resources, and install the new component.
+    this._cleanup ();
+    this._installComponent (component);
+  }
+
+  /**
+   * Helper method for installing a new component.
+   *
+   * @param component
+   * @private
+   */
+  _installComponent (component) {
+    // Save the component, and initialize it.
+    this._component = component;
+    this.initializeComponent (component);
+
+    // Start listening for events.
+    if (isPresent (this._listeners)) {
+      this._listeners.forEach (listener => listener.listen (this));
+    }
+  }
+
+  /**
+   * Check the component is an instance of this class.
+   *
+   * @param component
+   * @private
+   */
+  _checkComponent (component) {
+    assert ('The instantiated component is not an instance of MDCComponent', (component instanceof MDCComponent));
+  }
+
+  /**
+   * Prepare the component for creation. This allows the component to update the
+   * DOM before creating the material component.
+   *
+   * @param element         HTML element
+   */
+  prepareElement (element) {
+
+  }
+
+  /**
+   * Factory method for creating the material component.
+   *
+   * @param element
+   */
+  createMaterialComponent (element) {
+    throw new Error ('You must override the createMaterialComponent() method');
+  }
+
+  /**
+   * Initialize the material component after it has been created.
+   *
+   * @param component
+   */
+  initializeComponent (component) {
+
+  }
+
+  /**
+   * The component will be destroy. Perform any _cleanup operations so we do not have
+   * any resources being leaked.
+   */
+  willDestroy () {
+    this._cleanup ();
   }
 
   /**
    * Cleanup any resources used by the component.
    */
-  cleanup () {
-    if (!!this._mdcComponent) {
-      if (!!this._listeners) {
-        this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
+  _cleanup () {
+    if (isPresent (this._component)) {
+      if (isPresent (this._listeners)) {
+        this._listeners.forEach (listener => listener.unlisten (this._component));
       }
-    }
-  }
-
-  /**
-   * A material design component has been created.
-   *
-   * @param mdcComponent
-   * @private
-   */
-  _mdcComponentCreated (mdcComponent) {
-    // Cleanup any resources in use.
-    this.cleanup ();
-
-    // Save the component.
-    this._mdcComponent = mdcComponent;
-
-    // Start listening for events.
-    if (!!this._listeners) {
-      this._listeners.forEach (listener => listener.listen (this));
     }
   }
 
@@ -74,7 +137,7 @@ export default class MaterialComponent extends Component {
    * @param method
    */
   listen (eventName, method) {
-    return this._mdcComponent.listen (eventName, method);
+    return this._component.listen (eventName, method);
   }
 
   /**
@@ -84,6 +147,6 @@ export default class MaterialComponent extends Component {
    * @param method
    */
   unlisten (eventName, method) {
-    return this._mdcComponent.unlisten (eventName, method);
+    return this._component.unlisten (eventName, method);
   }
 }
