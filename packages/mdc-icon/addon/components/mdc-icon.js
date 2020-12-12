@@ -4,8 +4,4 @@ export default class MdcIcon extends Component {
   get iconClass () {
     return this.args.iconClass || 'material-icons';
   }
-
-  get type () {
-    return this.args.type || 'i';
-  }
 }

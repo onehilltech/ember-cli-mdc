@@ -1,7 +1,1 @@
-{{#if (has-block)}}
-  <svg class="{{if @type @type}}" ...attributes>
-    {{yield}}
-  </svg>
-{{else}}
-  <i class="{{this.iconClass}} {{if @type @type}}" ...attributes>{{@icon}}</i>
-{{/if}}
+<i class="{{this.iconClass}}" ...attributes>{{@icon}}</i>
