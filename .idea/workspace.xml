@@ -6,27 +6,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/index.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-scrim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-surface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-actions.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-container.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-content.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-scrim.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-surface.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog-title.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/templates/components/mdc-dialog.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/controllers/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-actions-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-body-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-body-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-container-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-container-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-footer-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-footer-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-footer-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-footer-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-simple-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-simple-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-title-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-header-title-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-scrim-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-scrim-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-surface-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-surface-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-title-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-title-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +80,14 @@
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-menu/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-notched-outline/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-slider/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-notched-outline]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-dialog]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -292,7 +310,7 @@
       <workItem from="1606959832196" duration="47551000" />
       <workItem from="1607191406928" duration="3578000" />
       <workItem from="1607286736838" duration="1510000" />
-      <workItem from="1607496038541" duration="25083000" />
+      <workItem from="1607496038541" duration="35613000" />
     </task>
     <servers />
   </component>
@@ -351,25 +369,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607699162194">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607718714040">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607699162194" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607718714040" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607699162193">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607718714039">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607699162193" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607718714039" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607699162192">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607718714039">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607699162192" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607718714039" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607699162193">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607718714040">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607699162193" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607718714040" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />

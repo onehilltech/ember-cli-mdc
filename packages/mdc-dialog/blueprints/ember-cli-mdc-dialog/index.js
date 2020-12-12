@@ -6,10 +6,11 @@ const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/dialog', target: '3.2.0'}
+    {name: '@material/dialog', target: '^6.0.0'}
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-button', target}
+    {name: 'ember-cli-mdc-button', target},
+    {name: '@ember/render-modifiers'}
   ]
 });
