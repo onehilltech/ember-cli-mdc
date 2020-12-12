@@ -72,7 +72,7 @@ export default class MaterialComponent extends Component {
    * @private
    */
   _checkComponent (component) {
-    assert ('The instantiated component is not an instance of MDCComponent', (component instanceof MDCComponent));
+    //assert ('The instantiated component is not an instance of MDCComponent', (component instanceof MDCComponent));
   }
 
   /**
