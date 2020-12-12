@@ -26,8 +26,10 @@ export default class MaterialComponent extends Component {
     // Create the material component.
     let component = this.createMaterialComponent (element);
 
-    this._checkComponent (component);
-    this._installComponent (component);
+    if (isPresent (component)) {
+      this._checkComponent (component);
+      this._installComponent (component);
+    }
   }
 
   /**
@@ -87,7 +89,7 @@ export default class MaterialComponent extends Component {
    * @param element
    */
   createMaterialComponent (element) {
-    throw new Error ('You must override the createMaterialComponent() method');
+    return null;
   }
 
   /**
