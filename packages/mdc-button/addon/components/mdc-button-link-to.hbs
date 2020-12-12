@@ -1,15 +1,15 @@
-<MdcButtonRipple />
+<div class="mdc-button__ripple"></div>
 
-{{#if @icon}}
-  <MdcButtonIcon @icon={{@icon}} />
+{{#if @leadingIcon}}
+  <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
 {{/if}}
 
 {{#if (has-block)}}
-  <MdcButtonLabel>{{yield}}</MdcButtonLabel>
+  <span class="mdc-button__label">{{yield}}</span>
 {{else}}
-  <MdcButtonLabel @label={{@label}} />
+  <span class="mdc-button__label">{{@label}}</span>
 {{/if}}
 
 {{#if @trailingIcon}}
-  <MdcButtonIcon @icon={{@trailingIcon}} />
+  <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
 {{/if}}

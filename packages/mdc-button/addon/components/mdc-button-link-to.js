@@ -1,29 +1,31 @@
 import LinkComponent from '@ember/routing/link-component';
+
+import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 const { MDCRipple } = mdc.ripple;
 
-export default class MdcButtonLinkComponent extends LinkComponent {
-  _button = null;
+export default LinkComponent.extend ({
+  _button: null,
 
-  classNames = ['mdc-button'];
-  classNameBindings = Object.freeze (['styleClassName']);
+  classNames: ['mdc-button'],
+  classNameBindings: ['styleClassName'],
 
-  get styleClassName () {
+  styleClassName: computed (function () {
     return isPresent (this.style) ? `mdc-button--${this.style}` : '';
-  }
+  }),
 
   didInsertElement () {
-    super.didInsertElement ();
+    this._super (...arguments);
 
     this._button = new MDCRipple (this.element);
-  }
+  },
 
   willDestroyElement () {
-    super.willDestroyElement ();
+    this._super (...arguments);
 
     if (isPresent (this._button)) {
       this._button.destroy ();
     }
   }
-}
+});
