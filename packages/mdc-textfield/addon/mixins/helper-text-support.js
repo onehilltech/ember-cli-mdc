@@ -57,7 +57,7 @@ export default Mixin.create ({
     let validationMessage = null;
 
     if (!this._input.validity.valid) {
-      const validationMessages = this.get ('validationMessages');
+      const validationMessages = this.validationMessages;
 
       if (isPresent (validationMessages)) {
         // The user wants to display a custom validation error message instead

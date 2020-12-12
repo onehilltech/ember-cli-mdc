@@ -74,7 +74,7 @@ export default Component.extend({
       this._lastValue = value;
 
       // Get the reasons the password is not valid.
-      const {requirements = [], checked = noOp} = this.getProperties (['requirements', 'checked']);
+      const {requirements = [], checked = noOp} = this;
 
       const reasons = isEmpty (requirements) ? null : A (requirements.map (req => {
         // Set the value on the object. We are using the 'set' method just in case the requirements is

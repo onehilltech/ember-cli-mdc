@@ -36,7 +36,7 @@ export default Mixin.create ({
   didUpdate () {
     this._super (...arguments);
 
-    if (this.get ('_invalidate')) {
+    if (this._invalidate) {
       if (isPresent (this._textField)) {
         this._destroyComponent ();
       }
@@ -62,7 +62,7 @@ export default Mixin.create ({
 
   didRender () {
     this._super (...arguments);
-    this._textField.valid = this.get ('valid');
+    this._textField.valid = this.valid;
   },
 
   didUpdateAttrs () {
@@ -98,7 +98,7 @@ export default Mixin.create ({
   },
 
   _checkValue () {
-    let value = this.get ('value');
+    let value = this.value;
     const input = this._getNativeInput ();
 
     if (document.activeElement !== input && value !== undefined && value !== input.value) {

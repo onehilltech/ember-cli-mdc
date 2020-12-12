@@ -37,7 +37,7 @@ export default Component.extend (TextSupport, {
   hasNotchedOutline: or ('isOutlined', 'isFullWidth'),
 
   styleClassName: computed ('style', function () {
-    const style = this.get ('style');
+    const style = this.style;
 
     if (isEmpty (style) || style === 'standard') {
       return null;

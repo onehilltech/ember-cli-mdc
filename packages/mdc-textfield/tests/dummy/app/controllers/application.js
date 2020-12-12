@@ -19,11 +19,11 @@ export default Controller.extend({
   },
 
   type: computed ('visible', function () {
-    return this.get ('visible') ? 'text' : 'password';
+    return this.visible ? 'text' : 'password';
   }),
 
   icon: computed ('visible', function () {
-    return this.get ('visible') ? 'visibility' : 'visibility_off';
+    return this.visible ? 'visibility' : 'visibility_off';
   }),
 
   actions: {

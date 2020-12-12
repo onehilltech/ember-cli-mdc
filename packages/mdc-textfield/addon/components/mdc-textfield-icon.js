@@ -8,7 +8,7 @@ export default IconComponent.extend ({
   didRender () {
     this._super (...arguments);
 
-    if (this.get ('clickable')) {
+    if (this.clickable) {
       // Make the icon clickable.
       if (!this.element.hasAttribute ('tabindex')) {
         this.element.setAttribute ('tabindex', 0);
