@@ -6,27 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-textfield/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-textfield/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +273,7 @@
       <workItem from="1606959832196" duration="47551000" />
       <workItem from="1607191406928" duration="3578000" />
       <workItem from="1607286736838" duration="1510000" />
-      <workItem from="1607496038541" duration="36542000" />
+      <workItem from="1607496038541" duration="36889000" />
     </task>
     <servers />
   </component>
