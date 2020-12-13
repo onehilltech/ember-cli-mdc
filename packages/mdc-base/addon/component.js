@@ -23,10 +23,10 @@ export default class MaterialComponent extends Component {
   @action
   didInsert (element) {
     // Prepare the element for creation.
-    this.prepareElement (element);
+    this.doPrepareElement (element);
 
     // Create the material component.
-    let component = this.createMaterialComponent (element);
+    let component = this.doCreateComponent (element);
 
     if (isPresent (component)) {
       this._checkComponent (component);
@@ -57,7 +57,7 @@ export default class MaterialComponent extends Component {
   _installComponent (component) {
     // Save the component, and initialize it.
     this._component = component;
-    this.initializeComponent (component);
+    this.doInitComponent (component);
 
     // Start listening for events.
     if (isPresent (this._listeners)) {
@@ -81,7 +81,7 @@ export default class MaterialComponent extends Component {
    *
    * @param element         HTML element
    */
-  prepareElement (element) {
+  doPrepareElement (element) {
 
   }
 
@@ -90,7 +90,7 @@ export default class MaterialComponent extends Component {
    *
    * @param element
    */
-  createMaterialComponent (element) {
+  doCreateComponent (element) {
     return null;
   }
 
@@ -99,7 +99,7 @@ export default class MaterialComponent extends Component {
    *
    * @param component
    */
-  initializeComponent (component) {
+  doInitComponent (component) {
 
   }
 

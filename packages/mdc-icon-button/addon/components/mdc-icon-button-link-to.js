@@ -1,5 +1,7 @@
 import LinkComponent from '@ember/routing/link-component';
 
+import { isPresent } from '@ember/utils';
+
 const { MDCRipple } = mdc.ripple;
 
 export default LinkComponent.extend ({
@@ -17,6 +19,8 @@ export default LinkComponent.extend ({
   willDestroyElement () {
     this._super (...arguments);
 
-    this._iconButtonRipple.destroy ();
+    if (isPresent (this._iconButtonRipple)) {
+      this._iconButtonRipple.destroy ();
+    }
   }
 });

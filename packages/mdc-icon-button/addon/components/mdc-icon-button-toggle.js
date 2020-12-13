@@ -13,16 +13,12 @@ export default class MdcIconButtonToggle extends Component {
     return this.args.on || false;
   }
 
-  @action
-  didInsert (element) {
-    // Set the attributes on the element.
-    element.setAttribute ('aria-hidden', true);
-    element.setAttribute ('aria-pressed', false);
+  createMaterialComponent (element) {
+    return new MDCIconButtonToggle (element);
+  }
 
-    let iconToggleButton = new MDCIconButtonToggle (element);
-    this._mdcComponentCreated (iconToggleButton);
-
-    iconToggleButton.on = this.isOn;
+  didCreateComponent (compoent) {
+    component.on = this.isOn;
   }
 
   @action
