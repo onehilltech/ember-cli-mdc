@@ -6,8 +6,7 @@ function noOp () {}
 export default class MdcChipComponent extends Component {
   _chipElement;
 
-  @action
-  didInsert (element) {
+  doPrepareElement (element) {
     this._chipElement = element;
   }
 
@@ -21,6 +20,6 @@ export default class MdcChipComponent extends Component {
 
   @action
   remove () {
-    (this.args.removal || noOp)(this);
+    (this.args.remove || noOp)(this);
   }
 }

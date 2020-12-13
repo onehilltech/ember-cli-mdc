@@ -8,54 +8,23 @@ import { dasherize } from '@ember/string';
 
 const { MDCChipSet } = mdc.chips;
 
-/*
-MDCChipSet.prototype.select = function (chipId) {
-  return this.foundation_.select (chipId);
-};
-
-MDCChipSet.prototype.deselect = function (chipId) {
-  return this.foundation_.deselect_ (chipId);
-};
-
-MDCChipSet.prototype.isSelected = function (chipId) {
-  return this.foundation_.getSelectedChipIds ().includes (chipId);
-};
-
-MDCChipSet.prototype.findChip = function (chipId) {
-  let index = this.findChipIndex_ (chipId);
-  return index >= 0 ? this.chips[index] : null;
-};*/
-
 function noOp () {}
 
 export default class MdcChipSetComponent extends Component {
-  _chipSet = null;
+  doCreateComponent (element) {
+    return new MDCChipSet (element);
+  }
 
-  @action
-  didInsert (element) {
-    this.doBeforeInitialize ();
-    this._chipSet = new MDCChipSet (element);
-
+  doInitComponent (component) {
     if (isPresent (this.args.chips)) {
       // The user has provided a list of chips. This means that we are managing the
       // chip collection. We are going to prevent the chipset from removing the chip
       // with the trailing icon is clicked.
 
-      this._chipSet.chips.forEach ((chip) => {
+      component.chips.forEach ((chip) => {
         chip.shouldRemoveOnTrailingIconClick = false;
       });
     }
-
-    this._mdcComponentCreated (this._chipSet);
-    this.doInitialize (this._chipSet);
-  }
-
-  doBeforeInitialize () {
-
-  }
-
-  doInitialize (chipSet) {
-
   }
 
   @listener ('MDCChip:interaction')
@@ -74,11 +43,12 @@ export default class MdcChipSetComponent extends Component {
   selection (ev) {
     const { detail: { chipId, selected } }  = ev;
 
-    this.didSelection (chipId, selected);
+    this.didSelection (ev);
+
     (this.args.selection || noOp)(chipId, selected);
   }
 
-  didSelection (chipId, selected) {
+  didSelection (ev) {
 
   }
 
@@ -140,7 +110,7 @@ export default class MdcChipSetComponent extends Component {
   }
 
   select (chipId) {
-    return this._chipSet.foundation_.select (chipId);
+    return this.component.foundation_.select (chipId);
   }
 
   findChipById (chipId) {

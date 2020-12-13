@@ -7,9 +7,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox-native-control.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-choice-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-choice-chip-set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +60,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-checkbox]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-chips]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -339,25 +347,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607827729579">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607876726031">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607827729579" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607876726031" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607827729578">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607876726030">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607827729578" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607827729578">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607876726030">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607827729578" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607827729579">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607876726030">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607827729579" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />

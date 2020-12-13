@@ -1,7 +1,7 @@
 <div id={{@id}} class="mdc-chip" role="row" {{did-insert this.didInsert}}>
   <div class="mdc-chip__ripple"></div>
   {{#if @leadingIcon}}
-    <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">{{@leadingIcon}}</i>
+    <MdcIcon class="mdc-chip__icon mdc-chip__icon--leading" @icon={{@leadingIcon}} />
   {{/if}}
   <span role="gridcell">
     <span role="button" tabindex={{this.tabindex}} class="mdc-chip__primary-action">
@@ -16,7 +16,7 @@
   </span>
   {{#if @trailingIcon}}
     <span role="gridcell">
-      <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="-1" role="button" {{on "click" this.remove}}>{{@trailingIcon}}</i>
+      <MdcIcon class="mdc-chip__icon mdc-chip__icon--trailing" @icon={{@trailingIcon}} tabindex="-1" role="button" {{on "click" this.remove}} />
     </span>
   {{/if}}
 </div>

@@ -4,9 +4,14 @@ import listener from 'ember-cli-mdc-base/listener';
 import { A } from '@ember/array';
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
-import { action, computed } from '@ember/object';
+import { action } from '@ember/object';
 import { tracked } from "@glimmer/tracking";
 
+/**
+ * @class ChipData
+ *
+ * The data object for a chip in the filter chip set.
+ */
 class ChipData {
   constructor (chip, chipSet) {
     this.chip = chip;
@@ -25,6 +30,11 @@ class ChipData {
   }
 }
 
+/**
+ * @class MdcFilterChipSetComponent
+ *
+ * The filter chip set class.
+ */
 export default class MdcFilterChipSetComponent extends ChipSetComponent {
   get checkedKey () {
     return this.args.checkedKey || 'checked';
@@ -33,11 +43,21 @@ export default class MdcFilterChipSetComponent extends ChipSetComponent {
   @tracked
   _data;
 
-  doBeforeInitialize () {
-    super.doBeforeInitialize ();
-  }
+  didSelection (ev) {
+    const { target, detail: { chipId, selected } }  = ev;
 
-  didSelection (chipId, selected) {
+    if (!selected) {
+      // The current filter chip component does not remove the hidden class from leading
+      // icons when the chip is deselected. This is a patch for the problem so the leading
+      // icon on a filter is restored, and visible, and the chip is deselected.
+
+      let leadingIcon = target.querySelector ('.mdc-chip__icon--leading');
+
+      if (isPresent (leadingIcon)) {
+        leadingIcon.classList.remove ('mdc-chip__icon--leading-hidden');
+      }
+    }
+
     if (isPresent (this.chips)) {
       // The user wants us to automate the handling of selecting a chip.
 
@@ -49,24 +69,6 @@ export default class MdcFilterChipSetComponent extends ChipSetComponent {
       }
       else {
         this.filtered.removeObject (chip);
-      }
-    }
-  }
-
-  @listener ('MDCChip:selection')
-  removeHiddenLeadingIconClass (ev) {
-    const { target } = ev;
-    const { detail: { selected }} = ev;
-
-    if (!selected) {
-      // The current filter chip component does not remove the hidden class from leading
-      // icons when the chip is deselected. This is a patch for the problem so the leading
-      // icon on a filter is restored, and visible, and the chip is deselected.
-
-      let leadingIcon = target.querySelector ('.mdc-chip__icon--leading');
-
-      if (isPresent (leadingIcon)) {
-        leadingIcon.classList.remove ('mdc-chip__icon--leading-hidden');
       }
     }
   }
