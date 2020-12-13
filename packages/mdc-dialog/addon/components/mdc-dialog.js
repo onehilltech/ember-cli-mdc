@@ -13,20 +13,6 @@ const { MDCDialog } = mdc.dialog;
 function noOp () { }
 
 export default class MdcDialogComponent extends Component {
-  @action
-  didInsert (element) {
-    let { autoStackButtons = true, open, escapeKeyAction, scrimClickAction } = this.args;
-
-    this._dialog = new MDCDialog (element);
-    this._dialog.autoStackButtons = autoStackButtons;
-    this._dialog.escapeKeyAction = escapeKeyAction;
-    this._dialog.scrimClickAction = scrimClickAction;
-
-    this._mdcComponentCreated (this._dialog);
-    this._openOrCloseDialog (open);
-  }
-
-  @action
   prepareDialogSurface (element) {
     // Set the id for the title element, it present.
     let guid = guidFor (element);
@@ -45,17 +31,24 @@ export default class MdcDialogComponent extends Component {
     }
   }
 
+  doCreateComponent (element) {
+    return new MDCDialog (element);
+  }
+
+  doInitComponent (dialog) {
+    const { autoStackButtons = true, open, escapeKeyAction, scrimClickAction } = this.args;
+
+    dialog.autoStackButtons = autoStackButtons;
+    dialog.escapeKeyAction = escapeKeyAction;
+    dialog.scrimClickAction = scrimClickAction;
+
+    this._openOrCloseDialog (open);
+  }
+
+
   get hasActions () {
     const { positiveButton, negativeButton } = this.args;
     return isPresent (positiveButton) || isPresent (negativeButton);
-  }
-
-  get titleId () {
-    return isPresent (this._element) ? `${this._element.id}__title` : null;
-  }
-
-  get contentId () {
-    return isPresent (this._element) ? `${this._element.id}__content` : null;
   }
 
   @action
@@ -70,13 +63,13 @@ export default class MdcDialogComponent extends Component {
    */
   _openOrCloseDialog (open) {
     if (open) {
-      if (!this._dialog.isOpen) {
-        this._dialog.open ();
+      if (!this.component.isOpen) {
+        this.component.open ();
       }
     }
     else {
-      if (this._dialog.isOpen) {
-        this._dialog.close ();
+      if (this.component.isOpen) {
+        this.component.close ();
       }
     }
   }
