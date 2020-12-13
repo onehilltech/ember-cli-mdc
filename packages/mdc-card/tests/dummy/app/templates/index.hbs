@@ -22,7 +22,7 @@
 
 <h3>Outlined</h3>
 
-<MdcCard @outlined={{true}}>
+<MdcCard class="standard" @outlined={{true}}>
   <MdcCardContent>This is an outlined card.</MdcCardContent>
 
   <MdcCardActions>
@@ -37,6 +37,7 @@
     </MdcCardActionIcons>
   </MdcCardActions>
 </MdcCard>
+
 
 <h3>Actionable</h3>
 
@@ -57,28 +58,29 @@
 
 </MdcCard>
 
+
 <h3>Media</h3>
 
 <MdcCard class="media">
-  <MdcCardMedia @scale="16-9">
+  <MdcCardMedia @scale="16-9" class="my-card-media">
     <MdcCardMediaContent>16x9 Media</MdcCardMediaContent>
   </MdcCardMedia>
 
 </MdcCard>
 
 <MdcCard class="media">
-  <MdcCardMedia @scale="square">
+  <MdcCardMedia @scale="square" class="my-card-media">
     <MdcCardMediaContent>Square Media</MdcCardMediaContent>
   </MdcCardMedia>
 
 </MdcCard>
+
 
 <h3>Full Bleed</h3>
 
 <MdcCard @class="full-bleed">
 
   <MdcCardActions @fullBleed={{true}}>
-    <MdcCardActionButton @label="Full Bleed" />
-    {{mdc-button-icon "arrow_forward"}}
+    <MdcCardActionButtonLinkTo @route="index" @label="All Business Headlines" @trailingIcon="arrow_forward" />
   </MdcCardActions>
 </MdcCard>
