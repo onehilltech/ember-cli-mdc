@@ -1,12 +1,8 @@
-<button class="mdc-fab {{if (has-block) "mdc-fab--extended"}} {{if @label "mdc-fab--extended"}} {{if @exited "mdc-fab--exited"}} {{if @mini "mdc-fab--mini"}}" aria-label={{@label}} ...attributes>
+<button class="mdc-fab {{if @label "mdc-fab--extended"}} {{if @exited "mdc-fab--exited"}} {{if @mini "mdc-fab--mini"}}" aria-label={{@label}} ...attributes>
   <div class="mdc-fab__ripple"></div>
-  <MdcFabIcon @icon={{@icon}} />
+  <MdcIcon @icon={{@icon}} class="mdc-fab__icon" />
 
-  {{#if (has-block)}}
-    <MdcFabLabel>{{yield}}</MdcFabLabel>
-  {{else}}
-    {{#if @label}}
-      <MdcFabLabel>{{@label}}</MdcFabLabel>
-    {{/if}}
+  {{#if @label}}
+    <span class="mdc-fab__label">{{@label}}</span>
   {{/if}}
 </button>
