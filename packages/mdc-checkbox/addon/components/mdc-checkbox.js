@@ -11,15 +11,15 @@ export default class MdcCheckboxComponent extends Component {
   @tracked
   _nativeControl = null;
 
-  @action
-  didInsert (element) {
+  doPrepareElement (element) {
     this._nativeControl = element.querySelector ('.mdc-checkbox__native-control');
-    let checkbox = new MDCCheckbox (element);
-
-    this._mdcComponentCreated (checkbox);
   }
 
-  get for () {
+  doCreateComponent (element) {
+    return new MDCCheckbox (element);
+  }
+
+  get nativeControlId () {
     return isPresent (this._nativeControl) ? this._nativeControl.id : null;
   }
 }

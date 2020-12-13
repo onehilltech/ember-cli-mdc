@@ -12,10 +12,10 @@
   </div>
 
   {{#if (has-block)}}
-    <label for={{this.for}}>{{yield}}</label>
+    <label for={{this.nativeControlId}}>{{yield}}</label>
   {{else}}
     {{#if @label}}
-      <label for={{this.for}}>{{@label}}</label>
+      <label for={{this.nativeControlId}}>{{@label}}</label>
     {{/if}}
   {{/if}}
 
