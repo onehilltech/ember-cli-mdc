@@ -1,20 +1,20 @@
 <h3>Icon Button</h3>
 
-<MdcIconButton @icon="favorite" {{on "click" this.onClick}} />
+<MdcIconButton @icon="favorite" {{on "click" this.click}} />
 <MdcIconButton @icon="favorite" disabled={{true}} />
 
 <h3>Icon Button Link</h3>
-<MdcIconButtonLinkTo @route="dummy" @icon="arrow_back" @iconClass="foo" disabled={{true}} />
+<MdcIconButtonLinkTo @route="dummy" @icon="arrow_back" disabled={{true}} />
 
 <h3>Icon Button Toggle</h3>
 
 <div><button {{on "click" this.toggle}}>Toggle Initial State</button></div>
 <div>
-  <MdcIconButtonToggle @on={{this.on}}
-                       @iconOn={{hash icon="favorite"}}
-                       @iconOff={{hash icon="favorite_border"}}
-                       @label={{"Add to"}}
-                       @onChange={{this.onChange}} />
+  <MdcIconButtonToggle @isOn={{this.on}}
+                       @label="Add to"
+                       @on={{hash icon="favorite" label="Favorite"}}
+                       @off={{hash icon="favorite_border"}}
+                       @change={{this.change}} />
 </div>
 <div><b>State:</b> {{this.on}}</div>
 

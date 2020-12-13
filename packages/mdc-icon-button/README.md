@@ -44,10 +44,10 @@ The component also support the standard HTML attributes allowed on the `<button>
 
 ### Listening for Button Clicks
 
-Use the `@onClick` argument to listen for button clicks.
+Use the `{{on "click"}}` modifier to listen for clicks.
 
 ```handlebars
-<MdcIconButton @icon="favorite" @onClick={{this.onClick}} />
+<MdcIconButton @icon="favorite" {{on "click" this.click}} />
 ```
 
 MdcIconButtonToggle
@@ -60,27 +60,27 @@ An icon button with toggle states.
 ### Usage
 
 ```handlebars
-  <MdcIconButtonToggle @on={{this.on}}
-                       @iconOn={{hash icon=name}}
-                       @iconOff={{hash icon=name}}
-                       @label={{label}}
-                       @onChange={{action}} />
+<MdcIconButtonToggle @isOn={{this.on}}
+                     @on={{hash icon=name label=label}}
+                     @off={{hash icon=name label=label}}
+                     @label={{label}}
+                     @change={{action}} />
 ```
 
 ### Attributes
 
-* `@iconOn` - Hash of properties for the icon when the button is on.
-* `@iconOff` - Hash of properties for the icon when the button is off.
-* `@on` - The initial state of the toggle button.
+* `@isOn` - The initial state of the toggle button
+* `@on` - Hash of properties for the icon when the button is on.
+* `@off` - Hash of properties for the icon when the button is off.
 * `@label` - ARIA label for accessibility.
-* `@onChange` - Action called when the button is toggled.
+* `@change` - The action `f(isOn)` called when the button is toggled.
 
 ### Examples
 
 ```handlebars
-  <MdcIconButtonToggle @on={{this.on}}
-                       @iconOn={{hash icon="favorite"}}
-                       @iconOff={{hash icon="favorite_border"}}
-                       @label={{"Add to favorites"}}
-                       @onChange={{this.onChange}} />
+<MdcIconButtonToggle @on={{this.on}}
+                     @on={{hash icon="favorite"}}
+                     @off={{hash icon="favorite_border"}}
+                     @label={{"Add to favorites"}}
+                     @change={{this.change}} />
 ```

@@ -3,10 +3,9 @@
         data-aria-label-on={{@on.label}}
         data-aria-label-off={{@off.label}}
         {{did-insert this.didInsert}}
-        {{did-update this.toggle @on}}
+        {{did-update this.toggle @isOn}}
         ...attributes>
 
-  <MdcIconButtonIcon @icon={{@iconOn.icon}} @on={{true}} />
-  <MdcIconButtonIcon @icon={{@iconOff.icon}} />
-
+  <MdcIcon class="mdc-icon-button__icon mdc-icon-button__icon--on" @icon={{@on.icon}} />
+  <MdcIcon class="mdc-icon-button__icon" @icon={{@off.icon}} />
 </button>
