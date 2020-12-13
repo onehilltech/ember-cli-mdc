@@ -58,11 +58,10 @@
 </p>
 
 
-<!--
 <h3>Input Chips</h3>
 
-<MdcTextfield @style="outlined">
-  <MdcInputChipSet @chips={{chips}} @enter={{action "makeInputChip"}} />
-  <MdcNotchedOutline @label="Tags" @notched={{true}} />
-</MdcTextfield>
- -->
+<MdcInputChipSet class="addresses"
+                 @chips={{this.inputChips}}
+                 @input={{this.input}}
+                 @type="email"
+                 @placeholder="Type name here" />

@@ -2,18 +2,17 @@
 @import "@material/chips/mdc-chips";
 
 .mdc-chip-set {
-  &--input {
-    input {
-      border-bottom: unset;
+  &__input {
+    width: 150px;
+    flex-grow: 1;
 
-      width: 150px;
-      flex-grow: 1;
+    margin: 4px;
+    padding: 8px 4px;
 
-      margin: 4px;
-      padding: 8px 4px;
+    border-style: none;
 
-      font-size: 0.875rem;
-      line-height: 1.25rem;
+    &:focus {
+      outline: none;
     }
   }
 }

@@ -1,29 +1,29 @@
 import ChipSet from './mdc-chip-set';
-import layout from '../templates/components/mdc-input-chip-set';
 
-import { A } from '@ember/array';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
-function simpleChipFactory (value) {
-  return {text: value, iconTrailing: 'cancel'};
+function noOp () {
+  return false;
 }
 
-export default ChipSet.extend({
-  layout,
+export default class MdcInputChipSetComponent extends ChipSet {
+  type = 'input';
 
-  mode: 'input',
+  @action
+  createChip (ev) {
+    const { target, key, keyCode } = ev;
 
-  didInsertElement () {
-    this._super (...arguments);
+    if (key === 'Enter' || keyCode === 13) {
+      if (isPresent (target.value)) {
+        // Notify the user of the new value. We then need to erase the original
+        // input value if the action does not return false.
 
-    this.set ('chips', A ());
-  },
-
-  actions: {
-    enter () {
-      let chip = this.getWithDefault ('create', simpleChipFactory) (this.value);
-      this.chips.pushObject (chip);
-
-      this.set ('value', null);
+        if ((this.args.input || noOp)(target.value) !== false) {
+          target.value = null;
+        }
+      }
     }
   }
-});
+}
+

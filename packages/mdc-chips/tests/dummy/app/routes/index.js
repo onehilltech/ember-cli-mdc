@@ -36,5 +36,7 @@ export default Route.extend ({
     ]);
 
     controller.filtered = A ([controller.filterChips.objectAt (0), controller.filterChips.objectAt (3)]);
+
+    controller.inputChips = A ();
   }
 });

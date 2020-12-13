@@ -7,16 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip-set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-chip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-choice-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-choice-chip-set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip-set.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -53,11 +48,11 @@
       <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-button/addon/components" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-chips]: dummy application">
@@ -289,6 +284,7 @@
       <workItem from="1607286736838" duration="1510000" />
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
+      <workItem from="1607885857995" duration="2283000" />
     </task>
     <servers />
   </component>
@@ -347,25 +343,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607876726031">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607885837661">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607876726031" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607885837661" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607876726030">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607885837661">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607885837661" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607876726030">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607885837660">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607885837660" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607876726030">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607885837661">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607876726030" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607885837661" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />

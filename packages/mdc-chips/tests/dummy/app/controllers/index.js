@@ -54,4 +54,12 @@ export default class IndexController extends Controller {
   addToFiltered () {
     this.filtered.addObject (this.filterChips.objectAt (4));
   }
+
+  @tracked
+  inputChips;
+
+  @action
+  input (value) {
+    this.inputChips.addObject ({text: value});
+  }
 }
