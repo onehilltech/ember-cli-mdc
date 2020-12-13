@@ -12,7 +12,7 @@ export default class MdcButtonComponent extends Component {
     return isPresent (style) ? `mdc-button--${style}` : null;
   }
 
-  createMaterialComponent (element) {
+  doCreateComponent (element) {
     return new MDCRipple (element);
   }
 }

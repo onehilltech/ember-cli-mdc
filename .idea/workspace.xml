@@ -6,18 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/addon/components/mdc-card-action-button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/tests/integration/components/mdc-card-action-button-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-icon.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-link-to.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,25 +336,25 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607817267355">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1607817720249">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607817267355" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1607817720249" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607817267354">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1607817720249">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607817267354" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1607817720249" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607817267354">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1607817720248">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607817267354" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1607817720248" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607817267354">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1607817720249">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607817267354" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1607817720249" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
