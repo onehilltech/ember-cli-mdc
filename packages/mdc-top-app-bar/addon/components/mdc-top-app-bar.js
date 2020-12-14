@@ -14,20 +14,11 @@ export default class MdcTopAppBarComponent extends Component {
   _topAppBar = null;
 
   @action
-  didInsert (element) {
-    this._topAppBar = new MDCTopAppBar (element);
-    this.setup (this._topAppBar);
+  doCreateComponent (element) {
+    return new MDCTopAppBar (element);
   }
 
-  @action
-  reinitialize (element) {
-    this._topAppBar = new MDCTopAppBar (element);
-    this.setup (this._topAppBar);
-  }
-
-  setup (component) {
-    this._mdcComponentCreated (component);
-
+  doInitComponent () {
     let { scrollTarget } = this.args;
 
     if (isPresent (scrollTarget)) {
@@ -35,9 +26,19 @@ export default class MdcTopAppBarComponent extends Component {
     }
   }
 
+  @action
+  reinitialize (element) {
+    this.replaceComponent (new MDCTopAppBar (element));
+  }
+
   @listener ('MDCTopAppBar:nav')
   navigation () {
+    this.doNavigate ();
     (this.args.navigation || noOp)();
+  }
+
+  doNavigate () {
+
   }
 
   changeScrollTarget (element, [scrollTarget]) {
@@ -48,7 +49,7 @@ export default class MdcTopAppBarComponent extends Component {
     let element = document.querySelector (scrollTarget);
 
     if (isPresent (element)) {
-      this._topAppBar.setScrollTarget (element);
+      this.component.setScrollTarget (element);
     }
   }
 }
