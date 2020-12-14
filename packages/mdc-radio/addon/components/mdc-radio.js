@@ -7,13 +7,14 @@ import { action } from '@ember/object';
 const { MDCRadio } = mdc.radio;
 
 export default class MdcRadioComponent extends Component {
+  _radioElement;
 
-  @action
-  didInsert (element) {
-    this._radio = new MDCRadio (element);
+  doPrepareElement (element) {
     this._radioElement = element;
+  }
 
-    this._mdcComponentCreated (this._radio);
+  doCreateComponent (element) {
+    return new MDCRadio (element);
   }
 
   get for () {
