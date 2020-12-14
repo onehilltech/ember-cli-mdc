@@ -6,27 +6,23 @@ import { action } from '@ember/object';
 const { MDCLinearProgress } = mdc.linearProgress;
 
 export default class MDCLinearProgressComponent extends Component {
-  _linearProgress = null;
+  doCreateComponent (element) {
+    return new MDCLinearProgress (element);
+  }
 
-  @action
-  didInsert (element) {
-    element.setAttribute ('role', 'progressbar');
-
-    this._linearProgress = new MDCLinearProgress (element);
-    this._mdcComponentCreated (this._linearProgress);
-
-    this._linearProgress.buffer = this.buffer;
-    this._linearProgress.progress = this.progress;
+  doInitComponent (component) {
+    component.buffer = this.buffer;
+    component.progress = this.progress;
   }
 
   @action
   updateProgress (element, [progress]) {
-    this._linearProgress.progress = progress;
+    this.component.progress = progress;
   }
 
   @action
   updateBuffer (element, [buffer]) {
-    this._linearProgress.buffer = buffer;
+    this.component.buffer = buffer;
   }
 
   get buffer () {

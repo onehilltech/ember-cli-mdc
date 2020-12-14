@@ -1,11 +1,13 @@
-<div role="progressbar" class="mdc-linear-progress {{if @indeterminate "mdc-linear-progress--indeterminate"}} {{if @closed "mdc-linear-progress--closed"}} {{if @reversed "mdc-linear-progress--reversed"}}"
+<div role="progressbar"
+     class="mdc-linear-progress {{if @indeterminate "mdc-linear-progress--indeterminate"}} {{if @closed "mdc-linear-progress--closed"}} {{if @reversed "mdc-linear-progress--reversed"}}"
      aria-label={{@label}}
      aria-valuemin={{@min}}
      aria-valuemax={{@max}}
      aria-valuenow={{@progress}}
     {{did-insert this.didInsert}}
     {{did-update this.updateProgress @progress}}
-    {{did-update this.updateBuffer @buffer}}>
+    {{did-update this.updateBuffer @buffer}}
+    ...attributes>
   <div class="mdc-linear-progress__buffer">
     <div class="mdc-linear-progress__buffer-bar"></div>
     <div class="mdc-linear-progress__buffer-dots"></div>
