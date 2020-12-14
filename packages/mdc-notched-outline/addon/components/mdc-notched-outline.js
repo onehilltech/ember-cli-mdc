@@ -6,9 +6,7 @@ import { action } from '@ember/object';
 const { MDCNotchedOutline } = mdc.notchedOutline;
 
 export default class MdcNotchedOutlineComponent extends Component {
-  @action
-  didInsert (element) {
-    this._notchedOutline = new MDCNotchedOutline (element);
-    this._mdcComponentCreated (this._notchedOutline);
+  doCreateComponent (element) {
+    return new MDCNotchedOutline (element);
   }
 }
