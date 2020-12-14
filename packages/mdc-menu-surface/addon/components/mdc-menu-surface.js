@@ -12,37 +12,37 @@ function noOp () { }
 export default class MdcMenuSurfaceComponent extends Component {
   _menuSurface = null;
 
-  @action
-  didInsert (element) {
-    this._menuSurface = new MDCMenuSurface (element);
-    this._mdcComponentCreated (this._menuSurface);
+  doCreateComponent (element) {
+    return new MDCMenuSurface (element);
+  }
+  
+  doInitComponent (component) {
+    const { position, left, top, anchorCorner, anchorMargin, anchorElement, open, quickOpen, hoisted } = this.args;
 
-    this._menuSurface.quickOpen = this.args.quickOpen;
-
-    let { position, left, top, anchorCorner, anchorMargin, anchorElement, open, quickOpen, hoisted } = this.args;
+    component.quickOpen = quickOpen;
 
     // Configure the menu surface.
     if (position === 'fixed') {
-      this._menuSurface.setFixedPosition (true);
+      component.setFixedPosition (true);
     }
     else {
-      this._menuSurface.setFixedPosition (false);
-      this._menuSurface.setAbsolutePosition (left, top);
+      component.setFixedPosition (false);
+      component.setAbsolutePosition (left, top);
     }
 
-    this._menuSurface.quickOpen = quickOpen;
-    this._menuSurface.anchorElement = this._lookupElement (anchorElement);
+    component.quickOpen = quickOpen;
+    component.anchorElement = this._lookupElement (anchorElement);
 
-    this._menuSurface.setAnchorCorner (anchorCorner);
-    this._menuSurface.setAnchorMargin (anchorMargin);
+    component.setAnchorCorner (anchorCorner);
+    component.setAnchorMargin (anchorMargin);
 
     if (hoisted) {
-      this._menuSurface.setIsHoisted ()
+      component.setIsHoisted ()
     }
 
     // Now that it has been configure, let's see if we should open it.
     if (open) {
-      this._menuSurface.open ();
+      component.open ();
     }
   }
 
@@ -53,67 +53,71 @@ export default class MdcMenuSurfaceComponent extends Component {
       // the 'open' argument internally. We therefore have to assume in update to the
       // argument that bears the value `true` means toggle the menu surface.
 
-      if (this._menuSurface.isOpen ()) {
-        this._menuSurface.close (true);
+      if (this.component.isOpen ()) {
+        this.component.close (true);
       }
       else {
-        this._menuSurface.open ();
+        this.component.open ();
       }
     }
-    else if (this._menuSurface.isOpen) {
+    else if (this.component.isOpen) {
       // The open argument was changed to false. This means some external behavior changed
       // the argument to false, meaning the really want to close the menu surface.
-      this._menuSurface.close (true);
+      this.component.close (true);
     }
   }
 
   @action
   quickOpen (element, [quickOpen]) {
-    this._menuSurface.quickOpen = quickOpen;
+    this.component.quickOpen = quickOpen;
   }
 
   @action
   setPosition (element, [position, left, top]) {
     if (position === 'fixed') {
-      this._menuSurface.setFixedPosition (true);
+      this.component.setFixedPosition (true);
     }
     else {
-      this._menuSurface.setFixedPosition (false);
-      this._menuSurface.setAbsolutePosition (left, top);
+      this.component.setFixedPosition (false);
+      this.component.setAbsolutePosition (left, top);
     }
   }
 
   @action
   anchorCorner (element, [anchorCorner]) {
-    this._menuSurface.setAnchorCorner (anchorCorner);
+    this.component.setAnchorCorner (anchorCorner);
   }
 
   @action
   anchorMargin (element, [anchorMargin]) {
-    this._menuSurface.setAnchorMargin (anchorMargin);
+    this.component.setAnchorMargin (anchorMargin);
   }
 
   @action
   anchorElement (element, [anchorElement]) {
-    this._menuSurface.anchorElement = this._lookupElement (anchorElement);
+    this.component.anchorElement = this._lookupElement (anchorElement);
   }
 
   @listener('MDCMenuSurface:opened')
+  opened () {
+    this.didOpen ();
+
+    (this.args.opened || noOp)();
+  }
+
   didOpen () {
-    this.opened ();
+
   }
 
   @listener('MDCMenuSurface:closed')
+  closed () {
+    this.didClose ();
+
+    (this.args.closed || noOp)();
+  }
+
   didClose () {
-    this.closed ();
-  }
 
-  get opened () {
-    return this.args.opened || noOp;
-  }
-
-  get closed () {
-    return this.args.closed || noOp;
   }
 
   _lookupElement (element) {
