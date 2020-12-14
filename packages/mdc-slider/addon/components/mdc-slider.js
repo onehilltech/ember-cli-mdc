@@ -10,18 +10,16 @@ const { MDCSlider } = mdc.slider;
 function noOp () {}
 
 export default class MdcSliderComponent extends Component {
+  doCreateComponent (element) {
+    return new MDCSlider (element);
+  }
+
   get min () {
     return this.args.min || 0;
   }
 
   get max () {
     return this.args.max || 100;
-  }
-
-  @action
-  didInsert (element) {
-    this._slider = new MDCSlider (element);
-    this._mdcComponentCreated (this._slider);
   }
 
   @listener ('MDCSlider:change')
@@ -32,7 +30,7 @@ export default class MdcSliderComponent extends Component {
     (this.args.change || noOp)(slider.value);
   }
 
-  didChange () {
+  didChange (ev) {
 
   }
 
@@ -44,7 +42,7 @@ export default class MdcSliderComponent extends Component {
     (this.args.input || noOp)(slider.value);
   }
 
-  didInput () {
+  didInput (ev) {
 
   }
 
@@ -70,15 +68,15 @@ export default class MdcSliderComponent extends Component {
 
   @action
   setLimits (element, [min, max, step]) {
-    this._slider.min = min;
-    this._slider.max = max;
-    this._slider.step = step;
+    this.component.min = min;
+    this.component.max = max;
+    this.component.step = step;
   }
 
   @action
   setValue (element, [value]) {
-    if (this._slider.value !== value) {
-      this._slider.value = value;
+    if (this.component.value !== value) {
+      this.component.value = value;
     }
   }
 }
