@@ -11,19 +11,15 @@ export default class MdcSwitchComponent extends Component {
   @tracked
   _switchElement = null;
 
-  @action
-  didInsert (element) {
-    let mdcSwitch = new MDCSwitch (element);
+  doPrepareElement (element) {
     this._switchElement = element;
+  }
 
-    this._mdcComponentCreated (mdcSwitch);
+  doCreateComponent (element) {
+    return new MDCSwitch (element);
   }
 
   get for () {
     return isPresent (this._switchElement) ? this._switchElement.querySelector ('.mdc-switch__native-control').id : null;
-  }
-
-  get change () {
-    return this.args.change || function () {};
   }
 }
