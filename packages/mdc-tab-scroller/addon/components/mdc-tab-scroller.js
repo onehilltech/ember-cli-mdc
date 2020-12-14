@@ -14,10 +14,8 @@ const ALIGN_VALUES = [
 const { MDCTabScroller } = mdc.tabScroller;
 
 export default class MdcTabScrollerComponent extends Component {
-  @action
-  didInsert (element) {
-    let tabScroller = new MDCTabScroller (element);
-    this._mdcComponentCreated (tabScroller);
+  doCreateComponent (element) {
+    return new MDCTabScroller (element);
   }
 
   get align () {
