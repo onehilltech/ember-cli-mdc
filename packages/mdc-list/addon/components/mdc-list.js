@@ -6,30 +6,30 @@ import { action } from '@ember/object';
 const { MDCList } = mdc.list;
 
 export default class MdcListComponent extends Component {
-  @action
-  didInsert (element) {
-    this._list = new MDCList (element);
-    this._mdcComponentCreated (this._list);
+  doCreateComponent (element) {
+    return new MDCList (element);
+  }
 
+  doInitComponent (component) {
     const { wrapFocus, singleSelection, vertical = true } = this.args;
 
-    this._list.vertical = vertical
-    this._list.singleSelection = singleSelection;
-    this._list.wrapFocus = wrapFocus;
+    component.vertical = vertical
+    component.singleSelection = singleSelection;
+    component.wrapFocus = wrapFocus;
   }
 
   @action
   vertical (element, [vertical]) {
-    this._list.vertical = vertical;
+    this.component.vertical = vertical;
   }
 
   @action
   singleSelection (element, [singleSelection]) {
-    this._list.singleSelection = singleSelection;
+    this.component.singleSelection = singleSelection;
   }
 
   @action
   wrapFocus (element, [wrapFocus]) {
-    this._list.wrapFocus = wrapFocus;
+    this.component.wrapFocus = wrapFocus;
   }
 }
