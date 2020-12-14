@@ -7,34 +7,35 @@ import { isPresent } from '@ember/utils';
 const { MDCLineRipple } = mdc.lineRipple;
 
 export default class MdcLineRippleComponent extends Component {
-  _lineRipple = null;
+  doCreateComponent (element) {
+    return new MDCLineRipple (element);
+  }
 
-  @action
-  didInsert (element) {
-    this._lineRipple = new MDCLineRipple (element);
-    this._mdcComponentCreated (this._lineRipple);
+  doInitComponent (component) {
+    let { activate, rippleCenter } = this.args;
 
-    if (this.args.activate) {
-      this._lineRipple.activate ();
+    if (activate) {
+      component.activate ();
     }
 
-    let { rippleCenter } = this.args;
     if (isPresent (rippleCenter)) {
-      this._lineRipple.setRippleCenter (rippleCenter);
+      component.setRippleCenter (rippleCenter);
     }
   }
 
   @action
   activation (element, [activate]) {
     if (activate) {
-      this._lineRipple.activate ();
-    } else {
-      this._lineRipple.deactivate ();
+      this.component.activate ();
+    }
+    else {
+      this.component.deactivate ();
     }
   }
 
+  @action
   setRippleCenter (element, [rippleCenter]) {
-    this._lineRipple.setRippleCenter (rippleCenter);
+    this.component.setRippleCenter (rippleCenter);
   }
 }
 
