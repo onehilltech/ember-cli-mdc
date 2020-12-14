@@ -1,11 +1,10 @@
 import Component from '@glimmer/component';
-import { assert } from '@ember/debug';
 
-const ALIGNMENTS = ['right', 'left'];
+import { isPresent } from '@ember/utils';
 
 export default class MdcLayoutGridComponent extends Component {
-  get alignmentClassName () {
-    assert (`The alignment must be one of the following values.`, ALIGNMENTS.includes (this.args.alignment));
-    return `mdc-layout-grid--align-${this.args.alignment}`;
+  get alignment () {
+    const { alignment } = this.args;
+    return isPresent (alignment) ? `mdc-layout-grid--align-${alignment}` : null;
   }
 }
