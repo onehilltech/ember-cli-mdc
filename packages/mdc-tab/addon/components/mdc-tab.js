@@ -1,26 +1,24 @@
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
-import { action } from '@ember/object';
 const { MDCTab } = mdc.tab;
 
 function noOp () {}
 
 export default class MdcTabComponent extends Component {
-  @action
-  didInsert (element) {
-    let tab = new MDCTab (element);
-    this._mdcComponentCreated (tab);
+  doCreateComponent (element) {
+    return new MDCTab (element);
   }
 
   @listener ('MDCTab:interacted')
-  didInteract (ev) {
-    const { detail } = ev;
+  interacted (ev) {
+    this.didInteract (ev);
 
-    this.interacted (detail);
+    const { detail: { tabId } } = ev;
+    (this.args.interacted || noOp) (tabId);
   }
 
-  get interacted () {
-    return this.args.interacted || noOp;
+  didInteract (ev) {
+
   }
 }

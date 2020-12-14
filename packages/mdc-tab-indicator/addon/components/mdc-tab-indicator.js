@@ -6,9 +6,7 @@ import { action } from '@ember/object';
 const { MDCTabIndicator } = mdc.tabIndicator;
 
 export default class MdcTabIndicatorComponent extends Component {
-  @action
-  didInsert (element) {
-    let tabIndicator = new MDCTabIndicator (element);
-    this._mdcComponentCreated (tabIndicator);
+  doCreateComponent (element) {
+    return new MDCTabIndicator (element);
   }
 }
