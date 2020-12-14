@@ -11,7 +11,7 @@ function noOp () { return true }
 
 export default class MdcIconButtonToggle extends Component {
   get isOn () {
-    return this.args.on || false;
+    return this.args.isOn || false;
   }
 
   doCreateComponent (element) {
