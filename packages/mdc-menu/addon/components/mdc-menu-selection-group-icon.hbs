@@ -1,1 +1,7 @@
-{{yield}}
+<MdcListItemGraphic class="mdc-menu__selection-group-icon" ...attributes>
+  {{#if @icon}}
+    <MdcIcon @icon={{@icon}} />
+  {{else}}
+    {{yield}}
+  {{/if}}
+</MdcListItemGraphic>

@@ -1,11 +1,11 @@
 <h3>General Menu</h3>
 
-<div class="toolbar">
-  <button onclick={{action (mut open) true}}>Open Menu</button>
+<div class="toolbar" {{mdc-menu-surface-anchor}}>
+  <button {{on "click" this.openMenu}}>Open Menu</button>
 
-  <MdcMenu @open={{open}} @anchorCorner="bottomLeft">
+  <MdcMenu @open={{this.open}} @anchorCorner="bottomLeft">
     <MdcMenuList>
-      {{mdc-menu-item-link-to "This is the link" "index"}}
+      <MdcMenuItemLinkTo @route="index">This is the link</MdcMenuItemLinkTo>
 
       <MdcListDivider />
 
@@ -25,12 +25,13 @@
 
       <MdcListDivider />
 
-      {{mdc-menu-item "Add space before paragraph"}}
+      <MdcMenuItem @text="Add space before paragraph" />
       <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
     </MdcMenuList>
   </MdcMenu>
 </div>
 
+<!--
 <h3>Fixed Location Menu</h3>
 
 <div class="card__container">
@@ -98,3 +99,5 @@
     </MdcList>
   </div>
 </div>
+
+-->

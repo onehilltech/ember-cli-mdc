@@ -1,52 +1,15 @@
 /* global mdc */
 
-import Component from 'ember-cli-mdc-base/component';
+import Component from 'ember-cli-mdc-menu-surface/components/mdc-menu-surface';
 import listener from 'ember-cli-mdc-base/listener';
-import { action } from '@ember/object';
 
 const { MDCMenu } = mdc.menu;
 
 function noOp () { }
 
 export default class MdcMenuComponent extends Component {
-  @action
-  didInsert (element) {
-    this.menu_ = new MDCMenu (element);
-    this._mdcComponentCreated (this.menu_);
-  }
-
-  /**
-   * Set the absolute position for the menu.
-   *
-   * This method must be overloaded by the component.
-   */
-  setAbsolutePosition (x, y) {
-    this.menu_.setAbsolutePosition (x, y);
-  }
-
-  setAnchorCorner (corner) {
-    this.menu_.setAnchorCorner (corner);
-  }
-
-  setAnchorMargin (margin) {
-    this.menu_.setAnchorMargin (margin);
-  }
-
-  /**
-   * Hoist the menu to the body.
-   *
-   * This method must be overloaded by the component.
-   */
-  hoistMenuToBody () {
-    this.menu_.hoistMenuToBody ();
-  }
-
-  doOpen (open) {
-    this.menu_.open = open;
-  }
-
-  doQuickOpen (quickOpen) {
-    this.menu_.quickOpen = quickOpen;
+  doCreateComponent (element) {
+    return new MDCMenu (element);
   }
 
   @listener ('MDCMenu:selected')
@@ -56,13 +19,15 @@ export default class MdcMenuComponent extends Component {
     (this.args.selected || noOp)(item, index);
   }
 
-  @listener ('MDCMenuSurface:opened')
-  opened () {
-    (this.args.opened || noOp)();
+  isOpen (component) {
+    return component.open;
   }
 
-  @listener ('MDCMenuSurface:closed')
-  closed () {
-    (this.args.closed || noOp)();
+  doOpen (component) {
+    component.open = true;
+  }
+
+  doClose (component) {
+    component.open = false;
   }
 }

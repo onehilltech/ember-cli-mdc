@@ -1,5 +1,7 @@
-{{#if (has-block)}}
-  {{yield}}
-{{else}}
-  <MdcMenuItemText>{{text}}</MdcMenuItemText>
-{{/if}}
+<MdcListItem role="menuitem" ...attributes>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    <MdcMenuItemText>{{@text}}</MdcMenuItemText>
+  {{/if}}
+</MdcListItem>

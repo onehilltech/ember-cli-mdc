@@ -1,4 +1,5 @@
-<div class="mdc-menu" {{mdc-menu-surface}} ...attributes
-  {{did-insert this.didInsert}}>
+<div class="mdc-menu mdc-menu-surface" ...attributes
+  {{did-insert this.didInsert}}
+  {{did-update this.toggleOpen @open}} >
   {{yield}}
 </div>

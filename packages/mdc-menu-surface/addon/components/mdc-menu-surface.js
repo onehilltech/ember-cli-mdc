@@ -2,12 +2,29 @@
 
 import Component from 'ember-cli-mdc-base/component';
 import listener  from 'ember-cli-mdc-base/listener';
+
 import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { assert } from '@ember/debug';
+
 import { isString } from 'lodash-es';
 
-const { MDCMenuSurface } = mdc.menuSurface;
+const { MDCMenuSurface, Corner } = mdc.menuSurface;
 
 function noOp () { }
+
+const ANCHOR_CORNERS = {
+  topLeft: Corner.TOP_LEFT,
+  topRight: Corner.TOP_RIGHT,
+  topStart: Corner.TOP_START,
+  topEnd: Corner.TOP_END,
+  bottomLeft: Corner.BOTTOM_LEFT,
+  bottomRight: Corner.BOTTOM_RIGHT,
+  bottomStart: Corner.BOTTOM_START,
+  bottomEnd: Corner.BOTTOM_END
+};
+
+const ANCHOR_CORNER_KEYS = Object.keys (ANCHOR_CORNERS);
 
 export default class MdcMenuSurfaceComponent extends Component {
   _menuSurface = null;
@@ -15,7 +32,7 @@ export default class MdcMenuSurfaceComponent extends Component {
   doCreateComponent (element) {
     return new MDCMenuSurface (element);
   }
-  
+
   doInitComponent (component) {
     const { position, left, top, anchorCorner, anchorMargin, anchorElement, open, quickOpen, hoisted } = this.args;
 
@@ -33,8 +50,13 @@ export default class MdcMenuSurfaceComponent extends Component {
     component.quickOpen = quickOpen;
     component.anchorElement = this._lookupElement (anchorElement);
 
-    component.setAnchorCorner (anchorCorner);
-    component.setAnchorMargin (anchorMargin);
+    if (isPresent (anchorCorner)) {
+      this.setAnchorCorner (anchorCorner);
+    }
+
+    if (isPresent (anchorMargin)) {
+      component.setAnchorMargin (anchorMargin);
+    }
 
     if (hoisted) {
       component.setIsHoisted ()
@@ -42,8 +64,27 @@ export default class MdcMenuSurfaceComponent extends Component {
 
     // Now that it has been configure, let's see if we should open it.
     if (open) {
-      component.open ();
+      this.doOpen (component);
     }
+  }
+
+  doOpen (component) {
+    component.open ();
+  }
+
+  doClose (component) {
+    component.close (true);
+  }
+
+  setAnchorCorner (anchorCorner) {
+    let value;
+
+    if (isPresent (anchorCorner)) {
+      assert (`The anchor corner must be one of the following values: ${ANCHOR_CORNER_KEYS}`, ANCHOR_CORNER_KEYS.includes (anchorCorner));
+      value = ANCHOR_CORNERS[anchorCorner];
+    }
+
+    this.component.setAnchorCorner (value);
   }
 
   @action
@@ -54,16 +95,16 @@ export default class MdcMenuSurfaceComponent extends Component {
       // argument that bears the value `true` means toggle the menu surface.
 
       if (this.component.isOpen ()) {
-        this.component.close (true);
+        this.doClose (this.component);
       }
       else {
-        this.component.open ();
+        this.doOpen (this.component);
       }
     }
-    else if (this.component.isOpen) {
+    else if (this.component.isOpen ()) {
       // The open argument was changed to false. This means some external behavior changed
       // the argument to false, meaning the really want to close the menu surface.
-      this.component.close (true);
+      this.doClose (this.component);
     }
   }
 
@@ -85,7 +126,7 @@ export default class MdcMenuSurfaceComponent extends Component {
 
   @action
   anchorCorner (element, [anchorCorner]) {
-    this.component.setAnchorCorner (anchorCorner);
+    this.setAnchorCorner (anchorCorner);
   }
 
   @action
