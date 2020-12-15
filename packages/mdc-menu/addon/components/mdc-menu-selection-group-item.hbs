@@ -1,0 +1,4 @@
+ <MdcMenuItem @selected={{@selected}}>
+   <MdcMenuSelectionGroupIcon @icon={{@icon}} />
+   <MdcMenuItemText>{{#if (has-block)}}{{yield}}{{else}}{{@text}}{{/if}}</MdcMenuItemText>
+</MdcMenuItem>

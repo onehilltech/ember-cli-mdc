@@ -1,4 +1,4 @@
-<MdcListItem role="menuitem" ...attributes>
+<MdcListItem role="menuitem" class="{{if @selected "mdc-menu-item--selected"}}" ...attributes>
   {{#if (has-block)}}
     {{yield}}
   {{else}}

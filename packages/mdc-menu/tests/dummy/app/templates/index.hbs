@@ -3,7 +3,7 @@
 <div class="toolbar" {{mdc-menu-surface-anchor}}>
   <button {{on "click" this.openMenu}}>Open Menu</button>
 
-  <MdcMenu @open={{this.open}} @anchorCorner="bottomLeft">
+  <MdcMenu @open={{this.open}} @anchorCorner="bottomStart">
     <MdcMenuList>
       <MdcMenuItemLinkTo @route="index">This is the link</MdcMenuItemLinkTo>
 
@@ -11,15 +11,8 @@
 
       <li>
         <MdcMenuSelectionGroup>
-          <MdcMenuItem>
-            <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
-            <MdcMenuItemText>Single</MdcMenuItemText>
-          </MdcMenuItem>
-
-          <MdcMenuItem>
-            <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
-            <MdcMenuItemText>1.15</MdcMenuItemText>
-          </MdcMenuItem>
+          <MdcMenuSelectionGroupItem @icon="settings" @selected={{true}} @text="Single" />
+          <MdcMenuSelectionGroupItem @icon="web">1.15</MdcMenuSelectionGroupItem>
         </MdcMenuSelectionGroup>
       </li>
 
@@ -30,74 +23,3 @@
     </MdcMenuList>
   </MdcMenu>
 </div>
-
-<!--
-<h3>Fixed Location Menu</h3>
-
-<div class="card__container">
-  <div class="card">
-    <MdcList @twoLine={{true}}>
-      <MdcListItem>
-        <MdcListItemText>
-          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
-          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
-        </MdcListItemText>
-
-        <MdcListItemMeta>
-          {{mdc-list-item-meta-icon "more_vert" click=(action (mut openMenu) true)}}
-
-          <MdcMenu @position="fixed" @open={{openMenu}} @anchorCorner="bottomRight">
-            <MdcMenuList>
-              {{mdc-menu-item-link-to "This is the link" "index"}}
-
-              <MdcListDivider />
-
-              <li>
-                <MdcMenuSelectionGroup>
-                  <MdcMenuItem>
-                    <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
-                    <MdcMenuItemText>Single</MdcMenuItemText>
-                  </MdcMenuItem>
-
-                  <MdcMenuItem>
-                    <MdcMenuSelectionGroupIcon>...</MdcMenuSelectionGroupIcon>
-                    <MdcMenuItemText>1.15</MdcMenuItemText>
-                  </MdcMenuItem>
-                </MdcMenuSelectionGroup>
-              </li>
-
-              <MdcListDivider />
-
-              {{mdc-menu-item "Add space before paragraph"}}
-              <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
-            </MdcMenuList>
-          </MdcMenu>
-
-        </MdcListItemMeta>
-      </MdcListItem>
-
-      <MdcListItem>
-        <MdcListItemText>
-          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
-          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
-        </MdcListItemText>
-      </MdcListItem>
-
-      <MdcListItem>
-        <MdcListItemText>
-          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
-          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
-        </MdcListItemText>
-      </MdcListItem>
-
-      <MdcListItem>
-        <MdcListItemText>
-          <MdcListItemPrimaryText>Primary Text</MdcListItemPrimaryText>
-          <MdcListItemSecondaryText>Secondary Text</MdcListItemSecondaryText>
-        </MdcListItemText>
-      </MdcListItem>
-    </MdcList>
-  </div>
-</div>
-
--->
