@@ -8,6 +8,8 @@ import { guidFor } from '@ember/object/internals';
 import { isPresent } from '@ember/utils';
 import { action } from '@ember/object';
 
+function noOp () { }
+
 const STYLES = ['filled', 'outlined'];
 
 const { MDCTextField } = mdc.textfield;
@@ -81,5 +83,9 @@ export default class MdcTextfieldComponent extends Component {
   get persistentHelperText () {
     let { persistentHelperText, errorMessage } = this.args;
     return isPresent (errorMessage) || persistentHelperText;
+  }
+
+  get leadingIconClick () {
+    return this.args.leadingIconClick || noOp;
   }
 }

@@ -1,7 +1,19 @@
-<label class="mdc-text-field {{this.styleClassName}} {{unless @label "mdc-text-field--no-label"}} {{if @disabled "mdc-text-field--disabled"}} {{if @alignEnd "mdc-text-field--end-aligned"}} {{if @ltr "mdc-text-field--ltr-text"}} {{if @focused "mdc-text-field--focused"}}"
+<label class="mdc-text-field {{this.styleClassName}}
+  {{unless @label "mdc-text-field--no-label"}}
+  {{if @disabled "mdc-text-field--disabled"}}
+  {{if @alignEnd "mdc-text-field--end-aligned"}}
+  {{if @ltr "mdc-text-field--ltr-text"}}
+  {{if @focused "mdc-text-field--focused"}}
+  {{if @leadingIcon "mdc-text-field--with-leading-icon"}}"
   {{did-insert this.didInsert}}>
   {{#if this.filled}}
     <span class="mdc-text-field__ripple"></span>
+    {{#if @leadingIcon}}
+      <MdcIcon @icon={{@leadingIcon}}
+               class="mdc-text-field__icon mdc-text-field__icon--leading"
+               tabindex={{if @leadingIconClick "0"}}
+               role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
+    {{/if}}
   {{/if}}
   <MdcTextfieldInput ...attributes @value={{@value}}
                      aria-labelledby={{this.labelId}}

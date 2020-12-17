@@ -74,6 +74,22 @@
   </div>
 </div>
 
+<h3 class="mdc-typography--subtitle1">Icons</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Leading icon" @leadingIcon="email" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Trailing icon" @trailingIcon="visibility_off" />
+  </div>
+</div>
+
 <h3 class="mdc-typography--subtitle1">Character Count</h3>
 
 <div class="text-field-row">
