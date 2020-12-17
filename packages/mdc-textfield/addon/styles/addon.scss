@@ -1,9 +1,12 @@
 @import "app-theme";
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/textfield/character-counter/mdc-text-field-character-counter";
 
+/*
 .mdc-text-field {
   &__icon {
     &:focus { outline: none; }
   }
 }
+ */

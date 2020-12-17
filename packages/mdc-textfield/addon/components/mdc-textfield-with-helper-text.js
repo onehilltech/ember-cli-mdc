@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-textfield-with-helper-text';
 
 import HelperTextSupport from '../mixins/helper-text-support';
 
@@ -7,8 +6,6 @@ import { oneWay } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
 export default Component.extend (HelperTextSupport, {
-  layout,
-
   classNames: ['mdc-text-field-with-helper-text'],
 
   // {{mdc-textfield}}

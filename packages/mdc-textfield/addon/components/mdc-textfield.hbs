@@ -1,6 +1,38 @@
-<label class="mdc-text-field {{this.style}}" {{did-insert this.didInsert}}>
-  <span class="mdc-text-field__ripple"></span>
-  <input class="mdc-text-field__input" type="text" aria-labelledby={{this.labeledById}}>
-  <span class="mdc-floating-label" id={{this.labeledById}}>Hint text</span>
-  <span class="mdc-line-ripple"></span>
+<label class="mdc-text-field {{this.styleClassName}} {{unless @label "mdc-text-field--no-label"}} {{if @disabled "mdc-text-field--disabled"}} {{if @alignEnd "mdc-text-field--end-aligned"}} {{if @ltr "mdc-text-field--ltr-text"}} {{if @focused "mdc-text-field--focused"}}"
+  {{did-insert this.didInsert}}>
+  {{#if this.filled}}
+    <span class="mdc-text-field__ripple"></span>
+  {{/if}}
+  <MdcTextfieldInput ...attributes @value={{@value}}
+                     aria-labelledby={{this.labelId}}
+                     aria-controls={{this.helperId}}
+                     aria-describedby={{this.helperId}}
+                     disabled={{@disabled}} />
+  {{#if @label}}
+  {{/if}}
+  {{#if this.filled}}
+    <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+    <span class="mdc-line-ripple"></span>
+  {{else}}
+    <span class="mdc-notched-outline">
+    <span class="mdc-notched-outline__leading"></span>
+    <span class="mdc-notched-outline__notch">
+      {{#if @label}}
+        <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+      {{/if}}
+    </span>
+    <span class="mdc-notched-outline__trailing"></span>
+  </span>
+  {{/if}}
 </label>
+{{#if this.helperLine}}
+  <div class="mdc-text-field-helper-line">
+    {{#if @characterCount}}
+      <div class="mdc-text-field-character-counter" />
+    {{else}}
+      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
+           id={{this.helperId}}
+           aria-hidden="true">{{this.helperText}}</div>
+    {{/if}}
+  </div>
+{{/if}}

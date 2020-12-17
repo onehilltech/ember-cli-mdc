@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-password-textfield';
 
 import { A } from '@ember/array';
 import { isEmpty, isPresent } from '@ember/utils';
@@ -8,8 +7,6 @@ import { set } from '@ember/object';
 function noOp () {}
 
 export default Component.extend({
-  layout,
-
   classNames: ['mdc-text-field--password'],
 
   showPassword: false,

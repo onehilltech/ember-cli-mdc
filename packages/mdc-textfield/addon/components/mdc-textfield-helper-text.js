@@ -1,9 +1,6 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-textfield-helper-text';
 
 export default Component.extend({
-  layout,
-
   tagName: 'p',
 
   classNames: ['mdc-text-field-helper-text'],

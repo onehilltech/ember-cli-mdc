@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import layout from '../templates/components/mdc-password-textfield-with-helper-text';
 
 import HelperTextSupport from '../mixins/helper-text-support';
 
@@ -9,7 +8,6 @@ import { readOnly, or } from '@ember/object/computed';
 function noOp () {}
 
 export default Component.extend (HelperTextSupport, {
-  layout,
 
   classNames: ['mdc-text-field--password'],
 

@@ -20,6 +20,7 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-floating-label', target},
     {name: 'ember-cli-mdc-line-ripple', target},
     {name: 'ember-cli-mdc-notched-outline', target},
-    {name: 'ember-cli-mdc-shape', target}
+    {name: 'ember-cli-mdc-shape', target},
+    {name: '@ember/render-modifiers'}
   ]
 });
