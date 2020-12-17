@@ -18,11 +18,19 @@
              role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
   {{/if}}
 
+  {{#if @prefix}}
+    <span class="mdc-text-field__affix mdc-text-field__affix--prefix">{{@prefix}}</span>
+  {{/if}}
+
   <MdcTextfieldInput ...attributes @value={{@value}}
                      aria-labelledby={{this.labelId}}
                      aria-controls={{this.helperId}}
                      aria-describedby={{this.helperId}}
                      disabled={{@disabled}} />
+
+  {{#if @suffix}}
+    <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>
+  {{/if}}
 
   {{#if @trailingIcon}}
     <MdcIcon @icon={{@trailingIcon}}
