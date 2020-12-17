@@ -88,4 +88,8 @@ export default class MdcTextfieldComponent extends Component {
   get leadingIconClick () {
     return this.args.leadingIconClick || noOp;
   }
+
+  get trailingIconClick () {
+    return this.args.trailingIconClick || noOp;
+  }
 }

@@ -4,37 +4,48 @@
   {{if @alignEnd "mdc-text-field--end-aligned"}}
   {{if @ltr "mdc-text-field--ltr-text"}}
   {{if @focused "mdc-text-field--focused"}}
-  {{if @leadingIcon "mdc-text-field--with-leading-icon"}}"
-  {{did-insert this.didInsert}}>
+  {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
+  {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
+{{did-insert this.didInsert}}>
   {{#if this.filled}}
     <span class="mdc-text-field__ripple"></span>
-    {{#if @leadingIcon}}
-      <MdcIcon @icon={{@leadingIcon}}
-               class="mdc-text-field__icon mdc-text-field__icon--leading"
-               tabindex={{if @leadingIconClick "0"}}
-               role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
-    {{/if}}
   {{/if}}
+
+  {{#if @leadingIcon}}
+    <MdcIcon @icon={{@leadingIcon}}
+             class="mdc-text-field__icon mdc-text-field__icon--leading"
+             tabindex={{if @leadingIconClick "0"}}
+             role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
+  {{/if}}
+
   <MdcTextfieldInput ...attributes @value={{@value}}
                      aria-labelledby={{this.labelId}}
                      aria-controls={{this.helperId}}
                      aria-describedby={{this.helperId}}
                      disabled={{@disabled}} />
-  {{#if @label}}
+
+  {{#if @trailingIcon}}
+    <MdcIcon @icon={{@trailingIcon}}
+             class="mdc-text-field__icon mdc-text-field__icon--leading"
+             tabindex={{if @trailingIconClick "0"}}
+             role={{if @trailingIconClick "button"}} {{on "click" this.trailingIconClick}} />
   {{/if}}
+
   {{#if this.filled}}
-    <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+    {{#if @label}}
+      <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+    {{/if}}
     <span class="mdc-line-ripple"></span>
   {{else}}
     <span class="mdc-notched-outline">
-    <span class="mdc-notched-outline__leading"></span>
-    <span class="mdc-notched-outline__notch">
-      {{#if @label}}
-        <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
-      {{/if}}
+      <span class="mdc-notched-outline__leading"></span>
+      <span class="mdc-notched-outline__notch">
+        {{#if @label}}
+          <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+        {{/if}}
+      </span>
+      <span class="mdc-notched-outline__trailing"></span>
     </span>
-    <span class="mdc-notched-outline__trailing"></span>
-  </span>
   {{/if}}
 </label>
 {{#if this.helperLine}}

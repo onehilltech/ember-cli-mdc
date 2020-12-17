@@ -74,7 +74,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Icons</h3>
+<h3 class="mdc-typography--subtitle1">Leading Icons</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -86,7 +86,47 @@
   </div>
 
   <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Leading icon" @leadingIcon="email" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} @value="This is pre-filled"/>
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @leadingIcon="email" @leadingIconClick={{this.alert}} />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} @disabled={{true}} />
+  </div>
+</div>
+
+<h3 class="mdc-typography--subtitle1">Trailing Icons</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
     <MdcTextfield @style="filled" @label="Trailing icon" @trailingIcon="visibility_off" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Clickable trailing icon" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Trailing icon" @trailingIcon="visibility_off" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Clickable trailing icon" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} @disabled={{true}} />
   </div>
 </div>
 
