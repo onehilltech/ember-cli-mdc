@@ -1,28 +1,31 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
-import { A } from '@ember/array';
-import { isEmpty, isPresent } from '@ember/utils';
-import { set } from '@ember/object';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 function noOp () {}
 
-export default Component.extend({
-  classNames: ['mdc-text-field--password'],
+export default class MdcPasswordTextfieldComponent extends Component {
+  @tracked
+  showPassword = false;
 
-  showPassword: false,
+  get visibleIcon () {
+    return this.args.visibleIcon || 'visibility';
+  }
 
-  iconOn: 'visibility',
-  iconOff: 'visibility_off',
+  get invisibleIcon () {
+    return this.args.invisibleIcon || 'visibility_off';
+  }
 
+  @action
+  toggle () {
+    this.showPassword = !this.showPassword;
+  }
+
+  /*
   /// The last value of the password.
   _lastValue: null,
   _input: null,
-
-  init () {
-    this._super (...arguments);
-
-    this._onInputListener = this._onInput.bind (this);
-  },
 
   didUpdateAttrs () {
     this._super (...arguments);
@@ -47,21 +50,13 @@ export default Component.extend({
     }
   },
 
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._input.removeEventListener ('input', this._onInputListener);
-  },
-
   _onInputListener: null,
 
-  _onInput () {
+  @action
+  input (element) {
     this._checkPasswordValidity ();
-  },
+  }
 
-  /**
-   * Check the validity of the password, and notify the parent.
-   */
   _checkPasswordValidity () {
     const value = this._input.value;
 
@@ -90,9 +85,6 @@ export default Component.extend({
     }
   },
 
-  actions: {
-    toggle () {
-      this.toggleProperty ('showPassword');
-    }
-  }
-});
+*/
+
+}

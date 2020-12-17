@@ -7,7 +7,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea-with-helper-text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea-with-helper-text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-helper-text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-helper-text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-icon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-with-helper-text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-with-helper-text.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

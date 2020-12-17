@@ -1,8 +1,0 @@
-{{#unless (has-block)}}
-  <MdcTextarea @label={{label}} @style={{style}} @fullWidth={{fullWidth}} @dense={{dense}} @noLabel={{noLabel}} @invalid={{validation}} @value={{value}} @name={{name}} @rows={{rows}} @cols={{cols}} @placeholder={{placeholder}} @disabled={{disabled}} @maxlength={{maxlength}} @tabindex={{tabindex}} @selectionEnd={{selectionEnd}} @selectionStart={{selectionStart}} @autocomplete={{autocomplete}} @selectionDirection={{selectionDirection}} @wrap={{wrap}} @readonly={{readonly}} @autofocus={{autofocus}} @form={{form}} @spellcheck={{spellcheck}} @required={{required}} />
-  <MdcTextfieldHelperText @persistent={{persistMessage}} @validation={{validation}}>
-    {{message}}
-  </MdcTextfieldHelperText>
-{{else}}
-  {{yield}}
-{{/unless}}
