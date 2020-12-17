@@ -11,10 +11,7 @@ function noOp () {}
 const { MDCTabBar } = mdc.tabBar;
 
 export default class MdcTabBarComponent extends Component {
-  _tabBar = null;
-
-  @action
-  didInsert (element) {
+  doPrepareElement (element) {
     const activeTab = element.querySelector ('.mdc-tab--active');
 
     if (isNone (activeTab)) {
@@ -29,9 +26,10 @@ export default class MdcTabBarComponent extends Component {
       let tabIndicator = tab.querySelector ('.mdc-tab-indicator');
       tabIndicator.classList.add ('mdc-tab-indicator--active');
     }
+  }
 
-    this._tabBar = new MDCTabBar (element);
-    this._mdcComponentCreated (this._tabBar);
+  doCreateComponent (element) {
+    return new MDCTabBar (element)
   }
 
   get activeTab () {
@@ -40,17 +38,23 @@ export default class MdcTabBarComponent extends Component {
 
   @listener ('MDCTabBar:activated')
   activated (ev) {
+    this.didActivate (ev);
+
     const { detail: { index } } = ev;
     (this.args.activated || noOp) (index);
   }
 
+  didActivate (ev) {
+
+  }
+
   @action
   activateTab (element, [index]) {
-    this._tabBar.activateTab (index)
+    this.component.activateTab (index)
   }
 
   @action
   scrollIntoView (element, [index]) {
-    this._tabBar.scrollIntoView (index);
+    this.component.scrollIntoView (index);
   }
 }
