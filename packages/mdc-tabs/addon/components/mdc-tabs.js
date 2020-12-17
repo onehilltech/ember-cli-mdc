@@ -11,9 +11,6 @@ function noOp () { }
 const { MDCTabBar } = mdc.tabBar;
 
 export default class MdcTabsComponent extends Component {
-
-  activeTab = undefined;
-
   /// The tab bar element for the tabs.
   _tabPanels = null;
 
@@ -46,17 +43,18 @@ export default class MdcTabsComponent extends Component {
   _initActiveTab (element) {
     let activeTab = this.activeTab;
     let tabs = element.querySelectorAll ('.mdc-tab');
+    let tab;
 
     if (activeTab !== 0) {
       // We need to the active state from the default tab (i.e., tab 0).
-      let tab = tabs[0];
+      tab = tabs.item (0);
 
       tab.classList.remove ('mdc-tab--active');
       tab.querySelector ('.mdc-tab-indicator').classList.remove ('mdc-tab-indicator--active');
     }
 
     // Add the active state to the tab.
-    let tab = tabs[activeTab];
+    tab = tabs.item (activeTab);
     tab.classList.add ('mdc-tab--active');
 
     // Add the active state to the tab indicator.
@@ -64,7 +62,7 @@ export default class MdcTabsComponent extends Component {
     tabIndicator.classList.add ('mdc-tab-indicator--active');
 
     // Add the active state to the tab panel.
-    let tabPanel = element.querySelectorAll ('.mdc-tab-panel')[activeTab];
+    let tabPanel = element.querySelectorAll ('.mdc-tab-panel').item (activeTab);
     tabPanel.classList.add ('mdc-tab-panel--active');
 
     this._currentActiveTab = activeTab;
@@ -72,12 +70,14 @@ export default class MdcTabsComponent extends Component {
 
   @listener ('MDCTabBar:activated')
   activated (ev) {
-    this.didActivate (ev);
-
     const { detail: { index } } = ev;
-    (this.args.activated || noOp) (index);
 
+    // Activate the selected panel.
     this._activateTabPanel (index);
+
+    // Send the appropriate notification.
+    this.didActivate (ev);
+    (this.args.activated || noOp) (index);
   }
 
   didActivate (ev) {
