@@ -5,6 +5,7 @@ import listener from 'ember-cli-mdc-base/listener';
 
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
+import { action } from '@ember/object';
 
 function noOp () { }
 
@@ -14,7 +15,7 @@ export default class MdcTabsComponent extends Component {
   /// The tab bar element for the tabs.
   _tabPanels = null;
 
-  _currentActiveTab = undefined;
+  _currentActiveTab = 0;
 
   doPrepareElement (element) {
     let tabBarElement = element.querySelector ('.mdc-tab-bar');
@@ -41,13 +42,38 @@ export default class MdcTabsComponent extends Component {
   }
 
   _initActiveTab (element) {
-    let activeTab = this.activeTab;
+    this._activateTab (element, this.activeTab);
+  }
+
+  @listener ('MDCTabBar:activated')
+  activated (ev) {
+    const { detail: { index } } = ev;
+
+    // Activate the selected panel.
+    this._activateTabPanel (index);
+    this._currentActiveTab = index;
+
+    // Send the appropriate notification.
+    this.didActivate (ev);
+    (this.args.activated || noOp) (index);
+  }
+
+  @action
+  activateTab (element, [activeTab]) {
+    this._activateTab (element, activeTab);
+  }
+
+  didActivate (ev) {
+
+  }
+
+  _activateTab (element, activeTab) {
     let tabs = element.querySelectorAll ('.mdc-tab');
     let tab;
 
-    if (activeTab !== 0) {
+    if (activeTab !== this._currentActiveTab) {
       // We need to the active state from the default tab (i.e., tab 0).
-      tab = tabs.item (0);
+      tab = tabs.item (this._currentActiveTab);
 
       tab.classList.remove ('mdc-tab--active');
       tab.querySelector ('.mdc-tab-indicator').classList.remove ('mdc-tab-indicator--active');
@@ -62,38 +88,17 @@ export default class MdcTabsComponent extends Component {
     tabIndicator.classList.add ('mdc-tab-indicator--active');
 
     // Add the active state to the tab panel.
-    let tabPanel = element.querySelectorAll ('.mdc-tab-panel').item (activeTab);
-    tabPanel.classList.add ('mdc-tab-panel--active');
+    this._activateTabPanel (activeTab);
 
+    // Save the active tab index.
     this._currentActiveTab = activeTab;
   }
 
-  @listener ('MDCTabBar:activated')
-  activated (ev) {
-    const { detail: { index } } = ev;
-
-    // Activate the selected panel.
-    this._activateTabPanel (index);
-
-    // Send the appropriate notification.
-    this.didActivate (ev);
-    (this.args.activated || noOp) (index);
-  }
-
-  didActivate (ev) {
-
-  }
-
   _activateTabPanel (index) {
-    if (index === this._currentActiveTab) {
-      return;
-    }
-
     if (isPresent (this._currentActiveTab)) {
-      this._tabPanels[this._currentActiveTab].classList.remove ('mdc-tab-panel--active');
+      this._tabPanels.item (this._currentActiveTab).classList.remove ('mdc-tab-panel--active');
     }
 
-    this._tabPanels[index].classList.add ('mdc-tab-panel--active');
-    this._currentActiveTab = index;
+    this._tabPanels.item (index).classList.add ('mdc-tab-panel--active');
   }
 }

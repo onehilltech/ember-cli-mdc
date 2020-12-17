@@ -1,3 +1,5 @@
-<div class="mdc-tabs" {{did-insert this.didInsert}} ...attributes>
+<div class="mdc-tabs"
+  {{did-insert this.didInsert}}
+  {{did-update this.activateTab @activeTab}} ...attributes>
   {{yield}}
 </div>

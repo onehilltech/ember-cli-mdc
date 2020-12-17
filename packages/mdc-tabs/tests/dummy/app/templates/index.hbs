@@ -1,4 +1,5 @@
-<MdcTabs @activeTab={{1}}>
+<button {{on "click" (fn this.activateTab 2)}}>Activate Tab 3</button>
+<MdcTabs @activeTab={{this.activeTab}}>
   <MdcTabBar>
     <MdcTabScroller>
       <MdcTab @label="Tab 1" />
