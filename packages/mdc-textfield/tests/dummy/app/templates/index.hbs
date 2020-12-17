@@ -130,6 +130,19 @@
   </div>
 </div>
 
+
+<h3 class="mdc-typography--subtitle1">Leading & Trailing Icons</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Filled" @leadingIcon="lock" @trailingIcon="visibility_off" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined" @label="Outlined" @leadingIcon="lock" @trailingIcon="visibility_off" />
+  </div>
+</div>
+
 <h3 class="mdc-typography--subtitle1">Character Count</h3>
 
 <div class="text-field-row">
@@ -144,78 +157,6 @@
 
 
 <!--
-<h3 class="mdc-typography--subtitle1">Outlined With Leading Icon</h3>
-
-<div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @label="Standard" @style="outlined" @icon="event" @iconPosition="leading" />
-
-  </div>
-
-  <div class="text-field-container">
-
-    <MdcTextfieldWithHelperText @label="Helper Text" @style="outlined" @helperText="Helper Text" @helperTextPersistent={{true}} @icon="event" @iconPosition="leading" />
-  </div>
-
-  <div class="text-field-container">
-
-    <MdcTextfield @label="Disabled" @style="outlined" @disabled={{true}} @icon="event" @iconPosition="leading" />
-  </div>
-</div>
-
-
-<h3 class="mdc-typography--subtitle1">Outlined With Trailing Icon</h3>
-
-<div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @label="Standard" @style="outlined" @icon="delete" @iconPosition="trailing" />
-
-  </div>
-
-  <div class="text-field-container">
-
-    <MdcTextfieldWithHelperText @label="Helper Text" @style="outlined" @helperText="Helper Text" @helperTextPersistent={{true}} @icon="delete" @iconPosition="trailing" />
-  </div>
-
-  <div class="text-field-container">
-
-    <MdcTextfield @label="Disabled" @style="outlined" @disabled={{true}} @icon="delete" @iconPosition="trailing" />
-  </div>
-</div>
-
-<h3 class="mdc-typography--subtitle1">Default Configuration</h3>
-
-<div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @label="Standard" />
-  </div>
-
-  <div class="text-field-container">
-    <MdcTextfieldWithHelperText @label="Helper Text" @helperText="Helper Text" @helperTextPersistent={{true}} />
-  </div>
-
-  <div class="text-field-container">
-    <MdcTextfield @label="Disabled" @disabled={{true}} />
-  </div>
-</div>
-
-<h3 class="mdc-typography--subtitle1">No Label</h3>
-
-<div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @label="Standard" @noLabel={{true}} />
-  </div>
-
-  <div class="text-field-container">
-    <MdcTextfieldWithHelperText @label="Helper Text" @noLabel={{true}} @helperText="Helper Text" @helperTextPersistent={{true}} />
-  </div>
-
-  <div class="text-field-container">
-    <MdcTextfield @label="Disabled" @disabled={{true}} @noLabel={{true}} />
-  </div>
-</div>
-
-
 
 <h3 class="mdc-typography--subtitle1">Textarea</h3>
 
