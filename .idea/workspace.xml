@@ -6,12 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/controllers/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/controllers/multipart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/routes/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/icons.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/multipart.hbs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-drawer/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-drawer/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/tests/dummy/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
