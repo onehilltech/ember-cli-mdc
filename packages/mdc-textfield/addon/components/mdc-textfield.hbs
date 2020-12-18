@@ -2,6 +2,7 @@
   {{unless @label "mdc-text-field--no-label"}}
   {{if @disabled "mdc-text-field--disabled"}}
   {{if @alignEnd "mdc-text-field--end-aligned"}}
+  {{if @fullWidth "mdc-text-field--fullwidth"}}
   {{if @ltr "mdc-text-field--ltr-text"}}
   {{if @focused "mdc-text-field--focused"}}
   {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
@@ -41,7 +42,9 @@
 
   {{#if this.filled}}
     {{#if @label}}
-      <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+      {{#unless @fullWidth}}
+        <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+      {{/unless}}
     {{/if}}
     <span class="mdc-line-ripple"></span>
   {{else}}

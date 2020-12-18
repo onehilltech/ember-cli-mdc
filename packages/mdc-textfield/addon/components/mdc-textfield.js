@@ -31,6 +31,7 @@ export default class MdcTextfieldComponent extends Component {
   get styleClassName () {
     let style = this.style;
 
+    assert ('The outlined style cannot be used with a full width text field.', style === 'filled' || !this.args.fullWidth);
     assert (`The textfield component supports the following styles: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-text-field--${style}`;
