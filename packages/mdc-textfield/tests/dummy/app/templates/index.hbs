@@ -192,7 +192,7 @@
     <MdcTextfield @label="Validation message"
                   @helperText="10 <= n <= 10000"
                   @persistentHelperText={{true}}
-                  @validationMessages=this.validationMessages
+                  @validationMessages={{this.validationMessages}}
                   required="true"
                   type="number"
                   min=10
