@@ -7,11 +7,5 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('multipart');
 
-  this.route('issues', function() {
-    this.route('6');
-    this.route('11');
-  });
-  this.route('icons');
 });
