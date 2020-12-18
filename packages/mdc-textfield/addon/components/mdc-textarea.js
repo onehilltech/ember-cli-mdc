@@ -2,12 +2,6 @@ import Component from 'ember-cli-mdc-base/component';
 
 import { tracked } from '@glimmer/tracking';
 import { isPresent } from '@ember/utils';
-
-import { computed } from '@ember/object';
-import { not } from '@ember/object/computed';
-
-import { inject as service } from '@ember/service';
-
 import { guidFor } from '@ember/object/internals';
 
 const { MDCTextField } = mdc.textfield;
@@ -48,5 +42,4 @@ export default class MdcTextareaComponent extends Component {
     let { persistentHelperText, errorMessage } = this.args;
     return isPresent (errorMessage) || persistentHelperText;
   }
-
 }
