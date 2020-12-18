@@ -61,12 +61,13 @@
 </label>
 {{#if this.helperLine}}
   <div class="mdc-text-field-helper-line">
-    {{#if @characterCount}}
-      <div class="mdc-text-field-character-counter" />
-    {{else}}
+    {{#if this.helperText}}
       <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
            id={{this.helperId}}
            aria-hidden="true">{{this.helperText}}</div>
+    {{/if}}
+    {{#if @characterCount}}
+      <div class="mdc-text-field-character-counter" />
     {{/if}}
   </div>
 {{/if}}

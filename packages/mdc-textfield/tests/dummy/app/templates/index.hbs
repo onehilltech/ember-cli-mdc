@@ -1,6 +1,6 @@
-<h2 class="mdc-typography--headline4" id="title">Text Fields</h2>
+<h1>Text Fields</h1>
 
-<h3 class="mdc-typography--subtitle1">Filled</h3>
+<h3>Filled</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -30,7 +30,7 @@
 </div>
 
 <!--
-<h3 class="mdc-typography--subtitle1">Shaped Filled</h3>
+<h3>Shaped Filled</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -46,7 +46,7 @@
   </div>
 </div>
 -->
-<h3 class="mdc-typography--subtitle1">Outlined</h3>
+<h3>Outlined</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -74,7 +74,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Leading Icons</h3>
+<h3>Leading Icons</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -102,7 +102,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Trailing Icons</h3>
+<h3>Trailing Icons</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -131,7 +131,7 @@
 </div>
 
 
-<h3 class="mdc-typography--subtitle1">Leading & Trailing Icons</h3>
+<h3>Leading & Trailing Icons</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -143,7 +143,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Character Count</h3>
+<h3>Character Count</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -153,9 +153,18 @@
   <div class="text-field-container">
     <MdcTextfield @style="outlined" @label="Outlined" @characterCount={{true}} maxlength="50" />
   </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined"
+                  @label="Outlined"
+                  @helperText="This also has helper text."
+                  @persistentHelperText={{true}}
+                  @characterCount={{true}}
+                  maxlength="25" />
+  </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Full Width</h3>
+<h3>Full Width</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -163,7 +172,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Prefix & Suffix</h3>
+<h3>Prefix & Suffix</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -175,7 +184,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Password Text Field</h3>
+<h3>Password Text Field</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -191,26 +200,29 @@
   </div>
 </div>
 
-
-<!--
-
-<h3 class="mdc-typography--subtitle1">Textarea</h3>
+<h1>Textarea</h1>
 
 <div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextarea @label="Standard" />
+    <MdcTextarea @label="Filled" @style="filled" rows="8" cols="40" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextareaWithHelperText @label="Helper Text" @helperText="Helper Text" @helperTextPersistent={{true}} />
+    <MdcTextarea @label="Filled" @style="outlined" rows="8" cols="40" @errorMessage="We have a problem here." @characterCount={{true}} maxlength="500" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextarea @label="Disabled" @disabled={{true}} />
+    <MdcTextarea @label="Helper Text" @style="outlined" @helperText="This has helper text" @persistentHelperText={{true}} rows="8" cols="40" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextarea @label="Disabled" @style="outlined" @disabled={{true}} rows="8" cols="40" />
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Full Width</h3>
+<!--
+
+<h3>Full Width</h3>
 
 <div class="text-field-row text-field-row-fullwidth">
   <div class="text-field-container">
@@ -226,7 +238,7 @@
   </div>
 </div>
 
-<h3 class="mdc-typography--subtitle1">Full Width Textarea</h3>
+<h3>Full Width Textarea</h3>
 
 <div class="text-field-row text-field-row-fullwidth">
   <div class="text-field-container">
@@ -242,7 +254,7 @@
   </div>
 </div>
 
-<h2 class="mdc-typography--headline5">Validation</h2>
+<h3 class="mdc-typography--headline5">Validation</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -261,7 +273,7 @@
   </div>
 </div>
 
-<h2 class="mdc-typography--headline5">Error Message</h2>
+<h3 class="mdc-typography--headline5">Error Message</h3>
 
 <div class="text-field-row">
   <div class="text-field-container">
@@ -272,7 +284,7 @@
   </div>
 </div>
 
-<h2 class="mdc-typography--headline5">Password Components</h2>
+<h3 class="mdc-typography--headline5">Password Components</h3>
 
 <div class="text-field-row">
   <div class="text-field-container" style="margin-bottom: 16px">

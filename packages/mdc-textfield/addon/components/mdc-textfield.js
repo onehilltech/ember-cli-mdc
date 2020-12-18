@@ -6,7 +6,6 @@ import { assert } from '@ember/debug';
 import { tracked } from '@glimmer/tracking';
 import { guidFor } from '@ember/object/internals';
 import { isPresent } from '@ember/utils';
-import { action } from '@ember/object';
 
 function noOp () { }
 
@@ -46,8 +45,6 @@ export default class MdcTextfieldComponent extends Component {
 
     this.labelId = guidFor (this);
     this.helperId = `${guidFor (this)}__helper-text`;
-
-    this._count = 0;
   }
 
   doCreateComponent (element) {
