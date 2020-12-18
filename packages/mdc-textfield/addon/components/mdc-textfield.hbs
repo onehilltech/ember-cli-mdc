@@ -7,7 +7,7 @@
   {{if @focused "mdc-text-field--focused"}}
   {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
   {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
-{{did-insert this.didInsert}}>
+  {{did-insert this.didInsert}}>
   {{#if this.filled}}
     <span class="mdc-text-field__ripple"></span>
   {{/if}}
@@ -27,7 +27,9 @@
                      aria-labelledby={{this.labelId}}
                      aria-controls={{this.helperId}}
                      aria-describedby={{this.helperId}}
-                     disabled={{@disabled}} />
+                     disabled={{@disabled}}
+                    {{on "blur" this.validate}}
+                    {{on "focus" this.focus}} />
 
   {{#if @suffix}}
     <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>

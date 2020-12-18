@@ -1,17 +1,30 @@
 import Component from 'ember-cli-mdc-base/component';
 
+import { action } from '@ember/object';
 import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { tracked } from '@glimmer/tracking';
 import { guidFor } from '@ember/object/internals';
-import { isPresent } from '@ember/utils';
+import { isPresent, isEmpty } from '@ember/utils';
 
 function noOp () { }
 
 const STYLES = ['filled', 'outlined'];
 
 const { MDCTextField } = mdc.textfield;
+
+const VALIDATION_ERROR_TYPE = [
+  'badInput',
+  'patternMismatch',
+  'rangeOverflow',
+  'rangeUnderflow',
+  'stepMismatch',
+  'tooLong',
+  'tooShort',
+  'valueMissing',
+  'typeMismatch',
+];
 
 export default class MdcTextfieldComponent extends Component {
   @service ('mdc-textfield-configurator')
@@ -75,12 +88,12 @@ export default class MdcTextfieldComponent extends Component {
 
   get helperText () {
     let { errorMessage, helperText } = this.args;
-    return errorMessage || helperText;
+    return errorMessage || this.validationMessage || helperText;
   }
 
   get persistentHelperText () {
     let { persistentHelperText, errorMessage } = this.args;
-    return isPresent (errorMessage) || persistentHelperText;
+    return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
   }
 
   get leadingIconClick () {
@@ -89,5 +102,41 @@ export default class MdcTextfieldComponent extends Component {
 
   get trailingIconClick () {
     return this.args.trailingIconClick || noOp;
+  }
+
+  @tracked
+  validationMessage;
+
+  @action
+  focus () {
+    this.validationMessage = null;
+  }
+
+  @action
+  validate (ev) {
+    let { target } = ev;
+
+    if (!target.validity.valid) {
+      let { validationMessages } = this.args;
+
+      if (isPresent (validationMessages)) {
+        // The user wants to display a custom validation error message instead
+        // of the default validation error message.
+
+        for (let i = 0, len = VALIDATION_ERROR_TYPE.length; i < len; ++i) {
+          const reason = VALIDATION_ERROR_TYPE[i];
+          const failed = target.validity[reason];
+
+          if (failed) {
+            this.validationMessage = validationMessages[reason] || target.validationMessage;
+            break;
+          }
+        }
+      }
+      else {
+        // Set the default validation message.
+        this.validationMessage = target.validationMessage;
+      }
+    }
   }
 }

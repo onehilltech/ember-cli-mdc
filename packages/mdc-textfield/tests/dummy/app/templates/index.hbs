@@ -166,6 +166,40 @@
   </div>
 </div>
 
+<h3>Validation</h3>
+
+<div class="text-field-row">
+  <div class="text-field-container">
+    <MdcTextfield @style="filled" @label="Required" required="true" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @style="outlined"
+                  @label="Min / Max"
+                  type="number"
+                  min=10
+                  max=10000
+                  @helperText="Must be between 10 and 10000." />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @label="Pattern"
+                  pattern="[A-Za-z]{3}"
+                  @helperText="Three letter country code." />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextfield @label="Validation message"
+                  @helperText="10 <= n <= 10000"
+                  @persistentHelperText={{true}}
+                  @validationMessages=this.validationMessages
+                  required="true"
+                  type="number"
+                  min=10
+                  max=10000 />
+  </div>
+</div>
+
 <h3>Password Text Field</h3>
 
 <div class="text-field-row">
