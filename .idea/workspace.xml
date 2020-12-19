@@ -6,7 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-select/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-select/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +303,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="2660000" />
+      <workItem from="1608357248434" duration="2964000" />
     </task>
     <servers />
   </component>
