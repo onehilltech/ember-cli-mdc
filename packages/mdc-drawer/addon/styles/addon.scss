@@ -2,18 +2,14 @@
 @import "@material/list/mdc-list";
 @import "@material/drawer/mdc-drawer";
 
-// We must calculate the width of a fixed top app bar since its fixed positioning causes
-// its width to be the size of the screen. We need it to be the width of the screen less
-// the width of the permanent drawer.
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+  flex-grow: 1;
+}
 
-.mdc-drawer {
-  &--permanent {
-    + .mdc-drawer-app-content {
-      .mdc-top-app-bar {
-        &--fixed {
-          width: calc(100% - #{$mdc-drawer-width});
-        }
-      }
-    }
-  }
+.main-content {
+  overflow: auto;
+  height: 100%;
 }

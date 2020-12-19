@@ -1,0 +1,13 @@
+<div class="mdc-drawer__header">
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#if @title}}
+      <MdcDrawerTitle>{{@title}}</MdcDrawerTitle>
+    {{/if}}
+
+    {{#if @subtitle}}
+      <MdcDrawerSubtitle>{{@subtitle}}</MdcDrawerSubtitle>
+    {{/if}}
+  {{/if}}
+</div>

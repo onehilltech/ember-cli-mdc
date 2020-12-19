@@ -1,0 +1,13 @@
+<aside class="mdc-drawer {{this.styleClassName}}"
+  {{did-insert this.didInsert}}
+  {{did-update this.recreate @style}}
+  {{did-update this.toggleOpen @open}}>
+  {{yield (hash
+              isPermanent=isPermanent
+              isDismissible=isDismissible
+              isModal=isModal)}}
+</aside>
+
+{{#if this.isModal}}
+  <div class="mdc-drawer-scrim"></div>
+{{/if}}

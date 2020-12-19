@@ -1,12 +1,15 @@
 html, body {
+  display: flex;
   height: 100%;
 }
 
 body {
   margin: 0;
 
-  > .ember-view {
-    height: 100%;
-    display: flex;
-  }
+  display: flex;
+  flex-direction: row;
+}
+
+.mdc-drawer-app-content {
+  padding: 16px;
 }

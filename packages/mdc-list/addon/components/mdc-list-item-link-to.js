@@ -9,11 +9,13 @@ export default LinkComponent.extend ({
     'disabled:mdc-list-item--disabled'
   ],
 
-  attributeBindings: ['role', 'title'],
+  attributeBindings: ['role', 'title', 'tabindex'],
 
   selected: false,
 
   activated: false,
+
+  tabindex: null,
 
   didInsertElement () {
     this._super (...arguments);
@@ -21,10 +23,6 @@ export default LinkComponent.extend ({
     if (this.get ('selected')) {
       this.element.setAttribute ('aria-selected', true);
       this.element.setAttribute ('tabindex', 0);
-    }
-    else {
-      this.element.removeAttribute ('aria-selected');
-      this.element.removeAttribute ('tabindex');
     }
   },
 
