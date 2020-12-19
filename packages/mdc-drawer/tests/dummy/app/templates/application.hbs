@@ -18,6 +18,7 @@
       <MdcListItemLinkTo @route="trash"><MdcListItemGraphicIcon @icon="delete" />Trash</MdcListItemLinkTo>
       <MdcListItemLinkTo @route="spam"><MdcListItemGraphicIcon @icon="report" />Spam</MdcListItemLinkTo>
     </MdcList>
+
   </MdcDrawerContent>
 </MdcDrawer>
 <MdcDrawerAppContent>
@@ -26,7 +27,7 @@
   </MainContent>
 </MdcDrawerAppContent>
 
-<!-- p>
+<p>
   Drawer Style:
   <select {{on "change" this.changeStyle}}>
     <option value="">None</option>
@@ -35,4 +36,5 @@
   </select>
 </p>
 
-<p><button {{on "click" this.toggleOpen}}>{{if this.open "Close Drawer" "Open Drawer"}}</button></p -->
+<p><button {{on "click" this.toggleOpen}}>{{if this.open "Close Drawer" "Open Drawer"}}</button></p>
+
