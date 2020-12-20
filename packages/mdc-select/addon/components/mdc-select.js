@@ -6,7 +6,7 @@ import listener from 'ember-cli-mdc-base/listener';
 import { tracked } from '@glimmer/tracking';
 
 import { A } from '@ember/array';
-import { isEmpty, isPresent } from '@ember/utils';
+import { isEmpty, isPresent, isNone } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
 
@@ -15,6 +15,8 @@ const { MDCSelect } = mdc.select;
 function noOp () { }
 
 export default class MdcSelectComponent extends Component {
+  _input;
+
   doPrepareElement (element) {
     const { value: option } = this.args;
 
@@ -33,15 +35,17 @@ export default class MdcSelectComponent extends Component {
       }
 
       let textElement = element.querySelector ('.mdc-select__selected-text');
-
-      if (isPresent (textElement)) {
-        textElement.value = text;
-      }
+      textElement.value = text;
     }
   }
 
   doCreateComponent (element) {
     return new MDCSelect (element);
+  }
+
+  doInitComponent (component) {
+    const { required = false } = this.args;
+    component.required = required;
   }
 
   get isOutlined () {
@@ -56,11 +60,14 @@ export default class MdcSelectComponent extends Component {
 
   @listener ('MDCSelect:change')
   change (ev) {
-    // Pass control to the subclass.
-    this.didChange (ev);
-
     // Notify the client the value has changed.
     const { detail: { value } } = ev;
+
+    // Validate the control.
+    this._validate ();
+
+    // Pass control to the subclass.
+    this.didChange (ev);
 
     if (isEmpty (value)) {
       // There is no value selected. This means we are clearing the selection.
@@ -84,6 +91,24 @@ export default class MdcSelectComponent extends Component {
     else {
       this.component.value = null;
     }
+
+    // Validate the control.
+    this._validate ();
+  }
+
+  _validate () {
+    if (this.component.valid) {
+      this.validationMessage = null;
+    }
+    else {
+      if (this.component.required) {
+        this.validationMessage = this.requiredMessage;
+      }
+    }
+  }
+
+  get required () {
+    return this.args.required;
   }
 
   get options () {
@@ -98,6 +123,9 @@ export default class MdcSelectComponent extends Component {
     return this.args.trailingIconClick || noOp;
   }
 
+  @tracked
+  validationMessage;
+
   get helperLine () {
     return isPresent (this.helperText);
   }
@@ -110,6 +138,10 @@ export default class MdcSelectComponent extends Component {
   get persistentHelperText () {
     let { persistentHelperText, errorMessage } = this.args;
     return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
+  }
+
+  get requiredMessage () {
+    return this.args.requiredMessage || 'This field is required.';
   }
 
   /// Adapter attributes
