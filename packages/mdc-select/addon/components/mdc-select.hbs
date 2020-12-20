@@ -18,7 +18,10 @@
                role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
     {{/if}}
 
-    <input type="text" class="mdc-select__selected-text" ...attributes disabled readonly required={{@required}}>
+    <input type="text" class="mdc-select__selected-text"
+           ...attributes disabled readonly required={{@required}}
+           aria-controls={{this.helperId}}
+           aria-describedby={{this.helperId}}>
     <i class="mdc-select__dropdown-icon"></i>
     {{#if this.isOutlined}}
       <span class="mdc-notched-outline">
@@ -53,3 +56,11 @@
     </ul>
   </div>
 </div>
+
+{{#if this.helperLine}}
+  <div class="mdc-select-helper-text
+    {{if this.persistentHelperText "mdc-select-helper-text--persistent"}}
+    {{if @errorMessage "mdc-select-helper-text--validation-msg"}}"
+       id={{this.helperId}}
+       aria-hidden="true">{{this.helperText}}</div>
+{{/if}}
