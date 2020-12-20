@@ -10,5 +10,7 @@ export default class IndexRouter extends Route {
       {value: 'vegetables', text: 'Vegetables', disabled: true},
       {value: 'fruit', text: 'Fruit'}
     ]);
+
+    controller.value = controller.foodGroups.objectAt (0);
   }
 }

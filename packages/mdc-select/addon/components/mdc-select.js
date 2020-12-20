@@ -4,7 +4,7 @@ import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { A } from '@ember/array';
-import { isEmpty } from '@ember/utils';
+import { isEmpty, isPresent } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
 
@@ -13,6 +13,28 @@ const { MDCSelect } = mdc.select;
 function noOp () { }
 
 export default class MdcSelectComponent extends Component {
+  doPrepareElement (element) {
+    const { value: option } = this.args;
+
+    if (isPresent (option)) {
+      // We need to pre-select the option.
+      let value = get (option, this.valueKey);
+      let text = get (option, this.textKey);
+
+      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+
+      if (isPresent (listItem)) {
+        listItem.classList.add ('mdc-list-item--selected');
+      }
+
+      let textElement = element.querySelector ('.mdc-select__selected-text');
+
+      if (isPresent (textElement)) {
+        textElement.value = text;
+      }
+    }
+  }
+
   doCreateComponent (element) {
     return new MDCSelect (element);
   }
