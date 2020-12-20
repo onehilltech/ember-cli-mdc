@@ -29,7 +29,7 @@ export default Component.extend({
   classNameBindings: ['mdcDataTableLabelClassName'],
 
   mdcDataTableLabelClassName: computed ('label', function () {
-    let label = this.get ('label');
+    let label = this.label;
     return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
   }),
 

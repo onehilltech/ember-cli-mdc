@@ -2,67 +2,65 @@
 
 <h3>Basic usage</h3>
 
-{{#mdc-data-table label="Dessert calories"}}
-  {{#mdc-data-table-header-row}}
-    {{#mdc-data-table-header-cell}}Dessert{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell numeric=true}}Carbs (g){{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell numeric=true}}Protein (g){{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Comments{{/mdc-data-table-header-cell}}
-  {{/mdc-data-table-header-row}}
+<MdcDataTable @label="Dessert calories">
+  <MdcDataTableHeaderRow>
+    <MdcDataTableHeaderCell>Dessert</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}}>Carbs (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}}>Protein (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Comments</MdcDataTableHeaderCell>
+  </MdcDataTableHeaderRow>
 
-  {{#mdc-data-table-content}}
-    {{#mdc-data-table-row}}
-      {{#mdc-data-table-cell}}Frozen yogurt{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}24{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}4.0{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}Super tasty{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
+  <MdcDataTableContent>
+    <MdcDataTableRow>
+      <MdcDataTableCell>Frozen yogurt</MdcDataTableCell>
+      <MdcDataTableCell>24</MdcDataTableCell>
+      <MdcDataTableCell>4.0</MdcDataTableCell>
+      <MdcDataTableCell>Super tasty</MdcDataTableCell>
+    </MdcDataTableRow>
 
-    {{#mdc-data-table-row}}
-      {{#mdc-data-table-cell}}Ice cream sandwich{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}37{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}4.33333333333{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}I like ice cream more{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
+    <MdcDataTableRow>
+      <MdcDataTableCell>Ice cream sandwich</MdcDataTableCell>
+      <MdcDataTableCell>37</MdcDataTableCell>
+      <MdcDataTableCell>4.33333333333</MdcDataTableCell>
+      <MdcDataTableCell>I like ice cream more</MdcDataTableCell>
+    </MdcDataTableRow>
 
-    {{#mdc-data-table-row}}
-      {{#mdc-data-table-cell}}Eclair{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}24{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}6.0{{/mdc-data-table-cell}}
-      {{#mdc-data-table-cell}}New filing flavor{{/mdc-data-table-cell}}
-    {{/mdc-data-table-row}}
-  {{/mdc-data-table-content}}
-{{/mdc-data-table}}
+    <MdcDataTableRow>
+      <MdcDataTableCell>Eclair</MdcDataTableCell>
+      <MdcDataTableCell>24</MdcDataTableCell>
+      <MdcDataTableCell>6.0</MdcDataTableCell>
+      <MdcDataTableCell>New filing flavor</MdcDataTableCell>
+    </MdcDataTableRow>
+  </MdcDataTableContent>
+</MdcDataTable>
 
 <h3>Data table with row selection</h3>
 
-{{#mdc-data-table label="Network"
-                  selected=ids
-                  rowSelectionChange=(action "rowSelectionChange") as |dataTable|}}
-  {{#mdc-data-table-header-row}}
-    {{mdc-data-table-header-cell checkbox=true}}
-    {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
-  {{/mdc-data-table-header-row}}
+<MdcDataTable @label="Network" @selected={{ids}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
+  <MdcDataTableHeaderRow>
+    <MdcDataTableHeaderCell @checkbox={{true}} />
+    <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Stage</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}}>Time</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Roles</MdcDataTableHeaderCell>
+  </MdcDataTableHeaderRow>
 
-  {{#mdc-data-table-content}}
+  <MdcDataTableContent>
     {{#each signals as |signal|}}
-      {{#mdc-data-table-row rowId=signal.id}}
-        {{mdc-data-table-cell checkbox=true}}
-        {{#mdc-data-table-cell}}{{signal.status}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.name}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.severity}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.stage}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell numeric=true}}{{signal.time}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.roles}}{{/mdc-data-table-cell}}
-      {{/mdc-data-table-row}}
+      <MdcDataTableRow @rowId={{signal.id}}>
+        <MdcDataTableCell @checkbox={{true}} />
+        <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
+      </MdcDataTableRow>
     {{/each}}
-  {{/mdc-data-table-content}}
-{{/mdc-data-table}}
+  </MdcDataTableContent>
+</MdcDataTable>
 
 <h4>Selected Rows:</h4>
 
@@ -74,34 +72,31 @@
 
 <h3>Data table with row selection (using models)</h3>
 
-{{#mdc-data-table label="Network"
-                  data=signals
-                  selected=selected
-                  rowSelectionChange=(action "rowSelectionChange") as |dataTable|}}
-  {{#mdc-data-table-header-row}}
-    {{mdc-data-table-header-cell checkbox=true}}
-    {{#mdc-data-table-header-cell}}Status{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Signal name{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Severity{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Stage{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell numeric=true}}Time{{/mdc-data-table-header-cell}}
-    {{#mdc-data-table-header-cell}}Roles{{/mdc-data-table-header-cell}}
-  {{/mdc-data-table-header-row}}
+<MdcDataTable @label="Network" @data={{signals}} @selected={{selected}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
+  <MdcDataTableHeaderRow>
+    <MdcDataTableHeaderCell @checkbox={{true}} />
+    <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Stage</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}}>Time</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell>Roles</MdcDataTableHeaderCell>
+  </MdcDataTableHeaderRow>
 
-  {{#mdc-data-table-content}}
+  <MdcDataTableContent>
     {{#each dataTable.data as |signal|}}
-      {{#mdc-data-table-row data=signal}}
-        {{mdc-data-table-cell checkbox=true}}
-        {{#mdc-data-table-cell}}{{signal.status}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.name}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.severity}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.stage}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell numeric=true}}{{signal.time}}{{/mdc-data-table-cell}}
-        {{#mdc-data-table-cell}}{{signal.roles}}{{/mdc-data-table-cell}}
-      {{/mdc-data-table-row}}
+      <MdcDataTableRow @data={{signal}}>
+        <MdcDataTableCell @checkbox={{true}} />
+        <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
+        <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
+      </MdcDataTableRow>
     {{/each}}
-  {{/mdc-data-table-content}}
-{{/mdc-data-table}}
+  </MdcDataTableContent>
+</MdcDataTable>
 
 <h4>Selected Rows:</h4>
 
