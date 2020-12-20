@@ -22,4 +22,9 @@ export default class IndexController extends Controller {
   select () {
     this.value = this.foodGroups.objectAt (2);
   }
+
+  @action
+  clear () {
+    this.value = null;
+  }
 }

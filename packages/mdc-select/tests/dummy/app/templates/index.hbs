@@ -1,5 +1,6 @@
-<h2 id="title">Select Menus</h2>
+<h1 id="title">Select Menus</h1>
 
+<h3>Filled</h3>
 <p>
   <MdcSelect @options={{this.foodGroups}}
              @label="Pick a Food Group"
@@ -12,12 +13,28 @@
 
 <p>
   <button {{on "click" this.select}}>Select Fruits</button>
+  <button {{on "click" this.clear}}>Clear</button>
+
 </p>
 
 
 {{#if this.selected}}
   <p>[{{this.selected.value}}]: {{this.selected.text}}</p>
 {{/if}}
+
+<h3>Outlined</h3>
+
+<p>
+  <MdcSelect @options={{this.foodGroups}}
+             @label="Pick a Food Group"
+             @firstOptionIsEmpty={{true}}
+             @style="outlined"
+             @disabled={{true}}
+             @width="400px" />
+</p>
+
+
+<h2>Select Menu w/ Helper Text</h2>
 
 <p>
   <MdcSelect @options={{this.foodGroups}}
@@ -31,11 +48,3 @@
              @width="400px" />
 </p>
 
-<p>
-  <MdcSelect @options={{this.foodGroups}}
-             @label="Pick a Food Group"
-             @firstOptionIsEmpty={{true}}
-             @style="outlined"
-             @disabled={{true}}
-             @width="400px" />
-</p>
