@@ -44,8 +44,8 @@ export default class MdcSelectComponent extends Component {
   }
 
   @action
-  select (element, [value]) {
-
+  select (element, [option]) {
+    this.component.value = get (option, this.valueKey);
   }
 
   get options () {

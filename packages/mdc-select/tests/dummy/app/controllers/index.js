@@ -10,8 +10,16 @@ export default class IndexController extends Controller {
   @tracked
   selected;
 
+  @tracked
+  value;
+
   @action
   change (selected) {
     this.selected = selected;
+  }
+
+  @action
+  select () {
+    this.value = this.foodGroups.objectAt (2);
   }
 }

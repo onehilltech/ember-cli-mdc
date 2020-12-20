@@ -5,7 +5,12 @@
              @label="Pick a Food Group"
              @change={{this.change}}
              @firstOptionIsEmpty={{true}}
+             @value={{this.value}}
              @width="400px" />
+</p>
+
+<p>
+  <button {{on "click" this.select}}>Select Fruits</button>
 </p>
 
 

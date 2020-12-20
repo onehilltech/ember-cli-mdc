@@ -6,30 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-dropdown-icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-native-control.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-option-group.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-option.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-dropdown-icon.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-native-control.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-option-group.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-option.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-dropdown-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-dropdown-icon-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-control-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-control-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-option-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-option-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-option-group-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-option-group-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +290,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="15275000" />
+      <workItem from="1608357248434" duration="15555000" />
     </task>
     <servers />
   </component>
