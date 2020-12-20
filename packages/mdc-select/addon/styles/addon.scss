@@ -1,26 +1,11 @@
 @import "app-theme";
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
 @import "@material/select/mdc-select";
 
 .mdc-select {
-  &.mdc-select--outlined {
-    &.mdc-select--dense {
-      width: 100%;
-      height: 48px;
-
-      .mdc-select__native-control {
-        width: 100%;
-        height: 48px;
-      }
-
-      .mdc-floating-label {
-        bottom: 14px;
-      }
-    }
+  &__anchor, &__menu {
+    width: var(--mdc-select-width);
   }
-}
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
 }

@@ -6,27 +6,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-select/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-select/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-dropdown-icon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-native-control.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-option-group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select-option.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-dropdown-icon.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-native-control.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-option-group.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select-option.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-dropdown-icon-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-dropdown-icon-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-control-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-control-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-option-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-native-option-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-option-group-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-option-group-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/tests/integration/components/mdc-select-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +57,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-select/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-drawer/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-tabs/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-textfield/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
@@ -61,15 +71,8 @@
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-drawer/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tabs/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-textfield/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-menu/addon/components" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-drawer]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-select]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -157,6 +160,9 @@
     <configuration name="[ember-cli-mdc-rtl]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-rtl">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-select]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-select">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-shape]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-shape">
       <method v="2" />
     </configuration>
@@ -230,6 +236,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-bar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-indicator]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-scroller]: dummy application" />
@@ -303,7 +310,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="2964000" />
+      <workItem from="1608357248434" duration="15275000" />
     </task>
     <servers />
   </component>
@@ -353,10 +360,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="153" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608184165226">
+    <state x="304" y="153" width="1071" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608433903787">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state x="304" y="153" width="1071" height="772" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608184165226" />
+    <state x="304" y="153" width="1071" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608433903787" />
     <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
     <state x="461" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607973086285">
       <screen x="0" y="23" width="1680" height="948" />
@@ -367,25 +374,25 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.948@0.23.1680.948" timestamp="1607968252298" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608412184856">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608435622354">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608412184856" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608435622354" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608412184855">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608435622353">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608412184855" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608435622353" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608412184854">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608435622352">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608412184854" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608435622352" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608412184855">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608435622353">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608412184855" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608435622353" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />

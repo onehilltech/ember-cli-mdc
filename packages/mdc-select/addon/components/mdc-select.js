@@ -1,120 +1,70 @@
 /* global mdc */
 
-import Component from '@ember/component';
-
-import layout from '../templates/components/mdc-select';
-
-import { isEmpty, isPresent } from '@ember/utils';
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
-
-import { assert } from '@ember/debug';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
 import { A } from '@ember/array';
+import { isEmpty } from '@ember/utils';
+import { guidFor } from '@ember/object/internals';
+import { action, get } from '@ember/object';
 
-const STYLES = ['box', 'outlined'];
+const { MDCSelect } = mdc.select;
 
-export default Component.extend({
-  layout,
+function noOp () { }
 
-  classNames: ['mdc-select'],
+export default class MdcSelectComponent extends Component {
+  doCreateComponent (element) {
+    return new MDCSelect (element);
+  }
 
-  classNameBindings: ['disabled:mdc-select--disabled', 'styleClassName', 'isOutlined:mdc-select--outlined'],
+  get isOutlined () {
+    return this.args.style === 'outlined';
+  }
 
-  style: null,
+  @listener ('MDCSelect:change')
+  change (ev) {
+    // Pass control to the subclass.
+    this.didChange (ev);
 
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
+    // Notify the client the value has changed.
+    const { detail: { value } } = ev;
 
-    if (isEmpty (style)) {
-      return null;
-    }
-
-    assert (`The style attribute must be one of the following values: ${STYLES}`, STYLES.includes (style));
-    return `mdc-select--${style}`;
-  }),
-
-  firstOptionIsEmpty: false,
-
-  isOutlined: equal ('style', 'outlined'),
-
-  _select: null,
-
-  _changeEventListener: null,
-
-  _lastState: null,
-
-  init () {
-    this._super (...arguments);
-
-    this._changeEventListener = this.didChange.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._select = new mdc.select.MDCSelect (this.element);
-    this._select.listen ('change', this._changeEventListener);
-
-    let { value, selectedIndex, options } = this.getProperties (['value', 'selectedIndex', 'options']);
-
-    if (isPresent (value)) {
-      this._select.value = value;
-    }
-    else if (isPresent (selectedIndex)) {
-      this._select.selectedIndex = selectedIndex;
+    if (isEmpty (value)) {
+      // There is no value selected. This means we are clearing the selection.
+      (this.args.change || noOp) (null);
     }
     else {
-      // Check if any of the options is initially selected. This method of selecting
-      // has lower precedence than the other methods for selecting the initial value.
-
-      function findSelection (result, option) {
-        return !!result ? result : (option.selected ? option.value : (option.group ? option.options.reduce (findSelection, result) : null));
-      }
-
-      const selection = options.reduce (findSelection, undefined);
-
-      if (isPresent (selection)) {
-        this._select.value = selection;
-        this.set ('value', selection);
-      }
+      let selected = this.options.find (option => get (option, this.valueKey) === value);
+      (this.args.change || noOp) (selected);
     }
+  }
 
-    // Save the value and selected index as our last state.
-    this._lastState = { value, selectedIndex };
-  },
+  didChange (ev) {
 
-  didUpdateAttrs () {
-    this._super (...arguments);
+  }
 
-    let { value, selectedIndex } = this.getProperties (['value', 'selectedIndex']);
+  @action
+  select (element, [value]) {
 
-    if (value !== this._lastState.value) {
-      this._select.value = value;
-      this._lastState.value = value;
-    }
+  }
 
-    if (selectedIndex !== this._lastState.selectedIndex) {
-      this._select.selectedIndex = selectedIndex;
-      this._lastState.selectedIndex = selectedIndex;
-    }
-  },
+  get options () {
+    return A (this.args.options);
+  }
 
-  willDestroyElement () {
-    this._super (...arguments);
+  get labelId () {
+    return guidFor (this);
+  }
 
-    this._select.unlisten ('change', this._changeEventListener);
-    this._select.destroy ();
-  },
+  get valueKey () {
+    return this.args.valueKey || 'value';
+  }
 
-  didChange ({ target: { value, selectedIndex }}) {
-    this.setProperties ({value, selectedIndex});
-  },
+  get textKey () {
+    return this.args.textKey || 'text';
+  }
 
-  options: computed ('params.[]', function () {
-    let params = this.get ('params');
-    return isPresent (params) ? params[0] : A ();
-  })
-}).reopenClass ({
-  positionalParams: 'params'
-});
+  get disabledKey () {
+    return this.args.disabledKey || 'disabled';
+  }
+}
