@@ -11,6 +11,12 @@ export default class IndexRouter extends Route {
       {value: 'fruit', text: 'Fruit'}
     ]);
 
+    controller.actors = A ([
+      {id: 1, name: 'Kevin Hart'},
+      {id: 2, name: 'Dwayne Johnson'},
+      {id: 3, name: 'Tom Hanks'}
+    ])
+
     controller.value = controller.foodGroups.objectAt (0);
   }
 }

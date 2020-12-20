@@ -13,6 +13,12 @@ export default class IndexController extends Controller {
   @tracked
   value;
 
+  @tracked
+  actors;
+
+  @tracked
+  actor;
+
   @action
   change (selected) {
     this.selected = selected;
@@ -26,5 +32,10 @@ export default class IndexController extends Controller {
   @action
   clear () {
     this.value = null;
+  }
+
+  @action
+  selectActor (actor) {
+    this.actor = actor;
   }
 }

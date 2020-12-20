@@ -34,7 +34,7 @@
 </p>
 
 
-<h2>Select Menu w/ Helper Text</h2>
+<h2>Select w/ Helper Text</h2>
 
 <p>
   <MdcSelect @options={{this.foodGroups}}
@@ -47,4 +47,19 @@
              @persistentHelperText={{true}}
              @width="400px" />
 </p>
+
+<h2>Select w/ Adapter</h2>
+
+<p>
+  <MdcSelect @options={{this.actors}}
+             @label="Pick an actor"
+             @valueKey="id"
+             @textKey="name"
+             @firstOptionIsEmpty={{true}}
+             @style="outlined"
+             @change={{this.selectActor}}
+             @width="400px" />
+</p>
+
+<p>Selected actor: {{this.actor.name}}</p>
 

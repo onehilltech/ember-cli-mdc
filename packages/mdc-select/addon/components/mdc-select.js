@@ -74,7 +74,7 @@ export default class MdcSelectComponent extends Component {
       (this.args.change || noOp) (null);
     }
     else {
-      let selected = this.options.find (option => get (option, this.valueKey) === value);
+      let selected = this.options.find (option => `${get (option, this.valueKey)}` === value);
       (this.args.change || noOp) (selected);
     }
   }
