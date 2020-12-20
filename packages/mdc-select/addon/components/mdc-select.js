@@ -78,6 +78,16 @@ export default class MdcSelectComponent extends Component {
     return guidFor (this);
   }
 
+  get leadingIconClick () {
+    return this.args.leadingIconClick || noOp;
+  }
+
+  get trailingIconClick () {
+    return this.args.trailingIconClick || noOp;
+  }
+
+  /// Adapter attributes
+
   get valueKey () {
     return this.args.valueKey || 'value';
   }

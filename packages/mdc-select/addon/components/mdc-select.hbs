@@ -2,13 +2,22 @@
   {{unless @label "mdc-select--no-label"}}
   {{if @required "mdc-select--required"}}
   {{if @disabled "mdc-select--disabled"}}
-  {{if this.isOutlined "mdc-select--outlined"}}"
+  {{if this.isOutlined "mdc-select--outlined"}}
+  {{if @leadingIcon "mdc-select--with-leading-icon"}}"
   {{did-insert this.didInsert}}
   {{did-update this.select @value}}>
   <div class="mdc-select__anchor" aria-required={{@required}} aria-labelledby={{this.labelId}} {{custom-property "--mdc-select-width" @width}}>
     {{#unless this.isOutlined}}
       <span class="mdc-select__ripple"></span>
     {{/unless}}
+
+    {{#if @leadingIcon}}
+      <MdcIcon @icon={{@leadingIcon}}
+               class="mdc-select__icon mdc-text-field__icon--leading"
+               tabindex={{if @leadingIconClick "0"}}
+               role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
+    {{/if}}
+
     <input type="text" class="mdc-select__selected-text" ...attributes disabled readonly required={{@required}}>
     <i class="mdc-select__dropdown-icon"></i>
     {{#if this.isOutlined}}
