@@ -1,35 +1,35 @@
 <h2 id="title">Linear Stepper</h2>
 
-{{#mdc-button style="unelevated" click=(action (mut error) "This is an error")}}Set Error{{/mdc-button}}
+<MdcButton @style="unelevated" @click={{action (mut error) "This is an error"}}>Set Error</MdcButton>
 
-{{#mdc-stepper linear=true complete=(action "complete")}}
-  {{#mdc-step as |step|}}
-    {{#mdc-step-label}}
-      {{mdc-step-label-indicator}}
+<MdcStepper @linear={{true}} @complete={{action "complete"}}>
+  <MdcStep as |step|>
+    <MdcStepLabel>
+      <MdcStepLabelIndicator />
 
-      {{#mdc-step-title}}
-        {{#mdc-step-title-text}}Title of Step 1{{/mdc-step-title-text}}
-        {{#mdc-step-title-message}}{{if step.isCompleted "Step 1 is complete" "Step 1 is not complete"}}{{/mdc-step-title-message}}
-      {{/mdc-step-title}}
-    {{/mdc-step-label}}
+      <MdcStepTitle>
+        <MdcStepTitleText>Title of Step 1</MdcStepTitleText>
+        <MdcStepTitleMessage>{{if step.isCompleted "Step 1 is complete" "Step 1 is not complete"}}</MdcStepTitleMessage>
+      </MdcStepTitle>
+    </MdcStepLabel>
 
-    {{mdc-step-content}}
+    <MdcStepContent />
 
-    {{#mdc-step-actions}}
-      {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
-      {{#mdc-step-button action="skip"}}Skip{{/mdc-step-button}}
-      {{#mdc-step-button action="cancel"}}Cancel{{/mdc-step-button}}
-    {{/mdc-step-actions}}
-  {{/mdc-step}}
+    <MdcStepActions>
+      <MdcStepButton @action="next" @style="unelevated">Continue</MdcStepButton>
+      <MdcStepButton @action="skip">Skip</MdcStepButton>
+      <MdcStepButton @action="cancel">Cancel</MdcStepButton>
+    </MdcStepActions>
+  </MdcStep>
 
-  {{#mdc-step editable=true error=error as |step|}}
-    {{#mdc-step-label}}
-      {{mdc-step-label-indicator}}
+  <MdcStep @editable={{true}} @error={{error}} as |step|>
+    <MdcStepLabel>
+      <MdcStepLabelIndicator />
 
-      {{#mdc-step-title}}
-        {{#mdc-step-title-text}}Step 2{{/mdc-step-title-text}}
+      <MdcStepTitle>
+        <MdcStepTitleText>Step 2</MdcStepTitleText>
 
-        {{#mdc-step-title-message}}
+        <MdcStepTitleMessage>
           {{#if step.error}}
             {{error}}
           {{else if step.isCompleted}}
@@ -39,53 +39,53 @@
           {{else}}
             Step 2 is not complete
           {{/if}}
-        {{/mdc-step-title-message}}
-      {{/mdc-step-title}}
+        </MdcStepTitleMessage>
+      </MdcStepTitle>
 
-    {{/mdc-step-label}}
+    </MdcStepLabel>
 
-    {{mdc-step-content}}
+    <MdcStepContent />
 
-    {{#mdc-step-actions}}
-      {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
-      {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
-    {{/mdc-step-actions}}
-  {{/mdc-step}}
+    <MdcStepActions>
+      <MdcStepButton @action="next" @style="unelevated">Continue</MdcStepButton>
+      <MdcStepButton @action="back">Back</MdcStepButton>
+    </MdcStepActions>
+  </MdcStep>
 
-  {{#mdc-step optional=true editable=true as |step|}}
-    {{#mdc-step-label}}
-      {{mdc-step-label-indicator}}
+  <MdcStep @optional={{true}} @editable={{true}} as |step|>
+    <MdcStepLabel>
+      <MdcStepLabelIndicator />
 
-      {{#mdc-step-title}}
-        {{#mdc-step-title-text}}Step 3{{/mdc-step-title-text}}
-        {{#mdc-step-title-message}}Optional{{/mdc-step-title-message}}
-      {{/mdc-step-title}}
-    {{/mdc-step-label}}
+      <MdcStepTitle>
+        <MdcStepTitleText>Step 3</MdcStepTitleText>
+        <MdcStepTitleMessage>Optional</MdcStepTitleMessage>
+      </MdcStepTitle>
+    </MdcStepLabel>
 
-    {{mdc-step-content}}
+    <MdcStepContent />
 
-    {{#mdc-step-actions}}
-      {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
-      {{#mdc-step-button action="skip"}}Skip{{/mdc-step-button}}
-      {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
-    {{/mdc-step-actions}}
-  {{/mdc-step}}
+    <MdcStepActions>
+      <MdcStepButton @action="next" @style="unelevated">Continue</MdcStepButton>
+      <MdcStepButton @action="skip">Skip</MdcStepButton>
+      <MdcStepButton @action="back">Back</MdcStepButton>
+    </MdcStepActions>
+  </MdcStep>
 
-  {{#mdc-step}}
-    {{#mdc-step-label}}
-      {{mdc-step-label-indicator}}
+  <MdcStep>
+    <MdcStepLabel>
+      <MdcStepLabelIndicator />
 
-      {{#mdc-step-title}}
-        {{#mdc-step-title-text}}Step 4{{/mdc-step-title-text}}
-        {{#mdc-step-title-message}}Message for Step 4{{/mdc-step-title-message}}
-      {{/mdc-step-title}}
-    {{/mdc-step-label}}
+      <MdcStepTitle>
+        <MdcStepTitleText>Step 4</MdcStepTitleText>
+        <MdcStepTitleMessage>Message for Step 4</MdcStepTitleMessage>
+      </MdcStepTitle>
+    </MdcStepLabel>
 
-    {{mdc-step-content}}
+    <MdcStepContent />
 
-    {{#mdc-step-actions}}
-      {{#mdc-step-button action="next" style="unelevated"}}Continue{{/mdc-step-button}}
-      {{#mdc-step-button action="back"}}Back{{/mdc-step-button}}
-    {{/mdc-step-actions}}
-  {{/mdc-step}}
-{{/mdc-stepper}}
+    <MdcStepActions>
+      <MdcStepButton @action="next" @style="unelevated">Continue</MdcStepButton>
+      <MdcStepButton @action="back">Back</MdcStepButton>
+    </MdcStepActions>
+  </MdcStep>
+</MdcStepper>

@@ -59,7 +59,7 @@ export default Component.extend({
   didUpdateAttrs () {
     this._super (...arguments);
 
-    let error = this.get ('error');
+    let error = this.error;
 
     if (isPresent (error)) {
       this.step.setError (error);

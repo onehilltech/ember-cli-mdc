@@ -1,4 +1,9 @@
-import { cssClasses, strings, datasetAttributes, states } from "./constants";
+import {
+  cssClasses,
+  strings,
+  datasetAttributes,
+  states
+} from "./constants";
 
 const { MDCFoundation } = mdc.base;
 

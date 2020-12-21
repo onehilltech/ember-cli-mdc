@@ -6,31 +6,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-stepper/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-stepper/.template-lintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-stepper/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/optional-features.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/resolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/helpers/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/dummy/config/targets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/helpers/destroy-app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/helpers/module-for-acceptance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/helpers/start-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/step/foundation.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/step/foundation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-actions-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-content-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-message-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-message-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-text-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-text-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-stepper-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-stepper-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/mixins/step-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/mixins/step-button-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/utils/step-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/utils/step-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +304,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="41717000" />
+      <workItem from="1608357248434" duration="42535000" />
     </task>
     <servers />
   </component>
