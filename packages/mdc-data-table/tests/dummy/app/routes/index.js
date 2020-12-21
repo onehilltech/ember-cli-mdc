@@ -12,9 +12,8 @@ export default Route.extend({
       { id: 'u3', status: 'Online', name: 'Arcus watch slowdown', severity: 'Negligible', state: 'Triaged', time: '0:33', roles: 'Angelina Cheng'},
     ];
 
-    controller.setProperties ({
-      signals: A (signals),
-      selected: A ([signals[0], signals[1]])
-    });
+    controller.signals = A (signals);
+    controller.headers = A (['Status', 'Signal name', 'Severity', 'Stage', {name: 'Time', numeric: true}, 'Roles']);
+    controller.selected = A ();
   }
 });

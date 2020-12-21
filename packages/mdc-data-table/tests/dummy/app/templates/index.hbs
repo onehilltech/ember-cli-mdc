@@ -13,22 +13,22 @@
   <MdcDataTableContent>
     <MdcDataTableRow>
       <MdcDataTableCell>Frozen yogurt</MdcDataTableCell>
-      <MdcDataTableCell>24</MdcDataTableCell>
-      <MdcDataTableCell>4.0</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>4.0</MdcDataTableCell>
       <MdcDataTableCell>Super tasty</MdcDataTableCell>
     </MdcDataTableRow>
 
     <MdcDataTableRow>
       <MdcDataTableCell>Ice cream sandwich</MdcDataTableCell>
-      <MdcDataTableCell>37</MdcDataTableCell>
-      <MdcDataTableCell>4.33333333333</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>37</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>4.33333333333</MdcDataTableCell>
       <MdcDataTableCell>I like ice cream more</MdcDataTableCell>
     </MdcDataTableRow>
 
     <MdcDataTableRow>
       <MdcDataTableCell>Eclair</MdcDataTableCell>
-      <MdcDataTableCell>24</MdcDataTableCell>
-      <MdcDataTableCell>6.0</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
+      <MdcDataTableCell @numeric={{true}}>6.0</MdcDataTableCell>
       <MdcDataTableCell>New filing flavor</MdcDataTableCell>
     </MdcDataTableRow>
   </MdcDataTableContent>
@@ -37,8 +37,7 @@
 <h3>Data table with row selection</h3>
 
 <MdcDataTable @label="Network" @selected={{ids}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
-  <MdcDataTableHeaderRow>
-    <MdcDataTableHeaderCell @checkbox={{true}} />
+  <MdcDataTableHeaderRow @selectable={{true}}>
     <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
     <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
     <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
@@ -49,8 +48,7 @@
 
   <MdcDataTableContent>
     {{#each signals as |signal|}}
-      <MdcDataTableRow @rowId={{signal.id}}>
-        <MdcDataTableCell @checkbox={{true}} />
+      <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
         <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
         <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
         <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
@@ -70,38 +68,18 @@
   {{/each}}
 </ul>
 
-<h3>Data table with row selection (using models)</h3>
+<h3>Data table from properties</h3>
 
-<MdcDataTable @label="Network" @data={{signals}} @selected={{selected}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
-  <MdcDataTableHeaderRow>
-    <MdcDataTableHeaderCell @checkbox={{true}} />
-    <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Stage</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Time</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Roles</MdcDataTableHeaderCell>
-  </MdcDataTableHeaderRow>
-
-  <MdcDataTableContent>
-    {{#each dataTable.data as |signal|}}
-      <MdcDataTableRow @data={{signal}}>
-        <MdcDataTableCell @checkbox={{true}} />
-        <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
-        <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
-      </MdcDataTableRow>
-    {{/each}}
-  </MdcDataTableContent>
-</MdcDataTable>
+<MdcDataTable @label="Network"
+              @selectable={{true}}
+              @headers={{this.headers}}
+              @data={{this.signals}}
+              @selected={{this.selected}} />
 
 <h4>Selected Rows:</h4>
 
 <ul>
   {{#each selected as |selection|}}
-    <li>{{selection.id}}</li>
+    <li>[{{selection.id}}]: {{selection.name}}</li>
   {{/each}}
 </ul>

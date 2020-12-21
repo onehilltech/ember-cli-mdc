@@ -35,11 +35,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-select/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-drawer/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tabs/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-textfield/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
@@ -49,7 +49,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-select]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -287,7 +287,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="25407000" />
+      <workItem from="1608357248434" duration="38234000" />
     </task>
     <servers />
   </component>
@@ -351,25 +351,25 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.948@0.23.1680.948" timestamp="1607968252298" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608435622354">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608521977131">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608435622354" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608521977131" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608435622353">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608521977130">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608435622353" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608521977130" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608435622352">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608521977130">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608435622352" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608521977130" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608435622353">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608521977131">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608435622353" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608521977131" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
@@ -383,10 +383,10 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="542" y="237" width="596" height="522" key="find.popup/0.23.1680.951@0.23.1680.951" timestamp="1606195245816" />
-    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup" timestamp="1608328443913">
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup" timestamp="1608515752760">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1608328443913" />
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1608515752760" />
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606186510794" />
   </component>
   <component name="XDebuggerManager">

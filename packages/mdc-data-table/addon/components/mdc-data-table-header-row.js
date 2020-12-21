@@ -1,8 +1,11 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-data-table-header-row';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  layout,
+function isString (value) {
+  return typeof value === 'string' || value instanceof String;
+}
 
-  tagName: 'thead',
-});
+export default class MdcDataTableHeaderRowComponent extends Component {
+  get headers () {
+    return this.args.headers.map (header => isString (header) ? ({name: header}) : header);
+  }
+}
