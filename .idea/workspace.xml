@@ -7,23 +7,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/step/foundation.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/-lib/step/foundation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-actions-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-actions-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-button-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-content-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-content-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-content-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-indicator-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-label-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-message-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-message-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-text-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-step-title-text-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-stepper-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/integration/components/mdc-stepper-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/mixins/step-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/mixins/step-button-test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/utils/step-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/tests/unit/utils/step-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-actions.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-actions.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-button.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-content.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-content.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label-indicator-content.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label-indicator-content.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label-indicator.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label-indicator.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title-message.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title-message.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title-text.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title-text.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-stepper.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-stepper.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-stepper/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-select/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-drawer/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tabs/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-textfield/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
@@ -304,7 +298,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="42535000" />
+      <workItem from="1608357248434" duration="43600000" />
     </task>
     <servers />
   </component>
