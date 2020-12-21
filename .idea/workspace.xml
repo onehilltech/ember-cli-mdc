@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-image-list/addon/styles/addon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-image-list/addon" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -44,11 +43,11 @@
       <recent name="$PROJECT_DIR$/packages/mdc-tabs/addon/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
@@ -289,7 +288,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="45694000" />
+      <workItem from="1608357248434" duration="46543000" />
     </task>
     <servers />
   </component>
@@ -385,10 +384,10 @@
       <screen x="0" y="23" width="1680" height="951" />
     </state>
     <state x="542" y="237" width="596" height="522" key="find.popup/0.23.1680.951@0.23.1680.951" timestamp="1606195245816" />
-    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup" timestamp="1608515752760">
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup" timestamp="1608584939300">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1608515752760" />
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1608584939300" />
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606186510794" />
   </component>
   <component name="XDebuggerManager">
