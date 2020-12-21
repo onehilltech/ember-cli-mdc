@@ -1,8 +1,5 @@
 import Component from '@glimmer/component';
-
-function isString (value) {
-  return typeof value === 'string' || value instanceof String;
-}
+import isString from '../utils/is-string';
 
 export default class MdcDataTableHeaderRowComponent extends Component {
   get headers () {

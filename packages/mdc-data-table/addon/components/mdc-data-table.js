@@ -9,17 +9,11 @@ import { get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { A } from '@ember/array';
 
+import { tracked } from "@glimmer/tracking";
+
+import isString from '../utils/is-string';
+
 function noOp () { }
-
-// This function is taken from lodash. Instead of importing the entire lodash library into the ember
-// application. We just need this one function.
-function isString (value) {
-  return typeof value === 'string' || value instanceof String;
-}
-
-function getRowId (item) {
-  return isString (item) ? item : get (item, 'id');
-}
 
 /**
  * The representation of a single row in the data table.
@@ -54,6 +48,9 @@ class DataTableRow {
  * The data table component.
  */
 export default class MdcDataTableComponent extends Component {
+  @tracked
+  page;
+
   get labelClassName () {
     const { label } = this.args;
     return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
