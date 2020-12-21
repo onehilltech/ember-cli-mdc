@@ -68,7 +68,7 @@
   {{/each}}
 </ul>
 
-<h3>Data table from properties</h3>
+<h3>Data Table from Properties</h3>
 
 <MdcDataTable @label="Network"
               @selectable={{true}}
@@ -83,3 +83,11 @@
     <li>[{{selection.id}}]: {{selection.name}}</li>
   {{/each}}
 </ul>
+
+<h3>Data Table w/ Select Fields</h3>
+
+<MdcDataTable @label="Network"
+              @selectable={{true}}
+              @headers={{array "Status" "Name"}}
+              @data={{this.signals}}
+              @fields={{array "status" "name"}} />
