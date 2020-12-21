@@ -7,17 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-actions.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-actions.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-button.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-content.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-content.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label-indicator-content.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label-indicator-content.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label-indicator.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label-indicator.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-label.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-label.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title-message.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title-message.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title-text.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title-text.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step-title.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step-title.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-step.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-step.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-stepper/addon/templates/components/mdc-stepper.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-stepper/addon/components/mdc-stepper.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +287,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="43600000" />
+      <workItem from="1608357248434" duration="45232000" />
     </task>
     <servers />
   </component>
