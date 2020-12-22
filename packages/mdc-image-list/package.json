@@ -1,9 +1,13 @@
 {
   "name": "ember-cli-mdc-image-list",
   "version": "2.0.0-octane.47",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-cli addon for @material/image-list",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "material",
+    "material design",
+    "material components",
+    "image list"
   ],
   "repository": "onehilltech/ember-cli-mdc",
   "license": "Apache-2.0",
