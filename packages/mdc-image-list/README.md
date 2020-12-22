@@ -1,38 +1,15 @@
 ember-cli-mdc-image-list
-==============================================================================
+==========================
 
-[Short description of the addon.]
-
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
+ember-cli addon for [`@material/image-list`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-image-list).
 
 Installation
-------------------------------------------------------------------------------
+------------
 
-```
-ember install ember-cli-mdc-image-list
-```
+    ember install ember-cli-mdc-image-list
+    
+Example Code
+---------------
 
-
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
+Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
+use the components in this add-on.

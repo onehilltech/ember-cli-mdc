@@ -6,12 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/addon/components/mdc-image-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/addon/components/mdc-image-list-item.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/styles/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +287,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="49214000" />
+      <workItem from="1608357248434" duration="49297000" />
     </task>
     <servers />
   </component>
@@ -356,25 +351,25 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.948@0.23.1680.948" timestamp="1607968252298" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608602361524">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608603035776">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608602361524" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608603035776" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608602361523">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608603035775">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608602361523" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608603035775" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608602361523">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608603035774">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608602361523" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608603035774" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608602361523">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608603035775">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608602361523" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608603035775" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
