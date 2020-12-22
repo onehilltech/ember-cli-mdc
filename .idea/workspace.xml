@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-touch-target/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/styles/_app-theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-touch-target/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/addon/modifiers/mdc-touch-target.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-touch-target/addon/modifiers/mdc-touch-target.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +291,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="56662000" />
+      <workItem from="1608357248434" duration="56916000" />
     </task>
     <servers />
   </component>

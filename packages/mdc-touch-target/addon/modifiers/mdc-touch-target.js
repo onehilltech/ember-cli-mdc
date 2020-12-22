@@ -21,8 +21,16 @@ export default class MdcTouchTargetModifier extends Modifier {
     const { named: { hint }} = this.args;
 
     // Add the mdc-X--touch class to the element.
-    let className = `${isPresent (hint) ? `mdc-${hint}` : `mdc${this.type}`}--touch`;
-    this.element.classList.add (className);
+    if (isPresent (hint)) {
+      this.element.classList.add (`mdc-${hint}`);
+    }
+    else {
+      let type = this.type;
+
+      if (isPresent (type)) {
+        this.element.classList.add (`mdc${type}--touch`);
+      }
+    }
   }
 
   get type () {
