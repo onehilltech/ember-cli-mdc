@@ -6,8 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-touch-target/addon/styles/addon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/styles/_app-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-touch-target/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-image-list]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-touch-target]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -177,6 +179,9 @@
     <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-touch-target]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-touch-target">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
       <method v="2" />
     </configuration>
@@ -210,19 +215,20 @@
       <item itemvalue="Node.js.[ember-cli-mdc-radio]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-bar]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-indicator]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab-scroller]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tab]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-tabs]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-text-field]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-top-app-bar]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-touch-target]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
     </list>
   </component>
@@ -288,7 +294,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="50501000" />
+      <workItem from="1608357248434" duration="56662000" />
     </task>
     <servers />
   </component>
@@ -338,10 +344,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="127" width="1071" height="844" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608602094985">
+    <state x="304" y="103" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608610087791">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state x="304" y="127" width="1071" height="844" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608602094985" />
+    <state x="304" y="103" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608610087791" />
     <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
     <state x="461" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607973086285">
       <screen x="0" y="23" width="1680" height="948" />
@@ -352,25 +358,29 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.948@0.23.1680.948" timestamp="1607968252298" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608603035776">
+    <state x="417" y="23" key="CommitChangelistDialog2" timestamp="1608609563909">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608603035776" />
+    <state x="417" y="23" key="CommitChangelistDialog2/0.23.1680.948@0.23.1680.948" timestamp="1608609563909" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608610260932">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608610260932" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608603035775">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608610260930">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608603035775" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608610260930" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608603035774">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608610260930">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608603035774" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608610260930" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608603035775">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608610260931">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608603035775" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608610260931" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
