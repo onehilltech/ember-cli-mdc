@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +287,7 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="49297000" />
+      <workItem from="1608357248434" duration="49490000" />
     </task>
     <servers />
   </component>
