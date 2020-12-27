@@ -6,7 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/addon/modifiers/mdc-touch-target.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-touch-target/addon/modifiers/mdc-touch-target.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/-mdc-progress-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/styles/addon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/addon/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/addon/mdc-progress-indicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +34,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-image-list/addon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
+      <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
+      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/public/images" />
       <recent name="$PROJECT_DIR$/packages/mdc-stepper/addon/components" />
@@ -41,15 +53,8 @@
       <recent name="$PROJECT_DIR$/packages/mdc-select/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-drawer/addon/components" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-tab/addon/components" />
-    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-touch-target]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-circular-progress]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -69,6 +74,9 @@
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-chips]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-chips">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-circular-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-circular-progress">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
@@ -190,6 +198,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-card]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-checkbox]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-circular-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
@@ -291,7 +300,8 @@
       <workItem from="1607496038541" duration="47164000" />
       <workItem from="1607805002177" duration="2144000" />
       <workItem from="1607885857995" duration="30207000" />
-      <workItem from="1608357248434" duration="56916000" />
+      <workItem from="1608357248434" duration="75232000" />
+      <workItem from="1609000645390" duration="2523000" />
     </task>
     <servers />
   </component>
@@ -341,10 +351,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="103" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608610087791">
+    <state x="304" y="79" width="1071" height="892" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608643659045">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state x="304" y="103" width="1071" height="868" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608610087791" />
+    <state x="304" y="79" width="1071" height="892" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608643659045" />
     <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
     <state x="461" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607973086285">
       <screen x="0" y="23" width="1680" height="948" />
@@ -359,25 +369,25 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="417" y="23" key="CommitChangelistDialog2/0.23.1680.948@0.23.1680.948" timestamp="1608609563909" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1608610260932">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1609001566190">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1608610260932" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1609001566190" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1608610260930">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1609001566189">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1608610260930" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1609001566189" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1608610260930">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1609001566189">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1608610260930" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1609001566189" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1608610260931">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1609001566190">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1608610260931" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1609001566190" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
@@ -408,7 +418,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/packages/mdc-image-list/node_modules/ember-cli-mdc-utils/lib/target.js</url>
           <line>6</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
