@@ -47,6 +47,7 @@
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-mdc-animation": "^2.0.0-octane.48",
     "ember-cli-mdc-base": "^2.0.0-octane.48",
+    "ember-cli-mdc-progress-indicator": "^2.0.0-octane.48",
     "ember-cli-mdc-theme": "^2.0.0-octane.48",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.3",

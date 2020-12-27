@@ -1,0 +1,27 @@
+<h1>Circular Progress</h1>
+
+<h2>Indeterminate</h2>
+
+<div class="container">
+  <MdcCircularProgress @determinate={{false}} />
+
+  <MdcCircularProgress @size="medium" @determinate={{false}} />
+
+  <MdcCircularProgress @size="small" @determinate={{false}} />
+</div>
+
+<h2>Determinate</h2>
+
+<div class="container">
+  <MdcCircularProgress @value={{this.value}} @min={{this.min}} @max={{this.max}} />
+
+  <MdcCircularProgress @size="medium" @value={{this.value}} @min={{this.min}} @max={{this.max}} />
+
+  <MdcCircularProgress @size="small" @value={{this.value}} @min={{this.min}} @max={{this.max}} />
+</div>
+
+<div>Min: <Input @value={{this.minInput}} type="number" /></div>
+<div>Max: <Input @value={{this.maxInput}} type="number" /></div>
+<div>Value:<Input @value={{this.valueInput}} type="number" min={{this.min}} max={{this.max}} step="1" /> </div>
+
+

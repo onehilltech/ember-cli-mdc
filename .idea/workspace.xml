@@ -6,12 +6,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/-mdc-progress-indicator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/styles/addon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/addon/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/addon/mdc-progress-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.ember-cli" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.template-lintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.watchmanconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/app/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/app/components/mdc-circular-progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/blueprints/ember-cli-mdc-circular-progress/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/config/ember-try.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/config/environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/ember-cli-build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/testem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/components/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/controllers/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/helpers/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/models/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/routes/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/environment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/optional-features.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/targets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/helpers/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/integration/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/integration/components/mdc-circular-progress-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/test-helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/unit/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/vendor/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/-mdc-progress-indicator.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,25 +413,25 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="417" y="23" key="CommitChangelistDialog2/0.23.1680.948@0.23.1680.948" timestamp="1608609563909" />
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1609001566190">
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1609045139091">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1609001566190" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1609045139091" />
     <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1609001566189">
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1609045139090">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1609001566189" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1609045139090" />
     <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
-    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1609001566189">
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1609045139090">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1609001566189" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1609045139090" />
     <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
-    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1609001566190">
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1609045139091">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1609001566190" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1609045139091" />
     <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
     <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
       <screen x="0" y="23" width="1680" height="948" />
