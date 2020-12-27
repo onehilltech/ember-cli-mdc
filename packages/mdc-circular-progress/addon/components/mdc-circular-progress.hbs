@@ -2,7 +2,9 @@
      role="progressbar"
      aria-label={{@label}} aria-valuemin="0" aria-valuemax="1"
     {{did-insert this.didInsert}}
-    {{did-update this.setProgress value=@value max=@max min=@min}}>
+    {{did-update this.setProgress value=@value max=@max min=@min}}
+    {{did-update this.setIndeterminate @indeterminate}}
+    ...attributes>
   <div class="mdc-circular-progress__determinate-container">
     <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox={{this.viewBox}}
          xmlns="http://www.w3.org/2000/svg">
