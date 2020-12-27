@@ -7,9 +7,6 @@ export default class IndexController extends Controller {
   started = false;
 
   @tracked
-  progress = 0;
-
-  @tracked
   count = 0;
 
   @action
@@ -28,6 +25,6 @@ export default class IndexController extends Controller {
   }
 
   _updateProgress () {
-    this.progress = this.count ++ / 100;
+    this.count ++;
   }
 }
