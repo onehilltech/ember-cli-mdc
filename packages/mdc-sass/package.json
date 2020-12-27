@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-sass",
-  "version": "2.0.0-octane.47",
+  "version": "2.0.0-octane.48",
   "description": "ember-cli addon for integrating SASS into ember-cli-mdc.",
   "keywords": [
     "ember-addon",
@@ -31,7 +31,7 @@
     "broccoli-merge-trees": "^3.0.1",
     "ember-cli-babel": "^7.7.3",
     "ember-cli-blueprint-helpers": "^0.4.7",
-    "ember-cli-mdc-utils": "^2.0.0-octane.47"
+    "ember-cli-mdc-utils": "^2.0.0-octane.48"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
