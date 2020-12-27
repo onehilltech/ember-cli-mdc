@@ -5,9 +5,9 @@ import { action } from '@ember/object';
 
 export default class MdcProgressIndicatorComponent extends Component {
   doInitComponent (component) {
-    const { determinate = true } = this.args;
+    const { indeterminate = false } = this.args;
 
-    component.determinate = determinate;
+    component.determinate = !indeterminate;
     component.progress = this.progress;
   }
 
@@ -37,7 +37,7 @@ export default class MdcProgressIndicatorComponent extends Component {
   }
 
   @action
-  setDeterminate (element, [determinate]) {
-    component.determinate = determinate;
+  setIndeterminate (element, [indeterminate]) {
+    component.determinate = !indeterminate;
   }
 }
