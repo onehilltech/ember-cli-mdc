@@ -1,1 +1,5 @@
-export * as default from './mdc-progress-indicator';
+import MdcProgressIndicatorComponent from './mdc-progress-indicator';
+
+export default MdcProgressIndicatorComponent;
+
+
