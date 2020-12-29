@@ -6,7 +6,7 @@ const semver = require ('semver');
 function target (version) {
   let prerelease = semver.prerelease (version);
 
-  if (prerelease.length !== 0) {
+  if (!!prerelease && prerelease.length !== 0) {
     // Let's update to the latest pre-release version.
     let coerced = semver.coerce (version);
     return `^${coerced}-${prerelease[0]}.0`;
