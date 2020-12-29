@@ -29,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package.json" afterDir="false" />
@@ -64,7 +65,6 @@
       <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-touch-target/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-utils/lib/target.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-utils/lib/target.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-utils/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-utils/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-utils/package.json" afterDir="false" />
     </list>
@@ -355,7 +355,7 @@
       <workItem from="1608357248434" duration="75232000" />
       <workItem from="1609000645390" duration="2523000" />
       <workItem from="1609217745228" duration="129000" />
-      <workItem from="1609222543356" duration="16000" />
+      <workItem from="1609222543356" duration="657000" />
     </task>
     <servers />
   </component>
