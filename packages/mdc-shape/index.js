@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-mdc-shape'
+  name: require('./package').name
 };

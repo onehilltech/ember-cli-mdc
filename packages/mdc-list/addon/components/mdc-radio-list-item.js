@@ -9,7 +9,7 @@ export default ListItemComponent.extend({
     this._super (...arguments);
 
     // Set the initial checked value for the list item.
-    let checked = this.get ('checked');
+    let checked = this.checked;
     this.element.setAttribute ('aria-checked', checked);
   }
 });

@@ -1,0 +1,45 @@
+<div class="mdc-circular-progress {{this.sizeClassName}} {{if @closed "mdc-circular-progress--closed"}}"
+     role="progressbar"
+     aria-label={{@label}} aria-valuemin="0" aria-valuemax="1"
+    {{did-insert this.didInsert}}
+    {{did-update this.setProgress value=@value max=@max min=@min}}
+    {{did-update this.setIndeterminate @indeterminate}}
+    ...attributes>
+  <div class="mdc-circular-progress__determinate-container">
+    <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox={{this.viewBox}}
+         xmlns="http://www.w3.org/2000/svg">
+      <circle class="mdc-circular-progress__determinate-circle"
+              cx={{this.cx}}
+              cy={{this.cy}}
+              r={{this.r}}
+              stroke-dasharray={{this.dasharray}}
+              stroke-dashoffset={{this.dasharray}}/>
+    </svg>
+  </div>
+  <div class="mdc-circular-progress__indeterminate-container">
+    <div class="mdc-circular-progress__spinner-layer">
+      <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left">
+        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox={{this.viewBox}}
+             xmlns="http://www.w3.org/2000/svg">
+          <circle cx={{this.cx}} cy={{this.cy}} r={{this.r}}
+                  stroke-dasharray={{this.dasharray}}
+                  stroke-dashoffset={{this.dashoffset}}/>
+        </svg>
+      </div><div class="mdc-circular-progress__gap-patch">
+        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox={{this.viewBox}}
+             xmlns="http://www.w3.org/2000/svg">
+          <circle cx={{this.cx}} cy={{this.cy}} r={{this.r}}
+                  stroke-dasharray={{this.dasharray}}
+                  stroke-dashoffset={{this.dashoffset}}/>
+        </svg>
+      </div><div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
+        <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox={{this.viewBox}}
+             xmlns="http://www.w3.org/2000/svg">
+          <circle cx={{this.cx}} cy={{this.cy}} r={{this.r}}
+                  stroke-dasharray={{this.dasharray}}
+                  stroke-dashoffset={{this.dashoffset}} />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

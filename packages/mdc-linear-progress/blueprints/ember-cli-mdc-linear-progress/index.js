@@ -1,15 +1,17 @@
 /* eslint-env node */
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
+const { version } = require ('../../package.json');
+const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/linear-progress', target: '3.2.0'}
+    {name: '@material/linear-progress', target: '6.0.0'}
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-animation', target: '^1.0.0'},
-    {name: 'ember-cli-mdc-base', target: '^1.0.0'},
-    {name: 'ember-cli-mdc-theme', target: '^1.0.0'}
+    {name: 'ember-cli-mdc-animation', target},
+    {name: 'ember-cli-mdc-progress-indicator', target},
+    {name: 'ember-cli-mdc-theme', target}
   ]
 });

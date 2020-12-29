@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-mdc-fab',
+  name: require('./package').name,
 
   optionsFor (type, options) {
     if (type === 'sass') {

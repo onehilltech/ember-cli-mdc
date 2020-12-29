@@ -1,0 +1,7 @@
+@use "@material/image-list";
+
+.my-image-list {
+  @include image-list.masonry-columns(3);
+
+  max-width: 960px;
+}

@@ -1,44 +1,77 @@
 import ChipSetComponent from './mdc-chip-set';
 
-import { isPresent, isNone } from '@ember/utils';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { assert } from '@ember/debug';
 
-export default ChipSetComponent.extend ({
-  mode: 'choice',
+function noOp () {}
 
-  /// The selected value in the choice.
-  value: null,
+export default class MdcChoiceChipSetComponent extends ChipSetComponent {
+  type = 'choice';
 
-  didInsertElement () {
-    this._super (...arguments);
+  _currentChoiceId = null;
 
-    // If there is an initial value, then we need to select an initial chip.
-    let value = this.get ('value');
+  doInitComponent (chipSet) {
+    super.doInitComponent (chipSet);
 
-    if (isPresent (value)) {
-      this._chipSet.select (value);
+    let { choice } = this.args;
+
+    if (isPresent (choice)) {
+      this._currentChoiceId = this.getChipId (choice);
+      this.select (this._currentChoiceId);
     }
-  },
+  }
 
-  didUpdateAttrs () {
-    this._super (...arguments);
+  didSelection (chipId, selected) {
+    if (isPresent (this.chips)) {
+      // The user wants us to automate the handling of selecting a chip.
 
-    let value = this.get ('value');
+      if (selected) {
+        // Locate the index of the selected chip, and return that one to the user.
+        let chip = this.findChipById (chipId);
+        assert (`The choice chip set does not have a chip with the id ${chipId}`, isPresent (chip));
 
-    if (isNone (value)) {
-      // We need to deselect the currently selected value. Get the ids, and
-      // get the first element in the list of ids.
-      let ids = this._chipSet.selectedChipIds;
-
-      if (ids.length === 1) {
-        this._chipSet.deselect (ids[0]);
+        this.notifyChange (chip);
+      }
+      else {
+        this.notifyChange (null);
       }
     }
-    else if (!this._chipSet.isSelected (value)) {
-      this._chipSet.select (value);
-    }
-  },
-
-  didSelectChip (chipId, selected) {
-    this.set ('value', selected ? chipId : null);
   }
-});
+
+  notifyChange (choice) {
+    this._currentChoiceId = isPresent (choice) ? this.getChipId (choice) : null;
+    this.change (choice);
+  }
+
+  get change () {
+    return this.args.change || noOp;
+  }
+
+  get syncKey () {
+    return this.args.choice;
+  }
+
+  @action
+  sync () {
+    // We need to locate the chip that was selected.
+    let choice = this.syncKey;
+
+    if (isPresent (choice)) {
+      // There was a outside change. We need to select the chip that matches the
+      // change if the choice is different from the current one.
+
+      let chipId = this.getChipId (choice);
+
+      if (this._currentChoiceId !== chipId) {
+        this.select (chipId);
+        this._currentChoiceId = chipId;
+      }
+    }
+    else if (isPresent (this._currentChoiceId)) {
+      // There is no selection. This means we need to clear the selection.
+      this.select (null);
+      this._currentChoiceId = null;
+    }
+  }
+}

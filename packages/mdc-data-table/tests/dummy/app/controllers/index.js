@@ -1,10 +1,16 @@
 import Controller from '@ember/controller';
-import { A } from '@ember/array';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
-export default Controller.extend({
-  actions: {
-    rowSelectionChange ({detail}) {
-      console.log (detail);
-    }
+export default class IndexController extends Controller {
+  @tracked
+  headers;
+
+  @tracked
+  signals;
+
+  @action
+  rowSelectionChange () {
+
   }
-});
+}

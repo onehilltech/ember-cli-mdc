@@ -1,0 +1,29 @@
+<h2 id="title">Material Design Buttons</h2>
+
+<h3>Default Button</h3>
+<MdcButton @label="Default (inline)" {{on "click" (fn this.displayMessage "Default (inline)")}} />
+<MdcButton {{on "click" (fn this.displayMessage "Default (block)")}}>Default (block)</MdcButton>
+
+<h3>Button Styles</h3>
+
+<MdcButton @style="raised" @label="Raised" {{on "click" (fn this.displayMessage "Raised")}}/>
+<MdcButton @style="outlined" @label="Outlined" {{on "click" (fn this.displayMessage "Outlined")}} />
+<MdcButton @style="unelevated" @label="Unelevated" {{on "click" (fn this.displayMessage "Unelevated")}} />
+
+
+<h3>Disabled Button</h3>
+<MdcButton @style="outlined" @label="Disabled" disabled={{true}} />
+
+<h3>Button Icon</h3>
+
+<MdcButton @style="raised" @leadingIcon="event" @label="Add to Calendar" {{on "click" (fn this.displayMessage "Add to Calendar")}} />
+<MdcButton @style="raised" @trailingIcon="check" @label="Submit" {{on "click" (fn this.displayMessage "Submit")}}/>
+<MdcButton @style="unelevated" @leadingIcon="check">Proceed</MdcButton>
+
+<h3>Link Button</h3>
+
+<MdcButtonLinkTo @route="dummy"
+                 @label="Go Forward (Inline)"
+                 @style="raised"
+                 @leadingIcon="exit_to_app"
+  {{on "click" (fn this.displayMessage "Go Forward (Inline)")}} />

@@ -2,34 +2,43 @@ import Service from '@ember/service';
 
 import { isPresent } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
-import { assert } from '@ember/debug';
 
-const { MDCSnackbar } = mdc.snackbar;
+import { action } from '@ember/object';
+import { assert } from '@ember/debug';
 
 function noOp () { }
 
-export default Service.extend ({
-  _snackbar: null,
+const { MDCSnackbar } = mdc.snackbar;
 
-  _openingListener: null,
-  _openedListener: null,
-  _closingListener: null,
-  _closedListener: null,
+export default class SnackbarService extends Service {
+  _snackbar = null;
 
-  init () {
-    this._super (...arguments);
+  _openingListener = null;
+  _openedListener = null;
+  _closingListener = null;
+  _closedListener = null;
+
+  constructor () {
+    super (...arguments);
 
     this._openingListener = this.willOpen.bind (this);
     this._openedListener = this.didOpen.bind (this);
     this._closingListener = this.willClose.bind (this);
     this._closedListener = this.didClose.bind (this);
-  },
+  }
+
+  destroy () {
+    super.destroy ();
+
+    this._cleanup ();
+  }
 
   /**
    * Show the snackbar to the user.
    *
    * @param options
    */
+  @action
   show (options) {
     // First, clean up everything.
     this._cleanup ();
@@ -37,18 +46,7 @@ export default Service.extend ({
     // Build the snackbar.
     this._snackbar = this._build (options);
     this._snackbar.open ();
-  },
-
-  destroy () {
-    this._super (...arguments);
-    this._cleanup ();
-  },
-
-  actions: {
-    show (options) {
-      this.show (options);
-    }
-  },
+  }
 
   /**
    * Build a new snackbar component for the options.
@@ -95,7 +93,7 @@ export default Service.extend ({
 
     snackbar.listen ('MDCSnackbar:closing', (ev) => closing (ev.detail));
     snackbar.listen ('MDCSnackbar:closed', (ev) => {
-      const { reason } = ev.detail;
+      const {reason} = ev.detail;
 
       switch (reason) {
         case 'action':
@@ -112,25 +110,25 @@ export default Service.extend ({
     });
 
     return snackbar;
-  },
+  }
 
   _actionButtons (action, dismiss) {
     return `<div class="mdc-snackbar__actions">
               ${isPresent (action) ? this._actionButton (action.label) : ''}
               ${isPresent (dismiss) ? this._dismissButton (dismiss.icon) : ''}
             </div>`;
-  },
+  }
 
   _actionButton (label) {
     return `<button type="button" class="mdc-button mdc-snackbar__action">
               <div class="mdc-button__ripple"></div>
               <span class="mdc-button__label">${label}</span>
             </button>`;
-  },
+  }
 
   _dismissButton (icon = "close") {
     return `<button type="button" class="mdc-snackbar__dismiss mdc-icon-button material-icons">${icon}</button>`;
-  },
+  }
 
   /**
    * Cleanup the existing snackbar.
@@ -146,21 +144,21 @@ export default Service.extend ({
       this._snackbar.destroy ();
       this._snackbar = null;
     }
-  },
+  }
 
   willOpen () {
 
-  },
+  }
 
   didOpen () {
 
-  },
+  }
 
   willClose () {
 
-  },
+  }
 
   didClose () {
 
   }
-});
+}

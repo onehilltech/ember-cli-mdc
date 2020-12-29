@@ -3,6 +3,15 @@ ember-cli-mdc-card
 
 ember-cli addon for [`@material/card`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-card).
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------
 
@@ -20,6 +29,7 @@ mdc-card
 
 ### Description
 
+<<<<<<< HEAD
 The `{{mdc-card}}` is a component that implements the 
 [Material Design card component](https://github.com/material-components/material-components-web/tree/master/packages/mdc-card).
 
@@ -83,6 +93,10 @@ actions to a `{{mdc-card}}` component.
   {{/mdc-card-actions}}
 {{/mdc-card}}
 ```
+=======
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+>>>>>>> c5293e44... v3.3.0...v3.18.0
 
 ### Types of Actions
 

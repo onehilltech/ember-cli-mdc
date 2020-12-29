@@ -1,49 +1,57 @@
 <h2>Continuous Slider</h2>
 
-{{mdc-slider min=0 max=100 value=continuous.value
-             label="Select value"
-             change=(action (mut continuous.selected))}}
+<MdcSlider @min={{0}} @max={{100}} @value={{continuous.value}}
+           @label="Select value"
+           @change={{action (mut continuous.selected)}}
+           @input={{action (mut continuous.value)}} />
 
 <div>Value: {{continuous.value}}</div>
 <div>Selected: {{continuous.selected}}</div>
-<div>{{input value=continuous.value type="number"}}</div>
+<div><Input @value={{continuous.value}} @type="number"/></div>
 
 <h2>Discrete Slider</h2>
 
-{{mdc-slider min=0 max=100 value=discrete.value
-             discrete=true
-             label="Select value"
-             change=(action (mut discrete.selected))}}
+<MdcSlider @min={{0}} @max={{100}}
+           @value={{discrete.value}}
+           @discrete={{true}}
+           @label="Select value"
+           @change={{action (mut discrete.selected)}}
+           @input={{action (mut discrete.value)}} />
 
 <div>Value: {{discrete.value}}</div>
 <div>Selected: {{discrete.selected}}</div>
-<div>{{input value=discrete.value type="number"}}</div>
+<div><Input @value={{discrete.value}} @type="number" /></div>
 
 <h2>Discrete Slider w/ Step</h2>
 
-{{mdc-slider min=0 max=100 value=step.value step=2
-             discrete=true
-             label="Select value"
-             change=(action (mut step.selected))}}
+<MdcSlider @min={{0}} @max={{100}}
+           @value={{step.value}}
+           @step={{2}}
+           @discrete={{true}}
+           @label="Select value"
+           @change={{action (mut step.selected)}}
+           @input={{action (mut step.value)}} />
 
 <div>Value: {{step.value}}</div>
 <div>Selected: {{step.selected}}</div>
-<div>{{input value=step.value type="number"}}</div>
+<div><Input @value={{step.value}} @type="number" /></div>
 
 <h2>Discrete Slider w/ Track Markers</h2>
 
-{{mdc-slider min=0 max=100 value=markers.value step=2
-             discrete=true
-             displayMarkers=true
-             label="Select value"
-             change=(action (mut markers.selected))}}
+<MdcSlider @min={{0}} @max={{100}} @value={{markers.value}}
+           @step={{2}} @discrete={{true}}
+           @displayMarkers={{true}}
+           @label="Select value"
+           @change={{action (mut markers.selected)}}
+           @input={{action (mut markers.value)}} />
 
 <div>Value: {{markers.value}}</div>
 <div>Selected: {{markers.selected}}</div>
-<div>{{input value=markers.value type="number"}}</div>
+<div><Input @value={{markers.value}} @type="number" /></div>
 
 <h2>Disabled Slider</h2>
 
-{{mdc-slider min=0 max=100 value=continuous.value
-             label="Select value"
-             disabled=true}}
+<MdcSlider @min={{0}} @max={{100}}
+           @value={{continuous.value}}
+           @label="Select value"
+           @disabled={{true}} />

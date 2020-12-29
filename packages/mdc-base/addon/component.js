@@ -1,59 +1,156 @@
 import Component from '@glimmer/component';
-import { get } from '@ember/object';
+
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { assert } from '@ember/debug';
 
 import Listener from './-internal/listener';
+
+
+const { MDCComponent } = mdc.base;
 
 /**
  * The MaterialComponent class is the base class for all material design components
  * in the material-components-web framework.
  */
 export default class MaterialComponent extends Component {
-  /**
-   * The component will be destroy. Perform any cleanup operations so we do not have
-   * any resources being leaked.
-   */
-  willDestroy () {
-    if (!!this._mdcComponent) {
-      // Instruct all registered listeners to stop listening for events.
-      this._listeners.forEach (listener => listener.unlisten (this._mdcComponent));
+  _component = null;
+
+  get component () {
+    return this._component;
+  }
+  
+  @action
+  didInsert (element) {
+    // Prepare the element for creation.
+    this.doPrepareElement (element);
+
+    // Create the material component.
+    let component = this.doCreateComponent (element);
+
+    if (isPresent (component)) {
+      this._checkComponent (component);
+      this._installComponent (component);
     }
   }
 
   /**
-   * @private
+   * Allow a subclass to replace the current component with a new instance.
    *
-   * Instance of the vanilla material design component.
+   * @param component
    */
-  _mdcComponent;
+  replaceComponent (component) {
+    // Check the component is a valid material component.
+    this._checkComponent (component);
 
-  /**
-   * A material design component has been created.
-   *
-   * @param mdcComponent
-   * @private
-   */
-  _mdcComponentCreated (mdcComponent) {
-    this._mdcComponent = mdcComponent;
-
-    // Start listening for events.
-    this._listeners.forEach (listener => listener.listen (this._mdcComponent));
+    // Cleanup the current component's resources, and install the new component.
+    this._cleanup ();
+    this._installComponent (component);
   }
 
-  // The collection of registered listeners.
-  _listeners;
+  /**
+   * Helper method for installing a new component.
+   *
+   * @param component
+   * @private
+   */
+  _installComponent (component) {
+    // Save the component, and initialize it.
+    this._component = component;
+    this.doInitComponent (component);
+
+    // Start listening for events.
+    if (isPresent (this._listeners)) {
+      this._listeners.forEach (listener => listener.listen (this));
+    }
+  }
+
+  /**
+   * Check the component is an instance of this class.
+   *
+   * @param component
+   * @private
+   */
+  _checkComponent (component) {
+    //assert ('The instantiated component is not an instance of MDCComponent', (component instanceof MDCComponent));
+  }
+
+  /**
+   * Prepare the component for creation. This allows the component to update the
+   * DOM before creating the material component.
+   *
+   * @param element         HTML element
+   */
+  doPrepareElement (element) {
+
+  }
+
+  /**
+   * Factory method for creating the material component.
+   *
+   * @param element
+   */
+  doCreateComponent (element) {
+    return null;
+  }
+
+  /**
+   * Initialize the material component after it has been created.
+   *
+   * @param component
+   */
+  doInitComponent (component) {
+
+  }
+
+  /**
+   * The component will be destroy. Perform any _cleanup operations so we do not have
+   * any resources being leaked.
+   */
+  willDestroy () {
+    this._cleanup ();
+  }
+
+  /**
+   * Cleanup any resources used by the component.
+   */
+  _cleanup () {
+    if (isPresent (this._component)) {
+      if (isPresent (this._listeners)) {
+        this._listeners.forEach (listener => listener.unlisten (this._component));
+      }
+    }
+  }
 
   /**
    * Register an event for the material design component.
    *
    * @param eventName
-   * @param methodName
+   * @param method
    * @private
    */
-  _registerMdcEventListener (eventName, methodName) {
-    let method = get (this, methodName);
-    let handler = method.bind (this);
-    let listener = new Listener (this, eventName, handler);
-
+  _registerMdcEventListener (eventName, method) {
+    let listener = new Listener (eventName, method);
     (this._listeners = this._listeners || []).push (listener);
+  }
+
+  /**
+   * Listen for an event.
+   *
+   * @param eventName
+   * @param method
+   */
+  listen (eventName, method) {
+    return this._component.listen (eventName, method);
+  }
+
+  /**
+   * Stop listening for an event.
+   *
+   * @param eventName
+   * @param method
+   */
+  unlisten (eventName, method) {
+    return this._component.unlisten (eventName, method);
   }
 }

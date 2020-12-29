@@ -1,0 +1,16 @@
+<div class="mdc-radio-buttons" {{on "change" this.changed}} ...attributes>
+  {{#if (has-block)}}
+    {{yield (hash name=@name)}}
+  {{else}}
+    {{#each @buttons as |button|}}
+      <MdcRadio id={{button.id}}
+                name={{@name}}
+                form={{@form}}
+                required={{@required}}
+                value={{button.value}}
+                @label={{button.label}}
+                disabled={{button.disabled}} />
+    {{/each}}
+  {{/if}}
+</div>
+

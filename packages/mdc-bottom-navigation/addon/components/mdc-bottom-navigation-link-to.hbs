@@ -1,0 +1,8 @@
+{{#if (has-block)}}
+  {{yield (hash isActive=active)}}
+{{else}}
+  <MdcIcon @icon={{@icon}} />
+  {{#if @label}}
+    <MdcBottomNavigationButtonLabel @label={{@label}} />
+  {{/if}}
+{{/if}}

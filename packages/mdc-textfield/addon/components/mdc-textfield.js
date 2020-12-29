@@ -1,71 +1,142 @@
-import layout from '../templates/components/mdc-textfield';
+import Component from 'ember-cli-mdc-base/component';
 
-import Component from '@ember/component';
-
-import TextSupport from '../mixins/text-support';
-
-import { computed } from '@ember/object';
-import { isEmpty } from '@ember/utils';
-import { equal, oneWay, or } from '@ember/object/computed';
+import { action } from '@ember/object';
+import { equal } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
+import { assert } from '@ember/debug';
+import { tracked } from '@glimmer/tracking';
+import { guidFor } from '@ember/object/internals';
+import { isPresent, isEmpty } from '@ember/utils';
 
-export default Component.extend (TextSupport, {
-  layout,
+function noOp () { }
 
-  _defaultConfig: service ('mdc-textfield-configurator'),
+const STYLES = ['filled', 'outlined'];
 
-  tagName: 'div',
+const { MDCTextField } = mdc.textfield;
 
-  classNameBindings: [
-    'styleClassName',
-    'leadingIcon:mdc-text-field--with-leading-icon',
-    'trailingIcon:mdc-text-field--with-trailing-icon',
-    'noLabel:mdc-text-field--no-label'
-  ],
+const VALIDATION_ERROR_TYPE = [
+  'badInput',
+  'patternMismatch',
+  'rangeOverflow',
+  'rangeUnderflow',
+  'stepMismatch',
+  'tooLong',
+  'tooShort',
+  'valueMissing',
+  'typeMismatch',
+];
 
-  // Set the style for the text field. The default style comes from the configurator.
-  // To change the style, just set this value when adding the component to handlebars.
-  style: oneWay ('_defaultConfig.style'),
+export default class MdcTextfieldComponent extends Component {
+  @service ('mdc-textfield-configurator')
+  configurator;
 
-  label: null,
-  helperText: null,
-  disabled: false,
+  @tracked
+  labelId;
 
-  isOutlined: equal ('style', 'outlined'),
-  isFullWidth: equal ('style', 'fullwidth'),
+  @tracked
+  helperId;
 
-  hasNotchedOutline: or ('isOutlined', 'isFullWidth'),
+  get style () {
+    return this.args.style || this.configurator.style || 'filled';
+  }
 
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
+  get styleClassName () {
+    let style = this.style;
 
-    if (isEmpty (style) || style === 'standard') {
-      return null;
-    }
+    assert ('The outlined style cannot be used with a full width text field.', style === 'filled' || !this.args.fullWidth);
+    assert (`The textfield component supports the following styles: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-text-field--${style}`;
-  }),
-
-  inputId: computed (function () {
-    return `${this.elementId}-input`;
-  }),
-
-  // Reference to the floating label. There are cases where we need to manage
-  // its state due to the possibility of the text fields value being dynamic
-  // updated by some external source.
-  _input: null,
-
-  didCreateComponent () {
-    this._super (...arguments);
-
-    this._input = this.element.querySelector ('input');
-  },
-
-  willDestroyComponent () {
-    this._input = undefined;
-  },
-
-  _getNativeInput () {
-    return this._input;
   }
-});
+
+  doPrepareElement (element) {
+    let { value } = this.args;
+
+    if (isPresent (value)) {
+      element.classList.add ('mdc-text-field--label-floating');
+    }
+
+    this.labelId = guidFor (this);
+    this.helperId = `${guidFor (this)}__helper-text`;
+  }
+
+  doCreateComponent (element) {
+    return new MDCTextField (element);
+  }
+
+  @equal ('style', 'filled')
+  filled;
+
+  @equal ('style', 'outlined')
+  outlined;
+
+  @tracked
+  _count = 0;
+
+  get count () {
+    return this.args.count || this._count;
+  }
+
+  get max () {
+    return this.args.max || 0;
+  }
+
+  get helperLine () {
+    let { characterCount = false } = this.args;
+    return isPresent (this.helperText) || characterCount;
+  }
+
+  get helperText () {
+    let { errorMessage, helperText } = this.args;
+    return errorMessage || this.validationMessage || helperText;
+  }
+
+  get persistentHelperText () {
+    let { persistentHelperText, errorMessage } = this.args;
+    return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
+  }
+
+  get leadingIconClick () {
+    return this.args.leadingIconClick || noOp;
+  }
+
+  get trailingIconClick () {
+    return this.args.trailingIconClick || noOp;
+  }
+
+  @tracked
+  validationMessage;
+
+  @action
+  focus () {
+    this.validationMessage = null;
+  }
+
+  @action
+  validate (ev) {
+    let { target } = ev;
+
+    if (!target.validity.valid) {
+      let { validationMessages } = this.args;
+
+      if (isPresent (validationMessages)) {
+        // The user wants to display a custom validation error message instead
+        // of the default validation error message.
+
+        for (let i = 0, len = VALIDATION_ERROR_TYPE.length; i < len; ++i) {
+          const reason = VALIDATION_ERROR_TYPE[i];
+          const failed = target.validity[reason];
+
+          if (failed) {
+            this.validationMessage = validationMessages[reason] || target.validationMessage;
+            break;
+          }
+        }
+      }
+      else {
+        // Set the default validation message.
+        this.validationMessage = target.validationMessage;
+      }
+    }
+  }
+}

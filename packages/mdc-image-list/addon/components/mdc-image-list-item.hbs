@@ -1,0 +1,22 @@
+<li class="mdc-image-list__item" ...attributes>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#if @image}}
+      {{#if @imageAspectContainer}}
+        <MdcImageListImageAspectContainer>
+          <MdcImageListImage @image={{@image}} />
+        </MdcImageListImageAspectContainer>
+      {{else}}
+        <MdcImageListImage @image={{@image}} />
+      {{/if}}
+    {{/if}}
+
+    {{#if @label}}
+      <MdcImageListSupporting>
+        <MdcImageListLabel>{{@label}}</MdcImageListLabel>
+      </MdcImageListSupporting>
+      </MdcImageListSupporting>
+    {{/if}}
+  {{/if}}
+</li>

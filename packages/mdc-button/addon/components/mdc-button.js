@@ -1,10 +1,18 @@
-import Component from '@ember/component';
-import ButtonMixin from '../mixins/button';
+import Component from 'ember-cli-mdc-base/component';
 
-import layout from '../templates/components/mdc-button';
+import { isPresent } from '@ember/utils';
 
-export default Component.extend (ButtonMixin, {
-  layout,
+const { MDCRipple } = mdc.ripple;
 
-  tagName: 'button'
-});
+export default class MdcButtonComponent extends Component {
+  _button = null;
+
+  get style () {
+    const { style } = this.args;
+    return isPresent (style) ? `mdc-button--${style}` : null;
+  }
+
+  doCreateComponent (element) {
+    return new MDCRipple (element);
+  }
+}

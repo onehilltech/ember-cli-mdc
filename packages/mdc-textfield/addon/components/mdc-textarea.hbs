@@ -1,0 +1,33 @@
+<label class="mdc-text-field mdc-text-field--textarea
+  {{unless @label "mdc-text-field--no-label"}}
+  {{if @disabled "mdc-text-field--disabled"}}
+  {{if @alignEnd "mdc-text-field--end-aligned"}}
+  {{if @ltr "mdc-text-field--ltr-text"}}
+  {{if @focused "mdc-text-field--focused"}}"
+  {{did-insert this.didInsert}}>
+  <MdcTextfieldTextarea ...attributes
+                        aria-label={{@label}}
+                        aria-labelledby={{this.labelId}}
+                        disabled={{@disabled}}  />
+  <span class="mdc-notched-outline">
+      <span class="mdc-notched-outline__leading"></span>
+      <span class="mdc-notched-outline__notch">
+        {{#if @label}}
+          <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+        {{/if}}
+      </span>
+      <span class="mdc-notched-outline__trailing"></span>
+    </span>
+</label>
+{{#if this.helperLine}}
+  <div class="mdc-text-field-helper-line">
+    {{#if this.helperText}}
+      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
+           id={{this.helperId}}
+           aria-hidden="true">{{this.helperText}}</div>
+    {{/if}}
+    {{#if @characterCount}}
+      <div class="mdc-text-field-character-counter" />
+    {{/if}}
+  </div>
+{{/if}}

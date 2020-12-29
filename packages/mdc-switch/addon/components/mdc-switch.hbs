@@ -1,0 +1,12 @@
+<MdcFormField @alignEnd={{@alignEnd}} @noWrap={{@noWrap}}>
+  <div class="mdc-switch {{if @disabled "mdc-switch--disabled"}} {{if @checked "mdc-switch--checked"}}" {{did-insert this.didInsert}}>
+    <div class="mdc-switch__track"></div>
+    <div class="mdc-switch__thumb-underlay">
+      <div class="mdc-switch__thumb"></div>
+      <MdcSwitchNativeControl @checked={{@checked}} ...attributes disabled={{@disabled}} role="switch" aria-checked={{@checked}} />
+    </div>
+  </div>
+  {{#if @label}}
+    <label for={{this.for}}>{{@label}}</label>
+  {{/if}}
+</MdcFormField>

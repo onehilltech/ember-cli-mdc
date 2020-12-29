@@ -1,31 +1,35 @@
 import Service from '@ember/service';
+import { tracked } from "@glimmer/tracking";
 
 import { gte, lt, and } from '@ember/object/computed';
-import { computed } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 const BREAKPOINT_PHONE = 0;
 const BREAKPOINT_TABLET = 480;
 const BREAKPOINT_DESKTOP = 840;
 
-export default Service.extend ({
-  width: null,
+export default class LayoutService extends Service {
+  @tracked
+  width = null;
 
   /// The layout is for a phone.
-  isPhone: and ('_minWidthPhone', '_maxWidthPhone'),
+  @and ('_minWidthPhone', '_maxWidthPhone')
+  isPhone;
 
   /// The layout is for a tablet.
-  isTablet: and ('_minWidthTablet', '_maxWidthTablet'),
+  @and ('_minWidthTablet', '_maxWidthTablet')
+  isTablet;
 
   /// The layout is for a desktop.
-  isDesktop: gte ('width', BREAKPOINT_DESKTOP),
+  @gte ('width', BREAKPOINT_DESKTOP)
+  isDesktop;
 
-  _resizeEventListener: null,
+  _resizeEventListener = null;
 
-  _currentClassName: null,
+  _currentClassName = null;
 
-  init () {
-    this._super (...arguments);
+  constructor () {
+    super (...arguments);
 
     this._resizeEventListener = this.didResize.bind (this);
 
@@ -34,19 +38,19 @@ export default Service.extend ({
 
       this.didResize ();
     }
-  },
+  }
 
-  destroy () {
-    this._super (...arguments);
+  willDestroy () {
+    super.willDestroy ();
 
     if (window) {
       window.removeEventListener ('resize', this._resizeEventListener);
     }
-  },
+  }
 
   didResize () {
     let { _currentClassName } = this;
-    this.set ('width', window.innerWidth);
+    this.width = window.innerWidth;
     let { currentClassName } = this;
 
     // Replace the layout class name if the layout form factor has changed.
@@ -59,15 +63,21 @@ export default Service.extend ({
       document.body.classList.add (currentClassName)
       this._currentClassName = currentClassName;
     }
-  },
+  }
 
-  currentClassName: computed ('width', function () {
+  get currentClassName () {
     return this.isPhone ? 'mdc-layout--phone' : (this.isTablet ? 'mdc-layout--tablet' : 'mdc-layout--desktop');
-  }),
+  }
 
-  _minWidthPhone: gte ('width', BREAKPOINT_PHONE),
-  _maxWidthPhone: lt ('width', BREAKPOINT_TABLET),
+  @gte ('width', BREAKPOINT_PHONE)
+  _minWidthPhone;
 
-  _minWidthTablet: gte ('width', BREAKPOINT_TABLET),
-  _maxWidthTablet: lt ('width', BREAKPOINT_DESKTOP)
-});
+  @lt ('width', BREAKPOINT_TABLET)
+  _maxWidthPhone;
+
+  @gte ('width', BREAKPOINT_TABLET)
+  _minWidthTablet;
+
+  @lt ('width', BREAKPOINT_DESKTOP)
+  _maxWidthTablet;
+}

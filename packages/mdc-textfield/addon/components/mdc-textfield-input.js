@@ -17,14 +17,15 @@ const getNextSibling = function (elem, selector) {
   }
 };
 
-export default TextField.extend({
+export default TextField.extend ({
   classNames: ['mdc-text-field__input'],
 
   attributeBindings: ['label:aria-label'],
 
   /// Automatically move to the next input in the parent.
-  autoMoveToNext: true,
+  //autoMoveToNext: true,
 
+  /*
   init () {
     this._super (...arguments);
 
@@ -58,5 +59,5 @@ export default TextField.extend({
     }
 
     // The default HTML input ignores maxlength with type is number.
-  }
+  }*/
 });

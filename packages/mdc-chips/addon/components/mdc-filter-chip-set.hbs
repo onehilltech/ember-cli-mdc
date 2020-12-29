@@ -1,0 +1,20 @@
+<div class="mdc-chip-set mdc-chip-set--filter {{this.label}}" role="grid"
+  {{did-insert this.didInsert}}
+  {{did-update this.sync @filtered}}>
+
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#each this.data as |data index|}}
+      {{#with data.chip as |chip|}}
+        <MdcFilterChip @id={{get chip this.idKey}}
+                       @text={{get chip this.textKey}}
+                       @leadingIcon={{get chip this.leadingIconKey}}
+                       @trailingIcon={{get chip this.trailingIconKey}}
+                       @checked={{data.checked}}
+                       @tabindex={{index}}
+                       @remove={{this.removeChip}} />
+      {{/with}}
+    {{/each}}
+  {{/if}}
+</div>

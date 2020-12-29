@@ -1,0 +1,7 @@
+<span class="mdc-tab-indicator {{if @active "mdc-tab-indicator--active"}} {{if @fade "mdc-tab-indicator--fade"}}" {{did-insert this.didInsert}}>
+  <span class="mdc-tab-indicator__content {{if @icon "mdc-tab-indicator__content--icon material-icons" "mdc-tab-indicator__content--underline"}}">
+    {{#if @icon}}
+      {{@icon}}
+    {{/if}}
+  </span>
+</span>

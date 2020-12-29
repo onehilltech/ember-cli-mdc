@@ -3,6 +3,15 @@ ember-cli-mdc-form-field
 
 ember-cli addon for [`@material/form-field`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-form-field).
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------
 
@@ -15,6 +24,7 @@ This package contains the following top-level components.
 
 * [`{{mdc-form-field}}`](#mdc-form-field)
 
+<<<<<<< HEAD
 This package contains the following mixins:
 
 * `FormFieldMixin`
@@ -34,6 +44,10 @@ upon interacting with the label.
   {{!-- add input here --}}
 {{/mdc-form-field}}
 ```
+=======
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+>>>>>>> 15566a5b... v3.3.0...v3.18.0
 
 ### Attributes
 

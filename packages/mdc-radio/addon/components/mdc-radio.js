@@ -1,26 +1,25 @@
 /* globals mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-radio';
-import { computed } from '@ember/object';
+import Component from 'ember-cli-mdc-base/component';
+import { isPresent } from '@ember/utils';
+import { action } from '@ember/object';
+import {tracked} from "@glimmer/tracking";
 
 const { MDCRadio } = mdc.radio;
 
-export default Component.extend({
-  layout,
+export default class MdcRadioComponent extends Component {
+  @tracked
+  _radioElement;
 
-  classNames: ['mdc-radio'],
-
-  /// The material radio component.
-  _radio: null,
-
-  controlId: computed ('id', function () {
-    return `${this.id}-control`
-  }),
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._radio = new MDCRadio (this.element);
+  doPrepareElement (element) {
+    this._radioElement = element;
   }
-});
+
+  doCreateComponent (element) {
+    return new MDCRadio (element);
+  }
+
+  get for () {
+    return isPresent (this._radioElement) ? this._radioElement.querySelector ('.mdc-radio__native-control').id : undefined;
+  }
+}

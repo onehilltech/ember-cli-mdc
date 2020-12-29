@@ -1,35 +1,25 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-checkbox';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { tracked } from '@glimmer/tracking';
 
-function noOp () {
+let { MDCCheckbox } = mdc.checkbox;
 
-}
+export default class MdcCheckboxComponent extends Component {
+  @tracked
+  _nativeControl = null;
 
-export default Component.extend({
-  layout,
-
-  classNames: ['mdc-checkbox'],
-
-  _checkbox: null,
-
-  embedded: false,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    if (!this.get ('embedded')) {
-      this._checkbox = new mdc.checkbox.MDCCheckbox (this.element);
-      this.getWithDefault ('initialized', noOp) (this._checkbox);
-    }
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    if (this._checkbox) {
-      this._checkbox.destroy ();
-    }
+  doPrepareElement (element) {
+    this._nativeControl = element.querySelector ('.mdc-checkbox__native-control');
   }
-});
+
+  doCreateComponent (element) {
+    return new MDCCheckbox (element);
+  }
+
+  get nativeControlId () {
+    return isPresent (this._nativeControl) ? this._nativeControl.id : null;
+  }
+}

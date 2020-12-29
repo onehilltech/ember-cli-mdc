@@ -1,23 +1,24 @@
-{{#mdc-tabs activeTab=1}}
-  {{#mdc-tab-bar}}
-    {{#mdc-tab-scroller}}
-      {{mdc-tab label="Tab 1"}}
-      {{mdc-tab label="Tab 2"}}
-      {{mdc-tab label="Tab 3"}}
-    {{/mdc-tab-scroller}}
-  {{/mdc-tab-bar}}
+<button {{on "click" (fn this.activateTab 2)}}>Activate Tab 3</button>
+<MdcTabs @activeTab={{this.activeTab}}>
+  <MdcTabBar>
+    <MdcTabScroller>
+      <MdcTab @label="Tab 1" />
+      <MdcTab @label="Tab 2" />
+      <MdcTab @label="Tab 3" />
+    </MdcTabScroller>
+  </MdcTabBar>
 
-  {{#mdc-tab-panels}}
-    {{#mdc-tab-panel}}
+  <MdcTabPanels>
+    <MdcTabPanel>
       Tab 1
-    {{/mdc-tab-panel}}
+    </MdcTabPanel>
 
-    {{#mdc-tab-panel}}
+    <MdcTabPanel>
       Tab 2
-    {{/mdc-tab-panel}}
+    </MdcTabPanel>
 
-    {{#mdc-tab-panel}}
+    <MdcTabPanel>
       Tab 3
-    {{/mdc-tab-panel}}
-  {{/mdc-tab-panels}}
-{{/mdc-tabs}}
+    </MdcTabPanel>
+  </MdcTabPanels>
+</MdcTabs>

@@ -1,7 +1,7 @@
 ember-cli-mdc-elevation
 ======================
 
-ember-cli addon for [`@material/elevation`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation).
+ember-cli addon for [`@material/elevation`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation)
 
 Installation
 ------------
@@ -42,6 +42,7 @@ export default Component.extend (Elevation, {
 ### Attributes
 
 * `elevation` - Sets the elevation for the component. Acceptable values are 1 - 12.
+
 
 
 

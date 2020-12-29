@@ -13,13 +13,13 @@ Components and Mixins
 
 ### Components
 
-* [`{{mdc-menu-surface}}`](#mdc-menu-surface)
+* [`MdcMenuSurface`](#MdcMenuSurface)
 
-### Mixins
+### Modifiers
 
-* [`MenuSurface`](#menusurface)
+* [`mdc-menu-surface-anchor`](#mdc-menu-surface-anchor)
 
-{{mdc-menu-surface}}
+MdcMenuSurface
 ---------------
 
 ### Description
@@ -29,47 +29,42 @@ Add a menu surface component to the page.
 ### Usage
 
 ```handlebars
-{{mdc-menu-surface open=[true|false]
-                   anchor=["parent"|"body"]
-                   quickOpen=[true|false]
-                   position=[null|"fixed"|"absolute"]
-                   positionLeft=number
-                   positionTop=number
-}}
+<MdcMenuSurface @open=[true|false]
+                @quickOpen=[true|false]
+                @anchor=[HTMLElement|string]
+                @anchorMargin=[number]
+                @anchorCorner=[string] 
+                @position=["fixed"|"absolute"]
+                @left=number
+                @top=number />
 ```
 
 ### Attributes
 
-* `open` - Trigger the surface to open.
-* `anchor` - Optional anchor point for the menu surface. Default is `"parent"`, but can also be `"body"`.
-* `quickOpen` - Enable quick open.
-* `position` - Optional position of the menu surface.
-* `positionLeft` - Left position of the menu (works only in absolute mode).
-* `positionTop` - Top position of the menu (works only in absolute mode).
+* `open` - Trigger the surface to open
+* `quickOpen` - Enable quick open
+* `anchor` - Optional anchor point for the menu surface
+* `anchorMargin` - Margin between the menu surface and anchor
+* `anchorCorner` - Corner of achor element to affix menu surface
+* `position` - Either "fixed" or "absolute"
+* `left` - Left position of the menu (works only in absolute mode)
+* `top` - Top position of the menu (works only in absolute mode)
 
-MenuSurface
----------------------
+mdc-menu-surface-anchor
+-------------------------
 
 ### Description
 
-Convert an existing component into a menu surface.
+The `{{mdc-menu-surface-anchor}}` modifier defines the anchor element for a menu.
 
 ### Usage
 
 ```javascript
-import MenuSurface from 'ember-cli-mdc-menu-surface/mixins/menu-surface';
-import Component from '@ember/component';
-
-export default Component.extend (MenuSurface, {
-
-});
+<div class="toolbar" {{mdc-menu-surface-anchor}}>
+  <button {{on "click" this.toggleMenu}}>Open Menu</button>
+ 
+  <MdcMenuSurface @open={{this.openMenu}}>
+    <!-- -->
+  </MdcMenuSurface>
+</div>
 ```
-
-### Methods
-
-The component must implement the following methods:
-
-* `setAbsolutePosition (x, y)`
-* `hoistMenuToBody ()`
-* `doOpen (open)`
-* `doQuickOpen`

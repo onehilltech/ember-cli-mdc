@@ -717,17 +717,23 @@
   dependencies:
     "@glimmer/di" "^0.2.0"
 
-"@material/feature-targeting@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-3.1.0.tgz#a6f6cacd1e0c9b60dc82f2f3bb2de8cfd472252b"
-  integrity sha512-aXAa1Pv6w32URacE9LfMsl9zI6hFwx1K0Lp3Xpyf4rAkmaAB6z0gOkhicOrVFc0f64YheJgHjE7hJFieVenQdw==
+"@material/feature-targeting@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-6.0.0.tgz#8dcfc470f3c5b8c7e1bc04bb86b062a640ff03a0"
+  integrity sha512-REj9VJnqkGwpngffc/iHGPt8WTF27QFPWDD8VBNXaP+MmnpIu7V5q5JMoozKzG5uk+hVryzam1i2PJHztizDXg==
 
-"@material/shape@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-3.1.0.tgz#7ccac6606d0ae45b779b3e52b8921c09c2b2f429"
-  integrity sha512-Oyvs7YjHfByA0e9IVVp7ojAlPwgSu3Bl0cioiE0OdkidkAaNu0izM2ryRzMBDH5o8+lRD0kpZoT+9CVVCdaYIg==
+"@material/rtl@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@material/rtl/-/rtl-6.0.0.tgz#e8114194af72f7496ca2fc5b4ee63981c46f5066"
+  integrity sha512-/WkzlUm3qylWMqv7Lw7ColZ8DYvEvTXtevxxz7PKM1hT9FNlbO1/Qywvda4VUtXivEeynXEqeT1T/ZYHV9yDVw==
+
+"@material/shape@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@material/shape/-/shape-6.0.0.tgz#ac81470b2fcc160cbcf2f6b2ce933c0598046f8f"
+  integrity sha512-tZT9GGWI3QcOtyfJ07Hc3noP2b5Bvx2npx/aj+k7gEIkE06mzr08dVnVOup8z8HbHWIenxRJgdeF5+lAfBE3vw==
   dependencies:
-    "@material/feature-targeting" "^3.1.0"
+    "@material/feature-targeting" "^6.0.0"
+    "@material/rtl" "^6.0.0"
 
 "@types/minimatch@^3.0.3":
   version "3.0.3"
@@ -2789,14 +2795,14 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mdc-sass@^0.80.0:
-  version "0.80.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-0.80.0.tgz#053f469e0d788131fbb7b379512a302eacf026ad"
-  integrity sha512-37JK0T91wB5UeHehtTmY/Ba7ClHjeUn8Wc4BvZo0Z3ajBmNaOQwhSbHGZOfHiHIjdETwd5JnDklfEeAeeTaGmw==
+ember-cli-mdc-sass@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-mdc-sass/-/ember-cli-mdc-sass-1.0.0.tgz#9d78fd5b4fdb014c7eeec4214e5e6e564b0d1fab"
+  integrity sha512-3OYRGFvy4cLZFDPagpSkO144mlObPE3OPwWoXtzdQcCi7MnW93cqNj99Bo8c9J84/DRMN3gmb2Bg37rMvuZUwg==
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.1"
-    ember-cli-babel "^6.6.0"
+    ember-cli-babel "^7.7.3"
     ember-cli-blueprint-helpers "^0.4.5"
 
 ember-cli-normalize-entity-name@^1.0.0:

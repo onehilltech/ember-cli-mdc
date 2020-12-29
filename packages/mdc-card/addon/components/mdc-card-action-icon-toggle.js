@@ -1,6 +1,7 @@
 import IconButtonToggleComponent from 'ember-cli-mdc-icon-button/components/mdc-icon-button-toggle';
-import CardAction from '../mixins/card-action';
 
-export default IconButtonToggleComponent.extend (CardAction, {
-  classNames: ['mdc-card__action--icon']
-});
+export default class MdcCardActionIconToggleComponent extends IconButtonToggleComponent {
+  get type () {
+    return 'mdc-card__action mdc-card__action--icon';
+  }
+}

@@ -1,0 +1,17 @@
+<button class="mdc-button {{this.style}} {{this.kind}}" {{did-insert this.didInsert}} ...attributes>
+  <div class="mdc-button__ripple"></div>
+
+  {{#if @leadingIcon}}
+    <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{/if}}
+
+  {{#if (has-block)}}
+    <span class="mdc-button__label">{{yield}}</span>
+  {{else}}
+    <span class="mdc-button__label">{{@label}}</span>
+  {{/if}}
+
+  {{#if @trailingIcon}}
+    <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{/if}}
+</button>

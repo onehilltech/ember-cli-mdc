@@ -8,53 +8,42 @@ Installation
 
     ember install ember-cli-mdc-typography
 
-Usage
+Components & Modifiers
 -----------------------
 
-### Mixins
+* [`{{mdc-typography}}`](#mdc-typography)
 
-* [`Typography`](#typography-mixin)
+### mdc-typography
 
-### Other Topics
-* [Configuring automatic integration](#configuring-automatic-integration)
-* [Roboto Font](#roboto-font)
-
-Typography Mixin
-------------------
-
-The `Typography` mixin, when applied to a component, adds a `typography` attribute
+The `{{mdc-typography}}` modifier, when applied to an element, adds a `typography` attribute
 to the component. The typography attribute allows you to programmatically customize
 the typography of the component.
 
-```javascript
-// app/components/mdc-foo
-import Component from '@ember/component';
-import Typography from 'ember-cli-mdc-typography/mixins/typography';
-
-export default Component.extend (Typography, {
- 
-});
-```
-
-The `typography` attribute must be one of the following values:
-
-* headline1
-* headline2
-* headline3
-* headline4
-* headline5
-* headline6
-* subtitle1
-* subtitle2
-* body1
-* body2
-* caption
-* button
-* overline
-
 ```handlebars
-{{mdc-foo typography="headline4"}}
+<div {{mdc-typography typography}}></div>
 ```
+
+The `typography` value must be one of the following values:
+
+* `headline1`
+* `headline2`
+* `headline3`
+* `headline4`
+* `headline5`
+* `headline6`
+* `subtitle1`
+* `subtitle2`
+* `body1`
+* `body2`
+* `caption`
+* `button`
+* `overline`
+
+Other Topics
+-------------------
+ 
+* [Configuring automatic integration](#configuring-automatic-integration)
+* [Roboto Font](#roboto-font)
 
 Configuring Automatic Integration
 ------------------------------------

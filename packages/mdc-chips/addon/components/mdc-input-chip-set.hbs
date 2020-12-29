@@ -1,0 +1,20 @@
+<div class="mdc-chip-set mdc-chip-set--input {{this.label}}" role="grid"
+  {{did-insert this.didInsert}}
+  {{did-update this.sync this.syncKey}} ...attributes>
+
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#each @chips as |chip index|}}
+      <MdcChip @id={{get chip this.idKey}}
+               @text={{get chip this.textKey}}
+               @leadingIcon={{get chip this.leadingIconKey}}
+               @trailingIcon="cancel"
+               @tabindex={{index}}
+               @remove={{this.removeChip}} />
+    {{/each}}
+  {{/if}}
+
+  <input class="mdc-chip-set__input" {{on "keydown" this.createChip}} placeholder={{@placeholder}} type={{@type}} />
+
+</div>

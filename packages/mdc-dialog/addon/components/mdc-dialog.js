@@ -1,142 +1,116 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-dialog';
-import { or } from '@ember/object/computed';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
+
 import { isPresent } from '@ember/utils';
-import { getWithDefault } from '@ember/object';
+import { action, getWithDefault } from '@ember/object';
 
-const MDCDialog = mdc.dialog.MDCDialog;
+import { guidFor } from '@ember/object/internals';
 
-function noOp () {
+const { MDCDialog } = mdc.dialog;
 
-}
+function noOp () { }
 
-export default Component.extend({
-  layout,
+export default class MdcDialogComponent extends Component {
+  prepareDialogSurface (element) {
+    // Set the id for the title element, it present.
+    let guid = guidFor (element);
+    let titleElement = element.querySelector ('.mdc-dialog__title');
 
-  tagName: 'div',
+    if (isPresent (titleElement)) {
+      titleElement.id = `${guid}__title`;
+      element.setAttribute ('aria-labelledby', titleElement.id);
+    }
 
-  classNames: ['mdc-dialog'],
+    let contentElement = element.querySelector ('.mdc-dialog__content');
 
-  classNameBindings: ['stackButtons:mdc-dialog--stacked'],
+    if (isPresent (contentElement)) {
+      contentElement.id = `${guid}__content`;
+      element.setAttribute ('aria-describedby', contentElement.id);
+    }
+  }
 
-  scrollable: false,
+  doCreateComponent (element) {
+    return new MDCDialog (element);
+  }
 
-  stackButtons: false,
+  doInitComponent (dialog) {
+    const { autoStackButtons = true, open, escapeKeyAction, scrimClickAction } = this.args;
 
-  hasActions: or ('positiveButton', 'negativeButton'),
+    dialog.autoStackButtons = autoStackButtons;
+    dialog.escapeKeyAction = escapeKeyAction;
+    dialog.scrimClickAction = scrimClickAction;
 
-  _dialog: undefined,
+    this._openOrCloseDialog (open);
+  }
 
-  _willOpenEventListener: undefined,
-  _didOpenEventListener: undefined,
 
-  _willCloseEventListener: undefined,
-  _didCloseEventListener: undefined,
+  get hasActions () {
+    const { positiveButton, negativeButton } = this.args;
+    return isPresent (positiveButton) || isPresent (negativeButton);
+  }
 
-  _contentElement: undefined,
-
-  init () {
-    this._super (...arguments);
-
-    this._willOpenEventListener = this.willOpen.bind (this);
-    this._didOpenEventListener = this.didOpen.bind (this);
-
-    this._willCloseEventListener = this.willClose.bind (this);
-    this._didCloseEventListener = this.didClose.bind (this);
-  },
-
-  didUpdateAttrs () {
-    this._super (...arguments);
-    this._showOrCloseDialog ();
-  },
+  @action
+  open (element, [open]) {
+    this._openOrCloseDialog (open);
+  }
 
   /**
    * Either show or close the dialog depending on the value of the show property.
    *
    * @private
    */
-  _showOrCloseDialog () {
-    if (this.get ('show')) {
-      if (!this._dialog.isOpen)
-        this._dialog.open ();
+  _openOrCloseDialog (open) {
+    if (open) {
+      if (!this.component.isOpen) {
+        this.component.open ();
+      }
     }
     else {
-      if (this._dialog.isOpen)
-        this._dialog.close ();
+      if (this.component.isOpen) {
+        this.component.close ();
+      }
     }
-  },
+  }
 
-  didInsertElement () {
-    this._super (...arguments);
+  @listener ('MDCDialog:opening')
+  opening () {
+    (this.args.opening || noOp)();
+  }
 
-    this._dialog = new MDCDialog (this.element);
-    this._dialog.listen ('MDCDialog:opening', this._willOpenEventListener);
-    this._dialog.listen ('MDCDialog:opened', this._didOpenEventListener);
-    this._dialog.listen ('MDCDialog:closing', this._willCloseEventListener);
-    this._dialog.listen ('MDCDialog:closed', this._didCloseEventListener);
+  @listener ('MDCDialog:opened')
+  opened () {
+    (this.args.opened || noOp)();
+  }
 
-    this._contentElement = this.element.querySelector ('.mdc-dialog__content');
-
-    if (this.get ('show')) {
-      this._dialog.open ();
-    }
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._dialog.unlisten ('MDCDialog:opening', this._willOpenEventListener);
-    this._dialog.unlisten ('MDCDialog:opened', this._didOpenEventListener);
-    this._dialog.unlisten ('MDCDialog:closing', this._willCloseEventListener);
-    this._dialog.unlisten ('MDCDialog:closed', this._didCloseEventListener);
-
-    this._dialog.destroy ();
-  },
-
-  willOpen () {
-    this.getWithDefault ('opening', noOp) ();
-  },
-
-  didOpen () {
-    // Implement the accessibility recommendations. For more details, see
-    // https://github.com/material-components/material-components-web/tree/v2.0.0/packages/mdc-dialog#accessibility
-
-    if (isPresent (this._contentElement)) {
-      this._contentElement.setAttribute('aria-hidden', 'true');
-    }
-
-    this.getWithDefault ('opened', noOp) ();
-  },
-
-  willClose ({detail: {action}}) {
-    // Implement the accessibility recommendations. For more details, see
-    // https://github.com/material-components/material-components-web/tree/v2.0.0/packages/mdc-dialog#accessibility
-
-    if (isPresent (this._contentElement)) {
-      this._contentElement.removeAttribute ('aria-hidden');
-    }
-
-    let button = this._getButtonFromAction (action);
+  @listener ('MDCDialog:closing')
+  closing ({detail: { action }}) {
+    let button = this._lookupButton (action);
 
     if (isPresent ((button))) {
       getWithDefault (button, 'closing', noOp) ();
     }
-  },
+  }
 
-  didClose ({detail: {action}}) {
-    this.set ('show', false);
-
-    let button = this._getButtonFromAction (action);
+  @listener ('MDCDialog:closed')
+  closed ({detail: { action }}) {
+    let button = this._lookupButton (action);
 
     if (isPresent ((button))) {
       getWithDefault (button, 'closed', noOp) ();
     }
-  },
+  }
 
-  _getButtonFromAction (action) {
-    const { positiveButton, negativeButton } = this.getProperties (['positiveButton', 'negativeButton']);
+  /**
+   * Lookup the button for the given action.
+   *
+   * @param action
+   * @returns {*}
+   * @private
+   */
+  _lookupButton (action) {
+    const { positiveButton, negativeButton } = this.args;
 
     if (!!positiveButton && positiveButton.action === action) {
       return positiveButton;
@@ -145,4 +119,4 @@ export default Component.extend({
       return negativeButton;
     }
   }
-});
+}

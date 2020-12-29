@@ -1,6 +1,6 @@
-{{#issue7-menu open=open as |menu|}}
-  {{mdc-slider min=0 max=100 value=50 requestLayout=menu.isOpenComplete}}
-{{/issue7-menu}}
+<Issue7Menu @open={{open}} as |menu|>
+  <MdcSlider @min={{0}} @max={{100}} @value={{50}} @requestLayout={{menu.isOpenComplete}} />
+</Issue7Menu>
 
 {{#unless open}}
   <button {{action (mut open) true}}>open</button>

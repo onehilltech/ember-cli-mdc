@@ -1,120 +1,160 @@
 /* global mdc */
 
-import Component from '@ember/component';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
-import layout from '../templates/components/mdc-select';
-
-import { isEmpty, isPresent } from '@ember/utils';
-import { computed } from '@ember/object';
-import { equal } from '@ember/object/computed';
-
-import { assert } from '@ember/debug';
+import { tracked } from '@glimmer/tracking';
 
 import { A } from '@ember/array';
+import { isEmpty, isPresent, isNone } from '@ember/utils';
+import { guidFor } from '@ember/object/internals';
+import { action, get } from '@ember/object';
 
-const STYLES = ['box', 'outlined'];
+const { MDCSelect } = mdc.select;
 
-export default Component.extend({
-  layout,
+function noOp () { }
 
-  classNames: ['mdc-select'],
+export default class MdcSelectComponent extends Component {
+  _input;
 
-  classNameBindings: ['disabled:mdc-select--disabled', 'styleClassName', 'isOutlined:mdc-select--outlined'],
+  doPrepareElement (element) {
+    const { value: option } = this.args;
 
-  style: null,
+    this.labelId = guidFor (this);
+    this.helperId = `${guidFor (this)}__helper-text`;
 
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
+    if (isPresent (option)) {
+      // We need to pre-select the option.
+      let value = get (option, this.valueKey);
+      let text = get (option, this.textKey);
 
-    if (isEmpty (style)) {
-      return null;
+      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+
+      if (isPresent (listItem)) {
+        listItem.classList.add ('mdc-list-item--selected');
+      }
+
+      let textElement = element.querySelector ('.mdc-select__selected-text');
+      textElement.value = text;
     }
+  }
 
-    assert (`The style attribute must be one of the following values: ${STYLES}`, STYLES.includes (style));
-    return `mdc-select--${style}`;
-  }),
+  doCreateComponent (element) {
+    return new MDCSelect (element);
+  }
 
-  firstOptionIsEmpty: false,
+  doInitComponent (component) {
+    const { required = false } = this.args;
+    component.required = required;
+  }
 
-  isOutlined: equal ('style', 'outlined'),
+  get isOutlined () {
+    return this.args.style === 'outlined';
+  }
 
-  _select: null,
+  @tracked
+  labelId;
 
-  _changeEventListener: null,
+  @tracked
+  helperId;
 
-  _lastState: null,
+  @listener ('MDCSelect:change')
+  change (ev) {
+    // Notify the client the value has changed.
+    const { detail: { value } } = ev;
 
-  init () {
-    this._super (...arguments);
+    // Validate the control.
+    this._validate ();
 
-    this._changeEventListener = this.didChange.bind (this);
-  },
+    // Pass control to the subclass.
+    this.didChange (ev);
 
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._select = new mdc.select.MDCSelect (this.element);
-    this._select.listen ('change', this._changeEventListener);
-
-    let { value, selectedIndex, options } = this.getProperties (['value', 'selectedIndex', 'options']);
-
-    if (isPresent (value)) {
-      this._select.value = value;
-    }
-    else if (isPresent (selectedIndex)) {
-      this._select.selectedIndex = selectedIndex;
+    if (isEmpty (value)) {
+      // There is no value selected. This means we are clearing the selection.
+      (this.args.change || noOp) (null);
     }
     else {
-      // Check if any of the options is initially selected. This method of selecting
-      // has lower precedence than the other methods for selecting the initial value.
+      let selected = this.options.find (option => `${get (option, this.valueKey)}` === value);
+      (this.args.change || noOp) (selected);
+    }
+  }
 
-      function findSelection (result, option) {
-        return !!result ? result : (option.selected ? option.value : (option.group ? option.options.reduce (findSelection, result) : null));
+  didChange (ev) {
+
+  }
+
+  @action
+  select (element, [option]) {
+    if (isPresent (option)) {
+      this.component.value = get (option, this.valueKey);
+    }
+    else {
+      this.component.value = null;
+    }
+
+    // Validate the control.
+    this._validate ();
+  }
+
+  _validate () {
+    if (this.component.valid) {
+      this.validationMessage = null;
+    }
+    else {
+      if (this.component.required) {
+        this.validationMessage = this.requiredMessage;
       }
-
-      const selection = options.reduce (findSelection, undefined);
-
-      if (isPresent (selection)) {
-        this._select.value = selection;
-        this.set ('value', selection);
-      }
     }
+  }
 
-    // Save the value and selected index as our last state.
-    this._lastState = { value, selectedIndex };
-  },
+  get required () {
+    return this.args.required;
+  }
 
-  didUpdateAttrs () {
-    this._super (...arguments);
+  get options () {
+    return A (this.args.options);
+  }
 
-    let { value, selectedIndex } = this.getProperties (['value', 'selectedIndex']);
+  get leadingIconClick () {
+    return this.args.leadingIconClick || noOp;
+  }
 
-    if (value !== this._lastState.value) {
-      this._select.value = value;
-      this._lastState.value = value;
-    }
+  get trailingIconClick () {
+    return this.args.trailingIconClick || noOp;
+  }
 
-    if (selectedIndex !== this._lastState.selectedIndex) {
-      this._select.selectedIndex = selectedIndex;
-      this._lastState.selectedIndex = selectedIndex;
-    }
-  },
+  @tracked
+  validationMessage;
 
-  willDestroyElement () {
-    this._super (...arguments);
+  get helperLine () {
+    return isPresent (this.helperText);
+  }
 
-    this._select.unlisten ('change', this._changeEventListener);
-    this._select.destroy ();
-  },
+  get helperText () {
+    let { errorMessage, helperText } = this.args;
+    return errorMessage || this.validationMessage || helperText;
+  }
 
-  didChange ({ target: { value, selectedIndex }}) {
-    this.setProperties ({value, selectedIndex});
-  },
+  get persistentHelperText () {
+    let { persistentHelperText, errorMessage } = this.args;
+    return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
+  }
 
-  options: computed ('params.[]', function () {
-    let params = this.get ('params');
-    return isPresent (params) ? params[0] : A ();
-  })
-}).reopenClass ({
-  positionalParams: 'params'
-});
+  get requiredMessage () {
+    return this.args.requiredMessage || 'This field is required.';
+  }
+
+  /// Adapter attributes
+
+  get valueKey () {
+    return this.args.valueKey || 'value';
+  }
+
+  get textKey () {
+    return this.args.textKey || 'text';
+  }
+
+  get disabledKey () {
+    return this.args.disabledKey || 'disabled';
+  }
+}

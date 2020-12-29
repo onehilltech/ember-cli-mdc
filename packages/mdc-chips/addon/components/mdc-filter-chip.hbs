@@ -1,0 +1,23 @@
+<div id={{@id}} class="mdc-chip" role="row" {{did-insert this.didInsert}}>
+  <div class="mdc-chip__ripple"></div>
+  {{#if @leadingIcon}}
+    <MdcIcon class="mdc-chip__icon mdc-chip__icon--leading" @icon={{@leadingIcon}} {{did-insert this.hideLeadingIcon}} />
+  {{/if}}
+  {{#if @checked}}
+    <span class="mdc-chip__checkmark">
+      <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+        <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+    </span>
+  {{/if}}
+  <span role="gridcell">
+    <span role="checkbox" tabindex={{this.tabindex}} aria-checked={{@checked}} class="mdc-chip__primary-action">
+      <span class="mdc-chip__text">{{@text}}</span>
+    </span>
+  </span>
+  {{#if @trailingIcon}}
+    <span role="gridcell">
+      <MdcIcon class="mdc-chip__icon mdc-chip__icon--trailing" @icon={{@trailingIcon}} tabindex="-1" role="button" />
+    </span>
+  {{/if}}
+</div>

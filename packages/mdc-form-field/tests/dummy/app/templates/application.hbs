@@ -1,16 +1,16 @@
 <h2 id="title">Welcome to Ember</h2>
 
-<div>
-  {{#mdc-form-field}}
+<div style="margin-bottom: 16px">
+  <MdcFormField>
     <input id="checkbox1" type="checkbox" />
     <label for="checkbox1">This is a label</label>
-  {{/mdc-form-field}}
+  </MdcFormField>
 </div>
 
 
 <div>
-  {{#mdc-form-field alignEnd=true}}
+  <MdcFormField @alignEnd={{true}}>
     <input id="checkbox2" type="checkbox" />
     <label for="checkbox2">This is a label (align end)</label>
-  {{/mdc-form-field}}
+  </MdcFormField>
 </div>

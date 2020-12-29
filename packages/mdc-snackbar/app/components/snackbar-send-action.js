@@ -1,1 +1,0 @@
-export { default } from 'ember-cli-mdc-snackbar/components/snackbar-send-action';

@@ -1,14 +1,15 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-radio-buttons';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  layout,
+export default class MdcRadioButtonsComponent extends Component {
+  @action
+  changed (ev) {
+    const { target } = ev;
 
-  classNames: 'mdc-radio-buttons',
-
-  actions: {
-    change ({target}) {
-      this.set ('value', target.value);
-    }
+    this.change (target.value);
   }
-});
+
+  get change () {
+    return this.args.change || function () {}
+  }
+}

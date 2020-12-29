@@ -1,11 +1,14 @@
 import Controller from '@ember/controller';
 
-export default Controller.extend({
-  exited: false,
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
-  actions: {
-    toggleExited () {
-      this.toggleProperty ('exited');
-    }
+export default class ApplicationController extends Controller {
+  @tracked
+  exited = false;
+
+  @action
+  toggleExited () {
+    this.exited = !this.exited;
   }
-});
+}

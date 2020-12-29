@@ -1,5 +1,9 @@
 <h2 id="title">Welcome to Ember</h2>
 
-<div class="notch__parent">
-  {{mdc-notched-outline class="notch__child" notched=notched}}
+<div class="notched">
+  <MdcNotchedOutline @label="Notched Outline" @notched={{this.notched}} />
+</div>
+
+<div class="actions">
+  <button {{on "click" this.toggleNotch}}>{{if this.notched "Turn off notch" "Turn on notch"}}</button>
 </div>

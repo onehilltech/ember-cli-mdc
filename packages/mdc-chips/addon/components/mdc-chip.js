@@ -1,19 +1,25 @@
-import Component from '@ember/component';
-import ChipMixin from '../mixins/chip';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
 
-import layout from '../templates/components/mdc-chip';
-import { computed } from '@ember/object';
+function noOp () {}
 
-export default Component.extend (ChipMixin, {
-  layout,
+export default class MdcChipComponent extends Component {
+  _chipElement;
 
-  didInsertElement () {
-    this._super (...arguments);
+  doPrepareElement (element) {
+    this._chipElement = element;
+  }
 
-    this.get ('parentChipSet').addChip (this);
-  },
+  get element () {
+    return this._chipElement;
+  }
 
-  parentChipSet: computed (function () {
-    return this.parentView;
-  }).volatile ()
-});
+  get tabindex () {
+    return this.args.tabindex || 0;
+  }
+
+  @action
+  remove () {
+    (this.args.remove || noOp)(this);
+  }
+}

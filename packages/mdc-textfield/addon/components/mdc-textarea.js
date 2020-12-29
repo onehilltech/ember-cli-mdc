@@ -1,44 +1,45 @@
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-textarea';
+import Component from 'ember-cli-mdc-base/component';
 
-import { computed } from '@ember/object';
-import { not } from '@ember/object/computed';
+import { tracked } from '@glimmer/tracking';
+import { isPresent } from '@ember/utils';
+import { guidFor } from '@ember/object/internals';
 
-import { inject as service } from '@ember/service';
+const { MDCTextField } = mdc.textfield;
 
-import TextSupport from '../mixins/text-support';
+export default class MdcTextareaComponent extends Component {
+  @tracked
+  labelId;
 
-export default Component.extend (TextSupport, {
-  layout,
+  @tracked
+  helperId;
 
-  classNames: ['mdc-text-field--textarea'],
-  classNameBindings: ['fullWidth:mdc-text-field--fullwidth'],
+  doPrepareElement (element) {
+    let { value } = this.args;
 
-  fullWidth: false,
-  notFullWidth: not ('fullWidth'),
+    if (isPresent (value)) {
+      element.classList.add ('mdc-text-field--label-floating');
+    }
 
-  _defaultConfig: service ('mdc-textarea-configurator'),
-
-  textAreaId: computed (function () {
-    return `${this.elementId}-textarea`;
-  }),
-
-  // Reference to the floating label. There are cases where we need to manage
-  // its state due to the possibility of the text fields value being dynamic
-  // updated by some external source.
-  _textarea: null,
-
-  didCreateComponent () {
-    this._super (...arguments);
-
-    this._textarea = this.element.querySelector ('textarea');
-  },
-
-  willDestroyComponent () {
-    this._textarea = undefined;
-  },
-
-  _getNativeInput () {
-    return this._textarea;
+    this.labelId = guidFor (this);
+    this.helperId = `${guidFor (this)}__helper-text`;
   }
-});
+
+  doCreateComponent (element) {
+    return new MDCTextField (element);
+  }
+
+  get helperLine () {
+    let { characterCount = false } = this.args;
+    return isPresent (this.helperText) || characterCount;
+  }
+
+  get helperText () {
+    let { errorMessage, helperText } = this.args;
+    return errorMessage || helperText;
+  }
+
+  get persistentHelperText () {
+    let { persistentHelperText, errorMessage } = this.args;
+    return isPresent (errorMessage) || persistentHelperText;
+  }
+}

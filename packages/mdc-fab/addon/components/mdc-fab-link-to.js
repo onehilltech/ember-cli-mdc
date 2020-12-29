@@ -1,8 +1,7 @@
 import LinkComponent from '@ember/routing/link-component';
-import layout from '../templates/components/mdc-fab';
 
-import FabMixin from '../mixins/fab';
+export default LinkComponent.extend ({
+  classNames: ['mdc-fab'],
 
-export default LinkComponent.extend (FabMixin, {
-  layout
-});
+  classNameBindings: ['label:mdc-fab--extended', 'exited:mdc-fab--exited', 'mini:mdc-fab--mini']
+})

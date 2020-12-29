@@ -1,7 +1,6 @@
-import IconButton from 'ember-cli-mdc-icon-button/components/mdc-icon-button';
+import IconButtonComponent from 'ember-cli-mdc-icon-button/components/mdc-icon-button';
 
-export default IconButton.extend({
-  classNames: ['mdc-top-app-bar__navigation-icon'],
+export default class MdcTopAppBarNavigationIconComponent extends IconButtonComponent {
+  type ='mdc-top-app-bar__navigation-icon';
+}
 
-  icon: 'menu'
-});

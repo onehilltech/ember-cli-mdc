@@ -1,1 +1,0 @@
-export { default } from 'ember-cli-mdc-slider/components/mdc-slider-focus-ring';

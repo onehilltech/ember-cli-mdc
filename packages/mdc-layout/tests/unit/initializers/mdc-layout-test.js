@@ -2,12 +2,9 @@ import Application from '@ember/application';
 
 import { initialize } from 'dummy/initializers/mdc-layout';
 import { module, test } from 'qunit';
-import { setupTest } from 'ember-qunit';
 import { run } from '@ember/runloop';
 
 module('Unit | Initializer | mdc-layout', function(hooks) {
-  setupTest(hooks);
-
   hooks.beforeEach(function() {
     this.TestApplication = Application.extend();
     this.TestApplication.initializer({

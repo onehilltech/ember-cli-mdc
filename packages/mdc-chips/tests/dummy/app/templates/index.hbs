@@ -1,51 +1,67 @@
-<h3>Basic Chips</h3>
+<h2>Basic Chips</h2>
 
-<h5>Block</h5>
+<h3>Block</h3>
 
-{{#mdc-chip-set}}
-  {{mdc-chip text="Chip content"}}
-  {{mdc-chip text="Leading icon" iconLeading="event"}}
-  {{mdc-chip text="Trailing icon" iconTrailing="cancel"}}
 
-  {{#each dynamicChips as |chip|}}
-    {{mdc-chip text=chip.text iconTrailing="cancel"}}
-  {{/each}}
-{{/mdc-chip-set}}
+<MdcChipSet>
+  <MdcChip @text="Chip content" />
+  <MdcChip @text="Leading icon" @leadingIcon="event" />
+  <MdcChip @text="Trailing icon" @trailingIcon="cancel" />
+</MdcChipSet>
 
-<form onsubmit={{action "submit"}}>
-  {{input value=chipLabel}}
+
+<h3>Inline / Dynamic</h3>
+
+<MdcChipSet @chips={{this.chips}} />
+
+<p>Length: {{this.chips.length}}</p>
+
+<p><form onsubmit={{this.submit}}>
+  <Input @value={{this.chipLabel}} />
 
   <button type="submit">Add Chip</button>
-</form>
+</form></p>
 
-<h5>Inline</h5>
+<h4>Custom Keys</h4>
 
-{{mdc-chip-set chips=basicChips}}
+<MdcChipSet @chips={{this.customKeyChips}} @textKey="name" @label="Names" />
+<p>Length: {{this.customKeyChips.length}}</p>
+
 
 <h3>Choice Chips</h3>
 
-{{mdc-choice-chip-set chips=choiceChips value=choice}}
+<MdcChoiceChipSet @chips={{this.choiceChips}} @choice={{this.choice}} @change={{this.change}} />
 
-<button {{action (mut choice) "extra_small"}}>Make Extra Small</button>
-<button {{action (mut choice) null}}>Clear Choice</button>
+<p>
+  <button {{on "click" this.selectExtraSmall}}>Make Extra Small</button>
+  <button {{on "click" this.clear}}>Clear Choice</button>
+</p>
 
-<div>Selected Value: {{choice}}</div>
+<p>Selected Value: {{this.choice.id}}</p>
+
 
 <h3>Filter Chips</h3>
 
-{{mdc-filter-chip-set chips=filterChips value=filtered}}
+<MdcFilterChipSet @chips={{this.filterChips}} @filtered={{this.filtered}} />
 
 <ul>
-  {{#each names as |id|}}
-    <li>{{id}}</li>
+  {{#each this.filtered as |chip|}}
+    <li>{{chip.text}}</li>
   {{/each}}
 </ul>
 
-<p>Filter Count: {{filterChips.length}}</p>
+<p>Filter Count: {{this.filtered.length}}</p>
+
+<p>
+  <button {{on "click" this.replaceFiltered}}>Set Chips</button>
+  <button {{on "click" this.addToFiltered}}>Add last chip</button>
+</p>
+
 
 <h3>Input Chips</h3>
 
-{{#mdc-textfield style="outlined"}}
-  {{mdc-input-chip-set chips=chips enter=(action "makeInputChip")}}
-  {{mdc-notched-outline label="Tags" notched=true}}
-{{/mdc-textfield}}
+<MdcInputChipSet class="addresses"
+                 @chips={{this.inputChips}}
+                 @input={{this.input}}
+                 @type="email"
+                 @placeholder="Type name here" />

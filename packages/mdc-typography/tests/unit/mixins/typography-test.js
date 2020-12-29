@@ -4,7 +4,7 @@ import { setupTest } from 'ember-qunit';
 import { Typography } from 'ember-cli-mdc-typography';
 import Object from '@ember/object';
 
-module ('-internal | Mixins | Theme', function (hooks) {
+module('-internal | Mixins | Theme', function (hooks) {
   setupTest (hooks);
 
   test ('should update the mdcTypographyClassName', function (assert) {

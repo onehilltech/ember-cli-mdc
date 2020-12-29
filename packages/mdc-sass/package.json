@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-sass",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "ember-cli addon for integrating SASS into ember-cli-mdc.",
   "keywords": [
     "ember-addon",
@@ -30,7 +30,8 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.1",
     "ember-cli-babel": "^7.7.3",
-    "ember-cli-blueprint-helpers": "^0.4.6"
+    "ember-cli-blueprint-helpers": "^0.4.7",
+    "ember-cli-mdc-utils": "^2.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
@@ -57,12 +58,13 @@
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
     "qunit-dom": "^0.6.2",
-    "sass": "1.13.4"
+    "sass": "^1.26.7"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677"
 }

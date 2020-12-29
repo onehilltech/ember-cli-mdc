@@ -3,230 +3,232 @@
 <h3 class="mdc-typography--headline5">Single-line items</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
+  <MdcList>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
     {{#mdc-list-item-link-to "linkto"}}Single-line Link-To item{{/mdc-list-item-link-to}}
-  {{/mdc-list}}
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Leading icon</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}{{mdc-list-item-graphic-icon "wifi"}} Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}{{mdc-list-item-graphic-icon "bluetooth"}} Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}{{mdc-list-item-graphic-icon "data_usage"}} Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem><MdcListItemGraphicIcon @icon="wifi" /> Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemGraphicIcon @icon="bluetooth" /> Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemGraphicIcon @icon="data_usage" /> Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Trailing icon</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Single-line item {{mdc-list-item-meta-icon "info"}}{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item {{mdc-list-item-meta-icon "info"}}{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item {{mdc-list-item-meta-icon "info"}}{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
+    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Two-Line with Leading and Trailing Icon and Divider</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list twoLine=true avatarList=true}}
-    {{#mdc-list-item}}
-      {{mdc-list-item-graphic-icon "folder"}}
+  <MdcList @twoLine={{true}} @avatarList={{true}}>
+    <MdcListItem>
+      <MdcListItemGraphicIcon @icon="folder" />
+      <MdcListItemText>
+        <MdcListItemPrimaryText>Dog Photos</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>9 Jan 2018</MdcListItemSecondaryText>
+      </MdcListItemText>
+      <MdcListItemMetaIcon @icon="info" />
+    </MdcListItem>
 
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}Dog Photos{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}9 Jan 2018{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-      {{mdc-list-item-meta-icon "info"}}
-    {{/mdc-list-item}}
+    <MdcListItem>
+      <MdcListItemGraphicIcon @icon="folder" />
+      <MdcListItemText>
+        <MdcListItemPrimaryText>Cat Photos</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>22 Dec 2017</MdcListItemSecondaryText>
+      </MdcListItemText>
+      <MdcListItemMetaIcon @icon="info" />
+    </MdcListItem>
 
-    {{#mdc-list-item}}
-      {{mdc-list-item-graphic-icon "folder"}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}Cat Photos{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}22 Dec 2017{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-      {{mdc-list-item-meta-icon "info"}}
-    {{/mdc-list-item}}
+    <MdcListDivider />
 
-    {{mdc-list-divider}}
+    <MdcListItem>
+      <MdcListItemGraphicIcon @icon="folder" />
+      <MdcListItemText>
+        <MdcListItemPrimaryText>Potatoes</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>30 Nov 2017</MdcListItemSecondaryText>
+      </MdcListItemText>
+      <MdcListItemMetaIcon @icon="info" />
+    </MdcListItem>
 
-    {{#mdc-list-item}}
-      {{mdc-list-item-graphic-icon "folder"}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}Potatoes{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}30 Nov 2017{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-      {{mdc-list-item-meta-icon "info"}}
-    {{/mdc-list-item}}
-
-    {{#mdc-list-item}}
-      {{mdc-list-item-graphic-icon "folder"}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}Carrots{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}17 Oct 2017{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-      {{mdc-list-item-meta-icon "info"}}
-    {{/mdc-list-item}}
-  {{/mdc-list}}
+    <MdcListItem>
+      <MdcListItemGraphicIcon @icon="folder" />
+      <MdcListItemText>
+        <MdcListItemPrimaryText>Carrots</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>17 Oct 2017</MdcListItemSecondaryText>
+      </MdcListItemText>
+      <MdcListItemMetaIcon @icon="info" />
+    </MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline5">Dense</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list dense=true}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList @dense={{true}}>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline5">Two-line List</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list twoLine=true}}
-    {{#mdc-list-item}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}First-line text{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}Second-line text{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-    {{/mdc-list-item}}
+  <MdcList @twoLine={{true}}>
+    <MdcListItem>
+      <MdcListItemText>
+        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
+      </MdcListItemText>
+    </MdcListItem>
 
-    {{#mdc-list-item}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}First-line text{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}Second-line text{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-    {{/mdc-list-item}}
+    <MdcListItem>
+      <MdcListItemText>
+        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
+      </MdcListItemText>
+    </MdcListItem>
 
-    {{#mdc-list-item}}
-      {{#mdc-list-item-text}}
-        {{#mdc-list-item-primary-text}}First-line text{{/mdc-list-item-primary-text}}
-        {{#mdc-list-item-secondary-text}}Second-line text{{/mdc-list-item-secondary-text}}
-      {{/mdc-list-item-text}}
-    {{/mdc-list-item}}
-  {{/mdc-list}}
+    <MdcListItem>
+      <MdcListItemText>
+        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
+      </MdcListItemText>
+    </MdcListItem>
+  </MdcList>
 </div>
 
 
 <h3 class="mdc-typography--headline5">List Groups</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list-group}}
-    {{#mdc-list-group-subheader}}List 1{{/mdc-list-group-subheader}}
-    {{#mdc-list}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{/mdc-list}}
-  {{/mdc-list-group}}
+  <MdcListGroup>
+    <MdcListGroupSubheader>List 1</MdcListGroupSubheader>
+    <MdcList>
+      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem>Single-line item</MdcListItem>
+    </MdcList>
+  </MdcListGroup>
 
-  {{#mdc-list-group}}
-    {{#mdc-list-group-subheader}}List 2{{/mdc-list-group-subheader}}
-    {{#mdc-list}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-      {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{/mdc-list}}
-  {{/mdc-list-group}}
+  <MdcListGroup>
+    <MdcListGroupSubheader>List 2</MdcListGroupSubheader>
+    <MdcList>
+      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem>Single-line item</MdcListItem>
+    </MdcList>
+  </MdcListGroup>
 </div>
 
 
 <h3 class="mdc-typography--headline5">List Dividers</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Item 1 - Division 1{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 1{{/mdc-list-item}}
-    {{mdc-list-divider}}
-    {{#mdc-list-item}}Item 1 - Division 2{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 2{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem>Item 1 - Division 1</MdcListItem>
+    <MdcListItem>Item 2 - Division 1</MdcListItem>
+    <MdcListDivider />
+    <MdcListItem>Item 1 - Division 2</MdcListItem>
+    <MdcListItem>Item 2 - Division 2</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Padded</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Item 1 - Division 1{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 1{{/mdc-list-item}}
-    {{mdc-list-divider padded=true}}
-    {{#mdc-list-item}}Item 1 - Division 2{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 2{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem>Item 1 - Division 1</MdcListItem>
+    <MdcListItem>Item 2 - Division 1</MdcListItem>
+    <MdcListDivider @padded={{true}} />
+    <MdcListItem>Item 1 - Division 2</MdcListItem>
+    <MdcListItem>Item 2 - Division 2</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Inset</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Item 1 - Division 1{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 1{{/mdc-list-item}}
-    {{mdc-list-divider inset=true}}
-    {{#mdc-list-item}}Item 1 - Division 2{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 2{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem>Item 1 - Division 1</MdcListItem>
+    <MdcListItem>Item 2 - Division 1</MdcListItem>
+    <MdcListDivider @inset={{true}} />
+    <MdcListItem>Item 1 - Division 2</MdcListItem>
+    <MdcListItem>Item 2 - Division 2</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline6">Inset and Padded</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-    {{#mdc-list-item}}Item 1 - Division 1{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 1{{/mdc-list-item}}
-    {{mdc-list-divider inset=true padded=true}}
-    {{#mdc-list-item}}Item 1 - Division 2{{/mdc-list-item}}
-    {{#mdc-list-item}}Item 2 - Division 2{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+    <MdcListItem>Item 1 - Division 1</MdcListItem>
+    <MdcListItem>Item 2 - Division 1</MdcListItem>
+    <MdcListDivider @inset={{true}} @padded={{true}} />
+    <MdcListItem>Item 1 - Division 2</MdcListItem>
+    <MdcListItem>Item 2 - Division 2</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline5">Single Selection</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list singleSelection=true}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList @singleSelection={{true}}>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline5">Pre-selected Single Selection</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list singleSelection=true}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item selected=true}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList @singleSelection={{true}}>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem @selected={{true}}>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
 <h3 class="mdc-typography--headline5">Non-interactive</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list interactive=false}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-    {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList @nonInteractive={{true}}>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+    <MdcListItem>Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
 
 <h3 class="mdc-typography--headline5">Disabled Items</h3>
 
 <div class="mdc-list-container">
-  {{#mdc-list}}
-  {{#mdc-list-item disabled=true}}Disabled Single-line item{{/mdc-list-item}}
-  {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{#mdc-list-item}}Single-line item{{/mdc-list-item}}
-  {{/mdc-list}}
+  <MdcList>
+  <MdcListItem @disabled={{true}}>Disabled Single-line item</MdcListItem>
+  <MdcListItem>Single-line item</MdcListItem>
+  <MdcListItem>Single-line item</MdcListItem>
+  </MdcList>
 </div>
 
+<!--
 <h3 class="mdc-typography--headline5">Radio List</h3>
 
-{{#mdc-radio-list}}
+<MdcRadioList>
 
-{{/mdc-radio-list}}
+</MdcRadioList>
+
+-->

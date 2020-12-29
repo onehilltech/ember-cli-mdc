@@ -1,141 +1,139 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-data-table';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
 const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
-import { computed, get } from '@ember/object';
-import { map, bool } from '@ember/object/computed';
-import { isPresent, isEmpty } from '@ember/utils';
+import { get } from '@ember/object';
+import { isPresent } from '@ember/utils';
 import { A } from '@ember/array';
+
+import { tracked } from "@glimmer/tracking";
+
+import isString from '../utils/is-string';
 
 function noOp () { }
 
-// This function is taken from lodash. Instead of importing the entire lodash library into the ember
-// application. We just need this one function.
-function isString (value) {
-  return typeof value === 'string' || value instanceof String;
-}
+/**
+ * The representation of a single row in the data table.
+ */
+class DataTableRow {
+  constructor (table, data) {
+    this.dataTable = table;
+    this.data = data;
+  }
 
-function getRowId (item) {
-  return isString (item) ? item : get (item, 'id');
-}
+  get id () {
+    return get (this.data, this.dataTable.idKey);
+  }
 
-export default Component.extend({
-  layout,
+  get values () {
+    const { idKey, fields } = this.dataTable;
 
-  classNames: ['mdc-data-table'],
-  classNameBindings: ['mdcDataTableLabelClassName'],
-
-  mdcDataTableLabelClassName: computed ('label', function () {
-    let label = this.get ('label');
-    return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
-  }),
-
-  _dataTable: null,
-  _mdcDataTableChangedListener: null,
-  _mdcDataTableSelectedAllListener: null,
-  _mdcDataTableUnselectedAllListener: null,
-
-  /// Check if the data table has data objects.
-  hasData: bool ('data'),
-
-  /// The collection of selected items.
-  selected: null,
-
-  /// The row ids for the selected items.
-  selectedRowIds: map ('selected', getRowId),
-
-  /// Make the data table interactive.
-  interactive: false,
-
-  init () {
-    this._super (...arguments);
-    this._mdcDataTableChangedListener = this._mdcDataTableRowSelectionChanged.bind (this);
-    this._mdcDataTableSelectedAllListener = this._mdcDataTableSelectedAll.bind (this);
-    this._mdcDataTableUnselectedAllListener = this._mdcDataTableUnselectedAll.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    if (this.interactive) {
-      this._dataTable = new MDCDataTable (this.element);
-      this._dataTable.listen ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
-      this._dataTable.listen ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
-      this._dataTable.listen ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
-
-      if (isEmpty (this.selected)) {
-        this.set ('selected', A ());
-      }
-      else {
-        this._dataTable.setSelectedRowIds (this.selectedRowIds);
-      }
-    }
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    // Temp disable because there is a bug in the raw data table if the data table does
-    // not contain a checkbox.
-
-    if (this.interactive) {
-      this._dataTable.unlisten ('MDCDataTable:rowSelectionChanged', this._mdcDataTableChangedListener);
-      this._dataTable.unlisten ('MDCDataTable:selectedAll', this._mdcDataTableSelectedAllListener);
-      this._dataTable.unlisten ('MDCDataTable:unselectedAll', this._mdcDataTableUnselectedAllListener);
-
-      //this._dataTable.destroy ();
-    }
-  },
-
-  didRowSelectionChange () {
-
-  },
-
-  didSelectAll () {
-
-  },
-
-  didUnselectAll () {
-
-  },
-
-  _mdcDataTableSelectedAll () {
-    let values = this.hasData ? this.data : this._dataTable.getSelectedRowIds ();
-    this.selected.addObjects (values);
-
-    // Send notification to the subclass.
-    this.didSelectAll ();
-  },
-
-  _mdcDataTableUnselectedAll () {
-    this.selected.clear ();
-
-    // Send notification to the subclass.
-    this.didUnselectAll ();
-  },
-
-  _mdcDataTableRowSelectionChanged (ev) {
-    // Update the collection of selected elements ids.
-    const { detail } = ev;
-
-    // If we are working with data models, then use the index of the selected row to
-    // locate the correct value. If we are not working with data models, then we can
-    // just use the row id.
-
-    let value = this.hasData ? this.data[detail.rowIndex] : detail.rowId;
-
-    if (detail.selected) {
-      this.selected.addObject (value);
+    if (isPresent (fields)) {
+      return fields.map (field => this.data[field]);
     }
     else {
-      this.selected.removeObject (value);
+      // Copy the data object, and return all the values except for the id.
+      let valueObj = { ... this.data };
+      delete valueObj[idKey];
+
+      return Object.values (valueObj);
+    }
+  }
+}
+
+/**
+ * The data table component.
+ */
+export default class MdcDataTableComponent extends Component {
+  @tracked
+  page;
+
+  get labelClassName () {
+    const { label } = this.args;
+    return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
+  }
+
+  doCreateComponent (element) {
+    return new MDCDataTable (element);
+  }
+
+  get headers () {
+    return this.args.headers.map (header => isString (header) ? ({name: header}) : header);
+  }
+
+  @listener ('MDCDataTable:rowSelectionChanged')
+  rowSelectionChanged (ev) {
+    const { detail: { rowId, rowIndex, selected }} = ev;
+    const { data } = this.args;
+
+    if (isPresent (data)) {
+      let item = data.find (item => `${get (item, this.idKey)}` === rowId);
+
+      if (selected) {
+        this.selected.addObject (item);
+      }
+      else {
+        this.selected.removeObject (item);
+      }
     }
 
-    // Notify the parent component that the data table selection has changed.
-    this.didRowSelectionChange (ev);
-    this.getWithDefault ('rowSelectionChange', noOp) (ev);
+    // Notify the subclass, and the listener.
+    (this.args.rowSelectionChanged || noOp)(rowId, rowIndex);
+    this.doRowSelectionChanged (ev);
   }
-});
+
+  doRowSelectionChanged (ev) {
+
+  }
+
+  @listener ('MDCDataTable:selectedAll')
+  selectedAll (ev) {
+    const { data } = this.args;
+
+    if (isPresent (data)) {
+      this.selected.addObjects (data);
+    }
+
+    // Notify the subclass, and the listener.
+    this.doSelectedAll (ev);
+    (this.args.selectedAll || noOp)();
+  }
+
+  doSelectedAll (ev) {
+
+  }
+
+  @listener ('MDCDataTable:unselectedAll')
+  unselectedAll (ev) {
+    // Clear the selected objects.
+    this.selected.clear ();
+
+    // Notify the subclass, and the listener.
+    this.doUnselectAll (ev);
+    (this.args.unselectedAll || noOp)();
+  }
+
+  doUnselectAll (ev) {
+
+  }
+
+  get selected () {
+    return this.args.selected || A ();
+  }
+
+  get data () {
+    // We need to flatten (or map) each object in the data into an array.
+    return this.args.data.map (item => new DataTableRow (this, item));
+  }
+
+  get fields () {
+    return this.args.fields || A ();
+  }
+
+  get idKey () {
+    return this.args.idKey || 'id';
+  }
+}

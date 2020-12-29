@@ -3,6 +3,15 @@ ember-cli-mdc-fab
 
 ember-cli addon for [`@material/fab`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-fab).
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------
 
@@ -13,14 +22,10 @@ Components and Mixins
 
 ### Components
 
-* [`{{mdc-fab}}`](#mdc-fab)
-* [`{{mdc-fab-link-to}}`](#mdc-fab-link-to)
+* [`MdcFab`](#MdcFab)
+* [`MdcFabLinkTo`](#MdcFabLinkTo)
 
-### Mixins
-
-* [`Fab`](#fab)
-
-{{mdc-fab}}
+MdcFab
 ---------------
 
 ### Description
@@ -30,14 +35,14 @@ Add a floating action button component to the page.
 ### Usage
 
 ```handlebars
-{{mdc-fab icon="add"}}
-{{mdc-fab icon="add" mini=[true|false]}}
+<MdcFab @icon="add" />
+<MdcFab @icon="add" @mini=[true|false] />
 
 <!-- extended floating action buttons -->
 
-{{mdc-fab icon="add" label="Create"}}
-{{mdc-fab icon="add" label="Create" labelPosition="left"}}
-{{mdc-fab label="Create"}}
+<MdcFab @icon="add" @label="Create" />
+<MdcFab @icon="add" @label="Create" @labelPosition="left" />
+<MdcFab @label="Create" />
 ```
 
 ### Attributes
@@ -47,36 +52,18 @@ Add a floating action button component to the page.
 * `label` - Label displayed on the extended floating action button.
 * `labelPosition` - The position of the label in relation to the icon; default is `right`.
 
-{{mdc-fab-link-to}}
+MdcFabLinkTo
 ---------------------
 
 ### Description
 
-Add a link component that displays as a floating action button.
+Add a link component to display as a floating action button.
 
 ### Usage
 
 ```handlebars
-{{mdc-fab-link-to "" "index" icon="add" label="Create"}}
+<MdcFabLinkTo @route="index" @icon="add" @label="Create" />
 ```
 
 For the time being, the first parameter must be a string, which will be ignored. We hope 
 to have this requirement removed in the near future.
-
-Fab
------------
-
-### Description
-
-The `Fab` mixin allows you to convert any component into a floating action button.
-
-### Usage
-
-```javascript
-import Fab from 'ember-cli-mdc-fab';
-import Component from '@ember/component';
-
-export default Component.extend (Fab, {
-
-});
-```

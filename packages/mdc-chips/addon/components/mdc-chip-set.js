@@ -1,120 +1,137 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-chip-set';
-
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
+import { action, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
-import { computed } from '@ember/object';
+import { dasherize } from '@ember/string';
 
 const { MDCChipSet } = mdc.chips;
 
-MDCChipSet.prototype.select = function (chipId) {
-  return this.foundation_.select (chipId);
-};
-
-MDCChipSet.prototype.deselect = function (chipId) {
-  return this.foundation_.deselect_ (chipId);
-};
-
-MDCChipSet.prototype.isSelected = function (chipId) {
-  return this.foundation_.getSelectedChipIds ().includes (chipId);
-};
-
-MDCChipSet.prototype.findChip = function (chipId) {
-  let index = this.findChipIndex_ (chipId);
-  return index >= 0 ? this.chips[index] : null;
-};
-
 function noOp () {}
 
-export default Component.extend ({
-  layout,
+export default class MdcChipSetComponent extends Component {
+  doCreateComponent (element) {
+    return new MDCChipSet (element);
+  }
 
-  classNames: ['mdc-chip-set'],
-  classNameBindings: ['modeClassName'],
+  doInitComponent (component) {
+    if (isPresent (this.args.chips)) {
+      // The user has provided a list of chips. This means that we are managing the
+      // chip collection. We are going to prevent the chipset from removing the chip
+      // with the trailing icon is clicked.
 
-  mode: null,
-  modeClassName: computed ('mode', function () {
-    let mode = this.get ('mode');
-    return isPresent (mode) ? `mdc-chip-set--${mode}` : null;
-  }),
-
-  _interactionEventListener: null,
-  _selectionEventListener: null,
-  _removalEventListener: null,
-
-  init () {
-    this._super (...arguments);
-
-    this._interactionEventListener = this.interaction.bind (this);
-    this._selectionEventListener = this.selection.bind (this);
-    this._removalEventListener = this.removal.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    // Set thr role on the element.
-    this.element.setAttribute ('role', 'grid');
-
-    this._chipSet = new MDCChipSet (this.element);
-    this._chipSet.listen ('MDCChip:interaction', this._interactionEventListener);
-    this._chipSet.listen ('MDCChip:selection', this._selectionEventListener);
-    this._chipSet.listen ('MDCChip:removal', this._removalEventListener);
-
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._chipSet.unlisten ('MDCChip:interaction', this._interactionEventListener);
-    this._chipSet.unlisten ('MDCChip:selection', this._selectionEventListener);
-    this._chipSet.unlisten ('MDCChip:removal', this._removalEventListener);
-
-    this._chipSet.destroy ();
-  },
-
-  interaction ({ detail: { chipId } }) {
-    this.didInteractWithChip (chipId);
-    this.getWithDefault ('interact', noOp) (chipId);
-  },
-
-  didInteractWithChip (/* chipId */) {
-
-  },
-
-  selection ({ detail: {chipId, selected}}) {
-    this.didSelectChip (chipId, selected);
-    this.getWithDefault ('select', noOp) (chipId, selected);
-  },
-
-  didSelectChip ( /* chipId, selected */) {
-
-  },
-
-  removal ({detail: { chipId }}) {
-    this.didRemoveChip (chipId);
-    this.getWithDefault ('remove', noOp) (chipId);
-  },
-
-  didRemoveChip (/* chipId */) {
-
-  },
-
-  /**
-   * Add a chip to the chip set.
-   *
-   * This method is primarily called by the chip component when a new chip is added to the
-   * DOM. If the chip set is being inserted as well, it will ignore this request because the
-   * the chip set will initialize the underlying component with the child chips. If the chip
-   * set already exists (i.e., a chip is dynamically added to the DOM), then the chip set will
-   * respond to the request and add the chip to the chip set.
-   *
-   * @param chip
-   */
-  addChip (chip) {
-    if (!!this._chipSet) {
-      this._chipSet.addChip (chip.element);
+      component.chips.forEach ((chip) => {
+        chip.shouldRemoveOnTrailingIconClick = false;
+      });
     }
   }
-});
+
+  @listener ('MDCChip:interaction')
+  interaction (ev) {
+    const { detail: { chipId } } = ev;
+
+    this.didInteraction (chipId);
+    (this.args.interaction || noOp)(chipId);
+  }
+
+  didInteraction (chipId) {
+
+  }
+
+  @listener ('MDCChip:selection')
+  selection (ev) {
+    const { detail: { chipId, selected } }  = ev;
+
+    this.didSelection (ev);
+
+    (this.args.selection || noOp)(chipId, selected);
+  }
+
+  didSelection (ev) {
+
+  }
+
+  @listener ('MDCChip:removal')
+  removal (ev) {
+    const { detail: { chipId } } = ev;
+
+    this.didRemoval (chipId);
+    (this.args.removal || noOp)(chipId);
+  }
+
+  didRemoval (chipId) {
+
+  }
+
+  @listener ('MDCChip:navigation')
+  navigation (ev) {
+    const { details: {chipId, key, source}	} = ev;
+
+    this.didNavigation (chipId, key, source);
+    (this.args.navigation || noOp)(chipId, key, source);
+  }
+
+  didNavigation (chipId, key, source) {
+
+  }
+
+  @action
+  removeChip (chip) {
+    // Get the index of the chip, and remove it from the list of chips.
+    let chipElement = chip.element;
+    let chipSetElement = chip.element.parentElement;
+    let index = Array.from (chipSetElement.children).indexOf (chipElement);
+
+    if (index > -1) {
+      this.args.chips.removeAt (index);
+    }
+  }
+
+  @action
+  sync () {
+
+  }
+
+  get _type () {
+    return isPresent (this.type) ? `mdc-chip-set--${this.type}` : null;
+  }
+
+  get label () {
+    return isPresent (this.args.label) ? `mdc-chip-set--${dasherize (this.args.label)}` : null;
+  }
+
+  get chips () {
+    return this.args.chips || [];
+  }
+
+  getChipId (chip) {
+    return get (chip, this.idKey);
+  }
+
+  select (chipId) {
+    return this.component.foundation_.select (chipId);
+  }
+
+  findChipById (chipId) {
+    return this.chips.find (chip => get (chip, this.idKey) === chipId);
+  }
+
+  /// Adapter Properties
+
+  get idKey () {
+    return this.args.idKey || 'id';
+  }
+
+  get textKey () {
+    return this.args.textKey || 'text';
+  }
+
+  get leadingIconKey () {
+    return this.args.leadingIconKey || 'leadingIcon';
+  }
+
+  get trailingIconKey () {
+    return this.args.trailingIconKey || 'trailingIcon';
+  }
+}

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-mdc-snackbar',
+  name: require('./package').name,
 
   included (app) {
     this._super (...arguments);

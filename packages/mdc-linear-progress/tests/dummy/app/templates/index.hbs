@@ -1,18 +1,23 @@
+<h2>Linear Progress</h2>
 
 <h3>Buffered</h3>
 
-{{mdc-linear-progress progress=0.50 buffer=0.8}}
+<MdcLinearProgress @value={{0.5}} @buffer={{0.8}} />
 
 <h3>Indeterminate</h3>
 
-{{mdc-linear-progress indeterminate=true}}
+<MdcLinearProgress @indeterminate={{true}} />
 
 <h3>Reversed</h3>
 
-{{mdc-linear-progress reversed=true progress=0.45}}
+<MdcLinearProgress @reversed={{true}} @value={{45}} @min={{0}} @max={{100}} />
 
 <h3>Reversed Buffered</h3>
 
-{{mdc-linear-progress reversed=true progress=0.37 buffer=0.81}}
+<MdcLinearProgress @reversed={{true}} @value={{0.37}} @buffer={{0.81}} />
 
+<h2>Real-time Update Demo</h2>
+
+<div class="actions"><button {{on "click" toggleProgress}}>{{if this.started "Stop" "Start"}}</button></div>
+<MdcLinearProgress @value={{this.count}} @min={{0}} @max={{100}} />
 

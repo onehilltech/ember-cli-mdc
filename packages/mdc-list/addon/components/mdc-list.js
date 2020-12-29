@@ -1,61 +1,35 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-list';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
 
 const { MDCList } = mdc.list;
 
-export default Component.extend({
-  layout,
-
-  tagName: 'ul',
-
-  classNames: ['mdc-list'],
-
-  classNameBindings: [
-    'dense:mdc-list--dense',
-    'interactive::mdc-list--non-interactive',
-    'twoLine:mdc-list--two-line',
-    'avatarList:mdc-list--avatar-list'
-  ],
-
-  singleSelection: false,
-
-  interactive: true,
-
-  twoLine: false,
-
-  avatarList: false,
-
-  wrapFocus: false,
-
-  attributeBindings: ['role', 'orientation:aria-orientation'],
-
-  orientation: 'vertical',
-
-  _list: null,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._list = new MDCList (this.element);
-
-    const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
-    this._list.singleSelection = singleSelection;
-    this._list.wrapFocus = wrapFocus;
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._list.destroy ();
-  },
-
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    const { wrapFocus, singleSelection } = this.getProperties (['wrapFocus', 'singleSelection']);
-    this._list.singleSelection = singleSelection;
-    this._list.wrapFocus = wrapFocus;
+export default class MdcListComponent extends Component {
+  doCreateComponent (element) {
+    return new MDCList (element);
   }
-});
+
+  doInitComponent (component) {
+    const { wrapFocus, singleSelection, vertical = true } = this.args;
+
+    component.vertical = vertical
+    component.singleSelection = singleSelection;
+    component.wrapFocus = wrapFocus;
+  }
+
+  @action
+  vertical (element, [vertical]) {
+    this.component.vertical = vertical;
+  }
+
+  @action
+  singleSelection (element, [singleSelection]) {
+    this.component.singleSelection = singleSelection;
+  }
+
+  @action
+  wrapFocus (element, [wrapFocus]) {
+    this.component.wrapFocus = wrapFocus;
+  }
+}

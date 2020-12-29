@@ -1,0 +1,66 @@
+<div class="mdc-select
+  {{unless @label "mdc-select--no-label"}}
+  {{if @disabled "mdc-select--disabled"}}
+  {{if this.isOutlined "mdc-select--outlined"}}
+  {{if @leadingIcon "mdc-select--with-leading-icon"}}"
+  {{did-insert this.didInsert}}
+  {{did-update this.select @value}}>
+  <div class="mdc-select__anchor" aria-labelledby={{this.labelId}} {{custom-property "--mdc-select-width" @width}}>
+    {{#unless this.isOutlined}}
+      <span class="mdc-select__ripple"></span>
+    {{/unless}}
+
+    {{#if @leadingIcon}}
+      <MdcIcon @icon={{@leadingIcon}}
+               class="mdc-select__icon mdc-text-field__icon--leading"
+               tabindex={{if @leadingIconClick "0"}}
+               role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
+    {{/if}}
+
+    <input type="text" class="mdc-select__selected-text"
+           ...attributes disabled readonly
+           required={{@required}}
+           aria-controls={{this.helperId}}
+           aria-describedby={{this.helperId}}>
+    <i class="mdc-select__dropdown-icon"></i>
+    {{#if this.isOutlined}}
+      <span class="mdc-notched-outline">
+        <span class="mdc-notched-outline__leading"></span>
+          {{#if @label}}
+            <span class="mdc-notched-outline__notch">
+              <span id={{this.labelId}} class="mdc-floating-label">{{@label}}</span>
+            </span>
+          {{/if}}
+        <span class="mdc-notched-outline__trailing"></span>
+      </span>
+    {{else}}
+      {{#if @label}}
+        <span class="mdc-floating-label">{{@label}}</span>
+      {{/if}}
+      <span class="mdc-line-ripple"></span>
+    {{/if}}
+  </div>
+
+  <div class="mdc-select__menu mdc-menu mdc-menu-surface" {{custom-property "--mdc-select-width" @width}} role="listbox">
+    <ul class="mdc-list">
+      {{#if @firstOptionIsEmpty}}
+        <MdcListItem data-value="" role="option">
+          <MdcListItemText>{{@firstOptionIsEmptyText}}</MdcListItemText>
+        </MdcListItem>
+      {{/if}}
+      {{#each @this.options as |option|}}
+        <MdcListItem @disabled={{get option this.disabledKey}} data-value={{get option this.valueKey}} role="option">
+          <MdcListItemText>{{get option this.textKey}}</MdcListItemText>
+        </MdcListItem>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+{{#if this.helperLine}}
+  <div class="mdc-select-helper-text
+    {{if this.persistentHelperText "mdc-select-helper-text--persistent"}}
+    {{if @errorMessage "mdc-select-helper-text--validation-msg"}}"
+       id={{this.helperId}}
+       aria-hidden="true">{{this.helperText}}</div>
+{{/if}}

@@ -1,20 +1,26 @@
 import LinkComponent from '@ember/routing/link-component';
-import RippleMixin from 'ember-cli-mdc-ripple/mixins/ripple';
 
-import layout from '../templates/components/mdc-icon-button-link-to';
+import { isPresent } from '@ember/utils';
 
-import { computed } from '@ember/object';
+const { MDCRipple } = mdc.ripple;
 
-export default LinkComponent.extend (RippleMixin, {
-  layout,
-
+export default LinkComponent.extend ({
   classNames: ['mdc-icon-button', 'material-icons'],
 
-  createRippleComponent: true,
+  _iconButtonRipple: null,
 
-  unbounded: true,
+  didInsertElement () {
+    this._super (...arguments);
 
-  icon: computed ('params.[]', function () {
-    return this.get ('params')[0];
-  })
+    this._iconButtonRipple = new MDCRipple (this.element);
+    this._iconButtonRipple.unbounded = true;
+  },
+
+  willDestroyElement () {
+    this._super (...arguments);
+
+    if (isPresent (this._iconButtonRipple)) {
+      this._iconButtonRipple.destroy ();
+    }
+  }
 });

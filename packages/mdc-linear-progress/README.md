@@ -1,5 +1,5 @@
-ember-cli-mdc-form
-======================
+ember-cli-mdc-linear-progress
+=============================
 
 ember-cli addon for [@material/linear-progress](https://github.com/material-components/material-components-web/tree/master/packages/mdc-linear-progress).
 
@@ -13,39 +13,44 @@ Components
 
 This package contains the following top-level components.
 
-* [`mdc-linear-progress`](#mdc-linear-progress)
+* [`MdcLinearProgress`](#MdcLinearProgress)
 
-mdc-linear-progress
+MdcLinearProgress
 --------------------
 
 ### Description
 
-Add a [Material Linear Progress](https://material.io/design/components/sliders.html) component to 
-the parent element.
+Add a linear progress component to the page.
 
 ### Usage
 
 ```handlebars
-{{mdc-linear-progress indeterminate=[true|false]
-                      progress=value
-                      buffer=value
-                      reversed=[true|false]
-                      closed=[true|false]
-}}
+<MdcLinearProgress @indeterminate={{[true|false]}}
+                   @min={{min}}
+                   @max={{max}}   
+                   @value={{value}}
+                   @buffer={{buffer}}
+                   @reversed={{[true|false]}}
+                   @closed={{[true|false]}} />
 ```
 
 ### Attributes
 
 * `indeterminate` - Run the linear progress in indeterminate mode.
-* `progress` - The current progress value, must be between 0 and 1.
-* `buffer` - The current value of the buffer, must be between 0 and 1.
+* `min` - The min value of progress bar, default is 0.
+* `max` - The min value of progress bar, default is 1.
+* `value` - The current progress value, must be between `@min` and `@max`.
+* `buffer` - The current value of the buffer, must be `@min` 0 and `@max`.
 * `reversed` - Reverse the display of the linear progress.
 * `closed` - Hide the linear progress on the page.
 
 ### Examples
 
 ```handlebars
-{{mdc-linear-progress progess=0.66}}
-{{mdc-linear-progress progess=0.35 buffer=89.5}}
-{{mdc-linear-progress indeterminate=true reversed=true}}
+<MdcLinearProgress @value={{0.66}} />
+
+<MdcLinearProgress @min={{0}} @max={{100}} @value={{42}} @buffer={{89}} />
+
+<MdcLinearProgress @indeterminate={{true}} @reversed={{true}} />
 ```
+

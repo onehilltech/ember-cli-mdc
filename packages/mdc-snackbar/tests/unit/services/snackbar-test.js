@@ -10,4 +10,3 @@ module('Unit | Service | snackbar', function(hooks) {
     assert.ok(service);
   });
 });
-

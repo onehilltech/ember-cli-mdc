@@ -1,51 +1,173 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-drawer';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
-import { computed } from '@ember/object';
 import { assert } from '@ember/debug';
-import { isEmpty, isNone, isPresent } from '@ember/utils';
-import { equal } from '@ember/object/computed';
+import { isEmpty, isPresent } from '@ember/utils';
+import { action } from '@ember/object';
 
-const STYLES = [
-  'dismissible',
-  'modal',
-  'permanent'
-];
+const STYLES = [ 'dismissible', 'modal' ];
 
-export default Component.extend ({
-  layout,
+const { MDCDrawer } = mdc.drawer;
+const { MDCList } = mdc.list;
 
-  tagName: 'aside',
+function noOp () {}
 
-  classNames: ['mdc-drawer', 'mdc-typography'],
+class DrawerImpl {
+  constructor (drawer) {
+    this.drawer = drawer;
+  }
 
-  classNameBindings: ['styleClassName'],
+  doCreateComponent (element) {
 
-  _openEventListener: null,
+  }
 
-  _closeEventListener: null,
+  cleanup () {
 
-  _currentStyle: null,
+  }
 
-  _clickEventListener: null,
+  didClose () {
 
-  isModal: equal ('style', 'modal'),
-  isDismissible: equal ('style', 'dismissible'),
-  isPermanent: equal ('style', 'permanent'),
+  }
+}
 
-  // The material component.
-  _drawer: null,
+class PermanentDrawerImpl extends DrawerImpl {
+  constructor (drawer) {
+    super (drawer);
+  }
 
-  // The content of the drawer.
-  _drawerContent: null,
+  doCreateComponent (element) {
+    let listElement = element.querySelector ('.mdc-list');
+    assert ('A permanent drawer must have a <MdcList> component, or .mdc-list element.', isPresent (listElement));
 
-  // The scrim element automatically added after model drawer.
-  _drawerScrim: null,
+    let list = new MDCList (listElement);
+    list.wrapFocus = true;
 
-  styleClassName: computed ('style', function () {
-    const style = this.get ('style');
+    return list;
+  }
+}
+
+class DismissibleDrawerImpl extends DrawerImpl {
+  constructor (drawer) {
+    super (drawer);
+  }
+
+  doCreateComponent (element) {
+    return new MDCDrawer (element);
+  }
+}
+
+class ModalDrawerImpl extends DrawerImpl {
+  _itemClickListener;
+  _listElement;
+
+  constructor (drawer) {
+    super (drawer);
+
+    this._itemClickListener = this.itemClick.bind (this);
+  }
+
+  cleanup () {
+    this._listElement.removeEventListener ('click', this._itemClickListener);
+  }
+
+  doCreateComponent (element) {
+    this._listElement = element.querySelector ('.mdc-list');
+    this._listElement.addEventListener ('click', this._itemClickListener);
+
+    this.prepareFocusTrap ();
+
+    return new MDCDrawer (element);
+  }
+
+  itemClick () {
+    this.drawer.component.open = false
+  }
+
+  didClose () {
+    this.prepareFocusTrap ();
+  }
+
+  prepareFocusTrap () {
+    // We also need to find the link that is activated and set the tab index. Otherwise,
+    // the control will will not function correctly. This means we also need to remove the
+    // tab index on the other links.
+    let activated = this._listElement.querySelector ('.mdc-list-item--activated');
+    activated.setAttribute ('tabindex', 0);
+    activated.setAttribute ('aria-current', 'page');
+
+    let notActivated = this._listElement.querySelectorAll ('.mdc-list-item:not(.mdc-list-item--activated)');
+    notActivated.forEach (el => {
+      el.setAttribute ('tabindex', -1);
+      el.removeAttribute ('aria-current');
+    });
+  }
+}
+
+export default class MdcDrawerComponent extends Component {
+  _appContentElement;
+
+  _impl;
+
+  doCreateComponent (element) {
+    const { style } = this.args;
+    return this.createComponent (element, style);
+  }
+
+  @action
+  recreate (element, [style]) {
+    let component = this.createComponent (element, style);
+    this.replaceComponent (component);
+  }
+
+  createComponent (element, style) {
+    let impl = this.createComponentImpl (style);
+    let component = impl.doCreateComponent (element);
+
+    // Cleanup the current implementation, and replace it with the new one.
+    if (isPresent (this._impl)) {
+      this._impl.cleanup ();
+    }
+
+    this._impl = impl;
+
+    return component;
+  }
+
+  createComponentImpl (style) {
+    if (style === 'modal') {
+      return new ModalDrawerImpl (this);
+    }
+    else if (style === 'dismissible') {
+      return new DismissibleDrawerImpl (this);
+    }
+    else {
+      return new PermanentDrawerImpl (this);
+    }
+  }
+
+  doInitComponent (component) {
+    const { open } = this.args;
+
+    // Find the drawer app content. We need this so we can focus on the correct
+    // element when the drawer is closed.
+    this._appContentElement = document.querySelector ('.mdc-drawer-app-content');
+
+    // Open drawer, if set.
+    component.open = open;
+  }
+
+  get style () {
+    return this.args.style;
+  }
+
+  get isModal () {
+    return this.args.style === 'modal';
+  }
+
+  get styleClassName () {
+    const { style } = this.args;
 
     // Notify the listeners that our style has changed.
     if (isEmpty (style)) {
@@ -55,174 +177,69 @@ export default Component.extend ({
     assert (`The style must be one of the following: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-drawer--${style}`;
-  }),
-
-  init () {
-    this._super (...arguments);
-
-    this._openEventListener = this.didOpen.bind (this);
-    this._closeEventListener = this.didClose.bind (this);
-    this._clickEventListener = this.didClick.bind (this);
-  },
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._createComponent ();
-
-    // Set the open state for the component.
-    const { style, open } = this.getProperties (['style', 'open']);
-
-    if (isPresent (this._drawer)) {
-      this._drawer.open = open;
-    }
-
-    this._drawerContent = this.element.querySelector ('.mdc-drawer__content');
-    this._drawerContent.addEventListener ('click', this._clickEventListener);
-
-    // Save the style just in case it changes.
-    this.set ('_currentStyle', style);
-  },
-
-  didUpdateAttrs () {
-    this._super (...arguments);
-
-    // If the style has changed, then we need to delete the original component
-    // before the class for the new style is added to the html. Otherwise, we
-    // we will have a hard time destroying the old component.
-
-    const { style, _currentStyle:currentStyle } = this.getProperties (['style', '_currentStyle']);
-
-    if (style !== currentStyle) {
-      this._destroyComponent ();
-    }
-  },
-
-  didUpdate () {
-    this._super (...arguments);
-
-    if (isNone (this._drawer)) {
-      this._createComponent ();
-      let style = this.get ('style');
-
-      // Cache the current style, and send notification the style has changed.
-      this.set ('_currentStyle', style);
-      this.emit ('MDCDrawer:change', { style });
-    }
-
-    if (isPresent (this._drawer)) {
-      this._drawer.open = this.get ('open');
-    }
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    // Destroy the component.
-    this._destroyComponent ();
-
-    // Make sure the drawer scrim has been removed.
-    this._removeDrawerScrim ();
-
-    // Stop listening to events from the drawer content.
-    this._drawerContent.removeEventListener ('click', this._clickEventListener);
-  },
+  }
 
   didClick (ev) {
-    if (!this.get ('isModal')) {
+    if (!this.isModal) {
       return;
     }
 
     if (ev.target.classList.contains ('mdc-list-item')) {
       this.set ('open', false);
     }
-  },
+  }
+
+  @action
+  toggleOpen (element, [open]) {
+    let component = this.component;
+
+    if (open) {
+      // They are toggle the menu surface open state. This is because we cannot modify
+      // the 'open' argument internally. We therefore have to assume in update to the
+      // argument that bears the value `true` means toggle the menu surface.
+
+      component.open = !component.open;
+    }
+    else if (component.open) {
+      // The open argument was changed to false. This means some external behavior changed
+      // the argument to false, meaning the really want to close the menu surface.
+      component.open = false;
+    }
+  }
+
+  @listener ('MDCDrawer:opened')
+  opened () {
+    this.didOpen ();
+    (this.args.opened || noOp)();
+  }
 
   didOpen () {
-    this.set ('open', true);
-  },
+
+  }
+
+  @listener ('MDCDrawer:closed')
+  closed () {
+    // Focus on the first element that we find in the app content.
+    if (isPresent (this._appContentElement)) {
+      let element = this._appContentElement.querySelector (this.focusOnClose);
+
+      if (isPresent (element)) {
+        element.focus ();
+      }
+    }
+
+    // Let the implementation know it did close.
+    this._impl.didClose ();
+
+    this.didClose ();
+    (this.args.closed || noOp)();
+  }
 
   didClose () {
-    this.set ('open', false);
-  },
-  
-  _createComponent () {
-    if (isPresent (this._drawer)) {
-      this._destroyComponent ();
-    }
 
-    // We need to create the scrim (in case of a modal dialog) before we create
-    // the component. This is because the MDC will search for the drawer scrim
-    // during its creation process.
-
-    if (this.get ('isModal')) {
-      this._insertDrawerScrim ();
-    }
-    else {
-      this._removeDrawerScrim ();
-    }
-
-    if (!this.get ('isPermanent')) {
-      // We instantiate a drawer component for modal and dismissible.
-      this._drawer = new mdc.drawer.MDCDrawer (this.element);
-      this._drawer.listen ('MDCDrawer:opened', this._openEventListener);
-      this._drawer.listen ('MDCDrawer:closed', this._closeEventListener);
-    }
-  },
-
-  _destroyComponent () {
-    if (isPresent (this._drawer)) {
-      this._drawer.unlisten ('MDCDrawer:opened', this._openEventListener);
-      this._drawer.unlisten ('MDCDrawer:closed', this._closeEventListener);
-
-      this._drawer.destroy ();
-      this._drawer = null;
-    }
-  },
-
-  /**
-   * Insert the drawer scrim into the tree.
-   *
-   * @private
-   */
-  _insertDrawerScrim () {
-    if (isPresent (this._drawerScrim)) {
-      return;
-    }
-
-    this._drawerScrim = document.createElement ('div');
-    this._drawerScrim.classList.add ('mdc-drawer-scrim');
-
-    // The scrim must be inserted directly after the drawer (i.e., this element).
-    let parent = this.element.parentElement;
-    parent.insertBefore (this._drawerScrim, this.element.nextSibling);
-  },
-
-  /**
-   * Remove the drawer scrim from the tree.
-   *
-   * @private
-   */
-  _removeDrawerScrim () {
-    if (isPresent (this._drawerScrim)) {
-      this._drawerScrim.remove ();
-      this._drawerScrim = null;
-    }
-  },
-
-  emit (evtType, evtData, shouldBubble = false) {
-    let evt;
-
-    if (typeof CustomEvent === 'function') {
-      evt = new CustomEvent(evtType, {
-        detail: evtData,
-        bubbles: shouldBubble,
-      });
-    } else {
-      evt = document.createEvent('CustomEvent');
-      evt.initCustomEvent(evtType, shouldBubble, false, evtData);
-    }
-
-    this.element.dispatchEvent(evt);
   }
-});
+
+  get focusOnClose () {
+    return this.args.focusOnClose || 'input, button, select';
+  }
+}

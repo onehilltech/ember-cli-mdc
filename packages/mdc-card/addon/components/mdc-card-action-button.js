@@ -1,6 +1,5 @@
-import ButtonComponent from 'ember-cli-mdc-button/components/mdc-button';
-import CardAction from '../mixins/card-action';
+import MdcButtonComponent from 'ember-cli-mdc-button/components/mdc-button';
 
-export default ButtonComponent.extend (CardAction, {
-  classNames: ['mdc-card__action--button']
-});
+export default class MdcCardActionButtonComponent extends MdcButtonComponent {
+  kind = 'mdc-card__action mdc-card__action--button';
+}

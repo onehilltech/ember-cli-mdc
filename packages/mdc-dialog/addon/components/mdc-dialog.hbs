@@ -1,0 +1,44 @@
+<div class="mdc-dialog"
+  {{did-insert this.didInsert}}
+  {{did-update this.open @open}}>
+  <div class="mdc-dialog__container">
+    <div class="mdc-dialog__surface"
+         role="alertdialog"
+         aria-modal="true"
+        {{did-insert this.prepareDialogSurface}}>
+      {{#if @title}}
+        <h2 class="mdc-dialog__title">{{@title}}</h2>
+      {{/if}}
+
+      <div class="mdc-dialog__content">
+        {{yield}}
+      </div>
+
+      {{#if this.hasActions}}
+        <div class="mdc-dialog__actions">
+          {{#if @negativeButton}}
+            <MdcDialogButton type="button"
+                             @label={{@negativeButton.label}}
+                             @style={{@negativeButton.style}}
+                             disabled={{@negativeButton.disabled}}
+                             data-mdc-dialog-action={{@negativeButton.action}}
+                             data-mdc-dialog-button-default={{@negativeButton.default}}
+                             data-mdc-dialog-initial-focus={{@negativeButton.focus}} />
+          {{/if}}
+
+          {{#if @positiveButton}}
+            <MdcDialogButton type="button"
+                             @label={{@positiveButton.label}}
+                             @style={{@positiveButton.style}}
+                             disabled={{@positiveButton.disabled}}
+                             data-mdc-dialog-action={{@positiveButton.action}}
+                             data-mdc-dialog-button-default={{@positiveButton.default}}
+                             data-mdc-dialog-initial-focus={{@positiveButton.focus}} />
+          {{/if}}
+
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>

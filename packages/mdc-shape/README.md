@@ -8,8 +8,8 @@ Installation
 
     ember install ember-cli-mdc-shape
     
-Example Code
----------------
+Components & Modifiers
+------------------------
 
-Please see example code in `tests/dummy/app/templates` while we work on documenting how to 
-use the components in this add-on.
+This add-on does not contain any components or modifiers.
+

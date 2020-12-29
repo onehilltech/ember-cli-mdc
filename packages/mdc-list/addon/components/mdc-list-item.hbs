@@ -1,0 +1,9 @@
+<li class="mdc-list-item
+  {{if @selected "mdc-list-item--selected"}}
+  {{if @activated "mdc-list-item--activated"}}
+  {{if @disabled "mdc-list-item--disabled"}}"
+    aria-selected={{@selected}}
+    tabindex={{if @selected 0}}
+    ...attributes>
+  {{yield}}
+</li>

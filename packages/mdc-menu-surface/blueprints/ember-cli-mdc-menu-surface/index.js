@@ -1,6 +1,8 @@
 /* eslint-env node */
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
+const { version } = require ('../../package.json');
+const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
@@ -8,9 +10,11 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-elevation', target: '^1.0.0'},
-    {name: 'ember-cli-mdc-rtl', target: '^1.0.0'},
-    {name: 'ember-cli-mdc-shape', target: '^1.0.0'},
-    {name: 'ember-cli-mdc-base', target: '^1.0.0'}
+    {name: 'ember-cli-mdc-elevation', target},
+    {name: 'ember-cli-mdc-rtl', target},
+    {name: 'ember-cli-mdc-shape', target},
+    {name: 'ember-cli-mdc-base', target},
+    {name: 'ember-modifier'},
+    {name: '@ember/render-modifiers'}
   ]
 });

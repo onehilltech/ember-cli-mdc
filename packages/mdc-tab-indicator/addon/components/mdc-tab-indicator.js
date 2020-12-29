@@ -1,35 +1,12 @@
 /* globals mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-tab-indicator';
+import Component from 'ember-cli-mdc-base/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  tagName: 'span',
+const { MDCTabIndicator } = mdc.tabIndicator;
 
-  layout,
-
-  classNames: ['mdc-tab-indicator'],
-
-  classNameBindings: [
-    'active:mdc-tab-indicator--active',
-    'fade:mdc-tab-indicator--fade',
-  ],
-
-  active: false,
-
-  fade: false,
-
-  _tabIndicator: null,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this._tabIndicator = new mdc.tabIndicator.MDCTabIndicator (this.element);
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._tabIndicator.destroy ();
+export default class MdcTabIndicatorComponent extends Component {
+  doCreateComponent (element) {
+    return new MDCTabIndicator (element);
   }
-});
+}

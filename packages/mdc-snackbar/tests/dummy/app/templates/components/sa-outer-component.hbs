@@ -1,0 +1,3 @@
+<button {{action snackbar (hash message="From the outer component")}}>Send message from outer component</button>
+
+<SaInnerComponent @snackbar={{action snackbar}} />

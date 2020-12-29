@@ -1,68 +1,60 @@
 /* global mdc */
 
-import Component from '@ember/component';
-import layout from '../templates/components/mdc-tab-bar';
+import Component from 'ember-cli-mdc-base/component';
+import listener from 'ember-cli-mdc-base/listener';
 
-import { isPresent, isNone } from '@ember/utils';
-import Elevation from 'ember-cli-mdc-elevation/mixins/elevation';
+import { action } from '@ember/object';
+import { isNone } from '@ember/utils';
 
 function noOp () {}
 
-export default Component.extend (Elevation, {
-  layout,
+const { MDCTabBar } = mdc.tabBar;
 
-  classNames: ['mdc-tab-bar'],
+export default class MdcTabBarComponent extends Component {
+  doPrepareElement (element) {
+    const activeTab = element.querySelector ('.mdc-tab--active');
 
-  /// Index of the active tab.
-  activeTab: undefined,
-
-  /// Scroll to a specific tab.
-  scrollTo: undefined,
-
-  _tabBar: null,
-
-  didInsertElement () {
-    this._super (...arguments);
-
-    this.element.setAttribute ('role', 'tablist');
-
-    const $activeTab = this.element.querySelector ('.mdc-tab--active');
-
-    if (isNone ($activeTab)) {
+    if (isNone (activeTab)) {
       // The app bar is being initialized without a tab marked as active. We need
       // select the active tab as the initially selected tab.
 
-      let activeTab = this.getWithDefault ('activeTab', 0);
-      let $tab = this.element.querySelectorAll ('.mdc-tab')[activeTab];
+      let activeTab = this.activeTab;
+      let tab = element.querySelectorAll ('.mdc-tab')[activeTab];
 
-      $tab.classList.add ('mdc-tab--active');
+      tab.classList.add ('mdc-tab--active');
 
-      let $tabIndicator = $tab.querySelector ('.mdc-tab-indicator');
-      $tabIndicator.classList.add ('mdc-tab-indicator--active');
+      let tabIndicator = tab.querySelector ('.mdc-tab-indicator');
+      tabIndicator.classList.add ('mdc-tab-indicator--active');
     }
-
-    this._tabBar = new mdc.tabBar.MDCTabBar (this.element);
-    this._tabBar.listen ('MDCTabBar:activated', this.didActivate.bind (this));
-  },
-
-  didUpdate () {
-    this._super (...arguments);
-
-    const activeTab = this.get ('activeTab');
-
-    if (isPresent (activeTab)) {
-      this._tabBar.activateTab (activeTab)
-    }
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    this._tabBar.unlisten ('MDCTabBar:activated', this.didActivate.bind (this));
-    this._tabBar.destroy ();
-  },
-
-  didActivate ({ detail: { index } }) {
-    this.getWithDefault ('activate', noOp) (index);
   }
-});
+
+  doCreateComponent (element) {
+    return new MDCTabBar (element)
+  }
+
+  get activeTab () {
+    return this.args.activeTab || 0;
+  }
+
+  @listener ('MDCTabBar:activated')
+  activated (ev) {
+    this.didActivate (ev);
+
+    const { detail: { index } } = ev;
+    (this.args.activated || noOp) (index);
+  }
+
+  didActivate (ev) {
+
+  }
+
+  @action
+  activateTab (element, [index]) {
+    this.component.activateTab (index)
+  }
+
+  @action
+  scrollIntoView (element, [index]) {
+    this.component.scrollIntoView (index);
+  }
+}

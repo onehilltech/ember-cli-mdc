@@ -1,0 +1,22 @@
+<div class="mdc-data-table {{this.labelClassName}}" {{did-insert this.didInsert}}>
+  <div class="mdc-data-table__table" aria-label={{@label}}>
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      {{#if @headers}}
+        <MdcDataTableHeaderRow @headers={{@headers}} @selectable={{@selectable}} />
+      {{/if}}
+
+      <MdcDataTableContent>
+        {{#each this.data as |row|}}
+          <MdcDataTableRow @selectable={{@selectable}} @rowId={{row.id}}>
+            {{#each row.values as |value|}}
+              <MdcDataTableCell>{{value}}</MdcDataTableCell>
+            {{/each}}
+          </MdcDataTableRow>
+        {{/each}}
+      </MdcDataTableContent>
+    {{/if}}
+  </div>
+</div>
+

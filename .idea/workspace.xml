@@ -1,26 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-component.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" afterPath="$PROJECT_DIR$/lerna.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/blueprints/ember-cli-mdc-base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/blueprints/ember-cli-mdc-card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/blueprints/ember-cli-mdc-card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/blueprints/ember-cli-mdc-chips/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.ember-cli" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.ember-cli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.watchmanconfig" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.watchmanconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/ember-cli-build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/targets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/test-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/test-helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/blueprints/ember-cli-mdc-drawer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/blueprints/ember-cli-mdc-drawer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/blueprints/ember-cli-mdc-fab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/blueprints/ember-cli-mdc-fab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/blueprints/ember-cli-mdc-form-field/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/blueprints/ember-cli-mdc-form-field/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-form/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-htmlbars/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/blueprints/ember-cli-mdc-icon-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/blueprints/ember-cli-mdc-icon-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/blueprints/ember-cli-mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/blueprints/ember-cli-mdc-icon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/addon/services/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-layout/tests/unit/initializers/mdc-layout-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout/tests/unit/initializers/mdc-layout-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/blueprints/ember-cli-mdc-linear-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/templates/components/mdc-notched-outline.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/blueprints/ember-cli-mdc-notched-outline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/blueprints/ember-cli-mdc-notched-outline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-progress-indicator/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/blueprints/ember-cli-mdc-ripple/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/blueprints/ember-cli-mdc-rtl/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-rtl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-rtl/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/templates/components/mdc-select.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/initializers/mdc-snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/initializers/mdc-snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/mixins/route/snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/blueprints/ember-cli-mdc-snackbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/blueprints/ember-cli-mdc-snackbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-inner-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/components/sa-outer-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-inner-component.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-outer-component.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/components/sa-outer-component.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/services/snackbar-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/tests/unit/services/snackbar-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/blueprints/ember-cli-mdc-tab-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/blueprints/ember-cli-mdc-tab-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/blueprints/ember-cli-mdc-tab-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/blueprints/ember-cli-mdc-tab-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/blueprints/ember-cli-mdc-tabs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/blueprints/ember-cli-mdc-tabs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/blueprints/ember-cli-mdc-textfield/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/blueprints/ember-cli-mdc-textfield/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/blueprints/ember-cli-mdc-top-app-bar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-touch-target/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/blueprints/ember-cli-mdc-typography/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-utils/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,43 +183,55 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-radio/addon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-radio/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-radio" />
-      <recent name="$PROJECT_DIR$/packages/mdc-data-table/addon" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
+      <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
+      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
+      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
+    </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-layout]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-circular-progress]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-base]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-base">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-bottom-navigation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-bottom-navigation">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-card]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-card">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-checkbox]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-checkbox">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-chips]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-chips">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
+    <configuration name="[ember-cli-mdc-circular-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-circular-progress">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-datepicker-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-datepicker-dialog">
+    <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-dialog">
@@ -85,13 +243,34 @@
     <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-fab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-fab">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-floating-label]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-floating-label">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-form-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form-field">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-form]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-icon-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon-button">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-image-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-image-list">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-layout-grid]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout-grid">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-layout]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-line-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-line-ripple">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-linear-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-linear-progress">
@@ -100,7 +279,13 @@
     <configuration name="[ember-cli-mdc-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-list">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-menu-surface]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu-surface">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-menu]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-notched-outline]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-notched-outline">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-radio]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-radio">
@@ -112,10 +297,37 @@
     <configuration name="[ember-cli-mdc-rtl]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-rtl">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-select]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-select">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-shape]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-shape">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-slider]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-slider">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-snackbar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-snackbar">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-switch]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-switch">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-tab-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-bar">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-tab-indicator]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-indicator">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-tab-scroller]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-scroller">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-tab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-tabs]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tabs">
+      <method v="2" />
+    </configuration>
+    <configuration name="[ember-cli-mdc-text-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-textfield">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
@@ -124,32 +336,57 @@
     <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-touch-target]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-touch-target">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-base]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-button]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-card]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-checkbox]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-chips]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-circular-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-data-table]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-datepicker-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-dialog]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-drawer]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-elevation]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-fab]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-floating-label]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-form-field]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-form]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-icon-button]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-icon]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-image-list]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-layout-grid]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-layout]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-line-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-linear-progress]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-list]: dummy application" />
-      <item itemvalue="Node.js.[ember-cli-mdc-layout]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-menu-surface]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-menu]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-notched-outline]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-radio]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-snackbar]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-switch]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab-bar]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab-indicator]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab-scroller]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tab]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-tabs]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-text-field]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-theme]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-top-app-bar]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-touch-target]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-typography]: dummy application" />
     </list>
   </component>
@@ -197,29 +434,26 @@
       <workItem from="1590587455841" duration="183000" />
       <workItem from="1590587661235" duration="13244000" />
       <workItem from="1590607523417" duration="268000" />
-      <workItem from="1590682484790" duration="16809000" />
-      <workItem from="1595394765921" duration="768000" />
-      <workItem from="1595987171472" duration="861000" />
-      <workItem from="1596812674155" duration="9000" />
-      <workItem from="1596813202853" duration="612000" />
-      <workItem from="1598044552693" duration="261000" />
-      <workItem from="1598236685001" duration="838000" />
-      <workItem from="1598275364516" duration="602000" />
-      <workItem from="1598289650090" duration="598000" />
-      <workItem from="1599009916569" duration="2946000" />
-      <workItem from="1599051597543" duration="1118000" />
-      <workItem from="1599617650613" duration="1148000" />
-      <workItem from="1599791359538" duration="734000" />
-      <workItem from="1600607361380" duration="22000" />
-      <workItem from="1602352230408" duration="1365000" />
-      <workItem from="1602507868294" duration="1655000" />
-      <workItem from="1604890642483" duration="1345000" />
-      <workItem from="1604952694828" duration="69000" />
-      <workItem from="1605381237168" duration="1313000" />
-      <workItem from="1605412153905" duration="1031000" />
-      <workItem from="1605737593244" duration="795000" />
-      <workItem from="1605764545539" duration="2097000" />
-      <workItem from="1605767295775" duration="1327000" />
+      <workItem from="1590682484790" duration="46368000" />
+      <workItem from="1590966208530" duration="4356000" />
+      <workItem from="1591048011598" duration="5717000" />
+      <workItem from="1591116962298" duration="9162000" />
+      <workItem from="1591152543142" duration="26558000" />
+      <workItem from="1592539085454" duration="22126000" />
+      <workItem from="1592840030240" duration="6183000" />
+      <workItem from="1593634037328" duration="365000" />
+      <workItem from="1606103510329" duration="60737000" />
+      <workItem from="1606331882396" duration="2521000" />
+      <workItem from="1606370631232" duration="3423000" />
+      <workItem from="1606438649479" duration="1406000" />
+      <workItem from="1606959832196" duration="47551000" />
+      <workItem from="1607191406928" duration="3578000" />
+      <workItem from="1607286736838" duration="1510000" />
+      <workItem from="1607496038541" duration="47164000" />
+      <workItem from="1607805002177" duration="2144000" />
+      <workItem from="1607885857995" duration="30207000" />
+      <workItem from="1608357248434" duration="75232000" />
+      <workItem from="1609000645390" duration="2523000" />
     </task>
     <servers />
   </component>
@@ -231,7 +465,27 @@
       <map>
         <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/james/Projects/onehilltech/ember-cli-mdc/packages/mdc-button/addon/templates" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="MAIN">
@@ -241,28 +495,84 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605765472102">
+    <state x="304" y="79" width="1071" height="892" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608643659045">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="304" y="79" width="1071" height="892" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1608643659045" />
+    <state x="304" y="154" width="1071" height="820" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1606370915694" />
+    <state x="461" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607973086285">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="461" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.948@0.23.1680.948" timestamp="1607973086285" />
+    <state x="461" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.951@0.23.1680.951" timestamp="1606002518303" />
+    <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607968252298">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="528" y="240" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.948@0.23.1680.948" timestamp="1607968252298" />
+    <state x="417" y="23" key="CommitChangelistDialog2" timestamp="1608609563909">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="417" y="23" key="CommitChangelistDialog2/0.23.1680.948@0.23.1680.948" timestamp="1608609563909" />
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom" timestamp="1609213654626">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1609213654626" />
+    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state width="1659" height="245" key="GridCell.Tab.0.center" timestamp="1609213654626">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1609213654626" />
+    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state width="1659" height="245" key="GridCell.Tab.0.left" timestamp="1609213654625">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1609213654625" />
+    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1606373195069" />
+    <state width="1659" height="245" key="GridCell.Tab.0.right" timestamp="1609213654626">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="1659" height="245" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1609213654626" />
+    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1606373195070" />
+    <state x="592" y="141" key="RollbackChangesDialog" timestamp="1607709668075">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="592" y="141" key="RollbackChangesDialog/0.23.1680.948@0.23.1680.948" timestamp="1607709668075" />
+    <state x="637" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608489544453">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state x="637" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.948@0.23.1680.948" timestamp="1608489544453" />
+    <state x="542" y="237" width="596" height="522" key="find.popup" timestamp="1606195245816">
       <screen x="0" y="23" width="1680" height="951" />
     </state>
-    <state x="304" y="160" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.951@0.23.1680.951" timestamp="1605765472102" />
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom" timestamp="1605766691943">
-      <screen x="0" y="23" width="1680" height="951" />
+    <state x="542" y="237" width="596" height="522" key="find.popup/0.23.1680.951@0.23.1680.951" timestamp="1606195245816" />
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup" timestamp="1608584939300">
+      <screen x="0" y="23" width="1680" height="948" />
     </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.bottom/0.23.1680.951@0.23.1680.951" timestamp="1605766691943" />
-    <state width="1659" height="246" key="GridCell.Tab.0.center" timestamp="1605766691942">
-      <screen x="0" y="23" width="1680" height="951" />
-    </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.center/0.23.1680.951@0.23.1680.951" timestamp="1605766691942" />
-    <state width="1659" height="246" key="GridCell.Tab.0.left" timestamp="1605766691942">
-      <screen x="0" y="23" width="1680" height="951" />
-    </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.left/0.23.1680.951@0.23.1680.951" timestamp="1605766691942" />
-    <state width="1659" height="246" key="GridCell.Tab.0.right" timestamp="1605766691943">
-      <screen x="0" y="23" width="1680" height="951" />
-    </state>
-    <state width="1659" height="246" key="GridCell.Tab.0.right/0.23.1680.951@0.23.1680.951" timestamp="1605766691943" />
+    <state x="505" y="230" width="670" height="674" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1608584939300" />
+    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.23.1680.951@0.23.1680.951" timestamp="1606186510794" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/mdc-image-list/node_modules/ember-cli-mdc-utils/lib/target.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
