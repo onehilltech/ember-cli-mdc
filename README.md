@@ -6,7 +6,7 @@ An Ember add-on for [Material Components for the web](https://github.com/materia
 Features
 ------------
 
-* Ember components for Material Components
+* Ember components for Material Components Web 6.0.0
 * Individual packages for selective usage of Material Components
 * Intuitive design to minimize accidental and inherit complexities of Material Components
 * Themeable components at both the framework and application level
