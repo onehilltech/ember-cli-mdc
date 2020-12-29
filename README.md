@@ -20,17 +20,17 @@ Installation
 
 ### All Packages
 
-    ember install ember-cli-mdc
+    ember install ember-cli-mdc@^2.0.0
     
 ### Individual Packages
 
-    ember install ember-cli-[package-name]
+    ember install ember-cli-[package-name]@^2.0.0
 
 Ex.    
     
-    ember install ember-cli-mdc-form
-    ember install ember-cli-mdc-button
-    ember install ember-cli-mdc-dialog
+    ember install ember-cli-mdc-form@^2.0.0
+    ember install ember-cli-mdc-button@^2.0.0
+    ember install ember-cli-mdc-dialog@^2.0.0
     
 See the [packages directory](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages) for a 
 list of packages that can be installed individually.

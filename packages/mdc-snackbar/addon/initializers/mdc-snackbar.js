@@ -4,5 +4,6 @@ export function initialize (application) {
 }
 
 export default {
+  name: 'mdc-snackbar',
   initialize
 };

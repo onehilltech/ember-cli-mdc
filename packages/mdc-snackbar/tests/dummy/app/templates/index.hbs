@@ -1,7 +1,7 @@
 <h2 id="title">Snackbar from Controller</h2>
 
-<button {{action "send"}}>Send message</button>
+<button {{action "snackbar" (hash message="Hello, World!"
+                                  action=(hash label="Undo" click=(action "undo"))
+                                  dismiss=(hash click=(action "dismiss")))}}>Send message</button>
 
-<h2 id="title">Snackbar from Component</h2>
-
-<SaOuterComponent @snackbar={{action "snackbar"}} />
+<button {{action "snackbar" (hash message="Hello, World!" dismiss=true)}}>Send dismissible message</button>
