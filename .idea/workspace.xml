@@ -6,7 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +296,7 @@
       <workItem from="1608357248434" duration="75232000" />
       <workItem from="1609000645390" duration="2523000" />
       <workItem from="1609217745228" duration="129000" />
-      <workItem from="1609222543356" duration="1573000" />
+      <workItem from="1609222543356" duration="3991000" />
     </task>
     <servers />
   </component>
@@ -387,6 +388,10 @@
       <screen x="0" y="23" width="1680" height="948" />
     </state>
     <state x="592" y="141" key="RollbackChangesDialog/0.23.1680.948@0.23.1680.948" timestamp="1607709668075" />
+    <state width="584" height="445" key="SwitcherDM" timestamp="1609255046270">
+      <screen x="0" y="23" width="1680" height="948" />
+    </state>
+    <state width="584" height="445" key="SwitcherDM/0.23.1680.948@0.23.1680.948" timestamp="1609255046270" />
     <state x="637" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608489544453">
       <screen x="0" y="23" width="1680" height="948" />
     </state>
