@@ -37,7 +37,7 @@ export default class MdcFormComponent extends Component {
   }
 
   willDestroy () {
-    this._super (...arguments);
+    super.willDestroy ();
 
     this._formElement.removeEventListener ('input', this.checkValidityEventListener_);
     this._formElement.removeEventListener ('submit', this.submitEventListener_);
