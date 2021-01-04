@@ -2,16 +2,15 @@
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
 const { version } = require ('../../package.json');
-const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/radio', target: '3.2.0'}
+    {name: '@material/radio', target: '^6.0.0'}
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-form-field', target},
-    {name: 'ember-cli-mdc-ripple', target},
+    {name: 'ember-cli-mdc-form-field', target: `^${version}`},
+    {name: 'ember-cli-mdc-ripple', target: `^${version}`},
     {name: '@ember/render-modifiers'}
   ]
 });

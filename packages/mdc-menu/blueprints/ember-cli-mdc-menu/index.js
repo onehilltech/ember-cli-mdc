@@ -2,7 +2,6 @@
 
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
 const { version } = require ('../../package.json');
-const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
@@ -10,8 +9,8 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-menu-surface', target},
-    {name: 'ember-cli-mdc-ripple', target},
-    {name: 'ember-cli-mdc-list', target},
+    {name: 'ember-cli-mdc-menu-surface', target: `^${version}`},
+    {name: 'ember-cli-mdc-ripple', target: `^${version}`},
+    {name: 'ember-cli-mdc-list', target: `^${version}`},
   ]
 });
