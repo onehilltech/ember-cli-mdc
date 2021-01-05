@@ -2,7 +2,7 @@
   {{if @numeric "mdc-data-table__header-cell--numeric"}}
   {{if @checkbox "mdc-data-table__header-cell--checkbox"}}"
     role="columnheader"
-    scope="col">
+    scope="col" ...attributes>
   {{#if @checkbox}}
     <div class="mdc-checkbox mdc-data-table__header-row-checkbox {{if @selected "mdc-checkbox--selected"}}">
       <Input type="checkbox" class="mdc-checkbox__native-control" aria-label={{@label}} />

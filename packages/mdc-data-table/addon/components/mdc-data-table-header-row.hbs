@@ -1,5 +1,5 @@
 <thead>
-  <tr class="mdc-data-table__header-row">
+  <tr class="mdc-data-table__header-row" ...attributes>
     {{#if @selectable}}
       <MdcDataTableHeaderCell @checkbox={{true}} />
     {{/if}}
@@ -8,7 +8,7 @@
       {{yield}}
     {{else}}
       {{#each this.headers as |header|}}
-        <MdcDataTableHeaderCell @numberic={{header.numberic}}>{{header.name}}</MdcDataTableHeaderCell>
+        <MdcDataTableHeaderCell @numeric={{header.numeric}}>{{header.name}}</MdcDataTableHeaderCell>
       {{/each}}
     {{/if}}
   </tr>
