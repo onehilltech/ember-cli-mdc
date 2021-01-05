@@ -1,25 +1,28 @@
 <h3>General Menu</h3>
 
-<div class="toolbar" {{mdc-menu-surface-anchor}}>
-  <button {{on "click" this.openMenu}}>Open Menu</button>
+<div class="toolbar" style="position: relative" role="toolbar">
+  <span {{mdc-menu-surface-anchor}}>
+    <button {{on "click" this.openMenu}} >Open Menu</button>
 
-  <MdcMenu @open={{this.open}} @anchorCorner="bottomStart">
-    <MdcMenuList>
-      <MdcMenuItemLinkTo @route="index">This is the link</MdcMenuItemLinkTo>
+    <MdcMenu @open={{this.open}} @position="absolute" @left={{-155}} @top={{24}} @anchorCorner="bottomRight">
+      <MdcMenuList>
+        <MdcMenuItemLinkTo @route="index">This is the link</MdcMenuItemLinkTo>
 
-      <MdcListDivider />
+        <MdcListDivider />
 
-      <li>
-        <MdcMenuSelectionGroup>
-          <MdcMenuSelectionGroupItem @icon="settings" @selected={{true}} @text="Single" />
-          <MdcMenuSelectionGroupItem @icon="web">1.15</MdcMenuSelectionGroupItem>
-        </MdcMenuSelectionGroup>
-      </li>
+        <li>
+          <MdcMenuSelectionGroup>
+            <MdcMenuSelectionGroupItem @icon="settings" @selected={{true}} @text="Single" />
+            <MdcMenuSelectionGroupItem @icon="web">1.15</MdcMenuSelectionGroupItem>
+          </MdcMenuSelectionGroup>
+        </li>
 
-      <MdcListDivider />
+        <MdcListDivider />
 
-      <MdcMenuItem @text="Add space before paragraph" />
-      <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
-    </MdcMenuList>
-  </MdcMenu>
+        <MdcMenuItem @text="Add space before paragraph" />
+        <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
+      </MdcMenuList>
+    </MdcMenu>
+  </span>
+
 </div>
