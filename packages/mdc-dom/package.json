@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-dom",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "ember-cli addon for @material/dom",
   "keywords": [
     "ember-addon",
