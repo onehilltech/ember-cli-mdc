@@ -7,9 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-animation]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-theme]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
