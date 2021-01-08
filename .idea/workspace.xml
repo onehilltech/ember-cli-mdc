@@ -7,63 +7,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" afterPath="$PROJECT_DIR$/lerna.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-card/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-card/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-layout-grid/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -362,7 +315,8 @@
       <workItem from="1609596005765" duration="377000" />
       <workItem from="1609601537295" duration="3777000" />
       <workItem from="1609782909164" duration="27680000" />
-      <workItem from="1610066547879" duration="2460000" />
+      <workItem from="1610066547879" duration="7913000" />
+      <workItem from="1610077203943" duration="286000" />
     </task>
     <servers />
   </component>
