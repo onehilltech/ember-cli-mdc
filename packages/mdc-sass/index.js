@@ -27,16 +27,6 @@ module.exports = {
 
     Object.assign (options, {
       onlyIncluded: true,
-
-      importer (url, prev, done) {
-        if (url.startsWith ('@material')) {
-          let file = url.replace (/@material\//, '');
-          done ({ file });
-        }
-        else {
-          done ({ file: url });
-        }
-      }
     });
 
     if (!options.includePaths)

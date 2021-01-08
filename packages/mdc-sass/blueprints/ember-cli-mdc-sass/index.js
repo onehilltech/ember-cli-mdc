@@ -3,6 +3,10 @@
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
+  packages: [
+    { name: 'sass', target: '^1.0.0'}
+  ],
+
   addons: [
     { name: 'ember-cli-sass' }
   ],
