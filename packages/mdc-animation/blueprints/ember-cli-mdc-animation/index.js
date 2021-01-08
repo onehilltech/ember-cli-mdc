@@ -9,6 +9,6 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
-    {name: 'ember-cli-mdc-sass', target: `^${version}`, blueprintOptions: {save: true}}
+    { name: 'ember-cli-mdc-sass', target: `^${version}` }
   ]
 });

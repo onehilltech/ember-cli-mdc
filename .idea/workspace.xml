@@ -7,12 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/styles/_imported.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +306,7 @@
       <workItem from="1609596005765" duration="377000" />
       <workItem from="1609601537295" duration="3777000" />
       <workItem from="1609782909164" duration="27680000" />
-      <workItem from="1610066547879" duration="471000" />
+      <workItem from="1610066547879" duration="778000" />
     </task>
     <servers />
   </component>
