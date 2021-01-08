@@ -37,6 +37,7 @@ module.exports = {
     // Watch the following directories if they exists.
     watchPathIfExists (includePaths, 'app/styles');
     watchPathIfExists (includePaths, 'addon/styles');
+    watchPathIfExists (includePaths, 'node_modules');
 
     if (config.modulePrefix !== 'dummy') {
       if (!includePaths.includes ('app/styles'))
