@@ -1,4 +1,5 @@
 import Modifier from 'ember-modifier';
+import { isPresent } from '@ember/utils';
 
 export default class MdcTypographyModifier extends Modifier {
   _currentClassName;
@@ -15,14 +16,19 @@ export default class MdcTypographyModifier extends Modifier {
   _addClassName () {
     let [typography] = this.args.positional;
 
-    let currentClassName = `mdc-typography--${typography}`;
-    this.element.classList.add (currentClassName);
+    if (isPresent (typography)) {
+      let currentClassName = `mdc-typography--${typography}`;
 
-    this._currentClassName = currentClassName;
+      this.element.classList.add (currentClassName);
+      this._currentClassName = currentClassName;
+    }
+    else {
+      this._currentClassName = null;
+    }
   }
 
   _removeClassName () {
-    if (!!this._currentClassName) {
+    if (isPresent (this._currentClassName)) {
       this.element.classList.remove (this._currentClassName);
     }
   }
