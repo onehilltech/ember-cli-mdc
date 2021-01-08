@@ -6,8 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-typography/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/blueprints/ember-cli-mdc-sass/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +46,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-typography/node_modules/ " />
+      <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
+      <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-sass]: dummy application">
@@ -308,7 +318,8 @@
       <workItem from="1609601537295" duration="3777000" />
       <workItem from="1609782909164" duration="27680000" />
       <workItem from="1610066547879" duration="7913000" />
-      <workItem from="1610077203943" duration="2622000" />
+      <workItem from="1610077203943" duration="8792000" />
+      <workItem from="1610121993239" duration="1864000" />
     </task>
     <servers />
   </component>

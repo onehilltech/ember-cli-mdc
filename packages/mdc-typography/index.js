@@ -52,17 +52,5 @@ module.exports = {
         }
       }
     }
-  },
-
-  optionsFor (type, options) {
-    console.log (`[${type}]: ${options}`);
-
-    if (type === 'sass') {
-      options.cacheInclude = options.cacheInclude || [];
-      options.cacheInclude.push (/addon\.scss/);
-      options.cacheInclude.push (/@material\/typography/);
-    }
-
-    return options;
   }
 };
