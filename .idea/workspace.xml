@@ -8,6 +8,7 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" afterPath="$PROJECT_DIR$/lerna.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
@@ -361,7 +362,7 @@
       <workItem from="1609596005765" duration="377000" />
       <workItem from="1609601537295" duration="3777000" />
       <workItem from="1609782909164" duration="27680000" />
-      <workItem from="1610066547879" duration="1989000" />
+      <workItem from="1610066547879" duration="2460000" />
     </task>
     <servers />
   </component>
