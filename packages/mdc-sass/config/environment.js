@@ -1,16 +1,43 @@
 'use strict';
 
+const fs = require ('fs-extra');
+
+function watchPathIfExists (sassOptions, path) {
+  const { includePaths } = sassOptions;
+
+  if (fs.pathExistsSync (path)) {
+    if (!includePaths.includes (path))
+      includePaths.push (path);
+  }
+}
+
 module.exports = function (environment, config) {
   if (!config.sassOptions)
     config.sassOptions = {};
 
+  Object.assign (config.sassOptions, {
+    onlyIncluded: true,
+    importer (url, prev, done) {
+      console.log ('importer called ()...');
+      
+      if (url.startsWith ('@material')) {
+        let file = url.replace (/@material\//, '')
+        done ({file})
+      }
+      else {
+        done ({file: url})
+      }
+    }
+  });
+
   if (!config.sassOptions.includePaths)
     config.sassOptions.includePaths = [];
 
-  const includePaths = config.sassOptions.includePaths;
+  const { includePaths } = config.sassOptions;
 
-  if (!includePaths.includes ('node_modules'))
-    config.sassOptions.includePaths.push ('node_modules');
+  // Watch the following directories if they exists.
+  watchPathIfExists (config.sassOptions, 'app/styles');
+  watchPathIfExists (config.sassOptions, 'addon/styles');
 
   if (config.modulePrefix !== 'dummy') {
     if (!includePaths.includes ('app/styles'))

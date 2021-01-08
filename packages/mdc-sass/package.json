@@ -30,7 +30,9 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.1",
     "ember-cli-babel": "^7.7.3",
-    "ember-cli-blueprint-helpers": "^0.4.7"
+    "ember-cli-blueprint-helpers": "^0.4.7",
+    "ember-cli-sass": "^10.0.1",
+    "sass": "^1.32.2"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
@@ -56,8 +58,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
-    "qunit-dom": "^0.6.2",
-    "sass": "^1.26.7"
+    "qunit-dom": "^0.6.2"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"

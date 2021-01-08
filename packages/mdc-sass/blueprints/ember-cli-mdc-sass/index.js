@@ -3,10 +3,11 @@
 const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
-  packages: [
-    {name: 'sass', version: '^1.0.0'}
+  addons: [
+    { name: 'ember-cli-sass' }
   ],
 
+  /*
   files () {
     if (!this.project)
       return this._super.call (this, ...arguments);
@@ -34,5 +35,5 @@ module.exports = Blueprint.extend ({
       files = files.filter (item => item !== 'tests/dummy/app/styles/app.scss');
 
     return files;
-  },
+  },*/
 });
