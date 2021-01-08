@@ -5,10 +5,11 @@ const { version } = require ('../../package.json');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/touch-target', target: '^6.0.0'}
+    {name: '@material/touch-target', target: '^9.0.0'}
   ],
 
   addons: [
+    {name: 'ember-cli-mdc-sass', target: `^${version}`},
     {name: 'ember-cli-mdc-base', target: `^${version}`}
   ]
 });
