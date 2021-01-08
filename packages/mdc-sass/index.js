@@ -2,7 +2,6 @@
 /* eslint-env node */
 
 const fs = require ('fs-extra');
-const sass = require ('node-sass');
 
 module.exports = {
   name:  require ('./package.json').name,
@@ -28,7 +27,7 @@ module.exports = {
 
     Object.assign (options, {
       onlyIncluded: true,
-      implementation: sass,
+
       importer (url, prev, done) {
         if (url.startsWith ('@material')) {
           let file = url.replace (/@material\//, '');
