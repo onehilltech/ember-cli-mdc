@@ -14,14 +14,14 @@
       <MdcListItemGraphicIcon @icon={{@graphicIcon}} />
     {{/if}}
 
-    {{#if @text}}
-      <MdcListItemText>{{@text}}</MdcListItemText>
-    {{else if @primaryText}}
-      <MdcListItemText>
+    <MdcListItemText>
+      {{#if @text}}
+        {{@text}}
+      {{else if @primaryText}}
         <MdcListItemPrimaryText>{{@primaryText}}</MdcListItemPrimaryText>
         <MdcListItemSecondaryText>{{@secondaryText}}</MdcListItemSecondaryText>
-      </MdcListItemText>
-    {{/if}}
+      {{/if}}
+    </MdcListItemText>
 
     {{#if @metaIcon}}
       <MdcListItemMetaIcon @icon={{@metaIcon}} />
