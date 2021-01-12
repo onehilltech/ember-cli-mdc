@@ -1,9 +1,9 @@
 /* globals mdc */
 
 import Modifier from 'ember-modifier';
-import { assert }  from '@ember/debug';
 
-const { MDCRipple } = mdc.ripple;
+import { assert }  from '@ember/debug';
+import { MDCRipple } from '@material/ripple';
 
 const RIPPLE_SURFACE_COLOR_VALUES = ['primary', 'accent'];
 
