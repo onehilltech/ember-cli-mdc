@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-base",
-  "version": "3.0.0-y.0",
+  "version": "3.0.0-alpha.13",
   "description": "ember-cli addon for @material/base",
   "keywords": [
     "ember-addon",
