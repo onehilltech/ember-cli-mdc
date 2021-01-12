@@ -1,8 +1,7 @@
 import Component from 'ember-cli-mdc-base/component';
 
+import { MDCRipple } from '@material/ripple';
 import { isPresent } from '@ember/utils';
-
-const { MDCRipple } = mdc.ripple;
 
 export default class MdcButtonComponent extends Component {
   _button = null;
