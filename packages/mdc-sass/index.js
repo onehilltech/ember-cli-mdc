@@ -2,6 +2,7 @@
 /* eslint-env node */
 
 const fs = require ('fs-extra');
+const Fiber = require ('fibers');
 
 module.exports = {
   name:  require ('./package.json').name,
@@ -27,6 +28,7 @@ module.exports = {
 
     Object.assign (options, {
       onlyIncluded: true,
+      fiber: Fiber
     });
 
     if (!options.includePaths)
