@@ -93,7 +93,7 @@ module.exports = CoreObject.extend ({
     }
 
     Object.assign (options, {
-      //onlyIncluded: true
+
     });
 
     if (!options.includePaths)

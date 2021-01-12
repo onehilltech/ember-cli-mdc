@@ -35,7 +35,6 @@
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
     "ember-cli-mdc-sass": "^3.0.0-alpha.12",
-    "ember-cli-sass": "^10.0.1",
     "sass": "^1.32.2"
   },
   "devDependencies": {
