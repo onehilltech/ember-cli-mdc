@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-animation",
-  "version": "3.0.0-alpha.9",
+  "version": "3.0.0-alpha.10",
   "description": "ember-cli addon for @material/animation",
   "keywords": [
     "ember-addon",
@@ -34,7 +34,7 @@
     "ember-cli-babel": "^7.19.0",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
-    "ember-cli-mdc-sass": "^3.0.0-alpha.9",
+    "ember-cli-mdc-sass": "^3.0.0-alpha.10",
     "sass": "^1.32.2"
   },
   "devDependencies": {
