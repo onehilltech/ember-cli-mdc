@@ -1,0 +1,22 @@
+<span class="mdc-list-item__ripple"></span>
+
+{{#if (has-block)}}
+  {{yield}}
+{{else}}
+  {{#if @graphicIcon}}
+    <MdcListItemGraphicIcon @icon={{@graphicIcon}} />
+  {{/if}}
+
+  {{#if @text}}
+    <MdcListItemText>{{@text}}</MdcListItemText>
+  {{else if @primaryText}}
+    <MdcListItemText>
+      <MdcListItemPrimaryText>{{@primaryText}}</MdcListItemPrimaryText>
+      <MdcListItemSecondaryText>{{@secondaryText}}</MdcListItemSecondaryText>
+    </MdcListItemText>
+  {{/if}}
+
+  {{#if @metaIcon}}
+    <MdcListItemMetaIcon @icon={{@metaIcon}} />
+  {{/if}}
+{{/if}}

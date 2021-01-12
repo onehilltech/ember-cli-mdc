@@ -6,15 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-link-to.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button-link-to.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/components/mdc-button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item-meta-icon.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list-item.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-list/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -45,11 +47,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-typography/node_modules/ " />
@@ -57,7 +59,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-list]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
