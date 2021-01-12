@@ -54,7 +54,6 @@
     "ember-cli-mdc-animation": "^3.0.0-y.0",
     "ember-cli-mdc-base": "^3.0.0-y.0",
     "ember-cli-mdc-theme": "^3.0.0-y.0",
-    "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
