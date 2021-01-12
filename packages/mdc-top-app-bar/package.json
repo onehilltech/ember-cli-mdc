@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-top-app-bar",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "description": "ember-cli addon for @material/top-app-bar.",
   "keywords": [
     "ember-addon",
