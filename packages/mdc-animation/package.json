@@ -35,6 +35,7 @@
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
     "ember-cli-mdc-sass": "^3.0.0-alpha.11",
+    "ember-cli-sass": "^10.0.1",
     "sass": "^1.32.2"
   },
   "devDependencies": {
@@ -48,7 +49,6 @@
     "ember-cli": "~3.18.0",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-inject-live-reload": "^2.0.2",
-    "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",

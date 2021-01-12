@@ -9,7 +9,7 @@ import { assert } from '@ember/debug';
 
 import { isString } from 'lodash-es';
 
-const { MDCMenuSurface, Corner } = mdc.menuSurface;
+import { MDCMenuSurface, Corner } from '@material/menu-surface';
 
 function noOp () { }
 
@@ -34,7 +34,14 @@ export default class MdcMenuSurfaceComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { position, left, top, anchorCorner, anchorMargin, anchorElement, open, quickOpen, hoisted } = this.args;
+    if (this.args.open) {
+      this.doPrepareForOpen (component);
+      this.doOpen (component);
+    }
+  }
+
+  doPrepareForOpen (component) {
+    const { position, left, top, anchorCorner, anchorMargin, anchorElement, quickOpen, hoisted } = this.args;
 
     component.quickOpen = quickOpen;
 
@@ -50,9 +57,7 @@ export default class MdcMenuSurfaceComponent extends Component {
     component.quickOpen = quickOpen;
     component.anchorElement = this._lookupElement (anchorElement);
 
-    if (isPresent (anchorCorner)) {
-      this.setAnchorCorner (anchorCorner);
-    }
+    this.anchorCorner = anchorCorner;
 
     if (isPresent (anchorMargin)) {
       component.setAnchorMargin (anchorMargin);
@@ -60,11 +65,6 @@ export default class MdcMenuSurfaceComponent extends Component {
 
     if (hoisted) {
       component.setIsHoisted ()
-    }
-
-    // Now that it has been configure, let's see if we should open it.
-    if (open) {
-      this.doOpen (component);
     }
   }
 
@@ -76,15 +76,15 @@ export default class MdcMenuSurfaceComponent extends Component {
     component.close (true);
   }
 
-  setAnchorCorner (anchorCorner) {
-    let value;
-
+  set anchorCorner (anchorCorner) {
     if (isPresent (anchorCorner)) {
       assert (`The anchor corner must be one of the following values: ${ANCHOR_CORNER_KEYS}`, ANCHOR_CORNER_KEYS.includes (anchorCorner));
-      value = ANCHOR_CORNERS[anchorCorner];
+      this.component.setAnchorCorner (ANCHOR_CORNERS[anchorCorner]);
+    }
+    else {
+      this.component.setAnchorCorner (null);
     }
 
-    this.component.setAnchorCorner (value);
   }
 
   @action
@@ -100,6 +100,7 @@ export default class MdcMenuSurfaceComponent extends Component {
         this.doClose (component);
       }
       else {
+        this.doPrepareForOpen (component);
         this.doOpen (component);
       }
     }
@@ -110,39 +111,8 @@ export default class MdcMenuSurfaceComponent extends Component {
     }
   }
 
-  @action
-  quickOpen (element, [quickOpen]) {
-    this.component.quickOpen = quickOpen;
-  }
-
   isOpen (component) {
     return component.isOpen ();
-  }
-
-  @action
-  setPosition (element, [position, left, top]) {
-    if (position === 'fixed') {
-      this.component.setFixedPosition (true);
-    }
-    else {
-      this.component.setFixedPosition (false);
-      this.component.setAbsolutePosition (left, top);
-    }
-  }
-
-  @action
-  anchorCorner (element, [anchorCorner]) {
-    this.setAnchorCorner (anchorCorner);
-  }
-
-  @action
-  anchorMargin (element, [anchorMargin]) {
-    this.component.setAnchorMargin (anchorMargin);
-  }
-
-  @action
-  anchorElement (element, [anchorElement]) {
-    this.component.anchorElement = this._lookupElement (anchorElement);
   }
 
   @listener('MDCMenuSurface:opened')
