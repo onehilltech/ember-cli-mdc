@@ -5,7 +5,7 @@ const { version } = require ('../../package.json');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/ripple', target: '^6.0.0'}
+    {name: '@material/ripple', target: '^9.0.0'}
   ],
 
   addons: [
