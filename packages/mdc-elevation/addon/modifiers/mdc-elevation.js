@@ -18,6 +18,7 @@ export default class MdcElevationModifier extends Modifier {
     else if (!transition && this._hasTransition) {
       // Remove the transition class name from the element.
       this.element.classList.remove (MDC_CLASSNAME_ELEVATION_TRANSITION);
+      this._hasTransition = false;
     }
 
     if (isPresent (elevation)) {

@@ -7,8 +7,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/addon/modifiers/mdc-elevation.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/addon/modifiers/mdc-elevation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/blueprints/ember-cli-mdc-elevation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/components/mdc-dummy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/components/mdc-dummy.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-elevation]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>

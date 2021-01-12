@@ -30,7 +30,7 @@ Elevation:
 </select>
 
 Transition:
-<select onchange={{action (mut transition) value="target.value"}}>
+<select {{on "change" this.setTransition}}>
   <option>(nothing selected)</option>
   <option value="true">True</option>
   <option value="false">False</option>
@@ -38,7 +38,4 @@ Transition:
 
 <h3>Using Modifiers</h3>
 
-<div class="mdc-dummy" {{mdc-elevation elevation=elevation transition=transition}} />
-<h3>Using Mixins</h3>
-
-<MdcDummy @elevation={{elevation}} />
+<div style="height: 50px" {{mdc-elevation elevation=elevation transition=this.transition}} />
