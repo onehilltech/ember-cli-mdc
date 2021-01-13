@@ -6,12 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dom/blueprints/ember-cli-mdc-dom/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dom/blueprints/ember-cli-mdc-dom/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +364,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js</url>
-          <line>15</line>
+          <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
