@@ -1,7 +1,7 @@
 /* global mdc */
 
 import Component from 'ember-cli-mdc-base/component';
-const { MDCFloatingLabel } = mdc.floatingLabel;
+import { MDCFloatingLabel } from '@material/floating-label';
 
 export default class MDCFloatingLabelComponent extends Component {
   doCreateComponent (element) {
