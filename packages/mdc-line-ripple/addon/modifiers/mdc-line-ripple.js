@@ -1,7 +1,7 @@
 /* globals mdc */
 
 import Modifier from 'ember-modifier';
-const { MDCLineRipple } = mdc.lineRipple;
+import { MDCLineRipple } from '@material/line-ripple';
 
 /**
  * The base class for all modifier states. The ModifierState class uses the State
