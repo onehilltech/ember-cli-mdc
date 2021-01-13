@@ -7,14 +7,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox-native-control.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox-native-control.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/components/mdc-circular-progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/blueprints/ember-cli-mdc-circular-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/blueprints/ember-cli-mdc-circular-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-list/addon/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -58,7 +57,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-checkbox]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-circular-progress]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
