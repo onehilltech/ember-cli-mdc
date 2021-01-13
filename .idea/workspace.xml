@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/addon/components/mdc-image-list-item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/addon/components/mdc-image-list-item.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-progress-indicator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
