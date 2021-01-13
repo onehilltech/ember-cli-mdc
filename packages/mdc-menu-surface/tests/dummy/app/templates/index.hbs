@@ -1,7 +1,7 @@
 <div class="toolbar" {{mdc-menu-surface-anchor}}>
   <button id="anchor" {{on "click" this.openMenu}}>Open Menu</button>
 
-  <MdcMenuSurface @open={{this.open}}>
+  <MdcMenuSurface @position="fixed" @open={{this.open}} @anchorElement="#anchor" @anchorCorner="bottomStart">
     <ul class="menu-content">
       <li>Item 1</li>
       <li>Item 2</li>
