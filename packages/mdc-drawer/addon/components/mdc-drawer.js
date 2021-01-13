@@ -9,8 +9,8 @@ import { action } from '@ember/object';
 
 const STYLES = [ 'dismissible', 'modal' ];
 
-const { MDCDrawer } = mdc.drawer;
-const { MDCList } = mdc.list;
+import { MDCDrawer } from '@material/drawer';
+import { MDCList } from '@material/list';
 
 function noOp () {}
 
