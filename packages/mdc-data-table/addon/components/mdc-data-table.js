@@ -3,13 +3,13 @@
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
-const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
 import { get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { A } from '@ember/array';
-
 import { tracked } from "@glimmer/tracking";
+
+import { MDCDataTable } from '@material/data-table';
 
 import isString from '../utils/is-string';
 
