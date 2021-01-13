@@ -7,10 +7,6 @@ module.exports = Blueprint.extend ({
     { name: 'sass', target: '^1.0.0'}
   ],
 
-  addons: [
-    { name: 'ember-cli-sass' }
-  ],
-
   files () {
     if (!this.project)
       return this._super.call (this, ...arguments);
