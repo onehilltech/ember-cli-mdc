@@ -5,10 +5,9 @@ import listener from 'ember-cli-mdc-base/listener';
 
 import { isPresent } from '@ember/utils';
 import { action, getWithDefault } from '@ember/object';
-
 import { guidFor } from '@ember/object/internals';
 
-const { MDCDialog } = mdc.dialog;
+import { MDCDialog } from '@material/dialog';
 
 function noOp () { }
 
