@@ -7,10 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/blueprints/ember-cli-mdc-shape/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-shape/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-elevation]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-shape]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
