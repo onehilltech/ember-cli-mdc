@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { tracked } from '@glimmer/tracking';
 
-let { MDCCheckbox } = mdc.checkbox;
+import { MDCCheckbox } from '@material/checkbox';
 
 export default class MdcCheckboxComponent extends Component {
   @tracked
