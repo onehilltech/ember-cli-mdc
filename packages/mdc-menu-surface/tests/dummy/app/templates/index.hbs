@@ -1,4 +1,4 @@
-<div class="toolbar" {{mdc-menu-surface-anchor}}>
+<div class="toolbar">
   <button id="anchor" {{on "click" this.openMenu}}>Open Menu</button>
 
   <MdcMenuSurface @position="fixed" @open={{this.open}} @anchorElement="#anchor" @anchorCorner="bottomStart">
