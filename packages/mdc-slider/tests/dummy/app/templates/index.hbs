@@ -1,6 +1,6 @@
 <h2>Continuous Slider</h2>
 
-<MdcSlider @min={{0}} @max={{100}} @value={{continuous.value}}
+<MdcSlider min={{0}} max={{100}} value={{continuous.value}}
            @label="Select value"
            @change={{action (mut continuous.selected)}}
            @input={{action (mut continuous.value)}} />
@@ -10,6 +10,8 @@
 <div><Input @value={{continuous.value}} @type="number"/></div>
 
 <h2>Discrete Slider</h2>
+
+<!--
 
 <MdcSlider @min={{0}} @max={{100}}
            @value={{discrete.value}}
@@ -55,3 +57,5 @@
            @value={{continuous.value}}
            @label="Select value"
            @disabled={{true}} />
+
+           -->

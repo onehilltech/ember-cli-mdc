@@ -1,34 +1,23 @@
 <div class="mdc-slider {{if @discrete "mdc-slider--discrete"}} {{if @displayMarkers "mdc-slider--display-markers"}}"
-     tabindex="0"
     {{did-insert this.didInsert}}
-    {{did-update this.setLimits @min @max @step}}
     {{did-update this.setValue @value}}
-     ...attributes
-     role="slider"
-     aria-valuemin={{this.min}}
-     aria-valuemax={{this.max}}
-     aria-valuenow={{@value}}
-     data-step={{@step}}
-     aria-label={{@label}}
-     aria-disabled={{@disabled}}>
+     ...attributes>
 
-  <div class="mdc-slider__track-container">
-    <div class="mdc-slider__track"></div>
-    {{#if @discrete}}
-      {{#if @displayMarkers}}
-        <div class="mdc-slider__track-marker-container"></div>
-      {{/if}}
-    {{/if}}
+  <input class="mdc-slider__input"
+         type="range"
+         min={{this.min}}
+         max={{this.max}}
+         step={{this.step}}
+         name={{@name}}
+         aria-label={{@label}} />
+
+  <div class="mdc-slider__track">
+    <div class="mdc-slider__track--inactive"></div>
+    <div class="mdc-slider__track--active">
+      <div class="mdc-slider__track--active_fill"></div>
+    </div>
   </div>
-  <div class="mdc-slider__thumb-container">
-    {{#if @discrete}}
-      <div class="mdc-slider__pin">
-        <span class="mdc-slider__pin-value-marker"></span>
-      </div>
-    {{/if}}
-    <svg class="mdc-slider__thumb" width={{this.width}} height={{this.height}}>
-      <circle cx={{this.cx}} cy={{this.cy}} r={{this.r}}></circle>
-    </svg>
-    <div class="mdc-slider__focus-ring"></div>
+  <div class="mdc-slider__thumb">
+    <div class="mdc-slider__thumb-knob"></div>
   </div>
 </div>

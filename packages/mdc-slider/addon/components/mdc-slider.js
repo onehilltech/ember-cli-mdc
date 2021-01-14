@@ -3,23 +3,41 @@
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 import { action } from '@ember/object';
-import { and } from '@ember/object/computed';
 
-const { MDCSlider } = mdc.slider;
+import { MDCSlider } from '@material/slider';
 
 function noOp () {}
 
 export default class MdcSliderComponent extends Component {
   doCreateComponent (element) {
+    let input = element.querySelector ('input');
+    input.setAttribute ('value', `${this.value}`);
+
     return new MDCSlider (element);
   }
 
+  get name () {
+    return this.args.name || 'volume';
+  }
+
+  get step () {
+    const { step = 1 } = this.args;
+    return step;
+  }
+
   get min () {
-    return this.args.min || 0;
+    let { min = 0 } = this.args;
+    return min;
   }
 
   get max () {
-    return this.args.max || 100;
+    let { max = 100 } = this.args;
+    return max;
+  }
+
+  get value () {
+    let { value = this.min } = this.args;
+    return value;
   }
 
   @listener ('MDCSlider:change')
