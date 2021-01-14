@@ -1,8 +1,7 @@
 import LinkComponent from '@ember/routing/link-component';
 
 import { isPresent } from '@ember/utils';
-
-const { MDCRipple } = mdc.ripple;
+import { MDCRipple } from '@material/ripple';
 
 export default LinkComponent.extend ({
   classNames: ['mdc-icon-button', 'material-icons'],

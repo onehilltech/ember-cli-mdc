@@ -4,8 +4,7 @@ import Component from 'ember-cli-mdc-base/component';
 import listener  from 'ember-cli-mdc-base/listener';
 
 import { action } from '@ember/object';
-
-const { MDCIconButtonToggle } = mdc.iconButton;
+import { MDCIconButtonToggle } from '@material/icon-button';
 
 function noOp () { return true }
 
