@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-progress-indicator",
-  "version": "3.0.0-alpha.17",
+  "version": "3.0.0-alpha.18",
   "description": "ember-cli addon for @material/progress-indicator",
   "keywords": [
     "ember-addon",
