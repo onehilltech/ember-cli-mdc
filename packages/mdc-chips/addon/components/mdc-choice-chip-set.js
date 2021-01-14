@@ -22,7 +22,9 @@ export default class MdcChoiceChipSetComponent extends ChipSetComponent {
     }
   }
 
-  didSelection (chipId, selected) {
+  didSelection (ev) {
+    const { detail: { chipId, selected } }  = ev;
+
     if (isPresent (this.chips)) {
       // The user wants us to automate the handling of selecting a chip.
 

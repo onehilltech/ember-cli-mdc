@@ -6,7 +6,7 @@ import { action, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { dasherize } from '@ember/string';
 
-const { MDCChipSet } = mdc.chips;
+import { MDCChipSet } from '@material/chips';
 
 function noOp () {}
 
@@ -110,7 +110,7 @@ export default class MdcChipSetComponent extends Component {
   }
 
   select (chipId) {
-    return this.component.foundation_.select (chipId);
+    return this.component.foundation.select (chipId);
   }
 
   findChipById (chipId) {
