@@ -1,13 +1,13 @@
 /* global mdc */
 
-import Component from 'ember-cli-mdc-menu-surface/components/mdc-menu-surface';
+import MdcMenuSurfaceComponent from 'ember-cli-mdc-menu-surface/components/mdc-menu-surface';
 import listener from 'ember-cli-mdc-base/listener';
 
-const { MDCMenu } = mdc.menu;
+import { MDCMenu } from '@material/menu';
 
 function noOp () { }
 
-export default class MdcMenuComponent extends Component {
+export default class MdcMenuComponent extends MdcMenuSurfaceComponent {
   doCreateComponent (element) {
     return new MDCMenu (element);
   }

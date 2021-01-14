@@ -55,17 +55,15 @@ export default class MdcMenuSurfaceComponent extends Component {
     }
 
     component.quickOpen = quickOpen;
-    component.anchorElement = this._lookupElement (anchorElement);
 
+    this.anchorElement = this._lookupElement (anchorElement);
     this.anchorCorner = anchorCorner;
 
     if (isPresent (anchorMargin)) {
       component.setAnchorMargin (anchorMargin);
     }
 
-    if (hoisted) {
-      component.setIsHoisted ()
-    }
+    component.setIsHoisted (hoisted);
   }
 
   doOpen (component) {
@@ -85,6 +83,10 @@ export default class MdcMenuSurfaceComponent extends Component {
       this.component.setAnchorCorner (null);
     }
 
+  }
+
+  set anchorElement (element) {
+    this.component.setMenuSurfaceAnchorElement (element);
   }
 
   @action
