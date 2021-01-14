@@ -1,47 +1,62 @@
 <div class="mdc-select
   {{unless @label "mdc-select--no-label"}}
   {{if @disabled "mdc-select--disabled"}}
-  {{if this.isOutlined "mdc-select--outlined"}}
+  {{if this.isOutlined "mdc-select--outlined" "mdc-select--filled"}}
   {{if @leadingIcon "mdc-select--with-leading-icon"}}"
   {{did-insert this.didInsert}}
-  {{did-update this.select @value}}>
-  <div class="mdc-select__anchor" aria-labelledby={{this.labelId}} {{custom-property "--mdc-select-width" @width}}>
-    {{#unless this.isOutlined}}
-      <span class="mdc-select__ripple"></span>
-    {{/unless}}
+  {{did-update this.select @value}}
+  {{custom-property "--mdc-select-width" @width}}>
+  <div class="mdc-select__anchor"
+       role="button"
+       aria-haspopup="listbox"
+       aria-expanded="false"
+       aria-labelledby="{{this.labelId}} {{this.selectedTextId}}">
 
-    {{#if @leadingIcon}}
-      <MdcIcon @icon={{@leadingIcon}}
-               class="mdc-select__icon mdc-text-field__icon--leading"
-               tabindex={{if @leadingIconClick "0"}}
-               role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
-    {{/if}}
-
-    <input type="text" class="mdc-select__selected-text"
-           ...attributes disabled readonly
-           required={{@required}}
-           aria-controls={{this.helperId}}
-           aria-describedby={{this.helperId}}>
-    <i class="mdc-select__dropdown-icon"></i>
     {{#if this.isOutlined}}
       <span class="mdc-notched-outline">
-        <span class="mdc-notched-outline__leading"></span>
+          <span class="mdc-notched-outline__leading"></span>
           {{#if @label}}
             <span class="mdc-notched-outline__notch">
               <span id={{this.labelId}} class="mdc-floating-label">{{@label}}</span>
             </span>
           {{/if}}
-        <span class="mdc-notched-outline__trailing"></span>
+          <span class="mdc-notched-outline__trailing"></span>
       </span>
-    {{else}}
-      {{#if @label}}
-        <span class="mdc-floating-label">{{@label}}</span>
+
+      {{#if @leadingIcon}}
+        <i class="material-icons mdc-select__icon" tabindex="0" role="button">{{@leadingIcon}}</i>
       {{/if}}
-      <span class="mdc-line-ripple"></span>
+
+    {{else}}
+      <span class="mdc-select__ripple"></span>
+      {{#if @label}}
+          <span id={{this.labelId}} class="mdc-floating-label">{{@label}}</span>
+      {{/if}}
+
+      {{#if @leadingIcon}}
+        <i class="material-icons mdc-select__icon" tabindex="0" role="button">{{@leadingIcon}}</i>
+      {{/if}}
     {{/if}}
+
+      <span class="mdc-select__selected-text-container">
+          <span id={{this.selectedTextId}} class="mdc-select__selected-text"></span>
+      </span>
+
+      <span class="mdc-select__dropdown-icon">
+          <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+            <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                     points="7 10 12 15 17 10"></polygon>
+            <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                     points="7 15 12 10 17 15"></polygon>
+          </svg>
+      </span>
+      {{#unless this.isOutlined}}
+          <span class="mdc-line-ripple"></span>
+      {{/unless}}
   </div>
 
-  <div class="mdc-select__menu mdc-menu mdc-menu-surface" {{custom-property "--mdc-select-width" @width}} role="listbox">
+  <!-- list of options in the drop-down -->
+  <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" role="listbox">
     <ul class="mdc-list">
       {{#if @firstOptionIsEmpty}}
         <MdcListItem data-value="" role="option">

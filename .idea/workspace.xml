@@ -7,7 +7,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/blueprints/ember-cli-mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +57,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-radio]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-select]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>

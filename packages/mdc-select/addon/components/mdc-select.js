@@ -10,7 +10,7 @@ import { isEmpty, isPresent, isNone } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
 
-const { MDCSelect } = mdc.select;
+import { MDCSelect } from '@material/select';
 
 function noOp () { }
 
@@ -20,8 +20,10 @@ export default class MdcSelectComponent extends Component {
   doPrepareElement (element) {
     const { value: option } = this.args;
 
-    this.labelId = guidFor (this);
-    this.helperId = `${guidFor (this)}__helper-text`;
+    let guid = guidFor (this);
+    this.labelId = `${guid}__label`;
+    this.selectedTextId = `${guid}__selected-text`;
+    this.helperId = `${guid}__helper-text`;
 
     if (isPresent (option)) {
       // We need to pre-select the option.
@@ -54,6 +56,9 @@ export default class MdcSelectComponent extends Component {
 
   @tracked
   labelId;
+
+  @tracked
+  selectedTextId;
 
   @tracked
   helperId;
