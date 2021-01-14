@@ -8,10 +8,6 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
