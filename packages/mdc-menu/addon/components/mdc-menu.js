@@ -30,4 +30,8 @@ export default class MdcMenuComponent extends Component {
   doClose (component) {
     component.open = false;
   }
+
+  set anchorElement (element) {
+    this.component.setAnchorElement (element);
+  }
 }
