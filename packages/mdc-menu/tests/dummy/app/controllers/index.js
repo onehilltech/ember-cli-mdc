@@ -10,4 +10,9 @@ export default class IndexController extends Controller {
   openMenu () {
     this.open = true;
   }
+
+  @action
+  alert () {
+    alert ('Menu item clicked.');
+  }
 }
