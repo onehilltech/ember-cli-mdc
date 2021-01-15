@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-sass",
-  "version": "2.0.12",
+  "version": "2.0.19",
   "description": "ember-cli addon for integrating SASS into ember-cli-mdc.",
   "keywords": [
     "ember-addon",
