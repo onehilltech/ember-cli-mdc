@@ -1,0 +1,1 @@
+exports.target = require ('./target');
