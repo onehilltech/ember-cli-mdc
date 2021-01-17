@@ -28,14 +28,16 @@ export default class MdcSelectComponent extends Component {
       let value = get (option, this.valueKey);
       let text = get (option, this.textKey);
 
-      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+      if (isPresent (value) && isPresent (text)) {
+        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
 
-      if (isPresent (listItem)) {
-        listItem.classList.add ('mdc-list-item--selected');
+        if (isPresent (listItem)) {
+          listItem.classList.add ('mdc-list-item--selected');
+        }
+
+        let textElement = element.querySelector ('.mdc-select__selected-text');
+        textElement.value = text;
       }
-
-      let textElement = element.querySelector ('.mdc-select__selected-text');
-      textElement.value = text;
     }
   }
 
