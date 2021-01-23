@@ -13,5 +13,6 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-menu-surface', target },
     {name: 'ember-cli-mdc-ripple', target },
     {name: 'ember-cli-mdc-list', target },
+    {name: 'ember-cli-mdc-icon-button', target }
   ]
 });
