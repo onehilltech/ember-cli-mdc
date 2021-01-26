@@ -88,9 +88,13 @@ export default class MdcSelectComponent extends Component {
   @action
   select (element, [option]) {
     if (isPresent (option)) {
-      this.component.value = typeof option === 'string' ? option : `${get (option, this.valueKey)}`;
+      let value = typeof option === 'string' ? option : `${get (option, this.valueKey)}`;
+
+      if (this.component.value !== value) {
+        this.component.value = value;
+      }
     }
-    else {
+    else if (this.component.value !== null) {
       this.component.value = null;
     }
 
