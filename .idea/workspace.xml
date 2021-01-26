@@ -6,7 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-filter-chip.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +305,8 @@
       <workItem from="1610722593022" duration="2280000" />
       <workItem from="1610980097471" duration="1800000" />
       <workItem from="1611086094451" duration="8769000" />
-      <workItem from="1611519765908" duration="136000" />
+      <workItem from="1611519765908" duration="1109000" />
+      <workItem from="1611629959332" duration="31000" />
     </task>
     <servers />
   </component>
