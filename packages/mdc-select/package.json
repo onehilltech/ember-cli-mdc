@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-select",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "ember-cli addon for @material/select.",
   "keywords": [
     "ember-addon",
@@ -55,7 +55,7 @@
     "ember-cli-mdc-icon": "^2.0.19",
     "ember-cli-mdc-line-ripple": "^2.0.19",
     "ember-cli-mdc-list": "^2.0.19",
-    "ember-cli-mdc-menu": "^2.1.0",
+    "ember-cli-mdc-menu": "^2.1.4",
     "ember-cli-mdc-menu-surface": "^2.0.19",
     "ember-cli-mdc-notched-outline": "^2.0.19",
     "ember-cli-mdc-ripple": "^2.0.19",
