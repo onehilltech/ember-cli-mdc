@@ -54,6 +54,12 @@ export default class MdcTextfieldComponent extends Component {
 
     if (isPresent (value)) {
       element.classList.add ('mdc-text-field--label-floating');
+
+      let floatingLabel = element.querySelector ('.mdc-floating-label');
+
+      if (isPresent (floatingLabel)) {
+        floatingLabel.classList.add ('mdc-floating-label--float-above');
+      }
     }
 
     this.labelId = guidFor (this);
