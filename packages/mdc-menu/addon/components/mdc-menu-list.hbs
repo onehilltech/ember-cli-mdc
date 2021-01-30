@@ -1,3 +1,9 @@
-<MdcList role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1" ...attributes>
+<MdcList @dense={{@dense}}
+         @twoLine={{@twoLine}}
+         @@avatarList={{@@avatarList}}
+         role="menu"
+         aria-hidden="true"
+         aria-orientation="vertical"
+         tabindex="-1" ...attributes>
   {{yield}}
 </MdcList>
