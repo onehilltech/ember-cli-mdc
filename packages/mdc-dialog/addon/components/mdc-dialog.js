@@ -102,6 +102,14 @@ export default class MdcDialogComponent extends Component {
     }
   }
 
+  get positiveButtonAction () {
+    return getWithDefault (this.args, 'positiveButton.action', 'ok');
+  }
+
+  get negativeButtonAction () {
+    return getWithDefault (this.args, 'negativeButton.action', 'cancel');
+  }
+
   /**
    * Lookup the button for the given action.
    *
