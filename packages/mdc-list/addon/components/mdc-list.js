@@ -32,4 +32,9 @@ export default class MdcListComponent extends Component {
   wrapFocus (element, [wrapFocus]) {
     this.component.wrapFocus = wrapFocus;
   }
+
+  get interactive () {
+    const { interactive = true } = this.args;
+    return interactive;
+  }
 }

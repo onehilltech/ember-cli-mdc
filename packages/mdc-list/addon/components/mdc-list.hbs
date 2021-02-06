@@ -1,4 +1,4 @@
-<ul class="mdc-list {{if @twoLine "mdc-list--two-line"}} {{if @avatarList "mdc-list--avatar-list"}} {{if @nonInteractive "mdc-list--non-interactive"}} {{if @dense "mdc-list--dense"}}"
+<ul class="mdc-list {{if @twoLine "mdc-list--two-line"}} {{if @avatarList "mdc-list--avatar-list"}} {{unless this.interactive "mdc-list--non-interactive"}} {{if @dense "mdc-list--dense"}}"
     ...attributes
     {{did-insert this.didInsert}}
     {{did-update this.vertical @vertical}}
