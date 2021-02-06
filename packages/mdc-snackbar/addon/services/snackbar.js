@@ -161,4 +161,13 @@ export default class SnackbarService extends Service {
   didClose () {
 
   }
+
+  errorHandler (options = {}) {
+    return (reason) => {
+      const message = isPresent (reason.errors) ? reason.errors[0].detail : reason.message;
+      const showOptions = Object.assign ({}, { message }, options)
+
+      this.show (showOptions);
+    }
+  }
 }
