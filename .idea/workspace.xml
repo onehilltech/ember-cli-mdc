@@ -7,7 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-drawer/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-list/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-menu/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-select/package.json" />
   </component>
   <component name="ProjectId" id="1SamfNXR7954uB9nCo4laLZZEql" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -309,7 +319,7 @@
       <workItem from="1611629959332" duration="351000" />
       <workItem from="1611641029212" duration="734000" />
       <workItem from="1611767574913" duration="8235000" />
-      <workItem from="1612477525768" duration="1796000" />
+      <workItem from="1612477525768" duration="2835000" />
     </task>
     <servers />
   </component>
