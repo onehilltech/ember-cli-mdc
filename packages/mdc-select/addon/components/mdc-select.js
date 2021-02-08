@@ -25,8 +25,8 @@ export default class MdcSelectComponent extends Component {
 
     if (isPresent (option)) {
       // We need to pre-select the option.
-      let value = get (option, this.valueKey);
-      let text = get (option, this.textKey);
+      let value = this.valueOf (option);
+      let text = this.textOf (option);
 
       if (isPresent (value) && isPresent (text)) {
         let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
@@ -46,8 +46,29 @@ export default class MdcSelectComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { required = false } = this.args;
+    const { required = false, value: initial } = this.args;
     component.required = required;
+
+    if (isPresent (initial)) {
+      //component.value = this.valueOf (initial);
+    }
+  }
+
+  valueOf (option) {
+    return typeof option === 'string' ? option : `${get (option, this.valueKey)}`;
+  }
+
+  textOf (option) {
+    if (typeof option === 'string') {
+      // We have to assume the string text is a value.
+      let value = option;
+      let found = (this.options || []).find (option => this.valueOf (option) === value);
+
+      return isPresent (found) ? get (found, this.textKey) : value;
+    }
+    else {
+      return get (option, this.textKey);
+    }
   }
 
   get isOutlined () {
@@ -76,7 +97,7 @@ export default class MdcSelectComponent extends Component {
       (this.args.change || noOp) (null);
     }
     else {
-      let selected = this.options.find (option => `${get (option, this.valueKey)}` === value);
+      let selected = this.options.find (option => this.valueOf (option) === value);
       (this.args.change || noOp) (selected);
     }
   }
@@ -88,7 +109,7 @@ export default class MdcSelectComponent extends Component {
   @action
   select (element, [option]) {
     if (isPresent (option)) {
-      let value = typeof option === 'string' ? option : `${get (option, this.valueKey)}`;
+      let value = this.valueOf (option);
 
       if (this.component.value !== value) {
         this.component.value = value;

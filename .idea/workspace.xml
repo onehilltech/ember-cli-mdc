@@ -7,10 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigate-up-to.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-row.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-section.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-title.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
