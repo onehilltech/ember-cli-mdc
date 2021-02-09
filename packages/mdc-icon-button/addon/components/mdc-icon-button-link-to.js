@@ -2,6 +2,7 @@ import LinkComponent from '@ember/routing/link-component';
 
 import { isPresent } from '@ember/utils';
 import { computed } from '@ember/object';
+import { dasherize } from '@ember/string';
 
 const { MDCRipple } = mdc.ripple;
 
