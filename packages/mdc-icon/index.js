@@ -1,5 +1,12 @@
 'use strict';
 
+const STYLE_MAP = {
+  outlined: 'Material+Icons+Outlined',
+  twoTone: 'Material+Icons+Two+Tone',
+  round: 'Material+Icons+Round',
+  sharp: 'Material+Icons+Sharp'
+};
+
 module.exports = {
   name: require('./package').name,
 
@@ -24,19 +31,16 @@ module.exports = {
 
     if (type === 'head-footer') {
       if (!process.env.CORBER) {
+        const mdc = config['ember-cli-mdc'] || {};
+        const icons = mdc.icons || {};
+        const styles = icons.styles || [];
+
+        let styleLinks = styles.map (style => STYLE_MAP[style]);
+        styleLinks.unshift ('Material+Icons');
+
         this.ui.writeLine ('Linking Material Icon fonts with the application.');
-        return '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />';
+        return `<link href="https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}" rel="stylesheet" />`;
       }
     }
-  },
-
-  optionsFor (type, options) {
-    if (type === 'sass') {
-      options.cacheInclude = options.cacheInclude || [];
-      options.cacheInclude.push (/addon\.scss/);
-      options.cacheInclude.push (/_app-theme\.scss/);
-    }
-
-    return options;
   }
 };
