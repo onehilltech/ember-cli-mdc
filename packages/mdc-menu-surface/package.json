@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-menu-surface",
-  "version": "2.0.19",
+  "version": "2.3.4",
   "description": "ember-cli addon for @material/menu-surface.",
   "keywords": [
     "ember-addon",
@@ -51,10 +51,10 @@
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-mdc-animation": "^2.0.19",
     "ember-cli-mdc-base": "^2.0.19",
-    "ember-cli-mdc-elevation": "^2.0.19",
+    "ember-cli-mdc-elevation": "^2.3.4",
     "ember-cli-mdc-rtl": "^2.0.19",
     "ember-cli-mdc-shape": "^2.0.19",
-    "ember-cli-mdc-theme": "^2.0.19",
+    "ember-cli-mdc-theme": "^2.3.4",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",

@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-htmlbars",
-  "version": "2.0.19",
+  "version": "2.3.4",
   "description": "ember-cli addon for basic html elements for Material Design",
   "keywords": [
     "ember-addon",
@@ -45,7 +45,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mdc-rtl": "^2.0.19",
-    "ember-cli-mdc-theme": "^2.0.19",
+    "ember-cli-mdc-theme": "^2.3.4",
     "ember-cli-mdc-typography": "^2.0.19",
     "ember-cli-qunit": "^4.3.2",
     "ember-cli-shims": "^1.2.0",
