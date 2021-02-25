@@ -7,6 +7,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/components/mdc-div.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/components/mdc-div.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +62,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-menu]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-text-field]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -317,7 +325,8 @@
       <workItem from="1611767574913" duration="8235000" />
       <workItem from="1612477525768" duration="2835000" />
       <workItem from="1612757788624" duration="5208000" />
-      <workItem from="1613021800588" duration="622000" />
+      <workItem from="1613021800588" duration="8355000" />
+      <workItem from="1614229271126" duration="24000" />
     </task>
     <servers />
   </component>

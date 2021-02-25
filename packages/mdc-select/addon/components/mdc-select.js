@@ -29,16 +29,23 @@ export default class MdcSelectComponent extends Component {
       let text = this.textOf (option);
 
       if (isPresent (value) && isPresent (text)) {
-        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
-
-        if (isPresent (listItem)) {
-          listItem.classList.add ('mdc-list-item--selected');
-        }
-
-        let textElement = element.querySelector ('.mdc-select__selected-text');
-        textElement.value = text;
+        this._manuallySelectListItem (element,`.mdc-list-item[data-value="${value}"]`, text);
       }
     }
+    else if (isPresent (this.args.firstOption)) {
+      this._manuallySelectListItem (element,'.mdc-list-item[data-value=""]', this.args.firstOption.text);
+    }
+  }
+
+  _manuallySelectListItem (element, query, text) {
+    let listItem = element.querySelector (query);
+
+    if (isPresent (listItem)) {
+      listItem.classList.add ('mdc-list-item--selected');
+    }
+
+    let textElement = element.querySelector ('.mdc-select__selected-text');
+    textElement.value = text;
   }
 
   doCreateComponent (element) {
