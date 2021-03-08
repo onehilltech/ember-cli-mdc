@@ -37,7 +37,7 @@
 
   {{#if @trailingIcon}}
     <MdcIcon @icon={{@trailingIcon}}
-             class="mdc-text-field__icon mdc-text-field__icon--leading"
+             class="mdc-text-field__icon mdc-text-field__icon--trailing"
              tabindex={{if @trailingIconClick "0"}}
              role={{if @trailingIconClick "button"}} {{on "click" this.trailingIconClick}} />
   {{/if}}
