@@ -7,8 +7,126 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.ember-cli" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/-private/text-component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-abbr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-address.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-bdo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-blockquote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-cite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-del.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-div.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-em.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-h6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-i.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-ins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-mark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-p.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-q.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-small.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-span.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-strong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-sub.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/components/mdc-sup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/styles/_app-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/styles/addon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/addon/templates/components/text-component.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-abbr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-address.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-bdo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-blockquote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-cite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-del.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-div.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-em.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-h6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-i.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-ins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-mark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-p.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-q.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-small.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-span.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-strong.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-sub.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/app/components/mdc-sup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/blueprints/ember-cli-mdc-htmlbars/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/config/ember-try.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/config/environment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/ember-cli-build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/testem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/controllers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/helpers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/models/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/resolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/routes/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/styles/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/templates/application.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/app/templates/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/config/environment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/config/targets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/dummy/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/helpers/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-abbr-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-address-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-b-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-bdo-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-blockquote-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-cite-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-del-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-div-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-em-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h1-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h2-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h3-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h4-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h5-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-h6-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-i-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-ins-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-mark-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-p-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-q-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-small-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-span-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-strong-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-sub-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/integration/components/mdc-sup-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/test-helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/tests/unit/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/vendor/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-htmlbars/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,6 +446,8 @@
       <workItem from="1615912527785" duration="736000" />
       <workItem from="1616032806130" duration="770000" />
       <workItem from="1616550031925" duration="111000" />
+      <workItem from="1616729656805" duration="41000" />
+      <workItem from="1617640614116" duration="706000" />
     </task>
     <servers />
   </component>
