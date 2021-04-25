@@ -70,6 +70,11 @@ export default class MdcTextfieldComponent extends Component {
     return new MDCTextField (element);
   }
 
+  @action
+  didUpdateValue (element, [value]) {
+    this.component.value = value;
+  }
+
   @equal ('style', 'filled')
   filled;
 

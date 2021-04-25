@@ -7,7 +7,8 @@
   {{if @focused "mdc-text-field--focused"}}
   {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
   {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
-  {{did-insert this.didInsert}}>
+  {{did-insert this.didInsert}}
+  {{did-update this.didUpdateValue @value}}>
   {{#if this.filled}}
     <span class="mdc-text-field__ripple"></span>
   {{/if}}
