@@ -72,9 +72,7 @@ export default class MdcTextfieldComponent extends Component {
 
   @action
   didUpdateValue (element, [value = '']) {
-    if (this.component.value !== value) {
-      this.component.value = value;
-    }
+    this.component.value = value;
   }
 
   @equal ('style', 'filled')
