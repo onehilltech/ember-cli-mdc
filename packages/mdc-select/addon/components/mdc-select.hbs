@@ -44,7 +44,7 @@
   <div class="mdc-select__menu mdc-menu mdc-menu-surface" {{custom-property "--mdc-select-width" @width}} role="listbox">
     <ul class="mdc-list">
       {{#if @firstOption}}
-        <MdcListItem data-value="" role="option" @disabled={{@firstOption.disabled}}>
+        <MdcListItem class={{@firstOption.classname}} data-value="" role="option" @disabled={{@firstOption.disabled}}>
           <MdcListItemText>{{@firstOption.text}}</MdcListItemText>
         </MdcListItem>
       {{/if}}
