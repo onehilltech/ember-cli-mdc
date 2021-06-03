@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-menu-surface",
-  "version": "2.3.4",
+  "version": "2.3.17",
   "description": "ember-cli addon for @material/menu-surface.",
   "keywords": [
     "ember-addon",

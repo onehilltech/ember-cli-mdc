@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-menu",
-  "version": "2.3.10",
+  "version": "2.3.17",
   "description": "ember-cli addon for @material/menu.",
   "keywords": [
     "ember-addon",
@@ -57,7 +57,7 @@
     "ember-cli-mdc-icon": "^2.3.10",
     "ember-cli-mdc-icon-button": "^2.3.10",
     "ember-cli-mdc-list": "^2.3.10",
-    "ember-cli-mdc-menu-surface": "^2.3.4",
+    "ember-cli-mdc-menu-surface": "^2.3.17",
     "ember-cli-mdc-ripple": "^2.3.4",
     "ember-cli-mdc-rtl": "^2.0.19",
     "ember-cli-mdc-shape": "^2.0.19",
