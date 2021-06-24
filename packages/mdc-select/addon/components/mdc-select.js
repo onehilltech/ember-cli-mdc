@@ -25,11 +25,11 @@ export default class MdcSelectComponent extends Component {
 
     if (isPresent (option)) {
       // We need to pre-select the option.
-      let value = get (option, this.valueKey);
-      let text = get (option, this.textKey);
+      let value = get (option, this.valueKey) || option;
 
-      if (isPresent (value) && isPresent (text)) {
+      if (isPresent (value)) {
         let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+        let text = this._textForValue (value);
 
         if (isPresent (listItem)) {
           this._selectOption (element, listItem, text);
@@ -70,6 +70,11 @@ export default class MdcSelectComponent extends Component {
 
   get isOutlined () {
     return this.args.style === 'outlined';
+  }
+
+  _textForValue (value) {
+    let option = this.options.find (option => get (option, this.valueKey) === value);
+    return get (option, this.textKey);
   }
 
   @tracked
