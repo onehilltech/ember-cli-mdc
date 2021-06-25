@@ -29,9 +29,9 @@ export default class MdcSelectComponent extends Component {
 
       if (isPresent (value)) {
         let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
-        let text = this._textForValue (value);
 
         if (isPresent (listItem)) {
+          let text = this._textForValue (value);
           this._selectOption (element, listItem, text);
         }
         else if (isPresent (firstOption)) {
@@ -74,7 +74,7 @@ export default class MdcSelectComponent extends Component {
 
   _textForValue (value) {
     let option = this.options.find (option => get (option, this.valueKey) === value);
-    return get (option, this.textKey);
+    return isPresent (options) ? get (option, this.textKey) : undefined;
   }
 
   @tracked
