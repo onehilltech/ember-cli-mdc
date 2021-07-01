@@ -74,7 +74,7 @@ export default class MdcSelectComponent extends Component {
 
   _textForValue (value) {
     let option = this.options.find (option => get (option, this.valueKey) === value);
-    return isPresent (options) ? get (option, this.textKey) : undefined;
+    return isPresent (option) ? get (option, this.textKey) : undefined;
   }
 
   @tracked

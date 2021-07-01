@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-select/addon/components/mdc-select.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +341,8 @@
       <workItem from="1621820032677" duration="704000" />
       <workItem from="1622749369558" duration="1040000" />
       <workItem from="1623733043375" duration="388000" />
-      <workItem from="1624557694653" duration="3409000" />
+      <workItem from="1624557694653" duration="3970000" />
+      <workItem from="1625176174676" duration="14000" />
     </task>
     <servers />
   </component>
