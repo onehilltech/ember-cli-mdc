@@ -64,8 +64,16 @@ export default class MdcSelectComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { required = false } = this.args;
+    const { value: option, required = false } = this.args;
     component.required = required;
+
+    if (isPresent (option)) {
+      let value = get (option, this.valueKey) || option;
+
+      if (isPresent (value) && component.value !== value) {
+        component.value = value;
+      }
+    }
   }
 
   get isOutlined () {
