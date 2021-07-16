@@ -8,6 +8,7 @@ import { dasherize } from '@ember/string';
 import { get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { A } from '@ember/array';
+import { action } from '@ember/object';
 
 import { tracked } from "@glimmer/tracking";
 
@@ -124,9 +125,14 @@ export default class MdcDataTableComponent extends Component {
     return this.args.selected || A ();
   }
 
+  @action
+  layout () {
+    this.component.layout ();
+  }
+
   get data () {
     // We need to flatten (or map) each object in the data into an array.
-    return this.args.data.map (item => new DataTableRow (this, item));
+    return (this.args.data || A ()).map (item => new DataTableRow (this, item));
   }
 
   get fields () {
