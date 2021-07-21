@@ -69,7 +69,7 @@ or the block version:
 
 ### Listening for button clicks
 
-Use the `click` attribute and the `action` helper to listen for button clicks.
+Use the `on` modifier to listen for button clicks.
 
 ```handlebars
 <MdcButtton @style="raised" @label="Button" {{on "click" this.clicked}} />
