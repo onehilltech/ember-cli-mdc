@@ -11,7 +11,9 @@ Installation
 Styles
 -------
 
-    @use "@material/button/mixins" as button;
+```sass
+@use "@material/button/mixins" as button;
+```
 
 Components
 -----------
