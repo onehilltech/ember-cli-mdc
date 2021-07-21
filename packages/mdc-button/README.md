@@ -8,6 +8,11 @@ Installation
 
     ember install ember-cli-mdc-button
 
+Styles
+-------
+
+    @use "@material/button/mixins" as button;
+
 Components
 -----------
 
