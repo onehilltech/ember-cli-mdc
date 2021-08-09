@@ -25,18 +25,12 @@ export default class MdcSelectComponent extends Component {
 
     if (isPresent (option)) {
       // We need to pre-select the option.
-      let value = get (option, this.valueKey) || option;
+      let value = `${get (option, this.valueKey) || option}`;
+      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
 
-      if (isPresent (value)) {
-        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
-
-        if (isPresent (listItem)) {
-          let text = this._textForValue (value);
-          this._selectOption (element, listItem, text);
-        }
-        else if (isPresent (firstOption)) {
-          this._selectFirstOption (element, firstOption);
-        }
+      if (isPresent (listItem)) {
+        let text = this._textForValue (value);
+        this._selectOption (element, listItem, text);
       }
       else if (isPresent (firstOption)) {
         this._selectFirstOption (element, firstOption);
@@ -68,7 +62,7 @@ export default class MdcSelectComponent extends Component {
     component.required = required;
 
     if (isPresent (option)) {
-      let value = get (option, this.valueKey) || option;
+      let value = `${get (option, this.valueKey) || option}`;
 
       if (isPresent (value) && component.value !== value) {
         component.value = value;
