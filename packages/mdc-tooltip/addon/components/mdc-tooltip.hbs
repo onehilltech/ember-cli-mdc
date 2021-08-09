@@ -1,0 +1,11 @@
+<div class="mdc-tooltip" role="tooltip" aria-hidden="true" {{did-insert this.didInsert}} ...attributes>
+  {{#if (has-block)}}
+  <div class="mdc-tooltip__surface">
+    {{yield}}
+  </div>
+  {{else}}
+  <div class="mdc-tooltip__surface">
+    {{@description}}
+  </div>
+  {{/if}}
+</div>
