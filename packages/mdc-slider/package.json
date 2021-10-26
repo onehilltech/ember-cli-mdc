@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-slider",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "description": "ember-cli addon for @material/slider.",
   "keywords": [
     "ember-addon",
@@ -51,7 +51,7 @@
     "ember-cli-mdc-base": "^2.0.19",
     "ember-cli-mdc-rtl": "^2.0.19",
     "ember-cli-mdc-theme": "^2.3.4",
-    "ember-cli-mdc-typography": "^2.0.19",
+    "ember-cli-mdc-typography": "^2.4.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
