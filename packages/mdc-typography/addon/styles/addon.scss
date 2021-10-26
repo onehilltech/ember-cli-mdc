@@ -31,4 +31,8 @@ h6 {
 
 p {
   @include mdc-typography (body1);
+
+  &.compact {
+    @include mdc-typography (body2);
+  }
 }
