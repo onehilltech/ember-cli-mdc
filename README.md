@@ -18,7 +18,7 @@ Features
 Installation
 ------------
     
-You install this add-on by installing the individual packages that contain the need components
+You install this add-on by installing individual packages that contain needed components
 and/or resources.
 
     ember install ember-cli-[package-name]@^2.0.0
