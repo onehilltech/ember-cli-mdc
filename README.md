@@ -17,12 +17,9 @@ Features
 
 Installation
 ------------
-
-### All Packages
-
-    ember install ember-cli-mdc@^2.0.0
     
-### Individual Packages
+You install this add-on by installing the individual packages that contain the need components
+and/or resources.
 
     ember install ember-cli-[package-name]@^2.0.0
 
