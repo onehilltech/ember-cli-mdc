@@ -6,7 +6,7 @@ const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/elevation', target: '^6.0.0'}
+    {name: '@material/elevation', target: '^13.0.0'}
   ],
 
   addons: [

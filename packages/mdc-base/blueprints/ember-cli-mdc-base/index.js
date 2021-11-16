@@ -8,6 +8,6 @@ module.exports = Blueprint.extend ({
   ],
 
   packages: [
-    {name: '@material/base', target: '^6.0.0'}
+    {name: '@material/base', target: '^13.0.0'}
   ]
 });
