@@ -17,7 +17,7 @@ export default class MdcDropdownMenuComponent extends Component {
   }
 
   get anchorElement () {
-    return `#${this.menuId}`;
+    return `#${this.args.anchorElement || this.menuId}`;
   }
 
   get icon () {
