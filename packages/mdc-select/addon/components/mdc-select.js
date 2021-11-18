@@ -9,6 +9,7 @@ import { A } from '@ember/array';
 import { isEmpty, isPresent, isNone } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
+import { isObjectLike } from 'lodash-es';
 
 const { MDCSelect } = mdc.select;
 
@@ -18,39 +19,27 @@ export default class MdcSelectComponent extends Component {
   _input;
 
   doPrepareElement (element) {
-    const { value: option, firstOption } = this.args;
+    const { value: option } = this.args;
 
     this.labelId = guidFor (this);
     this.helperId = `${guidFor (this)}__helper-text`;
 
     if (isPresent (option)) {
       // We need to pre-select the option.
-      let value = `${get (option, this.valueKey) || option}`;
-      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+      let value = this.valueOf (option);
+      let text = this.textOf (option);
 
-      if (isPresent (listItem)) {
-        let text = this._textForValue (value);
-        this._selectOption (element, listItem, text);
-      }
-      else if (isPresent (firstOption)) {
-        this._selectFirstOption (element, firstOption);
+      if (isPresent (value) && isPresent (text)) {
+        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+
+        if (isPresent (listItem)) {
+          listItem.classList.add ('mdc-list-item--selected');
+        }
+
+        let textElement = element.querySelector ('.mdc-select__selected-text');
+        textElement.value = text;
       }
     }
-    else if (isPresent (firstOption)) {
-      this._selectFirstOption (element, firstOption);
-    }
-  }
-
-  _selectFirstOption (element, firstOption) {
-    let listItem = element.querySelector (`.mdc-list-item:first-child`);
-    this._selectOption (element, listItem, firstOption.text);
-  }
-
-  _selectOption (element, listItem, text) {
-    listItem.classList.add ('mdc-list-item--selected');
-
-    let textElement = element.querySelector ('.mdc-select__selected-text');
-    textElement.value = text;
   }
 
   doCreateComponent (element) {
@@ -58,25 +47,33 @@ export default class MdcSelectComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { value: option, required = false } = this.args;
+    const { required = false, value: initial } = this.args;
     component.required = required;
 
-    if (isPresent (option)) {
-      let value = `${get (option, this.valueKey) || option}`;
+    if (isPresent (initial)) {
+      //component.value = this.valueOf (initial);
+    }
+  }
 
-      if (isPresent (value) && component.value !== value) {
-        component.value = value;
-      }
+  valueOf (option) {
+    return isObjectLike (option) ? `${get (option, this.valueKey)}` : `${option}`;
+  }
+
+  textOf (option) {
+    if (isObjectLike (option)) {
+      return get (option, this.textKey);
+    }
+    else {
+      // We have to assume the string text is a value.
+      let value = `${option}`;
+      let found = (this.options || []).find (option => this.valueOf (option) === value);
+
+      return isPresent (found) ? get (found, this.textKey) : value;
     }
   }
 
   get isOutlined () {
     return this.args.style === 'outlined';
-  }
-
-  _textForValue (value) {
-    let option = this.options.find (option => get (option, this.valueKey) === value);
-    return isPresent (option) ? get (option, this.textKey) : undefined;
   }
 
   @tracked
@@ -101,7 +98,7 @@ export default class MdcSelectComponent extends Component {
       (this.args.change || noOp) (null);
     }
     else {
-      let selected = this.options.find (option => `${get (option, this.valueKey)}` === value);
+      let selected = this.options.find (option => this.valueOf (option) === value);
       (this.args.change || noOp) (selected);
     }
   }
@@ -113,7 +110,7 @@ export default class MdcSelectComponent extends Component {
   @action
   select (element, [option]) {
     if (isPresent (option)) {
-      let value = `${get (option, this.valueKey) || option}`;
+      let value = this.valueOf (option);
 
       if (this.component.value !== value) {
         this.component.value = value;
