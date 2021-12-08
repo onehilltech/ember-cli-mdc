@@ -16,7 +16,7 @@ export function initialize (app) {
   const { disabled = false} = config;
 
   if (!disabled) {
-    const rootElement = typeOf(app.rootElement) === 'string' ? document.querySelector (app.rootElement) : app.rootElement;
+    const rootElement = typeOf (app.rootElement) === 'string' ? document.querySelector (app.rootElement) : app.rootElement;
 
     if (isPresent (rootElement)) {
       rootElement.classList.add ('mdc-typography');
