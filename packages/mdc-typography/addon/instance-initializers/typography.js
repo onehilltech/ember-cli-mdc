@@ -1,5 +1,5 @@
 import { getWithDefault } from '@ember/object';
-import { isNone, isPresent } from '@ember/utils';
+import { isNone, isPresent, typeOf } from '@ember/utils';
 
 export function initialize (app) {
   // Make sure the window and document element exists. If neither exists, then
@@ -16,7 +16,7 @@ export function initialize (app) {
   const { disabled = false} = config;
 
   if (!disabled) {
-    const rootElement = document.querySelector (app.rootElement);
+    const rootElement = typeOf (app.rootElement) === 'string' ? document.querySelector (app.rootElement) : app.rootElement;
 
     if (isPresent (rootElement)) {
       rootElement.classList.add ('mdc-typography');
