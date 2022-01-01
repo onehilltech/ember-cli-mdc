@@ -2,7 +2,6 @@
 
 const getChannelURL = require('ember-source-channel-url');
 
-<<<<<<< HEAD
 module.exports = async function() {
   return {
     scenarios: [

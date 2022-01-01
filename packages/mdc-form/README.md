@@ -27,22 +27,21 @@ This package contains the following top-level components.
 * [`mdc-form`](#mdc-form)
 
 
-<<<<<<< HEAD
 mdc-form
 -------------
 
 ### Description
 
-A component version of the HTML `<form>` element. The `<MdcForm>` element allows 
-its parent to react to changes to the form, such as disabling the submit button when an 
+A component version of the HTML `<form>` element. The `<MdcForm>` element allows
+its parent to react to changes to the form, such as disabling the submit button when an
 input is invalid.
 
 The `<MdcForm>` element will gather all child input elements and listen to changes
 in its [validity state](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState).
-When the validity state of an input changes, the `<MdcForm>` component will call the 
+When the validity state of an input changes, the `<MdcForm>` component will call the
 `invalid` action. The `invalid` action can then mutate a variable that enables/disables
 the submit button. The `<MdcForm>` does not automatically enable/disable the submit button,
-if present, because the parent may have other criteria outside of the `<MdcForm>` knowledge 
+if present, because the parent may have other criteria outside of the `<MdcForm>` knowledge
 that determines if the submit button should be enabled/disabled.
 
 ### Usage
@@ -61,10 +60,8 @@ that determines if the submit button should be enabled/disabled.
 * **`validity`** - The action `f(state)` when the form's validity changes.
 
 ### Form Validity
-=======
-See the [Contributing](CONTRIBUTING.md) guide for details.
 
-The `<MdcForm>` element will yield the form's state (`{isValid, isInvalid}`). The 
+The `<MdcForm>` element will yield the form's state (`{isValid, isInvalid}`). The
 yielded values can then be used to modify elements inside the form. For example,
 it can be use to enable/disable a button.
 
@@ -72,7 +69,7 @@ it can be use to enable/disable a button.
 <MdcForm @validity={{this.validity}} submit={{this.submit}} reset={{this.reset}} as |form|>
 
   {{!-- add input components here --}}
-  
+
   <MdcButton @type="submit" @label="Submit" disabled={{form.isInvalid}} />
 </MdcForm>
 ```
