@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-module.exports = {
-  scenarios: [
-    {
-      name: 'ember-lts-2.12',
-      npm: {
-        devDependencies: {
-          'ember-source': '~2.12.0'
-=======
 'use strict';
 
 const getChannelURL = require('ember-source-channel-url');
@@ -21,7 +12,6 @@ module.exports = async function() {
           devDependencies: {
             'ember-source': '~3.12.0'
           }
->>>>>>> a8eae090... v2.18.2...v3.18.0
         }
       },
       {
