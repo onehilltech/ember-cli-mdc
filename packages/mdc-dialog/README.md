@@ -60,3 +60,29 @@ Adds a dialog to the document.
 * `opened` - Action triggered when dialog is opened
 * `closing` - Action triggered when dialog is closing
 * `closed` - Action triggered when dialog has closed
+
+### Custom Dialog
+
+```handlebars
+<MdcCustomDialog @title="Use Google's location service?"
+                 @open=[true|false]>
+  <:content>
+    Let Google help apps determine location. This means sending anonymous
+    location data to Google, even when no apps are running.
+  </:content>
+
+  <:actions>
+    <MdcButton 
+      @label="Decline" 
+      {{on "click" this.close}}
+      data-mdc-dialog-action="close"
+    />
+    <MdcButton 
+      @style="raised" 
+      @label="Accept" 
+      {{on "click" this.accept}}
+      data-mdc-dialog-action="accept"
+    />
+  </:actions>
+</MdcCustomDialog>
+```
