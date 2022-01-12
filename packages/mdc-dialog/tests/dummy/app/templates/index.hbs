@@ -3,6 +3,7 @@
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "basic")}}>Show Basic Dialog</MdcButton></p>
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "default")}}>Show Default Dialog</MdcButton></p>
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "scrollable")}}>Show Scrollable Dialog</MdcButton></p>
+<p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "custom")}}>Show Custom Dialog</MdcButton></p>
 
 <MdcDialog @title="Use Google's location service?"
            @positiveButton={{hash action="accept" label="Accept" closed=this.accept focus=true default=true}}
@@ -60,3 +61,25 @@
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
 </MdcDialog>
+
+<MdcCustomDialog @title="Use Google's location service?"
+                 @open={{this.showCustomDialog}}>
+  <:content>
+    Let Google help apps determine location. This means sending anonymous
+    location data to Google, even when no apps are running.
+  </:content>
+
+  <:actions>
+    <MdcButton 
+      @label="Decline" 
+      {{on "click" this.close}}
+      data-mdc-dialog-action="close"
+    />
+    <MdcButton 
+      @style="raised" 
+      @label="Accept" 
+      {{on "click" this.accept}}
+      data-mdc-dialog-action="accept"
+    />
+  </:actions>
+</MdcCustomDialog>
