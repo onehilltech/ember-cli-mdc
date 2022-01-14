@@ -1,0 +1,33 @@
+<MdcDialog @open={{@open}} ...attributes {{did-insert this.didInsert}}>
+  {{#if @title}}
+    <MdcDialogTitle>{{@title}}</MdcDialogTitle>
+  {{/if}}
+
+  <MdcDialogContent>
+    {{yield}}
+  </MdcDialogContent>
+
+  {{#if this.hasActions}}
+    <MdcDialogActions>
+      {{#if @negativeButton}}
+        <MdcDialogButton
+          @label={{@negativeButton.label}}
+          @style={{@negativeButton.style}}
+          disabled={{@negativeButton.disabled}}
+          @action={{this.negativeButtonAction}}
+          @default={{@negativeButton.default}}
+          @focus={{@negativeButton.focus}} />
+      {{/if}}
+      
+      {{#if @positiveButton}}
+        <MdcDialogButton
+          @label={{@positiveButton.label}}
+          @style={{@positiveButton.style}}
+          disabled={{@positiveButton.disabled}}
+          @action={{this.positiveButtonAction}}
+          @default={{@positiveButton.default}}
+          @focus={{@positiveButton.focus}} />
+      {{/if}}
+    </MdcDialogActions>
+  {{/if}}
+</MdcDialog>
