@@ -23,6 +23,9 @@ export default class IndexController extends Controller {
   @equal ('open', 'stacked')
   showStackedButtonDialog;
 
+  @equal ('open', 'custom')
+  showCustomDialog;
+
   @action
   accept () {
     alert ('Accept clicked!');

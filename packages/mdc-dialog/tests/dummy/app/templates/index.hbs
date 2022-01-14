@@ -5,15 +5,15 @@
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "scrollable")}}>Show Scrollable Dialog</MdcButton></p>
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "custom")}}>Show Custom Dialog</MdcButton></p>
 
-<MdcDialog @title="Use Google's location service?"
+<MdcSimpleDialog @title="Use Google's location service?"
            @positiveButton={{hash action="accept" label="Accept" closed=this.accept focus=true default=true}}
            @negativeButton={{hash action="close" label="Decline"}}
            @open={{this.showBasicDialog}}>
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
-</MdcDialog>
+</MdcSimpleDialog>
 
-<MdcDialog @title="Choose a Ringtone"
+<MdcSimpleDialog @title="Choose a Ringtone"
            @open={{showScrollableDialog}}
            @positiveButton={{hash action="accept" label="Accept" closed=this.accept disabled=false}}
            @negativeButton={{hash action="close" label="Decline"}}>
@@ -52,34 +52,26 @@
 
 
   </ul>
-</MdcDialog>
+</MdcSimpleDialog>
 
-<MdcDialog @title="Use Google's location service?"
+<MdcSimpleDialog @title="Use Google's location service?"
            @positiveButton={{hash action="accept" label="Accept" default=true closed=this.accept}}
            @negativeButton={{hash action="close" label="Decline"}}
            @open={{this.showDefaultDialog}}>
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
+</MdcSimpleDialog>
+
+<MdcDialog @open={{this.showCustomDialog}}>
+  <MdcDialogTitle>
+    Use Google's location service?
+  </MdcDialogTitle>
+  <MdcDialogContent>
+    This is the content of the dialogs. I prefer this design approach over the named blocks.
+  </MdcDialogContent>
+
+  <MdcDialogActions>
+    <MdcDialogButton @label="Decline" @action="cancel" {{on "click" this.close}} />
+    <MdcDialogButton @label="Accept" @action="ok" {{on "click" this.accept}}/>
+  </MdcDialogActions>
 </MdcDialog>
-
-<MdcCustomDialog @title="Use Google's location service?"
-                 @open={{this.showCustomDialog}}>
-  <:content>
-    Let Google help apps determine location. This means sending anonymous
-    location data to Google, even when no apps are running.
-  </:content>
-
-  <:actions>
-    <MdcButton 
-      @label="Decline" 
-      {{on "click" this.close}}
-      data-mdc-dialog-action="close"
-    />
-    <MdcButton 
-      @style="raised" 
-      @label="Accept" 
-      {{on "click" this.accept}}
-      data-mdc-dialog-action="accept"
-    />
-  </:actions>
-</MdcCustomDialog>
