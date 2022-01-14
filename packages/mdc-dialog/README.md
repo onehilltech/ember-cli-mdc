@@ -34,13 +34,13 @@ Adds a dialog to the document.
 ### Usage
 
 ```handlebars
-<MdcDialog @title="Use Google's location service?"
+<MdcSimpleDialog @title="Use Google's location service?"
              @open=[true|false]
              @positiveButton=(hash action="accept" label="Accept" default=[true|false] focus=[true|false] closed=this.accept closing=this.accepting)
              @negativeButton=(hash action="close" label="Decline" default=[true|false] focus=[true|false] closed=this.close closing=this.closing)>
   Let Google help apps determine location. This means sending anonymous
   location data to Google, even when no apps are running.
-</MdcDialog>
+</MdcSimpleDialog>
 ```
 
 ### Attributes
@@ -64,25 +64,27 @@ Adds a dialog to the document.
 ### Custom Dialog
 
 ```handlebars
-<MdcCustomDialog @title="Use Google's location service?"
-                 @open=[true|false]>
-  <:content>
+<MdcDialog @open=[true|false]>
+  <MdcDialogTitle>
+    Use Google's location service?
+  </MdcDialogTitle>
+  <MdcDialogContent>
     Let Google help apps determine location. This means sending anonymous
     location data to Google, even when no apps are running.
-  </:content>
+  </MdcDialogContent>
 
-  <:actions>
-    <MdcButton 
+  <MdcDialogActions>
+    <MdcDialogButton 
       @label="Decline" 
+      @action="close"
       {{on "click" this.close}}
-      data-mdc-dialog-action="close"
     />
-    <MdcButton 
+    <MdcDialogButton 
       @style="raised" 
       @label="Accept" 
+      @action="accept"
       {{on "click" this.accept}}
-      data-mdc-dialog-action="accept"
     />
-  </:actions>
-</MdcCustomDialog>
+  </MdcDialogActions>
+</MdcDialog>
 ```
