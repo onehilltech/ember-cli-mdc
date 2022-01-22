@@ -7,7 +7,21 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form/blueprints/ember-cli-mdc-form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form/blueprints/ember-cli-mdc-form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/blueprints/ember-cli-mdc-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/blueprints/ember-cli-mdc-checkbox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/blueprints/ember-cli-mdc-dialog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/blueprints/ember-cli-mdc-floating-label/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/blueprints/ember-cli-mdc-icon-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/blueprints/ember-cli-mdc-icon-button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-line-ripple/blueprints/ember-cli-mdc-line-ripple/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/blueprints/ember-cli-mdc-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/blueprints/ember-cli-mdc-menu-surface/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-progress-indicator/blueprints/ember-cli-mdc-progress-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-progress-indicator/blueprints/ember-cli-mdc-progress-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/blueprints/ember-cli-mdc-radio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/blueprints/ember-cli-mdc-slider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/blueprints/ember-cli-mdc-switch/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/blueprints/ember-cli-mdc-tab-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/blueprints/ember-cli-mdc-tab-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/blueprints/ember-cli-mdc-tab-scroller/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/blueprints/ember-cli-mdc-tab/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +370,7 @@
       <workItem from="1637191961326" duration="598000" />
       <workItem from="1637198253510" duration="237000" />
       <workItem from="1641850126570" duration="1034000" />
-      <workItem from="1642823268527" duration="720000" />
+      <workItem from="1642823268527" duration="916000" />
     </task>
     <servers />
   </component>

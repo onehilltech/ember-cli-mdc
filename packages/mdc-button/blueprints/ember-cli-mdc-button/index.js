@@ -16,6 +16,6 @@ module.exports = Blueprint.extend ({
     {name: 'ember-cli-mdc-typography', target },
     {name: 'ember-cli-mdc-icon', target },
     {name: 'ember-cli-mdc-shape', target },
-    {name: '@ember/render-modifiers'}
+    {name: '@ember/render-modifiers', target: '^1.0.0' }
   ]
 });
