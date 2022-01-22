@@ -24,7 +24,6 @@ This package contains the following top-level components.
 
 * [`{{mdc-form-field}}`](#mdc-form-field)
 
-<<<<<<< HEAD
 This package contains the following mixins:
 
 * `FormFieldMixin`
@@ -44,10 +43,6 @@ upon interacting with the label.
   {{!-- add input here --}}
 {{/mdc-form-field}}
 ```
-=======
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
->>>>>>> 15566a5b... v3.3.0...v3.18.0
 
 ### Attributes
 
