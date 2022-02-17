@@ -10,6 +10,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
+    {name: 'ember-destroyable-polyfill'},
     {name: 'ember-cli-mdc-icon-button', target }
   ]
 });

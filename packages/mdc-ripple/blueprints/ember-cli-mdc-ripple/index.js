@@ -10,6 +10,7 @@ module.exports = Blueprint.extend ({
   ],
 
   addons: [
+    {name: 'ember-destroyable-polyfill'},
     {name: 'ember-cli-mdc-animation', target },
     {name: 'ember-cli-mdc-base', target },
     {name: 'ember-cli-mdc-theme', target }
