@@ -29,12 +29,12 @@ export default class MdcTopAppBarFixedAdjustmentModifier extends Modifier {
         this.applyClassName ('mdc-top-app-bar--fixed-adjust');
       }
     }
-    else {
-      // We need to remove the fixed adjustment from the element.
-      if (isPresent (this._currentClassName)) {
-        this.element.classList.remove (this._currentClassName);
-        this._currentClassName = null;
-      }
+    else if (isPresent (this._currentClassName)) {
+      // This fixed adjustment is disabled. We need to remove the fixed adjustment class
+      // name from the element.
+
+      this.element.classList.remove (this._currentClassName);
+      this._currentClassName = null;
     }
   }
 
