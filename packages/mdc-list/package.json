@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-list",
-  "version": "2.5.3",
+  "version": "2.6.0",
   "description": "ember-cli addon for @material/list.",
   "keywords": [
     "ember-addon",
@@ -53,7 +53,7 @@
     "ember-cli-mdc-animation": "^2.5.3",
     "ember-cli-mdc-base": "^2.5.2",
     "ember-cli-mdc-icon": "^2.5.3",
-    "ember-cli-mdc-ripple": "^2.5.3",
+    "ember-cli-mdc-ripple": "^2.6.0",
     "ember-cli-mdc-rtl": "^2.5.2",
     "ember-cli-mdc-theme": "^2.5.3",
     "ember-cli-mdc-typography": "^2.5.3",
