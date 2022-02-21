@@ -39,13 +39,26 @@ export default class SnackbarService extends Service {
    * @param options
    */
   @action
-  show (options) {
+  show (options = {}) {
     // First, clean up everything.
     this._cleanup ();
 
     // Build the snackbar.
     this._snackbar = this._build (options);
     this._snackbar.open ();
+  }
+
+  /**
+   * Show an error message.
+   *
+   * @param reason        The error (or exception) to show.
+   * @param options       The show options.
+   */
+  showError (reason, options = {}) {
+    const message = isPresent (reason.errors) ? reason.errors[0].detail : reason.message;
+    const showOptions = Object.assign ({ message, dismiss: true }, options)
+
+    this.show (showOptions);
   }
 
   /**
@@ -60,7 +73,7 @@ export default class SnackbarService extends Service {
       closeOnEscape = true,
       message,
       action,
-      dismiss,
+      dismiss = true,
       opening = noOp,
       opened = noOp,
       closing = noOp,
@@ -163,11 +176,6 @@ export default class SnackbarService extends Service {
   }
 
   errorHandler (options = {}) {
-    return (reason) => {
-      const message = isPresent (reason.errors) ? reason.errors[0].detail : reason.message;
-      const showOptions = Object.assign ({}, { message }, options)
-
-      this.show (showOptions);
-    }
+    return (reason) => this.showError (reason, options);
   }
 }
