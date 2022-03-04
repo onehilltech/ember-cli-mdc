@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-snackbar/addon/services/snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +360,9 @@
       <workItem from="1642831008043" duration="3000" />
       <workItem from="1642862943350" duration="230000" />
       <workItem from="1645102861956" duration="1530000" />
-      <workItem from="1645400809028" duration="408000" />
+      <workItem from="1645400809028" duration="1138000" />
+      <workItem from="1645919348418" duration="938000" />
+      <workItem from="1646368820939" duration="311000" />
     </task>
     <servers />
   </component>
