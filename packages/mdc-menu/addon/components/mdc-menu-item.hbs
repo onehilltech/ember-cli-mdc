@@ -2,6 +2,12 @@
   {{#if (has-block)}}
     {{yield}}
   {{else}}
+    {{#if @icon}}
+      <MdcListItemGraphicIcon @icon={{@icon}} />
+    {{/if}}
     <MdcMenuItemText>{{@text}}</MdcMenuItemText>
+    {{#if @metaIcon}}
+      <MdcListItemMetaIcon @icon={{@metaIcon}} />
+    {{/if}}
   {{/if}}
 </MdcListItem>

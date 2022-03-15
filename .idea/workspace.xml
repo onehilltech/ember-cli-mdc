@@ -7,7 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +362,9 @@
       <workItem from="1645102861956" duration="1530000" />
       <workItem from="1645400809028" duration="1138000" />
       <workItem from="1645919348418" duration="938000" />
-      <workItem from="1646368820939" duration="793000" />
+      <workItem from="1646368820939" duration="1836000" />
+      <workItem from="1647219668730" duration="646000" />
+      <workItem from="1647347955106" duration="179000" />
     </task>
     <servers />
   </component>
@@ -414,11 +416,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/packages/mdc-image-list/node_modules/ember-cli-mdc-utils/lib/target.js</url>
           <line>6</line>
