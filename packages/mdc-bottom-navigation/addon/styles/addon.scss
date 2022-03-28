@@ -77,4 +77,8 @@
     color: inherit;
     @include mdc-typography(caption);
   }
+
+  &__content {
+    padding-bottom: $bottom-navigation-mobile-height;
+  }
 }
