@@ -75,6 +75,13 @@ export default class MdcTextfieldComponent extends Component {
     const component = this.component;
 
     if (isPresent (component)) {
+      // Setting a null value actually causes the material component to fail. We are
+      // going to replace the null value with an empty string.
+
+      if (value === null) {
+        value = '';
+      }
+
       component.value = value;
     }
   }
