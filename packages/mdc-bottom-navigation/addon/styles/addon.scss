@@ -81,4 +81,8 @@
   &__content {
     padding-bottom: $bottom-navigation-mobile-height;
   }
+
+  &__scrim {
+    height:  env(safe-area-inset-bottom);
+  }
 }

@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,7 +367,8 @@
       <workItem from="1647399261103" duration="1099000" />
       <workItem from="1648482209987" duration="739000" />
       <workItem from="1648492867616" duration="1164000" />
-      <workItem from="1648747060063" duration="1234000" />
+      <workItem from="1648747060063" duration="2120000" />
+      <workItem from="1649212390853" duration="64000" />
     </task>
     <servers />
   </component>
