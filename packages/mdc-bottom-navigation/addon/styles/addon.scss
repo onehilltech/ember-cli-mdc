@@ -12,18 +12,18 @@
 
   width: 100%;
 
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-
   @include mdc-theme-prop(background-color, primary);
   @include mdc-theme-prop(color, on-primary);
 
   @include mdc-elevation(4);
 
-  &--space-evenly {
-    justify-content: space-evenly;
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    justify-content: center;
+    height: $bottom-navigation-mobile-height;
   }
 
   &__button {
@@ -31,6 +31,9 @@
     flex-direction: column;
 
     align-items: center;
+    justify-content: center;
+
+    height: 100%;
 
     min-width: calc(80px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
     max-width: calc(168px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
@@ -43,9 +46,6 @@
     }
 
     padding: $bottom-navigation-mobile-padding-top $bottom-navigation-mobile-padding-right $bottom-navigation-mobile-padding-bottom $bottom-navigation-mobile-padding-left;
-
-    max-height: $bottom-navigation-mobile-height;
-    height: $bottom-navigation-mobile-height;
 
     &--with-label {
       padding-top: $bottom-navigation-mobile-with-label-padding-top;
@@ -77,10 +77,18 @@
   }
 
   &__content {
-    padding-bottom: $bottom-navigation-mobile-height;
+    padding-bottom: calc(#{$bottom-navigation-mobile-height} + env(safe-area-inset-bottom));
   }
 
   &__scrim {
-    height:  env(safe-area-inset-bottom);
+    height: env(safe-area-inset-bottom);
+  }
+
+  &--space-evenly {
+    .mdc-bottom-navigation {
+      &__buttons {
+        justify-content: space-evenly;
+      }
+    }
   }
 }
