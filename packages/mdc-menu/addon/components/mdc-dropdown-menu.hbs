@@ -1,5 +1,9 @@
 <span class="mdc-dropdown-menu">
-  <MdcIconButton id={{this.menuId}} class={{@iconClassName}} @icon={{this.icon}} {{on "click" this.openMenu}} />
+  {{#if @label}}
+    <MdcButton id={{this.menuId}} class={{@iconClassName}} @label={{@label}} {{on "click" this.openMenu}} />
+  {{else}}
+    <MdcIconButton id={{this.menuId}} class={{@iconClassName}} @icon={{this.icon}} {{on "click" this.openMenu}} />
+  {{/if}}
   <MdcMenu @open={{this.open}} @anchorCorner={{@anchorCorner}} @position="fixed" @anchorElement={{this.anchorElement}} ...attributes>
     {{yield}}
   </MdcMenu>
