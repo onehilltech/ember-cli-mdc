@@ -16,6 +16,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components/mdc-bottom-navigation.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-dropdown-menu.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-base/addon/component.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/styles/addon.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
     <dismissed value="$PROJECT_DIR$/packages/mdc-drawer/package.json" />
@@ -369,7 +380,8 @@
       <workItem from="1648492867616" duration="1164000" />
       <workItem from="1648747060063" duration="2120000" />
       <workItem from="1649212390853" duration="1571000" />
-      <workItem from="1649277203952" duration="2294000" />
+      <workItem from="1649277203952" duration="3571000" />
+      <workItem from="1649709065426" duration="642000" />
     </task>
     <servers />
   </component>
