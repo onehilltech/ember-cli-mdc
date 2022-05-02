@@ -6,7 +6,7 @@ import listener from 'ember-cli-mdc-base/listener';
 const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
 import { get } from '@ember/object';
-import { isPresent } from '@ember/utils';
+import { isPresent, isNone } from '@ember/utils';
 import { A } from '@ember/array';
 import { action } from '@ember/object';
 
@@ -42,6 +42,13 @@ class DataTableRow {
 
       return Object.values (valueObj);
     }
+  }
+
+  selected () {
+    const id = this.id;
+    const item = this.dataTable.selected.find (selection => `${get (selection, this.dataTable.idKey)}` === this.id);
+
+    return isPresent (item);
   }
 }
 
@@ -127,6 +134,22 @@ export default class MdcDataTableComponent extends Component {
 
   @action
   layout () {
+    // We need to make sure the elements that can be selected are each listed in
+    // the data items. If not, then we need to remove it.
+
+    const removable = this.selected.filter (selection => {
+      const selectionRowId = `${get (selection, this.idKey)}`;
+      const item = this.args.data.find (item => `${get (item, this.idKey)}` === selectionRowId);
+
+      return isNone (item);
+    });
+
+    if (isPresent (removable)) {
+      this.selected.removeObjects (removable);
+    }
+
+    // Now, we need to replace the current selected objects with new objects.
+
     this.component.layout ();
   }
 

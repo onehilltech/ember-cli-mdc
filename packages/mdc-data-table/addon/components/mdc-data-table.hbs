@@ -1,6 +1,6 @@
 <div class="mdc-data-table {{this.labelClassName}}"
   {{did-insert this.didInsert}}
-  {{did-update this.layout @selected this.data}}
+  {{did-update this.layout @selected @data}}
      ...attributes>
   <table class="mdc-data-table__table" aria-label={{@label}}>
     {{#if @headers}}
@@ -12,7 +12,7 @@
     {{else}}
       <MdcDataTableContent>
         {{#each this.data as |row|}}
-          <MdcDataTableRow @selectable={{@selectable}} @rowId={{row.id}}>
+          <MdcDataTableRow @selectable={{@selectable}} @rowId={{row.id}} @selected={{row.selected}}>
             {{#each row.values as |value|}}
               <MdcDataTableCell>{{value}}</MdcDataTableCell>
             {{/each}}
