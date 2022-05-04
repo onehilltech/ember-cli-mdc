@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-chips/addon/components/mdc-input-chip-set.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,7 +387,8 @@
       <workItem from="1650311949347" duration="1183000" />
       <workItem from="1650758352618" duration="11000" />
       <workItem from="1650764131660" duration="1324000" />
-      <workItem from="1651503575481" duration="1864000" />
+      <workItem from="1651503575481" duration="2569000" />
+      <workItem from="1651688502920" duration="145000" />
     </task>
     <servers />
   </component>

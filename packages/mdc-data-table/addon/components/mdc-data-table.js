@@ -46,7 +46,7 @@ class DataTableRow {
 
   selected () {
     const id = this.id;
-    const item = this.dataTable.selected.find (selection => `${get (selection, this.dataTable.idKey)}` === this.id);
+    const item = this.dataTable.selected.find (selection => `${get (selection, this.dataTable.idKey)}` === id);
 
     return isPresent (item);
   }
