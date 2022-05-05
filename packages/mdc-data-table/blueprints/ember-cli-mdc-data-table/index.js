@@ -11,6 +11,7 @@ module.exports = Blueprint.extend ({
 
   addons: [
     {name: 'ember-cli-mdc-base', target },
+    {name: 'ember-cli-mdc-icon-button', target },
     {name: '@ember/render-modifiers', target: '^1.0.0' },
   ]
 });

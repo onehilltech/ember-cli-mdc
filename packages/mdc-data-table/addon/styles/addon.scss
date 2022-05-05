@@ -1,4 +1,40 @@
-@import "app-theme";
+@use "@material/icon-button" as iconbutton;
 
+@import "app-theme";
 @import "@material/checkbox/mdc-checkbox"; // Required only for data table with row selection.
 @import "@material/data-table/mdc-data-table";
+@import "@material/theme/color-palette";
+
+.mdc-data-table {
+  &__header-cell {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &--numeric {
+      .mdc-data-table {
+        &__header-cell {
+          &__container {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+
+    &--sortable {
+      .mdc-icon-button {
+        margin-left: 8px;
+        @include iconbutton.ink-color ($material-color-grey-400);
+        @include iconbutton.density (-4);
+      }
+    }
+
+    &--sorted {
+      .mdc-icon-button {
+        @include iconbutton.ink-color (primary);
+      }
+    }
+  }
+}

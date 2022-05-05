@@ -1,12 +1,12 @@
-<h2>Data Tables</h2>
+<h5>Data Tables</h5>
 
-<h3>Basic usage</h3>
+<h6>Basic usage</h6>
 
 <MdcDataTable @label="Dessert calories">
   <MdcDataTableHeaderRow>
     <MdcDataTableHeaderCell>Dessert</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Carbs (g)</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Protein (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Carbs (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Protein (g)</MdcDataTableHeaderCell>
     <MdcDataTableHeaderCell>Comments</MdcDataTableHeaderCell>
   </MdcDataTableHeaderRow>
 
@@ -34,20 +34,20 @@
   </MdcDataTableContent>
 </MdcDataTable>
 
-<h3>Data table with row selection</h3>
+<h6>Data table with row selection</h6>
 
 <MdcDataTable @label="Network" @selected={{ids}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
   <MdcDataTableHeaderRow @selectable={{true}}>
-    <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Stage</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Time</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Roles</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @label="Status" @sortable="true" @sortDesc={{this.signalsSortDesc}}  />
+    <MdcDataTableHeaderCell @label="Signal name" @sortable="true" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
+    <MdcDataTableHeaderCell @label="Severity" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Stage" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortable="true" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Roles" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
   </MdcDataTableHeaderRow>
 
   <MdcDataTableContent>
-    {{#each signals as |signal|}}
+    {{#each this.signalsSorted as |signal|}}
       <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
         <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
         <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
@@ -60,7 +60,7 @@
   </MdcDataTableContent>
 </MdcDataTable>
 
-<h4>Selected Rows:</h4>
+<p>Selected Rows:</p>
 
 <ul>
   {{#each ids as |id|}}
@@ -68,7 +68,7 @@
   {{/each}}
 </ul>
 
-<h3>Data Table from Properties</h3>
+<h6>Data Table from Properties</h6>
 
 <MdcDataTable @label="Network"
               @selectable={{true}}
@@ -76,7 +76,7 @@
               @data={{this.signals}}
               @selected={{this.selected}} />
 
-<h4>Selected Rows:</h4>
+<p>Selected Rows:</p>
 
 <ul>
   {{#each selected as |selection|}}
@@ -84,7 +84,7 @@
   {{/each}}
 </ul>
 
-<h3>Data Table w/ Select Fields</h3>
+<h6>Data Table w/ Select Fields</h6>
 
 <MdcDataTable @label="Network"
               @selectable={{true}}
