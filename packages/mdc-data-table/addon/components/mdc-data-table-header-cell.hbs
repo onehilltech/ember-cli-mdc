@@ -1,12 +1,12 @@
 <th class="mdc-data-table__header-cell
   {{if @numeric "mdc-data-table__header-cell--numeric"}}
   {{if @checkbox "mdc-data-table__header-cell--checkbox"}}
-  {{if @sortable "mdc-data-table__header-cell--sortable"}}
+  {{if this.sortable "mdc-data-table__header-cell--sortable"}}
   {{if this.sorted "mdc-data-table__header-cell--sorted"}}"
     role="columnheader"
     scope="col" ...attributes
     {{did-insert this.didInsert}}>
-  {{#if @sortable}}
+  {{#if this.sortable}}
     <span class="mdc-data-table__header-cell__container">
       {{#if @checkbox}}
         <div class="mdc-checkbox mdc-data-table__header-row-checkbox {{if @selected "mdc-checkbox--selected"}}">

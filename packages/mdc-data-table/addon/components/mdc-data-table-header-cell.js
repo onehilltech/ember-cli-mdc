@@ -6,7 +6,7 @@ import { camelize } from '@ember/string';
 
 export default class MdcDataTableHeaderCellComponent extends Component {
   @tracked
-  ascending = true;
+  ascending;
 
   get sorted () {
     if (isEmpty (this.sortDesc)) {
@@ -24,13 +24,13 @@ export default class MdcDataTableHeaderCellComponent extends Component {
 
   @action
   didInsert () {
-    const { ascending = true } = this.args;
+    const { ascending = false } = this.args;
     this.ascending = ascending;
   }
 
   get sortable () {
-    const { sortable = false } = this.args;
-    return sortable;
+    const { sortable, sortDesc } = this.args;
+    return sortable !== false && !!sortDesc;
   }
 
   get sortDesc () {
@@ -41,8 +41,6 @@ export default class MdcDataTableHeaderCellComponent extends Component {
   sortBy () {
     const sortBy = `${this.sortKey}:${this.ascending ? 'asc' : 'desc'}`;
     this.sortDesc.setObjects ([sortBy]);
-
-    // Negate the sorting direction.
     this.ascending = !this.ascending;
   }
 }

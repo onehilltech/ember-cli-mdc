@@ -38,12 +38,12 @@
 
 <MdcDataTable @label="Network" @selected={{ids}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
   <MdcDataTableHeaderRow @selectable={{true}}>
-    <MdcDataTableHeaderCell @label="Status" @sortable="true" @sortDesc={{this.signalsSortDesc}}  />
-    <MdcDataTableHeaderCell @label="Signal name" @sortable="true" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
-    <MdcDataTableHeaderCell @label="Severity" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Stage" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortable="true" @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Roles" @sortable="true" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Status" @sortDesc={{this.signalsSortDesc}}  />
+    <MdcDataTableHeaderCell @label="Signal name" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
+    <MdcDataTableHeaderCell @label="Severity" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Stage" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Roles" @sortDesc={{this.signalsSortDesc}} />
   </MdcDataTableHeaderRow>
 
   <MdcDataTableContent>
