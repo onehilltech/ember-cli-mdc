@@ -2,6 +2,9 @@
 
 import Component from 'ember-cli-mdc-base/component';
 import { action } from '@ember/object';
+import { A } from '@ember/array';
+import { sort } from '@ember/object/computed';
+import { isPresent } from '@ember/utils';
 
 const { MDCList } = mdc.list;
 
@@ -36,5 +39,23 @@ export default class MdcListComponent extends Component {
   get interactive () {
     const { interactive = true } = this.args;
     return interactive;
+  }
+
+  get data () {
+    return this.args.data || A ();
+  }
+
+  get sortDesc () {
+    return this.args.sortDesc || A ();
+  }
+
+  @sort ('data', 'sortDesc')
+  sorted;
+
+  get limited () {
+    const { limit } = this.args;
+    const sorted = this.sorted;
+
+    return isPresent (limit) ? sorted.slice (0, limit) : sorted;
   }
 }
