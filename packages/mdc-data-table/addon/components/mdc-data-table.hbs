@@ -1,6 +1,7 @@
 <div class="mdc-data-table {{this.labelClassName}}"
   {{did-insert this.didInsert}}
   {{did-update this.layout @selected @data}}
+  {{did-update this.computeTableData @data @rowsPerPage}}
      ...attributes>
   <table class="mdc-data-table__table" aria-label={{@label}}>
     {{#if @headers}}
@@ -8,7 +9,7 @@
     {{/if}}
 
     {{#if (has-block)}}
-      {{yield}}
+      {{yield this.data this.pagination}}
     {{else}}
       <MdcDataTableContent>
         {{#each this.data as |row|}}
@@ -21,5 +22,21 @@
       </MdcDataTableContent>
     {{/if}}
   </table>
+
+  {{#if this.pagination}}
+    {{#if this.pagination.hasMultiplePages}}
+      <div class="mdc-data-table__pagination">
+        <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
+        <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
+
+        <span class="mdc-data-table__pagination__pages">
+          {{this.pagination.currentPage}} of {{this.pagination.pageCount}}
+        </span>
+
+        <MdcIconButton @icon="navigate_next" {{on "click" this.gotoNextPage}} disabled={{this.pagination.isLastPage}} />
+        <MdcIconButton @icon="last_page" {{on "click" this.gotoLastPage}} disabled={{this.pagination.isLastPage}} />
+      </div>
+    {{/if}}
+  {{/if}}
 </div>
 

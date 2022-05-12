@@ -1,4 +1,5 @@
 @use "@material/icon-button" as iconbutton;
+@use "@material/typography" as typography;
 
 @import "app-theme";
 @import "@material/checkbox/mdc-checkbox"; // Required only for data table with row selection.
@@ -35,6 +36,25 @@
       .mdc-icon-button {
         @include iconbutton.ink-color (primary);
       }
+    }
+  }
+
+  &__pagination {
+    padding-top: 12px;
+
+    @include typography.typography(body2);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .mdc-icon-button {
+      @include iconbutton.density (-4);
+    }
+
+    &__pages {
+      padding: 0 8px;
     }
   }
 }

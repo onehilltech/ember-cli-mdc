@@ -16,6 +16,53 @@ import isString from '../utils/is-string';
 
 function noOp () { }
 
+class DataTablePagination {
+  constructor (rowsPerPage) {
+    this.rowsPerPage = rowsPerPage;
+  }
+
+  @tracked
+  rowsPerPage;
+
+  @tracked
+  currentPage = 1;
+
+  @tracked
+  pageCount;
+
+  get isFirstPage () {
+    return this.currentPage === 1;
+  }
+
+  get isLastPage () {
+    return this.currentPage === this.pageCount;
+  }
+
+  gotoFirstPage () {
+    this.currentPage = 1;
+  }
+
+  gotoPrevPage () {
+    if (this.currentPage > 1) {
+      this.currentPage --;
+    }
+  }
+
+  gotoNextPage () {
+    if (this.currentPage < this.pageCount) {
+      this.currentPage ++;
+    }
+  }
+
+  gotoLastPage () {
+    this.currentPage = this.pageCount;
+  }
+
+  hasMultiplePages () {
+    return this.pageCount > 1;
+  }
+}
+
 /**
  * The representation of a single row in the data table.
  */
@@ -24,6 +71,9 @@ class DataTableRow {
     this.dataTable = table;
     this.data = data;
   }
+
+  @tracked
+  data;
 
   get id () {
     return get (this.data, this.dataTable.idKey);
@@ -57,7 +107,7 @@ class DataTableRow {
  */
 export default class MdcDataTableComponent extends Component {
   @tracked
-  page;
+  pagination;
 
   get labelClassName () {
     const { label } = this.args;
@@ -66,6 +116,16 @@ export default class MdcDataTableComponent extends Component {
 
   doCreateComponent (element) {
     return new MDCDataTable (element);
+  }
+
+  doInitComponent (component) {
+    const { rowsPerPage } = this.args;
+
+    if (isPresent (rowsPerPage)) {
+      this.pagination = new DataTablePagination (rowsPerPage);
+    }
+
+    this.computeTableData ();
   }
 
   get headers () {
@@ -153,9 +213,38 @@ export default class MdcDataTableComponent extends Component {
     this.component.layout ();
   }
 
-  get data () {
+  @tracked
+  data;
+
+  @action
+  computeTableData () {
+    let { rowsPerPage, data = A () } = this.args;
+
+    // Either initialize the pagenation, or update the current one.
+    if (isPresent (rowsPerPage)) {
+      if (isPresent (this.pagination)) {
+        this.pagination.rowsPerPage = rowsPerPage;
+      }
+      else {
+        this.pagination = new DataTablePagination (rowsPerPage);
+      }
+
+      this.pagination.pageCount = Math.ceil (this.args.data.length / rowsPerPage);
+    }
+    else if (isPresent (this.pagination)) {
+      this.pagination = null;
+    }
+
+    if (isPresent (data) && isPresent (this.pagination)) {
+      const { rowsPerPage, currentPage } = this.pagination;
+      const startIndex = (currentPage - 1) * rowsPerPage;
+      const endIndex = startIndex + rowsPerPage;
+
+      data = data.slice (startIndex, endIndex);
+    }
+
     // We need to flatten (or map) each object in the data into an array.
-    return (this.args.data || A ()).map (item => new DataTableRow (this, item));
+    this.data = data.map (row => new DataTableRow (this, row));
   }
 
   get fields () {
@@ -164,5 +253,29 @@ export default class MdcDataTableComponent extends Component {
 
   get idKey () {
     return this.args.idKey || 'id';
+  }
+
+  @action
+  gotoFirstPage () {
+    this.pagination.gotoFirstPage ();
+    this.computeTableData ();
+  }
+
+  @action
+  gotoPrevPage () {
+    this.pagination.gotoPrevPage ();
+    this.computeTableData ();
+  }
+
+  @action
+  gotoNextPage () {
+    this.pagination.gotoNextPage ();
+    this.computeTableData ();
+  }
+
+  @action
+  gotoLastPage () {
+    this.pagination.gotoLastPage ();
+    this.computeTableData ();
   }
 }
