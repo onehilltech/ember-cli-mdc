@@ -22,28 +22,27 @@
       </MdcDataTableContent>
     {{/if}}
   </table>
+</div>
 
-  {{#if @pagination}}
-    {{#if this.pagination.hasMultiplePages}}
-      <div class="mdc-data-table__pagination">
-        <span>Rows per page</span>
-        <MdcSelect class="mdc-data-table__rows-per-page"
-                   @style="outlined"
-                   @options={{this.rowsPerPageOptions}}
-                   @width="100%"
-                   @value={{this.pagination.rowsPerPage}}
-                   @change={{this.changeRowsPerPage}} />
+{{#if @pagination}}
+  {{#if this.pagination.hasMultiplePages}}
+    <div class="mdc-data-table__pagination">
+      <span>Rows per page</span>
+      <MdcSelect class="mdc-data-table__rows-per-page"
+                 @style="outlined"
+                 @options={{this.rowsPerPageOptions}}
+                 @width="100%"
+                 @value={{this.pagination.rowsPerPage}}
+                 @change={{this.changeRowsPerPage}} />
 
-        <span class="mdc-data-table__pagination__pages">
+      <span class="mdc-data-table__pagination__pages">
           {{this.pagination.firstItem}} - {{this.pagination.lastItem}} of {{this.pagination.data.length}}
         </span>
 
-        <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
-        <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
-        <MdcIconButton @icon="navigate_next" {{on "click" this.gotoNextPage}} disabled={{this.pagination.isLastPage}} />
-        <MdcIconButton @icon="last_page" {{on "click" this.gotoLastPage}} disabled={{this.pagination.isLastPage}} />
-      </div>
-    {{/if}}
+      <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
+      <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
+      <MdcIconButton @icon="navigate_next" {{on "click" this.gotoNextPage}} disabled={{this.pagination.isLastPage}} />
+      <MdcIconButton @icon="last_page" {{on "click" this.gotoLastPage}} disabled={{this.pagination.isLastPage}} />
+    </div>
   {{/if}}
-</div>
-
+{{/if}}
