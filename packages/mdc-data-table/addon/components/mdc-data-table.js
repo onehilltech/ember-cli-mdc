@@ -6,7 +6,7 @@ import listener from 'ember-cli-mdc-base/listener';
 const { MDCDataTable } = mdc.dataTable;
 import { dasherize } from '@ember/string';
 import { get } from '@ember/object';
-import { isPresent, isNone } from '@ember/utils';
+import { isPresent, isNone, isEmpty } from '@ember/utils';
 import { A } from '@ember/array';
 import { action } from '@ember/object';
 
@@ -19,6 +19,7 @@ function noOp () { }
 class DataTablePagination {
   constructor (rowsPerPage) {
     this.rowsPerPage = rowsPerPage;
+    this.data = A ();
   }
 
   @tracked
@@ -28,7 +29,36 @@ class DataTablePagination {
   currentPage = 1;
 
   @tracked
-  pageCount;
+  data;
+
+  get pageCount () {
+    return Math.ceil (this.data.length / this.rowsPerPage);
+  }
+
+  get currentPageData () {
+    if (isPresent (this.data)) {
+      return this.data.slice (this.startIndex, this.endIndex);
+    }
+    else {
+      return this.data;
+    }
+  }
+
+  get startIndex () {
+    return (this.currentPage - 1) * this.rowsPerPage;
+  }
+
+  get endIndex () {
+    return this.startIndex + this.rowsPerPage;
+  }
+
+  get firstItem () {
+    return this.startIndex + 1;
+  }
+
+  get lastItem () {
+    return Math.min (this.endIndex, this.data.length);
+  }
 
   get isFirstPage () {
     return this.currentPage === 1;
@@ -119,10 +149,10 @@ export default class MdcDataTableComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { rowsPerPage } = this.args;
+    const { pagination = false, rowsPerPage = [25, 50, 75, 100] } = this.args;
 
-    if (isPresent (rowsPerPage)) {
-      this.pagination = new DataTablePagination (rowsPerPage);
+    if (isPresent (pagination)) {
+      this.pagination = new DataTablePagination (rowsPerPage[0]);
     }
 
     this.computeTableData ();
@@ -218,29 +248,14 @@ export default class MdcDataTableComponent extends Component {
 
   @action
   computeTableData () {
-    let { rowsPerPage, data = A () } = this.args;
+    let { data = A () } = this.args;
 
-    // Either initialize the pagenation, or update the current one.
-    if (isPresent (rowsPerPage)) {
-      if (isPresent (this.pagination)) {
-        this.pagination.rowsPerPage = rowsPerPage;
-      }
-      else {
-        this.pagination = new DataTablePagination (rowsPerPage);
-      }
+    if (this.pagination) {
+      // Set the data in the pagination object, and then get the data for the
+      // current page.
 
-      this.pagination.pageCount = Math.ceil (this.args.data.length / rowsPerPage);
-    }
-    else if (isPresent (this.pagination)) {
-      this.pagination = null;
-    }
-
-    if (isPresent (data) && isPresent (this.pagination)) {
-      const { rowsPerPage, currentPage } = this.pagination;
-      const startIndex = (currentPage - 1) * rowsPerPage;
-      const endIndex = startIndex + rowsPerPage;
-
-      data = data.slice (startIndex, endIndex);
+      this.pagination.data = data;
+      data = this.pagination.currentPageData;
     }
 
     // We need to flatten (or map) each object in the data into an array.
@@ -253,6 +268,11 @@ export default class MdcDataTableComponent extends Component {
 
   get idKey () {
     return this.args.idKey || 'id';
+  }
+
+  get rowsPerPageOptions () {
+    const rowsPerPage = this.args.rowsPerPage || [25, 50, 75, 100];
+    return rowsPerPage.map (rows => ({ value: rows, text: `${rows}` }));
   }
 
   @action
@@ -276,6 +296,14 @@ export default class MdcDataTableComponent extends Component {
   @action
   gotoLastPage () {
     this.pagination.gotoLastPage ();
+    this.computeTableData ();
+  }
+
+  @action
+  async changeRowsPerPage (option) {
+    const { value } = option;
+
+    this.pagination.rowsPerPage = value;
     this.computeTableData ();
   }
 }

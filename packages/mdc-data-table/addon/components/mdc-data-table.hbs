@@ -1,7 +1,7 @@
 <div class="mdc-data-table {{this.labelClassName}}"
   {{did-insert this.didInsert}}
   {{did-update this.layout @selected @data}}
-  {{did-update this.computeTableData @data @rowsPerPage}}
+  {{did-update this.computeTableData @data}}
      ...attributes>
   <table class="mdc-data-table__table" aria-label={{@label}}>
     {{#if @headers}}
@@ -26,13 +26,20 @@
   {{#if this.pagination}}
     {{#if this.pagination.hasMultiplePages}}
       <div class="mdc-data-table__pagination">
-        <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
-        <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
+        <span>Rows per page</span>
+        <MdcSelect class="mdc-data-table__rows-per-page"
+                   @style="outlined"
+                   @options={{this.rowsPerPageOptions}}
+                   @width="100%"
+                   @value={{this.pagination.rowsPerPage}}
+                   @change={{this.changeRowsPerPage}} />
 
         <span class="mdc-data-table__pagination__pages">
-          {{this.pagination.currentPage}} of {{this.pagination.pageCount}}
+          {{this.pagination.firstItem}} - {{this.pagination.lastItem}} of {{this.pagination.data.length}}
         </span>
 
+        <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
+        <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
         <MdcIconButton @icon="navigate_next" {{on "click" this.gotoNextPage}} disabled={{this.pagination.isLastPage}} />
         <MdcIconButton @icon="last_page" {{on "click" this.gotoLastPage}} disabled={{this.pagination.isLastPage}} />
       </div>
