@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-data-table",
-  "version": "2.9.3",
+  "version": "2.9.4",
   "description": "ember-cli addon for @material/data-table",
   "keywords": [
     "ember-addon",
