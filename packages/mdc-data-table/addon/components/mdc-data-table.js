@@ -9,6 +9,7 @@ import { get } from '@ember/object';
 import { isPresent, isNone, isEmpty } from '@ember/utils';
 import { A } from '@ember/array';
 import { action } from '@ember/object';
+import { next } from '@ember/runloop';
 
 import { tracked } from "@glimmer/tracking";
 
@@ -19,7 +20,7 @@ function noOp () { }
 class DataTablePagination {
   constructor (rowsPerPage) {
     this.rowsPerPage = rowsPerPage;
-    this.data = A ();
+    this.rows = A ();
   }
 
   @tracked
@@ -106,7 +107,7 @@ class DataTableRow {
   data;
 
   get id () {
-    return get (this.data, this.dataTable.idKey);
+    return this.dataTable.idForItem (this.data);
   }
 
   get values () {
@@ -124,9 +125,9 @@ class DataTableRow {
     }
   }
 
-  selected () {
-    const id = this.id;
-    const item = this.dataTable.selected.find (selection => `${get (selection, this.dataTable.idKey)}` === id);
+  get selected () {
+    const { id, dataTable } = this;
+    const item = dataTable.selected.find (selection => dataTable.idForItem (selection) === id);
 
     return isPresent (item);
   }
@@ -136,9 +137,6 @@ class DataTableRow {
  * The data table component.
  */
 export default class MdcDataTableComponent extends Component {
-  @tracked
-  pagination;
-
   get labelClassName () {
     const { label } = this.args;
     return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
@@ -148,8 +146,10 @@ export default class MdcDataTableComponent extends Component {
     return new MDCDataTable (element);
   }
 
-  doInitComponent (component) {
+  doInitComponent () {
     const { pagination = false, rowsPerPage = [25, 50, 75, 100] } = this.args;
+    this.rows = A ();
+    this.rowsById = {};
 
     if (isPresent (pagination)) {
       this.pagination = new DataTablePagination (rowsPerPage[0]);
@@ -168,7 +168,7 @@ export default class MdcDataTableComponent extends Component {
     const { data } = this.args;
 
     if (isPresent (data)) {
-      let item = data.find (item => `${get (item, this.idKey)}` === rowId);
+      const item = data.find (item => this.idForItem (item) === rowId);
 
       if (selected) {
         this.selected.addObject (item);
@@ -218,33 +218,17 @@ export default class MdcDataTableComponent extends Component {
 
   }
 
+  @tracked
+  pagination;
+
+  @tracked
+  rows;
+
+  rowsById;
+
   get selected () {
     return this.args.selected || A ();
   }
-
-  @action
-  layout () {
-    // We need to make sure the elements that can be selected are each listed in
-    // the data items. If not, then we need to remove it.
-
-    const removable = this.selected.filter (selection => {
-      const selectionRowId = `${get (selection, this.idKey)}`;
-      const item = this.args.data.find (item => `${get (item, this.idKey)}` === selectionRowId);
-
-      return isNone (item);
-    });
-
-    if (isPresent (removable)) {
-      this.selected.removeObjects (removable);
-    }
-
-    // Now, we need to replace the current selected objects with new objects.
-
-    this.component.layout ();
-  }
-
-  @tracked
-  data;
 
   @action
   computeTableData () {
@@ -258,8 +242,48 @@ export default class MdcDataTableComponent extends Component {
       data = this.pagination.currentPageData;
     }
 
-    // We need to flatten (or map) each object in the data into an array.
-    this.data = data.map (row => new DataTableRow (this, row));
+    // We need to map each item in the data to its DataItem object. We are going
+    // to cache the DataItem so we can reuse the DataItem each time the item appears
+    // in the data.
+
+    const rows = data.map (item => {
+      const id = this.idForItem (item);
+
+      let row = this.rowsById[id];
+
+      if (isNone (row)) {
+        row = new DataTableRow (this, item);
+        this.rowsById[id] = row;
+      }
+
+      return row;
+    });
+
+    this.rows.setObjects (rows);
+
+    // Lastly, we need to make sure items in the selected list are actually part of
+    // the data collection.
+
+    const removable = this.selected.filter (selection => {
+      const selectionRowId = this.idForItem (selection);
+      const item = this.rows.find (item => this.idForItem (item) === selectionRowId);
+
+      return isNone (item);
+    });
+
+    if (isPresent (removable)) {
+      this.selected.removeObjects (removable);
+    }
+
+    // Now that we have the table data computed, we need to update the layout
+    // for the table. This will (re)load the checkboxes.
+    next (this.component, 'layout');
+  }
+
+  @action
+  updateSelections () {
+    const ids = this.selected.map (item => this.idForItem (item));
+    this.component.setSelectedRowIds (ids);
   }
 
   get fields () {
@@ -268,6 +292,10 @@ export default class MdcDataTableComponent extends Component {
 
   get idKey () {
     return this.args.idKey || 'id';
+  }
+
+  idForItem (item) {
+    return `${get (item, this.idKey)}`;
   }
 
   get rowsPerPageOptions () {
