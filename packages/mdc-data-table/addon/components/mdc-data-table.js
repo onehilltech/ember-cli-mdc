@@ -165,17 +165,13 @@ export default class MdcDataTableComponent extends Component {
   @listener ('MDCDataTable:rowSelectionChanged')
   rowSelectionChanged (ev) {
     const { detail: { rowId, rowIndex, selected }} = ev;
-    const { data } = this.args;
+    const row = this.rows.find (row => row.id === rowId);
 
-    if (isPresent (data)) {
-      const item = data.find (item => this.idForItem (item) === rowId);
-
-      if (selected) {
-        this.selected.addObject (item);
-      }
-      else {
-        this.selected.removeObject (item);
-      }
+    if (selected) {
+      this.selected.addObject (row);
+    }
+    else {
+      this.selected.removeObject (row);
     }
 
     // Notify the subclass, and the listener.
