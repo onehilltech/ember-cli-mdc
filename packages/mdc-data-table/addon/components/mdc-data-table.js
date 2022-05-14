@@ -189,11 +189,7 @@ export default class MdcDataTableComponent extends Component {
 
   @listener ('MDCDataTable:selectedAll')
   selectedAll (ev) {
-    const { data } = this.args;
-
-    if (isPresent (data)) {
-      this.selected.addObjects (data);
-    }
+    this.selected.setObjects (this.rows);
 
     // Notify the subclass, and the listener.
     this.doSelectedAll (ev);

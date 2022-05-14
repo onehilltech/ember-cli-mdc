@@ -42,10 +42,6 @@
   }
 
   &__pagination {
-    padding-top: 12px;
-
-    @include typography.typography(body2);
-
     display: flex;
     flex-direction: row;
     align-items: center;
