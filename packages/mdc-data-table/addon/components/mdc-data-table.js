@@ -230,7 +230,16 @@ export default class MdcDataTableComponent extends Component {
   }
 
   @action
-  computeTableData () {
+  updateData () {
+    this.computeTableData ();
+  }
+
+  /**
+   * Compute the table data.
+   *
+   * @param refreshLayout
+   */
+  computeTableData (refreshLayoutNext = false) {
     let { data = A () } = this.args;
 
     if (this.pagination) {
@@ -274,9 +283,19 @@ export default class MdcDataTableComponent extends Component {
       this.selected.removeObjects (removable);
     }
 
-    // Now that we have the table data computed, we need to update the layout
-    // for the table. This will (re)load the checkboxes.
-    next (this.component, 'layout');
+    // Anytime we update the table data, we need to force the underlying component
+    // to update its layout. This will ensure we have the correct checkboxes.
+
+    if (refreshLayoutNext) {
+      next (this, 'layout');
+    }
+    else {
+      this.layout ();
+    }
+  }
+
+  layout () {
+    this.component.layout ();
   }
 
   @action
@@ -305,25 +324,25 @@ export default class MdcDataTableComponent extends Component {
   @action
   gotoFirstPage () {
     this.pagination.gotoFirstPage ();
-    this.computeTableData ();
+    this.computeTableData (true);
   }
 
   @action
   gotoPrevPage () {
     this.pagination.gotoPrevPage ();
-    this.computeTableData ();
+    this.computeTableData (true);
   }
 
   @action
   gotoNextPage () {
     this.pagination.gotoNextPage ();
-    this.computeTableData ();
+    this.computeTableData (true);
   }
 
   @action
   gotoLastPage () {
     this.pagination.gotoLastPage ();
-    this.computeTableData ();
+    this.computeTableData ( true);
   }
 
   @action
@@ -331,6 +350,6 @@ export default class MdcDataTableComponent extends Component {
     const { value } = option;
 
     this.pagination.rowsPerPage = value;
-    this.computeTableData ();
+    this.computeTableData (true);
   }
 }
