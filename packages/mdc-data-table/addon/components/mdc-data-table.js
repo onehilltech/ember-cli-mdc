@@ -33,11 +33,11 @@ class DataTablePagination {
   data;
 
   get pageCount () {
-    return Math.ceil (this.data.length / this.rowsPerPage);
+    return isPresent (this.rowsPerPage) && isPresent (this.data) ? Math.ceil (this.data.length / this.rowsPerPage) : 1;
   }
 
   get currentPageData () {
-    if (isPresent (this.data)) {
+    if (this.pageCount > 1) {
       return this.data.slice (this.startIndex, this.endIndex);
     }
     else {
@@ -46,11 +46,11 @@ class DataTablePagination {
   }
 
   get startIndex () {
-    return (this.currentPage - 1) * this.rowsPerPage;
+    return isPresent (this.rowsPerPage) ? (this.currentPage - 1) * this.rowsPerPage : 0;
   }
 
   get endIndex () {
-    return this.startIndex + this.rowsPerPage;
+    return isPresent (this.rowsPerPage) ? this.startIndex + this.rowsPerPage : this.data.length - 1;
   }
 
   get firstItem () {
@@ -318,7 +318,15 @@ export default class MdcDataTableComponent extends Component {
 
   get rowsPerPageOptions () {
     const rowsPerPage = this.args.rowsPerPage || [25, 50, 75, 100];
-    return rowsPerPage.map (rows => ({ value: rows, text: `${rows}` }));
+    const options = rowsPerPage.map (rows => ({ value: rows, text: `${rows}` }));
+
+    options.push ({ value: 'all', text: '-' });
+
+    return options;
+  }
+
+  get rowsPerPageValue () {
+    return this.pagination.rowsPerPage || 'all';
   }
 
   @action
@@ -347,9 +355,26 @@ export default class MdcDataTableComponent extends Component {
 
   @action
   async changeRowsPerPage (option) {
-    const { value } = option;
+    if (isPresent (option)) {
+      const { value } = option;
 
-    this.pagination.rowsPerPage = value;
-    this.computeTableData (true);
+      if (value !== this.pagination.rowsPerPage) {
+        if (value === 'all') {
+          this.pagination.currentPage = 1;
+          this.pagination.rowsPerPage = null;
+        }
+        else {
+          this.pagination.rowsPerPage = value;
+        }
+
+        this.computeTableData (true);
+      }
+    }
+    else if (isNone (this.pagination.rowsPerPage)) {
+      this.pagination.currentPage = 1;
+      this.pagination.rowsPerPage = null;
+
+      this.computeTableData (true);
+    }
   }
 }

@@ -1,6 +1,6 @@
 <div class="mdc-data-table {{this.labelClassName}}"
   {{did-insert this.didInsert}}
-  {{did-update this.computeTableData @data}}
+  {{did-update this.updateData @data}}
   {{did-update this.updateSelections @selected}}
      ...attributes>
   <table class="mdc-data-table__table" aria-label={{@label}}>
@@ -33,7 +33,7 @@
                    @style="outlined"
                    @options={{this.rowsPerPageOptions}}
                    @width="100%"
-                   @value={{this.pagination.rowsPerPage}}
+                   @value={{this.rowsPerPageValue}}
                    @change={{this.changeRowsPerPage}} />
 
         <span class="mdc-data-table__pagination__pages">
@@ -48,5 +48,3 @@
     {{/if}}
   {{/if}}
 </div>
-
-
