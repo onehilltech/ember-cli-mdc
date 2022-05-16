@@ -4,6 +4,6 @@ const { Blueprint } = require ('ember-cli-blueprint-helpers');
 
 module.exports = Blueprint.extend ({
   packages: [
-    {name: '@material/rtl', target: '^9.0.0'}
+    {name: '@material/rtl', target: '^14.0.0'}
   ]
 });
