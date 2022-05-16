@@ -2,6 +2,7 @@
 
 module.exports = {
   name: require('./package').name,
+<<<<<<< HEAD
 
   included (app) {
     this._super (...arguments);
@@ -11,4 +12,6 @@ module.exports = {
       production: 'node_modules/@material/base/dist/mdc.base.min.js'
     });
   }
+=======
+>>>>>>> df7a18be (v3.18.0...v3.28.5)
 };
