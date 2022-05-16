@@ -1,15 +1,14 @@
 'use strict';
 
+const { CORBER } = process.env;
 const { get } = require ('lodash');
 
 module.exports = {
   name: require('./package').name,
-<<<<<<< HEAD
-
   included (app) {
     this._super (...arguments);
 
-    if (process.env.CORBER) {
+    if (CORBER) {
       // Get the configuration for the current environment.
       const config = app.project.config (app.environment);
       const typography = get (config, 'ember-cli-mdc.typography', {
@@ -40,9 +39,8 @@ module.exports = {
   contentFor (type, config) {
     this._super (...arguments);
 
-
     if (type === 'head-footer') {
-      if (!process.env.CORBER) {
+      if (!CORBER) {
         const typography = get (config, 'ember-cli-mdc.typography', {
           autoLinkFont: true
         });
@@ -54,6 +52,4 @@ module.exports = {
       }
     }
   }
-=======
->>>>>>> 003d986e (v3.18.0...v3.28.5)
 };
