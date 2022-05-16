@@ -1,12 +1,11 @@
-<ul class="mdc-list
-  {{if @twoLine "mdc-list--two-line"}}
-  {{this.leadingTileStyle}}
-  {{if @nonInteractive "mdc-list--non-interactive"}}
+<ul class="mdc-list {{if @twoLine "mdc-list--two-line"}}
+  {{if @leadingTile this.leadingTileStyle}}
+  {{unless this.interactive "mdc-list--non-interactive"}}
   {{if @dense "mdc-list--dense"}}"
     ...attributes
-    {{did-insert this.didInsert}}
-    {{did-update this.vertical @vertical}}
-    {{did-update this.singleSelection @singleSelection}}
-    {{did-update this.wrapFocus @wrapFocus}}>
-  {{yield}}
+  {{did-insert this.didInsert}}
+  {{did-update this.vertical @vertical}}
+  {{did-update this.singleSelection @singleSelection}}
+  {{did-update this.wrapFocus @wrapFocus}}>
+  {{yield this.limited}}
 </ul>

@@ -82,7 +82,6 @@ export default class MdcMenuSurfaceComponent extends Component {
     else {
       this.component.setAnchorCorner (null);
     }
-
   }
 
   set anchorElement (element) {

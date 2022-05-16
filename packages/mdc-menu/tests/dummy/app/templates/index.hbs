@@ -1,10 +1,9 @@
 <h3>General Menu</h3>
 
-<div class="toolbar" role="toolbar">
+<div class="toolbar" style="position: relative" role="toolbar">
   <button id="menu-button" {{on "click" this.openMenu}} >Open Menu</button>
-</div>
 
-<MdcMenu @open={{this.open}} @position="fixed" @anchorCorner="bottomRight" @anchorElement="#menu-button">
+  <MdcMenu @open={{this.open}} @position="fixed" @anchorCorner="bottomRight" @anchorElement="#menu-button">
     <MdcMenuList>
       <MdcMenuItemLinkTo @route="index">This is the link</MdcMenuItemLinkTo>
 
@@ -19,7 +18,19 @@
 
       <MdcListDivider />
 
-      <MdcMenuItem @text="Add space before paragraph" />
+      <MdcMenuItem @text="Add space before paragraph" {{on "click" this.alert}} />
       <MdcMenuItem><MdcMenuItemText>Add space after paragraph</MdcMenuItemText></MdcMenuItem>
     </MdcMenuList>
-</MdcMenu>
+  </MdcMenu>
+
+</div>
+
+<h3>Dropdown Menu</h3>
+
+<MdcDropdownMenu @anchorCorner="bottomLeft">
+  <MdcMenuList>
+    <MdcListItem>First Item</MdcListItem>
+    <MdcListItem>Second Item</MdcListItem>
+    <MdcListItem>Third Item</MdcListItem>
+  </MdcMenuList>
+</MdcDropdownMenu>

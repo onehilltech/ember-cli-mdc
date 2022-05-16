@@ -14,13 +14,13 @@
 
     {{#if this.isOutlined}}
       <span class="mdc-notched-outline">
-          <span class="mdc-notched-outline__leading"></span>
-          {{#if @label}}
-            <span class="mdc-notched-outline__notch">
+        <span class="mdc-notched-outline__leading"></span>
+        {{#if @label}}
+          <span class="mdc-notched-outline__notch">
               <span id={{this.labelId}} class="mdc-floating-label">{{@label}}</span>
             </span>
-          {{/if}}
-          <span class="mdc-notched-outline__trailing"></span>
+        {{/if}}
+        <span class="mdc-notched-outline__trailing"></span>
       </span>
 
       {{#if @leadingIcon}}
@@ -58,15 +58,19 @@
   <!-- list of options in the drop-down -->
   <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" role="listbox">
     <ul class="mdc-list">
-      {{#if @firstOptionIsEmpty}}
-        <MdcListItem data-value="" role="option">
-          <MdcListItemText>{{@firstOptionIsEmptyText}}</MdcListItemText>
+      {{#if @firstOption}}
+        <MdcListItem class={{@firstOption.classname}} data-value="" role="option" @disabled={{@firstOption.disabled}}>
+          <MdcListItemText>{{@firstOption.text}}</MdcListItemText>
         </MdcListItem>
       {{/if}}
       {{#each @this.options as |option|}}
-        <MdcListItem @disabled={{get option this.disabledKey}} data-value={{get option this.valueKey}} role="option">
-          <MdcListItemText>{{get option this.textKey}}</MdcListItemText>
-        </MdcListItem>
+        {{#if option.divider}}
+          <MdcListDivider />
+        {{else}}
+          <MdcListItem @disabled={{get option this.disabledKey}} data-value={{get option this.valueKey}} role="option" class={{option.class}}>
+            <MdcListItemText>{{get option this.textKey}}</MdcListItemText>
+          </MdcListItem>
+        {{/if}}
       {{/each}}
     </ul>
   </div>

@@ -7,7 +7,8 @@
   {{if @focused "mdc-text-field--focused"}}
   {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
   {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
-  {{did-insert this.didInsert}}>
+  {{did-insert this.didInsert}}
+  {{did-update this.didUpdateValue @value}}>
   {{#if this.filled}}
     <span class="mdc-text-field__ripple"></span>
   {{/if}}
@@ -37,7 +38,7 @@
 
   {{#if @trailingIcon}}
     <MdcIcon @icon={{@trailingIcon}}
-             class="mdc-text-field__icon mdc-text-field__icon--leading"
+             class="mdc-text-field__icon mdc-text-field__icon--trailing"
              tabindex={{if @trailingIconClick "0"}}
              role={{if @trailingIconClick "button"}} {{on "click" this.trailingIconClick}} />
   {{/if}}
@@ -61,7 +62,7 @@
     </span>
   {{/if}}
 </label>
-{{#if this.helperLine}}
+{{#unless @noHelperLine}}
   <div class="mdc-text-field-helper-line">
     {{#if this.helperText}}
       <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
@@ -72,4 +73,4 @@
       <div class="mdc-text-field-character-counter" />
     {{/if}}
   </div>
-{{/if}}
+{{/unless}}

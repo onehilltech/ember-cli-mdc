@@ -1,24 +1,51 @@
-<div class="mdc-data-table {{this.labelClassName}} {{if @stickyHeader "mdc-data-table--sticky-header"}}" {{did-insert this.didInsert}} ...attributes>
-  <div class="mdc-data-table__table-container">
-    <table class="mdc-data-table__table" aria-label={{@label}}>
-      {{#if @headers}}
-        <MdcDataTableHeaderRow @headers={{@headers}} @selectable={{@selectable}} />
-      {{/if}}
+<div class="mdc-data-table {{this.labelClassName}}"
+  {{did-insert this.didInsert}}
+  {{did-update this.updateData @data}}
+  {{did-update this.updateSelections @selected}}
+     ...attributes>
+  <table class="mdc-data-table__table" aria-label={{@label}}>
+    {{#if @headers}}
+      <MdcDataTableHeaderRow @headers={{@headers}} @selectable={{@selectable}} />
+    {{/if}}
 
-      {{#if (has-block)}}
-        {{yield}}
-      {{else}}
-        <MdcDataTableContent>
-          {{#each this.data as |row|}}
-            <MdcDataTableRow @selectable={{@selectable}} @rowId={{row.id}}>
-              {{#each row.values as |value|}}
-                <MdcDataTableCell>{{value}}</MdcDataTableCell>
-              {{/each}}
-            </MdcDataTableRow>
-          {{/each}}
-        </MdcDataTableContent>
-      {{/if}}
-    </table>
-  </div>
+    {{#if (has-block)}}
+      {{yield this.rows this.pagination}}
+    {{else}}
+      <MdcDataTableContent>
+        {{#each this.rows as |row|}}
+          <MdcDataTableRow @selectable={{@selectable}}
+                           @rowId={{row.id}}
+                           @selected={{row.selected}} class="{{if row.selected "mdc-data-table__row--selected"}}">
+            {{#each row.values as |value|}}
+              <MdcDataTableCell>{{value}}</MdcDataTableCell>
+            {{/each}}
+          </MdcDataTableRow>
+        {{/each}}
+      </MdcDataTableContent>
+    {{/if}}
+  </table>
+
+  {{#if @pagination}}
+    {{#if this.pagination.hasMultiplePages}}
+      <div class="mdc-data-table__pagination">
+        <span>Rows per page</span>
+        <MdcSelect class="mdc-data-table__rows-per-page"
+                   @style="outlined"
+                   @options={{this.rowsPerPageOptions}}
+                   @width="100%"
+                   @value={{this.rowsPerPageValue}}
+                   @change={{this.changeRowsPerPage}} />
+
+        <span class="mdc-data-table__pagination__pages">
+          {{this.pagination.firstItem}} - {{this.pagination.lastItem}} of {{this.pagination.data.length}}
+        </span>
+>>>>>>> master
+
+        <MdcIconButton @icon="first_page" {{on "click" this.gotoFirstPage}} disabled={{this.pagination.isFirstPage}} />
+        <MdcIconButton @icon="navigate_before" {{on "click" this.gotoPrevPage}} disabled={{this.pagination.isFirstPage}} />
+        <MdcIconButton @icon="navigate_next" {{on "click" this.gotoNextPage}} disabled={{this.pagination.isLastPage}} />
+        <MdcIconButton @icon="last_page" {{on "click" this.gotoLastPage}} disabled={{this.pagination.isLastPage}} />
+      </div>
+    {{/if}}
+  {{/if}}
 </div>
-

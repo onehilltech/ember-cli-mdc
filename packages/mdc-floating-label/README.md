@@ -22,7 +22,6 @@ Components
 
 This package contains the following top-level components.
 
-<<<<<<< HEAD
 * [`{{mdc-floating-label}}`](#mdc-floating-label)
 
 mdc-floating-label
@@ -38,10 +37,6 @@ with text field and select fields.
 ```handlebars
 {{#mdc-floating-label for="my-text-field-id"}}Hint text{{/mdc-floating-label}}
 ```
-=======
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
->>>>>>> a902b3fe... v3.3.0...v3.18.0
 
 ### Attributes
 

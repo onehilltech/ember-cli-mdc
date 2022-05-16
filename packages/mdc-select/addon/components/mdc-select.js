@@ -9,6 +9,7 @@ import { A } from '@ember/array';
 import { isEmpty, isPresent, isNone } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
+import { isObjectLike } from 'lodash-es';
 
 import { MDCSelect } from '@material/select';
 
@@ -27,17 +28,19 @@ export default class MdcSelectComponent extends Component {
 
     if (isPresent (option)) {
       // We need to pre-select the option.
-      let value = get (option, this.valueKey);
-      let text = get (option, this.textKey);
+      let value = this.valueOf (option);
+      let text = this.textOf (option);
 
-      let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+      if (isPresent (value) && isPresent (text)) {
+        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
 
-      if (isPresent (listItem)) {
-        listItem.classList.add ('mdc-list-item--selected');
+        if (isPresent (listItem)) {
+          listItem.classList.add ('mdc-list-item--selected');
+        }
+
+        let textElement = element.querySelector ('.mdc-select__selected-text');
+        textElement.value = text;
       }
-
-      let textElement = element.querySelector ('.mdc-select__selected-text');
-      textElement.value = text;
     }
   }
 
@@ -46,8 +49,29 @@ export default class MdcSelectComponent extends Component {
   }
 
   doInitComponent (component) {
-    const { required = false } = this.args;
+    const { required = false, value: initial } = this.args;
     component.required = required;
+
+    if (isPresent (initial)) {
+      //component.value = this.valueOf (initial);
+    }
+  }
+
+  valueOf (option) {
+    return isObjectLike (option) ? `${get (option, this.valueKey)}` : `${option}`;
+  }
+
+  textOf (option) {
+    if (isObjectLike (option)) {
+      return get (option, this.textKey);
+    }
+    else {
+      // We have to assume the string text is a value.
+      let value = `${option}`;
+      let found = (this.options || []).find (option => this.valueOf (option) === value);
+
+      return isPresent (found) ? get (found, this.textKey) : value;
+    }
   }
 
   get isOutlined () {
@@ -79,7 +103,7 @@ export default class MdcSelectComponent extends Component {
       (this.args.change || noOp) (null);
     }
     else {
-      let selected = this.options.find (option => `${get (option, this.valueKey)}` === value);
+      let selected = this.options.find (option => this.valueOf (option) === value);
       (this.args.change || noOp) (selected);
     }
   }
@@ -91,9 +115,13 @@ export default class MdcSelectComponent extends Component {
   @action
   select (element, [option]) {
     if (isPresent (option)) {
-      this.component.value = get (option, this.valueKey);
+      let value = this.valueOf (option);
+
+      if (this.component.value !== value) {
+        this.component.value = value;
+      }
     }
-    else {
+    else if (this.component.value !== null) {
       this.component.value = null;
     }
 

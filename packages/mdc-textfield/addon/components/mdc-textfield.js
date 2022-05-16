@@ -54,6 +54,12 @@ export default class MdcTextfieldComponent extends Component {
 
     if (isPresent (value)) {
       element.classList.add ('mdc-text-field--label-floating');
+
+      let floatingLabel = element.querySelector ('.mdc-floating-label');
+
+      if (isPresent (floatingLabel)) {
+        floatingLabel.classList.add ('mdc-floating-label--float-above');
+      }
     }
 
     this.labelId = guidFor (this);
@@ -62,6 +68,22 @@ export default class MdcTextfieldComponent extends Component {
 
   doCreateComponent (element) {
     return new MDCTextField (element);
+  }
+
+  @action
+  didUpdateValue (element, [value = '']) {
+    const component = this.component;
+
+    if (isPresent (component)) {
+      // Setting a null value actually causes the material component to fail. We are
+      // going to replace the null value with an empty string.
+
+      if (value === null) {
+        value = '';
+      }
+
+      component.value = value;
+    }
   }
 
   @equal ('style', 'filled')

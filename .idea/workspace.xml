@@ -5,6 +5,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" afterDir="false" />
@@ -16,6 +17,9 @@
       <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
+=======
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
+>>>>>>> master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +27,24 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components/mdc-bottom-navigation.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-dropdown-menu.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-base/addon/component.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/styles/addon.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-drawer/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-list/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-menu/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/mdc-select/package.json" />
   </component>
   <component name="ProjectId" id="1SamfNXR7954uB9nCo4laLZZEql" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,7 +59,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-list/addon/components" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
+>>>>>>> master
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -45,20 +71,31 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/packages/mdc-list/addon/components" />
+=======
+      <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
+>>>>>>> master
       <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/packages/mdc-sass/lib/sass" />
       <recent name="$PROJECT_DIR$/packages/mdc-typography/node_modules/ " />
+=======
+>>>>>>> master
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-slider]: dummy application">
+=======
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
+>>>>>>> master
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -315,10 +352,85 @@
       <workItem from="1609595871518" duration="100000" />
       <workItem from="1609596005765" duration="377000" />
       <workItem from="1609601537295" duration="3777000" />
+<<<<<<< HEAD
       <workItem from="1609782909164" duration="27680000" />
       <workItem from="1610066547879" duration="7913000" />
       <workItem from="1610077203943" duration="8792000" />
       <workItem from="1610121993239" duration="1864000" />
+=======
+      <workItem from="1609782909164" duration="19566000" />
+      <workItem from="1610722593022" duration="2280000" />
+      <workItem from="1610980097471" duration="1800000" />
+      <workItem from="1611086094451" duration="8769000" />
+      <workItem from="1611519765908" duration="1109000" />
+      <workItem from="1611629959332" duration="351000" />
+      <workItem from="1611641029212" duration="734000" />
+      <workItem from="1611767574913" duration="8235000" />
+      <workItem from="1612477525768" duration="2835000" />
+      <workItem from="1612757788624" duration="5208000" />
+      <workItem from="1613021800588" duration="8355000" />
+      <workItem from="1614229271126" duration="1711000" />
+      <workItem from="1614828893318" duration="3062000" />
+      <workItem from="1615304762059" duration="585000" />
+      <workItem from="1615316592646" duration="1041000" />
+      <workItem from="1615328468808" duration="947000" />
+      <workItem from="1615912527785" duration="736000" />
+      <workItem from="1616032806130" duration="770000" />
+      <workItem from="1616550031925" duration="111000" />
+      <workItem from="1616729656805" duration="41000" />
+      <workItem from="1617640614116" duration="1362000" />
+      <workItem from="1618373058610" duration="632000" />
+      <workItem from="1618410893777" duration="841000" />
+      <workItem from="1618981351036" duration="761000" />
+      <workItem from="1619372929268" duration="1645000" />
+      <workItem from="1619613388518" duration="534000" />
+      <workItem from="1619887381418" duration="725000" />
+      <workItem from="1619927978255" duration="747000" />
+      <workItem from="1620094969950" duration="746000" />
+      <workItem from="1620147543256" duration="612000" />
+      <workItem from="1620777625072" duration="1923000" />
+      <workItem from="1621820032677" duration="704000" />
+      <workItem from="1622749369558" duration="1040000" />
+      <workItem from="1623733043375" duration="388000" />
+      <workItem from="1624557694653" duration="3970000" />
+      <workItem from="1625176174676" duration="827000" />
+      <workItem from="1626272828752" duration="7065000" />
+      <workItem from="1626886120144" duration="2580000" />
+      <workItem from="1628567285675" duration="5000" />
+      <workItem from="1628641456014" duration="1287000" />
+      <workItem from="1629297985730" duration="598000" />
+      <workItem from="1634148038357" duration="1298000" />
+      <workItem from="1635253484304" duration="1900000" />
+      <workItem from="1637035188579" duration="319000" />
+      <workItem from="1637120877166" duration="1513000" />
+      <workItem from="1637191961326" duration="598000" />
+      <workItem from="1637198253510" duration="237000" />
+      <workItem from="1641850126570" duration="1034000" />
+      <workItem from="1642823268527" duration="1661000" />
+      <workItem from="1642831008043" duration="3000" />
+      <workItem from="1642862943350" duration="230000" />
+      <workItem from="1645102861956" duration="1530000" />
+      <workItem from="1645400809028" duration="1138000" />
+      <workItem from="1645919348418" duration="938000" />
+      <workItem from="1646368820939" duration="1836000" />
+      <workItem from="1647219668730" duration="646000" />
+      <workItem from="1647347955106" duration="1242000" />
+      <workItem from="1647399261103" duration="1099000" />
+      <workItem from="1648482209987" duration="739000" />
+      <workItem from="1648492867616" duration="1164000" />
+      <workItem from="1648747060063" duration="2120000" />
+      <workItem from="1649212390853" duration="1571000" />
+      <workItem from="1649277203952" duration="3571000" />
+      <workItem from="1649709065426" duration="2457000" />
+      <workItem from="1649887636494" duration="2525000" />
+      <workItem from="1650311949347" duration="1183000" />
+      <workItem from="1650758352618" duration="11000" />
+      <workItem from="1650764131660" duration="1324000" />
+      <workItem from="1651503575481" duration="2569000" />
+      <workItem from="1651688502920" duration="13056000" />
+      <workItem from="1652472083390" duration="8101000" />
+      <workItem from="1652662945212" duration="568000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
@@ -371,20 +483,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js</url>
           <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+=======
+>>>>>>> master
           <url>file://$PROJECT_DIR$/packages/mdc-image-list/node_modules/ember-cli-mdc-utils/lib/target.js</url>
           <line>6</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/packages/mdc-animation/node_modules/ember-cli-mdc-sass/lib/sass/plugin.js</url>
           <line>24</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
+=======
+          <url>file://$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+>>>>>>> master
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,4 +1,4 @@
-<div class="mdc-dialog"
+<div class="mdc-dialog" ...attributes
   {{did-insert this.didInsert}}
   {{did-update this.open @open}}>
   <div class="mdc-dialog__container">
@@ -21,7 +21,7 @@
                              @label={{@negativeButton.label}}
                              @style={{@negativeButton.style}}
                              disabled={{@negativeButton.disabled}}
-                             data-mdc-dialog-action={{@negativeButton.action}}
+                             data-mdc-dialog-action={{this.negativeButtonAction}}
                              data-mdc-dialog-button-default={{@negativeButton.default}}
                              data-mdc-dialog-initial-focus={{@negativeButton.focus}} />
           {{/if}}
@@ -31,7 +31,7 @@
                              @label={{@positiveButton.label}}
                              @style={{@positiveButton.style}}
                              disabled={{@positiveButton.disabled}}
-                             data-mdc-dialog-action={{@positiveButton.action}}
+                             data-mdc-dialog-action={{this.positiveButtonAction}}
                              data-mdc-dialog-button-default={{@positiveButton.default}}
                              data-mdc-dialog-initial-focus={{@positiveButton.focus}} />
           {{/if}}

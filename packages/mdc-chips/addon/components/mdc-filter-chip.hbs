@@ -1,4 +1,4 @@
-<div id={{@id}} class="mdc-chip" role="row" {{did-insert this.didInsert}}>
+<div class="mdc-chip" ...attributes id={{@id}} role="row" {{did-insert this.didInsert}}>
   <div class="mdc-chip__ripple"></div>
   {{#if @leadingIcon}}
     <MdcIcon class="mdc-chip__icon mdc-chip__icon--leading" @icon={{@leadingIcon}} {{did-insert this.hideLeadingIcon}} />

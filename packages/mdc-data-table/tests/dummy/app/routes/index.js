@@ -15,5 +15,6 @@ export default Route.extend({
     controller.signals = A (signals);
     controller.headers = A (['Status', 'Signal name', 'Severity', 'Stage', {name: 'Time', numeric: true}, 'Roles']);
     controller.selected = A ();
+    controller.signalsSortDesc = A ();
   }
 });

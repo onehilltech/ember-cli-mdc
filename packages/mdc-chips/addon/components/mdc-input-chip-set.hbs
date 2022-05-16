@@ -15,6 +15,11 @@
     {{/each}}
   {{/if}}
 
-  <input class="mdc-chip-set__input" {{on "keydown" this.createChip}} placeholder={{@placeholder}} type={{@type}} />
+  <Input class="mdc-chip-set__input"
+         @value={{@value}}
+         placeholder={{@placeholder}}
+         type={{@type}}
+         disabled={{@disabled}}
+    {{on "keydown" this.createChip}} />
 
 </div>

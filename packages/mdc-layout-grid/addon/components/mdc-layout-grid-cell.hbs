@@ -1,3 +1,9 @@
-<div class="mdc-layout-grid__cell {{if @alignment this.alignmentClassName}} {{if @order this.orderClassName}} {{if @columns this.columnsClassName}} {{if @phoneColumns this.phoneColumnsClassName}} {{if @tabletColumns this.tabletColumnsClassName}} {{if @desktopColumns this.desktopColumnsClassName}}">
+<div class="mdc-layout-grid__cell
+  {{if @alignment this.alignmentClassName}}
+  {{if @order this.orderClassName}}
+  {{if @columns this.columnsClassName}}
+  {{if @phoneColumns this.phoneColumnsClassName}}
+  {{if @tabletColumns this.tabletColumnsClassName}}
+  {{if @desktopColumns this.desktopColumnsClassName}}" ...attributes>
   {{yield}}
 </div>

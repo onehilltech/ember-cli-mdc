@@ -1,12 +1,12 @@
-<h2>Data Tables</h2>
+<h5>Data Tables</h5>
 
-<h3>Basic usage</h3>
+<h6>Basic usage</h6>
 
 <MdcDataTable @label="Dessert calories">
   <MdcDataTableHeaderRow>
     <MdcDataTableHeaderCell>Dessert</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Carbs (g)</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Protein (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Carbs (g)</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Protein (g)</MdcDataTableHeaderCell>
     <MdcDataTableHeaderCell>Comments</MdcDataTableHeaderCell>
   </MdcDataTableHeaderRow>
 
@@ -34,41 +34,46 @@
   </MdcDataTableContent>
 </MdcDataTable>
 
-<h3>Data table with row selection</h3>
+<h6>Data table with row selection</h6>
 
-<MdcDataTable @label="Network" @selected={{ids}} @rowSelectionChange={{action "rowSelectionChange"}} as |dataTable|>
+<MdcDataTable @label="Network"
+              @data={{this.signalsSorted}}
+              @selected={{this.selected}}
+              @rowSelectionChange={{this.rowSelectionChange}} as |data|>
   <MdcDataTableHeaderRow @selectable={{true}}>
-    <MdcDataTableHeaderCell>Status</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Signal name</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Severity</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Stage</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}}>Time</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Roles</MdcDataTableHeaderCell>
+    <MdcDataTableHeaderCell @label="Status" @sortDesc={{this.signalsSortDesc}}  />
+    <MdcDataTableHeaderCell @label="Signal name" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
+    <MdcDataTableHeaderCell @label="Severity" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Stage" @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortDesc={{this.signalsSortDesc}} />
+    <MdcDataTableHeaderCell @label="Roles" @sortDesc={{this.signalsSortDesc}} />
   </MdcDataTableHeaderRow>
 
   <MdcDataTableContent>
-    {{#each signals as |signal|}}
-      <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
-        <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
-        <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
-        <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
-      </MdcDataTableRow>
+    {{#each data as |dataItem|}}
+      {{#with dataItem.data as |signal|}}
+        <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
+          <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
+          <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
+          <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
+          <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
+          <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
+          <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
+        </MdcDataTableRow>
+      {{/with}}
     {{/each}}
   </MdcDataTableContent>
 </MdcDataTable>
 
-<h4>Selected Rows:</h4>
+<p>Selected Rows:</p>
 
 <ul>
-  {{#each ids as |id|}}
-    <li>{{id}}</li>
+  {{#each this.selected as |signal|}}
+    <li>{{signal.id}}</li>
   {{/each}}
 </ul>
 
-<h3>Data Table from Properties</h3>
+<h6>Data Table from Properties</h6>
 
 <MdcDataTable @label="Network"
               @selectable={{true}}
@@ -76,7 +81,7 @@
               @data={{this.signals}}
               @selected={{this.selected}} />
 
-<h4>Selected Rows:</h4>
+<p>Selected Rows:</p>
 
 <ul>
   {{#each selected as |selection|}}
@@ -84,11 +89,13 @@
   {{/each}}
 </ul>
 
-<h3>Data Table w/ Select Fields</h3>
+<h6>Data Table w/ Select Fields</h6>
 
 <MdcDataTable @label="Network"
               @selectable={{true}}
               @headers={{array "Status" "Name"}}
               @data={{this.signals}}
+              @selected={{this.selected}}
               @fields={{array "status" "name"}}
-              @pagination={{3}} />
+              @pagination="true"
+              @rowsPerPage={{array 2 4}} />

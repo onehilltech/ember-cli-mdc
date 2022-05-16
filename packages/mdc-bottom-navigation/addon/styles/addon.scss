@@ -12,20 +12,18 @@
 
   width: 100%;
 
-  height: $bottom-navigation-mobile-height;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-
   @include mdc-theme-prop(background-color, primary);
   @include mdc-theme-prop(color, on-primary);
 
   @include mdc-elevation(4);
 
-  &--space-evenly {
-    justify-content: space-evenly;
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    justify-content: center;
+    height: $bottom-navigation-mobile-height;
   }
 
   &__button {
@@ -33,9 +31,13 @@
     flex-direction: column;
 
     align-items: center;
+    justify-content: center;
 
-    min-width: calc(80px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
-    max-width: calc(168px - (#{$bottom-navigation-mobile-padding-right} +  #{$bottom-navigation-mobile-padding-left}));
+    height: 100%;
+
+    box-sizing: border-box;
+    min-width: 80px;
+    max-width: 168px;
 
     // In landscape mode and on tablets/desktops, we set the width of the buttons to
     // the max width of a button.
@@ -45,9 +47,6 @@
     }
 
     padding: $bottom-navigation-mobile-padding-top $bottom-navigation-mobile-padding-right $bottom-navigation-mobile-padding-bottom $bottom-navigation-mobile-padding-left;
-
-    max-height: $bottom-navigation-mobile-height;
-    height: $bottom-navigation-mobile-height;
 
     &--with-label {
       padding-top: $bottom-navigation-mobile-with-label-padding-top;
@@ -76,5 +75,23 @@
   &__label {
     color: inherit;
     @include mdc-typography(caption);
+
+    line-height: 1rem;
+  }
+
+  &__content {
+    padding-bottom: calc(#{$bottom-navigation-mobile-height} + env(safe-area-inset-bottom));
+  }
+
+  &__scrim {
+    height: env(safe-area-inset-bottom);
+  }
+
+  &--space-evenly {
+    .mdc-bottom-navigation {
+      &__buttons {
+        justify-content: space-evenly;
+      }
+    }
   }
 }

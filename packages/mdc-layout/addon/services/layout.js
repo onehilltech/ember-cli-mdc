@@ -24,6 +24,10 @@ export default class LayoutService extends Service {
   @gte ('width', BREAKPOINT_DESKTOP)
   isDesktop;
 
+  get isMobile () {
+    return this.isPhone || this.isTablet;
+  }
+
   _resizeEventListener = null;
 
   _currentClassName = null;

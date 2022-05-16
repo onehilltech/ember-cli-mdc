@@ -1,10 +1,26 @@
 import LinkComponent from '@ember/routing/link-component';
 
 import { isPresent } from '@ember/utils';
-import { MDCRipple } from '@material/ripple';
+import { computed } from '@ember/object';
+import { dasherize } from '@ember/string';
+
+const { MDCRipple } = mdc.ripple;
 
 export default LinkComponent.extend ({
-  classNames: ['mdc-icon-button', 'material-icons'],
+  classNames: ['mdc-icon-button'],
+  classNameBindings: ['iconClassName'],
+
+  iconClassName: computed ('style', 'iconClass', function () {
+    if (isPresent (this.iconClass)) {
+      return this.iconClass;
+    }
+    else if (isPresent (this.style)) {
+      return `material-icons-${dasherize (this.style)}`;
+    }
+    else {
+      return 'material-icons';
+    }
+  }),
 
   _iconButtonRipple: null,
 
