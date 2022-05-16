@@ -2,12 +2,8 @@ import Component from '@glimmer/component';
 
 import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
-import { assert } from '@ember/debug';
 
 import Listener from './-internal/listener';
-
-
-const { MDCComponent } = mdc.base;
 
 /**
  * The MaterialComponent class is the base class for all material design components
