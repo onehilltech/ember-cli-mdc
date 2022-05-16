@@ -6,7 +6,17 @@ ember-cli addon for [`@material/typography`](https://github.com/material-compone
 Installation
 ------------
 
+<<<<<<< HEAD
     ember install ember-cli-mdc-typography
+=======
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+
+>>>>>>> 003d986e (v3.18.0...v3.28.5)
 
 Components & Modifiers
 -----------------------
