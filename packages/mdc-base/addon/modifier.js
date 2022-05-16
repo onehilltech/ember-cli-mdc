@@ -15,20 +15,20 @@ export default class MaterialModifier extends Modifier {
   /// The current state of the modifier.
   _currentState;
 
-  constructor () {
-    super (...arguments);
+  constructor() {
+    super(...arguments);
 
     // Create the initial state for the modifier, and change to it.
-    let initialState = this.createInitialState ();
-    this.changeState (initialState);
+    let initialState = this.createInitialState();
+    this.changeState(initialState);
   }
 
   /**
    * Create the initial state for the modifier. An initial state is provide is the subclass
    * does not provide one.
    */
-  createInitialState () {
-    return new NotInstalled ();
+  createInitialState() {
+    return new NotInstalled();
   }
 
   /**
@@ -37,55 +37,58 @@ export default class MaterialModifier extends Modifier {
    *
    * @param state
    */
-  changeState (state) {
-    assert ('The state must be an instance of ModifierState', state instanceof ModifierState);
+  changeState(state) {
+    assert(
+      'The state must be an instance of ModifierState',
+      state instanceof ModifierState
+    );
 
-    if (!!this._currentState) {
+    if (this._currentState) {
       // Notify the current state we are exiting.
-      this._currentState.willExitState ();
+      this._currentState.willExitState();
       this._currentState.modifier = null;
     }
 
     // Update the current state.
     this._currentState = state;
 
-    if (!!this._currentState) {
+    if (this._currentState) {
       // Notify the new state we have entered.
       this._currentState.modifier = this;
-      this._currentState.didEnterState ();
+      this._currentState.didEnterState();
     }
   }
 
   /**
    * The modifier has been installed in an element.
    */
-  didInstall () {
-    this._currentState.didInstall ();
+  didInstall() {
+    this._currentState.didInstall();
   }
 
   /**
    * The modifier has received new arguments.
    */
-  didReceiveArguments () {
-    this._currentState.didReceiveArguments ();
+  didReceiveArguments() {
+    this._currentState.didReceiveArguments();
   }
 
-  didUpdateArguments () {
-    this._currentState.didUpdateArguments ();
+  didUpdateArguments() {
+    this._currentState.didUpdateArguments();
   }
 
   /**
    * The modifier will be removed from the element.
    */
-  willRemove () {
-    this._currentState.willRemove ();
+  willRemove() {
+    this._currentState.willRemove();
   }
 
   /**
    * The modifier will be destroyed.
    */
-  willDestroy () {
-    this._currentState.willDestroy ();
+  willDestroy() {
+    this._currentState.willDestroy();
   }
 }
 
@@ -103,7 +106,7 @@ class ModifierState {
    *
    * @returns {*}
    */
-  get element () {
+  get element() {
     return this.modifier.element;
   }
 
@@ -112,7 +115,7 @@ class ModifierState {
    *
    * @returns {*}
    */
-  get args () {
+  get args() {
     return this.modifier.args;
   }
 
@@ -121,63 +124,49 @@ class ModifierState {
    *
    * @param state
    */
-  changeState (state) {
-    this.modifier.changeState (state);
+  changeState(state) {
+    this.modifier.changeState(state);
   }
 
   /**
    * The modifier has been installed on an element.
    */
-  didInstall () {
-
-  }
+  didInstall() {}
 
   /**
    * The modifier state has been entered.
    */
-  didEnterState () {
-
-  }
+  didEnterState() {}
 
   /**
    * The modifier state has been exited.
    */
-  willExitState () {
-
-  }
+  willExitState() {}
 
   /**
    * The modifier has received new arguments.
    */
-  didReceiveArguments () {
-
-  }
+  didReceiveArguments() {}
 
   /**
    * The modifier updated its arguments.
    */
-  didUpdateArguments () {
-
-  }
+  didUpdateArguments() {}
 
   /**
    * The modifier is being removed from the element.
    */
-  willRemove () {
-
-  }
+  willRemove() {}
 
   /**
    * The modifier will be destroyed.
    */
-  willDestroy () {
-
-  }
+  willDestroy() {}
 }
 
 /**
  * The default initial state for the modifier if one is not provided.
  */
-class NotInstalled extends ModifierState { }
+class NotInstalled extends ModifierState {}
 
 export { ModifierState };

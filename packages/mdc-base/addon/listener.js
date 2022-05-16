@@ -6,11 +6,14 @@ import MaterialComponent from './component';
  * are transformed into callback methods on the component class. To observe an event, just
  * overload the appropriate event method on the component.
  */
-export default function registerListener (eventName) {
+export default function registerListener(eventName) {
   return function (target, key, desc) {
-    assert ('The target must be an instance of MaterialComponent', (target instanceof MaterialComponent));
-    target._registerMdcEventListener (eventName, desc.value);
+    assert(
+      'The target must be an instance of MaterialComponent',
+      target instanceof MaterialComponent
+    );
+    target._registerMdcEventListener(eventName, desc.value);
 
     return desc;
-  }
+  };
 }
