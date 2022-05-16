@@ -4,7 +4,6 @@
 const SassPlugin = require ('./lib/sass/plugin');
 
 module.exports = {
-<<<<<<< HEAD
   name:  require ('./package.json').name,
 
   included (app) {
@@ -28,9 +27,6 @@ module.exports = {
 
     registry.add ('css', new SassPlugin ({context: this}));
   }
-=======
-  name: require('./package').name,
->>>>>>> 75a70a66 (v3.3.0...v3.28.5)
 };
 
 
