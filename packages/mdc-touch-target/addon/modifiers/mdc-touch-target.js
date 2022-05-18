@@ -33,6 +33,11 @@ export default class MdcTouchTargetModifier extends Modifier {
     }
   }
 
+  /**
+   * Get the material component type.
+   *
+   * @return {string|null}
+   */
   get type () {
     let classList = this.element.classList;
 
@@ -44,6 +49,8 @@ export default class MdcTouchTargetModifier extends Modifier {
         return found[1];
       }
     }
+
+    return null;
   }
 }
 
