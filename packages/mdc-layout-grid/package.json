@@ -32,7 +32,7 @@
     "test:g": "ember g ember-cli-mdc-layout-grid"
   },
   "dependencies": {
-    "@material/layout-grid": "^9.0.0",
+    "@material/layout-grid": "^14.0.0",
     "ember-cli-babel": "^7.19.0",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
