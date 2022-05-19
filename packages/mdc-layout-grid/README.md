@@ -1,7 +1,16 @@
 ember-cli-mdc-layout-grid
-======================
+==============================================================================
 
 ember-cli addon for [`@material/layout-grid`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid).
+
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+
 
 Installation
 ------------
