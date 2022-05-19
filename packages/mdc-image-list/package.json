@@ -25,7 +25,7 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "@material/image-list": "^9.0.0",
+    "@material/image-list": "^14.0.0",
     "ember-cli-babel": "^7.17.2",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.2.2",
@@ -64,7 +64,7 @@
     "eslint-plugin-node": "^11.0.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^1.0.0",
-    "sass": "^1.30.0"
+    "sass": "^1.51.0"
   },
   "engines": {
     "node": "10.* || >= 12"
