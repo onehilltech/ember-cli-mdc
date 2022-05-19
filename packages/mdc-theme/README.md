@@ -1,7 +1,16 @@
 ember-cli-mdc-theme
-======================
+==============================================================================
 
 ember-cli addon for [`@material/theme`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme).
+
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+
 
 Installation
 ------------
