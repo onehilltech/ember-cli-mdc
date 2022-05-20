@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-dom",
-  "version": "3.0.0-alpha.20",
+  "version": "3.0.0-alpha.21",
   "description": "ember-cli addon for @material/dom",
   "keywords": [
     "ember-addon",
@@ -39,7 +39,7 @@
     "ember-cli-babel": "^7.26.10",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^5.7.2",
-    "ember-cli-mdc-utils": "^3.0.0-alpha.20"
+    "ember-cli-mdc-utils": "^3.0.0-alpha.21"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",

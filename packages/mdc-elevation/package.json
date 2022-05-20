@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-elevation",
-  "version": "3.0.0-alpha.20",
+  "version": "3.0.0-alpha.21",
   "description": "ember-cli addon for @material/elevation",
   "keywords": [
     "ember-addon",
@@ -34,8 +34,8 @@
     "ember-cli-babel": "^7.19.0",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^4.3.1",
-    "ember-cli-mdc-sass": "^3.0.0-alpha.20",
-    "ember-cli-mdc-utils": "^3.0.0-alpha.20"
+    "ember-cli-mdc-sass": "^3.0.0-alpha.21",
+    "ember-cli-mdc-utils": "^3.0.0-alpha.21"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
@@ -52,9 +52,9 @@
     "ember-cli-custom-properties": "^2.0.2",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-inject-live-reload": "^2.0.2",
-    "ember-cli-mdc-animation": "^3.0.0-alpha.20",
-    "ember-cli-mdc-base": "^3.0.0-alpha.20",
-    "ember-cli-mdc-theme": "^3.0.0-alpha.20",
+    "ember-cli-mdc-animation": "^3.0.0-alpha.21",
+    "ember-cli-mdc-base": "^3.0.0-alpha.21",
+    "ember-cli-mdc-theme": "^3.0.0-alpha.21",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
