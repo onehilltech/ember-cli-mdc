@@ -5,7 +5,7 @@
   {{if this.sorted "mdc-data-table__header-cell--sorted"}}"
     role="columnheader"
     scope="col" ...attributes
-    {{did-insert this.didInsert}}>
+  {{did-insert this.didInsert}}>
   {{#if this.sortable}}
     <span class="mdc-data-table__header-cell__container">
       {{#if @checkbox}}
@@ -19,15 +19,14 @@
           </div>
         </div>
       {{else if @label}}
+        <MdcIconButton @icon={{if this.ascending "arrow_upward" "arrow_downward"}} {{on "click" this.sortBy}} />
         {{@label}}
       {{/if}}
 
       {{#if (has-block)}}
+        <MdcIconButton @icon={{if this.ascending "arrow_upward" "arrow_downward"}} {{on "click" this.sortBy}} />
         {{yield}}
       {{/if}}
-
-      <MdcIconButton @icon={{if this.ascending "arrow_drop_up" "arrow_drop_down"}} {{on "click" this.sortBy}} />
-
     </span>
   {{else}}
     {{#if @checkbox}}
