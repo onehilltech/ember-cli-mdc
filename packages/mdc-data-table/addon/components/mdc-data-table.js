@@ -227,6 +227,9 @@ export default class MdcDataTableComponent extends Component {
 
   rowsById;
 
+  @tracked
+  stale;
+
   get selected () {
     return this.args.selected || A ();
   }
@@ -298,10 +301,23 @@ export default class MdcDataTableComponent extends Component {
 
   layout () {
     this.component.layout ();
+    this.stale = this.rows.length !== this.component.getRows ().length;
+
+    return this.stale;
   }
 
   @action
   updateSelections () {
+    const rows = this.component.getRows ();
+
+    if (isEmpty (rows)) {
+      return;
+    }
+
+    if (this.stale && !this.layout ()) {
+      return;
+    }
+
     const ids = this.selected.map (item => this.idForItem (item));
     this.component.setSelectedRowIds (ids);
   }
