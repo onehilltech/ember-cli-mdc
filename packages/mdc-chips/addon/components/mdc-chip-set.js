@@ -3,7 +3,7 @@
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 import { action, get } from '@ember/object';
-import { isPresent } from '@ember/utils';
+import { isPresent, isNone } from '@ember/utils';
 import { dasherize } from '@ember/string';
 
 import { MDCChipSet } from '@material/chips';
@@ -16,15 +16,13 @@ export default class MdcChipSetComponent extends Component {
   }
 
   doInitComponent (component) {
-    if (isPresent (this.args.chips)) {
-      // The user has provided a list of chips. This means that we are managing the
-      // chip collection. We are going to prevent the chipset from removing the chip
-      // with the trailing icon is clicked.
+    component.chips.forEach ((chip) => {
+      chip.shouldRemoveOnTrailingIconClick = this.isManagedChip (chip) || isNone (chip.root_.dataset.permanent);
+    });
+  }
 
-      component.chips.forEach ((chip) => {
-        chip.shouldRemoveOnTrailingIconClick = false;
-      });
-    }
+  isManagedChip (chip) {
+    this.chips.find (managed => this.getChipId (managed) === chip.id);
   }
 
   @listener ('MDCChip:interaction')

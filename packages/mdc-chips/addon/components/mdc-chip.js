@@ -10,6 +10,15 @@ export default class MdcChipComponent extends Component {
     this._chipElement = element;
   }
 
+  doInitComponent (component) {
+    component.shouldRemoveOnTrailingIconClick = this.removeOnTrailingIconClick;
+  }
+
+  get permanent () {
+    const { permanent = false } = this.args;
+    return permanent;
+  }
+
   get element () {
     return this._chipElement;
   }

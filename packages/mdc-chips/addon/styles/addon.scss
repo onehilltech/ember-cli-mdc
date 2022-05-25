@@ -2,6 +2,8 @@
 @import "@material/chips/mdc-chips";
 
 .mdc-chip-set {
+  position: relative;
+
   &__input {
     width: 150px;
     flex-grow: 1;
