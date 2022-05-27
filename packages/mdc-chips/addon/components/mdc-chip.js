@@ -31,4 +31,9 @@ export default class MdcChipComponent extends Component {
   remove () {
     (this.args.remove || noOp)(this);
   }
+
+  get interactive () {
+    const { interactive = true } = this.args;
+    return interactive;
+  }
 }

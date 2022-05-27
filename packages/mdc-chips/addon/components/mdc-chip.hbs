@@ -1,8 +1,11 @@
-<div class="mdc-chip" {{did-insert this.didInsert}} ...attributes
+<div class="mdc-chip {{unless this.interactive "mdc-chip--non-interactive"}}" {{did-insert this.didInsert}} ...attributes
      id={{@id}}
      role="row"
      data-permanent={{@permanent}}>
-  <div class="mdc-chip__ripple"></div>
+  {{#if this.interactive}}
+    <div class="mdc-chip__ripple"></div>
+  {{/if}}
+
   {{#if @leadingIcon}}
     <MdcIcon class="mdc-chip__icon mdc-chip__icon--leading" @icon={{@leadingIcon}} />
   {{/if}}

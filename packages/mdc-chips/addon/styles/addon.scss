@@ -1,6 +1,12 @@
 @import "app-theme";
 @import "@material/chips/mdc-chips";
 
+.mdc-chip {
+  &--non-interactive {
+    cursor: default !important;
+  }
+}
+
 .mdc-chip-set {
   position: relative;
 
