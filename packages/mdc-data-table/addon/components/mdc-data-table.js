@@ -312,6 +312,8 @@ export default class MdcDataTableComponent extends Component {
     if (this.stale) {
       next (this, 'performLayoutUpdate');
     }
+
+    return this.stale;
   }
 
   @action
@@ -323,7 +325,7 @@ export default class MdcDataTableComponent extends Component {
         return;
       }
 
-      if (this.stale && !this.layout ()) {
+      if (this.stale && !this.performLayoutUpdate ()) {
         return;
       }
 

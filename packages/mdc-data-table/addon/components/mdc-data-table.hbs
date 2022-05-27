@@ -8,6 +8,8 @@
       <MdcDataTableHeaderRow @headers={{@headers}} @selectable={{@selectable}} />
     {{/if}}
 
+    <MdcLinearProgress @indeterminate="true" />
+
     {{#if (has-block)}}
       {{yield this.rows this.pagination}}
     {{else}}
