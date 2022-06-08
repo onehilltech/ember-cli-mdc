@@ -48,7 +48,7 @@
           <MdcListItemText>{{@firstOption.text}}</MdcListItemText>
         </MdcListItem>
       {{/if}}
-      {{#each @this.options as |option|}}
+      {{#each @options as |option|}}
         {{#if option.divider}}
           <MdcListDivider />
         {{else}}
