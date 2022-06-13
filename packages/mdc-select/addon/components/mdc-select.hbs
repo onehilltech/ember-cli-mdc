@@ -52,8 +52,15 @@
         {{#if option.divider}}
           <MdcListDivider />
         {{else}}
-          <MdcListItem @disabled={{get option this.disabledKey}} data-value={{get option this.valueKey}} role="option" class={{option.class}}>
-            <MdcListItemText>{{get option this.textKey}}</MdcListItemText>
+          <MdcListItem
+              @disabled={{get option this.disabledKey}}
+              @selected={{option.selected}}
+              data-value={{get option this.valueKey}}
+              role="option"
+              class="{{option.class}}">
+            {{#if (get option this.textKey)}}
+              <MdcListItemText>{{get option this.textKey}}</MdcListItemText>
+            {{/if}}
           </MdcListItem>
         {{/if}}
       {{/each}}
