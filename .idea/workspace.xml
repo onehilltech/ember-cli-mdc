@@ -7,9 +7,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-fab.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/styles/addon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/controllers/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/templates/application.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -68,7 +79,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-fab]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -393,7 +404,8 @@
       <workItem from="1651688502920" duration="13056000" />
       <workItem from="1652472083390" duration="8101000" />
       <workItem from="1652662945212" duration="568000" />
-      <workItem from="1653744846962" duration="12371000" />
+      <workItem from="1653744846962" duration="15926000" />
+      <workItem from="1655151147084" duration="2538000" />
     </task>
     <servers />
   </component>

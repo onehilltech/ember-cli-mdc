@@ -1,10 +1,50 @@
+@use "@material/shape" as shape;
+
 @import "@material/fab/mdc-fab";
 
 .mdc-fab {
   &--bottom-right {
     position: fixed;
-    
+
     right: 16px;
     bottom: 16px;
+  }
+}
+
+.mdc-speed-dial {
+  position: fixed;
+
+  right: 16px;
+  bottom: 16px;
+
+  &__fab {
+    height: 56px !important;
+    @include shape.radius(28px);
+  }
+
+  &__actions {
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    bottom: 56px;
+    margin-right: 8px;
+
+    .mdc-fab {
+      margin-bottom: 24px;
+
+      position: relative;
+      bottom: unset;
+      right: unset;
+    }
+  }
+
+  &--expanded {
+    .mdc-speed-dial {
+      &__fab {
+        @include mdc-fab-container-color(#000);
+      }
+    }
   }
 }
