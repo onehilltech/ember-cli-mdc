@@ -15,7 +15,7 @@ export default class MdcSpeedDialComponent extends Component {
   }
 
   @action
-  unexpand (ev) {
+  close (ev) {
     const fab = closest (ev.target, '.mdc-speed-dial__action > .mdc-fab');
 
     if (isPresent (fab)) {
