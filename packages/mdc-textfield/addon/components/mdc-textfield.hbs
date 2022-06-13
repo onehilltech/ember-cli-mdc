@@ -31,8 +31,10 @@
                      disabled={{@disabled}}
     {{did-update this.setCustomErrorMessage @errorMessage}}
     {{on "input" this.input}}
-    {{on "blur" this.validate}}
-    {{on "focus" this.focus}} />
+    {{on "invalid" this.invalid}}
+    {{on "focus" this.focus}}
+    {{on "blur" this.blur}}
+  />
 
   {{#if @suffix}}
     <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>

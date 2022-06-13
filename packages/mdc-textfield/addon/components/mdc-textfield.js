@@ -138,16 +138,35 @@ export default class MdcTextfieldComponent extends Component {
     this.validationMessage = null;
   }
 
+  @tracked
+  isFirstInput = true;
+
   @action
-  input (ev) {
-    ev.preventDefault ();
+  input () {
+    this.isFirstInput = false;
   }
 
   @action
-  validate (ev) {
-    let { target } = ev;
+  blur (ev) {
+    this.validate (ev.target);
+  }
 
-    if (!target.validity.valid) {
+  @action
+  invalid (ev) {
+    ev.preventDefault ();
+
+    if (!this.isFirstInput) {
+      this.validate (ev.target);
+    }
+  }
+
+  /**
+   * Validate the HTML input element.
+   *
+   * @param ev
+   */
+  validate (input) {
+    if (!input.validity.valid) {
       let { validationMessages } = this.args;
 
       if (isPresent (validationMessages)) {
@@ -156,17 +175,17 @@ export default class MdcTextfieldComponent extends Component {
 
         for (let i = 0, len = VALIDATION_ERROR_TYPE.length; i < len; ++i) {
           const reason = VALIDATION_ERROR_TYPE[i];
-          const failed = target.validity[reason];
+          const failed = input.validity[reason];
 
           if (failed) {
-            this.validationMessage = validationMessages[reason] || target.validationMessage;
+            this.validationMessage = validationMessages[reason] || input.validationMessage;
             break;
           }
         }
       }
       else {
         // Set the default validation message.
-        this.validationMessage = target.validationMessage;
+        this.validationMessage = input.validationMessage;
       }
     }
   }
