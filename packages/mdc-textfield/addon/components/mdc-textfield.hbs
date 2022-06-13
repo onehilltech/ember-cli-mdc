@@ -69,7 +69,9 @@
 {{#unless @noHelperLine}}
   <div class="mdc-text-field-helper-line">
     {{#if this.helperText}}
-      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
+      <div class="mdc-text-field-helper-text
+        {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}}
+        {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
            id={{this.helperId}}
            aria-hidden="true">{{this.helperText}}</div>
     {{/if}}
