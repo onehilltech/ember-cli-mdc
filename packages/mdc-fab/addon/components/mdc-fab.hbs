@@ -1,4 +1,7 @@
-<button class="mdc-fab {{if @label "mdc-fab--extended"}} {{if @exited "mdc-fab--exited"}} {{if @mini "mdc-fab--mini"}}" aria-label={{@label}} ...attributes>
+<button
+    class="mdc-fab {{if @label "mdc-fab--extended"}} {{if @exited "mdc-fab--exited"}} {{if @mini "mdc-fab--mini"}} {{this.positionClassName}}"
+    aria-label={{@label}}
+    ...attributes>
   <div class="mdc-fab__ripple"></div>
   <MdcIcon @icon={{@icon}} class="mdc-fab__icon" />
 
