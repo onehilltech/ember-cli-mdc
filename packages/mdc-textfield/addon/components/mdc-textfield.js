@@ -126,12 +126,21 @@ export default class MdcTextfieldComponent extends Component {
     return this.args.trailingIconClick || noOp;
   }
 
+  get isValidationMessage () {
+    return this.validationMessage || this.args.errorMessage;
+  }
+
   @tracked
   validationMessage;
 
   @action
   focus () {
     this.validationMessage = null;
+  }
+
+  @action
+  input (ev) {
+    ev.preventDefault ();
   }
 
   @action
@@ -160,5 +169,11 @@ export default class MdcTextfieldComponent extends Component {
         this.validationMessage = target.validationMessage;
       }
     }
+  }
+
+  @action
+  setCustomErrorMessage (input, [errorMessage]) {
+    input.setCustomValidity (isPresent (errorMessage) ? errorMessage : '');
+    input.reportValidity ();
   }
 }

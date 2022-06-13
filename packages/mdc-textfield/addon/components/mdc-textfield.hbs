@@ -29,8 +29,10 @@
                      aria-controls={{this.helperId}}
                      aria-describedby={{this.helperId}}
                      disabled={{@disabled}}
-                    {{on "blur" this.validate}}
-                    {{on "focus" this.focus}} />
+    {{did-update this.setCustomErrorMessage @errorMessage}}
+    {{on "input" this.input}}
+    {{on "blur" this.validate}}
+    {{on "focus" this.focus}} />
 
   {{#if @suffix}}
     <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>
@@ -65,7 +67,7 @@
 {{#unless @noHelperLine}}
   <div class="mdc-text-field-helper-line">
     {{#if this.helperText}}
-      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
+      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
            id={{this.helperId}}
            aria-hidden="true">{{this.helperText}}</div>
     {{/if}}
