@@ -1,4 +1,8 @@
 <div class="mdc-radio-buttons" {{on "change" this.changed}} ...attributes>
+  {{#if @label}}
+    <span class="mdc-radio-buttons__label">{{@label}}</span>
+  {{/if}}
+
   {{#if (has-block)}}
     {{yield (hash name=@name)}}
   {{else}}
