@@ -104,18 +104,12 @@ export default class MdcTextfieldComponent extends Component {
   }
 
   get helperLine () {
-    let { characterCount = false } = this.args;
+    const { characterCount = false } = this.args;
     return isPresent (this.helperText) || characterCount;
   }
 
   get helperText () {
-    let { errorMessage, helperText } = this.args;
-    return errorMessage || this.validationMessage || helperText;
-  }
-
-  get persistentHelperText () {
-    let { persistentHelperText, errorMessage } = this.args;
-    return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
+    return this.args.errorMessage || this.validationMessage || this.args.helperText;
   }
 
   get leadingIconClick () {
@@ -127,7 +121,11 @@ export default class MdcTextfieldComponent extends Component {
   }
 
   get isValidationMessage () {
-    return this.validationMessage || this.args.errorMessage;
+    return isPresent (this.validationMessage) || isPresent (this.args.errorMessage);
+  }
+
+  get isPersistentHelperText () {
+    return this.isValidationMessage || isPresent (this.args.persistentHelperText);
   }
 
   @tracked
