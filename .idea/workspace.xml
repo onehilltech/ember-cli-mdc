@@ -7,7 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tab-panel.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tab-panel.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +78,24 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.[ember-cli-mdc-fab]: dummy application">
+    <configuration default="true" type="EMBER_SERVE_CONFIGURATION" factoryName="Ember Serve">
+      <option name="PORT" value="" />
+      <option name="HOST" value="" />
+      <option name="ENVIRONMENT" value="development" />
+      <option name="OUTPUT_PATH" value="" />
+      <option name="WATCHER" value="" />
+      <option name="PROXY" value="" />
+      <option name="PROXY_SECURE" value="true" />
+      <option name="PROXY_TRANSPARENT" value="true" />
+      <option name="LIVE_RELOAD" value="true" />
+      <option name="LIVE_RELOAD_HOST" value="" />
+      <option name="LIVE_RELOAD_BASE_URL" value="" />
+      <option name="LIVE_RELOAD_PORT" value="" />
+      <option name="SSL" value="false" />
+      <option name="SSL_KEY" value="" />
+      <option name="SSL_CERT" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -401,7 +422,9 @@
       <workItem from="1652662945212" duration="568000" />
       <workItem from="1653744846962" duration="15926000" />
       <workItem from="1655151147084" duration="10148000" />
-      <workItem from="1656463612392" duration="188000" />
+      <workItem from="1656463612392" duration="1153000" />
+      <workItem from="1656509568162" duration="2113000" />
+      <workItem from="1656598157535" duration="634000" />
     </task>
     <servers />
   </component>

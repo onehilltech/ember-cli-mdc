@@ -1,8 +1,6 @@
-<div class="mdc-radio-buttons" {{on "change" this.changed}} ...attributes>
-  {{#if @label}}
-    <span class="mdc-radio-buttons__label">{{@label}}</span>
-  {{/if}}
-
+<div class="mdc-radio-buttons" {{on "change" this.changed}} ...attributes
+  {{did-insert this.didInsert}}
+  {{did-update this.update}}>
   {{#if (has-block)}}
     {{yield (hash name=@name)}}
   {{else}}
@@ -17,4 +15,3 @@
     {{/each}}
   {{/if}}
 </div>
-
