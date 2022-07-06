@@ -7,9 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/tests/dummy/app/templates/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -424,7 +421,7 @@
       <workItem from="1655151147084" duration="10148000" />
       <workItem from="1656463612392" duration="1153000" />
       <workItem from="1656509568162" duration="2113000" />
-      <workItem from="1656598157535" duration="634000" />
+      <workItem from="1656598157535" duration="2532000" />
     </task>
     <servers />
   </component>
