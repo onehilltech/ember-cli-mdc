@@ -6,8 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial-action.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial-action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/app/components/mdc-speed-dial-action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-speed-dial-action-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-buttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/styles/addon.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +32,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components/mdc-bottom-navigation.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-dropdown-menu.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/packages/mdc-base/addon/component.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components/mdc-bottom-navigation.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/styles/addon.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-base/addon/component.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
@@ -421,7 +427,11 @@
       <workItem from="1655151147084" duration="10148000" />
       <workItem from="1656463612392" duration="1153000" />
       <workItem from="1656509568162" duration="2113000" />
-      <workItem from="1656598157535" duration="2532000" />
+      <workItem from="1656598157535" duration="3533000" />
+      <workItem from="1657543171412" duration="369000" />
+      <workItem from="1657592163477" duration="1802000" />
+      <workItem from="1658076050946" duration="18000" />
+      <workItem from="1658076591814" duration="503000" />
     </task>
     <servers />
   </component>
