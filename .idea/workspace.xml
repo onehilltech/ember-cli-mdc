@@ -6,14 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial-action.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial-action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/app/components/mdc-speed-dial-action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/integration/components/mdc-speed-dial-action-test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/addon/components/mdc-speed-dial.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -431,7 +426,7 @@
       <workItem from="1657543171412" duration="369000" />
       <workItem from="1657592163477" duration="1802000" />
       <workItem from="1658076050946" duration="18000" />
-      <workItem from="1658076591814" duration="503000" />
+      <workItem from="1658076591814" duration="1259000" />
     </task>
     <servers />
   </component>
