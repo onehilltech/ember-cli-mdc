@@ -7,7 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigation-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar-navigation-icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-fab]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon]: dummy application">
     <configuration default="true" type="EMBER_SERVE_CONFIGURATION" factoryName="Ember Serve">
       <option name="PORT" value="" />
       <option name="HOST" value="" />
@@ -144,7 +145,7 @@
     <configuration name="[ember-cli-mdc-icon-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon-button">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
+    <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-node="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-image-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-image-list">
@@ -434,6 +435,11 @@
       <workItem from="1662256673577" duration="596000" />
       <workItem from="1662424455054" duration="394000" />
       <workItem from="1662566282346" duration="546000" />
+      <workItem from="1662775946183" duration="612000" />
+      <workItem from="1665519497863" duration="690000" />
+      <workItem from="1666640906492" duration="27000" />
+      <workItem from="1666703959683" duration="1007000" />
+      <workItem from="1666923859155" duration="1801000" />
     </task>
     <servers />
   </component>
