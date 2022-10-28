@@ -7,8 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/addon/initializers/mdc-icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/addon/initializers/mdc-icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,7 +440,7 @@
       <workItem from="1666640906492" duration="27000" />
       <workItem from="1666703959683" duration="1007000" />
       <workItem from="1666923859155" duration="1801000" />
-      <workItem from="1666926641433" duration="1075000" />
+      <workItem from="1666926641433" duration="2089000" />
     </task>
     <servers />
   </component>

@@ -8,14 +8,17 @@ module.exports = {
   included (app) {
     this._super (...arguments);
 
-    if (process.env.CORBER) {
+    const { CORBER } = process.env;
+
+    if (CORBER) {
       // Get the configuration for the current environment.
       const config = app.project.config (app.environment);
-      const typography = get (config, 'ember-cli-mdc.typography', {
-        autoLinkFont: true
-      });
+      const { linkFont = false } = get (config, 'ember-cli-mdc.typography', { });
 
-      if (typography.autoLinkFont) {
+      if (!linkFont) {
+        // We are not dynamically loading the fonts. We need to bundle the Roboto fonts
+        // with the application so they are useable.
+
         this.ui.writeLine (`[${config.environment}]: Bundling Roboto fonts with the application.`);
 
         // Import the font stylesheet.
@@ -39,18 +42,32 @@ module.exports = {
   contentFor (type, config) {
     this._super (...arguments);
 
-
     if (type === 'head-footer') {
-      if (!process.env.CORBER) {
-        const typography = get (config, 'ember-cli-mdc.typography', {
-          autoLinkFont: true
-        });
+      const lines = [];
+      const { CORBER } = process.env;
 
-        if (typography.autoLinkFont) {
+      if (!CORBER) {
+        const {
+          dynamicLoad = true,
+          preconnect = true,
+          weights = [300, 400, 500, 700]
+        } = get (config, 'ember-cli-mdc.typography', { });
+
+        if (!dynamicLoad) {
+          // We are not dynamically loading the fonts. We need to directly include the
+          // link tags here so the Roboto fonts are useable in the application.
+
           this.ui.writeLine (`[${config.environment}]: Linking Roboto fonts with the application.`);
-          return '<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />';
+
+          if (preconnect)
+            lines.push ('<link href="https://fonts.googleapis.com" rel="preconnect" />');
+
+          const href = `https://fonts.googleapis.com/css?family=Roboto:${weights.join(',')}`;
+          lines.push (`<link href="${href}" />`);
         }
       }
+
+      return lines;
     }
   },
 
