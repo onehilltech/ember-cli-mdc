@@ -17,7 +17,7 @@ module.exports = {
 
       if (!linkFont) {
         // We are not dynamically loading the fonts. We need to bundle the Roboto fonts
-        // with the application so they are useable.
+        // with the application so they are usable.
 
         this.ui.writeLine (`[${config.environment}]: Bundling Roboto fonts with the application.`);
 
