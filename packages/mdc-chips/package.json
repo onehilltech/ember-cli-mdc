@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-chips",
-  "version": "2.9.11",
+  "version": "2.11.4",
   "description": "ember-cli addon for @material/chips.",
   "keywords": [
     "ember-addon",
@@ -52,7 +52,7 @@
     "ember-cli-mdc-base": "^2.5.2",
     "ember-cli-mdc-checkbox": "^2.6.0",
     "ember-cli-mdc-form-field": "^2.6.0",
-    "ember-cli-mdc-icon": "^2.5.3",
+    "ember-cli-mdc-icon": "^2.11.4",
     "ember-cli-mdc-ripple": "^2.6.0",
     "ember-cli-mdc-rtl": "^2.5.2",
     "ember-cli-mdc-theme": "^2.5.3",
