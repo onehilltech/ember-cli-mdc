@@ -26,18 +26,36 @@ export function initialize(app) {
 function injectIconFont (app) {
   const ENV = app.resolveRegistration ('config:environment');
   const mdc = ENV['ember-cli-mdc'] || {};
-  const icons = mdc.icons || {};
-  const styles = icons.styles || [];
+  const icon = mdc.icon || mdc.icons || {};
+  const { preconnect = true, dynamicLoad = true, styles = [] } = icon;
 
-  const styleLinks = styles.map (style => STYLE_MAP[style]);
-  styleLinks.unshift ('Material+Icons');
+  if (preconnect) {
+    createLink ({ href: 'https://fonts.googleapis.com', rel: 'preconnect' });
+  }
 
+  if (dynamicLoad) {
+    const styleLinks = styles.map (style => STYLE_MAP[style]);
+    styleLinks.unshift ('Material+Icons');
+    const href = `https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}`;
+
+    createLink ({ href, rel: 'stylesheet' });
+  }
+}
+
+/**
+ * Helper function for adding link tags to the html file.
+ *
+ * @param options
+ */
+function createLink (options) {
   const link = document.createElement ('link');
-  link.href = `https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}`;
-  link.rel = 'stylesheet';
+  link.href = options.href;
+
+  if (options.rel) {
+    link.rel = options.rel;
+  }
 
   document.head.appendChild (link);
-
 }
 
 export default {
