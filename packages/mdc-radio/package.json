@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-radio",
-  "version": "2.10.6",
+  "version": "2.11.6",
   "description": "ember-cli addon for @material/radio.",
   "keywords": [
     "ember-addon",
@@ -51,11 +51,11 @@
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-mdc-animation": "^2.5.3",
     "ember-cli-mdc-base": "^2.5.2",
-    "ember-cli-mdc-form-field": "^2.6.0",
+    "ember-cli-mdc-form-field": "^2.11.6",
     "ember-cli-mdc-ripple": "^2.6.0",
     "ember-cli-mdc-rtl": "^2.5.2",
     "ember-cli-mdc-theme": "^2.5.3",
-    "ember-cli-mdc-typography": "^2.5.3",
+    "ember-cli-mdc-typography": "^2.11.6",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
