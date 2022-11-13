@@ -17,8 +17,14 @@ export default class IndexController extends Controller {
   @equal ('open', 'scrollable')
   showScrollableDialog;
 
+  @equal ('open', 'custom')
+  showCustomDialog;
+
   @equal ('open', 'stacked')
   showStackedButtonDialog;
+
+  @equal ('open', 'custom')
+  showCustomDialog;
 
   @action
   accept () {

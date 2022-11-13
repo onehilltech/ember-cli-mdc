@@ -6,38 +6,8 @@
          role="alertdialog"
          aria-modal="true"
         {{did-insert this.prepareDialogSurface}}>
-      {{#if @title}}
-        <h2 class="mdc-dialog__title">{{@title}}</h2>
-      {{/if}}
 
-      <div class="mdc-dialog__content">
-        {{yield}}
-      </div>
-
-      {{#if this.hasActions}}
-        <div class="mdc-dialog__actions">
-          {{#if @negativeButton}}
-            <MdcDialogButton type="button"
-                             @label={{@negativeButton.label}}
-                             @style={{@negativeButton.style}}
-                             disabled={{@negativeButton.disabled}}
-                             data-mdc-dialog-action={{this.negativeButtonAction}}
-                             data-mdc-dialog-button-default={{@negativeButton.default}}
-                             data-mdc-dialog-initial-focus={{@negativeButton.focus}} />
-          {{/if}}
-
-          {{#if @positiveButton}}
-            <MdcDialogButton type="button"
-                             @label={{@positiveButton.label}}
-                             @style={{@positiveButton.style}}
-                             disabled={{@positiveButton.disabled}}
-                             data-mdc-dialog-action={{this.positiveButtonAction}}
-                             data-mdc-dialog-button-default={{@positiveButton.default}}
-                             data-mdc-dialog-initial-focus={{@positiveButton.focus}} />
-          {{/if}}
-
-        </div>
-      {{/if}}
+      {{yield}}
     </div>
   </div>
   <div class="mdc-dialog__scrim"></div>
