@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-textfield",
-  "version": "2.11.6",
+  "version": "2.11.7",
   "description": "ember-cli addon for @material/textfield",
   "keywords": [
     "ember-addon",
