@@ -7,7 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tab-panel.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tab-panel.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,14 +29,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-dropdown-menu.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LICENSE" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/components/mdc-bottom-navigation.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/styles/addon.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-typography/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-menu-item-link-to.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-base/addon/component.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
@@ -74,7 +79,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tabs]: dummy application">
     <configuration default="true" type="EMBER_SERVE_CONFIGURATION" factoryName="Ember Serve">
       <option name="PORT" value="" />
       <option name="HOST" value="" />
@@ -440,7 +445,7 @@
       <workItem from="1666703959683" duration="1007000" />
       <workItem from="1666923859155" duration="1801000" />
       <workItem from="1666926641433" duration="2188000" />
-      <workItem from="1668659407724" duration="20000" />
+      <workItem from="1668659407724" duration="3857000" />
     </task>
     <servers />
   </component>
