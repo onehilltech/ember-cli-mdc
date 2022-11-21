@@ -4,6 +4,8 @@
 
     {{#if @leadingIcon}}
       <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
+    {{else if @leadingImage}}
+      <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
     {{/if}}
 
     {{#if (has-block)}}
@@ -14,6 +16,8 @@
 
     {{#if @trailingIcon}}
       <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
+    {{else if @trailingImage}}
+      <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
     {{/if}}
   </a>
 {{else}}
