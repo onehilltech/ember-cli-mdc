@@ -8,7 +8,9 @@ export default class MdcDropdownMenuComponent extends Component {
   open;
 
   @action
-  openMenu () {
+  openMenu (ev) {
+    ev.stopPropagation ();
+
     this.open = true;
   }
 
