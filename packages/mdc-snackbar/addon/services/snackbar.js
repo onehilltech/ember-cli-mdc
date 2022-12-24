@@ -5,6 +5,7 @@ import { guidFor } from '@ember/object/internals';
 
 import { action } from '@ember/object';
 import { assert } from '@ember/debug';
+import { isString } from 'lodash';
 
 function noOp () { }
 
@@ -42,6 +43,10 @@ export default class SnackbarService extends Service {
   show (options = {}) {
     // First, clean up everything.
     this._cleanup ();
+
+    if (isString (options)) {
+      options = { message: options };
+    }
 
     // Build the snackbar.
     this._snackbar = this._build (options);
