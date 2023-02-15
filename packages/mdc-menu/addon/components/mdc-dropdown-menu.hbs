@@ -1,6 +1,13 @@
 <span class="mdc-dropdown-menu">
   {{#if @label}}
-    <MdcButton id={{this.menuId}} class={{@iconClassName}} @leadingIcon={{@icon}} @label={{@label}} {{on "click" this.openMenu}} />
+    <MdcButton
+        id={{this.menuId}}
+        class={{@iconClassName}}
+        @label={{@label}}
+        @style={{@style}}
+        @leadingIcon={{@icon}}
+        @trailingIcon={{@trailingIcon}}
+      {{on "click" this.openMenu}} />
   {{else}}
     <MdcIconButton id={{this.menuId}} class={{@iconClassName}} @icon={{this.icon}} {{on "click" this.openMenu}} />
   {{/if}}
