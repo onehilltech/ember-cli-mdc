@@ -8,8 +8,10 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-sass]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-theme]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -199,7 +201,7 @@
     <configuration name="[ember-cli-mdc-text-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-textfield">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
+    <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.17.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
       <method v="2" />
     </configuration>
     <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
@@ -208,7 +210,7 @@
     <configuration name="[ember-cli-mdc-touch-target]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-touch-target">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
+    <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.17.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
       <method v="2" />
     </configuration>
     <list>
@@ -337,7 +339,7 @@
       <workItem from="1678977441202" duration="598000" />
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
-      <workItem from="1679023932382" duration="7225000" />
+      <workItem from="1679023932382" duration="14084000" />
     </task>
     <servers />
   </component>
