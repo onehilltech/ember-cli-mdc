@@ -33,12 +33,12 @@
     "test:g": "ember g ember-cli-mdc-sass"
   },
   "dependencies": {
+    "ember-auto-import": "^1.12.0",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.1",
     "ember-cli-babel": "^7.26.10",
-    "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^5.7.2",
-    "ember-cli-mdc-utils": "^3.0.0-alpha.21"
+    "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -76,7 +76,7 @@
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^1.6.0",
-    "sass": "^1.32.4"
+    "sass": "^1.59.3"
   },
   "engines": {
     "node": "12.* || 14.* || >= 16"
