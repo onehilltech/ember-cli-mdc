@@ -11,7 +11,13 @@ Installation
 Components
 -----------
 
+<<<<<<< HEAD
 This package contains the following top-level components.
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> 3469e329 (v3.18.0...v3.28.6)
 
 * [`<MdcChipSet>`](#MdcChipSet)
 * [`<MdcChoiceChipSet>`](#MdcChoiceChipSet)
