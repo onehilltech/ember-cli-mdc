@@ -1,5 +1,19 @@
 ember-cli-mdc-ripple
+<<<<<<< HEAD
 ======================
+=======
+==============================================================================
+
+[Short description of the addon.]
+
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> b39b603c (v3.18.0...v3.28.6)
 
 ember-cli addon for [`@material/ripple`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple).
 
