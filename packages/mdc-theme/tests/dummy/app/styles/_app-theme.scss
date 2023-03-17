@@ -1,6 +1,8 @@
-@import "@material/theme/color-palette";
+@use "@material/theme/color-palette" as color;
 
-$mdc-theme-primary: $material-color-grey-500;
-$mdc-theme-secondary: $material-color-green-500;
-$mdc-theme-on-primary: #442b2d;
-$mdc-theme-on-secondary: #442b2d;
+@use "@material/theme" with (
+  $primary: color.$red-500,
+  $secondary: color.$orange-500,
+  $on-primary: #442b2d,
+  $on-secondary: #442b2d,
+);

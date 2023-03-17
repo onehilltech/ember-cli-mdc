@@ -6,12 +6,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/addon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-button/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/config/environment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -63,13 +72,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
-      <recent name="$PROJECT_DIR$/packages/mdc-card/addon/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-theme/node_modules/@material/theme" />
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
@@ -339,7 +349,7 @@
       <workItem from="1678977441202" duration="598000" />
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
-      <workItem from="1679023932382" duration="14084000" />
+      <workItem from="1679023932382" duration="18188000" />
     </task>
     <servers />
   </component>
@@ -395,6 +405,18 @@
           <url>file://$PROJECT_DIR$/packages/mdc-animation/blueprints/ember-cli-mdc-animation/index.js</url>
           <line>6</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/ember-cli-mdc-sass/lib/sass/plugin.js</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/ember-cli-mdc-sass/lib/sass/compiler.js</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
