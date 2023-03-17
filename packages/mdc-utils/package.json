@@ -10,7 +10,7 @@
   "author": "James H. Hill <james@onehilltech.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "semver": "^7.3.2"
+    "semver": "^7.3.8"
   },
   "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677"
 }
