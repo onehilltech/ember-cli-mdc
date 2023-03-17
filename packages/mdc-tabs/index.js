@@ -2,6 +2,7 @@
 
 module.exports = {
   name: require('./package').name,
+<<<<<<< HEAD
 
   optionsFor (type, options) {
     if (type === 'sass') {
@@ -24,4 +25,6 @@ module.exports = {
 
     return options;
   }
+=======
+>>>>>>> c6135895 (v3.18.0...v3.28.6)
 };
