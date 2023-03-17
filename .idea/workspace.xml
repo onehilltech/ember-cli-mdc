@@ -6,9 +6,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-animation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-animation/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.prettierrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.template-lintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.template-lintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/config/ember-try.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/ember-cli-build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/testem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/ember-cli-update.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/ember-cli-update.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/dummy/config/targets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/tests/test-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/tests/test-helper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,6 +357,7 @@
       <workItem from="1678977441202" duration="598000" />
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
+      <workItem from="1679023932382" duration="425000" />
     </task>
     <servers />
   </component>
