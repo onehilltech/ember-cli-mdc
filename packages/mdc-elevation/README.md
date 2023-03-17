@@ -8,8 +8,14 @@ Installation
 
     ember install ember-cli-mdc-elevation
 
+<<<<<<< HEAD
 Components and Mixins
 -----------------------
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> 3fc4d634 (v3.18.0...v3.28.6)
 
 ### Components
 
