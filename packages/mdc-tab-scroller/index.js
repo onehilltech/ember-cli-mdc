@@ -2,6 +2,7 @@
 
 module.exports = {
   name: require('./package').name,
+<<<<<<< HEAD
 
   included (app) {
     this._super (...arguments);
@@ -31,4 +32,6 @@ module.exports = {
 
     return options;
   }
+=======
+>>>>>>> a4581dac (v3.18.0...v3.28.6)
 };
