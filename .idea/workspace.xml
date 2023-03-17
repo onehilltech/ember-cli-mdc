@@ -5,31 +5,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.prettierrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/ember-cli-update.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.template-lintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.template-lintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/config/ember-try.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/config/ember-try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/ember-cli-build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/testem.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/testem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/targets.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/dummy/config/targets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/test-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-circular-progress/tests/test-helper.js" afterDir="false" />
-    </list>
+    <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -356,7 +332,7 @@
       <workItem from="1678977441202" duration="598000" />
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
-      <workItem from="1679023932382" duration="653000" />
+      <workItem from="1679023932382" duration="2005000" />
     </task>
     <servers />
   </component>
