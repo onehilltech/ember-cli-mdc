@@ -7,10 +7,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
