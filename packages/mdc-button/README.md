@@ -8,8 +8,14 @@ Installation
 
     ember install ember-cli-mdc-button
 
+<<<<<<< HEAD
 Styles
 -------
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> 17f92f71 (v3.18.0...v3.28.6)
 
 ```sass
 @use "@material/button/mixins" as button;
