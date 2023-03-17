@@ -8,8 +8,14 @@ Installation
 
     ember install ember-cli-mdc-icon-button
 
+<<<<<<< HEAD
 Components
 -----------
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> 46b0001b (v3.18.0...v3.28.6)
 
 This package contains the following top-level components.
 
