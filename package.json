@@ -7,8 +7,11 @@
   "workspaces": [
     "packages/*"
   ],
+  "dependencies": {
+    "ember-cli-babel": "^7.26.10",
+    "ember-cli-blueprint-helpers": "^0.4.7"
+  },
   "devDependencies": {
-    "lerna": "^3.4.0",
-    "semver": "^7.3.2"
+
   }
 }
