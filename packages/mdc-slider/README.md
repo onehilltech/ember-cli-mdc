@@ -8,8 +8,14 @@ Installation
 
     ember install ember-cli-mdc-slider
 
+<<<<<<< HEAD
 Components
 -------------
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> b8fdaabb (v3.18.0...v3.28.6)
 
 This package contains the following top-level components.
 
