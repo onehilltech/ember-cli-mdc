@@ -9,6 +9,7 @@ const STYLE_MAP = {
 
 module.exports = {
   name: require('./package').name,
+<<<<<<< HEAD
 
   contentFor (type, config) {
     this._super (...arguments);
@@ -25,4 +26,6 @@ module.exports = {
       return `<link href="https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}" rel="stylesheet" />`;
     }
   }
+=======
+>>>>>>> 3e42f302 (v3.18.0...v3.28.6)
 };
