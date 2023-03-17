@@ -8,8 +8,14 @@ Installation
 
     ember install ember-cli-mdc-menu
 
+<<<<<<< HEAD
 Components and Mixins
 -----------------------
+=======
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+>>>>>>> 3cbb03ce (v3.18.0...v3.28.6)
 
 ### Components
 
