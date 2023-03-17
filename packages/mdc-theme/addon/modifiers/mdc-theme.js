@@ -18,7 +18,7 @@ export default class MdcThemeModifier extends Modifier {
   /**
    * The modifier has received new/updated arguments.
    */
-  didReceiveArguments () {
+  didReceiveArguments() {
     // Get the new property name from the arguments. If the name has changed, then
     // we need to remove the old property before setting the new one.
 
@@ -26,29 +26,28 @@ export default class MdcThemeModifier extends Modifier {
     const value = this.value;
 
     if (this._currentCssPropertyName !== cssPropertyName) {
-      this._removeCssProperty ();
+      this._removeCssProperty();
     }
 
-    if (isPresent (value)) {
-      this.element.style.setProperty (cssPropertyName, value);
-    }
-    else {
-      this.element.style.removeProperty (cssPropertyName);
+    if (isPresent(value)) {
+      this.element.style.setProperty(cssPropertyName, value);
+    } else {
+      this.element.style.removeProperty(cssPropertyName);
     }
 
     this._currentCssPropertyName = cssPropertyName;
   }
 
-  willRemove () {
-    this._removeCssProperty ();
+  willRemove() {
+    this._removeCssProperty();
   }
 
-  get value () {
+  get value() {
     return this.args.positional[1];
   }
 
-  get cssPropertyName () {
-    return `--mdc-theme-${dasherize (this.args.positional[0])}`;
+  get cssPropertyName() {
+    return `--mdc-theme-${dasherize(this.args.positional[0])}`;
   }
 
   /**
@@ -56,9 +55,9 @@ export default class MdcThemeModifier extends Modifier {
    *
    * @private
    */
-  _removeCssProperty () {
-    if (isPresent (this._currentCssPropertyName)) {
-      this.element.style.removeProperty (this._currentCssPropertyName);
+  _removeCssProperty() {
+    if (isPresent(this._currentCssPropertyName)) {
+      this.element.style.removeProperty(this._currentCssPropertyName);
     }
   }
 }

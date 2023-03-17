@@ -6,21 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/addon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-button/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-button/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-elevation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-elevation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-ripple/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-ripple/config/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles/_app-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/addon/modifiers/mdc-theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/ember-cli-build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/helpers/module-for-acceptance.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/helpers/module-for-acceptance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/integration/modifiers/mdc-theme-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/integration/modifiers/mdc-theme-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/tests/unit/mixins/theme-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/tests/unit/mixins/theme-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +62,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.splitter.proportion" value="0.25382262" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -349,7 +346,7 @@
       <workItem from="1678977441202" duration="598000" />
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
-      <workItem from="1679023932382" duration="18188000" />
+      <workItem from="1679023932382" duration="19236000" />
     </task>
     <servers />
   </component>
@@ -420,5 +417,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
