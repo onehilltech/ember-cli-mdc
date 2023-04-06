@@ -8,6 +8,7 @@ export default class MdcRadioButtonsComponent extends Component {
     this.select (element, this.args.value);
   }
 
+  @action
   update (element, [value]) {
     this.select (element, value);
   }
@@ -19,7 +20,9 @@ export default class MdcRadioButtonsComponent extends Component {
 
     // Check the button that matches the specified value.
     const buttons = this.getButtons (element);
-    const initial = buttons.find (button => button.value === `${value}`);
+    const initial = buttons.find (button => {
+      return button.value === `${value}`
+    });
 
     if (isPresent (initial)) {
       initial.checked = true;

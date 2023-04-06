@@ -1,6 +1,6 @@
 <div class="mdc-radio-buttons" {{on "change" this.changed}} ...attributes
   {{did-insert this.didInsert}}
-  {{did-update this.update}}>
+  {{did-update this.update @value}}>
   {{#if (has-block)}}
     {{yield (hash name=@name)}}
   {{else}}
