@@ -20,6 +20,8 @@
          placeholder={{@placeholder}}
          type={{@type}}
          disabled={{@disabled}}
-    {{on "keydown" this.createChip}} />
+    {{on "keydown" this.createChip}}
+    {{on "change" this.change}}
+  />
 
 </div>
