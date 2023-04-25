@@ -1,11 +1,11 @@
-<div class="mdc-dialog" ...attributes
+<div class="mdc-dialog {{if this.compact "mdc-dialog--compact"}}" ...attributes
   {{did-insert this.didInsert}}
   {{did-update this.open @open}}>
   <div class="mdc-dialog__container">
     <div class="mdc-dialog__surface"
          role="alertdialog"
          aria-modal="true"
-        {{did-insert this.prepareDialogSurface}}>
+      {{did-insert this.prepareDialogSurface}}>
       {{#if @title}}
         <h2 class="mdc-dialog__title">{{@title}}</h2>
       {{/if}}

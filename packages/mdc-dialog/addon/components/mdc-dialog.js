@@ -6,6 +6,7 @@ import listener from 'ember-cli-mdc-base/listener';
 import { isPresent } from '@ember/utils';
 import { action, getWithDefault } from '@ember/object';
 
+import { tracked } from '@glimmer/tracking';
 import { guidFor } from '@ember/object/internals';
 
 const { MDCDialog } = mdc.dialog;
@@ -13,6 +14,7 @@ const { MDCDialog } = mdc.dialog;
 function noOp () { }
 
 export default class MdcDialogComponent extends Component {
+  @action
   prepareDialogSurface (element) {
     // Set the id for the title element, it present.
     let guid = guidFor (element);
@@ -28,8 +30,13 @@ export default class MdcDialogComponent extends Component {
     if (isPresent (contentElement)) {
       contentElement.id = `${guid}__content`;
       element.setAttribute ('aria-describedby', contentElement.id);
+
+      this.compact = !!contentElement.querySelector ('.mdc-list');
     }
   }
+
+  @tracked
+  compact = false;
 
   doCreateComponent (element) {
     return new MDCDialog (element);
