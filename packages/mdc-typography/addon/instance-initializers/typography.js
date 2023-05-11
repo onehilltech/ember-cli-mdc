@@ -1,4 +1,3 @@
-import { getWithDefault } from '@ember/object';
 import { isNone, isPresent, typeOf } from '@ember/utils';
 
 export function initialize (app) {
@@ -11,12 +10,14 @@ export function initialize (app) {
   // typography for the application.
 
   const ENV = app.application.resolveRegistration ('config:environment');
+  const mdcConfig = ENV['ember-cli-mdc'] || {};
+
   const {
     disabled = false,
     preconnect = true,
     dynamicLoad = true,
     weights = [300, 400, 500, 700]
-  } = getWithDefault (ENV, 'ember-cli-mdc.typography', {});
+  } = mdcConfig;
 
   if (!disabled) {
     const rootElement = typeOf (app.rootElement) === 'string' ? document.querySelector (app.rootElement) : app.rootElement;

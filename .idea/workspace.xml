@@ -6,11 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +57,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/james/Projects/onehilltech/ember-cli-mdc/node_modules/prettier",
     "vue.rearranger.settings.migration": "true"
@@ -465,6 +465,7 @@
       <workItem from="1676478450041" duration="66000" />
       <workItem from="1681305918882" duration="1808000" />
       <workItem from="1682387515392" duration="65000" />
+      <workItem from="1683819618387" duration="127000" />
     </task>
     <servers />
   </component>
