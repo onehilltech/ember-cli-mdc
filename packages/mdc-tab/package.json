@@ -1,10 +1,6 @@
 {
   "name": "ember-cli-mdc-tab",
-<<<<<<< HEAD
   "version": "3.0.0-alpha.21",
-=======
-  "version": "2.11.10",
->>>>>>> master
   "description": "ember-cli addon for @material/tab.",
   "keywords": [
     "ember-addon",
@@ -54,7 +50,6 @@
     "ember-auto-import": "^1.12.0",
     "ember-cli": "~3.28.6",
     "ember-cli-dependency-checker": "^3.2.0",
-<<<<<<< HEAD
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "^3.0.0-alpha.21",
     "ember-cli-mdc-base": "^2.0.12",
@@ -64,17 +59,6 @@
     "ember-cli-mdc-tab-indicator": "^3.0.0-alpha.21",
     "ember-cli-mdc-theme": "^3.0.0-alpha.21",
     "ember-cli-mdc-typography": "^3.0.0-alpha.21",
-=======
-    "ember-cli-inject-live-reload": "^2.0.2",
-    "ember-cli-mdc-animation": "^2.5.3",
-    "ember-cli-mdc-base": "^2.5.2",
-    "ember-cli-mdc-icon": "^2.11.6",
-    "ember-cli-mdc-ripple": "^2.6.0",
-    "ember-cli-mdc-rtl": "^2.5.2",
-    "ember-cli-mdc-tab-indicator": "^2.11.6",
-    "ember-cli-mdc-theme": "^2.5.3",
-    "ember-cli-mdc-typography": "^2.11.6",
->>>>>>> master
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-disable-prototype-extensions": "^1.1.3",
