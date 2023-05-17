@@ -4,12 +4,11 @@ ember-cli-mdc-progress-indicator
 ember-cli addon for [`@material/progress-indicator`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-progress-indicator).
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
+* Ember.js v4.4 or above
+* Ember CLI v4.4 or above
+* Node.js v14 or above
 
 
 Installation
