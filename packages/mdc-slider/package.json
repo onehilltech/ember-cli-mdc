@@ -50,7 +50,6 @@
     "ember-cli": "~3.28.6",
     "ember-cli-custom-properties": "^2.0.2",
     "ember-cli-dependency-checker": "^3.2.0",
-<<<<<<< HEAD
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "^3.0.0-alpha.21",
     "ember-cli-mdc-base": "^3.0.0-alpha.21",
