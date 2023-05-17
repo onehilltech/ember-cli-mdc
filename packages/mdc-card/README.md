@@ -4,13 +4,11 @@ ember-cli-mdc-card
 ember-cli addon for [`@material/card`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-card).
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
+* Ember.js v4.4 or above
+* Ember CLI v4.4 or above
+* Node.js v14 or above
 
 Installation
 ------------
@@ -46,6 +44,7 @@ The `{{mdc-card}}` is a component that implements the
 
 * `outlined` - The card is outlined, and not elevated.
 
+
 Adding Media to the Card
 ---------------------------
 
@@ -58,7 +57,7 @@ displayed over the media, like a title.
   {{#mdc-card-media scale=["square"|"16-9"]}}
     {{#mdc-card-media-content}}Title{{/mdc-card-media-content}}
   {{/mdc-card-media}}
-
+  
   <!-- ... content ... -->
 
 {{/mdc-card}}
