@@ -9,7 +9,7 @@ module.exports = function(defaults) {
 
 =======
 module.exports = function (defaults) {
-  let app = new EmberAddon(defaults, {
+  const app = new EmberAddon(defaults, {
     // Add options here
 >>>>>>> 17f92f71 (v3.18.0...v3.28.6)
   });
