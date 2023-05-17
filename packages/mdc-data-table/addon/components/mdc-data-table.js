@@ -236,7 +236,12 @@ export default class MdcDataTableComponent extends Component {
 
   @action
   updateData () {
-    this.computeTableData ();
+    try {
+      this.computeTableData ();
+    }
+    catch (err) {
+      console.error (err);
+    }
   }
 
   /**
@@ -292,34 +297,46 @@ export default class MdcDataTableComponent extends Component {
     // to update its layout. This will ensure we have the correct checkboxes.
 
     if (refreshLayoutNext) {
-      next (this, 'layout');
+      next (this, 'performLayoutUpdate');
     }
     else {
-      this.layout ();
+      this.performLayoutUpdate ();
     }
   }
 
-  layout () {
+  /**
+   * Update the layout for the component.
+   */
+  performLayoutUpdate () {
     this.component.layout ();
     this.stale = this.rows.length !== this.component.getRows ().length;
+
+    if (this.stale) {
+      next (this, 'performLayoutUpdate');
+    }
 
     return this.stale;
   }
 
   @action
   updateSelections () {
-    const rows = this.component.getRows ();
+    try {
+      const rows = this.component.getRows ();
 
-    if (isEmpty (rows)) {
-      return;
+      if (isEmpty (rows)) {
+        return;
+      }
+
+      if (this.stale && !this.performLayoutUpdate ()) {
+        return;
+      }
+
+      const ids = this.selected.map (item => this.idForItem (item));
+      this.component.setSelectedRowIds (ids);
     }
-
-    if (this.stale && !this.layout ()) {
-      return;
+    catch (err) {
+      console.log (err);
     }
-
-    const ids = this.selected.map (item => this.idForItem (item));
-    this.component.setSelectedRowIds (ids);
   }
 
   get fields () {
@@ -368,7 +385,7 @@ export default class MdcDataTableComponent extends Component {
   @action
   gotoLastPage () {
     this.pagination.gotoLastPage ();
-    this.computeTableData ( true);
+    this.computeTableData (true);
   }
 
   @action

@@ -19,11 +19,16 @@ export default class MdcInputChipSetComponent extends ChipSet {
     return isPresent (customKeyCode) && customKeyCode === keyCode;
   }
 
-  @action
-  createChip (ev) {
-    const { target, key, keyCode } = ev;
+  get inputOnChange () {
+    const { inputOnChange = true } = this.args;
+    return inputOnChange;
+  }
 
-    if ((keyCode === 13 || key === 'Enter') || (this.breakOnSpace && (keyCode === 32 || key === 'Space')) || this.customKeyCode (keyCode)) {
+  @action
+  change (ev) {
+    const { target } = ev;
+
+    if (this.inputOnChange) {
       if (isPresent (target.value)) {
         // Notify the user of the new value. We then need to erase the original
         // input value if the action does not return false.
@@ -32,6 +37,15 @@ export default class MdcInputChipSetComponent extends ChipSet {
           target.value = null;
         }
       }
+    }
+  }
+
+  @action
+  createChip (ev) {
+    const { target, key, keyCode } = ev;
+
+    if ((keyCode === 13 || key === 'Enter') || (this.breakOnSpace && (keyCode === 32 || key === 'Space')) || this.customKeyCode (keyCode)) {
+      return this.change (ev);
     }
   }
 }

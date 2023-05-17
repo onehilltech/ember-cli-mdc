@@ -1,0 +1,11 @@
+<span class="mdc-speed-dial__action">
+  <span class="mdc-speed-dial__action-label">
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      {{@label}}
+    {{/if}}
+  </span>
+
+  <MdcFab @icon={{@icon}} @mini="true" ...attributes />
+</span>

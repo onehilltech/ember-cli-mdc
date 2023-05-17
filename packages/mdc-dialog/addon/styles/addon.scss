@@ -1,2 +1,13 @@
 @import "app-theme";
 @import "@material/dialog/mdc-dialog";
+
+.mdc-dialog {
+  &--compact {
+    .mdc-dialog {
+      &__content {
+        padding: 0;
+        padding-bottom: 24px;
+      }
+    }
+  }
+}

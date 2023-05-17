@@ -2,6 +2,7 @@
   {{unless @label "mdc-text-field--no-label"}}
   {{if @disabled "mdc-text-field--disabled"}}
   {{if @alignEnd "mdc-text-field--end-aligned"}}
+  {{if @errorMessage "mdc-text-field--invalid"}}
   {{if @fullWidth "mdc-text-field--fullwidth"}}
   {{if @ltr "mdc-text-field--ltr-text"}}
   {{if @focused "mdc-text-field--focused"}}
@@ -29,8 +30,12 @@
                      aria-controls={{this.helperId}}
                      aria-describedby={{this.helperId}}
                      disabled={{@disabled}}
-                    {{on "blur" this.validate}}
-                    {{on "focus" this.focus}} />
+    {{did-update this.setCustomErrorMessage @errorMessage}}
+    {{on "input" this.input}}
+    {{on "invalid" this.invalid}}
+    {{on "focus" this.focus}}
+    {{on "blur" this.blur}}
+  />
 
   {{#if @suffix}}
     <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>
@@ -65,7 +70,9 @@
 {{#unless @noHelperLine}}
   <div class="mdc-text-field-helper-line">
     {{#if this.helperText}}
-      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
+      <div class="mdc-text-field-helper-text
+        {{if this.isPersistentHelperText "mdc-text-field-helper-text--persistent"}}
+        {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
            id={{this.helperId}}
            aria-hidden="true">{{this.helperText}}</div>
     {{/if}}

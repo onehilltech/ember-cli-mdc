@@ -104,18 +104,12 @@ export default class MdcTextfieldComponent extends Component {
   }
 
   get helperLine () {
-    let { characterCount = false } = this.args;
+    const { characterCount = false } = this.args;
     return isPresent (this.helperText) || characterCount;
   }
 
   get helperText () {
-    let { errorMessage, helperText } = this.args;
-    return errorMessage || this.validationMessage || helperText;
-  }
-
-  get persistentHelperText () {
-    let { persistentHelperText, errorMessage } = this.args;
-    return isPresent (errorMessage) || isPresent (this.validationMessage) || persistentHelperText;
+    return this.args.errorMessage || this.validationMessage || this.args.helperText;
   }
 
   get leadingIconClick () {
@@ -126,6 +120,14 @@ export default class MdcTextfieldComponent extends Component {
     return this.args.trailingIconClick || noOp;
   }
 
+  get isValidationMessage () {
+    return isPresent (this.validationMessage) || isPresent (this.args.errorMessage);
+  }
+
+  get isPersistentHelperText () {
+    return this.isValidationMessage || isPresent (this.args.persistentHelperText);
+  }
+
   @tracked
   validationMessage;
 
@@ -134,11 +136,35 @@ export default class MdcTextfieldComponent extends Component {
     this.validationMessage = null;
   }
 
-  @action
-  validate (ev) {
-    let { target } = ev;
+  @tracked
+  isFirstInput = true;
 
-    if (!target.validity.valid) {
+  @action
+  input () {
+    this.isFirstInput = false;
+  }
+
+  @action
+  blur (ev) {
+    this.validate (ev.target);
+  }
+
+  @action
+  invalid (ev) {
+    ev.preventDefault ();
+
+    if (!this.isFirstInput) {
+      this.validate (ev.target);
+    }
+  }
+
+  /**
+   * Validate the HTML input element.
+   *
+   * @param ev
+   */
+  validate (input) {
+    if (!input.validity.valid) {
       let { validationMessages } = this.args;
 
       if (isPresent (validationMessages)) {
@@ -147,18 +173,24 @@ export default class MdcTextfieldComponent extends Component {
 
         for (let i = 0, len = VALIDATION_ERROR_TYPE.length; i < len; ++i) {
           const reason = VALIDATION_ERROR_TYPE[i];
-          const failed = target.validity[reason];
+          const failed = input.validity[reason];
 
           if (failed) {
-            this.validationMessage = validationMessages[reason] || target.validationMessage;
+            this.validationMessage = validationMessages[reason] || input.validationMessage;
             break;
           }
         }
       }
       else {
         // Set the default validation message.
-        this.validationMessage = target.validationMessage;
+        this.validationMessage = input.validationMessage;
       }
     }
+  }
+
+  @action
+  setCustomErrorMessage (input, [errorMessage]) {
+    input.setCustomValidity (isPresent (errorMessage) ? errorMessage : '');
+    input.reportValidity ();
   }
 }

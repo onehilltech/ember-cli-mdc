@@ -1,0 +1,20 @@
+<h5 id="title">Floating Action Buttons</h5>
+
+<h6>Standard</h6>
+<p><MdcFab @icon="add" /></p>
+<p><MdcFabLinkTo @route="index" @icon="add" @label="Create" /></p>
+
+
+<h6>Mini</h6>
+<MdcFab @icon="add" @mini={{true}} />
+
+<h6>Extended</h6>
+
+<p><MdcFab @icon="add" @label="Create" /></p>
+
+<h6>Exited</h6>
+
+<button {{on "click" this.toggleExited}}>{{if this.exited "Show FAB" "Hide FAB"}}</button>
+
+<p><MdcFab @icon="add" @exited={{this.exited}} /></p>
+

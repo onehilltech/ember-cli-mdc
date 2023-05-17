@@ -8,7 +8,7 @@ const { MDCRipple } = mdc.ripple;
 
 export default LinkComponent.extend ({
   classNames: ['mdc-icon-button'],
-  classNameBindings: ['iconClassName'],
+  classNameBindings: ['iconClassName', 'kind'],
 
   iconClassName: computed ('style', 'iconClass', function () {
     if (isPresent (this.iconClass)) {

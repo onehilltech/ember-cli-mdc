@@ -1,1 +1,80 @@
+@use "@material/shape" as shape;
+@use "@material/theme" as theme;
+@use "@material/elevation" as elevation;
+
 @import "@material/fab/mdc-fab";
+
+.mdc-fab {
+  &--bottom-right {
+    position: fixed;
+
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.mdc-speed-dial {
+  position: fixed;
+
+  right: 16px;
+  bottom: 16px;
+
+  &__fab {
+    height: 56px !important;
+    @include shape.radius(28px);
+  }
+
+  &__actions {
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+
+    bottom: 56px;
+    margin-right: 8px;
+
+    .mdc-fab {
+      position: unset;
+    }
+  }
+
+  &__action {
+    margin-bottom: 24px;
+
+    position: relative;
+    bottom: unset;
+    right: unset;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .mdc-fab {
+      position: relative;
+
+      bottom: unset;
+      right: unset;
+    }
+
+    &-label {
+      margin-right: 16px;
+
+      @include theme.prop(background-color, surface);
+      @include theme.prop(color, text-primary-on-light);
+
+      @include elevation.elevation(1);
+      @include shape.radius(4px);
+
+      padding: 8px 16px;
+    }
+  }
+
+  &--expanded {
+    .mdc-speed-dial {
+      &__fab {
+        @include mdc-fab-container-color(#000000);
+      }
+    }
+  }
+}

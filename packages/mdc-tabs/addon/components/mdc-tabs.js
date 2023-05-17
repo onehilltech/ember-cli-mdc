@@ -96,9 +96,11 @@ export default class MdcTabsComponent extends Component {
 
   _activateTabPanel (index) {
     if (isPresent (this._currentActiveTab)) {
-      this._tabPanels.item (this._currentActiveTab).classList.remove ('mdc-tab-panel--active');
+      const tabPanel = this._tabPanels.item (this._currentActiveTab);
+      tabPanel.dispatchEvent (new CustomEvent ('mdc-tab-panel:deactivate'));
     }
 
-    this._tabPanels.item (index).classList.add ('mdc-tab-panel--active');
+    const tabPanel = this._tabPanels.item (index);
+    tabPanel.dispatchEvent (new CustomEvent ('mdc-tab-panel:activate'));
   }
 }

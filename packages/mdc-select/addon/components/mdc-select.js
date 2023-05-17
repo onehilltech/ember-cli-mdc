@@ -32,13 +32,13 @@ export default class MdcSelectComponent extends Component {
       let text = this.textOf (option);
 
       if (isPresent (value) && isPresent (text)) {
-        let listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+        const listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
 
         if (isPresent (listItem)) {
           listItem.classList.add ('mdc-list-item--selected');
         }
 
-        let textElement = element.querySelector ('.mdc-select__selected-text');
+        const textElement = element.querySelector ('.mdc-select__selected-text');
         textElement.value = text;
       }
     }
@@ -52,13 +52,31 @@ export default class MdcSelectComponent extends Component {
     const { required = false, value: initial } = this.args;
     component.required = required;
 
-    if (isPresent (initial)) {
-      //component.value = this.valueOf (initial);
+    const value = this.valueOf (initial);
+
+    if (isPresent (value) && this.isOutlined) {
+      // We also need to notch the selection since the initial state of text select
+      // component has the text over the initial selection.
+
+
+      const notchedOutline = component.root_.querySelector ('.mdc-notched-outline');
+      notchedOutline.classList.add ('mdc-notched-outline--notched');
+
+      if (isPresent (this.args.label)) {
+        const floatingLabel = component.root_.querySelector ('.mdc-floating-label');
+        floatingLabel.classList.add ('mdc-floating-label--float-above');
+      }
     }
   }
 
   valueOf (option) {
-    return isObjectLike (option) ? `${get (option, this.valueKey)}` : `${option}`;
+    if (isObjectLike (option)) {
+      const value = get (option, this.valueKey);
+      return isPresent (value) ? `${value}` : undefined;
+    }
+    else {
+      return `${option}`;
+    }
   }
 
   textOf (option) {
@@ -145,7 +163,7 @@ export default class MdcSelectComponent extends Component {
   }
 
   get options () {
-    return A (this.args.options);
+    return this.args.options || A ();
   }
 
   get leadingIconClick () {

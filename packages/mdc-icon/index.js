@@ -15,14 +15,23 @@ module.exports = {
 
     if (type === 'head-footer') {
       const mdc = config['ember-cli-mdc'] || {};
-      const icons = mdc.icons || {};
-      const styles = icons.styles || [];
+      const icon = mdc.icon || mdc.icons || {};
+      const {preconnect = true, dynamicLoad = true, styles = []} = icon;
+      const lines = [];
 
-      let styleLinks = styles.map (style => STYLE_MAP[style]);
-      styleLinks.unshift ('Material+Icons');
+      if (!dynamicLoad) {
+        if (preconnect) {
+          lines.push ('<link href="https://fonts.googleapis.com" rel="preconnect" />')
+        }
 
-      this.ui.writeLine ('Linking Material Icon fonts with the application.');
-      return `<link href="https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}" rel="stylesheet" />`;
+        const styleLinks = styles.map (style => STYLE_MAP[style]);
+        styleLinks.unshift ('Material+Icons');
+        const href = `https://fonts.googleapis.com/icon?family=${styleLinks.join ('|')}`;
+
+        lines.push (`<link href="${href}" rel="stylesheet" />`)
+      }
+
+      return lines;
     }
   }
 };
