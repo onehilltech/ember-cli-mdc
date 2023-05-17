@@ -11,13 +11,7 @@ Polyfill ember-cli addon for [`@material/bottom-navigation`](https://github.com/
 Installation
 ------------
 
-<<<<<<< HEAD
     ember install ember-cli-mdc-bottom-navigation
-=======
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
->>>>>>> 07bd00a8 (v3.18.0...v3.28.6)
 
 Components
 -----------
@@ -46,6 +40,7 @@ Adds a bottom navigation component to a page
 
 * `@spaceEvenly` - Space the buttons evenly as opposed to centered. Default is `false`.
 
+
 ### MdcBottomNavigationLinkTo
 
 Use the `MdcBottomNavigationLinkTo`, which extends the `LinkComponent`, component to add 
@@ -56,3 +51,4 @@ links to the bottom navigation component.
   <MdcBottomNavigationLinkTo @label="Favorites" @icon="favorites" @route={{this.routeName}}  />
 </MdcBottomNavigation>
 ```
+
