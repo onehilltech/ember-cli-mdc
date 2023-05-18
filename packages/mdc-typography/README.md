@@ -8,15 +8,6 @@ Installation
 
     ember install ember-cli-mdc-typography
 
-
-Compatibility
---------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Components & Modifiers
 -----------------------
 
@@ -29,7 +20,7 @@ to the component. The typography attribute allows you to programmatically custom
 the typography of the component.
 
 ```handlebars
-<div {{mdc-typography typography}}></div>
+<div {{mdc-typography name}}></div>
 ```
 
 The `typography` value must be one of the following values:
@@ -47,6 +38,7 @@ The `typography` value must be one of the following values:
 * `caption`
 * `button`
 * `overline`
+
 
 Other Topics
 -------------------
@@ -86,8 +78,9 @@ Roboto Font
 The typography package automatically includes links to the Roboto fonts in your
 application.
 
-### Corber integration.
+### Corber integration
 
 When building a Corber application, the Roboto fonts are bundled with the application. This
 prevents the application from needing to download the fonts.
+
 
