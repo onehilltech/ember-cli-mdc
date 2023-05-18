@@ -3,15 +3,6 @@ ember-cli-mdc-dialog
 
 ember-cli addon for [`@material/dialog`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-dialog).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Installation
 ------------
 
@@ -60,3 +51,4 @@ Adds a dialog to the document.
 * `opened` - Action triggered when dialog is opened
 * `closing` - Action triggered when dialog is closing
 * `closed` - Action triggered when dialog has closed
+
