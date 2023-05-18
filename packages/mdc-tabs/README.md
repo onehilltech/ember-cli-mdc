@@ -3,15 +3,6 @@ ember-cli-mdc-tabs
 
 ember-cli addon for [`@material/tabs`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-tabs).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Installation
 ------------
 
