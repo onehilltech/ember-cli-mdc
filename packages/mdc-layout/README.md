@@ -3,15 +3,6 @@ ember-cli-mdc-layout
 
 ember-cli support addon for layout-based logic
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Installation
 ------------
 
@@ -66,4 +57,3 @@ device layouts.
   {{/if}}
 </div>
 ```
-
