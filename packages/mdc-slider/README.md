@@ -8,14 +8,8 @@ Installation
 
     ember install ember-cli-mdc-slider
 
-<<<<<<< HEAD
 Components
 -------------
-=======
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
->>>>>>> b8fdaabb (v3.18.0...v3.28.6)
 
 This package contains the following top-level components.
 
@@ -66,3 +60,4 @@ the parent element.
 The `@input` action of the `MdcSlider` will change instantaneously as the slider is
 moved from side to side. The `@change` action is called only when the slider stops moving.
 This means the user has selected a terminal value, and the slider is committing the value.
+
