@@ -4,14 +4,6 @@ ember-cli-mdc-tab-bar
 ember-cli addon for [`@material/tab-bar`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-bar).
 
 
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Installation
 ------------
 
