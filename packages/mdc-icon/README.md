@@ -8,14 +8,8 @@ Installation
 
     ember install ember-cli-mdc-icon
 
-<<<<<<< HEAD
 Components
 -----------
-=======
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
->>>>>>> 3e42f302 (v3.18.0...v3.28.6)
 
 This package contains the following top-level components.
 
@@ -35,12 +29,15 @@ search for the icon at [Material Icons](https://material.io/tools/icons/).
 ### Usage
 
 ```handlebars
-<MdcIcon @icon=[name] />
+<MdcIcon @icon={{name}} />
+<MdcIcon @image={{image}} />
+<MdcIcon>{{!-- svg elements --}}</MdcIcon>
 ```
 
-### Positional Parameters
+### Parameters
 
 * **`name`** - Name of the icon
+* **`image`** - Url of an image
 
 ### Examples
 
