@@ -36,13 +36,13 @@
     "test:g": "ember g ember-cli-mdc-ripple"
   },
   "dependencies": {
-    "@material/ripple": "^9.0.0",
+    "@material/ripple": "^14.0.0",
     "ember-auto-import": "^2.6.3",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-sass": "^3.0.0-alpha.21",
-    "ember-cli-mdc-utils": "^3.0.0-alpha.21"
+    "ember-cli-mdc-sass": "*",
+    "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
@@ -53,18 +53,15 @@
     "@embroider/test-setup": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
-    "@material/animation": "^9.0.0",
-    "@material/base": "^9.0.0",
-    "@material/theme": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.0.1",
     "ember-cli": "~4.12.1",
     "ember-cli-custom-properties": "^2.0.2",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-cli-mdc-animation": "^3.0.0-alpha.21",
-    "ember-cli-mdc-base": "^3.0.0-alpha.21",
-    "ember-cli-mdc-theme": "^3.0.0-alpha.21",
+    "ember-cli-mdc-animation": "*",
+    "ember-cli-mdc-base": "*",
+    "ember-cli-mdc-theme": "*",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
