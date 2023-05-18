@@ -1,16 +1,7 @@
 ember-cli-mdc-theme
-==============================================================================
+========================
 
 ember-cli addon for [`@material/theme`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme).
-
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
 
 Installation
 ------------
@@ -47,8 +38,8 @@ variable in your style files. For example:
 }
 ```
 
-See the [Material Components Web documentation](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme)
-for a complete list of classname and style variables available for use. 
+> See the [Material Components Web documentation](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme)
+> for a complete list of classname and style variables available for use. 
 
 The following is a list of supported theme property names:
 
