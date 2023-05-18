@@ -1,6 +1,6 @@
 <h6>Using Modifiers</h6>
 
-<select onchange={{action (mut typography) value="target.value"}}>
+<select onchange={{action (mut this.typography) value="target.value"}}>
   <option value="headline1">Headline 1</option>
   <option value="headline2">Headline 2</option>
   <option value="headline3">Headline 3</option>
@@ -20,4 +20,4 @@
   <option value="overline">Overline</option>
 </select>
 
-<p class="mdc" {{mdc-typography typography}}>Typography</p>
+<p class="mdc" {{mdc-typography this.typography}}>Typography</p>
