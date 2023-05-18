@@ -8,14 +8,8 @@ Installation
 
     ember install ember-cli-mdc-linear-progress
 
-<<<<<<< HEAD
 Components
 -------------
-=======
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
->>>>>>> 520bd251 (v3.18.0...v3.28.6)
 
 This package contains the following top-level components.
 
@@ -59,4 +53,3 @@ Add a linear progress component to the page.
 
 <MdcLinearProgress @indeterminate={{true}} @reversed={{true}} />
 ```
-
