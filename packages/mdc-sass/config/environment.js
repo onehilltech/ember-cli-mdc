@@ -5,8 +5,6 @@ function projectHasWorkspace () {
 }
 
 module.exports = function (environment, config) {
-  console.log (process.env);
-
   if (!config.sassOptions)
     config.sassOptions = {};
 
