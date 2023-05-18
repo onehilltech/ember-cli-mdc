@@ -8,21 +8,15 @@ Installation
 
     ember install ember-cli-mdc-menu
 
-<<<<<<< HEAD
 Components and Mixins
 -----------------------
-=======
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
->>>>>>> 3cbb03ce (v3.18.0...v3.28.6)
 
 ### Components
 
-* [`{{mdc-menu}}`](#mdc-menu)
+* [`<MdcMenu>`](#MdcMenu)
 
 
-{{mdc-menu}}
+MdcMenu
 ---------------
 
 ### Description
@@ -55,30 +49,41 @@ Add a menu component to the page.
 
 ### Menu Items
 
-Use the `{{mdc-menu-list}}` to add items to the menu.
+Use the `<MdcMenuList>` to add items to the menu.
 
+<<<<<<< HEAD
 ```handlebars
-{{#mdc-menu-list}}
-  <!-- example of an inline menu item -->
-  {{mdc-menu-item "Add space before paragraph"}}
-  
-  <!-- example of a block menu item -->
-  {{#mdc-menu-item}}{{#mdc-menu-item-text}}Add space after paragraph{{/mdc-menu-item-text}}{{/mdc-menu-item}}
-{{/mdc-menu-list}}
+<MdcMenu>
+    <MdcMenuList>
+      <!-- example of an inline menu item -->
+      <MdcMenuItem @text="Add space before paragraph" />
+      
+      <!-- example of a block menu item -->
+      <MdcMenuItem>
+          <MdcMenuItemText>Add space after paragraph</MdcMenuItemText>
+      </MdcMenuItem>
+    </MdcMenuList>
+</MdcMenu>
 ```
 
 ### Dividers
 
-The `{{mdc-list-divider}}` component is used to a divider between menu items.
+The `<MdcListDivider>` component is used to a divider between menu items.
 
 ```handlebars
-{{#mdc-menu-list}}
-  {{mdc-menu-item "Add space before paragraph"}}
-
-  {{mdc-list-divider}}
-
-  {{mdc-menu-item "Add space after paragraph"}}
-{{/mdc-menu-list}}
+<MdcMenu>
+    <MdcMenuList>
+        <!-- example of an inline menu item -->
+        <MdcMenuItem @text="Add space before paragraph" />
+        
+        <MdcListDivider />
+    
+        <!-- example of a block menu item -->
+        <MdcMenuItem>
+            <MdcMenuItemText>Add space after paragraph</MdcMenuItemText>
+        </MdcMenuItem>
+    </MdcMenuList>
+</MdcMenu>
 ```
 
 ### Group Selections
@@ -87,21 +92,21 @@ The `{{mdc-menu-selection-group}}` block component is used to select between
 a group of menu items.
 
 ```handlebars
-{{#mdc-menu open=open}}
-  {{#mdc-menu-list}}
-    <li>
-      {{#mdc-menu-selection-group}}
-        {{#mdc-menu-item}}
-          {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-          {{#mdc-menu-item-text}}Single{{/mdc-menu-item-text}}
-        {{/mdc-menu-item}}
+<MdcMenu @open={{this.open}}>
+    <MdcMenuList>
+        <li>
+            <MdcMenuSelectionGroup>
+                <MdcMenuItem>
+                    <MdcMenuSelectionGroupIcon @icon={{icon1}} />
+                    <MdcMenuItemText>Single</MdcMenuItemText>
+                </MdcMenuItem>
 
-        {{#mdc-menu-item}}
-          {{#mdc-menu-selection-group-icon}}...{{/mdc-menu-selection-group-icon}}
-          {{#mdc-menu-item-text}}1.15{{/mdc-menu-item-text}}
-        {{/mdc-menu-item}}
-      {{/mdc-menu-selection-group}}
-    </li>
-  {{/mdc-menu-list}}
-{{/mdc-menu}}
+                <MdcMenuItem>
+                    <MdcMenuSelectionGroupIcon @icon={{icon2}} />
+                    <MdcMenuItemText>1.15</MdcMenuItemText>
+                </MdcMenuItem>
+            </MdcMenuSelectionGroup>
+        </li>
+    </MdcMenuList>
+</MdcMenu>
 ```
