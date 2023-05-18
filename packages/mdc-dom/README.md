@@ -4,14 +4,6 @@ ember-cli-mdc-dom
 ember-cli addon for [`@material/dom`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-dom).
 
 
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
-
 Installation
 ------------
 
