@@ -2,11 +2,11 @@
 
 <h2 id="title">Welcome to Ember</h2>
 
-<select onchange={{action (mut dir) value="target.value"}}>
+<select onchange={{action (mut this.dir) value="target.value"}}>
   <option value="ltr">Left-to-right</option>
   <option value="rtl">Right-to-left</option>
 </select>
 
-<p>
-  <MdcFoo @dir={{dir}}>This is a right to left message.</MdcFoo>
+<p dir={{this.dir}}>
+  <div class="mdc-foo">Styled incorrectly as RTL!</div>
 </p>
