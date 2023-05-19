@@ -32,7 +32,7 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "@material/circular-progress": "^9.0.0",
+    "@material/circular-progress": "^14.0.0",
     "ember-auto-import": "^2.6.3",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
@@ -57,7 +57,7 @@
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "*",
-    "ember-cli-mdc-base": "^2.0.12",
+    "ember-cli-mdc-base": "*",
     "ember-cli-mdc-progress-indicator": "*",
     "ember-cli-mdc-theme": "*",
     "ember-cli-sri": "^2.1.1",
