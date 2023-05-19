@@ -35,7 +35,7 @@
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-utils": "^3.0.0-alpha.21"
+    "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
