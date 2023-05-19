@@ -33,7 +33,7 @@
     "test:g": "ember g ember-cli-mdc-linear-progress"
   },
   "dependencies": {
-    "@material/linear-progress": "^9.0.0",
+    "@material/linear-progress": "^14.0.0",
     "ember-auto-import": "^2.6.3",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
@@ -45,13 +45,12 @@
     "@babel/eslint-parser": "^7.21.3",
     "@babel/plugin-proposal-decorators": "^7.21.0",
     "@ember/optional-features": "^2.0.0",
-    "@ember/render-modifiers": "^1.0.2",
+    "@ember/render-modifiers": "^2.0.5",
     "@ember/string": "^3.0.1",
     "@ember/test-helpers": "^2.9.3",
     "@embroider/test-setup": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
-    "@material/progress-indicator": "^6.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.0.1",
     "ember-cli": "~4.12.1",

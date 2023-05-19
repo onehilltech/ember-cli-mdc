@@ -18,6 +18,5 @@
 
 <h2>Real-time Update Demo</h2>
 
-<div class="actions"><button {{on "click" toggleProgress}}>{{if this.started "Stop" "Start"}}</button></div>
+<div class="actions"><button {{on "click" this.toggleProgress}}>{{if this.started "Stop" "Start"}}</button></div>
 <MdcLinearProgress @value={{this.count}} @min={{0}} @max={{100}} />
-

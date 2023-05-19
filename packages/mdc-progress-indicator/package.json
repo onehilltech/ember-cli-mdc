@@ -32,7 +32,7 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "@material/progress-indicator": "^9.0.0",
+    "@material/progress-indicator": "^14.0.0",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
