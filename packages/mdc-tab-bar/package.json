@@ -50,8 +50,6 @@
     "@embroider/test-setup": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
-    "@material/elevation": "^6.0.0",
-    "@material/ripple": "^6.0.0",
     "@material/tab-bar": "^6.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.0.1",

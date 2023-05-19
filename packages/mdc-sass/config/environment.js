@@ -25,6 +25,8 @@ module.exports = function (environment, config) {
     config.sassOptions.includePaths.push (emberModulePath);
   }
 
+  console.log (config.sassOptions.includePaths);
+
   if (config.modulePrefix !== 'dummy') {
     if (!includePaths.includes ('app/styles'))
       includePaths.push ('app/styles');

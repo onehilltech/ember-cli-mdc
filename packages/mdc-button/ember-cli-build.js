@@ -3,15 +3,9 @@
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 const path = require ('path');
 
-<<<<<<< HEAD
-module.exports = function(defaults) {
-  let app = new EmberAddon (defaults, {
-
-=======
 module.exports = function (defaults) {
   const app = new EmberAddon(defaults, {
     // Add options here
->>>>>>> 17f92f71 (v3.18.0...v3.28.6)
   });
 
   /*
