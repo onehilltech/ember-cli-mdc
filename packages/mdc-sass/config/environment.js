@@ -1,7 +1,21 @@
 'use strict';
 
-function projectHasWorkspace () {
-  return true;
+const path = require ('path');
+const fs = require ('fs-extra');
+
+function getNodeModulePaths (parentDir) {
+  const paths = [];
+
+  while (parentDir !== path.sep) {
+    const nodeModulePath = `${parentDir}${path.sep}node_modules`;
+
+    if (fs.pathExistsSync (nodeModulePath))
+      paths.push (nodeModulePath);
+
+    parentDir = path.resolve (parentDir, '..');
+  }
+
+  return paths;
 }
 
 module.exports = function (environment, config) {
@@ -20,9 +34,8 @@ module.exports = function (environment, config) {
     // is hosted in a node_module path located in a parent directory. We can use the
     // _ environment variable to get the location of ember.
 
-    const { _ } = process.env;
-    const emberModulePath = _.replace ('/.bin/ember', '');
-    config.sassOptions.includePaths.push (emberModulePath);
+    const nodeModulePaths = getNodeModulePaths (path.resolve (process.env.PWD, '..'));
+    config.sassOptions.includePaths.push (...nodeModulePaths);
   }
 
   console.log (config.sassOptions.includePaths);

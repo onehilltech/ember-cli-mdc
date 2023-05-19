@@ -33,12 +33,12 @@
     "test:g": "ember g ember-cli-mdc-menu"
   },
   "dependencies": {
-    "@material/menu": "^9.0.0",
+    "@material/menu": "^14.0.0",
     "ember-auto-import": "^2.6.3",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-sass": "^2.5.3",
+    "ember-cli-mdc-sass": "*",
     "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
@@ -51,10 +51,6 @@
     "@embroider/test-setup": "^2.1.1",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
-    "@material/button": "^6.0.0",
-    "@material/icon-button": "^6.0.0",
-    "@material/menu": "^6.0.0",
-    "@material/menu-surface": "^3.2.0",
     "broccoli-asset-rev": "^3.0.0",
     "concurrently": "^8.0.1",
     "ember-cli": "~4.12.1",
@@ -69,7 +65,7 @@
     "ember-cli-mdc-menu-surface": "*",
     "ember-cli-mdc-ripple": "*",
     "ember-cli-mdc-rtl": "*",
-    "ember-cli-mdc-sass": "^3.0.0-alpha.19",
+    "ember-cli-mdc-sass": "*",
     "ember-cli-mdc-shape": "*",
     "ember-cli-mdc-theme": "*",
     "ember-cli-mdc-typography": "*",
