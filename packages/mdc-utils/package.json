@@ -12,5 +12,8 @@
   "dependencies": {
     "semver": "^7.5.1"
   },
-  "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677"
+  "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677",
+  "devDependencies": {
+    "ember-cli-custom-properties": "^3.0.1"
+  }
 }
