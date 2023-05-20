@@ -41,7 +41,8 @@
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-mdc-sass": "*",
-    "ember-cli-mdc-utils": "*"
+    "ember-cli-mdc-utils": "*",
+    "ember-modifier": "^4.1.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
@@ -73,7 +74,6 @@
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
-    "ember-modifier": "^4.1.0",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^6.2.0",
     "ember-resolver": "^10.0.0",
