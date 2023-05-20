@@ -7,17 +7,19 @@ export default class MdcElevationModifier extends Modifier {
   _currentElevationClassName;
   _hasTransition = false;
 
-  didReceiveArguments () {
-    let { elevation, transition = false } = this.args.named;
+  modify (element, _, args) {
+    super.modify (...arguments);
+
+    const { elevation, transition = false } = args;
 
     if (transition && !this._hasTransition) {
       // The element does not have a transition class, so add one.
-      this.element.classList.add (MDC_CLASSNAME_ELEVATION_TRANSITION);
+      element.classList.add (MDC_CLASSNAME_ELEVATION_TRANSITION);
       this._hasTransition = true;
     }
     else if (!transition && this._hasTransition) {
       // Remove the transition class name from the element.
-      this.element.classList.remove (MDC_CLASSNAME_ELEVATION_TRANSITION);
+      element.classList.remove (MDC_CLASSNAME_ELEVATION_TRANSITION);
       this._hasTransition = false;
     }
 
@@ -26,14 +28,14 @@ export default class MdcElevationModifier extends Modifier {
       // the element class list.
 
       if (isPresent (this._currentElevationClassName)) {
-        this.element.classList.remove (this._currentElevationClassName);
+        element.classList.remove (this._currentElevationClassName);
       }
 
       this._currentElevationClassName = `mdc-elevation--z${elevation}`;
-      this.element.classList.add (this._currentElevationClassName);
+      element.classList.add (this._currentElevationClassName);
     }
     else {
-      this.element.classList.remove ()
+      element.classList.remove ()
     }
   }
 }
