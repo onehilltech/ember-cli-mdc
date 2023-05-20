@@ -1,15 +1,21 @@
-<div class="mdc-button__ripple"></div>
+<a class="mdc-button {{this.style}} {{this.kind}}" href={{this.href}} {{did-insert this.didInsert}} ...attributes>
+  <div class="mdc-button__ripple"></div>
 
-{{#if @leadingIcon}}
-  <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
-{{/if}}
+  {{#if @leadingIcon}}
+    <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if @leadingImage}}
+    <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{/if}}
 
-{{#if (has-block)}}
-  <span class="mdc-button__label">{{yield}}</span>
-{{else}}
-  <span class="mdc-button__label">{{@label}}</span>
-{{/if}}
+  {{#if (has-block)}}
+    <span class="mdc-button__label">{{yield}}</span>
+  {{else}}
+    <span class="mdc-button__label">{{@label}}</span>
+  {{/if}}
 
-{{#if @trailingIcon}}
-  <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
-{{/if}}
+  {{#if @trailingIcon}}
+    <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if @trailingImage}}
+    <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{/if}}
+</a>

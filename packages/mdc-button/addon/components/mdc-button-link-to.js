@@ -1,30 +1,38 @@
-import LinkComponent from '@ember/routing/link-component';
-
-import { computed } from '@ember/object';
+import MdcButtonBase from "../-private/-mdc-button-base";
+import { service } from '@ember/service';
 import { isPresent } from '@ember/utils';
-import { MDCRipple } from '@material/ripple';
 
-export default LinkComponent.extend ({
-  _button: null,
+export default class MdcButtonLinkTo extends MdcButtonBase {
+  @service
+  router;
 
-  classNames: ['mdc-button'],
-  classNameBindings: ['styleClassName'],
+  get href () {
+    return this.args.href || this.routeUrl;
+  }
 
-  styleClassName: computed (function () {
-    return isPresent (this.style) ? `mdc-button--${this.style}` : '';
-  }),
+  get routeUrl () {
+    let options;
 
-  didInsertElement () {
-    this._super (...arguments);
+    if (isPresent(this.args.queryParams)) {
+      options = {};
+      options.queryParams = this.args.queryParams;
+    }
 
-    this._button = new MDCRipple (this.element);
-  },
-
-  willDestroyElement () {
-    this._super (...arguments);
-
-    if (isPresent (this._button)) {
-      this._button.destroy ();
+    if (isPresent (this.args.model)) {
+      if (isPresent (options)) {
+        return this.router.urlFor (this.args.route, this.args.model, options);
+      }
+      else {
+        return this.router.urlFor (this.args.route, this.args.model);
+      }
+    }
+    else {
+      if (isPresent (options)) {
+        return this.router.urlFor (this.args.route, options);
+      }
+      else {
+        return this.router.urlFor (this.args.route);
+      }
     }
   }
-});
+}
