@@ -1,10 +1,20 @@
-<button class="mdc-button {{this.style}} {{this.kind}}" {{did-insert this.didInsert}} ...attributes>
+<button class="mdc-button {{this.style}} {{this.kind}}
+  {{if this.hasLeadingIcon "mdc-button--icon-leading"}}
+  {{if this.hasTrailingIcon "mdc-button--icon-trailing"}}"
+  ...attributes
+  {{did-insert this.didInsert}}
+  {{mdc-ripple}}>
+
   <div class="mdc-button__ripple"></div>
+  <span class="mdc-button__touch"></span>
+  <span class="mdc-button__focus-ring"></span>
 
   {{#if @leadingIcon}}
     <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
   {{else if @leadingImage}}
     <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if (has-block "leading-svg")}}
+    {{yield to="leading-svg"}}
   {{/if}}
 
   {{#if (has-block)}}
@@ -17,5 +27,7 @@
     <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
   {{else if @trailingImage}}
     <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if (has-block "trailing-svg")}}
+    {{yield to="trailing-svg"}}
   {{/if}}
 </button>

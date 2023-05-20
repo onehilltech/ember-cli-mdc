@@ -1,18 +1,5 @@
-import Component from 'ember-cli-mdc-base/component';
+import MdcIconButtonBase from "../-private/mdc-icon-button-base";
 
-import { isPresent } from '@ember/utils';
-import { dasherize } from '@ember/string';
+export default class MdcIconButton extends MdcIconButtonBase {
 
-export default class MdcIconButton extends Component {
-  get iconClass () {
-    if (isPresent (this.args.iconClass)) {
-      return this.args.iconClass;
-    }
-    else if (isPresent (this.args.style)) {
-      return `material-icons-${dasherize (this.args.style)}`;
-    }
-    else {
-      return 'material-icons';
-    }
-  }
 };

@@ -20,9 +20,7 @@ export default class MaterialModifier extends Modifier {
     super (...arguments);
 
     registerDestructor (this, () => {
-      if (this._currentState) {
-        this._currentState.willDestroy ();
-      }
+      this.willDestroy ();
     });
   }
 
