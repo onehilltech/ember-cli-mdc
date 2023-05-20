@@ -36,7 +36,7 @@
     "test:g": "ember g ember-cli-mdc-typography"
   },
   "dependencies": {
-    "@material/typography": "^14.0.0",
+    """@material/typography": "^14.0.0",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-mdc-sass": "*",
