@@ -58,7 +58,6 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-bottom-navigation/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/bower_components" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/config" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/node_modules" />
       <excludeFolder url="file://$MODULE_DIR$/packages/mdc-button/tmp" />
