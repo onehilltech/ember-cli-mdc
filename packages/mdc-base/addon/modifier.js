@@ -15,12 +15,12 @@ export default class MaterialModifier extends Modifier {
   /// The current state of the modifier.
   _currentState;
 
-  constructor() {
+  constructor (owner, args) {
     super(...arguments);
 
     // Create the initial state for the modifier, and change to it.
-    let initialState = this.createInitialState();
-    this.changeState(initialState);
+    const initialState = this.createInitialState (owner, args);
+    this.changeState (initialState);
   }
 
   /**
