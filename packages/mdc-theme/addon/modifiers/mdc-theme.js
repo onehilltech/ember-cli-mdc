@@ -18,36 +18,30 @@ export default class MdcThemeModifier extends Modifier {
   /**
    * The modifier has received new/updated arguments.
    */
-  didReceiveArguments() {
+  modify (element, [cssPropertyName, value]) {
+    super.modify (...arguments);
+
     // Get the new property name from the arguments. If the name has changed, then
     // we need to remove the old property before setting the new one.
 
-    const cssPropertyName = this.cssPropertyName;
-    const value = this.value;
+    const mdcThemeCssPropertyName = `--mdc-theme-${dasherize(cssPropertyName)}`
 
-    if (this._currentCssPropertyName !== cssPropertyName) {
+    if (this._currentCssPropertyName !== mdcThemeCssPropertyName) {
       this._removeCssProperty();
     }
 
     if (isPresent(value)) {
-      this.element.style.setProperty(cssPropertyName, value);
-    } else {
-      this.element.style.removeProperty(cssPropertyName);
+      element.style.setProperty(mdcThemeCssPropertyName, value);
+    }
+    else {
+      element.style.removeProperty(mdcThemeCssPropertyName);
     }
 
-    this._currentCssPropertyName = cssPropertyName;
+    this._currentCssPropertyName = mdcThemeCssPropertyName;
   }
 
-  willRemove() {
+  willDestroy () {
     this._removeCssProperty();
-  }
-
-  get value() {
-    return this.args.positional[1];
-  }
-
-  get cssPropertyName() {
-    return `--mdc-theme-${dasherize(this.args.positional[0])}`;
   }
 
   /**
@@ -55,7 +49,7 @@ export default class MdcThemeModifier extends Modifier {
    *
    * @private
    */
-  _removeCssProperty() {
+  _removeCssProperty () {
     if (isPresent(this._currentCssPropertyName)) {
       this.element.style.removeProperty(this._currentCssPropertyName);
     }
