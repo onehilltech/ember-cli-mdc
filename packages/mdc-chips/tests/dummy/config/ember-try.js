@@ -42,7 +42,6 @@ module.exports = async function () {
         name: 'ember-canary',
         npm: {
           devDependencies: {
-<<<<<<< HEAD
             'ember-source': await getChannelURL('canary')
           }
         }
@@ -56,11 +55,6 @@ module.exports = async function () {
         npm: {
           devDependencies: {}
         }
-=======
-            'ember-source': await getChannelURL('canary'),
-          },
-        },
->>>>>>> 3469e329 (v3.18.0...v3.28.6)
       },
       embroiderSafe(),
       embroiderOptimized(),

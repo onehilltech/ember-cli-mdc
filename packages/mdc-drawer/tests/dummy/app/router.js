@@ -6,7 +6,6 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-<<<<<<< HEAD
 Router.map(function() {
   this.route('inbox');
   this.route('star');
@@ -16,6 +15,4 @@ Router.map(function() {
   this.route('spam');
   this.route('trash');
 });
-=======
-Router.map(function () {});
->>>>>>> 9df353ef (v3.18.0...v3.28.6)
+

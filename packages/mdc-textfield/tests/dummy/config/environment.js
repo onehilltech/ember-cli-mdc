@@ -18,15 +18,11 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-<<<<<<< HEAD
-
     'ember-cli-mdc': {
       textfield: {
         style: 'outlined',
       }
     }
-=======
->>>>>>> 6554fd42 (v3.18.0...v3.28.6)
   };
 
   if (environment === 'development') {

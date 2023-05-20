@@ -51,7 +51,6 @@ Add a menu component to the page.
 
 Use the `<MdcMenuList>` to add items to the menu.
 
-<<<<<<< HEAD
 ```handlebars
 <MdcMenu>
     <MdcMenuList>

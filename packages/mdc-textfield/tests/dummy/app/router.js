@@ -6,10 +6,7 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-<<<<<<< HEAD
 Router.map(function() {
 
 });
-=======
-Router.map(function () {});
->>>>>>> 6554fd42 (v3.18.0...v3.28.6)
+
