@@ -63,8 +63,7 @@ An icon button with toggle states.
 <MdcIconButtonToggle @isOn={{this.on}}
                      @on={{hash icon=name label=label}}
                      @off={{hash icon=name label=label}}
-                     @label={{label}}
-                     @change={{action}} />
+                     @label={{label}} />
 ```
 
 ### Attributes
