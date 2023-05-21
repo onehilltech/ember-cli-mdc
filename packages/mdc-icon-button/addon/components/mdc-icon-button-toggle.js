@@ -28,12 +28,8 @@ export default class MdcIconButtonToggle extends Component {
 
   @listener('MDCIconButtonToggle:change')
   change (ev) {
-    // Pass control to the base class first.
     this.didChange (ev);
-
-    // Now, notify the registered listener.
-    const { detail: { isOn }} = ev;
-    (this.args.change || noOp)(isOn);
+    this.dispatchEvent ('MdcIconButtonToggle:change', ev.detail);
   }
 
   didChange (ev) {

@@ -14,7 +14,7 @@
                        @label="Add to"
                        @on={{hash icon="favorite" label="Favorite"}}
                        @off={{hash icon="favorite_border"}}
-                       @change={{this.change}} />
+      {{on "MdcIconButtonToggle:change" this.change}} />
 </div>
 <div><b>State:</b> {{this.on}}</div>
 

@@ -73,7 +73,11 @@ An icon button with toggle states.
 * `@on` - Hash of properties for the icon when the button is on.
 * `@off` - Hash of properties for the icon when the button is off.
 * `@label` - ARIA label for accessibility.
-* `@change` - The action `f(isOn)` called when the button is toggled.
+
+### Events
+
+* `MdcIconButtonToggle:change` - Toggle button has changed state.
+  * `detail.isOn` - State of the toggle button
 
 ### Examples
 
@@ -82,5 +86,5 @@ An icon button with toggle states.
                      @on={{hash icon="favorite"}}
                      @off={{hash icon="favorite_border"}}
                      @label={{"Add to favorites"}}
-                     @change={{this.change}} />
+        {{on "MdcIconButtonToggle:change" this.change}} />
 ```

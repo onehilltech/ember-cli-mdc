@@ -18,8 +18,10 @@ export default class MaterialComponent extends Component {
 
   @action
   didInsert(element) {
+    Object.defineProperty (this, 'element', { value: element, configurable: false, writable: false });
+
     // Prepare the element for creation.
-    this.doPrepareElement(element);
+    this.doPrepareElement (element);
 
     // Create the material component.
     let component = this.doCreateComponent(element);
@@ -147,5 +149,20 @@ export default class MaterialComponent extends Component {
    */
   unlisten(eventName, method) {
     return this._component.unlisten(eventName, method);
+  }
+
+  /**
+   * Dispatch an event from the associated html element.
+   *
+   * @param name
+   * @param detail
+   */
+  dispatchEvent (name, detail = {}) {
+    // Set the component sending the event.
+    detail.$component = this;
+
+    // Create the custom event and dispatch it.
+    const ev = new CustomEvent (name, { detail });
+    this.element.dispatchEvent (ev);
   }
 }

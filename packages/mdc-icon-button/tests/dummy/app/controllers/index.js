@@ -8,11 +8,12 @@ export default class IndexController extends Controller {
 
   @action
   toggle () {
-    this.toggleProperty ('on');
+    this.on = !this.on;
   }
 
   @action
-  change (isOn) {
+  change (ev) {
+    const { detail: { isOn }} = ev;
     this.on = isOn;
   }
 
