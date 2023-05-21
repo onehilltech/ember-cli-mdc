@@ -1,16 +1,20 @@
 import MdcButtonBase from "../-private/-mdc-button-base";
 import { service } from '@ember/service';
-import { isPresent } from '@ember/utils';
+import { isPresent, isEmpty } from '@ember/utils';
 
 export default class MdcButtonLinkTo extends MdcButtonBase {
   @service
   router;
 
   get href () {
-    return this.args.href || this.routeUrl;
+    return this.args.href || this.routeUrl || '#';
   }
 
   get routeUrl () {
+    if (isEmpty (this.args.route)) {
+      return null;
+    }
+
     let options;
 
     if (isPresent(this.args.queryParams)) {

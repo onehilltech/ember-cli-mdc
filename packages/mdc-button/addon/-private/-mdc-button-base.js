@@ -15,6 +15,10 @@ export default class MdcButtonBase extends Component {
     return isPresent (style) ? `mdc-button--${style}` : null;
   }
 
+  get kind () {
+    return this.args.kind;
+  }
+
   get hasLeadingIcon () {
     return !!this.args.leadingIcon || !!this.args.leadingImage;
   }

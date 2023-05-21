@@ -17,11 +17,13 @@
     {{yield to="leading-svg"}}
   {{/if}}
 
-  {{#if (has-block)}}
-    <span class="mdc-button__label">{{yield}}</span>
-  {{else}}
-    <span class="mdc-button__label">{{@label}}</span>
-  {{/if}}
+  {{#unless @noLabel}}
+    {{#if @label}}
+      <span class="mdc-button__label">{{@label}}</span>
+    {{else if (has-block)}}
+      <span class="mdc-button__label">{{yield}}</span>
+    {{/if}}
+  {{/unless}}
 
   {{#if @trailingIcon}}
     <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
