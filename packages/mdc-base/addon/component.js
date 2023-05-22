@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 
 import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
+import { service } from '@ember/service';
 
 import Listener from './-internal/listener';
 
@@ -10,6 +11,9 @@ import Listener from './-internal/listener';
  * in the material-components-web framework.
  */
 export default class MaterialComponent extends Component {
+  @service
+  mdc;
+
   _component = null;
 
   get component() {
@@ -18,18 +22,31 @@ export default class MaterialComponent extends Component {
 
   @action
   didInsert(element) {
+    // Define the element property that represents the root html element for
+    // the component wrapper facade.
+
     Object.defineProperty (this, 'element', { value: element, configurable: false, writable: false });
 
     // Prepare the element for creation.
     this.doPrepareElement (element);
 
     // Create the material component.
-    let component = this.doCreateComponent(element);
+    const component = this.doCreateComponent (element);
 
-    if (isPresent(component)) {
-      this._checkComponent(component);
-      this._installComponent(component);
+    if (isPresent (component)) {
+      this._checkComponent (component);
+      this._installComponent (component);
     }
+
+    // Define the registration property. This will be used by the component to
+    // unregister itself with the framework.
+
+    Object.defineProperty (this, '_registration', {
+      value: this.mdc.registerComponent (this),
+      configurable: false,
+      writable: false,
+      enumerable: false
+    });
   }
 
   /**
@@ -37,13 +54,13 @@ export default class MaterialComponent extends Component {
    *
    * @param component
    */
-  replaceComponent(component) {
+  replaceComponent (component) {
     // Check the component is a valid material component.
     this._checkComponent(component);
 
     // Cleanup the current component's resources, and install the new component.
-    this._cleanup();
-    this._installComponent(component);
+    this._cleanup ();
+    this._installComponent (component);
   }
 
   /**
@@ -52,14 +69,13 @@ export default class MaterialComponent extends Component {
    * @param component
    * @private
    */
-  _installComponent(component) {
+  _installComponent (component) {
     // Save the component, and initialize it.
     this._component = component;
-    this.doInitComponent(component);
+    this.doInitComponent (component);
 
-    // Start listening for events.
     if (isPresent(this._listeners)) {
-      this._listeners.forEach((listener) => listener.listen(this));
+      this._listeners.forEach((listener) => listener.listen (this));
     }
   }
 
@@ -98,25 +114,27 @@ export default class MaterialComponent extends Component {
   doInitComponent(component) {}
 
   /**
-   * The component will be destroy. Perform any _cleanup operations so we do not have
+   * The component will be destroyed. Perform any _cleanup operations so we do not have
    * any resources being leaked.
    */
   willDestroy() {
-    super.willDestroy(...arguments);
-    this._cleanup();
+    super.willDestroy (...arguments);
+    this._cleanup ();
   }
 
   /**
    * Cleanup any resources used by the component.
    */
   _cleanup() {
-    if (isPresent(this._component)) {
-      if (isPresent(this._listeners)) {
-        this._listeners.forEach((listener) =>
-          listener.unlisten(this._component)
-        );
-      }
+    if (isPresent (this._component) && isPresent (this._listeners)) {
+      // Unregister the listeners so this component does not receive any more
+      // unwanted notifications.
+
+      this._listeners.forEach ((listener) => listener.unlisten (this._component));
     }
+
+    // Unregister this wrapper facade with the framework.
+    this._registration.unregister ();
   }
 
   /**

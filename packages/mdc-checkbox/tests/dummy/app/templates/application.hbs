@@ -1,18 +1,42 @@
-<h2 id="title">Checkboxes</h2>
+<h5>Checkboxes</h5>
 
-<h3>Checkbox with no Label</h3>
+<h6>Checkbox with no Label</h6>
 
 <div>
-  <div><MdcCheckbox @checked={{this.checked}} />{{this.checked}}</div>
-  <div><MdcCheckbox @checked={{true}} /></div>
-  <div><MdcCheckbox @checked={{true}} @disabled={{this.disabled}} /> <button {{on "click" this.toggleDisabled}}>Toggle Disabled</button></div>
+  <div><MdcCheckbox @checked={{this.checked}} {{on "input" (action (mut this.checked) value="target.checked")}} />{{this.checked}}</div>
+  <div><MdcCheckbox /></div>
+  <div><MdcCheckbox @disabled={{this.disabled}} />
+    <button {{on "click" this.toggleDisabled}}>Toggle Disabled</button>
+  </div>
 </div>
 
-<h3>Checkbox with Label</h3>
+<h6>Checkbox with Label</h6>
 
-<div><MdcCheckbox>This is a checkbox with a label</MdcCheckbox></div>
-<div><MdcCheckbox @alignEnd={{true}} @label="This is a checkbox with a label (align end)" /></div>
+<div>
+  <MdcFormField @label="This is a checkbox with a label">
+    <MdcCheckbox />
+  </MdcFormField>
+</div>
 
-<h3>Indeterminate</h3>
+<div>
+  <MdcFormField @label="This is a checkbox with a label (align end)" @alignEnd="true">
+    <MdcCheckbox />
+  </MdcFormField>
+</div>
 
-<div><MdcCheckbox @indeterminate="true" @label="This is an indeterminate checkbox" /></div>
+<div>
+  <MdcFormField>
+    <:label>This is a checkbox with a label</:label>
+    <:default><MdcCheckbox /></:default>
+  </MdcFormField>
+</div>
+
+<h6>Indeterminate</h6>
+
+<p>
+  <MdcFormField @label="This is an indeterminate checkbox">
+    <MdcCheckbox @indeterminate={{this.indeterminate}}  />
+  </MdcFormField>
+</p>
+
+<p><button {{on "click" (action (mut this.indeterminate true))}}>Set indeterminate</button></p>

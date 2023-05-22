@@ -1,3 +1,7 @@
-<div class="mdc-form-field {{if @alignEnd "mdc-form-field--align-end"}} {{if @noWrap "mdc-form-field--nowrap"}}" {{did-insert this.didInsert}}>
-  {{yield}}
+<div class="mdc-form-field {{if @alignEnd "mdc-form-field--align-end"}} {{if @noWrap "mdc-form-field--nowrap"}}"
+  {{did-insert this.didInsert}}>
+
+  {{yield this.id}}
+
+  <label for={{this.id}}>{{#if @label}}{{@label}}{{else}}{{yield to="label"}}{{/if}}</label>
 </div>
