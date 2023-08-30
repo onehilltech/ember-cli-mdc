@@ -14,7 +14,6 @@ Components
 This package contains the following top-level components.
 
 * [`<MdcCheckbox>`](#mdc-checkbox)
-* [`<MdcCheckboxWithLabel>`](#mdc-checkbox-with-label)
 
 MdcCheckbox
 ---------------------
@@ -34,24 +33,23 @@ A standalone checkbox input element that does not contain a label.
 * **`checked`** - The checkbox is checked.
 * **`disabled`** - The checkbox is disabled.
 
-MdcCheckboxWithLabel
+Labels using Form Fields
 ------------------------------
 
-### Description
+Use the `<MdcFormField>` component when you want to add a label to the checkbox
+component. You can use the `@label` attribute, or the `<:label>` named template.
 
-A checkbox input element that contains a label.
-
-### Usage
+> We recommend you use `@label` for simple labels, and `<:label>` for complex labels.
 
 ```handlebars
-<MdcCheckboxWithLabel checked=checked disabled=disabled alignEnd=true
-  This is a checkbox that contains a label. You can add HTML styling 
-  tags here to make a more complex label.
-</MdcCheckboxWithLabel>
+<!-- This example use the @label attribute -->
+<MdcFormField @label="This is an example checkbox with label">
+  <MdcCheckbox />
+</MdcFormField>
+
+<!-- This example use the <:label> named block -->
+<MdcFormField @label="This is an example checkbox with label">
+    <:label>"This is an example checkbox with label"</:label>
+    <:default><MdcCheckbox /></:default>
+</MdcFormField>
 ```
-
-### Attributes
-
-* **`checked`** - The checkbox is checked.
-* **`disabled`** - The checkbox is disabled.
-* **`alignEnd`** - Align the checkbox after the label.
