@@ -1,17 +1,13 @@
 import Controller from '@ember/controller';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
-export default Controller.extend ({
-  actions: {
-    snackbar (options) {
-      this.snackbar.show (options);
-    },
+export default class IndexController extends Controller {
+  @service
+  snackbar;
 
-    undo () {
-      alert ('Undo!');
-    },
-
-    dismiss () {
-      alert ('Dismissed!');
-    }
+  @action
+  showMessage () {
+    this.snackbar.show ('Hello, World!');
   }
-});
+}

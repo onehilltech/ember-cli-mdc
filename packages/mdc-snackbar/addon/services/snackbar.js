@@ -7,9 +7,9 @@ import { action } from '@ember/object';
 import { assert } from '@ember/debug';
 import { isString } from 'lodash';
 
-function noOp () { }
+import { MDCSnackbar } from '@material/snackbar';
 
-const { MDCSnackbar } = mdc.snackbar;
+function noOp () { }
 
 export default class SnackbarService extends Service {
   _snackbar = null;
