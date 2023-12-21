@@ -156,7 +156,7 @@ export default class SnackbarService extends Service {
   _cleanup () {
     if (isPresent (this._snackbar)) {
       // Remove the root element embedded in the snackbar component.
-      this._snackbar.root_.remove ();
+      this._snackbar.root.remove ();
 
       // Destroy the snackbar component.
       this._snackbar.destroy ();
