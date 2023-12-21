@@ -1,5 +1,4 @@
 import ChipSetComponent from './mdc-chip-set';
-import listener from 'ember-cli-mdc-base/listener';
 
 import { A } from '@ember/array';
 import { isPresent } from '@ember/utils';

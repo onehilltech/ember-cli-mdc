@@ -1,12 +1,10 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 import { action, get } from '@ember/object';
 import { isPresent, isNone } from '@ember/utils';
 import { dasherize } from '@ember/string';
 
-import { MDCChipSet } from '@material/chips';
+import { MDCChipSet } from '@material/chips/deprecated';
 
 function noOp () {}
 
@@ -17,7 +15,7 @@ export default class MdcChipSetComponent extends Component {
 
   doInitComponent (component) {
     component.chips.forEach ((chip) => {
-      chip.shouldRemoveOnTrailingIconClick = this.isManagedChip (chip) || isNone (chip.root_.dataset.permanent);
+      chip.shouldRemoveOnTrailingIconClick = this.isManagedChip (chip) || isNone (chip.root.dataset.permanent);
     });
   }
 
