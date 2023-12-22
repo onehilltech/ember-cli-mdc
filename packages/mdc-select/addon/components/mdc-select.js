@@ -59,11 +59,11 @@ export default class MdcSelectComponent extends Component {
       // component has the text over the initial selection.
 
 
-      const notchedOutline = component.root_.querySelector ('.mdc-notched-outline');
+      const notchedOutline = component.root.querySelector ('.mdc-notched-outline');
       notchedOutline.classList.add ('mdc-notched-outline--notched');
 
       if (isPresent (this.args.label)) {
-        const floatingLabel = component.root_.querySelector ('.mdc-floating-label');
+        const floatingLabel = component.root.querySelector ('.mdc-floating-label');
         floatingLabel.classList.add ('mdc-floating-label--float-above');
       }
     }

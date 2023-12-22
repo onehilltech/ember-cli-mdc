@@ -1,11 +1,11 @@
-<li class="mdc-list-item
-  {{if @selected "mdc-list-item--selected"}}
-  {{if @activated "mdc-list-item--activated"}}
-  {{if @disabled "mdc-list-item--disabled"}}"
+<li class="mdc-deprecated-list-item
+  {{if @selected "mdc-deprecated-list-item--selected"}}
+  {{if @activated "mdc-deprecated-list-item--activated"}}
+  {{if @disabled "mdc-deprecated-list-item--disabled"}}"
     aria-selected={{@selected}}
     tabindex={{if @selected 0}}
     ...attributes>
-  <span class="mdc-list-item__ripple"></span>
+  <span class="mdc-deprecated-list-item__ripple"></span>
 
   {{#if (has-block)}}
     {{yield}}
