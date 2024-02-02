@@ -8,8 +8,8 @@ const DEFAULT_DELAY = 1000;
 class MovingState extends ModifierState {
   intervalId;
 
-  get delay() {
-    return this.args.named.delay || DEFAULT_DELAY;
+  get delay () {
+    return this.modifier.named.delay || DEFAULT_DELAY;
   }
 
   didEnterState() {
@@ -18,10 +18,6 @@ class MovingState extends ModifierState {
 
   willExitState() {
     clearInterval(this.intervalId);
-  }
-
-  didReceiveArguments() {
-    this.changeState(new MovingState());
   }
 
   @action moveElement() {
@@ -36,7 +32,7 @@ class MovingState extends ModifierState {
 }
 
 class NotMovingState extends ModifierState {
-  didInstall() {
+  didEnterState() {
     this.changeState(new MovingState());
   }
 }

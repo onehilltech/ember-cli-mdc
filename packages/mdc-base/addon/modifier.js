@@ -16,12 +16,33 @@ export default class MaterialModifier extends Modifier {
   /// The current state of the modifier.
   _currentState;
 
+  /// The HTML DOM element the modifier is attached to.
+  _element;
+
+  /// The positional arguments of the modifier.
+  _args;
+
+  /// The named arguments of the modifier.
+  _named;
+
   constructor (owner, args) {
     super (...arguments);
 
     registerDestructor (this, () => {
       this.willDestroy ();
     });
+  }
+
+  get element () {
+    return this._element;
+  }
+
+  get named () {
+    return this._named || {}
+  }
+
+  get args () {
+    return this._args || [];
   }
 
   /**
@@ -57,11 +78,14 @@ export default class MaterialModifier extends Modifier {
     }
   }
 
+
   /**
    * The modifier has been installed in an element.
    */
-  modify (element) {
-    this.element = element;
+  modify (element, args, named) {
+    this._element = element;
+    this._args = args;
+    this._named = named;
 
     if (!!this._currentState) {
       this._currentState.didModify (...arguments);

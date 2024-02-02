@@ -10,6 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/addon/modifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/modifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/modifiers/move-randomly.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/tests/dummy/app/modifiers/move-randomly.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,19 +59,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "v3",
+    "node.js.detected.package.ember-template-lint": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.ember-template-lint": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/ember-template-lint",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/hilljh/.nvm/versions/node/v20.11.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
@@ -84,7 +90,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-animation]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-base]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -354,7 +360,7 @@
       <workItem from="1704762812094" duration="1337000" />
       <workItem from="1705418768839" duration="85000" />
       <workItem from="1705418860493" duration="598000" />
-      <workItem from="1706763786575" duration="1312000" />
+      <workItem from="1706763786575" duration="4554000" />
     </task>
     <servers />
   </component>
