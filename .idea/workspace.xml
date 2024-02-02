@@ -10,10 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/packages/mdc-theme/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-theme/README.md" afterDir="false" />
-=======
->>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +40,9 @@
     <setting file="file://$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-bottom-navigation/addon/styles/addon.scss" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/packages/mdc-menu/addon/components/mdc-dropdown-menu.hbs" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-<<<<<<< HEAD
-=======
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
->>>>>>> master
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/packages/mdc-dialog/package.json" />
@@ -64,39 +57,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="settings.editor.splitter.proportion" value="0.25382262" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/james/Projects/onehilltech/ember-cli-mdc/node_modules/prettier&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
->>>>>>> master
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
@@ -111,165 +84,143 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-theme]: dummy application">
-=======
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
-    <configuration default="true" type="EMBER_SERVE_CONFIGURATION" factoryName="Ember Serve">
-      <option name="PORT" value="" />
-      <option name="HOST" value="" />
-      <option name="ENVIRONMENT" value="development" />
-      <option name="OUTPUT_PATH" value="" />
-      <option name="WATCHER" value="" />
-      <option name="PROXY" value="" />
-      <option name="PROXY_SECURE" value="true" />
-      <option name="PROXY_TRANSPARENT" value="true" />
-      <option name="LIVE_RELOAD" value="true" />
-      <option name="LIVE_RELOAD_HOST" value="" />
-      <option name="LIVE_RELOAD_BASE_URL" value="" />
-      <option name="LIVE_RELOAD_PORT" value="" />
-      <option name="SSL" value="false" />
-      <option name="SSL_KEY" value="" />
-      <option name="SSL_CERT" value="" />
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-animation]: dummy application">
+    <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
->>>>>>> master
-    <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
+    <configuration name="[ember-cli-mdc-base]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-base">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-base]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-base">
+    <configuration name="[ember-cli-mdc-bottom-navigation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-bottom-navigation">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-bottom-navigation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-bottom-navigation">
+    <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-button">
+    <configuration name="[ember-cli-mdc-card]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-card">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-card]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-card">
+    <configuration name="[ember-cli-mdc-checkbox]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-checkbox">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-checkbox]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-checkbox">
+    <configuration name="[ember-cli-mdc-chips]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-chips">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-chips]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-chips">
+    <configuration name="[ember-cli-mdc-circular-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-circular-progress">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-circular-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-circular-progress">
+    <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-data-table]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-data-table">
+    <configuration name="[ember-cli-mdc-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-dialog">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-dialog]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-dialog">
+    <configuration name="[ember-cli-mdc-drawer]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-drawer">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-drawer]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-drawer">
+    <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-elevation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-elevation">
+    <configuration name="[ember-cli-mdc-fab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-fab">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-fab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-fab">
+    <configuration name="[ember-cli-mdc-floating-label]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-floating-label">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-floating-label]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-floating-label">
+    <configuration name="[ember-cli-mdc-form-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form-field">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-form-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form-field">
+    <configuration name="[ember-cli-mdc-form]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-form]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-form">
+    <configuration name="[ember-cli-mdc-icon-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon-button">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-icon-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon-button">
+    <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-node="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-icon]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-node="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-icon">
+    <configuration name="[ember-cli-mdc-image-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-image-list">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-image-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-image-list">
+    <configuration name="[ember-cli-mdc-layout-grid]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout-grid">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-layout-grid]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout-grid">
+    <configuration name="[ember-cli-mdc-layout]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-layout]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-layout">
+    <configuration name="[ember-cli-mdc-line-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-line-ripple">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-line-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-line-ripple">
+    <configuration name="[ember-cli-mdc-linear-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-linear-progress">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-linear-progress]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-linear-progress">
+    <configuration name="[ember-cli-mdc-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-list">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-list]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-list">
+    <configuration name="[ember-cli-mdc-menu-surface]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu-surface">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-menu-surface]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu-surface">
+    <configuration name="[ember-cli-mdc-menu]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-menu]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-menu">
+    <configuration name="[ember-cli-mdc-notched-outline]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-notched-outline">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-notched-outline]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-notched-outline">
+    <configuration name="[ember-cli-mdc-radio]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-radio">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-radio]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-radio">
+    <configuration name="[ember-cli-mdc-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-ripple">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-ripple]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-ripple">
+    <configuration name="[ember-cli-mdc-rtl]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-rtl">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-rtl]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-rtl">
+    <configuration name="[ember-cli-mdc-sass]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-sass">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-sass]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.17.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-sass">
+    <configuration name="[ember-cli-mdc-select]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-select">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-select]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-select">
+    <configuration name="[ember-cli-mdc-shape]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-shape">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-shape]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-shape">
+    <configuration name="[ember-cli-mdc-slider]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-slider">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-slider]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-slider">
+    <configuration name="[ember-cli-mdc-snackbar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-snackbar">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-snackbar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-snackbar">
+    <configuration name="[ember-cli-mdc-switch]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-switch">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-switch]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-switch">
+    <configuration name="[ember-cli-mdc-tab-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-bar">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-tab-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-bar">
+    <configuration name="[ember-cli-mdc-tab-indicator]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-indicator">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-tab-indicator]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-indicator">
+    <configuration name="[ember-cli-mdc-tab-scroller]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-scroller">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-tab-scroller]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab-scroller">
+    <configuration name="[ember-cli-mdc-tab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-tab]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tab">
+    <configuration name="[ember-cli-mdc-tabs]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tabs">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-tabs]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-tabs">
+    <configuration name="[ember-cli-mdc-text-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-node="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/node" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-textfield">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-text-field]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-node="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-textfield">
+    <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-theme]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.17.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-theme">
+    <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-top-app-bar]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-top-app-bar">
+    <configuration name="[ember-cli-mdc-touch-target]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-touch-target">
       <method v="2" />
     </configuration>
-    <configuration name="[ember-cli-mdc-touch-target]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v10.16.3/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-touch-target">
-      <method v="2" />
-    </configuration>
-    <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.17.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
+    <configuration name="[ember-cli-mdc-typography]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v20.11.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-typography">
       <method v="2" />
     </configuration>
     <list>
@@ -390,7 +341,6 @@
       <workItem from="1609595871518" duration="100000" />
       <workItem from="1609596005765" duration="377000" />
       <workItem from="1609601537295" duration="3777000" />
-<<<<<<< HEAD
       <workItem from="1609782909164" duration="27680000" />
       <workItem from="1610066547879" duration="7913000" />
       <workItem from="1610077203943" duration="8792000" />
@@ -400,124 +350,11 @@
       <workItem from="1678986732835" duration="599000" />
       <workItem from="1679022541480" duration="94000" />
       <workItem from="1679023932382" duration="19600000" />
-=======
-      <workItem from="1609782909164" duration="19566000" />
-      <workItem from="1610722593022" duration="2280000" />
-      <workItem from="1610980097471" duration="1800000" />
-      <workItem from="1611086094451" duration="8769000" />
-      <workItem from="1611519765908" duration="1109000" />
-      <workItem from="1611629959332" duration="351000" />
-      <workItem from="1611641029212" duration="734000" />
-      <workItem from="1611767574913" duration="8235000" />
-      <workItem from="1612477525768" duration="2835000" />
-      <workItem from="1612757788624" duration="5208000" />
-      <workItem from="1613021800588" duration="8355000" />
-      <workItem from="1614229271126" duration="1711000" />
-      <workItem from="1614828893318" duration="3062000" />
-      <workItem from="1615304762059" duration="585000" />
-      <workItem from="1615316592646" duration="1041000" />
-      <workItem from="1615328468808" duration="947000" />
-      <workItem from="1615912527785" duration="736000" />
-      <workItem from="1616032806130" duration="770000" />
-      <workItem from="1616550031925" duration="111000" />
-      <workItem from="1616729656805" duration="41000" />
-      <workItem from="1617640614116" duration="1362000" />
-      <workItem from="1618373058610" duration="632000" />
-      <workItem from="1618410893777" duration="841000" />
-      <workItem from="1618981351036" duration="761000" />
-      <workItem from="1619372929268" duration="1645000" />
-      <workItem from="1619613388518" duration="534000" />
-      <workItem from="1619887381418" duration="725000" />
-      <workItem from="1619927978255" duration="747000" />
-      <workItem from="1620094969950" duration="746000" />
-      <workItem from="1620147543256" duration="612000" />
-      <workItem from="1620777625072" duration="1923000" />
-      <workItem from="1621820032677" duration="704000" />
-      <workItem from="1622749369558" duration="1040000" />
-      <workItem from="1623733043375" duration="388000" />
-      <workItem from="1624557694653" duration="3970000" />
-      <workItem from="1625176174676" duration="827000" />
-      <workItem from="1626272828752" duration="7065000" />
-      <workItem from="1626886120144" duration="2580000" />
-      <workItem from="1628567285675" duration="5000" />
-      <workItem from="1628641456014" duration="1287000" />
-      <workItem from="1629297985730" duration="598000" />
-      <workItem from="1634148038357" duration="1298000" />
-      <workItem from="1635253484304" duration="1900000" />
-      <workItem from="1637035188579" duration="319000" />
-      <workItem from="1637120877166" duration="1513000" />
-      <workItem from="1637191961326" duration="598000" />
-      <workItem from="1637198253510" duration="237000" />
-      <workItem from="1641850126570" duration="1034000" />
-      <workItem from="1642823268527" duration="1661000" />
-      <workItem from="1642831008043" duration="3000" />
-      <workItem from="1642862943350" duration="230000" />
-      <workItem from="1645102861956" duration="1530000" />
-      <workItem from="1645400809028" duration="1138000" />
-      <workItem from="1645919348418" duration="938000" />
-      <workItem from="1646368820939" duration="1836000" />
-      <workItem from="1647219668730" duration="646000" />
-      <workItem from="1647347955106" duration="1242000" />
-      <workItem from="1647399261103" duration="1099000" />
-      <workItem from="1648482209987" duration="739000" />
-      <workItem from="1648492867616" duration="1164000" />
-      <workItem from="1648747060063" duration="2120000" />
-      <workItem from="1649212390853" duration="1571000" />
-      <workItem from="1649277203952" duration="3571000" />
-      <workItem from="1649709065426" duration="2457000" />
-      <workItem from="1649887636494" duration="2525000" />
-      <workItem from="1650311949347" duration="1183000" />
-      <workItem from="1650758352618" duration="11000" />
-      <workItem from="1650764131660" duration="1324000" />
-      <workItem from="1651503575481" duration="2569000" />
-      <workItem from="1651688502920" duration="13056000" />
-      <workItem from="1652472083390" duration="8101000" />
-      <workItem from="1652662945212" duration="568000" />
-      <workItem from="1653744846962" duration="15926000" />
-      <workItem from="1655151147084" duration="10148000" />
-      <workItem from="1656463612392" duration="1153000" />
-      <workItem from="1656509568162" duration="2113000" />
-      <workItem from="1656598157535" duration="3533000" />
-      <workItem from="1657543171412" duration="369000" />
-      <workItem from="1657592163477" duration="1802000" />
-      <workItem from="1658076050946" duration="18000" />
-      <workItem from="1658076591814" duration="1938000" />
-      <workItem from="1658161447266" duration="729000" />
-      <workItem from="1658244172486" duration="580000" />
-      <workItem from="1658450244736" duration="30000" />
-      <workItem from="1661906035140" duration="997000" />
-      <workItem from="1661961883844" duration="456000" />
-      <workItem from="1662256673577" duration="596000" />
-      <workItem from="1662424455054" duration="394000" />
-      <workItem from="1662566282346" duration="546000" />
-      <workItem from="1662775946183" duration="612000" />
-      <workItem from="1665519497863" duration="690000" />
-      <workItem from="1666640906492" duration="27000" />
-      <workItem from="1666703959683" duration="1007000" />
-      <workItem from="1666923859155" duration="1801000" />
-      <workItem from="1666926641433" duration="2188000" />
-      <workItem from="1668659407724" duration="9589000" />
-      <workItem from="1669085364291" duration="110000" />
-      <workItem from="1669696220590" duration="607000" />
-      <workItem from="1670387891810" duration="890000" />
-      <workItem from="1670984966468" duration="722000" />
-      <workItem from="1671825974413" duration="1595000" />
-      <workItem from="1672195895788" duration="5396000" />
-      <workItem from="1672379656380" duration="572000" />
-      <workItem from="1672637002349" duration="617000" />
-      <workItem from="1673149514633" duration="281000" />
-      <workItem from="1673449064162" duration="585000" />
-      <workItem from="1673499692182" duration="540000" />
-      <workItem from="1673974239706" duration="616000" />
-      <workItem from="1674917969253" duration="925000" />
-      <workItem from="1674955690450" duration="1477000" />
-      <workItem from="1675010559781" duration="570000" />
-      <workItem from="1676478450041" duration="66000" />
-      <workItem from="1681305918882" duration="1808000" />
-      <workItem from="1682387515392" duration="65000" />
-      <workItem from="1683819618387" duration="363000" />
-      <workItem from="1683942658548" duration="2286000" />
->>>>>>> master
+      <workItem from="1704760096584" duration="547000" />
+      <workItem from="1704762812094" duration="1337000" />
+      <workItem from="1705418768839" duration="85000" />
+      <workItem from="1705418860493" duration="598000" />
+      <workItem from="1706763786575" duration="1312000" />
     </task>
     <servers />
   </component>
@@ -576,13 +413,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/ember-cli-mdc-sass/lib/sass/plugin.js</url>
           <line>23</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/ember-cli-mdc-sass/lib/sass/compiler.js</url>
           <line>25</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
