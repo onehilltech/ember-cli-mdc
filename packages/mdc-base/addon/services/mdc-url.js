@@ -42,4 +42,11 @@ export default class MdcUrlService extends Service {
       }
     }
   }
+
+  isActive (component) {
+    const url = this.fromComponent (component);
+    const currentUrl = this.router.currentURL;
+
+    return url === currentUrl;
+  }
 }

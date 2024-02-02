@@ -1,7 +1,7 @@
 <a href={{this.href}} class="mdc-bottom-navigation__button mdc-bottom-navigation__link
   {{if @label 'mdc-bottom-navigation__button--with-label'}}
   {{if @horizontal 'mdc-bottom-navigation__button--horizontal'}}
-  {{if @active 'mdc-bottom-navigation--active'}}"
+  {{if this.isActive 'mdc-bottom-navigation--active'}}"
   {{mdc-ripple unbounded=false}} ...attributes
   {{did-insert this.didInsert}}>
   {{#if (has-block)}}

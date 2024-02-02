@@ -8,4 +8,8 @@ export default class MdcBottomNavigationLinkComponent extends Component {
   get href () {
     return this.mdcUrl.fromComponent (this);
   }
+
+  get isActive () {
+    return this.mdcUrl.isActive (this);
+  }
 }
