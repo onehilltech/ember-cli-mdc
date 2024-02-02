@@ -1,2 +1,7 @@
 @import "app-theme";
 @import "@material/circular-progress/mdc-circular-progress";
+
+.mdc-circular-progress {
+  height: var(--mdc-circular-progress-height);
+  width: var(--mdc-circular-progress-width);
+}

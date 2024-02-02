@@ -1,10 +1,11 @@
 <div class="mdc-circular-progress {{this.sizeClassName}} {{if @closed "mdc-circular-progress--closed"}}"
-     style="width:{{this.width}};height:{{this.height}};"
      role="progressbar"
      aria-label={{@label}} aria-valuemin="0" aria-valuemax="1"
     {{did-insert this.didInsert}}
     {{did-update this.setProgress value=@value max=@max min=@min}}
     {{did-update this.setIndeterminate @indeterminate}}
+    {{custom-property "--mdc-circular-progress-height" this.height}}
+    {{custom-property "--mdc-circular-progress-width" this.width}}
     ...attributes>
   <div class="mdc-circular-progress__determinate-container">
     <svg class="mdc-circular-progress__determinate-circle-graphic"
