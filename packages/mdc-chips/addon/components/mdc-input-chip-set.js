@@ -1,6 +1,6 @@
 import ChipSet from './mdc-chip-set';
 
-import { action, getWithDefault } from '@ember/object';
+import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 function noOp () {
@@ -11,7 +11,8 @@ export default class MdcInputChipSetComponent extends ChipSet {
   type = 'input';
 
   get breakOnSpace () {
-    return getWithDefault (this.args, 'breakOnSpace', false);
+    const { breakOnSpace = false } = this.args;
+    return breakOnSpace;
   }
 
   customKeyCode (keyCode) {
