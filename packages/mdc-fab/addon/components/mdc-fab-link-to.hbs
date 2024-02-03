@@ -1,6 +1,13 @@
-<div class="mdc-fab__ripple"></div>
-<MdcIcon @icon={{@icon}} class="mdc-fab__icon" />
+<a href={{this.href}} class="mdc-fab
+  {{if @label "mdc-fab--extended"}}
+  {{if @exited "mdc-fab--exited"}}
+  {{if @mini "mdc-fab--mini"}} {{this.positionClassName}}"
+   aria-label={{@label}}
+   ...attributes>
+  <div class="mdc-fab__ripple"></div>
+  <MdcIcon @icon={{@icon}} class="mdc-fab__icon" />
 
-{{#if @label}}
-  <span class="mdc-fab__label">{{@label}}</span>
-{{/if}}
+  {{#if @label}}
+    <span class="mdc-fab__label">{{@label}}</span>
+  {{/if}}
+</a>

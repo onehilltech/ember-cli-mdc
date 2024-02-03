@@ -1,16 +1,11 @@
-import LinkComponent from '@ember/routing/link-component';
-import { computed } from '@ember/object';
-import { dasherize } from '@ember/string';
+import MdcFabComponent from './mdc-fab';
+import { service } from '@ember/service';
 
-export default LinkComponent.extend ({
-  classNames: ['mdc-fab'],
+export default class MdcFabLinkToComponent extends MdcFabComponent {
+  @service
+  mdcUrl;
 
-  classNameBindings: ['label:mdc-fab--extended', 'exited:mdc-fab--exited', 'mini:mdc-fab--mini', 'positionClassName'],
-
-  positionClassName: computed ('position', function () {
-    const position = this.position || 'bottomRight';
-    return `mdc-fab--${dasherize (position)}`;
-  }),
-
-  position: null,
-})
+  get href () {
+    return this.mdcUrl.fromComponent (this);
+  }
+}

@@ -60,8 +60,8 @@
     &-label {
       margin-right: 16px;
 
-      @include theme.prop(background-color, surface);
-      @include theme.prop(color, text-primary-on-light);
+      @include theme.property(background-color, surface);
+      @include theme.property(color, text-primary-on-light);
 
       @include elevation.elevation(1);
       @include shape.radius(4px);
