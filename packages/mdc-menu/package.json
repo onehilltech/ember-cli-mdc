@@ -39,7 +39,8 @@
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
     "ember-cli-mdc-sass": "*",
-    "ember-cli-mdc-utils": "*"
+    "ember-cli-mdc-utils": "*",
+    "ember-cli-mdc-icon-button": "*"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
