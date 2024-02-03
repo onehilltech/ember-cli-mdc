@@ -1,31 +1,5 @@
-/* globals mdc */
-
-import Modifier from 'ember-modifier';
+import { Modifier, ModifierState } from 'ember-cli-mdc-base';
 import { MDCLineRipple } from '@material/line-ripple';
-
-/**
- * The base class for all modifier states. The ModifierState class uses the State
- * software design pattern. This helps us remove the unnecessary if-else, switch-case
- * statements that can result from the modifier being in different states.
- */
-class ModifierState {
-  didInstall () {
-
-  }
-
-  didReceiveArguments () {
-
-  }
-
-  willRemove () {
-
-  }
-}
-
-/**
- * The not installed state of the modifier.
- */
-class NotInstalled extends ModifierState { }
 
 /**
  * The installed state of the modifier.
@@ -35,18 +9,12 @@ class Installed extends ModifierState {
   lineRipple;
   active = false;
 
-  constructor (modifier) {
-    super ();
-
-    this.modifier = modifier;
-  }
-
-  didInstall () {
+  didEnterState () {
     this.lineRipple = new MDCLineRipple (this.modifier.element);
     this.modifier.element.classList.add ('mdc-line-ripple');
   }
 
-  didReceiveArguments () {
+  didModify () {
     const { rippleCenter, activate } = this.modifier.args.named;
 
     if (rippleCenter) {
@@ -65,18 +33,7 @@ class Installed extends ModifierState {
 }
 
 export default class MdcLineRippleModifier extends Modifier {
-  _state = new NotInstalled ();
-
-  didInstall () {
-    this._state = new Installed (this);
-    this._state.didInstall ();
-  }
-
-  didReceiveArguments () {
-    this._state.didReceiveArguments ();
-  }
-
-  willRemove () {
-    this._state.willRemove ();
+  createInitialState () {
+    return new Installed ();
   }
 }

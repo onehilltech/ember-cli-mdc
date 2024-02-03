@@ -1,6 +1,7 @@
 import Modifier from 'ember-modifier';
 import { assert } from '@ember/debug';
 import { registerDestructor } from '@ember/destroyable';
+import { isPresent } from '@ember/utils';
 
 /**
  * The base class for all modifiers used in the ember-cli-mdc framework. This modifier
@@ -88,12 +89,16 @@ export default class MaterialModifier extends Modifier {
     this._named = named;
 
     if (!!this._currentState) {
-      this._currentState.didModify (...arguments);
+      const state = this._currentState.didModify (...arguments);
+
+      if (isPresent (state)) {
+        this.changeState (state);
+      }
     }
     else {
       // Create the initial state for the modifier, and change to it.
-      const initialState = this.createInitialState (...arguments);
-      this.changeState (initialState);
+      const state = this.createInitialState (...arguments);
+      this.changeState (state);
     }
   }
 
@@ -113,7 +118,7 @@ export default class MaterialModifier extends Modifier {
  * software design pattern. This helps us remove the unnecessary if-else, switch-case
  * statements that can result from the modifier being in different states.
  */
-class ModifierState {
+export class ModifierState {
   /// The modifier that owns the state.
   modifier;
 
@@ -161,6 +166,4 @@ class ModifierState {
 /**
  * The default initial state for the modifier if one is not provided.
  */
-class NotInstalled extends ModifierState {}
-
-export { ModifierState, NotInstalled };
+export class NotInstalled extends ModifierState {}

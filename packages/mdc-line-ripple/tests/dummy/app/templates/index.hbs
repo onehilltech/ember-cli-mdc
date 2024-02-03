@@ -1,18 +1,18 @@
 <h2>Line Ripple</h2>
 
-<div class="line-ripple-container">
+<!-- div class="line-ripple-container">
   <MdcLineRipple @activate={{this.active}} @rippleCenter={{5}} />
-</div>
+</div -->
 
 <h3>Using Modifiers</h3>
 
 <div class="line-ripple-container">
-  <div {{mdc-line-ripple activate=active}} />
+  <div {{mdc-line-ripple activate=this.active}} />
 </div>
 
-<div class="line-ripple-container">
-  <div {{mdc-line-ripple activate=active rippleCenter=40}} />
-</div>
+<!-- div class="line-ripple-container">
+  <div {{mdc-line-ripple activate=this.active rippleCenter=40}} />
+</div -->
 
 <button {{on "click" this.activate}}>Activate</button>
 <button {{on "click" this.deactivate}}>Deactivate</button>
