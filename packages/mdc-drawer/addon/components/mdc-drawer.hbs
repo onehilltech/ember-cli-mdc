@@ -3,11 +3,13 @@
   {{did-update this.recreate @style}}
   {{did-update this.toggleOpen @open}}>
   {{yield (hash
-              isPermanent=isPermanent
-              isDismissible=isDismissible
-              isModal=isModal)}}
+              isPermanent=this.isPermanent
+              isDismissible=this.isDismissible
+              isModal=this.isModal)}}
 </aside>
 
 {{#if this.isModal}}
-  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-scrim">
+
+  </div>
 {{/if}}
