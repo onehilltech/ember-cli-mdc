@@ -1,7 +1,7 @@
-import MdcButtonBase from "../-private/-mdc-button-base";
+import MdcButtonComponent from './mdc-button';
 import { service } from '@ember/service';
 
-export default class MdcButtonLinkTo extends MdcButtonBase {
+export default class MdcButtonLinkTo extends MdcButtonComponent {
   @service
   mdcUrl;
 
