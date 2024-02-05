@@ -31,7 +31,7 @@ export default class MdcDialogComponent extends Component {
       contentElement.id = `${guid}__content`;
       element.setAttribute ('aria-describedby', contentElement.id);
 
-      this.compact = !!contentElement.querySelector ('.mdc-list');
+      this.compact = !!contentElement.querySelector (':scope > .mdc-list');
     }
   }
 
