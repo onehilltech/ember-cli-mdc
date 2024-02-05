@@ -10,9 +10,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-native-control.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio-native-control.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/addon/components/mdc-radio.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-radio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-input.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider-input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/app/components/mdc-slider-input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +98,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-radio]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-slider]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -361,7 +368,7 @@
       <workItem from="1704762812094" duration="1337000" />
       <workItem from="1705418768839" duration="85000" />
       <workItem from="1705418860493" duration="598000" />
-      <workItem from="1706763786575" duration="20245000" />
+      <workItem from="1706763786575" duration="27616000" />
     </task>
     <servers />
   </component>

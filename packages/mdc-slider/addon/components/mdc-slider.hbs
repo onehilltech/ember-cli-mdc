@@ -1,23 +1,78 @@
-<div class="mdc-slider {{if @discrete "mdc-slider--discrete"}} {{if @displayMarkers "mdc-slider--display-markers"}}"
+<div class="mdc-slider
+  {{if @disabled "mdc-slider--disabled"}}
+  {{if @discrete "mdc-slider--discrete"}}
+  {{if @tickMarks "mdc-slider--tick-marks"}}
+  {{if this.isRangeSlider "mdc-slider--range"}}"
     {{did-insert this.didInsert}}
     {{did-update this.setValue @value}}
-     ...attributes>
-
-  <input class="mdc-slider__input"
-         type="range"
-         min={{this.min}}
-         max={{this.max}}
-         step={{this.step}}
-         name={{@name}}
-         aria-label={{@label}} />
+    {{did-update this.setLimits @min @max @step}}
+     ...attributes
+     data-min-range={{@minRange}}>
 
   <div class="mdc-slider__track">
     <div class="mdc-slider__track--inactive"></div>
     <div class="mdc-slider__track--active">
       <div class="mdc-slider__track--active_fill"></div>
     </div>
+
+    {{#if @tickMarks}}
+      <div class="mdc-slider__tick-marks"></div>
+    {{/if}}
   </div>
+
   <div class="mdc-slider__thumb">
+    {{#if @discrete}}
+      <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+        <div class="mdc-slider__value-indicator">
+          {{#if this.isRangeSlider}}
+            <span class="mdc-slider__value-indicator-text">{{@rangeMin.value}}</span>
+          {{else}}
+            <span class="mdc-slider__value-indicator-text">{{@value}}</span>
+          {{/if}}
+        </div>
+      </div>
+    {{/if}}
     <div class="mdc-slider__thumb-knob"></div>
+    {{#if this.isRangeSlider}}
+      <input class="mdc-slider__input"
+             type="range"
+             min={{@rangeMin.min}}
+             max={{@rangeMin.max}}
+             step={{@rangeMin.step}}
+             name={{@rangeMin.name}}
+             aria-label={{@rangeMin.label}}
+             disabled={{this.isRangeMinDisabled}} />
+    {{else}}
+      <input class="mdc-slider__input"
+             type="range"
+             min={{this.min}}
+             max={{this.max}}
+             step={{this.step}}
+             value={{this.value}}
+             name={{@name}}
+             aria-label={{@label}}
+             disabled={{@disabled}} />
+    {{/if}}
   </div>
+
+  {{#if this.isRangeSlider}}
+    <div class="mdc-slider__thumb">
+      {{#if @discrete}}
+        <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+          <div class="mdc-slider__value-indicator">
+            <span class="mdc-slider__value-indicator-text">{{@rangeMax.value}}</span>
+          </div>
+        </div>
+      {{/if}}
+      <div class="mdc-slider__thumb-knob"></div>
+        <input class="mdc-slider__input"
+               type="range"
+               min={{@rangeMax.min}}
+               max={{@rangeMax.max}}
+               step={{@rangeMax.step}}
+               name={{@rangeMax.name}}
+               aria-label={{@rangeMax.label}}
+               disabled={{this.isRangeMaxDisabled}} />
+    </div>
+  {{/if}}
 </div>

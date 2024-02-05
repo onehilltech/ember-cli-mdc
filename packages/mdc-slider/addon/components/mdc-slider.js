@@ -1,8 +1,8 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
+
 import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
 import { MDCSlider } from '@material/slider';
 
@@ -21,30 +21,26 @@ export default class MdcSliderComponent extends Component {
   }
 
   get step () {
-    const { step = 1 } = this.args;
-    return step;
+    return this.args.step || 1;
   }
 
   get min () {
-    let { min = 0 } = this.args;
-    return min;
+    return this.args.min || 0;
   }
 
   get max () {
-    let { max = 100 } = this.args;
-    return max;
+    return this.args.max || 100;
   }
 
   get value () {
-    let { value = this.min } = this.args;
-    return value;
+    return this.args.value || this.min;
   }
 
   @listener ('MDCSlider:change')
   change (ev) {
     this.didChange (ev);
 
-    let { detail: slider } = ev;
+    const { detail: slider } = ev;
     (this.args.change || noOp)(slider.value);
   }
 
@@ -56,7 +52,7 @@ export default class MdcSliderComponent extends Component {
   input (ev) {
     this.didInput (ev);
 
-    let { detail: slider } = ev;
+    const { detail: slider } = ev;
     (this.args.input || noOp)(slider.value);
   }
 
@@ -64,37 +60,37 @@ export default class MdcSliderComponent extends Component {
 
   }
 
-  get width () {
-    return this.args.width || 21;
-  }
-
-  get height () {
-    return this.args.height || 21;
-  }
-
-  get cx () {
-    return this.width / 2;
-  }
-
-  get cy () {
-    return this.height / 2;
-  }
-
-  get r () {
-    return this.args.r || (0.38 * Math.min (this.width, this.height));
-  }
-
   @action
   setLimits (element, [min, max, step]) {
-    this.component.min = min;
-    this.component.max = max;
-    this.component.step = step;
+    if (isPresent (min)) {
+      this.component.min = min;
+    }
+
+    if (isPresent (max)) {
+      this.component.max = max;
+    }
+
+    if (isPresent (step)) {
+      this.component.step = step;
+    }
   }
 
   @action
   setValue (element, [value]) {
     if (this.component.value !== value) {
-      this.component.value = value;
+      this.component.setValue (value);
     }
+  }
+
+  get isRangeSlider () {
+    return isPresent (this.args.rangeMin) && isPresent (this.args.rangeMax);
+  }
+
+  get isRangeMinDisabled () {
+    return this.args.disabled || this.args.rangeMin.disabled;
+  }
+
+  get isRangeMaxDisabled () {
+    return this.args.disabled || this.args.rangeMax.disabled;
   }
 }
