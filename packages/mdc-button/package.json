@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-button",
-  "version": "2.11.10",
+  "version": "2.13.2",
   "description": "ember-cli addon for @material/button",
   "keywords": [
     "ember-addon",
@@ -57,7 +57,7 @@
     "ember-cli-mdc-rtl": "^2.5.2",
     "ember-cli-mdc-shape": "^2.5.3",
     "ember-cli-mdc-theme": "^2.5.3",
-    "ember-cli-mdc-typography": "^2.11.6",
+    "ember-cli-mdc-typography": "^2.13.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-uglify": "^3.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
