@@ -8,6 +8,27 @@ export default class IndexController extends Controller {
 
   @action
   showMessage () {
-    this.snackbar.show ('Hello, World!');
+    this.snackbar.show ({
+      message: 'Hello, World!',
+      action: {
+        label: 'Show Me',
+        closing () {
+          console.log ('Closing dialog from action click.')
+        },
+        closed () {
+          console.log ('Closed dialog from action click.')
+        }
+      },
+      dismiss: {
+        icon: 'delete',
+        closing () {
+          console.log ('Closing dialog from dismiss click.')
+        },
+
+        closed  () {
+          console.log ('Closed dialog from dismiss click.')
+        }
+      }
+    });
   }
 }

@@ -1,6 +1,7 @@
 <div class="mdc-select
   {{unless @label "mdc-select--no-label"}}
   {{if @disabled "mdc-select--disabled"}}
+  {{if @required "mdc-select--required"}}
   {{if this.isOutlined "mdc-select--outlined" "mdc-select--filled"}}
   {{if @leadingIcon "mdc-select--with-leading-icon"}}"
   {{did-insert this.didInsert}}
@@ -11,6 +12,7 @@
        role="button"
        aria-haspopup="listbox"
        aria-expanded="false"
+       aria-required={{@required}}
        aria-labelledby="{{this.labelId}} {{this.selectedTextId}}">
 
     {{#if this.isOutlined}}
