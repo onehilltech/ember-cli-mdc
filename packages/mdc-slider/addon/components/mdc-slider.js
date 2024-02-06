@@ -38,25 +38,21 @@ export default class MdcSliderComponent extends Component {
 
   @listener ('MDCSlider:change')
   change (ev) {
-    this.didChange (ev);
-
     const { detail: slider } = ev;
-    (this.args.change || noOp)(slider.value);
+    this.notifyChange (slider.value);
   }
 
-  didChange (ev) {
+  didChange (ev, value) {
 
   }
 
   @listener ('MDCSlider:input')
   input (ev) {
-    this.didInput (ev);
-
     const { detail: slider } = ev;
-    (this.args.input || noOp)(slider.value);
+    this.notifyInput (slider.value);
   }
 
-  didInput (ev) {
+  didInput (ev, value) {
 
   }
 
@@ -82,15 +78,13 @@ export default class MdcSliderComponent extends Component {
     }
   }
 
-  get isRangeSlider () {
-    return isPresent (this.args.rangeMin) && isPresent (this.args.rangeMax);
+  notifyInput (value) {
+    this.didInput (value);
+    this.dispatchEvent ('MdcSlider:input', { value });
   }
 
-  get isRangeMinDisabled () {
-    return this.args.disabled || this.args.rangeMin.disabled;
-  }
-
-  get isRangeMaxDisabled () {
-    return this.args.disabled || this.args.rangeMax.disabled;
+  notifyChange (value) {
+    this.didChange (value);
+    this.dispatchEvent ('MdcSlider:change', { value });
   }
 }

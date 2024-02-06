@@ -5,8 +5,9 @@
              @max={{this.continuous.max}}
              @value={{this.continuous.value}}
              @label="Select value"
-             @change={{action (mut this.continuous.selected)}}
-             @input={{action (mut this.continuous.value)}} />
+             {{on "MdcSlider:change" (fn this.handleChange this.continuous)}}
+             {{on "MdcSlider:input" (fn this.handleInput this.continuous)}}
+  />
 
   <div>Value: {{this.continuous.value}}</div>
   <div>Selected: {{this.continuous.selected}}</div>
@@ -21,8 +22,9 @@
              @value={{this.discrete.value}}
              @discrete={{true}}
              @label="Select value"
-             @change={{action (mut this.discrete.selected)}}
-             @input={{action (mut this.discrete.value)}} />
+    {{on "MdcSlider:change" (fn this.handleChange this.discrete)}}
+    {{on "MdcSlider:input" (fn this.handleInput this.discrete)}}
+  />
 
   <div>Value: {{this.discrete.value}}</div>
   <div>Selected: {{this.discrete.selected}}</div>
@@ -38,8 +40,9 @@
              @discrete={{true}}
              @tickMarks={{true}}
              @label="Select value"
-             @change={{action (mut this.discreteWithTicks.selected)}}
-             @input={{action (mut this.discreteWithTicks.value)}} />
+    {{on "MdcSlider:change" (fn this.handleChange this.discreteWithTicks)}}
+    {{on "MdcSlider:input" (fn this.handleInput this.discreteWithTicks)}}
+  />
 
   <div>Value: {{this.discreteWithTicks.value}}</div>
   <div>Selected: {{this.discreteWithTicks.selected}}</div>

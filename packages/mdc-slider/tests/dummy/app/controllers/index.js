@@ -53,4 +53,16 @@ export default class IndexController extends Controller {
     const { detail: { range }} = ev;
     dst.set (range);
   }
+
+  @action
+  handleInput (target, ev) {
+    const { detail: { value }} = ev;
+    target.value = value;
+  }
+
+  @action
+  handleChange (target, ev) {
+    const { detail: { value }} = ev;
+    target.selected = value;
+  }
 }
