@@ -1,2 +1,12 @@
 @import "app-theme";
-@import "@material/switch/mdc-switch";
+@import "@material/switch/styles";
+
+.mdc-switch {
+  &__container {
+    display: inline-flex;
+
+    > label {
+      margin-left: 8px;
+    }
+  }
+}
