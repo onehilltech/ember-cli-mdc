@@ -1,30 +1,32 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { action } from '@ember/object';
 import { isNone } from '@ember/utils';
 
+import { MDCTabBar } from '@material/tab-bar';
+
 function noOp () {}
 
-const { MDCTabBar } = mdc.tabBar;
 
 export default class MdcTabBarComponent extends Component {
   doPrepareElement (element) {
     const activeTab = element.querySelector ('.mdc-tab--active');
 
     if (isNone (activeTab)) {
-      // The app bar is being initialized without a tab marked as active. We need
+      // The app bar is being initialized without a tab marked as active. We must
       // select the active tab as the initially selected tab.
 
-      let activeTab = this.activeTab;
-      let tab = element.querySelectorAll ('.mdc-tab')[activeTab];
+      const activeTab = this.activeTab;
+      const tab = element.querySelectorAll ('.mdc-tab')[activeTab];
 
       tab.classList.add ('mdc-tab--active');
 
-      let tabIndicator = tab.querySelector ('.mdc-tab-indicator');
+      const tabIndicator = tab.querySelector ('.mdc-tab-indicator');
       tabIndicator.classList.add ('mdc-tab-indicator--active');
+
+      // Let's send a notification that the initial tab is activated.
+      this.notifyActivated (activeTab);
     }
   }
 
@@ -38,13 +40,16 @@ export default class MdcTabBarComponent extends Component {
 
   @listener ('MDCTabBar:activated')
   activated (ev) {
-    this.didActivate (ev);
-
     const { detail: { index } } = ev;
-    (this.args.activated || noOp) (index);
+    this.notifyActivated (index);
   }
 
-  didActivate (ev) {
+  notifyActivated (index) {
+    this.didActivate (index);
+    this.dispatchEvent ('MdcTabBar:activated', { index })
+  }
+
+  didActivate (index) {
 
   }
 

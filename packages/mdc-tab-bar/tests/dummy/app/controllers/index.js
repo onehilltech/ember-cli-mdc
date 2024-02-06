@@ -10,4 +10,10 @@ export default class IndexController extends Controller {
   activateTab () {
     this.activeTab = 1;
   }
+
+  @action
+  activated (ev) {
+    const { detail: { index }} = ev;
+    console.log (`tab ${index} activated`);
+  }
 }

@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
@@ -7,10 +5,10 @@ import { assert } from '@ember/debug';
 import { isEmpty, isPresent } from '@ember/utils';
 import { action } from '@ember/object';
 
-const STYLES = [ 'dismissible', 'modal' ];
-
 import { MDCDrawer } from '@material/drawer';
 import { MDCList } from '@material/list';
+
+const STYLES = [ 'dismissible', 'modal' ];
 
 function noOp () {}
 

@@ -10,12 +10,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/tests/dummy/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/components/mdc-switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-switch/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-drawer/addon/components/mdc-drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-drawer/addon/components/mdc-drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/addon/components/mdc-tab-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components/mdc-tab-indicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-indicator/addon/components/mdc-tab-indicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-scroller/addon/components/mdc-tab-scroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab-link-to.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab/addon/components/mdc-tab.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +99,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-switch]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab-bar]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
