@@ -1,15 +1,12 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 import { action } from '@ember/object';
+import { MDCTabBar } from '@material/tab-bar';
 
 function noOp () { }
-
-const { MDCTabBar } = mdc.tabBar;
 
 export default class MdcTabsComponent extends Component {
   /// The tab bar element for the tabs.
@@ -97,10 +94,10 @@ export default class MdcTabsComponent extends Component {
   _activateTabPanel (index) {
     if (isPresent (this._currentActiveTab)) {
       const tabPanel = this._tabPanels.item (this._currentActiveTab);
-      tabPanel.dispatchEvent (new CustomEvent ('mdc-tab-panel:deactivate'));
+      tabPanel.dispatchEvent (new CustomEvent ('MdcTabPanel:deactivate'));
     }
 
     const tabPanel = this._tabPanels.item (index);
-    tabPanel.dispatchEvent (new CustomEvent ('mdc-tab-panel:activate'));
+    tabPanel.dispatchEvent (new CustomEvent ('MdcTabPanel:activate'));
   }
 }
