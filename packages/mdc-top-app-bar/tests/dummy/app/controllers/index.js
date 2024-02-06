@@ -5,7 +5,7 @@ import { tracked } from '@glimmer/tracking';
 
 export default class IndexController extends Controller {
   @tracked
-  fixed;
+  prominent;
 
   @tracked
   dense;
@@ -15,6 +15,9 @@ export default class IndexController extends Controller {
 
   @tracked
   shortCollapsed;
+
+  @tracked
+  fixed;
 
   @action
   navigation () {

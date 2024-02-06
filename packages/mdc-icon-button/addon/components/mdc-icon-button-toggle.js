@@ -1,12 +1,8 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener  from 'ember-cli-mdc-base/listener';
 
 import { action } from '@ember/object';
 import { MDCIconButtonToggle } from '@material/icon-button';
-
-function noOp () { return true }
 
 export default class MdcIconButtonToggle extends Component {
   get isOn () {

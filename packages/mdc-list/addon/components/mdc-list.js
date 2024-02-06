@@ -1,6 +1,4 @@
-/* global mdc */
-
-import Component from 'ember-cli-mdc-base/component';
+import { Component } from 'ember-cli-mdc-base';
 
 import { action } from '@ember/object';
 import { MDCList } from '@material/list';

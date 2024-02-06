@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener  from 'ember-cli-mdc-base/listener';
 
@@ -8,7 +6,6 @@ import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
 import { isString } from 'lodash-es';
-
 import { MDCMenuSurface, Corner } from '@material/menu-surface';
 
 function noOp () { }

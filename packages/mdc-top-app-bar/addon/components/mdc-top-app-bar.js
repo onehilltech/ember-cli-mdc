@@ -1,12 +1,10 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
-const { MDCTopAppBar } = mdc.topAppBar;
+import { MDCTopAppBar } from '@material/top-app-bar';
 
 function noOp () { }
 
@@ -28,7 +26,8 @@ export default class MdcTopAppBarComponent extends Component {
 
   @action
   reinitialize (element) {
-    this.replaceComponent (new MDCTopAppBar (element));
+    const newTopAppBar = new MDCTopAppBar (element);
+    this.replaceComponent (newTopAppBar);
   }
 
   @listener ('MDCTopAppBar:nav')

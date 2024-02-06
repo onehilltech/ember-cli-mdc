@@ -133,8 +133,10 @@ export default class MaterialComponent extends Component {
       this._listeners.forEach ((listener) => listener.unlisten (this._component));
     }
 
-    // Unregister this wrapper facade with the framework.
-    this._registration.unregister ();
+    if (isPresent (this._registration)) {
+      // Unregister this wrapper facade with the framework.
+      this._registration.unregister ();
+    }
   }
 
   /**

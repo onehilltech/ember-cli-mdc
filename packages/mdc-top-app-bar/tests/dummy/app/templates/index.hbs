@@ -1,4 +1,9 @@
-<MdcTopAppBar @fixed={{this.fixed}} @dense={{this.dense}} @short={{this.short}} @navigation={{this.navigation}} @shortCollapsed={{this.shortCollapsed}}>
+<MdcTopAppBar @prominent={{this.prominent}}
+              @fixed={{this.fixed}}
+              @dense={{this.dense}}
+              @short={{this.short}}
+              @navigation={{this.navigation}}
+              @shortCollapsed={{this.shortCollapsed}}>
   <MdcTopAppBarRow>
     <MdcTopAppBarSection @position="alignStart">
       <MdcTopAppBarNavigationIcon @icon="menu" />
@@ -8,10 +13,10 @@
     <MdcTopAppBarSection @position="alignEnd" @role="toolbar">
       <MdcTopAppBarActionItem @label="Download" @alt="Download" @icon="file_download" />
 
-      {{#if notShort}}
+      {{#unless this.short}}
         <MdcTopAppBarActionItem @label="Print this page" @icon="print" />
         <MdcTopAppBarActionItem @label="Bookbark this page" @icon="bookmark" />
-      {{/if}}
+      {{/unless}}
     </MdcTopAppBarSection>
   </MdcTopAppBarRow>
 </MdcTopAppBar>
@@ -19,6 +24,7 @@
 <div class="main-content" {{mdc-top-app-bar-fixed-adjustment dense=this.dense short=this.short prominent=this.prominent}}>
   <div style="padding: 16px">
     <div>Fixed <input type="checkbox" {{on "change" (fn this.toggle "fixed")}} /></div>
+    <div>Prominent <input type="checkbox" {{on "change" (fn this.toggle "prominent")}} /></div>
     <div>Dense <input type="checkbox" {{on "change" (fn this.toggle "dense")}} /></div>
     <div>Short <input type="checkbox" {{on "change" (fn this.toggle "short")}} /></div>
 

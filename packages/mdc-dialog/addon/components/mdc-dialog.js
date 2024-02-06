@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 

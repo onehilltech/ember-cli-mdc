@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import { MDCFloatingLabel } from '@material/floating-label';
 

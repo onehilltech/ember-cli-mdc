@@ -10,8 +10,19 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tab-bar/tests/dummy/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-tabs/addon/components/mdc-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/components/mdc-notched-outline.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/components/mdc-notched-outline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/modifiers/mdc-top-app-bar-fixed-adjustment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/modifiers/mdc-top-app-bar-fixed-adjustment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +101,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-tab-bar]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
