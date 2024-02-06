@@ -1,0 +1,29 @@
+<div class="mdc-slider mdc-slider--range
+  {{if @disabled "mdc-slider--disabled"}}
+  {{if @discrete "mdc-slider--discrete"}}
+  {{if @tickMarks "mdc-slider--tick-marks"}}"
+  {{did-insert this.didInsert}}
+  {{did-update this.setValue @value}}
+  {{did-update this.setLimits @min @max @step}}
+     ...attributes data-min-range={{@minRange}}>
+
+  <MdcSliderTrack @tickMarks={{@tickMarks}} />
+
+  <MdcSliderThumb @discrete={{@discrete}}
+                  @value={{@value}}
+                  @min={{@start.min}}
+                  @max={{@start.max}}
+                  @step={{@start.step}}
+                  @name={{@start.name}}
+                  @label={{@start.label}}
+                  @disabled={{this.startDisabled}} />
+
+  <MdcSliderThumb @discrete={{@discrete}}
+                  @value={{@end.value}}
+                  @min={{@end.min}}
+                  @max={{@end.max}}
+                  @step={{@end.step}}
+                  @name={{@end.name}}
+                  @label={{@end.label}}
+                  @disabled={{this.endDisabled}} />
+</div>

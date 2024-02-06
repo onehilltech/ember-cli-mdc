@@ -1,0 +1,19 @@
+<div class="mdc-slider__thumb">
+  {{#if @discrete}}
+    <div class="mdc-slider__value-indicator-container" aria-hidden="true">
+      <div class="mdc-slider__value-indicator">
+        <span class="mdc-slider__value-indicator-text">{{@value}}</span>
+      </div>
+    </div>
+  {{/if}}
+  <div class="mdc-slider__thumb-knob"></div>
+  <input class="mdc-slider__input"
+         type="range"
+         min={{@min}}
+         max={{@max}}
+         step={{@step}}
+         value={{@value}}
+         name={{@name}}
+         aria-label={{@label}}
+         disabled={{@disabled}} />
+</div>
