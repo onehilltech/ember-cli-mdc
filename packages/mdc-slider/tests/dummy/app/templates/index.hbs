@@ -13,19 +13,6 @@
   <div><input {{on "change" (fn this.change this.continuous)}} type="number" /></div>
 </section>
 
-<!-- section>
-  <h6>Continuous Range Slider</h6>
-
-  <MdcSlider @value={{this.continuous.value}}
-             @label="Select value"
-             @rangeMin={{hash min=10 max=60 value=30}}
-             @rangeMax={{hash min=40 max=100 value=70}}
-             @minRange={{10}} />
-
-  <div>Value: {{this.continuousRange.min}}</div>
-  <div>Selected: {{this.continuousRange.max}}</div>
-</section>
-
 <section>
   <h6>Discrete Slider</h6>
 
@@ -45,17 +32,56 @@
 <section>
   <h6>Discrete Slider w/ Tick Marks</h6>
 
-  <MdcSlider @min={{this.discrete.min}}
-             @max={{this.discrete.max}}
-             @value={{this.discrete.value}}
+  <MdcSlider @min={{this.discreteWithTicks.min}}
+             @max={{this.discreteWithTicks.max}}
+             @value={{this.discreteWithTicks.value}}
              @discrete={{true}}
              @tickMarks={{true}}
              @label="Select value"
-             @change={{action (mut this.discrete.selected)}}
-             @input={{action (mut this.discrete.value)}} />
+             @change={{action (mut this.discreteWithTicks.selected)}}
+             @input={{action (mut this.discreteWithTicks.value)}} />
 
-  <div>Value: {{this.discrete.value}}</div>
-  <div>Selected: {{this.discrete.selected}}</div>
-  <div><input {{on "change" (fn this.change this.discrete)}} type="number" /></div>
-</section -->
+  <div>Value: {{this.discreteWithTicks.value}}</div>
+  <div>Selected: {{this.discreteWithTicks.selected}}</div>
+  <div><input {{on "change" (fn this.change this.discreteWithTicks)}} type="number" /></div>
+</section>
 
+<section>
+  <h6>Continuous Range Slider</h6>
+
+  <MdcRangeSlider @start={{hash min=10 max=60 value=30}}
+                  @end={{hash min=40 max=100 value=70}}
+                  @minRange={{10}}
+      {{on "MdcRangeSlider:change" (fn this.rangeChange this.continuousRange)}}
+  />
+
+  <div>Range: [{{this.continuousRange.start}}, ...,  {{this.continuousRange.end}}]</div>
+</section>
+
+<section>
+  <h6>Continuous Range Discrete Slider</h6>
+
+  <MdcRangeSlider @discrete={{true}}
+                  @start={{hash min=10 max=60 value=30}}
+                  @end={{hash min=40 max=100 value=70}}
+                  @minRange={{10}}
+    {{on "MdcRangeSlider:change" (fn this.rangeChange this.continuousDiscreteRange)}}
+
+  />
+
+  <div>Range: [{{this.continuousDiscreteRange.start}}, ...,  {{this.continuousDiscreteRange.end}}]</div>
+
+</section>
+
+<section>
+  <h6>Continuous Range Discrete Slider w/ Tick Marks</h6>
+
+  <MdcRangeSlider @discrete={{true}} @tickMarks={{true}}
+                  @start={{hash min=10 max=60 value=30}}
+                  @end={{hash min=40 max=100 value=70}}
+                  @minRange={{10}}
+    {{on "MdcRangeSlider:change" (fn this.rangeChange this.continuousDiscreteTicksRange)}}
+  />
+
+  <div>Range: [{{this.continuousDiscreteTicksRange.start}}, ...,  {{this.continuousDiscreteTicksRange.end}}]</div>
+</section>

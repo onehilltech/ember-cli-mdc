@@ -10,7 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/addon/components/mdc-slider.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-thumb-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-slider/tests/integration/components/mdc-slider-track-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +233,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.[ember-cli-mdc-sass]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-animation]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-base]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-bottom-navigation]: dummy application" />
@@ -260,6 +263,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-radio]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-sass]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />

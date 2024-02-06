@@ -8,21 +8,37 @@ class Bag {
 
   @tracked
   selected;
+}
+
+class Range {
+  @tracked
+  start;
 
   @tracked
-  min = 0;
+  end;
 
-  @tracked
-  max = 100;
+  set (range) {
+    this.start = range.start;
+    this.end = range.end;
+  }
 }
 
 export default class IndexController extends Controller {
   continuous;
   discrete;
+  discreteWithTicks;
+  continuousRange;
+  continuousDiscreteRange;
+  continuousDiscreteTicksRange;
 
   setup () {
     this.continuous = new Bag ();
     this.discrete = new Bag ();
+    this.discreteWithTicks = new Bag ();
+
+    this.continuousRange = new Range ();
+    this.continuousDiscreteRange = new Range ();
+    this.continuousDiscreteTicksRange = new Range ();
   }
 
   @action
@@ -30,5 +46,11 @@ export default class IndexController extends Controller {
     const { target } = ev;
 
     bag.value = parseInt (target.value);
+  }
+
+  @action
+  rangeChange (dst, ev) {
+    const { detail: { range }} = ev;
+    dst.set (range);
   }
 }
