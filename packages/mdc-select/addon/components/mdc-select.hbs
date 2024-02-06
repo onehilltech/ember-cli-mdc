@@ -5,7 +5,8 @@
   {{if @leadingIcon "mdc-select--with-leading-icon"}}"
   {{did-insert this.didInsert}}
   {{did-update this.select @value}}
-  {{custom-property "--mdc-select-width" @width}}>
+  {{custom-property "--mdc-select-width" @width}}
+    ...attributes>
   <div class="mdc-select__anchor"
        role="button"
        aria-haspopup="listbox"

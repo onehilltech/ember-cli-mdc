@@ -8,7 +8,8 @@
              @firstOptionIsEmpty={{true}}
              @leadingIcon="event"
              @value={{this.value}}
-             @width="400px" />
+             @width="400px"
+             {{on "MdcSelect:change" this.change}} />
 </p>
 
 <p>
@@ -56,8 +57,10 @@
              @textKey="name"
              @firstOptionIsEmpty={{true}}
              @style="outlined"
-             @change={{this.selectActor}}
-             @width="400px" />
+             @width="400px"
+    {{on "MdcSelect:change" this.selectActor}}
+
+  />
 </p>
 
 <p>Selected actor: {{this.actor.name}}</p>
