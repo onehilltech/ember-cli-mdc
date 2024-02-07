@@ -1,6 +1,6 @@
 import Service from '@ember/service';
 import { getOwner } from '@ember/application';
-import { getWithDefault } from '@ember/object';
+import { get } from '@ember/object';
 
 export default Service.extend({
   /// The default style of all text fields.
@@ -13,9 +13,9 @@ export default Service.extend({
 
   _loadConfiguration () {
     const ENV = getOwner (this).resolveRegistration ('config:environment');
-    const config = getWithDefault (ENV, 'ember-cli-mdc', {});
-    const inputConfig = getWithDefault (config, 'input', {});
-    const textFieldConfig = getWithDefault (config, 'textfield', {});
+    const config = get (ENV, 'ember-cli-mdc') || {};
+    const inputConfig = get (config, 'input') || {}
+    const textFieldConfig = get (config, 'textfield') || {};
 
     this.setProperties ({
       style: textFieldConfig.style || inputConfig.style || null

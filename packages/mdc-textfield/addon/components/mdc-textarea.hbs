@@ -5,11 +5,11 @@
   {{if @ltr "mdc-text-field--ltr-text"}}
   {{if @focused "mdc-text-field--focused"}}"
   {{did-insert this.didInsert}}>
-  <MdcTextfieldTextarea ...attributes
-                        @value={{@value}}
-                        aria-label={{@label}}
-                        aria-labelledby={{this.labelId}}
-                        disabled={{@disabled}}  />
+  <Textarea ...attributes
+            @value={{@value}}
+            aria-label={{@label}}
+            aria-labelledby={{this.labelId}}
+            disabled={{@disabled}}  />
   <span class="mdc-notched-outline">
       <span class="mdc-notched-outline__leading"></span>
       <span class="mdc-notched-outline__notch">

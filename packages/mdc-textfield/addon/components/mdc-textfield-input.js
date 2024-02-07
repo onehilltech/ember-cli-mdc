@@ -1,5 +1,4 @@
 import TextField from '@ember/component/text-field';
-import { isEmpty, isPresent } from '@ember/utils';
 
 const getNextSibling = function (elem, selector) {
   // Get the next sibling element

@@ -6,13 +6,13 @@ import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { tracked } from '@glimmer/tracking';
 import { guidFor } from '@ember/object/internals';
-import { isPresent, isEmpty } from '@ember/utils';
+import { isPresent } from '@ember/utils';
+
+import { MDCTextField } from '@material/textfield';
 
 function noOp () { }
 
 const STYLES = ['filled', 'outlined'];
-
-const { MDCTextField } = mdc.textfield;
 
 const VALIDATION_ERROR_TYPE = [
   'badInput',
@@ -26,7 +26,7 @@ const VALIDATION_ERROR_TYPE = [
   'typeMismatch',
 ];
 
-export default class MdcTextfieldComponent extends Component {
+export default class MdcTextFieldComponent extends Component {
   @service ('mdc-textfield-configurator')
   configurator;
 

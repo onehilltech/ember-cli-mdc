@@ -1,12 +1,10 @@
 @import "app-theme";
-@import "@material/textfield/mdc-text-field";
-@import "@material/textfield/helper-text/mdc-text-field-helper-text";
-@import "@material/textfield/character-counter/mdc-text-field-character-counter";
 
-/*
-.mdc-text-field {
-  &__icon {
-    &:focus { outline: none; }
-  }
-}
- */
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/line-ripple/mdc-line-ripple";
+@import "@material/notched-outline/mdc-notched-outline";
+@import "@material/textfield/helper-text";
+@import "@material/textfield/character-counter";
+@import "@material/textfield/icon";
+
+@import "@material/textfield";

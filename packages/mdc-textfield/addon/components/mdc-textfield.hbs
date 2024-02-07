@@ -25,11 +25,17 @@
     <span class="mdc-text-field__affix mdc-text-field__affix--prefix">{{@prefix}}</span>
   {{/if}}
 
-  <MdcTextfieldInput ...attributes @value={{@value}}
-                     aria-labelledby={{this.labelId}}
-                     aria-controls={{this.helperId}}
-                     aria-describedby={{this.helperId}}
-                     disabled={{@disabled}}
+  {{#if this.filled}}
+    <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+  {{/if}}
+
+  <Input class="mdc-text-field__input"
+         @value={{@value}}
+         aria-labelledby={{this.labelId}}
+         aria-controls={{this.helperId}}
+         aria-describedby={{this.helperId}}
+         disabled={{@disabled}}
+         ...attributes
     {{did-update this.setCustomErrorMessage @errorMessage}}
     {{on "input" this.input}}
     {{on "invalid" this.invalid}}
@@ -51,7 +57,6 @@
   {{#if this.filled}}
     {{#if @label}}
       {{#unless @fullWidth}}
-        <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
       {{/unless}}
     {{/if}}
     <span class="mdc-line-ripple"></span>

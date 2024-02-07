@@ -4,7 +4,7 @@ import { tracked } from '@glimmer/tracking';
 import { isPresent } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 
-const { MDCTextField } = mdc.textfield;
+import { MDCTextField } from '@material/textfield';
 
 export default class MdcTextareaComponent extends Component {
   @tracked

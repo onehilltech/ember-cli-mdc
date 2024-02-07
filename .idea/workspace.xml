@@ -10,19 +10,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/components/mdc-floating-label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/components/mdc-icon-button-toggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-linear-progress/addon/components/mdc-linear-progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-list/addon/components/mdc-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-menu-surface/addon/components/mdc-menu-surface.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/components/mdc-notched-outline.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-notched-outline/addon/components/mdc-notched-outline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/components/mdc-top-app-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/modifiers/mdc-top-app-bar-fixed-adjustment.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/addon/modifiers/mdc-top-app-bar-fixed-adjustment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-top-app-bar/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-textarea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/services/mdc-textfield-configurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/services/mdc-textfield-configurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/app/components/mdc-textfield-textarea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-top-app-bar]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-text-field]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -372,6 +370,7 @@
       <workItem from="1705418768839" duration="85000" />
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
+      <workItem from="1707284064474" duration="6701000" />
     </task>
     <servers />
   </component>
