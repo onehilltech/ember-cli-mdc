@@ -244,7 +244,7 @@
     <MdcTextarea @label="Filled"
                  @style="filled"
                  rows="8" cols="40"
-                 @resizable={{false}} />
+                 @resizable={{true}} />
   </div>
 
   <div class="text-field-container">
@@ -279,6 +279,13 @@
     <MdcTextarea @label="Disabled"
                  @style="outlined"
                  @disabled={{true}}
+                 rows="8" cols="40" />
+  </div>
+
+  <div class="text-field-container">
+    <MdcTextarea @label="Required"
+                 @style="outlined"
+                 required={{true}}
                  rows="8" cols="40" />
   </div>
 </div>
