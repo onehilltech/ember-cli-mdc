@@ -154,7 +154,7 @@ export default class MdcTextFieldComponent extends Component {
   /**
    * Validate the HTML input element.
    *
-   * @param ev
+   * @param input
    */
   validate (input) {
     if (!input.validity.valid) {
