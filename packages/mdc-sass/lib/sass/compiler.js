@@ -23,11 +23,14 @@ function Compiler (inputNodes, inputFile, outputFile, options = {}) {
 Compiler.prototype.build = function () {
   // Compute the full path of the output file and ensure the directory for
   // the output file exists.
-  let dstFile = path.join (this.outputPath, this.outputFile);
+  const dstFile = path.join (this.outputPath, this.outputFile);
   ensureDirSync (path.dirname (dstFile));
 
-  let sassOptions = {
-    file: path.join (this.inputPaths[0], this.inputFile),
+  const file = path.join (this.inputPaths[0], this.inputFile);
+  //console.log (`rendering ${file}`);
+
+  const sassOptions = {
+    file,
     includePaths: this.options.includePaths,
 
     imagePath: this.options.imagePath,
@@ -36,7 +39,13 @@ Compiler.prototype.build = function () {
     sourceComments: this.options.sourceComments,
   };
 
-  let result = this.sass.renderSync (sassOptions);
+  const result = this.sass.renderSync (sassOptions);
+
+  if (file.includes ('mdc-data-table')) {
+    console.error (dstFile);
+    console.error (`buffer length: ${result.css.length}`);
+  }
+
   writeFileSync (dstFile, result.css);
 };
 

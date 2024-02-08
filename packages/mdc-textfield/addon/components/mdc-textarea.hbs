@@ -1,25 +1,45 @@
-<label class="mdc-text-field mdc-text-field--textarea
+<label class="mdc-text-field {{this.styleClassName}} mdc-text-field--textarea
   {{unless @label "mdc-text-field--no-label"}}
   {{if @disabled "mdc-text-field--disabled"}}
   {{if @alignEnd "mdc-text-field--end-aligned"}}
   {{if @ltr "mdc-text-field--ltr-text"}}
-  {{if @focused "mdc-text-field--focused"}}"
+  {{if @focused "mdc-text-field--focused"}}
+  {{if @withInternalCounter "mdc-text-field--with-internal-counter"}}"
   {{did-insert this.didInsert}}>
-  <Textarea ...attributes
-            @value={{@value}}
-            aria-label={{@label}}
-            aria-labelledby={{this.labelId}}
-            disabled={{@disabled}}  />
-  <span class="mdc-notched-outline">
+
+  {{#if this.filled}}
+    <span class="mdc-text-field__ripple"></span>
+    <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+  {{else}}
+    <span class="mdc-notched-outline">
       <span class="mdc-notched-outline__leading"></span>
-      <span class="mdc-notched-outline__notch">
-        {{#if @label}}
-          <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
-        {{/if}}
-      </span>
+       <span class="mdc-notched-outline__notch">
+         {{#if @label}}
+           <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+         {{/if}}
+       </span>
       <span class="mdc-notched-outline__trailing"></span>
     </span>
+  {{/if}}
+
+  <span class="{{if this.resizable "mdc-text-field__resizer"}}">
+    <Textarea class="mdc-text-field__input"
+              ...attributes
+              @value={{@value}}
+              aria-label={{@label}}
+              aria-labelledby={{this.labelId}}
+              disabled={{@disabled}}  />
+    {{#if @characterCount}}
+      {{#if @withInternalCounter}}
+        <div class="mdc-text-field-character-counter" />
+      {{/if}}
+    {{/if}}
+ </span>
+  {{#if this.filled}}
+    <span class="mdc-line-ripple"></span>
+  {{/if}}
 </label>
+
 {{#if this.helperLine}}
   <div class="mdc-text-field-helper-line">
     {{#if this.helperText}}
@@ -28,7 +48,9 @@
            aria-hidden="true">{{this.helperText}}</div>
     {{/if}}
     {{#if @characterCount}}
-      <div class="mdc-text-field-character-counter" />
+      {{#unless @withInternalCounter}}
+        <div class="mdc-text-field-character-counter" />
+      {{/unless}}
     {{/if}}
   </div>
 {{/if}}

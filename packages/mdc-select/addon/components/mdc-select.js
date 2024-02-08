@@ -7,7 +7,7 @@ import { A } from '@ember/array';
 import { isPresent } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
-import { isObjectLike } from 'lodash-es';
+import { isObjectLike } from 'lodash';
 
 import { MDCSelect } from '@material/select';
 

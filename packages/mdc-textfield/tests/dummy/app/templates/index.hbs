@@ -7,7 +7,7 @@
     <MdcTextfield @style="filled" @label="Filled" />
   </div>
 
-  <!-- div class="text-field-container">
+  <div class="text-field-container">
     <MdcTextfield @label="Helper Text" @helperText="This is helper text" @persistentHelperText={{false}} />
   </div>
 
@@ -25,12 +25,12 @@
 
   <div class="text-field-container">
     <MdcTextfield @style="filled" @label="Disabled" @disabled={{true}} />
-  </div -->
+  </div>
 </div>
 
 <h6>Outlined</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
     <MdcTextfield @style="outlined" @label="Outlined" />
   </div>
@@ -54,68 +54,113 @@
   <div class="text-field-container">
     <MdcTextfield @style="outlined" @label="Disabled" @disabled={{true}} />
   </div>
-</div -->
+</div>
 
 <h6>Leading Icons</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Leading icon" @leadingIcon="email" />
+    <MdcTextfield @style="filled"
+                  @label="Leading icon"
+                  @leadingIcon="email" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} />
+    <MdcTextfield @style="filled"
+                  @label="Clickable Leading icon"
+                  @leadingIcon="email"
+                  @leadingIconClickable={{true}}
+      {{on "MdcTextfield:leading-icon-click" this.alert}}
+    />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @label="Leading icon" @leadingIcon="email" />
+    <MdcTextfield @style="outlined"
+                  @label="Leading icon"
+                  @leadingIcon="email" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} @value="This is pre-filled"/>
+    <MdcTextfield @style="outlined"
+                  @label="Clickable Leading icon"
+                  @leadingIcon="email"
+                  @value="This is pre-filled"
+                  @leadingIconClickable={{true}}
+      {{on "MdcTextfield:leading-icon-click" this.alert}}
+    />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @leadingIcon="email" @leadingIconClick={{this.alert}} />
+    <MdcTextfield @style="outlined"
+                  @leadingIcon="email"
+    />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @label="Clickable Leading icon" @leadingIcon="email" @leadingIconClick={{this.alert}} @disabled={{true}} />
+    <MdcTextfield @style="outlined"
+                  @label="Clickable Leading icon"
+                  @leadingIcon="email"
+                  @leadingIconClickable={{true}}
+                  @disabled={{true}}
+      {{on "MdcTextfield:leading-icon-click" this.alert}}
+    />
   </div>
-</div -->
+</div>
 
 <h6>Trailing Icons</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Trailing icon" @trailingIcon="visibility_off" />
+    <MdcTextfield @style="filled"
+                  @label="Trailing icon"
+                  @trailingIcon="visibility_off" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Clickable trailing icon" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+    <MdcTextfield @style="filled"
+                  @label="Clickable trailing icon"
+                  @trailingIcon="visibility_off"
+                  @trailingIconClickable={{true}}
+      {{on "MdcTextfield:trailing-icon-click" this.alert}}
+    />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @label="Trailing icon" @trailingIcon="visibility_off" />
+    <MdcTextfield @style="outlined"
+                  @label="Trailing icon"
+                  @trailingIcon="visibility_off" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @label="Clickable trailing icon" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+    <MdcTextfield @style="outlined"
+                  @label="Clickable trailing icon"
+                  @trailingIcon="visibility_off"
+                  @trailingIconClickable={{true}}
+      {{on "MdcTextfield:trailing-icon-click" this.alert}}
+    />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} />
+    <MdcTextfield @style="outlined"
+                  @trailingIcon="visibility_off"
+                  @trailingIconClickable={{true}}
+      {{on "MdcTextfield:trailing-icon-click" this.alert}} />
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined" @trailingIcon="visibility_off" @trailingIconClick={{this.alert}} @disabled={{true}} />
+    <MdcTextfield @style="outlined"
+                  @trailingIcon="visibility_off"
+                  @label="Clickable trailing icon"
+                  @disabled={{true}}
+                  @trailingIconClickable={{true}}
+      {{on "MdcTextfield:trailing-icon-click" this.alert}} />
   </div>
-</div -->
+</div>
 
 
 <h6>Leading & Trailing Icons</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
     <MdcTextfield @style="filled" @label="Filled" @leadingIcon="lock" @trailingIcon="visibility_off" />
   </div>
@@ -123,11 +168,11 @@
   <div class="text-field-container">
     <MdcTextfield @style="outlined" @label="Outlined" @leadingIcon="lock" @trailingIcon="visibility_off" />
   </div>
-</div -->
+</div>
 
 <h6>Character Count</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
     <MdcTextfield @style="filled" @label="Filled" @characterCount={{true}} maxlength="20" />
   </div>
@@ -144,31 +189,23 @@
                   @characterCount={{true}}
                   maxlength="25" />
   </div>
-</div -->
+</div>
 
-<h6>Full Width</h6>
+<h6>Prefix &amp; Suffix</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Filled" @fullWidth={{true}} placeholder="Full width text field" />
-  </div>
-</div -->
-
-<h6>Prefix & Suffix</h6>
-
-<!-- div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @style="filled" @label="Filled" @prefix="$" />
+    <MdcTextfield @style="filled" @label="Filled" @prefix="$" @suffix=".00" />
   </div>
 
   <div class="text-field-container">
     <MdcTextfield @style="outlined" @label="Outlined" @prefix="$" @suffix=".00" />
   </div>
-</div -->
+</div>
 
 <h6>Validation</h6>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
     <MdcTextfield @style="filled" @label="Required" required="true" />
   </div>
@@ -176,7 +213,7 @@
   <div class="text-field-container">
     <MdcTextfield @style="outlined"
                   @label="Min / Max"
-                  type="number"
+                  @type="number"
                   min=10
                   max=10000
                   @helperText="Must be between 10 and 10000." />
@@ -193,45 +230,55 @@
                   @helperText="10 <= n <= 10000"
                   @persistentHelperText={{true}}
                   @validationMessages={{this.validationMessages}}
+                  @type="number"
                   required="true"
-                  type="number"
                   min=10
                   max=10000 />
   </div>
-</div -->
-
-<h6>Password Text Field</h6>
-
-<!-- div class="text-field-row">
-  <div class="text-field-container">
-    <MdcPasswordTextfield @style="filled" @label="Password" />
-  </div>
-
-  <div class="text-field-container">
-    <MdcPasswordTextfield @style="filled" @label="Password" @errorMessage="The password is incorrect." />
-  </div>
-
-  <div class="text-field-container">
-    <MdcPasswordTextfield @style="outlined" @label="Password" />
-  </div>
-</div -->
+</div>
 
 <h5>Textarea</h5>
 
-<!-- div class="text-field-row">
+<div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextarea @label="Filled" @style="filled" rows="8" cols="40" />
+    <MdcTextarea @label="Filled"
+                 @style="filled"
+                 rows="8" cols="40"
+                 @resizable={{false}} />
   </div>
 
   <div class="text-field-container">
-    <MdcTextarea @label="Filled" @style="outlined" rows="8" cols="40" @errorMessage="We have a problem here." @characterCount={{true}} maxlength="500" />
+    <MdcTextarea @label="Filled"
+                 @style="outlined"
+                 rows="8" cols="40"
+                 @errorMessage="This is not resizable."
+                 @resizable={{false}}
+                 @characterCount={{true}}
+                 maxlength="500" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextarea @label="Helper Text" @style="outlined" @helperText="This has helper text" @persistentHelperText={{true}} rows="8" cols="40" />
+    <MdcTextarea @label="Filled"
+                 @style="outlined"
+                 rows="8" cols="40"
+                 @errorMessage="We have a problem here."
+                 @characterCount={{true}}
+                 @withInternalCounter={{true}}
+                 maxlength="500" />
   </div>
 
   <div class="text-field-container">
-    <MdcTextarea @label="Disabled" @style="outlined" @disabled={{true}} rows="8" cols="40" />
+    <MdcTextarea @label="Helper Text"
+                 @style="outlined"
+                 @helperText="This has helper text"
+                 @persistentHelperText={{true}}
+                 rows="8" cols="40" />
   </div>
-</div -->
+
+  <div class="text-field-container">
+    <MdcTextarea @label="Disabled"
+                 @style="outlined"
+                 @disabled={{true}}
+                 rows="8" cols="40" />
+  </div>
+</div>

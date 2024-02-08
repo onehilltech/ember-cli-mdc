@@ -10,8 +10,6 @@ import { isPresent } from '@ember/utils';
 
 import { MDCTextField } from '@material/textfield';
 
-function noOp () { }
-
 const STYLES = ['filled', 'outlined'];
 
 const VALIDATION_ERROR_TYPE = [
@@ -36,6 +34,8 @@ export default class MdcTextFieldComponent extends Component {
   @tracked
   helperId;
 
+  inputElement;
+
   get style () {
     return this.args.style || this.configurator.style || 'filled';
   }
@@ -43,25 +43,26 @@ export default class MdcTextFieldComponent extends Component {
   get styleClassName () {
     let style = this.style;
 
-    assert ('The outlined style cannot be used with a full width text field.', style === 'filled' || !this.args.fullWidth);
     assert (`The textfield component supports the following styles: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-text-field--${style}`;
   }
 
   doPrepareElement (element) {
-    let { value } = this.args;
+    const { value } = this.args;
 
     if (isPresent (value)) {
+      // Force the label to float since we are starting with a value.
       element.classList.add ('mdc-text-field--label-floating');
 
-      let floatingLabel = element.querySelector ('.mdc-floating-label');
+      const floatingLabel = element.querySelector ('.mdc-floating-label');
 
       if (isPresent (floatingLabel)) {
         floatingLabel.classList.add ('mdc-floating-label--float-above');
       }
     }
 
+    this.inputElement = element.querySelector ('.mdc-text-field__input');
     this.labelId = guidFor (this);
     this.helperId = `${guidFor (this)}__helper-text`;
   }
@@ -112,12 +113,16 @@ export default class MdcTextFieldComponent extends Component {
     return this.args.errorMessage || this.validationMessage || this.args.helperText;
   }
 
-  get leadingIconClick () {
-    return this.args.leadingIconClick || noOp;
+  @action
+  doLeadingIconClick () {
+    const ev = this.createCustomEvent ('MdcTextfield:leading-icon-click');
+    this.inputElement.dispatchEvent (ev)
   }
 
-  get trailingIconClick () {
-    return this.args.trailingIconClick || noOp;
+  @action
+  doTrailingIconClick () {
+    const ev = this.createCustomEvent ('MdcTextfield:trailing-icon-click');
+    this.inputElement.dispatchEvent (ev)
   }
 
   get isValidationMessage () {

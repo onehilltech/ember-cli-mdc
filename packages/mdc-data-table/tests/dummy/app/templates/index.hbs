@@ -1,101 +1,110 @@
 <h5>Data Tables</h5>
 
-<h6>Basic usage</h6>
+<section>
+  <h6>Basic usage</h6>
 
-<MdcDataTable @label="Dessert calories">
-  <MdcDataTableHeaderRow>
-    <MdcDataTableHeaderCell>Dessert</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Carbs (g)</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Protein (g)</MdcDataTableHeaderCell>
-    <MdcDataTableHeaderCell>Comments</MdcDataTableHeaderCell>
-  </MdcDataTableHeaderRow>
+  <MdcDataTable @label="Dessert calories">
+    <MdcDataTableHeaderRow>
+      <MdcDataTableHeaderCell>Dessert</MdcDataTableHeaderCell>
+      <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Carbs (g)</MdcDataTableHeaderCell>
+      <MdcDataTableHeaderCell @numeric={{true}} @sortable="true">Protein (g)</MdcDataTableHeaderCell>
+      <MdcDataTableHeaderCell>Comments</MdcDataTableHeaderCell>
+    </MdcDataTableHeaderRow>
 
-  <MdcDataTableContent>
-    <MdcDataTableRow>
-      <MdcDataTableCell>Frozen yogurt</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>4.0</MdcDataTableCell>
-      <MdcDataTableCell>Super tasty</MdcDataTableCell>
-    </MdcDataTableRow>
+    <MdcDataTableContent>
+      <MdcDataTableRow>
+        <MdcDataTableCell>Frozen yogurt</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>4.0</MdcDataTableCell>
+        <MdcDataTableCell>Super tasty</MdcDataTableCell>
+      </MdcDataTableRow>
 
-    <MdcDataTableRow>
-      <MdcDataTableCell>Ice cream sandwich</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>37</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>4.33333333333</MdcDataTableCell>
-      <MdcDataTableCell>I like ice cream more</MdcDataTableCell>
-    </MdcDataTableRow>
+      <MdcDataTableRow>
+        <MdcDataTableCell>Ice cream sandwich</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>37</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>4.33333333333</MdcDataTableCell>
+        <MdcDataTableCell>I like ice cream more</MdcDataTableCell>
+      </MdcDataTableRow>
 
-    <MdcDataTableRow>
-      <MdcDataTableCell>Eclair</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
-      <MdcDataTableCell @numeric={{true}}>6.0</MdcDataTableCell>
-      <MdcDataTableCell>New filing flavor</MdcDataTableCell>
-    </MdcDataTableRow>
-  </MdcDataTableContent>
-</MdcDataTable>
+      <MdcDataTableRow>
+        <MdcDataTableCell>Eclair</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
+        <MdcDataTableCell @numeric={{true}}>6.0</MdcDataTableCell>
+        <MdcDataTableCell>New filing flavor</MdcDataTableCell>
+      </MdcDataTableRow>
+    </MdcDataTableContent>
+  </MdcDataTable>
+</section>
 
-<h6>Data table with row selection</h6>
+<section>
+  <h6>Data table with row selection</h6>
 
-<MdcDataTable @label="Network"
-              @data={{this.signalsSorted}}
-              @selected={{this.selected}}
-              @rowSelectionChange={{this.rowSelectionChange}} as |data|>
-  <MdcDataTableHeaderRow @selectable={{true}}>
-    <MdcDataTableHeaderCell @label="Status" @sortDesc={{this.signalsSortDesc}}  />
-    <MdcDataTableHeaderCell @label="Signal name" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
-    <MdcDataTableHeaderCell @label="Severity" @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Stage" @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortDesc={{this.signalsSortDesc}} />
-    <MdcDataTableHeaderCell @label="Roles" @sortDesc={{this.signalsSortDesc}} />
-  </MdcDataTableHeaderRow>
+  <MdcDataTable @label="Network"
+                @data={{this.signalsSorted}}
+                @selected={{this.selected}}
+                @rowSelectionChange={{this.rowSelectionChange}} as |data|>
+    <MdcDataTableHeaderRow @selectable={{true}}>
+      <MdcDataTableHeaderCell @label="Status" @sortDesc={{this.signalsSortDesc}}  />
+      <MdcDataTableHeaderCell @label="Signal name" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
+      <MdcDataTableHeaderCell @label="Severity" @sortDesc={{this.signalsSortDesc}} />
+      <MdcDataTableHeaderCell @label="Stage" @sortDesc={{this.signalsSortDesc}} />
+      <MdcDataTableHeaderCell @label="Time" @numeric={{true}} @sortDesc={{this.signalsSortDesc}} />
+      <MdcDataTableHeaderCell @label="Roles" @sortDesc={{this.signalsSortDesc}} />
+    </MdcDataTableHeaderRow>
 
-  <MdcDataTableContent>
-    {{#each data as |dataItem|}}
-      {{#with dataItem.data as |signal|}}
-        <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
-          <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
-          <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
-          <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
-          <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
-          <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
-          <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
-        </MdcDataTableRow>
-      {{/with}}
+    <MdcDataTableContent>
+      {{#each this.data as |dataItem|}}
+        {{#with dataItem.data as |signal|}}
+          <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
+            <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>
+            <MdcDataTableCell>{{signal.name}}</MdcDataTableCell>
+            <MdcDataTableCell>{{signal.severity}}</MdcDataTableCell>
+            <MdcDataTableCell>{{signal.stage}}</MdcDataTableCell>
+            <MdcDataTableCell @numeric={{true}}>{{signal.time}}</MdcDataTableCell>
+            <MdcDataTableCell>{{signal.roles}}</MdcDataTableCell>
+          </MdcDataTableRow>
+        {{/with}}
+      {{/each}}
+    </MdcDataTableContent>
+  </MdcDataTable>
+
+  <p>Selected Rows:</p>
+
+  <ul>
+    {{#each this.selected as |signal|}}
+      <li>{{signal.id}}</li>
     {{/each}}
-  </MdcDataTableContent>
-</MdcDataTable>
+  </ul>
+</section>
 
-<p>Selected Rows:</p>
+<section>
+  <h6>Data Table from Properties</h6>
 
-<ul>
-  {{#each this.selected as |signal|}}
-    <li>{{signal.id}}</li>
-  {{/each}}
-</ul>
+  <MdcDataTable @label="Network"
+                @selectable={{true}}
+                @headers={{this.headers}}
+                @data={{this.signals}}
+                @selected={{this.selected}} />
 
-<h6>Data Table from Properties</h6>
+  <p>Selected Rows:</p>
 
-<MdcDataTable @label="Network"
-              @selectable={{true}}
-              @headers={{this.headers}}
-              @data={{this.signals}}
-              @selected={{this.selected}} />
+  <ul>
+    {{#each this.selected as |selection|}}
+      <li>[{{selection.id}}]: {{selection.name}}</li>
+    {{/each}}
+  </ul>
+</section>
 
-<p>Selected Rows:</p>
+<section>
+  <h6>Data Table w/ Select Fields</h6>
 
-<ul>
-  {{#each selected as |selection|}}
-    <li>[{{selection.id}}]: {{selection.name}}</li>
-  {{/each}}
-</ul>
+  <MdcDataTable @label="Network"
+                @selectable={{true}}
+                @headers={{array "Status" "Name"}}
+                @data={{this.signals}}
+                @selected={{this.selected}}
+                @fields={{array "status" "name"}}
+                @pagination="true"
+                @rowsPerPage={{array 2 4}} />
+</section>
 
-<h6>Data Table w/ Select Fields</h6>
-
-<MdcDataTable @label="Network"
-              @selectable={{true}}
-              @headers={{array "Status" "Name"}}
-              @data={{this.signals}}
-              @selected={{this.selected}}
-              @fields={{array "status" "name"}}
-              @pagination="true"
-              @rowsPerPage={{array 2 4}} />

@@ -1,15 +1,41 @@
-<td class="mdc-data-table__cell {{if @numeric "mdc-data-table__cell--numeric"}} {{if @checkbox "mdc-data-table__cell--checkbox"}}" ...attributes>
-  {{#if @checkbox}}
-    <div class="mdc-checkbox mdc-data-table__row-checkbox">
-      <input type="checkbox" class="mdc-checkbox__native-control" aria-labelledby="u0" checked={{@selected}} />
-      <div class="mdc-checkbox__background">
-        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-          <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-        </svg>
-        <div class="mdc-checkbox__mixedmark"></div>
+{{#if @header}}
+  <th class="mdc-data-table__cell
+    {{if @numeric "mdc-data-table__cell--numeric"}}
+    {{if @checkbox "mdc-data-table__cell--checkbox"}}"
+      scope="row"
+      ...attributes>
+
+    {{#if @checkbox}}
+      <div class="mdc-checkbox mdc-data-table__row-checkbox">
+        <input type="checkbox" class="mdc-checkbox__native-control" aria-labelledby="u0" checked={{@selected}} />
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
       </div>
-    </div>
-  {{else}}
-    {{yield}}
-  {{/if}}
-</td>
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </th>
+{{else}}
+  <td class="mdc-data-table__cell
+    {{if @numeric "mdc-data-table__cell--numeric"}}
+    {{if @checkbox "mdc-data-table__cell--checkbox"}}"
+      ...attributes>
+    {{#if @checkbox}}
+      <div class="mdc-checkbox mdc-data-table__row-checkbox">
+        <input type="checkbox" class="mdc-checkbox__native-control" aria-labelledby="u0" checked={{@selected}} />
+        <div class="mdc-checkbox__background">
+          <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+          </svg>
+          <div class="mdc-checkbox__mixedmark"></div>
+        </div>
+      </div>
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </td>
+{{/if}}

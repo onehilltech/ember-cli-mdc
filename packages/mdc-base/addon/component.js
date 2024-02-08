@@ -171,6 +171,13 @@ export default class MaterialComponent extends Component {
     return this._component.unlisten(eventName, method);
   }
 
+  createCustomEvent (name, detail = {}) {
+    // Set the component sending the event.
+    detail.$component = this;
+
+    return new CustomEvent (name, { detail });
+  }
+
   /**
    * Dispatch an event from the associated html element.
    *
@@ -178,11 +185,8 @@ export default class MaterialComponent extends Component {
    * @param detail
    */
   dispatchEvent (name, detail = {}) {
-    // Set the component sending the event.
-    detail.$component = this;
-
     // Create the custom event and dispatch it.
-    const ev = new CustomEvent (name, { detail });
+    const ev = this.createCustomEvent (name, detail);
     this.element.dispatchEvent (ev);
   }
 }

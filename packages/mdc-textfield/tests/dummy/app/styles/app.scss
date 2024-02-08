@@ -1,17 +1,17 @@
 @import "@material/textfield/mixins";
 
-/*
 body {
   padding: 16px;
   margin: 0;
 }
-
 
 .text-field-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  margin-bottom: 32px;
 
   .text-field-container {
     min-width: 200px;
@@ -75,4 +75,3 @@ body {
   border-radius: 16px 16px 0 0;
 }
 
- */
