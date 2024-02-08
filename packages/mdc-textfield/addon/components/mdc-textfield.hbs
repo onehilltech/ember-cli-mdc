@@ -7,8 +7,8 @@
     {{if @fullWidth "mdc-text-field--fullwidth"}}
     {{if @ltr "mdc-text-field--ltr-text"}}
     {{if @focused "mdc-text-field--focused"}}
-    {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
-    {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
+    {{if (has-block "leading-icon") "mdc-text-field--with-leading-icon"}}
+    {{if (has-block "trailing-icon") "mdc-text-field--with-trailing-icon"}}"
     {{did-insert this.didInsert}}
     {{did-update this.didUpdateValue @value}}>
 
@@ -27,12 +27,8 @@
     </span>
     {{/if}}
 
-    {{#if @leadingIcon}}
-      <MdcIcon @icon={{@leadingIcon}}
-               class="mdc-text-field__icon mdc-text-field__icon--leading"
-               tabindex={{if @leadingIconClickable "0"}}
-               role={{if @leadingIconClickable "button"}}
-        {{on "click" this.doLeadingIconClick}} />
+    {{#if (has-block "leading-icon")}}
+      {{yield to="leading-icon"}}
     {{/if}}
 
     {{#if @prefix}}
@@ -54,13 +50,8 @@
       {{on "blur" this.blur}}
     />
 
-    {{#if @trailingIcon}}
-      <MdcIcon @icon={{@trailingIcon}}
-               class="mdc-text-field__icon mdc-text-field__icon--trailing"
-               tabindex={{if @trailingIconClickable "0"}}
-               role={{if @trailingIconClickable "button"}}
-        {{on "click" this.doTrailingIconClick}} />
-
+    {{#if (has-block "trailing-icon")}}
+      {{yield to="trailing-icon"}}
     {{/if}}
 
     {{#if @suffix}}

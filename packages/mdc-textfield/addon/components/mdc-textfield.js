@@ -113,18 +113,6 @@ export default class MdcTextFieldComponent extends Component {
     return this.args.errorMessage || this.validationMessage || this.args.helperText;
   }
 
-  @action
-  doLeadingIconClick () {
-    const ev = this.createCustomEvent ('MdcTextfield:leading-icon-click');
-    this.inputElement.dispatchEvent (ev)
-  }
-
-  @action
-  doTrailingIconClick () {
-    const ev = this.createCustomEvent ('MdcTextfield:trailing-icon-click');
-    this.inputElement.dispatchEvent (ev)
-  }
-
   get isValidationMessage () {
     return isPresent (this.validationMessage) || isPresent (this.args.errorMessage);
   }

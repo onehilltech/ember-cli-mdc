@@ -11,8 +11,9 @@
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -365,7 +366,7 @@
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
       <workItem from="1707284064474" duration="18146000" />
-      <workItem from="1707405827899" duration="10719000" />
+      <workItem from="1707405827899" duration="13529000" />
     </task>
     <servers />
   </component>

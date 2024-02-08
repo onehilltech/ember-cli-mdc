@@ -6,7 +6,8 @@
     {{if @ltr "mdc-text-field--ltr-text"}}
     {{if @focused "mdc-text-field--focused"}}
     {{if @withInternalCounter "mdc-text-field--with-internal-counter"}}"
-    {{did-insert this.didInsert}}>
+    {{did-insert this.didInsert}}
+    {{did-update this.didUpdateValue @value}}>
 
     {{#if this.filled}}
       <span class="mdc-text-field__ripple"></span>

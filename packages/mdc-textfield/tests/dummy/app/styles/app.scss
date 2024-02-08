@@ -24,10 +24,6 @@ body {
   width: 100%;
 }
 
-.text-field-row-fullwidth {
-  display: block;
-}
-
 .mdc-text-field__multipart {
   display: flex;
   flex-direction: row;
@@ -56,12 +52,6 @@ body {
       padding-left: 0;
       padding-right: 0;
     }
-  }
-}
-
-.mdc-text-field {
-  &--fullwidth {
-    margin-bottom: 16px;
   }
 }
 

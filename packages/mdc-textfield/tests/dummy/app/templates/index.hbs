@@ -60,101 +60,104 @@
 
 <div class="text-field-row">
   <div class="text-field-container">
-    <MdcTextfield @style="filled"
-                  @label="Leading icon"
-                  @leadingIcon="email" />
+    <MdcTextfield @style="filled" @label="Leading icon">
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon @icon="email" />
+      </:leading-icon>
+    </MdcTextfield>
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="filled"
-                  @label="Clickable Leading icon"
-                  @leadingIcon="email"
-                  @leadingIconClickable={{true}}
-      {{on "MdcTextfield:leading-icon-click" this.alert}}
-    />
+    <MdcTextfield @style="filled" @label="Clickable Leading icon">
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon  @icon="email" @clickable="true"
+          {{on "click" this.alert}} />
+      </:leading-icon>
+    </MdcTextfield>
+
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @label="Leading icon"
-                  @leadingIcon="email" />
+    <MdcTextfield @style="outlined" @label="Leading icon">
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon @icon="email" />
+      </:leading-icon>
+    </MdcTextfield>
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @label="Clickable Leading icon"
-                  @leadingIcon="email"
-                  @value="This is pre-filled"
-                  @leadingIconClickable={{true}}
-      {{on "MdcTextfield:leading-icon-click" this.alert}}
-    />
+    <MdcTextfield @style="outlined" @label="Clickable Leading icon"
+                  @value="This is pre-filled">
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon @icon="email" @clickable={{true}}
+            {{on "click" this.alert}} />
+      </:leading-icon>
+    </MdcTextfield>
+
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @leadingIcon="email"
-    />
+    <MdcTextfield @style="outlined">
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon @icon="email" @clickable={{false}}
+          {{on "click" this.alert}} />
+      </:leading-icon>
+    </MdcTextfield>
   </div>
 
   <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @label="Clickable Leading icon"
-                  @leadingIcon="email"
-                  @leadingIconClickable={{true}}
-                  @disabled={{true}}
-      {{on "MdcTextfield:leading-icon-click" this.alert}}
-    />
+    <MdcTextfield @style="outlined" @label="Clickable Leading icon" @disabled={{true}}>
+      <:leading-icon>
+        <MdcTextfieldLeadingIcon @icon="email" @clickable={{true}}
+          {{on "click" this.alert}} />
+      </:leading-icon>
+    </MdcTextfield>
   </div>
 </div>
 
 <h6>Trailing Icons</h6>
 
 <div class="text-field-row">
-  <div class="text-field-container">
-    <MdcTextfield @style="filled"
-                  @label="Trailing icon"
-                  @trailingIcon="visibility_off" />
-  </div>
+  <MdcTextfield @style="filled" @label="Trailing icon">
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" />
+    </:trailing-icon>
+  </MdcTextfield>
 
-  <div class="text-field-container">
-    <MdcTextfield @style="filled"
-                  @label="Clickable trailing icon"
-                  @trailingIcon="visibility_off"
-                  @trailingIconClickable={{true}}
-      {{on "MdcTextfield:trailing-icon-click" this.alert}}
-    />
-  </div>
+  <MdcTextfield @style="filled" @label="Clickable trailing icon">
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" @clickable={{true}}
+        {{on "click" this.alert}} />
+    </:trailing-icon>
+  </MdcTextfield>
 
-  <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @label="Trailing icon"
-                  @trailingIcon="visibility_off" />
-  </div>
+  <MdcTextfield @style="outlined" @label="Trailing icon">
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" />
+    </:trailing-icon>
+  </MdcTextfield>
 
-  <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @label="Clickable trailing icon"
-                  @trailingIcon="visibility_off"
-                  @trailingIconClickable={{true}}
-      {{on "MdcTextfield:trailing-icon-click" this.alert}}
-    />
-  </div>
+  <MdcTextfield @style="outlined" @label="Clickable trailing icon">
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" @clickable={{true}}
+        {{on "click" this.alert}} />
+    </:trailing-icon>
+  </MdcTextfield>
 
-  <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @trailingIcon="visibility_off"
-                  @trailingIconClickable={{true}}
-      {{on "MdcTextfield:trailing-icon-click" this.alert}} />
-  </div>
+  <MdcTextfield @style="outlined">
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" @clickable={{false}}
+        {{on "click" this.alert}} />
+    </:trailing-icon>
+  </MdcTextfield>
 
-  <div class="text-field-container">
-    <MdcTextfield @style="outlined"
-                  @trailingIcon="visibility_off"
-                  @label="Clickable trailing icon"
-                  @disabled={{true}}
-                  @trailingIconClickable={{true}}
-      {{on "MdcTextfield:trailing-icon-click" this.alert}} />
-  </div>
+
+  <MdcTextfield @style="outlined" @label="Clickable trailing icon" @disabled={{true}}>
+    <:trailing-icon>
+      <MdcTextfieldTrailingIcon @icon="visibility_off" @clickable={{true}}
+        {{on "click" this.alert}} />
+    </:trailing-icon>
+  </MdcTextfield>
 </div>
 
 
