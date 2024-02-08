@@ -155,4 +155,16 @@ export default class MdcDialogComponent extends Component {
   didClose (action) {
 
   }
+
+  get closeAction () {
+    return this.args.closeAction || 'close';
+  }
+
+  get closeIcon () {
+    return this.args.closeIcon || 'close';
+  }
+
+  get cancelAction () {
+    return this.args.cancelAction || 'cancel';
+  }
 }

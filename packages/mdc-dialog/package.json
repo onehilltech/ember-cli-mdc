@@ -66,6 +66,7 @@
     "ember-cli-mdc-button": "*",
     "ember-cli-mdc-elevation": "*",
     "ember-cli-mdc-icon": "*",
+    "ember-cli-mdc-icon-button": "*",
     "ember-cli-mdc-ripple": "*",
     "ember-cli-mdc-rtl": "*",
     "ember-cli-mdc-shape": "*",
