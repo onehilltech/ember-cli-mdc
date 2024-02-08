@@ -10,17 +10,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textarea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield-textarea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/services/mdc-textfield-configurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/services/mdc-textfield-configurator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/app/components/mdc-textfield-textarea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/addon/components/mdc-dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/app/components/mdc-dialog-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/app/components/mdc-dialog-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-button-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-dialog/tests/integration/components/mdc-dialog-button-test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,30 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
-    &quot;node.js.detected.package.ember-template-lint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.ember-template-lint&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/ember-template-lint&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/Users/hilljh/.nvm/versions/node/v16.20.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "v3",
+    "last_opened_file_path": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/packages/mdc-dialog/addon/components",
+    "node.js.detected.package.ember-template-lint": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.ember-template-lint": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/ember-template-lint",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/hilljh/.nvm/versions/node/v16.20.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-theme/blueprints/ember-cli-mdc-theme/files/__root__/styles" />
       <recent name="$PROJECT_DIR$/packages/mdc-icon-button/addon/components" />
       <recent name="$PROJECT_DIR$/packages/mdc-progress-indicator/addon" />
       <recent name="$PROJECT_DIR$/packages/mdc-image-list/addon" />
-      <recent name="$PROJECT_DIR$/packages/mdc-chips/addon/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-theme/node_modules/@material/theme" />
@@ -99,7 +95,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-text-field]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-dialog]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -370,7 +366,7 @@
       <workItem from="1705418768839" duration="85000" />
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
-      <workItem from="1707284064474" duration="6701000" />
+      <workItem from="1707284064474" duration="13506000" />
     </task>
     <servers />
   </component>
