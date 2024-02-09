@@ -26,6 +26,11 @@ class PlainTooltipModifierState extends ModifierState {
     }
   }
 
+  /**
+   * Helper method that creates the tooltip element.
+   *
+   * @private
+   */
   _createTooltipElement () {
     const html = `<div id="${this.tooltipId}" class="mdc-tooltip" role="tooltip" aria-hidden="true">` +
       `<div class="mdc-tooltip__surface mdc-tooltip__surface-animation">${this.tooltipText}</div>` +
