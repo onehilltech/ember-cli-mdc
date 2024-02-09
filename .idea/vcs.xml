@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/packages/mdc-bottom-navigation" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-data-table" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/mdc-menu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/mdc-tooltip" vcs="Git" />
   </component>
 </project>
