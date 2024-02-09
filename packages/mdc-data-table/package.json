@@ -58,6 +58,7 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "*",
     "ember-cli-mdc-base": "*",
+    "ember-cli-mdc-checkbox": "*",
     "ember-cli-mdc-elevation": "*",
     "ember-cli-mdc-icon": "*",
     "ember-cli-mdc-icon-button": "*",

@@ -10,7 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-checkbox/addon/components/mdc-checkbox.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-sass/lib/sass/compiler.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-sass/lib/sass/compiler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/addon/instance-initializers/typography.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-text-field]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -362,7 +364,7 @@
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
       <workItem from="1707284064474" duration="18146000" />
-      <workItem from="1707405827899" duration="13773000" />
+      <workItem from="1707405827899" duration="20705000" />
     </task>
     <servers />
   </component>

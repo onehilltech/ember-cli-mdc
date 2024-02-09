@@ -1,2 +1,83 @@
+@use "@material/typography" as typography;
+@use "@material/icon-button" as iconbutton;
+@use "@material/select" as select;
+@use "@material/list" as list;
+@use "@material/theme/color-palette" as color;
+
 @import "app-theme";
+@import "@material/checkbox/mdc-checkbox";
 @import "@material/data-table/styles";
+
+.mdc-data-table {
+  &__header-cell {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &--numeric {
+      .mdc-data-table {
+        &__header-cell {
+          &__container {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+
+    &--sortable {
+      .mdc-icon-button {
+        margin-right: 4px;
+        @include iconbutton.ink-color (color.$grey-400);
+        @include iconbutton.density (-4);
+      }
+    }
+
+    &--sorted {
+      .mdc-icon-button {
+        @include iconbutton.ink-color (primary);
+      }
+    }
+  }
+
+  &__pagination {
+    .mdc-icon-button {
+      @include iconbutton.density (-4);
+    }
+
+    .mdc-select {
+      margin-left: 8px;
+      @include select.outlined-height(32px);
+
+      &__anchor {
+        height: 32px;
+        width: 100%;
+        min-width: unset;
+      }
+
+      &__selected-text {
+        width: 100%;
+        @include typography.typography(body2);
+      }
+
+      &__menu {
+        min-width: unset;
+
+        .mdc-list {
+          @include list.deprecated-single-line-density(-3);
+
+          &-item {
+            &__text {
+              @include typography.typography(body2);
+            }
+          }
+        }
+      }
+
+      .mdc-notched-outline {
+        width: 100%;
+      }
+    }
+  }
+}

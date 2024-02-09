@@ -16,7 +16,7 @@ export function initialize (app) {
     disabled = false,
     preconnect = true,
     dynamicLoad = true,
-    weights = [300, 400, 500, 700]
+    weights = [300, 400, 500, 600, 700]
   } = mdcConfig;
 
   if (!disabled) {

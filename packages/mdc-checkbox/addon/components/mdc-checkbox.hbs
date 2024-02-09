@@ -19,5 +19,8 @@
     <div class="mdc-checkbox__mixedmark"></div>
   </div>
   <div class="mdc-checkbox__ripple"></div>
-  <div class="mdc-checkbox__focus-ring"></div>
+
+  {{#unless @noFocusRing}}
+    <div class="mdc-checkbox__focus-ring"></div>
+  {{/unless}}
 </div>

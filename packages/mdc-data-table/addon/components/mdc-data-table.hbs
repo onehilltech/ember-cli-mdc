@@ -29,39 +29,45 @@
 
   {{#if @pagination}}
     {{#if this.pagination.hasMultiplePages}}
-      <div class="mdc-data-table__pagination-navigation">
-        <span class="mdc-data-table__pagination-total">
-          {{this.pagination.firstItem}} - {{this.pagination.lastItem}} of {{this.pagination.data.length}}
-        </span>
+      <div class="mdc-data-table__pagination">
+        <div class="mdc-data-table__pagination-trailing">
+          <div class="mdc-data-table__pagination-rows-per-page">
+            <div class="mdc-data-table__pagination-rows-per-page-label">Rows per page</div>
+          </div>
 
-        <span>Rows per page</span>
-        <MdcSelect class="mdc-data-table__rows-per-page"
-                   @style="outlined"
-                   @options={{this.rowsPerPageOptions}}
-                   @width="100%"
-                   @value={{this.rowsPerPageValue}}
-                   @change={{this.changeRowsPerPage}} />
+          <MdcSelect class="mdc-data-table__pagination-rows-per-page-select"
+                     @style="outlined"
+                     @options={{this.rowsPerPageOptions}}
+                     @value={{this.rowsPerPageValue}}
+                     @change={{this.changeRowsPerPage}} />
+        </div>
 
-        <MdcIconButton @icon="first_page"
-                       class="mdc-data-table__pagination-button"
-                       disabled={{this.pagination.isFirstPage}}
-          {{on "click" this.gotoFirstPage}}
-        />
+        <div class="mdc-data-table__pagination-navigation">
+          <span class="mdc-data-table__pagination-total">
+            {{this.pagination.firstItem}} - {{this.pagination.lastItem}} of {{this.pagination.data.length}}
+          </span>
 
-        <MdcIconButton @icon="navigate_before"
-                       disabled={{this.pagination.isFirstPage}}
-          {{on "click" this.gotoPrevPage}}
-        />
+          <MdcIconButton @icon="first_page"
+                         class="mdc-data-table__pagination-button"
+                         disabled={{this.pagination.isFirstPage}}
+            {{on "click" this.gotoFirstPage}}
+          />
 
-        <MdcIconButton @icon="navigate_next"
-                       disabled={{this.pagination.isLastPage}}
-          {{on "click" this.gotoNextPage}}
-        />
+          <MdcIconButton @icon="navigate_before"
+                         disabled={{this.pagination.isFirstPage}}
+            {{on "click" this.gotoPrevPage}}
+          />
 
-        <MdcIconButton @icon="last_page"
-                       disabled={{this.pagination.isLastPage}}
-          {{on "click" this.gotoLastPage}}
-        />
+          <MdcIconButton @icon="navigate_next"
+                         disabled={{this.pagination.isLastPage}}
+            {{on "click" this.gotoNextPage}}
+          />
+
+          <MdcIconButton @icon="last_page"
+                         disabled={{this.pagination.isLastPage}}
+            {{on "click" this.gotoLastPage}}
+          />
+        </div>
       </div>
     {{/if}}
   {{/if}}

@@ -40,12 +40,6 @@ Compiler.prototype.build = function () {
   };
 
   const result = this.sass.renderSync (sassOptions);
-
-  if (file.includes ('mdc-data-table')) {
-    console.error (dstFile);
-    console.error (`buffer length: ${result.css.length}`);
-  }
-
   writeFileSync (dstFile, result.css);
 };
 

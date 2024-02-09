@@ -13,21 +13,21 @@
 
     <MdcDataTableContent>
       <MdcDataTableRow>
-        <MdcDataTableCell>Frozen yogurt</MdcDataTableCell>
+        <MdcDataTableCell @header={{true}}>Frozen yogurt</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>4.0</MdcDataTableCell>
         <MdcDataTableCell>Super tasty</MdcDataTableCell>
       </MdcDataTableRow>
 
       <MdcDataTableRow>
-        <MdcDataTableCell>Ice cream sandwich</MdcDataTableCell>
+        <MdcDataTableCell @header={{true}}>Ice cream sandwich</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>37</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>4.33333333333</MdcDataTableCell>
         <MdcDataTableCell>I like ice cream more</MdcDataTableCell>
       </MdcDataTableRow>
 
       <MdcDataTableRow>
-        <MdcDataTableCell>Eclair</MdcDataTableCell>
+        <MdcDataTableCell @header={{true}}>Eclair</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>24</MdcDataTableCell>
         <MdcDataTableCell @numeric={{true}}>6.0</MdcDataTableCell>
         <MdcDataTableCell>New filing flavor</MdcDataTableCell>
@@ -43,6 +43,7 @@
                 @data={{this.signalsSorted}}
                 @selected={{this.selected}}
                 @rowSelectionChange={{this.rowSelectionChange}} as |data|>
+
     <MdcDataTableHeaderRow @selectable={{true}}>
       <MdcDataTableHeaderCell @label="Status" @sortDesc={{this.signalsSortDesc}}  />
       <MdcDataTableHeaderCell @label="Signal name" @sortDesc={{this.signalsSortDesc}} @sortKey="name" />
@@ -53,7 +54,7 @@
     </MdcDataTableHeaderRow>
 
     <MdcDataTableContent>
-      {{#each this.data as |dataItem|}}
+      {{#each data as |dataItem|}}
         {{#with dataItem.data as |signal|}}
           <MdcDataTableRow @rowId={{signal.id}} @selectable={{true}}>
             <MdcDataTableCell>{{signal.status}}</MdcDataTableCell>

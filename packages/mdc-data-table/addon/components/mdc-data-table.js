@@ -131,12 +131,29 @@ class DataTableRow {
 
     return isPresent (item);
   }
+
+  set selected (value) {
+    const { dataTable } = this;
+
+    if (value === false) {
+      dataTable.selected.removeObject (this);
+    }
+    else if (value === true) {
+      dataTable.selected.addObject (this);
+    }
+  }
 }
 
 /**
  * The data table component.
  */
 export default class MdcDataTableComponent extends Component {
+  constructor () {
+    super (...arguments);
+
+    this.selected = A (this.args.selected || []);
+  }
+
   get labelClassName () {
     const { label } = this.args;
     return isPresent (label) ? `mdc-data-table--${dasherize (label)}` : null;
@@ -191,12 +208,14 @@ export default class MdcDataTableComponent extends Component {
   }
 
   @listener ('MDCDataTable:selectedAll')
-  selectedAll (ev) {
+  selectedAll () {
     this.selected.setObjects (this.rows);
+    this.notifySelectAll ();
+  }
 
-    // Notify the subclass, and the listener.
-    this.doSelectedAll (ev);
-    (this.args.selectedAll || noOp)();
+  notifySelectAll () {
+    this.doSelectedAll ();
+    this.dispatchEvent ('MdcDataTable:selectAll');
   }
 
   doSelectedAll (ev) {
@@ -207,10 +226,12 @@ export default class MdcDataTableComponent extends Component {
   unselectedAll (ev) {
     // Clear the selected objects.
     this.selected.clear ();
+    this.notifyUnselectAll ();
+  }
 
-    // Notify the subclass, and the listener.
-    this.doUnselectAll (ev);
-    (this.args.unselectedAll || noOp)();
+  notifyUnselectAll () {
+    this.doUnselectAll ();
+    this.dispatchEvent ('MdcDataTable:unselectAll');
   }
 
   doUnselectAll (ev) {
@@ -228,9 +249,8 @@ export default class MdcDataTableComponent extends Component {
   @tracked
   stale;
 
-  get selected () {
-    return this.args.selected || A ();
-  }
+  @tracked
+  selected;
 
   @action
   updateData () {
@@ -245,7 +265,7 @@ export default class MdcDataTableComponent extends Component {
   /**
    * Compute the table data.
    *
-   * @param refreshLayout
+   * @param refreshLayoutNext
    */
   computeTableData (refreshLayoutNext = false) {
     let { data = A () } = this.args;
@@ -264,7 +284,6 @@ export default class MdcDataTableComponent extends Component {
 
     const rows = data.map (item => {
       const id = this.idForItem (item);
-
       let row = this.rowsById[id];
 
       if (isNone (row)) {
