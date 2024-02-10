@@ -63,6 +63,48 @@ tooltip and how long of a delay (in ms) before hiding the tooltip, respectively.
 
 ### Interactive Rich Tooltip
 
+To make a rich tooltip interactive, enclose the actions inside the `<:actions>` named 
+block of the `<MdcTooltip />` component.
+
+```handlebars
+<MdcTooltip>
+  <:default>
+    <MdcButton @label="Press Me" @style="unelevated" />
+  </:default>
+
+  <:tooltip>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+    pretium vitae est et dapibus. Aenean sit amet felis eu lorem fermentum
+    aliquam sit amet sit amet eros.
+
+    <a href="https://google.com">link</a>
+  </:tooltip>
+
+  <:actions>
+    <MdcButton @label="Action" />
+  </:actions>
+</MdcTooltip>
+```
+
 ### Persistent Interactive Rich Tooltip
 
+Use the `@persistent` attribute to make the interactive rich tooltip a persistent 
+interactive rich tooltip.
 
+```handlebars
+<MdcTooltip @persistent={{true}}>
+    <:default>
+      <MdcButton @label="Press Me" @style="unelevated" />
+    </:default>
+    
+    <:tooltip>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+      pretium vitae est et dapibus. Aenean sit amet felis eu lorem fermentum
+      aliquam sit amet sit amet eros.
+    
+      <a href="https://google.com">link</a>
+    </:tooltip>
+    
+    <:actions>
+      <MdcButton @label="Action" />
+    </:actions>
+</MdcTooltip>
+```
