@@ -1,7 +1,75 @@
-<p>
-  <a href="www.google.com" {{mdc-tooltip "lorem ipsum dolor"}}>Link</a>
-</p>
+<section>
+  <h6>Plain Tooltip</h6>
 
-<p>
-  <LinkTo @route="about">About Us</LinkTo>
-</p>
+  <p>
+    <a href="www.google.com" {{mdc-tooltip "lorem ipsum dolor"}}>Link</a>
+  </p>
+
+  <p>
+    <LinkTo @route="about">About Us</LinkTo>
+  </p>
+
+</section>
+
+<section>
+  <h6>Non-interactive Rich Tooltip</h6>
+
+  <p>
+    <MdcTooltip>
+      <:default>
+        <MdcButton @label="Press Me" @style="unelevated" />
+      </:default>
+
+      <:tooltip>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+        pretium vitae est et dapibus. Aenean sit amet felis eu lorem fermentum
+        aliquam sit amet sit amet eros.</:tooltip>
+    </MdcTooltip>
+  </p>
+</section>
+
+<section>
+  <h6>Interactive Rich Tooltip</h6>
+
+  <p>
+    <MdcTooltip>
+      <:default>
+        <MdcButton @label="Press Me" @style="unelevated" />
+      </:default>
+
+      <:tooltip>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+        pretium vitae est et dapibus. Aenean sit amet felis eu lorem fermentum
+        aliquam sit amet sit amet eros.
+
+        <a href="https://google.com">link</a>
+      </:tooltip>
+
+      <:actions>
+        <MdcButton @label="Action" />
+      </:actions>
+    </MdcTooltip>
+  </p>
+</section>
+
+<section>
+  <h6>Persistent Interactive Rich Tooltip</h6>
+
+  <p>
+    <MdcTooltip @persistent={{true}}>
+      <:default>
+        <MdcButton @label="Press Me" @style="unelevated" />
+      </:default>
+
+      <:tooltip>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+        pretium vitae est et dapibus. Aenean sit amet felis eu lorem fermentum
+        aliquam sit amet sit amet eros.
+
+        <a href="https://google.com">link</a>
+      </:tooltip>
+
+      <:actions>
+        <MdcButton @label="Action" />
+      </:actions>
+    </MdcTooltip>
+  </p>
+</section>
+
