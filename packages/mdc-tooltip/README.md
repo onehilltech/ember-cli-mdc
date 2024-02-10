@@ -54,10 +54,10 @@ Use must use the `<MdcTooltip />` component to create a rich tooltip.
 
 The rich tooltip will wrap the anchor element, which must appear in the `<:default>`
 named block. If you do not include it inside the `<:default>` named block, then the
-application will not compile. The tooltip must appear inside the `<:tooltip>` named
-block.
+application will not compile. The tooltip content must appear inside the `<:tooltip>` 
+named block.
 
-Similar to the plain tooltips, you can set the optional `showDelay` and `hideDelay` 
+Similar to the [plain tooltips](#plain-tooltip), you can set the optional `showDelay` and `hideDelay` 
 attributes on the modifier to control how long of a delay (in ms) before showing the 
 tooltip and how long of a delay (in ms) before hiding the tooltip, respectively.
 
