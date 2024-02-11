@@ -41,7 +41,7 @@ banner. If you add more than two actions to a banner, then only the first two ac
 will be recognized.
 
 > If you include `<:actions />`, then you **must** place the banner content inside
-> the `<:default />` named block.
+> the `<:default />` named block. Otherwise, the application will not compile.
 
 ```handlebars
 <MdcBanner @icon="error" @open={{this.openBanner}}>
