@@ -22,7 +22,7 @@ Basic Example
 The `<MdcBanner />` is used to create a basic banner.
 
 ```handlebars
-<MdcBanner @open={{true}} @icon="error" @stacked={{true}}>
+<MdcBanner @open={{this.openBanner}} @icon="error">
     There was a problem processing a transaction on your credit card.
 </MdcBanner>
 ```
@@ -44,7 +44,7 @@ will be recognized.
 > the `<:default />` named block.
 
 ```handlebars
-<MdcBanner @icon="error" @open={{true}} @stacked={{true}}>
+<MdcBanner @icon="error" @open={{this.openBanner}}>
   <:default>
     There was a problem processing a transaction on your credit card.
   </:default>
