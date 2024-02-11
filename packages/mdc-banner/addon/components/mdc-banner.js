@@ -1,4 +1,4 @@
-import { Component } from 'ember-cli-mdc-base';
+import { Component, listener } from 'ember-cli-mdc-base';
 import { MDCBanner } from '@material/banner';
 import {action} from "@ember/object";
 
@@ -78,5 +78,32 @@ export default class MdcBannerComponent extends Component {
 
   _resize () {
     this.component.layout ();
+  }
+
+
+  @listener ('MDCBanner:opening')
+  opening () {
+    this.dispatchEvent ('MdcBanner:opening', {});
+  }
+
+  @listener ('MDCBanner:opened')
+  opened () {
+    this.dispatchEvent ('MdcBanner:opened', {});
+  }
+
+  @listener ('MDCBanner:closing')
+  closing (ev) {
+    console.log (ev);
+
+    const { detail: { reason }} = ev;
+    this.dispatchEvent ('MdcBanner:closing', { reason });
+  }
+
+  @listener ('MDCBanner:closed')
+  closed (ev) {
+    console.log (ev);
+
+    const { detail: { reason }} = ev;
+    this.dispatchEvent ('MdcBanner:closed', { reason });
   }
 }

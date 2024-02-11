@@ -1,7 +1,7 @@
 import { Component } from 'ember-cli-mdc-base';
 import { guidFor } from '@ember/object/internals';
 import { MDCTooltip } from '@material/tooltip';
-import {tracked} from "@glimmer/tracking";
+import { tracked } from "@glimmer/tracking";
 
 export default class MdcTooltipComponent extends Component {
   constructor () {

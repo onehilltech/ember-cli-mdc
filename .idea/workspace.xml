@@ -9,9 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/mdc-banner/addon/styles/addon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/mdc-banner/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-banner/addon/components/mdc-banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-banner/addon/components/mdc-banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-banner/tests/dummy/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-banner/tests/dummy/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-base/addon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-base/addon/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +372,7 @@
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
       <workItem from="1707284064474" duration="18146000" />
-      <workItem from="1707405827899" duration="40804000" />
+      <workItem from="1707405827899" duration="42968000" />
     </task>
     <servers />
   </component>
