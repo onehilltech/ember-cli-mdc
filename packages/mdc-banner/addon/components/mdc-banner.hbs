@@ -2,7 +2,7 @@
   {{if @centered "mdc-banner--centered"}}
   {{if @stacked "mdc-banner--mobile-stacked"}}" role="banner"
   {{did-insert this.didInsert}}
-  {{did-update this.open @open}}>
+  {{did-update this.open @open}} ...attributes>
   {{#if @fixed}}
     <div class="mdc-banner__fixed">
       <div class="mdc-banner__content" role="alertdialog" aria-live="assertive">
