@@ -1,32 +1,57 @@
-# ember-cli-mdc-banner
+ember-cli-mdc-banner
+======================
 
-[Short description of the addon.]
+ember-cli addon for [`@material/tooltip`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-banner)
+
+Installation
+------------
+
+    ember install ember-cli-mdc-banner
+
+Styles
+-------
 
 
-## Compatibility
-
-* Ember.js v4.4 or above
-* Ember CLI v4.4 or above
-* Node.js v14 or above
-
-
-## Installation
-
+```sass
+@use "@material/banner" as banner;
 ```
-ember install ember-cli-mdc-banner
+
+Basic Example
+---------------
+
+The `<MdcBanner />` is used to create a basic banner.
+
+```handlebars
+<MdcBanner @open={{true}} @icon="error" @stacked={{true}}>
+    There was a problem processing a transaction on your credit card.
+</MdcBanner>
 ```
 
+### Attributes
 
-## Usage
+* **open** - Show/Hide the banner.
+* **icon** - Icon to show in the banner
+* **stacked** - Position the text below the actions instead of alongside it
 
-[Longer description of how to use the addon in apps.]
+Banner w/ Actions
+-------------------
 
+You can use the `<:actions />` named block to add one or two actions to the
+banner. If you add more than two actions to a banner, then only the first two actions
+will be recognized.
 
-## Contributing
+> If you include `<:actions />`, then you **must** place the banner content inside
+> the `<:default />` named block.
 
-See the [Contributing](CONTRIBUTING.md) guide for details.
+```handlebars
+<MdcBanner @icon="error" @open={{true}} @stacked={{true}}>
+  <:default>
+    There was a problem processing a transaction on your credit card.
+  </:default>
 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md).
+  <:actions>
+    <MdcButton @label="Learn more" {{on "click" this.learnMore}} />
+    <MdcButton @label="Fix it" {{on "click" this.fixIt}} />
+  </:actions>
+</MdcBanner>
+```
