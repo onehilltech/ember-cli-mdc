@@ -1,0 +1,57 @@
+<div class="mdc-banner
+  {{if @centered "mdc-banner--centered"}}
+  {{if @stacked "mdc-banner--mobile-stacked"}}" role="banner"
+  {{did-insert this.didInsert}}
+  {{did-update this.open @open}}>
+  {{#if @fixed}}
+    <div class="mdc-banner__fixed">
+      <div class="mdc-banner__content" role="alertdialog" aria-live="assertive">
+        <div class="mdc-banner__graphic-text-wrapper">
+          {{#if @icon}}
+            <div class="mdc-banner__graphic" role="img" alt="">
+              <i class="material-icons mdc-banner__icon">{{@icon}}</i>
+            </div>
+          {{else if (has-block "graphic")}}
+            <div class="mdc-banner__graphic" role="img" alt="">
+              {{yield to="graphic"}}
+            </div>
+          {{/if}}
+
+          <div class="mdc-banner__text">
+            {{yield}}
+          </div>
+        </div>
+
+        {{#if (has-block "actions")}}
+          <div class="mdc-banner__actions">
+            {{yield to="actions"}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  {{else}}
+    <div class="mdc-banner__content" role="alertdialog" aria-live="assertive">
+      <div class="mdc-banner__graphic-text-wrapper">
+        {{#if @icon}}
+          <div class="mdc-banner__graphic" role="img" alt="">
+            <i class="material-icons mdc-banner__icon">{{@icon}}</i>
+          </div>
+        {{else if (has-block "graphic")}}
+          <div class="mdc-banner__graphic" role="img" alt="">
+            {{yield to="graphic"}}
+          </div>
+        {{/if}}
+
+        <div class="mdc-banner__text">
+          {{yield}}
+        </div>
+      </div>
+
+      {{#if (has-block "actions")}}
+        <div class="mdc-banner__actions">
+          {{yield to="actions"}}
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
+</div>
