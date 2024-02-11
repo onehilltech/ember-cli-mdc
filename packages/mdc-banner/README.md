@@ -1,7 +1,7 @@
 ember-cli-mdc-banner
 ======================
 
-ember-cli addon for [`@material/tooltip`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-banner)
+ember-cli addon for [`@material/banner`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-banner)
 
 Installation
 ------------
@@ -13,7 +13,7 @@ Styles
 
 
 ```sass
-@use "@material/banner" as banner;
+@use "@material/banner" as banner
 ```
 
 Basic Example
