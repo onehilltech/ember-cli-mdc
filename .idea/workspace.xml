@@ -9,7 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-banner/addon/components/mdc-banner.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-banner/addon/components/mdc-banner.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-segmented-button/addon/styles/addon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/mdc-segmented-button/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-banner]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-segmented-button]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -186,6 +188,9 @@
     <configuration name="[ember-cli-mdc-sass]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-sass">
       <method v="2" />
     </configuration>
+    <configuration name="[ember-cli-mdc-segmented-button]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-segmented-button">
+      <method v="2" />
+    </configuration>
     <configuration name="[ember-cli-mdc-select]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-select">
       <method v="2" />
     </configuration>
@@ -267,6 +272,7 @@
       <item itemvalue="Node.js.[ember-cli-mdc-ripple]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-rtl]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-sass]: dummy application" />
+      <item itemvalue="Node.js.[ember-cli-mdc-segmented-button]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-select]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-shape]: dummy application" />
       <item itemvalue="Node.js.[ember-cli-mdc-slider]: dummy application" />
@@ -369,7 +375,7 @@
       <workItem from="1705418860493" duration="598000" />
       <workItem from="1706763786575" duration="27616000" />
       <workItem from="1707284064474" duration="18146000" />
-      <workItem from="1707405827899" duration="44251000" />
+      <workItem from="1707405827899" duration="49709000" />
     </task>
     <servers />
   </component>

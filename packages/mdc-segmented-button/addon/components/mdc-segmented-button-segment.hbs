@@ -1,0 +1,14 @@
+<button class="mdc-segmented-button__segment {{if @selected "mdc-segmented-button__segment--selected"}}"
+        aria-pressed={{if @selected "true"}}
+        ...attributes>
+  {{#unless @noRipple}}
+    <div class="mdc-segmented-button__ripple"></div>
+  {{/unless}}
+
+  {{#if @icon}}
+    <i class="{{this.iconClassName}} mdc-segmented-button__icon">{{@icon}}</i>
+  {{/if}}
+  {{#if @label}}
+    <div class="mdc-segmented-button__label">{{@label}}</div>
+  {{/if}}
+</button>
