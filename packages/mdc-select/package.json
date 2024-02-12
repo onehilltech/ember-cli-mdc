@@ -1,6 +1,10 @@
 {
   "name": "ember-cli-mdc-select",
+<<<<<<< HEAD
   "version": "3.0.0-alpha.21",
+=======
+  "version": "2.13.2",
+>>>>>>> master
   "description": "ember-cli addon for @material/select.",
   "keywords": [
     "ember-addon",
@@ -53,6 +57,7 @@
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "broccoli-asset-rev": "^3.0.0",
+<<<<<<< HEAD
     "concurrently": "^8.0.1",
     "ember-cli": "~4.12.1",
     "ember-cli-custom-properties": "^3.0.1",
@@ -73,6 +78,28 @@
     "ember-cli-mdc-shape": "*",
     "ember-cli-mdc-theme": "*",
     "ember-cli-mdc-typography": "*",
+=======
+    "ember-auto-import": "^1.5.3",
+    "ember-cli": "~3.18.0",
+    "ember-cli-custom-properties": "^2.0.2",
+    "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-inject-live-reload": "^2.0.2",
+    "ember-cli-mdc-animation": "^2.5.3",
+    "ember-cli-mdc-base": "^2.5.2",
+    "ember-cli-mdc-elevation": "^2.5.3",
+    "ember-cli-mdc-floating-label": "^2.13.2",
+    "ember-cli-mdc-icon": "^2.11.6",
+    "ember-cli-mdc-line-ripple": "^2.5.3",
+    "ember-cli-mdc-list": "^2.13.2",
+    "ember-cli-mdc-menu": "^2.13.2",
+    "ember-cli-mdc-menu-surface": "^2.5.3",
+    "ember-cli-mdc-notched-outline": "^2.13.2",
+    "ember-cli-mdc-ripple": "^2.6.0",
+    "ember-cli-mdc-rtl": "^2.5.2",
+    "ember-cli-mdc-shape": "^2.5.3",
+    "ember-cli-mdc-theme": "^2.5.3",
+    "ember-cli-mdc-typography": "^2.13.2",
+>>>>>>> master
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",

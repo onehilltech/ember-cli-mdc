@@ -21,7 +21,14 @@ export default class MdcDialogComponent extends Component {
     const contentElement = element.querySelector ('.mdc-dialog__content');
 
     if (isPresent (contentElement)) {
+<<<<<<< HEAD
       this.compact = !!contentElement.querySelector ('.mdc-dialog__content > .mdc-deprecated-list');
+=======
+      contentElement.id = `${guid}__content`;
+      element.setAttribute ('aria-describedby', contentElement.id);
+
+      this.compact = !!contentElement.querySelector (':scope > .mdc-list');
+>>>>>>> master
     }
 
     // Prepare the buttons for the dialog if they are present. We need to make sure
