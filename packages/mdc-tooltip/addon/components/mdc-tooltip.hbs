@@ -1,0 +1,18 @@
+<div class="mdc-tooltip-wrapper--rich" {{did-insert this.didInsert}}>
+  {{yield}}
+
+  <div id={{this.tooltipId}} class="mdc-tooltip mdc-tooltip--rich"
+       tabindex={{if this.persistent -1}}
+       data-mdc-tooltip-persistent={{if this.persistent "true"}}
+       aria-hidden="true"
+       role={{if (has-block "actions") "dialog" "tooltip"}}>
+    <div class="mdc-tooltip__surface mdc-tooltip__surface-animation">
+      <p class="mdc-tooltip__content">{{yield to="tooltip"}}</p>
+      {{#if (has-block "actions")}}
+        <div class="mdc-tooltip--rich-actions">
+          {{yield to="actions"}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</div>

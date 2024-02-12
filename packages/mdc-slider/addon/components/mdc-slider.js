@@ -1,17 +1,27 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
-import { action } from '@ember/object';
-import { and } from '@ember/object/computed';
 
-const { MDCSlider } = mdc.slider;
+import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
+
+import { MDCSlider } from '@material/slider';
 
 function noOp () {}
 
 export default class MdcSliderComponent extends Component {
   doCreateComponent (element) {
+    let input = element.querySelector ('input');
+    input.setAttribute ('value', `${this.value}`);
+
     return new MDCSlider (element);
+  }
+
+  get name () {
+    return this.args.name || 'volume';
+  }
+
+  get step () {
+    return this.args.step || 1;
   }
 
   get min () {
@@ -22,61 +32,59 @@ export default class MdcSliderComponent extends Component {
     return this.args.max || 100;
   }
 
-  @listener ('MDCSlider:change')
-  change (ev) {
-    this.didChange (ev);
-
-    let { detail: slider } = ev;
-    (this.args.change || noOp)(slider.value);
+  get value () {
+    return this.args.value || this.min;
   }
 
-  didChange (ev) {
+  @listener ('MDCSlider:change')
+  change (ev) {
+    const { detail: slider } = ev;
+    this.notifyChange (slider.value);
+  }
+
+  didChange (ev, value) {
 
   }
 
   @listener ('MDCSlider:input')
   input (ev) {
-    this.didInput (ev);
-
-    let { detail: slider } = ev;
-    (this.args.input || noOp)(slider.value);
+    const { detail: slider } = ev;
+    this.notifyInput (slider.value);
   }
 
-  didInput (ev) {
+  didInput (ev, value) {
 
-  }
-
-  get width () {
-    return this.args.width || 21;
-  }
-
-  get height () {
-    return this.args.height || 21;
-  }
-
-  get cx () {
-    return this.width / 2;
-  }
-
-  get cy () {
-    return this.height / 2;
-  }
-
-  get r () {
-    return this.args.r || (0.38 * Math.min (this.width, this.height));
   }
 
   @action
   setLimits (element, [min, max, step]) {
-    this.component.min = min;
-    this.component.max = max;
-    this.component.step = step;
+    if (isPresent (min)) {
+      this.component.min = min;
+    }
+
+    if (isPresent (max)) {
+      this.component.max = max;
+    }
+
+    if (isPresent (step)) {
+      this.component.step = step;
+    }
   }
 
   @action
   setValue (element, [value]) {
     if (this.component.value !== value) {
-      this.component.value = value;
+      this.component.setValue (value);
     }
+  }
+
+  notifyInput (value) {
+    this.didInput (value);
+    this.dispatchEvent ('MdcSlider:input', { value });
+  }
+
+  notifyChange (value) {
+    this.didChange (value);
+    this.dispatchEvent ('MdcSlider:change', { value });
   }
 }

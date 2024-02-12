@@ -11,6 +11,8 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 
+  margin-bottom: 32px;
+
   .text-field-container {
     min-width: 200px;
 
@@ -20,10 +22,6 @@ body {
 
 .mdc-text-field {
   width: 100%;
-}
-
-.text-field-row-fullwidth {
-  display: block;
 }
 
 .mdc-text-field__multipart {
@@ -57,12 +55,6 @@ body {
   }
 }
 
-.mdc-text-field {
-  &--fullwidth {
-    margin-bottom: 16px;
-  }
-}
-
 .shape {
   .mdc-text-field {
     border-radius: 16px 16px 0 0;
@@ -72,3 +64,4 @@ body {
 .shape {
   border-radius: 16px 16px 0 0;
 }
+

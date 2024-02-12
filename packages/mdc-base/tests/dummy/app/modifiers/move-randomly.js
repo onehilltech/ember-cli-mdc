@@ -9,40 +9,36 @@ class MovingState extends ModifierState {
   intervalId;
 
   get delay () {
-    return this.args.named.delay || DEFAULT_DELAY;
+    return this.modifier.named.delay || DEFAULT_DELAY;
   }
 
-  didEnterState () {
-    this.intervalId = setInterval (this.moveElement, this.delay);
+  didEnterState() {
+    this.intervalId = setInterval(this.moveElement, this.delay);
   }
 
-  willExitState () {
-    clearInterval (this.intervalId);
+  willExitState() {
+    clearInterval(this.intervalId);
   }
 
-  didReceiveArguments () {
-    this.changeState (new MovingState ());
-  }
-
-  @action moveElement () {
-    let top = round (random() * 500);
+  @action moveElement() {
+    let top = round(random() * 500);
     let left = round(random() * 500);
     this.element.style.transform = `translate(${left}px, ${top}px)`;
   }
 
-  willRemove () {
-    this.willExitState ();
+  willRemove() {
+    this.willExitState();
   }
 }
 
 class NotMovingState extends ModifierState {
-  didInstall () {
-    this.changeState (new MovingState ());
+  didEnterState() {
+    this.changeState(new MovingState());
   }
 }
 
 export default class MoveRandomlyModifier extends Modifier {
-  createInitialState () {
-    return new NotMovingState ();
+  createInitialState() {
+    return new NotMovingState();
   }
 }

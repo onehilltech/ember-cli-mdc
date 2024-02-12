@@ -1,2 +1,13 @@
-<h2 style="color:var(--mdc-theme-primary)">Primary Color</h2>
-<h2 style="color:var(--mdc-theme-secondary)">Secondary Color</h2>
+<div class="controls">
+  <div><label>Background: </label><Input @value={{this.background}} /></div>
+  <div><label>Color: </label><Input @value={{this.color}} /></div>
+</div>
+
+<div class="demo"
+  {{mdc-theme "primary" this.background}}
+  {{mdc-theme "secondary" this.color}}>
+
+  THEME
+
+</div>
+

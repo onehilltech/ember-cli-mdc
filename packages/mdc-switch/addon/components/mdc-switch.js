@@ -1,11 +1,10 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
-import { action } from '@ember/object';
-import { isPresent } from '@ember/utils';
-import { tracked } from '@glimmer/tracking';
 
-const { MDCSwitch } = mdc.switch;
+import { tracked } from '@glimmer/tracking';
+import { guidFor } from '@ember/object/internals';
+import { action } from '@ember/object';
+
+import { MDCSwitch } from '@material/switch';
 
 export default class MdcSwitchComponent extends Component {
   @tracked
@@ -19,7 +18,12 @@ export default class MdcSwitchComponent extends Component {
     return new MDCSwitch (element);
   }
 
-  get for () {
-    return isPresent (this._switchElement) ? this._switchElement.querySelector ('.mdc-switch__native-control').id : null;
+  get id () {
+    return guidFor (this);
+  }
+
+  @action
+  click (ev) {
+    this.dispatchEvent ('MdcSwitch:checked', { checked: this.component.selected });
   }
 }

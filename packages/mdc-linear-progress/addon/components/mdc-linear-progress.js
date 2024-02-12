@@ -1,9 +1,6 @@
-/* global mdc */
-
 import MdcProgressIndicatorComponent from 'ember-cli-mdc-progress-indicator';
 import { action } from '@ember/object';
-
-const { MDCLinearProgress } = mdc.linearProgress;
+import { MDCLinearProgress } from '@material/linear-progress';
 
 export default class MDCLinearProgressComponent extends MdcProgressIndicatorComponent {
   doCreateComponent (element) {

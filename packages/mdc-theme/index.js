@@ -1,13 +1,13 @@
 'use strict';
 
-const { get } = require ('lodash');
+const { get } = require('lodash');
 
 module.exports = {
   name: require('./package').name,
 
-  contentFor (type, config) {
+  contentFor(type, config) {
     if (type === 'head') {
-      let themeColor = get (config, 'ember-cli-mdc.themeColor');
+      let themeColor = get(config, 'ember-cli-mdc.themeColor');
 
       if (themeColor) {
         return `<meta name="theme-color" content="${themeColor}" />
@@ -16,16 +16,4 @@ module.exports = {
       }
     }
   },
-
-  optionsFor (type, options) {
-    if (type === 'sass') {
-      options.cacheInclude = options.cacheInclude || [];
-      options.cacheInclude.push (/addon\.scss/);
-      options.cacheInclude.push (/_app-theme\.scss/);
-
-      options.cacheInclude.push (/@material\/theme/);
-    }
-
-    return options;
-  }
 };

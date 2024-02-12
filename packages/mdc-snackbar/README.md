@@ -1,5 +1,4 @@
 ember-cli-mdc-snackbar
-======================
 
 ember-cli addon for [`@material/snackbar`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-snackbar).
 
@@ -23,7 +22,10 @@ Display a snackbar on the page.
 ### Usage
 
 ```javascript
-this.snackbar ({
+// Simple version
+this.snackbar.show ('This is the message to show.');
+
+this.snackbar.show ({
   message: [String],
   timeout: [Number],
   action: { label: [String], click: [Function]},

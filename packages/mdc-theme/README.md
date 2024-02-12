@@ -1,5 +1,5 @@
 ember-cli-mdc-theme
-======================
+========================
 
 ember-cli addon for [`@material/theme`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme).
 
@@ -10,11 +10,6 @@ Installation
     
 Usage
 ---------------
-
-Prior to the release of Ember Octane, themes had to be integrated at the component-level
-using an Ember Mixin. Although this worked, it meant you always had to create a component
-to make your themes dynamic. With the release of Ember Octane, we have migrated to using
-Ember modifiers to set themes dynamically.
 
 We use the `{{mdc-theme}}` modifier to change the theme of an element, and all its child
 elements.
@@ -34,7 +29,17 @@ to an element.
 The `{{mdc-theme}}` modifier alone will not change the theme of the element. You still need
 to apply the appropriate class name to the element, or child elements. For example, you 
 still need to add the `mdc-theme--primary` class name to an element if you want to apply 
-the theme modifier in the example above.
+the theme modifier in the example above. You can also use the `--mdc-theme-primary` style
+variable in your style files. For example:
+
+```scss
+.demo {
+  background: var (--mdc-theme-primary);
+}
+```
+
+> See the [Material Components Web documentation](https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme)
+> for a complete list of classname and style variables available for use. 
 
 The following is a list of supported theme property names:
 

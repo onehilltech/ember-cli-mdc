@@ -20,8 +20,9 @@ export default class IndexController extends Controller {
   actor;
 
   @action
-  change (selected) {
-    this.selected = selected;
+  change (ev) {
+    const { detail: { option }} = ev;
+    this.selected = option;
   }
 
   @action
@@ -35,7 +36,8 @@ export default class IndexController extends Controller {
   }
 
   @action
-  selectActor (actor) {
-    this.actor = actor;
+  selectActor (ev) {
+    const { detail: { option }} = ev;
+    this.actor = option;
   }
 }

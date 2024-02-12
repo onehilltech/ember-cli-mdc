@@ -1,34 +1,71 @@
-<label class="mdc-text-field mdc-text-field--textarea
+<div class="mdc-text-area__container">
+  <label class="mdc-text-field {{this.styleClassName}} mdc-text-field--textarea
   {{unless @label "mdc-text-field--no-label"}}
-  {{if @disabled "mdc-text-field--disabled"}}
-  {{if @alignEnd "mdc-text-field--end-aligned"}}
-  {{if @ltr "mdc-text-field--ltr-text"}}
-  {{if @focused "mdc-text-field--focused"}}"
-  {{did-insert this.didInsert}}>
-  <MdcTextfieldTextarea ...attributes
-                        @value={{@value}}
-                        aria-label={{@label}}
-                        aria-labelledby={{this.labelId}}
-                        disabled={{@disabled}}  />
-  <span class="mdc-notched-outline">
+    {{if @disabled "mdc-text-field--disabled"}}
+    {{if @alignEnd "mdc-text-field--end-aligned"}}
+    {{if @ltr "mdc-text-field--ltr-text"}}
+    {{if @focused "mdc-text-field--focused"}}
+    {{if @withInternalCounter "mdc-text-field--with-internal-counter"}}"
+    {{did-insert this.didInsert}}
+    {{did-update this.didUpdateValue @value}}>
+
+    {{#if this.filled}}
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+    {{else}}
+      <span class="mdc-notched-outline">
       <span class="mdc-notched-outline__leading"></span>
-      <span class="mdc-notched-outline__notch">
-        {{#if @label}}
-          <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
-        {{/if}}
-      </span>
+       <span class="mdc-notched-outline__notch">
+         {{#if @label}}
+           <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+         {{/if}}
+       </span>
       <span class="mdc-notched-outline__trailing"></span>
     </span>
-</label>
-{{#if this.helperLine}}
-  <div class="mdc-text-field-helper-line">
-    {{#if this.helperText}}
-      <div class="mdc-text-field-helper-text {{if this.persistentHelperText "mdc-text-field-helper-text--persistent"}} {{if @errorMessage "mdc-text-field-helper-text--validation-msg"}}"
-           id={{this.helperId}}
-           aria-hidden="true">{{this.helperText}}</div>
     {{/if}}
-    {{#if @characterCount}}
-      <div class="mdc-text-field-character-counter" />
+
+    <span class="{{if this.resizable "mdc-text-field__resizer"}}">
+      <Textarea class="mdc-text-field__input"
+                @value={{@value}}
+                @type={{@type}}
+                aria-labelledby={{this.labelId}}
+                aria-controls={{this.helperId}}
+                aria-describedby={{this.helperId}}
+                disabled={{@disabled}}
+                ...attributes
+        {{did-update this.setCustomErrorMessage @errorMessage}}
+        {{on "input" this.input}}
+        {{on "invalid" this.invalid}}
+        {{on "focus" this.focus}}
+        {{on "blur" this.blur}}
+      />
+
+      {{#if @characterCount}}
+        {{#if @withInternalCounter}}
+          <div class="mdc-text-field-character-counter"/>
+        {{/if}}
+      {{/if}}
+    </span>
+
+    {{#if this.filled}}
+      <span class="mdc-line-ripple"></span>
     {{/if}}
-  </div>
-{{/if}}
+  </label>
+
+  {{#unless @noHelperLine}}
+    <div class="mdc-text-field-helper-line">
+      {{#if this.helperText}}
+        <div class="mdc-text-field-helper-text
+        {{if this.isPersistentHelperText "mdc-text-field-helper-text--persistent"}}
+          {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
+             id={{this.helperId}}
+             aria-hidden="true">{{this.helperText}}</div>
+      {{/if}}
+      {{#if @characterCount}}
+        {{#unless @withInternalCounter}}
+          <div class="mdc-text-field-character-counter"/>
+        {{/unless}}
+      {{/if}}
+    </div>
+  {{/unless}}
+</div>

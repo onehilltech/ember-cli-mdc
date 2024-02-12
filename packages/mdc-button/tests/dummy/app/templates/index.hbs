@@ -1,29 +1,63 @@
-<h2 id="title">Material Design Buttons</h2>
+<h5 id="title">Material Design Buttons</h5>
 
-<h3>Default Button</h3>
-<MdcButton @label="Default (inline)" {{on "click" (fn this.displayMessage "Default (inline)")}} />
-<MdcButton {{on "click" (fn this.displayMessage "Default (block)")}}>Default (block)</MdcButton>
+<h6>Default Button</h6>
 
-<h3>Button Styles</h3>
+<p>
+  <MdcButton @label="Default (inline)" {{on "click" (fn this.displayMessage "Default (inline)")}} />
+  <MdcButton {{on "click" (fn this.displayMessage "Default (block)")}}>Default (block)</MdcButton>
+</p>
 
-<MdcButton @style="raised" @label="Raised" {{on "click" (fn this.displayMessage "Raised")}}/>
-<MdcButton @style="outlined" @label="Outlined" {{on "click" (fn this.displayMessage "Outlined")}} />
-<MdcButton @style="unelevated" @label="Unelevated" {{on "click" (fn this.displayMessage "Unelevated")}} />
+<h6>Button Styles</h6>
 
+<p>
+  <MdcButton @style="raised" @label="Raised" {{on "click" (fn this.displayMessage "Raised")}}/>
+  <MdcButton @style="outlined" @label="Outlined" {{on "click" (fn this.displayMessage "Outlined")}} />
+  <MdcButton @style="unelevated" @label="Unelevated" {{on "click" (fn this.displayMessage "Unelevated")}} />
+</p>
 
-<h3>Disabled Button</h3>
-<MdcButton @style="outlined" @label="Disabled" disabled={{true}} />
+<h6>Disabled Button</h6>
 
-<h3>Button Icon</h3>
+<p>
+  <MdcButton @style="outlined" @label="Disabled" disabled={{true}} />
+</p>
 
-<MdcButton @style="raised" @leadingIcon="event" @label="Add to Calendar" {{on "click" (fn this.displayMessage "Add to Calendar")}} />
-<MdcButton @style="raised" @trailingIcon="check" @label="Submit" {{on "click" (fn this.displayMessage "Submit")}}/>
-<MdcButton @style="unelevated" @leadingIcon="check">Proceed</MdcButton>
+<h6>Button Icon</h6>
 
-<h3>Link Button</h3>
+<p>
+  <MdcButton @style="raised" @leadingIcon="event" @label="Add to Calendar" {{on "click" (fn this.displayMessage "Add to Calendar")}} />
+  <MdcButton @style="raised" @trailingIcon="check" @label="Submit" {{on "click" (fn this.displayMessage "Submit")}}/>
+  <MdcButton @style="unelevated" @leadingIcon="check">Proceed</MdcButton>
 
-<MdcButtonLinkTo @route="dummy"
-                 @label="Go Forward (Inline)"
-                 @style="raised"
-                 @leadingIcon="exit_to_app"
-  {{on "click" (fn this.displayMessage "Go Forward (Inline)")}} />
+  <MdcButton @style="raised">
+    <:leading-svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+        <path d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"/>
+      </svg>
+    </:leading-svg>
+
+    <:default>Delete Trash</:default>
+
+    <:trailing-svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+        <path d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"/>
+      </svg>
+    </:trailing-svg>
+  </MdcButton>
+</p>
+
+<h6>Link Button</h6>
+
+<p>
+  <MdcButtonLinkTo @route="dummy"
+                   @label="Go Forward (Inline)"
+                   @style="raised"
+                   @leadingIcon="exit_to_app" />
+</p>
+
+<p>
+  <MdcButtonLinkTo @href="/dummy"
+                   @label="Go Forward (Inline)"
+                   @style="raised"
+                   @leadingIcon="exit_to_app" />
+</p>
+

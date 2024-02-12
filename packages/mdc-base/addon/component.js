@@ -2,36 +2,51 @@ import Component from '@glimmer/component';
 
 import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
-import { assert } from '@ember/debug';
+import { service } from '@ember/service';
 
 import Listener from './-internal/listener';
-
-
-const { MDCComponent } = mdc.base;
 
 /**
  * The MaterialComponent class is the base class for all material design components
  * in the material-components-web framework.
  */
 export default class MaterialComponent extends Component {
+  @service
+  mdc;
+
   _component = null;
 
-  get component () {
+  get component() {
     return this._component;
   }
-  
+
   @action
-  didInsert (element) {
+  didInsert(element) {
+    // Define the element property that represents the root html element for
+    // the component wrapper facade.
+
+    Object.defineProperty (this, 'element', { value: element, configurable: false, writable: false });
+
     // Prepare the element for creation.
     this.doPrepareElement (element);
 
     // Create the material component.
-    let component = this.doCreateComponent (element);
+    const component = this.doCreateComponent (element);
 
     if (isPresent (component)) {
       this._checkComponent (component);
       this._installComponent (component);
     }
+
+    // Define the registration property. This will be used by the component to
+    // unregister itself with the framework.
+
+    Object.defineProperty (this, '_registration', {
+      value: this.mdc.registerComponent (this),
+      configurable: false,
+      writable: false,
+      enumerable: false
+    });
   }
 
   /**
@@ -41,7 +56,7 @@ export default class MaterialComponent extends Component {
    */
   replaceComponent (component) {
     // Check the component is a valid material component.
-    this._checkComponent (component);
+    this._checkComponent(component);
 
     // Cleanup the current component's resources, and install the new component.
     this._cleanup ();
@@ -59,9 +74,8 @@ export default class MaterialComponent extends Component {
     this._component = component;
     this.doInitComponent (component);
 
-    // Start listening for events.
-    if (isPresent (this._listeners)) {
-      this._listeners.forEach (listener => listener.listen (this));
+    if (isPresent(this._listeners)) {
+      this._listeners.forEach((listener) => listener.listen (this));
     }
   }
 
@@ -71,7 +85,7 @@ export default class MaterialComponent extends Component {
    * @param component
    * @private
    */
-  _checkComponent (component) {
+  _checkComponent(component) {
     //assert ('The instantiated component is not an instance of MDCComponent', (component instanceof MDCComponent));
   }
 
@@ -81,16 +95,14 @@ export default class MaterialComponent extends Component {
    *
    * @param element         HTML element
    */
-  doPrepareElement (element) {
-
-  }
+  doPrepareElement(element) {}
 
   /**
    * Factory method for creating the material component.
    *
    * @param element
    */
-  doCreateComponent (element) {
+  doCreateComponent(element) {
     return null;
   }
 
@@ -99,26 +111,31 @@ export default class MaterialComponent extends Component {
    *
    * @param component
    */
-  doInitComponent (component) {
-
-  }
+  doInitComponent(component) {}
 
   /**
-   * The component will be destroy. Perform any _cleanup operations so we do not have
+   * The component will be destroyed. Perform any _cleanup operations so we do not have
    * any resources being leaked.
    */
-  willDestroy () {
+  willDestroy() {
+    super.willDestroy (...arguments);
     this._cleanup ();
   }
 
   /**
    * Cleanup any resources used by the component.
    */
-  _cleanup () {
-    if (isPresent (this._component)) {
-      if (isPresent (this._listeners)) {
-        this._listeners.forEach (listener => listener.unlisten (this._component));
-      }
+  _cleanup() {
+    if (isPresent (this._component) && isPresent (this._listeners)) {
+      // Unregister the listeners so this component does not receive any more
+      // unwanted notifications.
+
+      this._listeners.forEach ((listener) => listener.unlisten (this._component));
+    }
+
+    if (isPresent (this._registration)) {
+      // Unregister this wrapper facade with the framework.
+      this._registration.unregister ();
     }
   }
 
@@ -129,9 +146,9 @@ export default class MaterialComponent extends Component {
    * @param method
    * @private
    */
-  _registerMdcEventListener (eventName, method) {
-    let listener = new Listener (eventName, method);
-    (this._listeners = this._listeners || []).push (listener);
+  _registerMdcEventListener(eventName, method) {
+    let listener = new Listener(eventName, method);
+    (this._listeners = this._listeners || []).push(listener);
   }
 
   /**
@@ -140,8 +157,8 @@ export default class MaterialComponent extends Component {
    * @param eventName
    * @param method
    */
-  listen (eventName, method) {
-    return this._component.listen (eventName, method);
+  listen(eventName, method) {
+    return this._component.listen(eventName, method);
   }
 
   /**
@@ -150,7 +167,26 @@ export default class MaterialComponent extends Component {
    * @param eventName
    * @param method
    */
-  unlisten (eventName, method) {
-    return this._component.unlisten (eventName, method);
+  unlisten(eventName, method) {
+    return this._component.unlisten(eventName, method);
+  }
+
+  createCustomEvent (name, detail = {}) {
+    // Set the component sending the event.
+    detail.$component = this;
+
+    return new CustomEvent (name, { detail });
+  }
+
+  /**
+   * Dispatch an event from the associated html element.
+   *
+   * @param name
+   * @param detail
+   */
+  dispatchEvent (name, detail = {}) {
+    // Create the custom event and dispatch it.
+    const ev = this.createCustomEvent (name, detail);
+    this.element.dispatchEvent (ev);
   }
 }

@@ -1,39 +1,39 @@
 /* eslint-env node */
 
-const { Blueprint } = require ('ember-cli-blueprint-helpers');
-const { version } = require ('../../package.json');
-const target = require ('ember-cli-mdc-utils').target (version);
+const { Blueprint } = require('ember-cli-blueprint-helpers');
+const { version } = require('../../package.json');
+const target = require('ember-cli-mdc-utils').target(version);
 
-module.exports = Blueprint.extend ({
-  packages: [
-    {name: '@material/theme', target: '^6.0.0'}
-  ],
-
+module.exports = Blueprint.extend({
   addons: [
-    {name: 'ember-cli-mdc-sass', target },
-    {name: 'ember-cli-custom-properties'},
-    {name: 'ember-modifier'}
+    { name: 'ember-cli-mdc-sass', target },
+    { name: 'ember-cli-custom-properties' },
+    { name: 'ember-modifier', target: '^2.0.0' },
   ],
 
-  files () {
-    if (!this.project)
-      return this._super.call (this, ...arguments);
+  files() {
+    if (!this.project) return this._super.call(this, ...arguments);
 
-    let files = this._super.call (this, ...arguments);
+    let files = this._super.call(this, ...arguments);
 
-    if (this.project.isEmberCLIAddon ()) {
+    if (this.project.isEmberCLIAddon()) {
       // Remove the files that to not pertain to add-ons.
-      files = files.filter (item => item !== '__root__/styles/_app-theme.scss');
-
-      if (this.project.has ('tests/dummy/app/styles/_app-theme.scss'))
-        files = files.filter (item => item !== 'tests/dummy/app/styles/_app-theme.scss');
-    }
-    else {
+      files = files.filter(
+        (item) =>
+          ![
+            '__root__/styles/_app-theme.scss',
+            '__root__/styles/app.scss',
+          ].includes(item)
+      );
+    } else {
       // Remove files that do not pertain to applications projects.
-      files = files.filter (item => item !== 'tests/dummy/app/styles/_app-theme.scss');
-
-      if (this.project.has ('app/styles/_app-theme.scss'))
-        files = files.filter (item => item !== '__root__/styles/_app-theme.scss');
+      files = files.filter(
+        (item) =>
+          ![
+            'tests/dummy/app/styles/_app-theme.scss',
+            '__root__/styles/addon.scss',
+          ].includes(item)
+      );
     }
 
     return files;

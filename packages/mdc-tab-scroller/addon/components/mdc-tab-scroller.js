@@ -1,9 +1,7 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
-import { action } from '@ember/object';
 import { assert } from '@ember/debug';
 import { isEmpty } from '@ember/utils';
+import { MDCTabScroller } from '@material/tab-scroller';
 
 const ALIGN_VALUES = [
   'start',
@@ -11,7 +9,6 @@ const ALIGN_VALUES = [
   'end'
 ];
 
-const { MDCTabScroller } = mdc.tabScroller;
 
 export default class MdcTabScrollerComponent extends Component {
   doCreateComponent (element) {
@@ -19,7 +16,7 @@ export default class MdcTabScrollerComponent extends Component {
   }
 
   get align () {
-    let { align } = this.args;
+    const { align } = this.args;
 
     if (isEmpty (align)) {
       return;

@@ -4,7 +4,7 @@ import Component from 'ember-cli-mdc-base/component';
 import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
-const { MDCLineRipple } = mdc.lineRipple;
+import { MDCLineRipple } from '@material/line-ripple';
 
 export default class MdcLineRippleComponent extends Component {
   doCreateComponent (element) {

@@ -3,15 +3,6 @@ ember-cli-mdc-tab-scroller
 
 ember-cli addon for [`@material/tab-scroller`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-scroller).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
-
 Installation
 ------------
 

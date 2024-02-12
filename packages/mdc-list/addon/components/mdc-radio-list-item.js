@@ -1,15 +1,16 @@
 import ListItemComponent from '@ember/component';
+import { tracked } from "@glimmer/tracking";
 
-export default ListItemComponent.extend({
-  role: 'radio',
+export default class MdcRadioListItemComponent extends ListItemComponent {
+  @tracked
+  role = 'radio';
 
-  checked: false,
+  @tracked
+  checked = false;
 
-  didInsertElement () {
-    this._super (...arguments);
+  doPrepareElement (element) {
+    super.doPrepareElement (...arguments)
 
-    // Set the initial checked value for the list item.
-    let checked = this.checked;
-    this.element.setAttribute ('aria-checked', checked);
+    element.setAttribute ('aria-checked', this.checked);
   }
-});
+};

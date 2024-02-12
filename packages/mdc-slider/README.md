@@ -60,3 +60,4 @@ the parent element.
 The `@input` action of the `MdcSlider` will change instantaneously as the slider is
 moved from side to side. The `@change` action is called only when the slider stops moving.
 This means the user has selected a terminal value, and the slider is committing the value.
+

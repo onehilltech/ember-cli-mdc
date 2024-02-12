@@ -1,80 +1,58 @@
-<h2 id="title">Lists</h2>
+<h5 id="title">Lists</h5>
 
-<h3 class="mdc-typography--headline5">Single-line items</h3>
-
-<div class="mdc-list-container">
-  <MdcList>
-    <MdcListItem>Single-line item</MdcListItem>
-    <MdcListItem>Single-line item</MdcListItem>
-    {{#mdc-list-item-link-to "linkto"}}Single-line Link-To item{{/mdc-list-item-link-to}}
-  </MdcList>
-</div>
-
-<h3 class="mdc-typography--headline6">Leading icon</h3>
+<h6 class="mdc-typography--headline5">Single-line items</h6>
 
 <div class="mdc-list-container">
   <MdcList>
-    <MdcListItem><MdcListItemGraphicIcon @icon="wifi" /> Single-line item</MdcListItem>
-    <MdcListItem><MdcListItemGraphicIcon @icon="bluetooth" /> Single-line item</MdcListItem>
-    <MdcListItem><MdcListItemGraphicIcon @icon="data_usage" /> Single-line item</MdcListItem>
+    <MdcListItem><MdcListItemText>Single-line item</MdcListItemText></MdcListItem>
+    <MdcListItem @text="Single-line item" />
+    <MdcListItemLinkTo @route="linkto" @text="Single-line Link-To item" />
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline6">Trailing icon</h3>
+<h6 class="mdc-typography--headline6">Leading icon</h6>
 
 <div class="mdc-list-container">
   <MdcList>
-    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
-    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
-    <MdcListItem>Single-line item <MdcListItemMetaIcon @icon="info" /></MdcListItem>
-  </MdcList>
-</div>
-
-<h3 class="mdc-typography--headline6">Two-Line with Leading and Trailing Icon and Divider</h3>
-
-<div class="mdc-list-container">
-  <MdcList @twoLine={{true}} @avatarList={{true}}>
     <MdcListItem>
-      <MdcListItemGraphicIcon @icon="folder" />
-      <MdcListItemText>
-        <MdcListItemPrimaryText>Dog Photos</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>9 Jan 2018</MdcListItemSecondaryText>
-      </MdcListItemText>
+      <MdcListItemGraphicIcon @icon="wifi" />
+      <MdcListItemText>Single-line item</MdcListItemText>
+    </MdcListItem>
+
+    <MdcListItem @graphicIcon="bluetooth" @text="Single-line item" />
+    <MdcListItem @graphicIcon="data_usage" @text="Single-line item" />
+  </MdcList>
+</div>
+
+<h6 class="mdc-typography--headline6">Trailing icon</h6>
+
+<div class="mdc-list-container">
+  <MdcList>
+    <MdcListItem>
+      <MdcListItemText>Single-line item</MdcListItemText>
       <MdcListItemMetaIcon @icon="info" />
     </MdcListItem>
 
-    <MdcListItem>
-      <MdcListItemGraphicIcon @icon="folder" />
-      <MdcListItemText>
-        <MdcListItemPrimaryText>Cat Photos</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>22 Dec 2017</MdcListItemSecondaryText>
-      </MdcListItemText>
-      <MdcListItemMetaIcon @icon="info" />
-    </MdcListItem>
+    <MdcListItem @text="Single-line item" @metaIcon="info" />
+    <MdcListItemLinkTo @route="linkto" @text="Single-line item" @metaIcon="chevron_right" />
+  </MdcList>
+</div>
+
+<h6 class="mdc-typography--headline6">Two-Line with Leading and Trailing Icon and Divider</h6>
+
+<div class="mdc-list-container">
+  <MdcList @twoLine={{true}} @leadingTile="avatar">
+    <MdcListItem @graphicIcon="folder" @primaryText="Dog Photos" @secondaryText="9 Jan 2018" @metaIcon="info" />
+    <MdcListItem @graphicIcon="folder" @primaryText="Cat Photos" @secondaryText="22 Dec 2017" @metaIcon="info" />
 
     <MdcListDivider />
 
-    <MdcListItem>
-      <MdcListItemGraphicIcon @icon="folder" />
-      <MdcListItemText>
-        <MdcListItemPrimaryText>Potatoes</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>30 Nov 2017</MdcListItemSecondaryText>
-      </MdcListItemText>
-      <MdcListItemMetaIcon @icon="info" />
-    </MdcListItem>
-
-    <MdcListItem>
-      <MdcListItemGraphicIcon @icon="folder" />
-      <MdcListItemText>
-        <MdcListItemPrimaryText>Carrots</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>17 Oct 2017</MdcListItemSecondaryText>
-      </MdcListItemText>
-      <MdcListItemMetaIcon @icon="info" />
-    </MdcListItem>
+    <MdcListItem @graphicIcon="folder" @primaryText="Potatoes" @secondaryText="30 Nov 2017" @metaIcon="info" />
+    <MdcListItem @graphicIcon="folder" @primaryText="Carrots" @secondaryText="17 Oct 2017" @metaIcon="info" />
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline5">Dense</h3>
+<h6 class="mdc-typography--headline5">Dense</h6>
 
 <div class="mdc-list-container">
   <MdcList @dense={{true}}>
@@ -84,58 +62,26 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline5">Two-line List</h3>
-
-<div class="mdc-list-container">
-  <MdcList @twoLine={{true}}>
-    <MdcListItem>
-      <MdcListItemText>
-        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
-      </MdcListItemText>
-    </MdcListItem>
-
-    <MdcListItem>
-      <MdcListItemText>
-        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
-      </MdcListItemText>
-    </MdcListItem>
-
-    <MdcListItem>
-      <MdcListItemText>
-        <MdcListItemPrimaryText>First-line text</MdcListItemPrimaryText>
-        <MdcListItemSecondaryText>Second-line text</MdcListItemSecondaryText>
-      </MdcListItemText>
-    </MdcListItem>
-  </MdcList>
-</div>
-
-
-<h3 class="mdc-typography--headline5">List Groups</h3>
+<h6 class="mdc-typography--headline5">List Groups</h6>
 
 <div class="mdc-list-container">
   <MdcListGroup>
     <MdcListGroupSubheader>List 1</MdcListGroupSubheader>
     <MdcList>
-      <MdcListItem>Single-line item</MdcListItem>
-      <MdcListItem>Single-line item</MdcListItem>
-      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem @text="Single-line item" />
+      <MdcListItem @text="Single-line item" />
     </MdcList>
-  </MdcListGroup>
 
-  <MdcListGroup>
     <MdcListGroupSubheader>List 2</MdcListGroupSubheader>
     <MdcList>
-      <MdcListItem>Single-line item</MdcListItem>
-      <MdcListItem>Single-line item</MdcListItem>
-      <MdcListItem>Single-line item</MdcListItem>
+      <MdcListItem @text="Single-line item" />
+      <MdcListItem @text="Single-line item" />
+      <MdcListItem @text="Single-line item" />
     </MdcList>
   </MdcListGroup>
 </div>
 
-
-<h3 class="mdc-typography--headline5">List Dividers</h3>
+<h6 class="mdc-typography--headline5">List Dividers</h6>
 
 <div class="mdc-list-container">
   <MdcList>
@@ -147,7 +93,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline6">Padded</h3>
+<h6 class="mdc-typography--headline6">Padded</h6>
 
 <div class="mdc-list-container">
   <MdcList>
@@ -159,7 +105,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline6">Inset</h3>
+<h6 class="mdc-typography--headline6">Inset</h6>
 
 <div class="mdc-list-container">
   <MdcList>
@@ -171,7 +117,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline6">Inset and Padded</h3>
+<h6 class="mdc-typography--headline6">Inset and Padded</h6>
 
 <div class="mdc-list-container">
   <MdcList>
@@ -183,7 +129,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline5">Single Selection</h3>
+<h6 class="mdc-typography--headline5">Single Selection</h6>
 
 <div class="mdc-list-container">
   <MdcList @singleSelection={{true}}>
@@ -193,7 +139,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline5">Pre-selected Single Selection</h3>
+<h6 class="mdc-typography--headline5">Pre-selected Single Selection</h6>
 
 <div class="mdc-list-container">
   <MdcList @singleSelection={{true}}>
@@ -203,7 +149,7 @@
   </MdcList>
 </div>
 
-<h3 class="mdc-typography--headline5">Non-interactive</h3>
+<h6 class="mdc-typography--headline5">Non-interactive</h6>
 
 <div class="mdc-list-container">
   <MdcList @nonInteractive={{true}}>
@@ -214,7 +160,7 @@
 </div>
 
 
-<h3 class="mdc-typography--headline5">Disabled Items</h3>
+<h6 class="mdc-typography--headline5">Disabled Items</h6>
 
 <div class="mdc-list-container">
   <MdcList>
@@ -225,7 +171,7 @@
 </div>
 
 <!--
-<h3 class="mdc-typography--headline5">Radio List</h3>
+<h6 class="mdc-typography--headline5">Radio List</h6>
 
 <MdcRadioList>
 

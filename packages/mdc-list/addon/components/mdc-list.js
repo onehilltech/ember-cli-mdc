@@ -1,12 +1,13 @@
-/* global mdc */
+import { Component } from 'ember-cli-mdc-base';
 
-import Component from 'ember-cli-mdc-base/component';
 import { action } from '@ember/object';
+import { MDCList } from '@material/list';
+import { isPresent, isNone } from '@ember/utils';
+import { assert } from '@ember/debug';
 import { A } from '@ember/array';
 import { sort } from '@ember/object/computed';
-import { isPresent } from '@ember/utils';
 
-const { MDCList } = mdc.list;
+const LEADING_TILE_VALUES = ['textual','avatar','icon','image','thumbnail','video'];
 
 export default class MdcListComponent extends Component {
   doCreateComponent (element) {
@@ -34,6 +35,13 @@ export default class MdcListComponent extends Component {
   @action
   wrapFocus (element, [wrapFocus]) {
     this.component.wrapFocus = wrapFocus;
+  }
+
+  get leadingTileStyle () {
+    const { leadingTile } = this.args;
+    assert (`@leadingTile must be one of the following values: ${LEADING_TILE_VALUES}`, isNone (leadingTile) || LEADING_TILE_VALUES.includes (leadingTile));
+
+    return isPresent (leadingTile) ? `mdc-list--${leadingTile}-list` : null;
   }
 
   get interactive () {

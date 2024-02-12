@@ -1,9 +1,6 @@
 import ListItemLinkTo from 'ember-cli-mdc-list/components/mdc-list-item-link-to';
 
-export default ListItemLinkTo.extend ({
-  classNames: ['mdc-menu-item'],
+export default class MdcMenuItemLinkTo extends ListItemLinkTo{
 
-  classNameBindings: [
-    'selected:mdc-menu-item--selected'
-  ],
-})
+}
+

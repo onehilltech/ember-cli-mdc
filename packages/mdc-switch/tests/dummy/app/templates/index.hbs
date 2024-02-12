@@ -1,8 +1,10 @@
-<h2 id="title">Switch</h2>
+<h6 id="title">Switch</h6>
 
 <div class="mdc-switch-row">
   <div class="mdc-switch-container">
-    <div><MdcSwitch @checked={{this.checked1}} /></div>
+    <div><MdcSwitch @checked={{this.checked1}}
+        {{on "MdcSwitch:checked" (fn this.toggle "checked1")}} />
+    </div>
     <div>Checked: {{this.checked1}}</div>
 
   </div>
@@ -11,7 +13,9 @@
   </div>
 
   <div class="mdc-switch-container">
-    <div><MdcSwitch @label="on/off" @checked={{this.on}} /></div>
+    <div><MdcSwitch @label="on/off" @checked={{this.on}}
+      {{on "MdcSwitch:checked" (fn this.toggle "on")}}/>
+    </div>
     <div>On: {{this.on}}</div>
   </div>
 </div>

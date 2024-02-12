@@ -4,8 +4,10 @@
   "license": "Apache-2.0",
   "author": "James H. Hill <james@onehilltech.com>",
   "private": false,
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "lerna": "^3.4.0",
-    "semver": "^7.3.2"
+    "lerna": "^6.6.2"
   }
 }

@@ -1,6 +1,6 @@
-<h2>Basic Chips</h2>
+<h6>Basic Chips</h6>
 
-<h3>Block</h3>
+<h5>Block</h5>
 
 
 <MdcChipSet>
@@ -10,7 +10,7 @@
 </MdcChipSet>
 
 
-<h3>Inline / Dynamic</h3>
+<h5>Inline / Dynamic</h5>
 
 <MdcChipSet @chips={{this.chips}} />
 
@@ -22,13 +22,13 @@
   <button type="submit">Add Chip</button>
 </form></p>
 
-<h4>Custom Keys</h4>
+<h5>Custom Keys</h5>
 
 <MdcChipSet @chips={{this.customKeyChips}} @textKey="name" @label="Names" />
 <p>Length: {{this.customKeyChips.length}}</p>
 
 
-<h3>Choice Chips</h3>
+<h5>Choice Chips</h5>
 
 <MdcChoiceChipSet @chips={{this.choiceChips}} @choice={{this.choice}} @change={{this.change}} />
 
@@ -40,7 +40,7 @@
 <p>Selected Value: {{this.choice.id}}</p>
 
 
-<h3>Filter Chips</h3>
+<h5>Filter Chips</h5>
 
 <MdcFilterChipSet @chips={{this.filterChips}} @filtered={{this.filtered}} />
 
@@ -58,7 +58,7 @@
 </p>
 
 
-<h3>Input Chips</h3>
+<h5>Input Chips</h5>
 
 <MdcInputChipSet class="addresses"
                  @chips={{this.inputChips}}

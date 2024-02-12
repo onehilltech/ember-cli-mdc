@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener  from 'ember-cli-mdc-base/listener';
 
@@ -8,8 +6,7 @@ import { isPresent } from '@ember/utils';
 import { assert } from '@ember/debug';
 
 import { isString } from 'lodash-es';
-
-const { MDCMenuSurface, Corner } = mdc.menuSurface;
+import { MDCMenuSurface, Corner } from '@material/menu-surface';
 
 function noOp () { }
 
@@ -84,6 +81,10 @@ export default class MdcMenuSurfaceComponent extends Component {
     }
   }
 
+  set anchorElement (element) {
+    this.component.setMenuSurfaceAnchorElement (element);
+  }
+
   @action
   toggleOpen (element, [open]) {
     let component = this.component;
@@ -108,17 +109,8 @@ export default class MdcMenuSurfaceComponent extends Component {
     }
   }
 
-  @action
-  quickOpen (element, [quickOpen]) {
-    this.component.quickOpen = quickOpen;
-  }
-
   isOpen (component) {
     return component.isOpen ();
-  }
-
-  set anchorElement (element) {
-    this.component.setMenuSurfaceAnchorElement (element);
   }
 
   @listener('MDCMenuSurface:opened')

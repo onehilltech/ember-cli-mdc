@@ -1,5 +1,5 @@
 import ListComponent from './mdc-list';
 
-export default ListComponent.extend({
-  role: 'radiogroup'
-});
+export default class MdcRadioListComponent extends ListComponent {
+  role = 'radiogroup'
+}

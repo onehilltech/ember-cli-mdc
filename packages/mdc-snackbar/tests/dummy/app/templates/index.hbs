@@ -1,7 +1,3 @@
-<h2 id="title">Snackbar from Controller</h2>
+<h5>Snackbar from Controller</h5>
 
-<button {{action "snackbar" (hash message="Hello, World!"
-                                  action=(hash label="Undo" click=(action "undo"))
-                                  dismiss=(hash click=(action "dismiss")))}}>Send message</button>
-
-<button {{action "snackbar" (hash message="Hello, World!" dismiss=true)}}>Send dismissible message</button>
+<button {{on "click" this.showMessage}}>Show message</button>

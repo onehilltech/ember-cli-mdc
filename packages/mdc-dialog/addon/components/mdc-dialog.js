@@ -1,38 +1,62 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { isPresent } from '@ember/utils';
-import { action, getWithDefault } from '@ember/object';
-
+import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
+import { dasherize } from '@ember/string';
+
 import { guidFor } from '@ember/object/internals';
 
-const { MDCDialog } = mdc.dialog;
+import { MDCDialog } from '@material/dialog';
 
-function noOp () { }
 
 export default class MdcDialogComponent extends Component {
   @action
-  prepareDialogSurface (element) {
-    // Set the id for the title element, it present.
-    let guid = guidFor (element);
-    let titleElement = element.querySelector ('.mdc-dialog__title');
+  doPrepareElement (element) {
+    // Locate the content element and set it compact if there is a mdc-list as
+    // a direct child of the content element. This will ensure the list does not
+    // have any extra padding on its sides.
 
-    if (isPresent (titleElement)) {
-      titleElement.id = `${guid}__title`;
-      element.setAttribute ('aria-labelledby', titleElement.id);
-    }
-
-    let contentElement = element.querySelector ('.mdc-dialog__content');
+    const contentElement = element.querySelector ('.mdc-dialog__content');
 
     if (isPresent (contentElement)) {
+<<<<<<< HEAD
+      this.compact = !!contentElement.querySelector ('.mdc-dialog__content > .mdc-deprecated-list');
+=======
       contentElement.id = `${guid}__content`;
       element.setAttribute ('aria-describedby', contentElement.id);
 
       this.compact = !!contentElement.querySelector (':scope > .mdc-list');
+>>>>>>> master
     }
+
+    // Prepare the buttons for the dialog if they are present. We need to make sure
+    // all buttons have an action. If any of the buttons are missing the action data
+    // then we should automatically add one.
+
+    const dialogButtons = element.querySelectorAll ('.mdc-dialog__button');
+    dialogButtons.forEach (button => this.prepareDialogButton (button));
+  }
+
+  prepareDialogButton (button) {
+    if (!button.hasAttribute ('data-mdc-dialog-action')) {
+      // The button does not have an action data attribute. Set the value of the button to
+      // the classified version of the label.
+
+      const label = button.querySelector ('.mdc-button__label');
+      const action = dasherize (label.innerText);
+
+      button.setAttribute ('data-mdc-dialog-action', action);
+    }
+  }
+
+  get dialogTitleId () {
+    return `${guidFor (this)}__title`;
+  }
+
+  get dialogContentId () {
+    return `${guidFor (this)}__content`;
   }
 
   @tracked
@@ -83,55 +107,71 @@ export default class MdcDialogComponent extends Component {
 
   @listener ('MDCDialog:opening')
   opening () {
-    (this.args.opening || noOp)();
+    this.notifyOpening ();
+  }
+
+  notifyOpening () {
+    this.willOpen ();
+    this.dispatchEvent ('MdcDialog:opening');
+  }
+
+  willOpen () {
+
   }
 
   @listener ('MDCDialog:opened')
   opened () {
-    (this.args.opened || noOp)();
+    this.notifyOpened ()
+  }
+
+  notifyOpened () {
+    this.didOpen ();
+    this.dispatchEvent ('MdcDialog:opened');
+  }
+
+  didOpen () {
+
   }
 
   @listener ('MDCDialog:closing')
-  closing ({detail: { action }}) {
-    let button = this._lookupButton (action);
+  closing (ev) {
+    const { detail: { action }} = ev;
+    this.notifyClosing (action);
+  }
 
-    if (isPresent ((button))) {
-      getWithDefault (button, 'closing', noOp) ();
-    }
+  notifyClosing (action) {
+    this.willClose (action);
+    this.dispatchEvent ('MdcDialog:closing', { action });
+  }
+
+  willClose (action) {
+
   }
 
   @listener ('MDCDialog:closed')
-  closed ({detail: { action }}) {
-    let button = this._lookupButton (action);
-
-    if (isPresent ((button))) {
-      getWithDefault (button, 'closed', noOp) ();
-    }
+  closed (ev) {
+    const { detail: { action } } = ev;
+    this.notifyClosed (action);
   }
 
-  get positiveButtonAction () {
-    return getWithDefault (this.args, 'positiveButton.action', 'ok');
+  notifyClosed (action) {
+    this.didClose (action);
+    this.dispatchEvent ('MdcDialog:closed', { action });
   }
 
-  get negativeButtonAction () {
-    return getWithDefault (this.args, 'negativeButton.action', 'cancel');
+  didClose (action) {
+
   }
 
-  /**
-   * Lookup the button for the given action.
-   *
-   * @param action
-   * @returns {*}
-   * @private
-   */
-  _lookupButton (action) {
-    const { positiveButton, negativeButton } = this.args;
+  get closeAction () {
+    return this.args.closeAction || 'close';
+  }
 
-    if (!!positiveButton && positiveButton.action === action) {
-      return positiveButton;
-    }
-    else if (!!negativeButton && negativeButton.action === action) {
-      return negativeButton;
-    }
+  get closeIcon () {
+    return this.args.closeIcon || 'close';
+  }
+
+  get cancelAction () {
+    return this.args.cancelAction || 'cancel';
   }
 }

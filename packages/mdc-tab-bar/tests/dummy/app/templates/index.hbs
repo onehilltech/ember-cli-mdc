@@ -1,4 +1,5 @@
-<MdcTabBar @activateTab={{this.activeTab}}>
+<MdcTabBar @activeTab={{this.activeTab}}
+    {{on "MdcTabBar:activated" this.activated}}>
   <MdcTabScroller>
     <MdcTab @label="Tab 1" />
     <MdcTab @label="Tab 2" />

@@ -1,62 +1,22 @@
-<label class="mdc-text-field {{this.styleClassName}}
-  {{unless @label "mdc-text-field--no-label"}}
-  {{if @disabled "mdc-text-field--disabled"}}
-  {{if @alignEnd "mdc-text-field--end-aligned"}}
-  {{if @errorMessage "mdc-text-field--invalid"}}
-  {{if @fullWidth "mdc-text-field--fullwidth"}}
-  {{if @ltr "mdc-text-field--ltr-text"}}
-  {{if @focused "mdc-text-field--focused"}}
-  {{if @leadingIcon "mdc-text-field--with-leading-icon"}}
-  {{if @trailingIcon "mdc-text-field--with-trailing-icon"}}"
-  {{did-insert this.didInsert}}
-  {{did-update this.didUpdateValue @value}}>
-  {{#if this.filled}}
-    <span class="mdc-text-field__ripple"></span>
-  {{/if}}
+<div class="mdc-text-field__container">
+  <label class="mdc-text-field {{this.styleClassName}}
+    {{unless @label "mdc-text-field--no-label"}}
+    {{if @disabled "mdc-text-field--disabled"}}
+    {{if @alignEnd "mdc-text-field--end-aligned"}}
+    {{if @errorMessage "mdc-text-field--invalid"}}
+    {{if @fullWidth "mdc-text-field--fullwidth"}}
+    {{if @ltr "mdc-text-field--ltr-text"}}
+    {{if @focused "mdc-text-field--focused"}}
+    {{if (has-block "leading-icon") "mdc-text-field--with-leading-icon"}}
+    {{if (has-block "trailing-icon") "mdc-text-field--with-trailing-icon"}}"
+    {{did-insert this.didInsert}}
+    {{did-update this.didUpdateValue @value}}>
 
-  {{#if @leadingIcon}}
-    <MdcIcon @icon={{@leadingIcon}}
-             class="mdc-text-field__icon mdc-text-field__icon--leading"
-             tabindex={{if @leadingIconClick "0"}}
-             role={{if @leadingIconClick "button"}} {{on "click" this.leadingIconClick}} />
-  {{/if}}
-
-  {{#if @prefix}}
-    <span class="mdc-text-field__affix mdc-text-field__affix--prefix">{{@prefix}}</span>
-  {{/if}}
-
-  <MdcTextfieldInput ...attributes @value={{@value}}
-                     aria-labelledby={{this.labelId}}
-                     aria-controls={{this.helperId}}
-                     aria-describedby={{this.helperId}}
-                     disabled={{@disabled}}
-    {{did-update this.setCustomErrorMessage @errorMessage}}
-    {{on "input" this.input}}
-    {{on "invalid" this.invalid}}
-    {{on "focus" this.focus}}
-    {{on "blur" this.blur}}
-  />
-
-  {{#if @suffix}}
-    <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>
-  {{/if}}
-
-  {{#if @trailingIcon}}
-    <MdcIcon @icon={{@trailingIcon}}
-             class="mdc-text-field__icon mdc-text-field__icon--trailing"
-             tabindex={{if @trailingIconClick "0"}}
-             role={{if @trailingIconClick "button"}} {{on "click" this.trailingIconClick}} />
-  {{/if}}
-
-  {{#if this.filled}}
-    {{#if @label}}
-      {{#unless @fullWidth}}
-        <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
-      {{/unless}}
-    {{/if}}
-    <span class="mdc-line-ripple"></span>
-  {{else}}
-    <span class="mdc-notched-outline">
+    {{#if this.filled}}
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id={{this.labelId}}>{{@label}}</span>
+    {{else}}
+      <span class="mdc-notched-outline">
       <span class="mdc-notched-outline__leading"></span>
       <span class="mdc-notched-outline__notch">
         {{#if @label}}
@@ -65,19 +25,56 @@
       </span>
       <span class="mdc-notched-outline__trailing"></span>
     </span>
-  {{/if}}
-</label>
-{{#unless @noHelperLine}}
-  <div class="mdc-text-field-helper-line">
-    {{#if this.helperText}}
-      <div class="mdc-text-field-helper-text
+    {{/if}}
+
+    {{#if (has-block "leading-icon")}}
+      {{yield to="leading-icon"}}
+    {{/if}}
+
+    {{#if @prefix}}
+      <span class="mdc-text-field__affix mdc-text-field__affix--prefix">{{@prefix}}</span>
+    {{/if}}
+
+    <Input class="mdc-text-field__input"
+           @value={{@value}}
+           @type={{@type}}
+           aria-labelledby={{this.labelId}}
+           aria-controls={{this.helperId}}
+           aria-describedby={{this.helperId}}
+           disabled={{@disabled}}
+           ...attributes
+      {{did-update this.setCustomErrorMessage @errorMessage}}
+      {{on "input" this.input}}
+      {{on "invalid" this.invalid}}
+      {{on "focus" this.focus}}
+      {{on "blur" this.blur}}
+    />
+
+    {{#if (has-block "trailing-icon")}}
+      {{yield to="trailing-icon"}}
+    {{/if}}
+
+    {{#if @suffix}}
+      <span class="mdc-text-field__affix mdc-text-field__affix--suffix">{{@suffix}}</span>
+    {{/if}}
+
+    {{#if this.filled}}
+      <span class="mdc-line-ripple"></span>
+    {{/if}}
+  </label>
+
+  {{#unless @noHelperLine}}
+    <div class="mdc-text-field-helper-line">
+      {{#if this.helperText}}
+        <div class="mdc-text-field-helper-text
         {{if this.isPersistentHelperText "mdc-text-field-helper-text--persistent"}}
-        {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
-           id={{this.helperId}}
-           aria-hidden="true">{{this.helperText}}</div>
-    {{/if}}
-    {{#if @characterCount}}
-      <div class="mdc-text-field-character-counter" />
-    {{/if}}
-  </div>
-{{/unless}}
+          {{if this.isValidationMessage "mdc-text-field-helper-text--validation-msg"}}"
+             id={{this.helperId}}
+             aria-hidden="true">{{this.helperText}}</div>
+      {{/if}}
+      {{#if @characterCount}}
+        <div class="mdc-text-field-character-counter" />
+      {{/if}}
+    </div>
+  {{/unless}}
+</div>

@@ -1,15 +1,35 @@
-<div class="mdc-button__ripple"></div>
+<a href={{this.href}} class="mdc-button {{this.style}} {{this.kind}}
+  {{if this.hasLeadingIcon "mdc-button--icon-leading"}}
+  {{if this.hasTrailingIcon "mdc-button--icon-trailing"}}"
+   ...attributes
+  {{did-insert this.didInsert}}
+  {{mdc-ripple}}>
 
-{{#if @leadingIcon}}
-  <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
-{{/if}}
+  <div class="mdc-button__ripple"></div>
+  <span class="mdc-button__touch"></span>
+  <span class="mdc-button__focus-ring"></span>
 
-{{#if (has-block)}}
-  <span class="mdc-button__label">{{yield}}</span>
-{{else}}
-  <span class="mdc-button__label">{{@label}}</span>
-{{/if}}
+  {{#if @leadingIcon}}
+    <MdcIcon @icon={{@leadingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if @leadingImage}}
+    <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if (has-block "leading-svg")}}
+    {{yield to="leading-svg"}}
+  {{/if}}
 
-{{#if @trailingIcon}}
-  <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
-{{/if}}
+  {{#unless @noLabel}}
+    {{#if @label}}
+      <span class="mdc-button__label">{{@label}}</span>
+    {{else if (has-block)}}
+      <span class="mdc-button__label">{{yield}}</span>
+    {{/if}}
+  {{/unless}}
+
+  {{#if @trailingIcon}}
+    <MdcIcon @icon={{@trailingIcon}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if @trailingImage}}
+    <img src={{@image}} class="mdc-button__icon" aria-hidden="true" />
+  {{else if (has-block "trailing-svg")}}
+    {{yield to="trailing-svg"}}
+  {{/if}}
+</a>

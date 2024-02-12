@@ -20,6 +20,9 @@ export default class IndexController extends Controller {
   @equal ('open', 'stacked')
   showStackedButtonDialog;
 
+  @equal ('open', 'sheet')
+  showSheetDialog;
+
   @action
   accept () {
     alert ('Accept clicked!');

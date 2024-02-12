@@ -12,4 +12,3 @@ Components & Modifiers
 ------------------------
 
 This add-on does not contain any components or modifiers.
-

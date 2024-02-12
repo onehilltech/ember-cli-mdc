@@ -1,8 +1,16 @@
-{{#if (has-block)}}
-  {{yield (hash isActive=active)}}
-{{else}}
-  <MdcIcon @icon={{@icon}} />
-  {{#if @label}}
-    <MdcBottomNavigationButtonLabel @label={{@label}} />
+<a href={{this.href}} class="mdc-bottom-navigation__button mdc-bottom-navigation__link
+  {{if @label 'mdc-bottom-navigation__button--with-label'}}
+  {{if @horizontal 'mdc-bottom-navigation__button--horizontal'}}
+  {{if this.isActive 'mdc-bottom-navigation--active'}}"
+  {{mdc-ripple unbounded=false}} ...attributes
+  {{did-insert this.didInsert}}>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    <MdcIcon @icon={{@icon}} />
+
+    {{#if @label}}
+      <MdcBottomNavigationButtonLabel @label={{@label}} />
+    {{/if}}
   {{/if}}
-{{/if}}
+</a>

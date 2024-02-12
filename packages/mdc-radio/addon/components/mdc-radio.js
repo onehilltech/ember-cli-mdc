@@ -2,10 +2,9 @@
 
 import Component from 'ember-cli-mdc-base/component';
 import { isPresent } from '@ember/utils';
-import { action } from '@ember/object';
 import {tracked} from "@glimmer/tracking";
 
-const { MDCRadio } = mdc.radio;
+import { MDCRadio } from '@material/radio';
 
 export default class MdcRadioComponent extends Component {
   @tracked

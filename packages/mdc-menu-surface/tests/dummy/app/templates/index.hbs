@@ -1,5 +1,7 @@
 <div class="toolbar">
   <button id="anchor" {{on "click" this.openMenu}}>Open Menu</button>
 
-  <MdcMenuSurface @open={{this.open}} @position="fixed" @anchorCorner="bottomEnd" @anchorElement="#anchor" />
+  <MdcMenuSurface @open={{this.open}} @position="fixed" @anchorCorner="bottomEnd" @anchorElement="#anchor">
+    This is inside the menu surface.
+  </MdcMenuSurface>
 </div>

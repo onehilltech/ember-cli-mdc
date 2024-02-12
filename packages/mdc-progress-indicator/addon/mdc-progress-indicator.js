@@ -1,7 +1,6 @@
-/* globals mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import { action } from '@ember/object';
+import { isPresent } from "@ember/utils";
 
 export default class MdcProgressIndicatorComponent extends Component {
   doInitComponent (component) {
@@ -28,7 +27,8 @@ export default class MdcProgressIndicatorComponent extends Component {
   }
 
   get progress () {
-    return (this.value - this.min) / this.range;
+    const { value, min, range } = this;
+    return value >= min ? (value - min) / range : 0;
   }
 
   @action

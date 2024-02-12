@@ -1,0 +1,6 @@
+<div class="mdc-segmented-button {{if @singleSelect "mdc-segmented-button--single-select"}}"
+     role={{if @singleSelect "radiogroup" "group"}}
+     {{did-insert this.didInsert}}
+     ...attributes>
+  {{yield}}
+</div>

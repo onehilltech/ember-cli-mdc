@@ -32,4 +32,3 @@ Increase the touch target of the associated component.
 
 * `hint` - Optional component type hint. If not provided, then modifier deduce component type. 
 * `wrap` - Wrap the element in a touch target wrapper
-

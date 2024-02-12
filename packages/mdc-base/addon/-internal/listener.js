@@ -8,7 +8,7 @@ export default class Listener {
   /// The handler handling the event.
   method;
 
-  constructor (eventName, method) {
+  constructor(eventName, method) {
     this.eventName = eventName;
     this.method = method;
   }
@@ -18,9 +18,9 @@ export default class Listener {
    *
    * @param component
    */
-  listen (component) {
-    this.handler = this.method.bind (component);
-    component.listen (this.eventName, this.handler);
+  listen(component) {
+    this.handler = this.method.bind(component);
+    component.listen(this.eventName, this.handler);
   }
 
   /**
@@ -28,7 +28,7 @@ export default class Listener {
    *
    * @param component
    */
-  unlisten (component) {
-    component.unlisten (this.eventName, this.handler);
+  unlisten(component) {
+    component.unlisten(this.eventName, this.handler);
   }
 }

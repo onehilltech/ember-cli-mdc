@@ -1,0 +1,9 @@
+<MdcButton @kind="mdc-card__action mdc-card__action--button"
+           @leadingIcon={{@leadingIcon}}
+           @trailingIcon={{@trailingIcon}}
+           @label={{@label}}
+          ...attributes>
+  {{#if (has-block)}}
+    {{yield}}
+  {{/if}}
+</MdcButton>

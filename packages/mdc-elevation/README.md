@@ -11,15 +11,11 @@ Installation
 Components and Mixins
 -----------------------
 
-### Components
+### Modifiers
 
-none
+* [mdc-elevation](#mdc-elevation)
 
-### Mixins
-
-* [Elevation](#elevation)
-
-Elevation
+mdc-elevation
 -----------
 
 ### Description
@@ -29,20 +25,13 @@ component by adding the elevation class to the HTML element.
 
 ### Usage
 
-```javascript
-import Component from '@ember/component';
-import Elevation from 'ember-cli-mdc-elevation/mixins/elevation';
-
-export default Component.extend (Elevation, {
-  elevation: 4              // add mdc-elevation--z4 class to element
-});
-
+```handlebars
+<div {{mdc-elevation elevation=4}}>
+    
+</div>
 ```
 
 ### Attributes
 
 * `elevation` - Sets the elevation for the component. Acceptable values are 1 - 12.
-
-
-
-
+* `transition` - Show transition between elevations

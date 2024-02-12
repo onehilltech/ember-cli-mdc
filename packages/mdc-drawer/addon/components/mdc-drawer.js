@@ -1,5 +1,3 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
@@ -7,10 +5,10 @@ import { assert } from '@ember/debug';
 import { isEmpty, isPresent } from '@ember/utils';
 import { action } from '@ember/object';
 
-const STYLES = [ 'dismissible', 'modal' ];
+import { MDCDrawer } from '@material/drawer';
+import { MDCList } from '@material/list';
 
-const { MDCDrawer } = mdc.drawer;
-const { MDCList } = mdc.list;
+const STYLES = [ 'dismissible', 'modal' ];
 
 function noOp () {}
 
@@ -38,10 +36,10 @@ class PermanentDrawerImpl extends DrawerImpl {
   }
 
   doCreateComponent (element) {
-    let listElement = element.querySelector ('.mdc-list');
-    assert ('A permanent drawer must have a <MdcList> component, or .mdc-list element.', isPresent (listElement));
+    const listElement = element.querySelector ('.mdc-deprecated-list');
+    assert ('A permanent drawer must have a <MdcList> component, or .mdc-deprecated-list element.', isPresent (listElement));
 
-    let list = new MDCList (listElement);
+    const list = new MDCList (listElement);
     list.wrapFocus = true;
 
     return list;
@@ -73,7 +71,7 @@ class ModalDrawerImpl extends DrawerImpl {
   }
 
   doCreateComponent (element) {
-    this._listElement = element.querySelector ('.mdc-list');
+    this._listElement = element.querySelector ('.mdc-deprecated-list');
     this._listElement.addEventListener ('click', this._itemClickListener);
 
     this.prepareFocusTrap ();
@@ -93,11 +91,11 @@ class ModalDrawerImpl extends DrawerImpl {
     // We also need to find the link that is activated and set the tab index. Otherwise,
     // the control will will not function correctly. This means we also need to remove the
     // tab index on the other links.
-    let activated = this._listElement.querySelector ('.mdc-list-item--activated');
+    let activated = this._listElement.querySelector ('.mdc-deprecated-list-item--activated');
     activated.setAttribute ('tabindex', 0);
     activated.setAttribute ('aria-current', 'page');
 
-    let notActivated = this._listElement.querySelectorAll ('.mdc-list-item:not(.mdc-list-item--activated)');
+    let notActivated = this._listElement.querySelectorAll ('.mdc-deprecated-list-item:not(.mdc-deprecated-list-item--activated)');
     notActivated.forEach (el => {
       el.setAttribute ('tabindex', -1);
       el.removeAttribute ('aria-current');

@@ -1,14 +1,12 @@
 'use strict';
 
+const { CORBER } = process.env;
 const { get } = require ('lodash');
 
 module.exports = {
   name: require('./package').name,
-
   included (app) {
     this._super (...arguments);
-
-    const { CORBER } = process.env;
 
     if (CORBER) {
       // Get the configuration for the current environment.
@@ -69,15 +67,5 @@ module.exports = {
 
       return lines;
     }
-  },
-
-  optionsFor (type, options) {
-    if (type === 'sass') {
-      options.cacheInclude = options.cacheInclude || [];
-      options.cacheInclude.push (/addon\.scss/);
-      options.cacheInclude.push (/@material\/typography/);
-    }
-
-    return options;
   }
 };

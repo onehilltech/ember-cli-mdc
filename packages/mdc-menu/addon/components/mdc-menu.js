@@ -1,15 +1,13 @@
-/* global mdc */
-
-import Component from 'ember-cli-mdc-menu-surface/components/mdc-menu-surface';
+import MdcMenuSurfaceComponent from 'ember-cli-mdc-menu-surface/components/mdc-menu-surface';
 import listener from 'ember-cli-mdc-base/listener';
 import { action } from '@ember/object';
 
-const { MDCMenu } = mdc.menu;
-const { cssClasses: { LIST_ITEM_CLASS }} = mdc.list;
+import { MDCMenu } from '@material/menu';
+import { cssClasses } from '@material/list';
 
 function noOp () { }
 
-export default class MdcMenuComponent extends Component {
+export default class MdcMenuComponent extends MdcMenuSurfaceComponent {
   doCreateComponent (element) {
     return new MDCMenu (element);
   }
@@ -41,7 +39,7 @@ export default class MdcMenuComponent extends Component {
   closeMenu (ev) {
     const { target } = ev;
 
-    if (target.classList.contains (LIST_ITEM_CLASS) || target.getAttribute ('role') === 'menuitem') {
+    if (target.classList.contains (cssClasses.LIST_ITEM_CLASS) || target.getAttribute ('role') === 'menuitem') {
       this.doClose (this.component);
     }
   }

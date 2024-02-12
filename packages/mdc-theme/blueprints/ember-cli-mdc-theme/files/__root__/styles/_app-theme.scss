@@ -12,7 +12,11 @@
  * The framework automatically handles this for you.
  */
 
-// $mdc-theme-primary: #fcb8ab;
-// $mdc-theme-secondary: #feeae6;
-// $mdc-theme-on-primary: #442b2d;
-// $mdc-theme-on-secondary: #442b2d;
+@use "@material/theme/color-palette" as color;
+
+@use "@material/theme" with (
+  $primary: color.$orange-500,
+  $secondary: color.$blue-500,
+  //$on-primary: #442b2d,
+  //$on-secondary: #442b2d,
+);

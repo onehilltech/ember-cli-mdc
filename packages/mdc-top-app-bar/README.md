@@ -3,15 +3,6 @@ ember-cli-mdc-top-app-bar
 
 ember-cli addon for [`@material/top-app-bar`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
-
 Installation
 ------------
 
@@ -75,7 +66,6 @@ to the start or end of the `<MdcTopAppBarRow>`. There is no default alignment.
     <MdcTopAppBarSection @position="alignEnd">
       
     </MdcTopAppBarSection>
-
   </MdcTopAppBarRow>
 </MdcTopAppBar>
 ```

@@ -1,62 +1,75 @@
-<h2 id="title">Dialogs</h2>
+<h6 id="title">Dialogs</h6>
 
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "basic")}}>Show Basic Dialog</MdcButton></p>
-<p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "default")}}>Show Default Dialog</MdcButton></p>
 <p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "scrollable")}}>Show Scrollable Dialog</MdcButton></p>
+<p><MdcButton @style="unelevated" {{on "click" (fn this.showDialog "sheet")}}>Show Sheet Dialog</MdcButton></p>
 
-<MdcDialog @title="Use Google's location service?"
-           @positiveButton={{hash action="accept" label="Accept" closed=this.accept focus=true default=true}}
-           @negativeButton={{hash action="close" label="Decline"}}
-           @open={{this.showBasicDialog}}>
-  Let Google help apps determine location. This means sending anonymous
-  location data to Google, even when no apps are running.
+<MdcDialog @title="Use Google's location service?" @open={{this.showBasicDialog}} @fullscreen={{true}}>
+  <:content>
+    Let Google help apps determine location. It means sending anonymous
+    location data to Google, even when no apps are running.
+  </:content>
+
+
+  <:actions>
+    <MdcDialogButton @label="Decline" />
+
+    <MdcDialogButton @label="Accept" @default={{true}} @initialFocus={{true}}
+      {{on "click" this.accept}} />
+  </:actions>
 </MdcDialog>
 
-<MdcDialog @title="Choose a Ringtone"
-           @open={{showScrollableDialog}}
-           @positiveButton={{hash action="accept" label="Accept" closed=this.accept disabled=false}}
-           @negativeButton={{hash action="close" label="Decline"}}>
-  <ul class="mdc-list">
-    <li class="mdc-list-item">None</li>
-    <li class="mdc-list-item">Callisto</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Callisto</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
-    <li class="mdc-list-item">Ganymede</li>
-    <li class="mdc-list-item">Luna</li>
-    <li class="mdc-list-item">Marimba</li>
-    <li class="mdc-list-item">Schwifty</li>
 
+<MdcDialog @title="Choose a Ringtone" @open={{this.showScrollableDialog}}>
+  <:content>
+    <ul class="mdc-deprecated-list">
+      <li class="mdc-deprecated-list-item">None</li>
+      <li class="mdc-deprecated-list-item">Callisto</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Callisto</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+      <li class="mdc-deprecated-list-item">Ganymede</li>
+      <li class="mdc-deprecated-list-item">Luna</li>
+      <li class="mdc-deprecated-list-item">Marimba</li>
+      <li class="mdc-deprecated-list-item">Schwifty</li>
+    </ul>
+  </:content>
 
-  </ul>
+  <:actions>
+    <MdcDialogButton @label="Decline" />
+
+    <MdcDialogButton @label="Accept" {{on "click" this.accept}} />
+  </:actions>
 </MdcDialog>
 
-<MdcDialog @title="Use Google's location service?"
-           @positiveButton={{hash action="accept" label="Accept" default=true closed=this.accept}}
-           @negativeButton={{hash action="close" label="Decline"}}
-           @open={{this.showDefaultDialog}}>
-  Let Google help apps determine location. This means sending anonymous
-  location data to Google, even when no apps are running.
+
+<MdcDialog @sheet={{true}} @open={{this.showSheetDialog}}>
+  <:content>
+    <div class="test-sheet__content">
+      <h3>Sheets</h3>
+      There are no action buttons. Any HTML content can go here. Title is also defined through content.
+    </div>
+  </:content>
 </MdcDialog>

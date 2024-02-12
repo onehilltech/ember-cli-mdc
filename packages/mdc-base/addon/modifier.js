@@ -1,5 +1,7 @@
 import Modifier from 'ember-modifier';
 import { assert } from '@ember/debug';
+import { registerDestructor } from '@ember/destroyable';
+import { isPresent } from '@ember/utils';
 
 /**
  * The base class for all modifiers used in the ember-cli-mdc framework. This modifier
@@ -15,20 +17,41 @@ export default class MaterialModifier extends Modifier {
   /// The current state of the modifier.
   _currentState;
 
-  constructor () {
+  /// The HTML DOM element the modifier is attached to.
+  _element;
+
+  /// The positional arguments of the modifier.
+  _args;
+
+  /// The named arguments of the modifier.
+  _named;
+
+  constructor (owner, args) {
     super (...arguments);
 
-    // Create the initial state for the modifier, and change to it.
-    let initialState = this.createInitialState ();
-    this.changeState (initialState);
+    registerDestructor (this, () => {
+      this.willDestroy ();
+    });
+  }
+
+  get element () {
+    return this._element;
+  }
+
+  get named () {
+    return this._named || {}
+  }
+
+  get args () {
+    return this._args || [];
   }
 
   /**
    * Create the initial state for the modifier. An initial state is provide is the subclass
    * does not provide one.
    */
-  createInitialState () {
-    return new NotInstalled ();
+  createInitialState() {
+    return new NotInstalled();
   }
 
   /**
@@ -37,55 +60,56 @@ export default class MaterialModifier extends Modifier {
    *
    * @param state
    */
-  changeState (state) {
-    assert ('The state must be an instance of ModifierState', state instanceof ModifierState);
+  changeState(state) {
+    assert('The state must be an instance of ModifierState', state instanceof ModifierState);
 
-    if (!!this._currentState) {
+    if (this._currentState) {
       // Notify the current state we are exiting.
-      this._currentState.willExitState ();
+      this._currentState.willExitState();
       this._currentState.modifier = null;
     }
 
     // Update the current state.
     this._currentState = state;
 
-    if (!!this._currentState) {
+    if (this._currentState) {
       // Notify the new state we have entered.
       this._currentState.modifier = this;
-      this._currentState.didEnterState ();
+      this._currentState.didEnterState();
     }
   }
+
 
   /**
    * The modifier has been installed in an element.
    */
-  didInstall () {
-    this._currentState.didInstall ();
-  }
+  modify (element, args, named) {
+    this._element = element;
+    this._args = args;
+    this._named = named;
 
-  /**
-   * The modifier has received new arguments.
-   */
-  didReceiveArguments () {
-    this._currentState.didReceiveArguments ();
-  }
+    if (!!this._currentState) {
+      const state = this._currentState.didModify (...arguments);
 
-  didUpdateArguments () {
-    this._currentState.didUpdateArguments ();
-  }
-
-  /**
-   * The modifier will be removed from the element.
-   */
-  willRemove () {
-    this._currentState.willRemove ();
+      if (isPresent (state)) {
+        this.changeState (state);
+      }
+    }
+    else {
+      // Create the initial state for the modifier, and change to it.
+      const state = this.createInitialState (...arguments);
+      this.changeState (state);
+    }
   }
 
   /**
    * The modifier will be destroyed.
    */
-  willDestroy () {
-    this._currentState.willDestroy ();
+  willDestroy() {
+    if (this._currentState) {
+      this._currentState.willExitState ();
+      this._currentState.willDestroy ();
+    }
   }
 }
 
@@ -94,7 +118,7 @@ export default class MaterialModifier extends Modifier {
  * software design pattern. This helps us remove the unnecessary if-else, switch-case
  * statements that can result from the modifier being in different states.
  */
-class ModifierState {
+export class ModifierState {
   /// The modifier that owns the state.
   modifier;
 
@@ -103,17 +127,8 @@ class ModifierState {
    *
    * @returns {*}
    */
-  get element () {
+  get element() {
     return this.modifier.element;
-  }
-
-  /**
-   * Get the arguments passed to the modifier.
-   *
-   * @returns {*}
-   */
-  get args () {
-    return this.modifier.args;
   }
 
   /**
@@ -121,63 +136,34 @@ class ModifierState {
    *
    * @param state
    */
-  changeState (state) {
-    this.modifier.changeState (state);
+  changeState(state) {
+    this.modifier.changeState(state);
   }
 
   /**
-   * The modifier has been installed on an element.
+   * The state tracked by the modifier has changed.
    */
-  didInstall () {
+  didModify () {
 
   }
 
   /**
    * The modifier state has been entered.
    */
-  didEnterState () {
-
-  }
+  didEnterState() {}
 
   /**
    * The modifier state has been exited.
    */
-  willExitState () {
-
-  }
-
-  /**
-   * The modifier has received new arguments.
-   */
-  didReceiveArguments () {
-
-  }
-
-  /**
-   * The modifier updated its arguments.
-   */
-  didUpdateArguments () {
-
-  }
-
-  /**
-   * The modifier is being removed from the element.
-   */
-  willRemove () {
-
-  }
+  willExitState() {}
 
   /**
    * The modifier will be destroyed.
    */
-  willDestroy () {
-
-  }
+  willDestroy() {}
 }
 
 /**
  * The default initial state for the modifier if one is not provided.
  */
-class NotInstalled extends ModifierState { }
-
-export { ModifierState };
+export class NotInstalled extends ModifierState {}

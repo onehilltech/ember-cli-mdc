@@ -1,7 +1,7 @@
-@use "app-theme";
-@use "@material/circular-progress/mdc-circular-progress";
-@use "@material/circular-progress/mixins" as circularProgress;
+@import "app-theme";
+@import "@material/circular-progress/mdc-circular-progress";
 
 .mdc-circular-progress {
-  //@include circularProgress.color (#{--color});
+  height: var(--mdc-circular-progress-height);
+  width: var(--mdc-circular-progress-width);
 }

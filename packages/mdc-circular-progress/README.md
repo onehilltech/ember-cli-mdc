@@ -4,12 +4,11 @@ ember-cli-mdc-circular-progress
 ember-cli addon for [`@material/circular-progress`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-circular-progress).
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
+* Ember.js v4.4 or above
+* Ember CLI v4.4 or above
+* Node.js v14 or above
 
 
 Installation

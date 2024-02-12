@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-utils",
-  "version": "2.0.19",
+  "version": "3.0.0-alpha.21",
   "description": "Command-line utility library for ember-cli-mdc framework",
   "main": "./lib/index.js",
   "public": true,
@@ -10,7 +10,10 @@
   "author": "James H. Hill <james@onehilltech.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "semver": "^7.3.2"
+    "semver": "^7.5.1"
   },
-  "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677"
+  "gitHead": "a1dc01ec41f4377cd9cdddbff7e465e87d6ac677",
+  "devDependencies": {
+    "ember-cli-custom-properties": "^3.0.1"
+  }
 }

@@ -11,9 +11,11 @@ Installation
 Styles
 -------
 
+
 ```sass
 @use "@material/button/mixins" as button;
 ```
+
 
 Components
 -----------
@@ -105,5 +107,5 @@ exported from this module.
 <MdcButtonLinkTo @route="user" @model={{this.user.id}} @style="raised">
   <MdcButtonLabel>Contact Us</MdcButtonLabel>
 </MdcButtonLinkTo>
-```    
+```
 

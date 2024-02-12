@@ -1,1 +1,9 @@
-<i class="{{this.iconClass}}" ...attributes>{{@icon}}</i>
+{{#if @icon}}
+  <i class={{this.iconClass}} ...attributes>{{@icon}}</i>
+{{else if @image}}
+  <img src={{@image}} class={{this.iconClass}} ...attributes />
+{{else if (has-block)}}
+  <svg class={{this.iconClass}}>
+    {{yield}}
+  </svg>
+{{/if}}

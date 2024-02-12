@@ -3,15 +3,6 @@ ember-cli-mdc-tab-indicator
 
 ember-cli addon for [`@material/tab-indicator`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-tab-indicator).
 
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
-
 Installation
 ------------
 

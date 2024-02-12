@@ -5,10 +5,6 @@ const { version } = require ('../../package.json');
 const target = require ('ember-cli-mdc-utils').target (version);
 
 module.exports = Blueprint.extend ({
-  packages: [
-    {name: '@material/image-list', target: '^6.0.0'}
-  ],
-
   addons: [
     {name: 'ember-cli-mdc-shape', target },
     {name: 'ember-cli-mdc-theme', target },

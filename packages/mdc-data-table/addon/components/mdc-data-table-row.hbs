@@ -1,6 +1,6 @@
 <tr class="mdc-data-table__row" data-row-id={{@rowId}} ...attributes>
   {{#if @selectable}}
-    <MdcDataTableCell @checkbox={{@selectable}} @selected={{@selected}} />
+    <MdcDataTableCell @selectable={{@selectable}} @selected={{@selected}} />
   {{/if}}
 
   {{yield (hash rowId=this.rowId)}}

@@ -40,6 +40,7 @@ Adds a bottom navigation component to a page
 
 * `@spaceEvenly` - Space the buttons evenly as opposed to centered. Default is `false`.
 
+
 ### MdcBottomNavigationLinkTo
 
 Use the `MdcBottomNavigationLinkTo`, which extends the `LinkComponent`, component to add 
@@ -50,3 +51,4 @@ links to the bottom navigation component.
   <MdcBottomNavigationLinkTo @label="Favorites" @icon="favorites" @route={{this.routeName}}  />
 </MdcBottomNavigation>
 ```
+

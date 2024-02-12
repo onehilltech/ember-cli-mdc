@@ -29,12 +29,15 @@ search for the icon at [Material Icons](https://material.io/tools/icons/).
 ### Usage
 
 ```handlebars
-<MdcIcon @icon=[name] />
+<MdcIcon @icon={{name}} />
+<MdcIcon @image={{image}} />
+<MdcIcon>{{!-- svg elements --}}</MdcIcon>
 ```
 
-### Positional Parameters
+### Parameters
 
 * **`name`** - Name of the icon
+* **`image`** - Url of an image
 
 ### Examples
 

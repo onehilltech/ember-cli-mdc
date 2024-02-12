@@ -4,47 +4,23 @@ import { isPresent } from '@ember/utils';
 const typeExp = /^mdc((?:-[A-Za-z]+)+)$/;
 
 export default class MdcTouchTargetModifier extends Modifier {
-  createInitialState () {
-    const { named: { wrap = false }} = this.args;
+  createInitialState (element, params, args) {
+    const { wrap = false, hint } = args;
 
-    if (wrap) {
+    this.wrap = wrap;
+    this.hint = hint;
+
+    if (this.wrap) {
       return new TouchWrapperState ();
     }
     else {
-      return super.createInitialState ();
+      return new NoTouchWrapperState  ();
     }
   }
+}
 
-  didInstall () {
-    super.didInstall ();
+class NoTouchWrapperState extends ModifierState {
 
-    const { named: { hint }} = this.args;
-
-    // Add the mdc-X--touch class to the element.
-    if (isPresent (hint)) {
-      this.element.classList.add (`mdc-${hint}`);
-    }
-    else {
-      let type = this.type;
-
-      if (isPresent (type)) {
-        this.element.classList.add (`mdc${type}--touch`);
-      }
-    }
-  }
-
-  get type () {
-    let classList = this.element.classList;
-
-    for (let i = 0; i < classList.length; ++ i) {
-      let className = classList[i];
-      let found = className.match (typeExp);
-
-      if (isPresent (found)) {
-        return found[1];
-      }
-    }
-  }
 }
 
 /**
@@ -53,24 +29,63 @@ export default class MdcTouchTargetModifier extends Modifier {
 class TouchWrapperState extends ModifierState {
   _wrapper;
 
-  didInstall () {
+  didEnterState () {
     // Add a touch target wrapper to the modifier element.
-    let element = this.modifier.element;
-
     this._wrapper = document.createElement ('div');
     this._wrapper.classList.add ('mdc-touch-target-wrapper');
 
-    element.parentNode.insertBefore (this._wrapper, element);
-    this._wrapper.appendChild (element);
+    this.element.parentNode.insertBefore (this._wrapper, this.element);
+    this._wrapper.appendChild (this.element);
+
+    if (isPresent (this.hint)) {
+      // Add the mdc-X--touch class to the element.
+      this.element.classList.add (`mdc-${this.hint}`);
+    }
+    else {
+      const type = this.type;
+
+      if (isPresent (type)) {
+        this.element.classList.add (`mdc${type}--touch`);
+      }
+    }
   }
 
-  willRemove () {
+  didModify (element, _, args) {
+    const { wrap = false } = args;
+
+    if (!wrap) {
+      this.changeState (new NoTouchWrapperState ());
+    }
+  }
+
+  willExitState () {
     // Remove the wrapper from the DOM.
-    let element = this._wrapper.firstChild;
-    let parentNode = this._wrapper.parentNode;
+    const element = this._wrapper.firstChild;
+    const parentNode = this._wrapper.parentNode;
 
     parentNode.insertBefore (element, this._wrapper);
     parentNode.removeChild (this._wrapper);
+  }
+
+  /**
+   * Get the material component type.
+   *
+   * @return {string|null}
+   */
+  get type () {
+    let classList = this.element.classList;
+
+    for (let i = 0; i < classList.length; ++ i) {
+      const className = classList[i];
+      const found = className.match (typeExp);
+
+      if (isPresent (found)) {
+        // Always return index 1 since it has the format "-[type]".
+        return found[1];
+      }
+    }
+
+    return null;
   }
 }
 

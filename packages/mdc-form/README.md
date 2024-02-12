@@ -1,20 +1,10 @@
 ember-cli-mdc-form
 ======================
 
-ember-cli addon that is a polyfill for &lt;form&gt; elements
-
-
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v3.12 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
-
+ember-cli addon that is a polyfill for `<form>` elements
 
 Installation
 ------------
-
 
     ember install ember-cli-mdc-form
 
@@ -73,3 +63,4 @@ it can be use to enable/disable a button.
   <MdcButton @type="submit" @label="Submit" disabled={{form.isInvalid}} />
 </MdcForm>
 ```
+

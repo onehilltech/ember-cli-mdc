@@ -1,9 +1,30 @@
-<li class="mdc-list-item
-  {{if @selected "mdc-list-item--selected"}}
-  {{if @activated "mdc-list-item--activated"}}
-  {{if @disabled "mdc-list-item--disabled"}}"
+<li class="mdc-deprecated-list-item
+  {{if @selected "mdc-deprecated-list-item--selected"}}
+  {{if @activated "mdc-deprecated-list-item--activated"}}
+  {{if @disabled "mdc-deprecated-list-item--disabled"}}"
     aria-selected={{@selected}}
     tabindex={{if @selected 0}}
     ...attributes>
-  {{yield}}
+  <span class="mdc-deprecated-list-item__ripple"></span>
+
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{#if @graphicIcon}}
+      <MdcListItemGraphicIcon @icon={{@graphicIcon}} />
+    {{/if}}
+
+    <MdcListItemText>
+      {{#if @text}}
+        {{@text}}
+      {{else if @primaryText}}
+        <MdcListItemPrimaryText>{{@primaryText}}</MdcListItemPrimaryText>
+        <MdcListItemSecondaryText>{{@secondaryText}}</MdcListItemSecondaryText>
+      {{/if}}
+    </MdcListItemText>
+
+    {{#if @metaIcon}}
+      <MdcListItemMetaIcon @icon={{@metaIcon}} />
+    {{/if}}
+  {{/if}}
 </li>

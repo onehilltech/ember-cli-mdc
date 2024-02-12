@@ -3,7 +3,7 @@ ember-cli-mdc-sass
 
 ember-cli addon for integrating SASS into `ember-cli-mdc`.
 
-Installation
-------------------------------------------------------------------------------
+
+## Installation
 
     ember install ember-cli-mdc-sass

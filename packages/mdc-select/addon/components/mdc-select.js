@@ -1,17 +1,15 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
 import listener from 'ember-cli-mdc-base/listener';
 
 import { tracked } from '@glimmer/tracking';
 
 import { A } from '@ember/array';
-import { isEmpty, isPresent, isNone } from '@ember/utils';
+import { isPresent } from '@ember/utils';
 import { guidFor } from '@ember/object/internals';
 import { action, get } from '@ember/object';
-import { isObjectLike } from 'lodash-es';
+import { isObjectLike } from 'lodash';
 
-const { MDCSelect } = mdc.select;
+import { MDCSelect } from '@material/select';
 
 function noOp () { }
 
@@ -21,8 +19,10 @@ export default class MdcSelectComponent extends Component {
   doPrepareElement (element) {
     const { value: option } = this.args;
 
-    this.labelId = guidFor (this);
-    this.helperId = `${guidFor (this)}__helper-text`;
+    let guid = guidFor (this);
+    this.labelId = `${guid}__label`;
+    this.selectedTextId = `${guid}__selected-text`;
+    this.helperId = `${guid}__helper-text`;
 
     if (isPresent (option)) {
       // We need to pre-select the option.
@@ -57,11 +57,11 @@ export default class MdcSelectComponent extends Component {
       // component has the text over the initial selection.
 
 
-      const notchedOutline = component.root_.querySelector ('.mdc-notched-outline');
+      const notchedOutline = component.root.querySelector ('.mdc-notched-outline');
       notchedOutline.classList.add ('mdc-notched-outline--notched');
 
       if (isPresent (this.args.label)) {
-        const floatingLabel = component.root_.querySelector ('.mdc-floating-label');
+        const floatingLabel = component.root.querySelector ('.mdc-floating-label');
         floatingLabel.classList.add ('mdc-floating-label--float-above');
       }
     }
@@ -98,27 +98,26 @@ export default class MdcSelectComponent extends Component {
   labelId;
 
   @tracked
+  selectedTextId;
+
+  @tracked
   helperId;
 
   @listener ('MDCSelect:change')
   change (ev) {
+    // Validate the control.
+    this._validateControl ();
+
     // Notify the client the value has changed.
     const { detail: { value } } = ev;
+    this.notifyChange (value);
+  }
 
-    // Validate the control.
-    this._validate ();
+  notifyChange (value) {
+    const selection = isPresent (value) ? this.options.find (option => this.valueOf (option) === value) : null;
 
-    // Pass control to the subclass.
-    this.didChange (ev);
-
-    if (isEmpty (value)) {
-      // There is no value selected. This means we are clearing the selection.
-      (this.args.change || noOp) (null);
-    }
-    else {
-      let selected = this.options.find (option => this.valueOf (option) === value);
-      (this.args.change || noOp) (selected);
-    }
+    this.didChange (selection);
+    this.dispatchEvent ('MdcSelect:change', { option: selection });
   }
 
   didChange (ev) {
@@ -128,7 +127,7 @@ export default class MdcSelectComponent extends Component {
   @action
   select (element, [option]) {
     if (isPresent (option)) {
-      let value = this.valueOf (option);
+      const value = this.valueOf (option);
 
       if (this.component.value !== value) {
         this.component.value = value;
@@ -139,10 +138,10 @@ export default class MdcSelectComponent extends Component {
     }
 
     // Validate the control.
-    this._validate ();
+    this._validateControl ();
   }
 
-  _validate () {
+  _validateControl () {
     if (this.component.valid) {
       this.validationMessage = null;
     }

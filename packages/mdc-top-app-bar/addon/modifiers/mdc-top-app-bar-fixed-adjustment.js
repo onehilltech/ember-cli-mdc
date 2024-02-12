@@ -1,52 +1,51 @@
-import Modifier from 'ember-modifier';
+import { Modifier } from 'ember-cli-mdc-base';
 import { isPresent } from '@ember/utils';
 
 export default class MdcTopAppBarFixedAdjustmentModifier extends Modifier {
   _currentClassName;
 
-  didReceiveArguments () {
-    let { dense, prominent, short, disabled = false } = this.args.named;
+  modify (element, args, named) {
+    const { fixed, dense, prominent, short, disabled = false } = named;
 
     if (!disabled) {
       // The user does not want to disabled this adjustment. Apply the correct
       // adjustment based on the other named properties.
 
-      if (prominent) {
-        this.applyClassName ('mdc-top-app-bar--prominent-fixed-adjust')
-      }
-      else if (dense) {
+      if (dense) {
         if (prominent) {
-          this.applyClassName ('mdc-top-app-bar--dense-prominent-fixed-adjust');
+          this.applyClassName (element,'mdc-top-app-bar--dense-prominent-fixed-adjust');
         }
         else {
-          this.applyClassName ('mdc-top-app-bar--dense-fixed-adjust');
+          this.applyClassName (element, 'mdc-top-app-bar--dense-fixed-adjust');
         }
       }
+      else if (prominent) {
+        this.applyClassName (element,'mdc-top-app-bar--prominent-fixed-adjust')
+      }
       else if (short) {
-        this.applyClassName ('mdc-top-app-bar--short-fixed-adjust');
+        this.applyClassName (element, 'mdc-top-app-bar--short-fixed-adjust');
       }
       else {
-        this.applyClassName ('mdc-top-app-bar--fixed-adjust');
+        this.applyClassName (element, 'mdc-top-app-bar--fixed-adjust');
       }
     }
     else if (isPresent (this._currentClassName)) {
       // This fixed adjustment is disabled. We need to remove the fixed adjustment class
       // name from the element.
 
-      this.element.classList.remove (this._currentClassName);
+      element.classList.remove (this._currentClassName);
       this._currentClassName = null;
     }
   }
 
-  applyClassName (className) {
+  applyClassName (element, className) {
     if (className !== this._currentClassName) {
       if (isPresent (this._currentClassName)) {
-        // Remove the current class name from the element.
-        this.element.classList.remove (this._currentClassName);
+        element.classList.remove (this._currentClassName);
       }
 
       // Apply the classname to the class list, and cache it.
-      this.element.classList.add (className);
+      element.classList.add (className);
       this._currentClassName = className;
     }
   }

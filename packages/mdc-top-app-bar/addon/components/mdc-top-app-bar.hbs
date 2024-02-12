@@ -1,7 +1,14 @@
-<header class="mdc-top-app-bar {{if @fixed "mdc-top-app-bar--fixed"}} {{if @dense "mdc-top-app-bar--dense"}} {{if @prominent "mdc-top-app-bar--prominent"}} {{if @short "mdc-top-app-bar--short"}} {{if @shortCollapsed "mdc-top-app-bar--short-collapsed"}}"
+<header class="mdc-top-app-bar
+  {{if @fixed "mdc-top-app-bar--fixed"}}
+  {{if @dense "mdc-top-app-bar--dense"}}
+  {{if @prominent "mdc-top-app-bar--prominent"}}
+  {{if @short "mdc-top-app-bar--short"}}
+  {{if @shortCollapsed "mdc-top-app-bar--short-collapsed"}}"
   ...attributes
   {{did-insert this.didInsert}}
   {{did-update this.changeScrollTarget @scrollTarget}}
   {{did-update this.reinitialize fixed=@fixed dense=@dense prominent=@prominent short=@short shortCollapsed=@shortCollapsed}}>
+
   {{yield}}
+
 </header>

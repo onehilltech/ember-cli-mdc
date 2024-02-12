@@ -1,17 +1,26 @@
-<span class="mdc-tab__content">
-    {{#if @icon}}
-      <span class="mdc-tab__icon material-icons" aria-hidden="true">{{@icon}}</span>
-    {{/if}}
+<a href={{this.href}}
+   class="mdc-tab {{if @active "mdc-tab--active"}} {{if @stacked "mdc-tab--stacked"}} {{if @minWidth "mdc-tab--min-width"}}"
+   role="tab"
+   aria-selected={{@active}}
+   tabindex ="-1"
+   ...attributes
+   type="button"
+  {{did-insert this.didInsert}}>
+    <span class="mdc-tab__content">
+      {{#if (has-block)}}
+        {{yield}}
+      {{else}}
+        {{#if @image}}
+          <img class="mdc-tab__icon" aria-hidden="true" src={{@image}} alt={{@label}} />
+        {{else if @icon}}
+          <span class="mdc-tab__icon material-icons" aria-hidden="true">{{@icon}}</span>
+        {{/if}}
 
-  {{#if @label}}
-    <span class="mdc-tab__text-label">{{@label}}</span>
-  {{/if}}
-
-  {{#if @contentOnlyIndicator}}
-    <MdcTabIndicator @active={{@active}} @icon={{@iconIndicator}} />
-  {{/if}}
-  </span>
-{{#unless @contentOnlyIndicator}}
+        {{#if @label}}
+          <span class="mdc-tab__text-label">{{@label}}</span>
+        {{/if}}
+      {{/if}}
+    </span>
   <MdcTabIndicator @active={{@active}} @icon={{@iconIndicator}} />
-{{/unless}}
-<span class="mdc-tab__ripple"></span>
+  <span class="mdc-tab__ripple"></span>
+</a>

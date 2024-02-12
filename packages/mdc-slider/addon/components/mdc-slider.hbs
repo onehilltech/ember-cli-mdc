@@ -1,34 +1,22 @@
-<div class="mdc-slider {{if @discrete "mdc-slider--discrete"}} {{if @displayMarkers "mdc-slider--display-markers"}}"
-     tabindex="0"
+<div class="mdc-slider
+  {{if @disabled "mdc-slider--disabled"}}
+  {{if @discrete "mdc-slider--discrete"}}
+  {{if @tickMarks "mdc-slider--tick-marks"}}"
     {{did-insert this.didInsert}}
-    {{did-update this.setLimits @min @max @step}}
     {{did-update this.setValue @value}}
-     ...attributes
-     role="slider"
-     aria-valuemin={{this.min}}
-     aria-valuemax={{this.max}}
-     aria-valuenow={{@value}}
-     data-step={{@step}}
-     aria-label={{@label}}
-     aria-disabled={{@disabled}}>
+    {{did-update this.setLimits @min @max @step}}
+     ...attributes>
 
-  <div class="mdc-slider__track-container">
-    <div class="mdc-slider__track"></div>
-    {{#if @discrete}}
-      {{#if @displayMarkers}}
-        <div class="mdc-slider__track-marker-container"></div>
-      {{/if}}
-    {{/if}}
-  </div>
-  <div class="mdc-slider__thumb-container">
-    {{#if @discrete}}
-      <div class="mdc-slider__pin">
-        <span class="mdc-slider__pin-value-marker"></span>
-      </div>
-    {{/if}}
-    <svg class="mdc-slider__thumb" width={{this.width}} height={{this.height}}>
-      <circle cx={{this.cx}} cy={{this.cy}} r={{this.r}}></circle>
-    </svg>
-    <div class="mdc-slider__focus-ring"></div>
-  </div>
+  <MdcSliderTrack @tickMarks={{@tickMarks}} />
+
+  <MdcSliderThumb @discrete={{@discrete}}
+                  @value={{@value}}
+                  @min={{this.min}}
+                  @max={{this.max}}
+                  @step={{this.step}}
+                  @value={{this.value}}
+                  @name={{@name}}
+                  @aria-label={{@label}}
+                  @disabled={{@disabled}} />
+
 </div>

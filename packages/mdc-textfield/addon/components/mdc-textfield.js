@@ -6,13 +6,11 @@ import { inject as service } from '@ember/service';
 import { assert } from '@ember/debug';
 import { tracked } from '@glimmer/tracking';
 import { guidFor } from '@ember/object/internals';
-import { isPresent, isEmpty } from '@ember/utils';
+import { isPresent } from '@ember/utils';
 
-function noOp () { }
+import { MDCTextField } from '@material/textfield';
 
 const STYLES = ['filled', 'outlined'];
-
-const { MDCTextField } = mdc.textfield;
 
 const VALIDATION_ERROR_TYPE = [
   'badInput',
@@ -26,7 +24,7 @@ const VALIDATION_ERROR_TYPE = [
   'typeMismatch',
 ];
 
-export default class MdcTextfieldComponent extends Component {
+export default class MdcTextFieldComponent extends Component {
   @service ('mdc-textfield-configurator')
   configurator;
 
@@ -36,6 +34,8 @@ export default class MdcTextfieldComponent extends Component {
   @tracked
   helperId;
 
+  inputElement;
+
   get style () {
     return this.args.style || this.configurator.style || 'filled';
   }
@@ -43,25 +43,26 @@ export default class MdcTextfieldComponent extends Component {
   get styleClassName () {
     let style = this.style;
 
-    assert ('The outlined style cannot be used with a full width text field.', style === 'filled' || !this.args.fullWidth);
     assert (`The textfield component supports the following styles: ${STYLES}`, STYLES.includes (style));
 
     return `mdc-text-field--${style}`;
   }
 
   doPrepareElement (element) {
-    let { value } = this.args;
+    const { value } = this.args;
 
     if (isPresent (value)) {
+      // Force the label to float since we are starting with a value.
       element.classList.add ('mdc-text-field--label-floating');
 
-      let floatingLabel = element.querySelector ('.mdc-floating-label');
+      const floatingLabel = element.querySelector ('.mdc-floating-label');
 
       if (isPresent (floatingLabel)) {
         floatingLabel.classList.add ('mdc-floating-label--float-above');
       }
     }
 
+    this.inputElement = element.querySelector ('.mdc-text-field__input');
     this.labelId = guidFor (this);
     this.helperId = `${guidFor (this)}__helper-text`;
   }
@@ -112,14 +113,6 @@ export default class MdcTextfieldComponent extends Component {
     return this.args.errorMessage || this.validationMessage || this.args.helperText;
   }
 
-  get leadingIconClick () {
-    return this.args.leadingIconClick || noOp;
-  }
-
-  get trailingIconClick () {
-    return this.args.trailingIconClick || noOp;
-  }
-
   get isValidationMessage () {
     return isPresent (this.validationMessage) || isPresent (this.args.errorMessage);
   }
@@ -161,7 +154,7 @@ export default class MdcTextfieldComponent extends Component {
   /**
    * Validate the HTML input element.
    *
-   * @param ev
+   * @param input
    */
   validate (input) {
     if (!input.validity.valid) {

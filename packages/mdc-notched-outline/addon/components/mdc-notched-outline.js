@@ -1,9 +1,5 @@
-/* global mdc */
-
 import Component from 'ember-cli-mdc-base/component';
-import { action } from '@ember/object';
-
-const { MDCNotchedOutline } = mdc.notchedOutline;
+import { MDCNotchedOutline } from '@material/notched-outline';
 
 export default class MdcNotchedOutlineComponent extends Component {
   doCreateComponent (element) {

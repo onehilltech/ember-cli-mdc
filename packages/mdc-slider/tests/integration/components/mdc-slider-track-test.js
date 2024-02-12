@@ -1,26 +1,26 @@
 import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render, find } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { setupRenderingTest } from 'dummy/tests/helpers';
+import { render } from '@ember/test-helpers';
+import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | mdc slider track', function(hooks) {
+module('Integration | Component | mdc-slider-track', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{mdc-slider-track}}`);
+    await render(hbs`<MdcSliderTrack />`);
 
-    assert.dom('*').hasText('');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#mdc-slider-track}}
+      <MdcSliderTrack>
         template block text
-      {{/mdc-slider-track}}
+      </MdcSliderTrack>
     `);
 
-    assert.dom('*').hasText('template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });

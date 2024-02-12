@@ -53,4 +53,3 @@ Add a linear progress component to the page.
 
 <MdcLinearProgress @indeterminate={{true}} @reversed={{true}} />
 ```
-
