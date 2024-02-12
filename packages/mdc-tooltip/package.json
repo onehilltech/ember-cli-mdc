@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-mdc-tooltip",
   "version": "3.0.0-alpha.21",
-  "description": "ember-cli addon for @material/list.",
+  "description": "ember-cli addon for @material/tooltip.",
   "keywords": [
     "ember-addon",
     "material",
