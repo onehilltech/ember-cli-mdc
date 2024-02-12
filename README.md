@@ -21,13 +21,13 @@ Installation
 You install this add-on by installing individual packages that contain needed components
 and/or resources.
 
-    ember install ember-cli-[package-name]@^2.0.0
+    ember install ember-cli-[package-name]@^3.0.0
 
 Ex.    
     
-    ember install ember-cli-mdc-form@^2.0.0
-    ember install ember-cli-mdc-button@^2.0.0
-    ember install ember-cli-mdc-dialog@^2.0.0
+    ember install ember-cli-mdc-form@^3.0.0
+    ember install ember-cli-mdc-button@^3.0.0
+    ember install ember-cli-mdc-dialog@^3.0.0
     
 See the [packages directory](https://github.com/onehilltech/ember-cli-mdc/tree/master/packages) for a 
 list of packages that can be installed individually.
