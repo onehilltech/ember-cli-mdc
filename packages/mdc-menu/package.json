@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-menu",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "ember-cli addon for @material/menu.",
   "keywords": [
     "ember-addon",
@@ -38,9 +38,9 @@
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
+    "ember-cli-mdc-icon-button": "*",
     "ember-cli-mdc-sass": "*",
-    "ember-cli-mdc-utils": "*",
-    "ember-cli-mdc-icon-button": "*"
+    "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",

@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-line-ripple",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "ember-cli addons for @material/line-ripple",
   "keywords": [
     "ember-addon",

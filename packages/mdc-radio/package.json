@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-radio",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "ember-cli addon for @material/radio.",
   "keywords": [
     "ember-addon",

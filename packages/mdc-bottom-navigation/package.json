@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-bottom-navigation",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "Polyfill for the mdc-bottom-navigation component",
   "keywords": [
     "ember-addon",

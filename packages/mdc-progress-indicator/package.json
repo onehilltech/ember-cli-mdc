@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-progress-indicator",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "ember-cli addon for @material/progress-indicator",
   "keywords": [
     "ember-addon",
@@ -33,11 +33,11 @@
   },
   "dependencies": {
     "@material/progress-indicator": "^14.0.0",
+    "ember-auto-import": "^2.6.3",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-utils": "*",
-    "ember-auto-import": "^2.6.3"
+    "ember-cli-mdc-utils": "*"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",

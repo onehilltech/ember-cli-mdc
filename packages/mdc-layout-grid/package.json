@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-layout-grid",
-  "version": "3.0.0-alpha.21",
+  "version": "3.0.0",
   "description": "ember-cli addon for @material/layout-grid.",
   "keywords": [
     "ember-addon",
