@@ -1,57 +1,49 @@
-ember-cli-mdc-banner
-======================
+ember-cli-mdc-segmented-button
+===============================
 
-ember-cli addon for [`@material/banner`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-banner)
+ember-cli addon for [`@material/segmented-button`](https://github.com/material-components/material-components-web/tree/master/packages/mdc-segmented-button)
 
 Installation
 ------------
 
-    ember install ember-cli-mdc-banner
+    ember install ember-cli-mdc-segmented-button
 
 Styles
 -------
 
 
 ```sass
-@use "@material/banner" as banner
+@use "@material/segmented-button" as segmented
 ```
 
-Basic Example
----------------
+Multi-select Segmented Button
+-------------------------------
 
-The `<MdcBanner />` is used to create a basic banner.
+The `<MdcSegmentedButton />` component is multi-select by default. You just add
+one or more `<MdcSegmentedButtonSegment />` components to the `<MdcSegmentedButton />` 
+component.
 
 ```handlebars
-<MdcBanner @open={{this.openBanner}} @icon="error">
-    There was a problem processing a transaction on your credit card.
-</MdcBanner>
+<MdcSegmentedButton>
+    <MdcSegmentedButtonSegment @icon="favorite" />
+    <MdcSegmentedButtonSegment @label="Sample Text" />
+    <MdcSegmentedButtonSegment @icon="favorite" @label="Sample Text" />
+</MdcSegmentedButton>
 ```
 
-### Attributes
+Single-select Segmented Button
+--------------------------------
 
-* **open** - Show/Hide the banner.
-* **icon** - Icon to show in the banner
-* **stacked** - Position the text below the actions instead of alongside it
+Set the `@singleSelect={{true}}` attribute to create a single-select segmented button.
 
-Banner w/ Actions
--------------------
-
-You can use the `<:actions />` named block to add one or two actions to the
-banner. If you add more than two actions to a banner, then only the first two actions
-will be recognized.
-
-> If you include `<:actions />`, then you **must** place the banner content inside
-> the `<:default />` named block. Otherwise, the application will not compile.
+> You must set the `@selected` attribute on one of the `<MdcSegmentedButtonSegment />` 
+> components, or the first `<MdcSegmentedButtonSegment />` component will be automatically
+> selected.
 
 ```handlebars
-<MdcBanner @icon="error" @open={{this.openBanner}}>
-  <:default>
-    There was a problem processing a transaction on your credit card.
-  </:default>
-
-  <:actions>
-    <MdcButton @label="Learn more" {{on "click" this.learnMore}} />
-    <MdcButton @label="Fix it" {{on "click" this.fixIt}} />
-  </:actions>
-</MdcBanner>
+  <MdcSegmentedButton @singleSelect={{true}}>
+    <MdcSegmentedButtonSegment @icon="favorite" />
+    <MdcSegmentedButtonSegment @label="Sample Text" />
+    <MdcSegmentedButtonSegment @icon="favorite" @label="Sample Text" />
+</MdcSegmentedButton>
 ```
