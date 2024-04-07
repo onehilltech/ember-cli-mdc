@@ -1,1 +1,8 @@
-<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label={{this.label}} {{mdc-ripple unbounded=true}} ...attributes>{{this.icon}}</button>
+<MdcIconButtonLinkTo
+    class="mdc-top-app-bar__navigation-icon"
+    @route={{@route}}
+    @model={{@model}}
+    @queryParams={{@queryParams}}
+    @icon={{this.icon}}
+    @label={{this.label}}
+    ...attributes />
