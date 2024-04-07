@@ -1,5 +1,5 @@
-@import "app-theme";
-@import "@material/chips/deprecated/mdc-chips";
+@use "app-theme";
+@use "@material/chips/deprecated/mdc-chips";
 
 .mdc-chip {
   &--non-interactive {
