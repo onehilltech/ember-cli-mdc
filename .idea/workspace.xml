@@ -9,7 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/mdc-typography/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-typography/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,24 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/packages/mdc-dialog/addon/components",
-    "node.js.detected.package.ember-template-lint": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.ember-template-lint": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/ember-template-lint",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/Users/hilljh/.nvm/versions/node/v16.20.0/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/packages/mdc-dialog/addon/components&quot;,
+    &quot;node.js.detected.package.ember-template-lint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.ember-template-lint&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/ember-template-lint&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/Users/hilljh/.nvm/versions/node/v16.20.0/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/mdc-dialog/addon/components" />
@@ -89,7 +89,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-segmented-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-data-table]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -374,6 +374,13 @@
       <workItem from="1706763786575" duration="27616000" />
       <workItem from="1707284064474" duration="18146000" />
       <workItem from="1707405827899" duration="53076000" />
+      <workItem from="1707754631163" duration="610000" />
+      <workItem from="1707772335438" duration="1219000" />
+      <workItem from="1709924650625" duration="609000" />
+      <workItem from="1712448621164" duration="75000" />
+      <workItem from="1712457090640" duration="29000" />
+      <workItem from="1712457616780" duration="31000" />
+      <workItem from="1712458078381" duration="328000" />
     </task>
     <servers />
   </component>
