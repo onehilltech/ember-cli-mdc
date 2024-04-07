@@ -1,8 +1,15 @@
-@import "variables";
+@use "variables" as *;
 
-@import "@material/theme/mixins";
-@import "@material/elevation/mixins";
-@import "@material/typography/mixins";
+@use "@material/theme/color-palette" as color;
+
+@use "@material/theme" with (
+  $primary: color.$orange-700,
+  $secondary: color.$light-blue-700
+);
+
+@use "@material/elevation" as elevation;
+@use "@material/typography" as typography;
+
 
 .mdc-bottom-navigation {
   position: fixed;
@@ -12,10 +19,10 @@
 
   width: 100%;
 
-  @include mdc-theme-prop(background-color, primary);
-  @include mdc-theme-prop(color, on-primary);
+  @include theme.property(background-color, primary);
+  @include theme.property(color, on-primary);
 
-  @include mdc-elevation(4);
+  @include elevation.elevation(4);
 
   &__buttons {
     display: flex;
@@ -74,7 +81,7 @@
 
   &__label {
     color: inherit;
-    @include mdc-typography(caption);
+    @include typography.typography(caption);
 
     line-height: 1rem;
   }
