@@ -1,3 +1,3 @@
 <form class="mdc-form" ...attributes {{did-insert this.didInsert}}>
-  {{yield (hash isValid=valid isInvalid=invalid)}}
+  {{yield (hash isValid=this.valid isInvalid=this.invalid)}}
 </form>
