@@ -1,15 +1,10 @@
 @use "variables" as *;
 
-@use "@material/theme/color-palette" as color;
+@use "app-theme";
 
-@use "@material/theme" with (
-  $primary: color.$orange-700,
-  $secondary: color.$light-blue-700
-);
-
+@use "@material/theme" as theme;
 @use "@material/elevation" as elevation;
 @use "@material/typography" as typography;
-
 
 .mdc-bottom-navigation {
   position: fixed;

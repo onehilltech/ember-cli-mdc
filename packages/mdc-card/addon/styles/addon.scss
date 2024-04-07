@@ -1,8 +1,2 @@
-@import "app-theme";
-@import "@material/card/mdc-card";
-
-.mdc-card {
-  &__content {
-    padding: 16px;
-  }
-}
+@use "app-theme";
+@use "@material/card";

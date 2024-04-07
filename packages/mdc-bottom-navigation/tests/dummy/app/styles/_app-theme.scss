@@ -1,0 +1,6 @@
+@use "@material/theme/color-palette" as color;
+
+@use "@material/theme" with (
+  $primary: color.$orange-700,
+  $secondary: color.$light-blue-700
+);
