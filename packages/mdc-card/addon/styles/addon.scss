@@ -1,2 +1,4 @@
 @use "app-theme";
 @use "@material/card";
+
+@include card.core-styles;
