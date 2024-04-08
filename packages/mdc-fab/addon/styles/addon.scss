@@ -1,8 +1,12 @@
-@use "@material/shape" as shape;
-@use "@material/theme" as theme;
-@use "@material/elevation" as elevation;
+@use "app-theme";
 
-@import "@material/fab/mdc-fab";
+@use "@material/fab";
+@use "@material/shape";
+@use "@material/theme";
+@use "@material/elevation";
+
+@include fab.core-styles;
+
 
 .mdc-fab {
   &--bottom-right {
@@ -73,7 +77,7 @@
   &--expanded {
     .mdc-speed-dial {
       &__fab {
-        @include mdc-fab-container-color(#000000);
+        @include fab.container-color(#000000);
       }
     }
   }
