@@ -1,12 +1,18 @@
+@use "app-theme";
+
 @use "@material/typography" as typography;
-@use "@material/icon-button" as iconbutton;
 @use "@material/select" as select;
 @use "@material/list" as list;
 @use "@material/theme/color-palette" as color;
 
-@import "app-theme";
-@import "@material/checkbox/mdc-checkbox";
-@import "@material/data-table/styles";
+@use "@material/checkbox"; // Required only for data table with row selection.
+@use "@material/icon-button"; // Required only for data table with column sorting.
+@use "@material/data-table/data-table";
+
+@include checkbox.core-styles;
+//@include icon-button.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
 
 .mdc-data-table {
   &__header-cell {
@@ -29,21 +35,21 @@
     &--sortable {
       .mdc-icon-button {
         margin-right: 4px;
-        @include iconbutton.ink-color (color.$grey-400);
-        @include iconbutton.density (-4);
+        @include icon-button.ink-color (color.$grey-400);
+        @include icon-button.density (-4);
       }
     }
 
     &--sorted {
       .mdc-icon-button {
-        @include iconbutton.ink-color (primary);
+        @include icon-button.ink-color (primary);
       }
     }
   }
 
   &__pagination {
     .mdc-icon-button {
-      @include iconbutton.density (-4);
+      @include icon-button.density (-4);
     }
 
     .mdc-select {
