@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-menu",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "ember-cli addon for @material/menu.",
   "keywords": [
     "ember-addon",
@@ -38,7 +38,7 @@
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-icon-button": "^3.0.4",
+    "ember-cli-mdc-icon-button": "^3.0.5",
     "ember-cli-mdc-sass": "*",
     "ember-cli-mdc-utils": "*"
   },
@@ -62,14 +62,14 @@
     "ember-cli-mdc-base": "*",
     "ember-cli-mdc-elevation": "^3.0.4",
     "ember-cli-mdc-icon": "^3.0.4",
-    "ember-cli-mdc-list": "^3.0.4",
+    "ember-cli-mdc-list": "^3.0.5",
     "ember-cli-mdc-menu-surface": "^3.0.4",
     "ember-cli-mdc-ripple": "^3.0.4",
     "ember-cli-mdc-rtl": "^3.0.4",
     "ember-cli-mdc-sass": "*",
     "ember-cli-mdc-shape": "^3.0.4",
     "ember-cli-mdc-theme": "^3.0.4",
-    "ember-cli-mdc-typography": "^3.0.4",
+    "ember-cli-mdc-typography": "^3.0.5",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",

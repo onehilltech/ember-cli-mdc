@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-notched-outline",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "ember-cli addon for @material/notched-outline",
   "keywords": [
     "ember-addon",
@@ -59,10 +59,10 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "*",
     "ember-cli-mdc-base": "*",
-    "ember-cli-mdc-floating-label": "^3.0.4",
+    "ember-cli-mdc-floating-label": "^3.0.5",
     "ember-cli-mdc-rtl": "^3.0.4",
     "ember-cli-mdc-theme": "^3.0.4",
-    "ember-cli-mdc-typography": "^3.0.4",
+    "ember-cli-mdc-typography": "^3.0.5",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
