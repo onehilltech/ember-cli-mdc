@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-form-field",
-  "version": "3.0.5",
+  "version": "3.0.8",
   "description": "ember-cli addon for @material/form-field.",
   "keywords": [
     "ember-addon",
@@ -42,8 +42,8 @@
     "ember-cli-babel": "^7.26.11",
     "ember-cli-blueprint-helpers": "^0.4.7",
     "ember-cli-htmlbars": "^6.2.0",
-    "ember-cli-mdc-sass": "*",
-    "ember-cli-mdc-utils": "*",
+    "ember-cli-mdc-sass": "^3.0.8",
+    "ember-cli-mdc-utils": "^3.0.8",
     "ember-modifier": "^4.1.0"
   },
   "devDependencies": {
@@ -62,12 +62,12 @@
     "ember-cli-custom-properties": "^3.0.1",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-cli-mdc-animation": "*",
-    "ember-cli-mdc-base": "*",
-    "ember-cli-mdc-ripple": "^3.0.4",
-    "ember-cli-mdc-rtl": "^3.0.4",
-    "ember-cli-mdc-theme": "^3.0.4",
-    "ember-cli-mdc-typography": "^3.0.5",
+    "ember-cli-mdc-animation": "^3.0.8",
+    "ember-cli-mdc-base": "^3.0.8",
+    "ember-cli-mdc-ripple": "^3.0.8",
+    "ember-cli-mdc-rtl": "^3.0.8",
+    "ember-cli-mdc-theme": "^3.0.8",
+    "ember-cli-mdc-typography": "^3.0.8",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-load-initializers": "^2.1.2",
