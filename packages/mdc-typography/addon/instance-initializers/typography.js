@@ -35,8 +35,6 @@ export function initialize (app) {
 
 /**
  * Inject the Material icon font into the application.
- *
- * @param app         Target Ember application
  */
 function injectTypographyLinks (preconnect, weights) {
   if (preconnect) {

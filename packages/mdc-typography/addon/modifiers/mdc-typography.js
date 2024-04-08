@@ -1,33 +1,39 @@
 import Modifier from 'ember-modifier';
 import { isPresent } from '@ember/utils';
 
+/**
+ * @class MdcTypographyModifier
+ *
+ * The class modifier for dynamically changing the typography.
+ */
 export default class MdcTypographyModifier extends Modifier {
   _currentClassName;
 
-  didReceiveArguments () {
-    this._removeClassName ();
-    this._addClassName ();
-  }
-
-  willRemove () {
-    this._removeClassName ();
-  }
-
-  _addClassName () {
-    let [typography] = this.args.positional;
+  modify (element, args, named) {
+    const typography = args[0];
 
     if (isPresent (typography)) {
-      let currentClassName = `mdc-typography--${typography}`;
+      const typographyClassName = `mdc-typography--${typography}`;
 
-      this.element.classList.add (currentClassName);
-      this._currentClassName = currentClassName;
+      if (typographyClassName !== this._currentClassName) {
+        if (isPresent (this._currentClassName)) {
+          element.classList.remove (this._currentClassName);
+        }
+
+        element.classList.add (typographyClassName);
+        this._currentClassName = typographyClassName;
+      }
     }
     else {
+      if (isPresent (this._currentClassName)) {
+        this.element.classList.remove (this._currentClassName);
+      }
+
       this._currentClassName = null;
     }
   }
 
-  _removeClassName () {
+  willDestroy () {
     if (isPresent (this._currentClassName)) {
       this.element.classList.remove (this._currentClassName);
     }
