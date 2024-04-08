@@ -31,7 +31,7 @@ export default class MdcTabsComponent extends Component {
 
   doInitComponent (component) {
     // Verify the number of tabs equals the number of panels.
-    assert ('The number of mdc-tab elements must equal the number of mdc-tab-panel elements.', component.tabList_.length === this._tabPanels.length);
+    assert ('The number of mdc-tab elements must equal the number of mdc-tab-panel elements.', component.tabList.length === this._tabPanels.length);
   }
 
   get activeTab () {
