@@ -53,7 +53,7 @@ export default class MdcRippleModifier extends Modifier {
       // Remove the color from the element, and destroy the component.
 
       if (this._currentSurfaceColor) {
-        element.classList.remove (this._currentSurfaceColor);
+        this.element.classList.remove (this._currentSurfaceColor);
       }
 
       this._ripple.destroy ();
