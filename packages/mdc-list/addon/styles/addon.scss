@@ -1,2 +1,4 @@
-@import 'app-theme';
-@import '@material/list/mdc-list';
+@use 'app-theme';
+@use "@material/list";
+
+@include list.deprecated-core-styles;
