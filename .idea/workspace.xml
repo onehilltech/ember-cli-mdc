@@ -10,15 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-fab/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-floating-label/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-floating-label/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-form-field/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-form-field/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/addon/styles/addon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon-button/tests/dummy/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-icon/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-icon/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/addon/styles/addon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/addon/styles/addon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/styles/_app-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-image-list/tests/dummy/app/styles/_app-theme.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +91,7 @@
       <recent name="$PROJECT_DIR$/packages/mdc-base/addon/-internal" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.[ember-cli-mdc-icon-button]: dummy application">
+  <component name="RunManager" selected="Node.js.[ember-cli-mdc-image-list]: dummy application">
     <configuration name="[ember-cli-mdc-animation]: dummy application" type="NodeJSConfigurationType" application-parameters="s" path-to-js-file="$USER_HOME$/.nvm/versions/node/v16.20.0/bin/ember" working-dir="$PROJECT_DIR$/packages/mdc-animation">
       <method v="2" />
     </configuration>
@@ -389,7 +382,7 @@
       <workItem from="1712448621164" duration="75000" />
       <workItem from="1712457090640" duration="29000" />
       <workItem from="1712457616780" duration="31000" />
-      <workItem from="1712458078381" duration="9147000" />
+      <workItem from="1712458078381" duration="9211000" />
     </task>
     <servers />
   </component>
