@@ -1,15 +1,22 @@
-@import "app-theme";
-@import "@material/list/mdc-list";
-@import "@material/drawer/mdc-drawer";
+@use "app-theme";
+@use "@material/drawer";
+@use "@material/list";
 
-.mdc-drawer-app-content {
-  flex: auto;
-  overflow: auto;
-  position: relative;
-  flex-grow: 1;
-}
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.deprecated-core-styles;
 
-.main-content {
-  overflow: auto;
-  height: 100%;
+.mdc-drawer {
+  &__app-content {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+    flex-grow: 1;
+  }
+
+  &__main-content {
+    overflow: auto;
+    height: 100%;
+  }
 }
