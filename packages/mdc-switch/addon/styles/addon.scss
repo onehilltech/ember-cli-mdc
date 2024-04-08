@@ -1,5 +1,5 @@
-@import "app-theme";
-@import "@material/switch/styles";
+@use "app-theme";
+@use '@material/switch/styles';
 
 .mdc-switch {
   &__container {
