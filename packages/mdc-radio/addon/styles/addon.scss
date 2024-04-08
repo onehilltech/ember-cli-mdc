@@ -1,4 +1,6 @@
-@import "app-theme";
+@use "app-theme";
 
-@import "@material/form-field/mdc-form-field";
-@import "@material/radio/mdc-radio";
+@use "@material/radio/styles";
+@use "@material/form-field";
+
+@include form-field.core-styles;
