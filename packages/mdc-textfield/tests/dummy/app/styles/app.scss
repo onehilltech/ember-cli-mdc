@@ -1,4 +1,4 @@
-@import "@material/textfield/mixins";
+@use "app-theme";
 
 body {
   padding: 16px;
@@ -15,8 +15,6 @@ body {
 
   .text-field-container {
     min-width: 200px;
-
-    @include mdc-text-field-helper-text-validation-color(red);
   }
 }
 

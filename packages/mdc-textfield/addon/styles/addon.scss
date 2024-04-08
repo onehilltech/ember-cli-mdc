@@ -1,10 +1,9 @@
-@import "app-theme";
+@use "app-theme";
 
-//@import "@material/floating-label/mdc-floating-label";
-//@import "@material/line-ripple/mdc-line-ripple";
-//@import "@material/notched-outline/mdc-notched-outline";
-//@import "@material/textfield/helper-text";
-//@import "@material/textfield/character-counter";
-//@import "@material/textfield/icon";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
 
-@import "@material/textfield/mdc-text-field";
+@include textfield.core-styles;
+
