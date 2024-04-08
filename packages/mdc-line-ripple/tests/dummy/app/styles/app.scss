@@ -7,9 +7,4 @@
   background-color: lightgrey;
 
   position: relative;
-
-  .mdc-line-ripple {
-    @include line-ripple.active-color (red);
-    @include line-ripple.inactive-color (blue);
-  }
 }
