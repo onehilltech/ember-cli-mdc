@@ -1,0 +1,6 @@
+@use "app-theme";
+@use "@material/icon-button" as iconbutton;
+
+.mdc-icon-button {
+  @include iconbutton.ink-color(primary);
+}
