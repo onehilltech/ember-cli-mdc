@@ -1,2 +1,4 @@
-@import "app-theme";
-@import "@material/linear-progress/mdc-linear-progress";
+@use "app-theme";
+@use "@material/linear-progress";
+
+@include linear-progress.core-styles;
