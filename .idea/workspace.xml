@@ -10,7 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fd6555-154c-49b3-9d3f-6e2d92895224" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/tests/integration/components/mdc-password-textfield-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/tests/integration/components/mdc-password-textfield-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/packages/mdc-textfield/addon/components/mdc-password-textfield.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,7 +382,7 @@
       <workItem from="1712448621164" duration="75000" />
       <workItem from="1712457090640" duration="29000" />
       <workItem from="1712457616780" duration="31000" />
-      <workItem from="1712458078381" duration="22784000" />
+      <workItem from="1712458078381" duration="23788000" />
     </task>
     <servers />
   </component>
