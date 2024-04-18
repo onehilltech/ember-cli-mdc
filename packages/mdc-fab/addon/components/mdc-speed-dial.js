@@ -4,8 +4,6 @@ import { action } from '@ember/object';
 import { isPresent } from '@ember/utils';
 import * as ponyfill from '@material/dom/ponyfill';
 
-import { closest } from '@material/dom/ponyfill';
-
 export default class MdcSpeedDialComponent extends Component {
   @tracked
   expanded;
