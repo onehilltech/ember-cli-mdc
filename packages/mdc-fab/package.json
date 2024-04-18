@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-fab",
-  "version": "3.0.8",
+  "version": "3.0.11",
   "description": "ember-cli addon for @material/fab",
   "keywords": [
     "ember-addon",
