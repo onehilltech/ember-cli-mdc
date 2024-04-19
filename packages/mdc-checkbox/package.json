@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-checkbox",
-  "version": "3.0.8",
+  "version": "3.0.16",
   "description": "ember-cli addons for @material/checkbox.",
   "keywords": [
     "ember-addon",
@@ -61,9 +61,9 @@
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-mdc-animation": "^3.0.8",
-    "ember-cli-mdc-base": "^3.0.8",
-    "ember-cli-mdc-form-field": "^3.0.8",
-    "ember-cli-mdc-ripple": "^3.0.8",
+    "ember-cli-mdc-base": "^3.0.16",
+    "ember-cli-mdc-form-field": "^3.0.16",
+    "ember-cli-mdc-ripple": "^3.0.16",
     "ember-cli-mdc-rtl": "^3.0.8",
     "ember-cli-mdc-theme": "^3.0.8",
     "ember-cli-mdc-typography": "^3.0.8",
