@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab",
-  "version": "3.0.8",
+  "version": "3.0.15",
   "description": "ember-cli addon for @material/tab.",
   "keywords": [
     "ember-addon",

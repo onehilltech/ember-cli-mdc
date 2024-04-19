@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-tab-bar",
-  "version": "3.0.8",
+  "version": "3.0.15",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon",
@@ -64,9 +64,9 @@
     "ember-cli-mdc-icon": "^3.0.8",
     "ember-cli-mdc-ripple": "^3.0.8",
     "ember-cli-mdc-rtl": "^3.0.8",
-    "ember-cli-mdc-tab": "^3.0.8",
+    "ember-cli-mdc-tab": "^3.0.15",
     "ember-cli-mdc-tab-indicator": "^3.0.8",
-    "ember-cli-mdc-tab-scroller": "^3.0.8",
+    "ember-cli-mdc-tab-scroller": "^3.0.15",
     "ember-cli-mdc-theme": "^3.0.8",
     "ember-cli-mdc-typography": "^3.0.8",
     "ember-cli-sri": "^2.1.1",
