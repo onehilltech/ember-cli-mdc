@@ -11,9 +11,3 @@
 @include character-counter.character-counter-core-styles;
 @include icon.icon-core-styles;
 @include textfield.core-styles;
-
-.mdc-text-field {
-  .mdc-icon-button {
-    z-index: unset;
-  }
-}
