@@ -8,4 +8,8 @@ export default class MdcTabLinkTo extends MdcTab {
   get href () {
     return this.mdcUrl.fromComponent (this);
   }
+
+  get active () {
+    return this.mdcUrl.isActive (this);
+  }
 }

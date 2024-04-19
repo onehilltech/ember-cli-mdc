@@ -1,7 +1,7 @@
 <a href={{this.href}}
-   class="mdc-tab {{if @active "mdc-tab--active"}} {{if @stacked "mdc-tab--stacked"}} {{if @minWidth "mdc-tab--min-width"}}"
+   class="mdc-tab {{if this.active "mdc-tab--active"}} {{if @stacked "mdc-tab--stacked"}} {{if @minWidth "mdc-tab--min-width"}}"
    role="tab"
-   aria-selected={{@active}}
+   aria-selected={{this.active}}
    tabindex ="-1"
    ...attributes
    type="button"
@@ -21,6 +21,6 @@
         {{/if}}
       {{/if}}
     </span>
-  <MdcTabIndicator @active={{@active}} @icon={{@iconIndicator}} />
+  <MdcTabIndicator @active={{this.active}} @icon={{@iconIndicator}} />
   <span class="mdc-tab__ripple"></span>
 </a>
