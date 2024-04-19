@@ -7,3 +7,8 @@
 
 @include textfield.core-styles;
 
+.mdc-text-field {
+  .mdc-icon-button {
+    z-index: unset;
+  }
+}
