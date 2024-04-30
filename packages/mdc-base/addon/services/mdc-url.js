@@ -44,9 +44,14 @@ export default class MdcUrlService extends Service {
   }
 
   isActive (component) {
-    const url = this.fromComponent (component);
-    const currentUrl = this.router.currentURL;
+    if (isPresent (component.args.route)) {
+      return component.args.route === this.router.currentRouteName;
+    }
+    else {
+      const url = this.fromComponent (component);
+      const currentUrl = this.router.currentURL;
 
-    return currentUrl.indexOf (url) === 0;
+      return currentUrl.indexOf (url) === 0;
+    }
   }
 }
