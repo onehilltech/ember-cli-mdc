@@ -17,12 +17,17 @@ export default class MdcSpeedDialComponent extends Component {
     return this.args.closeIcon || 'close';
   }
 
+  get autoClose () {
+    const { autoClose = true } = this.args;
+    return autoClose;
+  }
+
   @action
   close (ev) {
     const { target } = ev;
     const fab = ponyfill.closest (target, '.mdc-fab--mini');
 
-    if (isPresent (fab)) {
+    if (isPresent (fab) && this.autoClose) {
       this.expanded = false;
     }
   }
