@@ -30,10 +30,10 @@ export default class MdcSelectComponent extends Component {
       let text = this.textOf (option);
 
       if (isPresent (value) && isPresent (text)) {
-        const listItem = element.querySelector (`.mdc-list-item[data-value="${value}"]`);
+        const listItem = element.querySelector (`.mdc-deprecated-list-item[data-value="${value}"]`);
 
         if (isPresent (listItem)) {
-          listItem.classList.add ('mdc-list-item--selected');
+          listItem.classList.add ('mdc-deprecated-list-item--selected');
         }
 
         const textElement = element.querySelector ('.mdc-select__selected-text');
