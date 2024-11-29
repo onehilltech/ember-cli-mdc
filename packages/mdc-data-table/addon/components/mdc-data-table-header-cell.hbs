@@ -16,10 +16,6 @@
       <MdcIconButton @icon={{if this.ascending "arrow_upward" "arrow_downward"}} {{on "click" this.sortBy}} />
     {{/if}}
 
-    {{#if @label}}
-      {{@label}}
-    {{/if}}
-
     {{#if (has-block)}}
       {{yield}}
     {{else}}
