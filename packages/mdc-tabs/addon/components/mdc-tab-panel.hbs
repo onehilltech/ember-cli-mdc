@@ -1,6 +1,6 @@
 <div class="mdc-tab-panel {{if this.active "mdc-tab-panel--active"}}"
-  {{on "mdc-tab-panel:activate" this.activate}}
-  {{on "mdc-tab-panel:deactivate" this.deactivate}} ...attributes>
+  {{on "MdcTabPanel:activate" this.activate}}
+  {{on "MdcTabPanel:deactivate" this.deactivate}} ...attributes>
   {{#if this.active}}
     {{yield this.active}}
   {{/if}}
