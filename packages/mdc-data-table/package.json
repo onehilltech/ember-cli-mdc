@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mdc-data-table",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "ember-cli addon for @material/data-table",
   "keywords": [
     "ember-addon",
@@ -65,7 +65,7 @@
     "ember-cli-mdc-list": "^3.0.17",
     "ember-cli-mdc-ripple": "^3.0.17",
     "ember-cli-mdc-rtl": "^3.0.8",
-    "ember-cli-mdc-select": "^3.0.17",
+    "ember-cli-mdc-select": "^3.1.2",
     "ember-cli-mdc-shape": "^3.0.8",
     "ember-cli-mdc-theme": "^3.0.8",
     "ember-cli-mdc-typography": "^3.0.8",
