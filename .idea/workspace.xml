@@ -62,7 +62,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc/packages/mdc-layout-grid/tests/dummy/app/styles&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hilljh/Projects/onehilltech/ember-cli-mdc&quot;,
     &quot;node.js.detected.package.ember-template-lint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -388,7 +388,13 @@
       <workItem from="1715223279123" duration="604000" />
       <workItem from="1724003405057" duration="1386000" />
       <workItem from="1732844626884" duration="720000" />
-      <workItem from="1733243702388" duration="1616000" />
+      <workItem from="1733243702388" duration="2341000" />
+      <workItem from="1733800435448" duration="12000" />
+      <workItem from="1746482289598" duration="1737000" />
+      <workItem from="1755524506736" duration="1921000" />
+      <workItem from="1755607921395" duration="598000" />
+      <workItem from="1765296089681" duration="598000" />
+      <workItem from="1767971649512" duration="1197000" />
     </task>
     <servers />
   </component>
